@@ -1,0 +1,95 @@
+=== Common
+
+==== ReadPersistentStorage(`key`)
+
+Read value from persistent storage by `key`.
+
+==== WritePersistentStorage(`key`, `value`)
+
+Save `value` to persistent store by `key`.
+
+==== GetConfigurationVariable(`key`, `default=null`)
+
+Read server configuration parameter by `key`. If parameter not found, `default` value is returned.
+
+.Example
+----
+>>> GetConfigurationVariable("NumberOfStatusPollers")
+10
+>>> GetConfigurationVariable("BadVariable")
+NULL
+>>> GetConfigurationVariable("BadVariable", 22)
+22
+----
+
+==== _exit(`exitCode=0`)
+
+Stop script execution and return `exitCode`.
+
+==== classof(instance)
+
+Return class name of the `instance`
+
+.Example
+----
+>>> classof($node)
+Node
+----
+
+==== typeof(instance)
+
+Return type of the `instance`.
+
+.Example
+----
+>>> typeof(1)
+int32
+>>> typeof(1L)
+int64
+>>> typeof(%(1, 2, 3))
+array
+>>> typeof(null)
+null
+----
+
+==== inList(`string`, `separator`, `pattern`)
+
+Split input `string` by `separator` compare each element with `pattern`.
+
+.Example
+----
+>>> inList("1,2,3", ",", "1")
+true
+>>> inList("ab|cd|ef", "|", "test")
+false
+----
+
+==== d2x(`decValue`, `padding=0`)
+
+Convert decimal `devValue` to hex string with optional `padding`.
+
+.Example
+----
+>>> d2x(1234)
+4D2
+>>> d2x(1234, 8)
+000004D2
+----
+
+==== x2d(`hexValue`)
+
+Convert hexadecimal string to decimal value.
+
+.Example
+----
+>>> x2d("4D2")
+1234
+----
+
+==== trace(`debugLevel`, `message`)
+
+Writes `message` to NetXMS main log if current debug level is equal or higher than `debugLevel`.
+
+==== map
+
+==== mapList

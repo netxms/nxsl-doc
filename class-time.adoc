@@ -1,0 +1,32 @@
+=== TIME
+
+Class containing a calendar date and time broken down into its components. For convenience, all attributes has aliases to match http://www.cplusplus.com/reference/clibrary/ctime/tm/[struct tm] provided in libc.
+
+==== Instance attributes
+
+`sec`::
+Seconds after the minute. Alias: `tm_sec`.
+
+`min`::
+Minutes after the hour. Alias: `tm_min`.
+
+`hour`::
+Hours since midnight. Alias: `tm_hour`.
+
+`mday`::
+Day of the month. Alias: `tm_mday`.
+
+`mon`::
+Months since January. Alias: `tm_mon`.
+
+`year`::
+Year. Alias: `tm_year`.
+
+`wday`::
+Days since Sunday. Alias: `tm_wday`.
+
+`yday`::
+Days since January 1. Alias: `tm_yday`.
+
+`isdst`::
+Daylight Saving Time flag. Alias: `tm_isdst`.

@@ -1,0 +1,173 @@
+.Grammar
+----
+script ::=
+  module |
+  expression
+
+module ::=
+  module_component { module_component }
+
+module_component ::=
+  function |
+  statement_or_block |
+  use_statement
+
+use_statement ::=
+  use any_identifier ";"
+
+any_identifier ::=
+  IDENTIFIER |
+  COMPOUND_IDENTFIER
+
+function ::=
+  sub IDENTIFIER "(" [ identifier_list ] ")" block
+
+identifier_list ::=
+  IDENTIFIER { "," IDENTIFIER }
+
+block ::=
+  "{" { statement_or_block } "}"
+
+statement_or_block ::=
+  statement |
+  block
+
+statement ::=
+  expression ";" |
+  builtin_statement |
+  ";"
+
+builtin_statement ::=
+  simple_statement ";" |
+  if_statement |
+  do_statement |
+  while_statement |
+  for_statement |
+  foreach_statement |
+  switch_statement |
+  array_statement |
+  global_statement |
+  break ";"
+  continue ";"
+
+simple_statement ::=
+  keyword [ expression ]
+
+keyword ::=
+  exit |
+  print |
+  println |
+  return
+
+if_statement ::=
+  if "(" expression ")" statement_or_block [ else statement_or_block ]
+
+for_statement ::=
+  for "(" expression ";" expression ";" expression ")" statement_or_block
+
+foreach_statement ::=
+  foreach "(" IDENTIFIER ":" expression ")" statement_or_block
+
+while_statement ::=
+  while "(" expression ")" statement_or_block
+
+do_statement ::=
+  do statement_or_block while "(" expression ")" ";"
+
+switch_statement ::=
+  switch "(" expression ")" "{" case { case } [ default ] "}"
+
+case ::=
+  case constant ":" { statement_or_block }
+
+default ::=
+  default ":" { statement_or_block }
+
+array_statement ::=
+  [ global ] array identifier_list ";"
+
+global_statement ::=
+  global global_variable_declaration { "," global_variable_declaration } ";"
+
+global_variable_declaration ::=
+  IDENTIFIER [ "=" expression ]
+
+expression ::=
+  "(" expression ")" |
+  IDENTIFIER "=" expression |
+  expression "->" IDENTIFIER |
+  "-" expression |
+  "!" expression |
+  "~" expression |
+  inc IDENTIFIER |
+  dec IDENTIFIER |
+  IDENTIFIER inc |
+  IDENTIFIER dec |
+  expression "+" expression |
+  expression "-" expression |
+  expression "*" expression |
+  expression "/" expression |
+  expression "%" expression |
+  expression like expression |
+  expression ilike expression |
+  expression "~=" expression |
+  expression match expression |
+  expression imatch expression |
+  expression "==" expression |
+  expression "!=" expression |
+  expression "<" expression |
+  expression "<=" expression |
+  expression ">" expression |
+  expression ">=" expression |
+  expression "&" expression |
+  expression "|" expression |
+  expression "^" expression |
+  expression "&&" expression |
+  expression "||" expression |
+  expression "<<" expression |
+  expression ">>" expression |
+  expression "." expression |
+  expression "?" expression ":" expression |
+  operand
+
+operand ::=
+  function_call |
+  type_cast |
+  constant |
+  IDENTIFIER
+
+type_cast ::=
+  builtin_type "(" expression ")"
+
+builtin_type ::=
+  int32 |
+  int64 |
+  uint32 |
+  uint64 |
+  real |
+  string
+
+function_call ::=
+  IDENTIFIER "(" [ expression { "," expression } ] ")"
+
+constant ::=
+  STRING |
+  INT32 |
+  INT64 |
+  UINT32 |
+  UINT64 |
+  REAL |
+  NULL
+----
+
+.Terminal symbols
+----
+IDENTIFIER ::= [A-Za-z_\$][A-Za-z_\$0-9]*
+COMPOUND_IDENTIFIER ::= { IDENTIFIER}(::{ IDENTIFIER})+
+INTEGER ::= \-?(0x)?[0-9]+
+INT32 ::= INTEGER
+INT64 ::= {INTEGER}L
+UINT32 ::= {INTEGER}U
+UINT64 ::= {INTEGER}(UL|LU)
+REAL ::= \-?[0-9]+\.[0-9]+
+----

@@ -1,0 +1,292 @@
+[[class-node]]
+=== Node
+
+Represents NetXMS node object. Extends <<class-netobj>>.
+
+==== Instance attributes
+
+`agentVersion`::
+NetXMS agent version as `string`.
+
+`bootTime`::
+Number of seconds since node start or `0` if unknown.
+
+`bridgeBaseAddress`::
+Base address of the switch formatted as 12 character `string` without separators. Value is only valid for bridges and switches. Special value `000000000000` indicates that address is unknown.
+
+`driver`::
+Named of selected device-specific SNMP driver.
+
+`flags`::
+Bit mask of <<node-flags>>, `uint32`.
+
+`is802_1x`::
+`TRUE` if node supports 802.1x.
+
+`isPAE`::
+`TRUE` if node supports 802.1x.
+
+`isAgent`::
+
+`TRUE` if NetXMS agent detected on node
+
+`isBridge`::
+TRUE if node is a bridge
+
+`isCDP`::
+TRUE if node supports CDP (Cisco Discovery Protocol)
+
+`isLLDP`::
+TRUE if node supports LLDP (Link Layer Discovery Protocol)
+
+`isLocalMgmt`::
+`TRUE` if node is a local management server (NetXMS server)
+
+`isLocalManagement`::
+`TRUE` if node is a local management server (NetXMS server)
+
+`isPrinter`::
+`TRUE` if node is a printer
+
+`isRouter`::
+`TRUE` if node is a router (has IP forwarding enabled)
+
+`isSMCLP`::
+`TRUE` if SMCLP agent detected on node
+
+`isSNMP`::
+`TRUE` if SNMP agent detected on node
+
+`isSONMP`::
+`TRUE` if node supports SONMP/NDP (Synoptics/Nortel Discovery Protocol)
+
+`platformName`::
+Platform name reported by NetXMS agent
+
+`runtimeFlags`::
+Bit mask of <<node-runtime-flags>>, `uint32`.
+
+`snmpOID`::
+SNMP object identifier (result of `.1.3.6.1.2.1.1.2.0` request)
+
+`snmpSysContact`::
+SNMP system contact (result of `.1.3.6.1.2.1.1.4.0` request)
+
+`snmpSysLocation`::
+SNMP system location (result of `.1.3.6.1.2.1.1.6.0` request)
+
+`snmpSysName`::
+SNMP system name (result of `.1.3.6.1.2.1.1.5.0` request)
+
+`snmpVersion`::
+Configured SNMP version:
+
+* 0: SNMP version 1
+* 1: SNMP version 2c
+* 2: SNMP version 3
+
+`sysDescription`::
+System description (value of `System.Uname` for nodes with agents or `.1.3.6.1.2.1.1.1.0` for SNMP nodes)
+
+`zone`::
+<<class-zone>> object (`null` if zoning is disabled)
+
+`zoneId`::
+Zone ID (`0` if zoning is disabled)
+
+==== Instance methods
+
+`void clearGeoLocation()`::
+Clears GeoLocation data from the node
+
+`void setGeoLocation(<<class-geolocation,GeoLocation>> location)`::
+Sets GeoLocation data for the node to `location`
+
+`void enableAgent(boolean flag)`::
+Enable or disable usage of NetXMS agent for all polls.
+
+`void enableConfigurationPolling(boolean)`::
+Enable or disable configuration polling for a node
+
+`enableIcmp(boolean)`::
+Enable or disable usage of ICMP pings for status polls
+
+`enableSnmp(boolean)`::
+Enable or disable usage of SNMP for all polls
+
+`enableStatusPolling`::
+Enable or disable status polling for a node
+
+`enableTopologyPolling(boolean)`::
+Enable or disable topology polling
+
+==== Constants
+
+[[node-flags]]
+[cols="1,4a"]
+.Node flags
+|===
+| Value | Description
+
+| 0x003FFF7F
+| NF_SYSTEM_FLAGS
+
+| 0xFFC00080
+| NF_USER_FLAGS
+
+| 0x00000001
+| NF_IS_SNMP
+
+| 0x00000002
+| NF_IS_NATIVE_AGENT
+
+| 0x00000004
+| NF_IS_BRIDGE
+
+| 0x00000008
+| NF_IS_ROUTER
+
+| 0x00000010
+| NF_IS_LOCAL_MGMT
+
+| 0x00000020
+| NF_IS_PRINTER
+
+| 0x00000040
+| NF_IS_OSPF
+
+| 0x00000080
+| NF_REMOTE_AGENT
+
+| 0x00000100
+| NF_IS_CPSNMP. CheckPoint SNMP agent on port 260
+
+| 0x00000200
+| NF_IS_CDP
+
+| 0x00000400
+| NF_IS_NDP. Supports Nortel (Synoptics/Bay Networks) topology discovery
+
+| 0x00000400
+| NF_IS_SONMP. SONMP is an old name for NDP
+
+| 0x00000800
+| NF_IS_LLDP. Supports Link Layer Discovery Protocol
+
+| 0x00001000
+| NF_IS_VRRP. VRRP support
+
+| 0x00002000
+| NF_HAS_VLANS. VLAN information available
+
+| 0x00004000
+| NF_IS_8021X. 802.1x support enabled on node
+
+| 0x00008000
+| NF_IS_STP. Spanning Tree (IEEE 802.1d) enabled on node
+
+| 0x00010000
+| NF_HAS_ENTITY_MIB. Supports ENTITY-MIB
+
+| 0x00020000
+| NF_HAS_IFXTABLE. Supports ifXTable
+
+| 0x00040000
+| NF_HAS_AGENT_IFXCOUNTERS. Agent supports 64-bit interface counters
+
+| 0x00080000
+| NF_HAS_WINPDH. Node supports Windows PDH parameters
+
+| 0x00100000
+| NF_IS_WIFI_CONTROLLER. Node is wireless network controller
+
+| 0x00200000
+| NF_IS_SMCLP. Node supports SMCLP protocol
+
+| 0x00400000
+| NF_DISABLE_DISCOVERY_POLL
+
+| 0x00800000
+| NF_DISABLE_TOPOLOGY_POLL
+
+| 0x01000000
+| NF_DISABLE_SNMP
+
+| 0x02000000
+| NF_DISABLE_NXCP
+
+| 0x04000000
+| NF_DISABLE_ICMP
+
+| 0x08000000
+| NF_FORCE_ENCRYPTION
+
+| 0x10000000
+| NF_DISABLE_STATUS_POLL
+
+| 0x20000000
+| NF_DISABLE_CONF_POLL
+
+| 0x40000000
+| NF_DISABLE_ROUTE_POLL
+
+| 0x80000000
+| NF_DISABLE_DATA_COLLECT
+
+|===
+
+[[node-runtime-flags]]
+[cols="1,4a"]
+.Node runtime flags
+|===
+| Value | Description
+
+| 0x0001
+| QUEUED_FOR_STATUS_POLL
+
+| 0x0002
+| QUEUED_FOR_CONFIG_POLL
+
+| 0x0004
+| UNREACHABLE
+
+| 0x0008
+| AGENT_UNREACHABLE
+
+| 0x0010
+| SNMP_UNREACHABLE
+
+| 0x0020
+| QUEUED_FOR_DISCOVERY_POLL
+
+| 0x0040
+| FORCE_STATUS_POLL
+
+| 0x0080
+| FORCE_CONFIGURATION_POLL
+
+| 0x0100
+| QUEUED_FOR_ROUTE_POLL
+
+| 0x0200
+| CPSNMP_UNREACHABLE
+
+| 0x0400
+| RECHECK_CAPABILITIES
+
+| 0x0800
+| POLLING_DISABLED
+
+| 0x1000
+| CONFIGURATION_POLL_PASSED
+
+| 0x2000
+| QUEUED_FOR_TOPOLOGY_POLL
+
+| 0x4000
+| DELETE_IN_PROGRESS
+
+| 0x8000
+| NETWORK_PATH_PROBLEM
+
+|===

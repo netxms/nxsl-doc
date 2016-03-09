@@ -1,0 +1,46 @@
+=== Event
+
+Represents NetXMS event object.
+
+==== Instance attributes
+
+`code`::
+Event code
+
+`customMessage`::
+Custom message set in event processing policy
+
+`id`::
+Unique event identifier
+
+`message`::
+Event message
+
+`name`::
+Event name
+
+`parameters`::
+Array of event parameters. Starting index is 1.
+
+`severity`::
+Event severity
+
+`timestamp`::
+Timestamp as number of seconds since epoch (1 Jan 1970 00:00:00 UTC)
+
+`userTag`::
+User tag associated with event
+
+==== Instance methods
+
+`void setMessage(???)`::
+
+TODO: add description
+
+`void setSeverity(???)`::
+
+TODO: add description
+
+`void setUserTag(???)`::
+
+TODO: add description

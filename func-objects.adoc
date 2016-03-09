@@ -1,0 +1,18 @@
+=== Object search
+
+[[func-FindNodeObject]]
+==== FindNodeObject(`currentNode`, `key`)
+
+Look up <<Node>> object by the `key` (either string name or integer id) or return `null` if not found.
+
+Unless <<security,trusted node validation>> is disabled, `currentNode` should be set to current context node (predefined variable `$node` in most cases).
+If validation is disabled, `currentNode` is ignored and can be set to `null`.
+
+  >>> FindNodeObject($node, "server.netxms.org")
+  object
+  >>> FindNodeObject(null, 12)
+  object
+  >>> FindNodeObject($node, "bad_node_name")
+  NULL
+
+=== Object management

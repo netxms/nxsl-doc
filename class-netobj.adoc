@@ -1,0 +1,141 @@
+[[class-netobj]]
+=== NetObj
+
+Base class for all NetXMS objects.
+
+==== Instance attributes
+
+Object custom attributes can be accessed in the same way as instance attribute, if names do not overlap. <<func-GetCustomAttribute>> should be used otherwise.
+
+`id`::
+Object identifier (`uint32`).
+
+`guid`::
+Object GUID as `string`.
+
+`ipAddr`::
+Primary IP address (`string`).
+
+`name`::
+Object name.
+
+`status`::
+<<enum-object-status,Object status>>.
+
+`type`::
+<<enum-object-type,Object type>>.
+
+`comments`::
+Object comments.
+
+`streetAddress`::
+Postal address – street.
+
+`city`::
+Postal address - city.
+
+`postcode`::
+Postal address – postal code.
+
+`country`::
+Postal address – country.
+
+`customAttributes`::
+<<class-HashMap>> of object custom attributes.
+
+`geolocation`::
+Object <<class-geolocation,geographical location>>.
+
+==== Instance methods
+
+`void clearGeoLocation()`::
+Clears GeoLocation data from the node
+
+`setGeoLocation(GeoLocation location)`::
+Sets node geographical <<class-GeoLocation,location>>.
+
+[[enum-object-status]]
+.Object Statuses
+|===
+| Code | Description
+
+| 0
+| Normal
+
+| 1
+| Warning
+
+| 2
+| Minor
+
+| 3
+| Major
+
+| 4
+| Critical
+
+| 5
+| Unknown
+
+| 6
+| Unmanaged
+
+| 7
+| Disabled
+
+| 8
+| Testing
+
+|===
+
+[[enum-object-type]]
+.Object Types
+|===
+| Code | Description
+
+| 0
+| Generic
+
+| 1
+| Subnet
+
+| 2
+| Node
+
+| 3
+| Interface
+
+| 4
+| Network
+
+| 5
+| Container
+
+| 6
+| Zone
+
+| 7
+| Service Root
+
+| 8
+| Template
+
+| 9
+| Template Group
+
+| 10
+| Template Root
+
+| 11
+| Network Service
+
+| 12
+| VPN Connector
+
+| 13
+| Condition
+
+| 14
+| Cluster
+
+|===

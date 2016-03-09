@@ -1,0 +1,58 @@
+=== DCI
+
+Represents Data Collection Item (DCI).
+
+==== Instance attributes
+
+`comments`::
+Comments (since 2.0-M5)
+
+`dataType`::
+Configured data type; possible values are:
+  * 0 = Integer
+  * 1 = Unsigned integer
+  * 2 = 64 bit integer
+  * 3 = 64 bit unsigned integer
+  * 4 = String
+  * 5 = Floating point number
+  * 6 = null
+
+`description`::
+Description
+
+`errorCount`::
+Number of consecutive data collection errors
+
+`id`::
+Unique DCI identifier
+
+`instance`::
+DCI instance (only for single value DCIs)
+
+`lastPollTime`::
+Time of last DCI poll (either successful or not) as number of seconds since epoch (1 Jan 1970 00:00:00 UTC)
+
+`name`::
+Parameter's name
+
+`origin`::
+Data origin (source); possible values are:
+  * 0 =	Internal
+  * 1	= NetXMS agent
+  * 2	= SNMP agent
+  * 3	= Check Point SNMP agent
+  * 4	= Push
+
+`status`::
+DCI status; possible values are:
+  * 0 =	Active
+  * 1	= Disabled
+  * 2	= Not supported
+
+`systemTag`::
+System tag. Always empty for user-defined DCIs.
+
+`type`::
+DCI type:
+  * 1 = single value
+  * 2 = table

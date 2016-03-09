@@ -1,0 +1,63 @@
+[[class-table]]
+=== Table
+
+Represents table object (usually it's value of table DCI).
+
+==== Instance attributes
+
+`columnCount`::
+Number of columns.
+
+`columns`::
+Array of <<class-tablecolumn,column definitions>>.
+
+`rowCount`::
+Number of rows.
+
+`title`::
+Title of table.
+
+==== Instance methods
+
+`addColumn`::
+TODO: add description
+
+`addRow`::
+TODO: add description
+
+`deleteColumn`::
+TODO: add description
+
+`deleteRow`::
+TODO: add description
+
+`get`::
+TODO: add description
+
+`getColumnIndex`::
+TODO: add description
+
+`getColumnName`::
+TODO: add description
+
+`set`::
+TODO: add description
+
+[[class-tablecolumn]]
+=== TableColumn
+
+Represents table column definition object (used by Table class).
+
+==== Instance attributes
+
+`dataType`::
+Data type
+
+`displayName`::
+Display name
+
+`isInstanceColumn`::
+`TRUE` if column is marked as instance column
+
+`name`::
+Column name

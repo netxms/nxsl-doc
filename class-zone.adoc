@@ -1,0 +1,18 @@
+[[class-zone]]
+=== Zone
+
+Represent network zone. Inherit all attributes and methods of the <<class-netobj>> class.
+
+==== Instance attributes
+
+`agentProxy`::
+Identifier of node object used as agent proxy
+
+`icmpProxy`::
+Identifier of node object used as ICMP proxy
+
+`snmpProxy`::
+Identifier of node object used as SNMP proxy
+
+`zoneId`::
+Zone ID

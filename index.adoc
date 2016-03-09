@@ -1,0 +1,29 @@
+:toc: right
+:toclevels: 3
+:icons: font
+= NetXMS Scripting Language
+
+== Introduction
+
+In many parts of the system, fine tuning can be done by using NetXMS built-in scripting language called NXSL (stands for NetXMS Scripting Language). NXSL was designed specifically to be used as embedded scripting language within NetXMS, and because of this has some specific features and limitations. Most notable is very limited access to data outside script boundaries – for example, from NXSL script you cannot access files on server, nor call external programs, nor even access data of the node object other than script is running for without explicit permission. NXSL is interpreted language – scripts first compiled into internal representation (similar to byte code in Java), which than executed inside NXSL VM.
+
+[[security]]
+== Script security
+
+Because NXSL provides functions for searching objects, and because all scripts are executed on management server, user with write access to only one node can potentially acquire information about nodes to which he normally does not have access. For example, without additional security checks user with write access to node `A` and no access to node `B` can create transformation script for DCI on node `A` and use <<func-FindNodeObject,FindNodeObject>> function to access node `B` and get information about it, thus breaking security settings.
+
+To prevent such scenario, all NXSL functions capable of accessing NetXMS objects requires "current node" object to be provided. Reference to object being searched will only be returned if node object supplied as "current node" is in trusted nodes list of target object. For example, if variable `$node` in script refers to `NODE1`, and `FindNodeObject($node, "NODE2")` called, `NODE1` must be added to list of trusted nodes for `NODE2`. In most places (transformation script, event processing policy, etc.) predefined variable `$node` exists, which refers to node object on behalf of which script is being executed. It will be event source for event processing policy script, DCI owner for transformation script, and so on.
+
+For environments where such strict security checks are not required (for example, all users have read access to all nodes), they can be disabled to simplify configuration. Enforcement of trusted nodes checking controlled by server's configuration variable `CheckTrustedNodes`. By default it is set to `1` and check of trusted nodes is enforced. To disable it, server's configuration variable `CheckTrustedNodes` must be set to `0`. The server restart is required to make this change effective.
+
+== Class Reference
+
+include::classes.adoc[]
+
+== Function Reference
+
+include::functions.adoc[]
+
+== Formal Grammar
+
+include::grammar.adoc[]

@@ -1,0 +1,71 @@
+=== Alarm
+
+Represents NetXMS alarm.
+
+==== Instance attributes
+
+`ackBy`::
+ID of user who acknowledges this alarm
+
+`creationTime`::
+Alarm creation time (in seconds since epoch)
+
+`eventCode`::
+Event code of originating event
+
+`eventId`::
+ID of originating event
+
+`helpdeskReference`::
+Helpdesk system reference
+
+`helpdeskState`::
+Helpdesk state:
+  * 0 = ignored
+  * 1 = open
+  * 2 = closed
+
+`id`::
+Alarm's unique identifier
+
+`key`::
+Alarm key
+
+`lastChangeTime`::
+Time of last change (in seconds since epoch)
+
+`message`::
+Alarm's message
+
+`originalSeverity`::
+Alarm's original severity
+
+`repeatCount`::
+Repeat count
+
+`resolvedBy`::
+ID of user who resolves this alarm
+
+`severity`::
+Alarm's current severity
+
+`sourceObject`::
+ID of event source object
+
+`state`::
+Alarm state
+  * 0 = outstanding
+  * 1 = acknowledged
+  * 2 = resolved
+  * 17 = sticky acknowledged
+
+==== Instance methods
+
+`void acknowledge()`::
+Acknowledge alarm.
+
+`resolve()`::
+Resolve alarm.
+
+`terminate()`::
+Terminate alarm.
