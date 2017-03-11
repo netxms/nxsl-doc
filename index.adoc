@@ -1,4 +1,4 @@
-:toc: right
+:toc: left
 :toclevels: 3
 :icons: font
 = NetXMS Scripting Language
@@ -16,13 +16,19 @@ To prevent such scenario, all NXSL functions capable of accessing NetXMS objects
 
 For environments where such strict security checks are not required (for example, all users have read access to all nodes), they can be disabled to simplify configuration. Enforcement of trusted nodes checking controlled by server's configuration variable `CheckTrustedNodes`. By default it is set to `1` and check of trusted nodes is enforced. To disable it, server's configuration variable `CheckTrustedNodes` must be set to `0`. The server restart is required to make this change effective.
 
+<<<
+
 == Class Reference
 
 include::classes.adoc[]
 
+<<<
+
 == Function Reference
 
 include::functions.adoc[]
+
+<<<
 
 == Formal Grammar
 
