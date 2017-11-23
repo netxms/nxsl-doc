@@ -1,8 +1,8 @@
 [[func-group-snmp]]
-=== SNMP
+= SNMP
 
 [[func-CreateSNMPTransport]]
-==== CreateSNMPTransport(`node`)
+== CreateSNMPTransport(`node`)
 
 Create <<class-SNMP_Transport>> object in context of <<class-node>>.
 Return `null` if transport cannot be created.
@@ -15,7 +15,7 @@ Return `null` if transport cannot be created.
 ----
 
 [[func-SNMPGet]]
-==== SNMPGet(`transport`, `oid`)
+== SNMPGet(`transport`, `oid`)
 
 Perform SNMP GET request for `oid` over provided <<class-SNMP_Transport,transport>>. Return <<class-SNMP_VarBind>> or `null` on failure.
 
@@ -34,7 +34,7 @@ if (transport != null) {
 }
 ----
 
-==== SNMPGetValue(`transport`, `oid`)
+== SNMPGetValue(`transport`, `oid`)
 
 Perform SNMP GET request for `oid` over provided <<class-SNMP_Transport,transport>>. Return `string` value of the result or `null` on failure.
 
@@ -55,7 +55,7 @@ if (transport != null) {
 }
 ----
 
-==== SNMPSet(`transport`, `oid`, `value`, `dataType`)
+== SNMPSet(`transport`, `oid`, `value`, `dataType`)
 
 Perform SNMP SET request for `oid` over provided <<class-SNMP_Transport,transport>>. Return boolean success indicator.
 `value` is automatically converted from string based in `dataType`. If `dataType` is not provided, default type "STRING" will be used.
@@ -84,7 +84,7 @@ if (!SNMPSet(transport, oid, "192.168.0.1", "IPADDR") {
 | UINT32 | Same as UINTEGER32.
 |===
 
-==== SNMPWalk(`transport`, `oid`)
+== SNMPWalk(`transport`, `oid`)
 
 Perform SNMP WALK request for `oid` over provided <<class-SNMP_Transport,transport>> and return collected values as array of <<class-SNMP_VarBind>> or `null` on failure.
 

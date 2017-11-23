@@ -1,7 +1,11 @@
-=== Object search
+= Object search
+
+== GetAllNodes
+
+== FindObject
 
 [[func-FindNodeObject]]
-==== FindNodeObject(`currentNode`, `key`)
+== FindNodeObject(`currentNode`, `key`)
 
 Look up <<Node>> object by the `key` (either string name or integer id) or return `null` if not found.
 
@@ -15,4 +19,79 @@ If validation is disabled, `currentNode` is ignored and can be set to `null`.
   >>> FindNodeObject($node, "bad_node_name")
   NULL
 
+== GetObjectChildren(`object`)
+
+Return array of children of `object`.
+
+== GetObjectParents(`object`)
+
+Return array of parents of `object`.
+
+=== Custom attributes
+
+[[func-GetCustomAttribute]]
+== GetCustomAttribute(`node`, `name`)
+
+Get custom attribute by `name` from `node`.
+If attribute is not found – return `NULL`.
+
+Attributes can be accessed in the same way as instance attribues:
+
+  >>> GetCustomAttribute($node, "test")
+  testvalue
+  >>> $node->test
+  testvalue
+
+== SetCustomAttribute(`node`, `name`, `value`)
+
+Set custom attribute `name` to `value` on `node`.
+
+== DeleteCustomAttribute(`node`, `name`)
+
+Delete custom attribute `name` from `node`.
+
 === Object management
+
+== ManageObject
+
+== UnmanageObject
+
+=== Maintenance mode
+
+== EnterMaintenance
+
+== LeaveMaintenance
+
+== GetInterfaceName
+
+== GetInterfaceObject
+
+== GetNodeInterfaces
+
+== GetNodeParents
+
+== GetNodeTemplates
+
+== RenameObject
+
+== SetInterfaceExpectedState
+
+== BindObject
+
+AF_ENABLE_NXSL_CONTAINER_FUNCS
+
+== CreateContainer
+
+AF_ENABLE_NXSL_CONTAINER_FUNCS
+
+== CreateNode
+
+AF_ENABLE_NXSL_CONTAINER_FUNCS
+
+== DeleteObject
+
+AF_ENABLE_NXSL_CONTAINER_FUNCS
+
+== UnbindObject
+
+AF_ENABLE_NXSL_CONTAINER_FUNCS

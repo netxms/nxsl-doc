@@ -1,38 +1,12 @@
-include::func-common.adoc[]
-
-include::func-math.adoc[]
-
-include::func-string.adoc[]
-
-include::func-datacollection.adoc[]
-
-include::func-objects.adoc[]
-
-=== Network
-
-=== Time
-
-=== Cryptography
-
-include::func-snmp.adoc[]
-
-=== Agent
-
-==== AgentReadList
-
-==== AgentReadParameter(`node`, `name`)
-
-Request `name` metric directly from agent on given <<class-node, node>> and return it's value or `null` if failed.
-
-.Example
-----
->>> v = AgentReadParameter($node, "Agent.Version")
->>> println(v)
-2.0.2
-----
-
-==== AgentReadTable
-
-=== Event Processing
-
-=== Situations
+include::func-misc.adoc[leveloffset=+2]
+include::func-math.adoc[leveloffset=+2]
+include::func-string.adoc[leveloffset=+2]
+include::func-objects.adoc[leveloffset=+2]
+include::func-datacollection.adoc[leveloffset=+2]
+include::func-events.adoc[leveloffset=+2]
+include::func-situations.adoc[leveloffset=+2]
+include::func-snmp.adoc[leveloffset=+2]
+include::func-agent.adoc[leveloffset=+2]
+ifdef::extended[]
+include::func-modules.adoc[leveloffset=+2]
+endif::extended[]

@@ -1,1 +1,31 @@
-=== Data Collection
+= Data Collection
+
+== CreateDCI
+
+== FindAllDCIs
+
+== FindDCIByName
+
+== FindDCIByDescription
+
+== GetAvgDCIValue
+
+== GetDCIObject
+
+== GetDCIRawValue
+
+== GetDCIValue
+
+== GetDCIValues
+
+== GetDCIValueByDescription
+
+== GetDCIValueByName
+
+== GetMaxDCIValue
+
+== GetMinDCIValue
+
+== GetSumDCIValue
+
+== PushDCIData

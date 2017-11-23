@@ -1,0 +1,6 @@
+= Situations
+
+== FindSituation
+
+== GetSituationAttribute
+

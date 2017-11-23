@@ -1,0 +1,231 @@
+= Miscelanious functions
+
+== CountryAlphaCode
+
+Lookup country alpha code by numeric or alpha3 code.
+
+=== Declaration
+
+[source,cpp]
+----
+string CountryAlphaCode(string code)
+----
+
+=== Parameters
+[cols="1,3"]
+|===
+| code | Numeric (3 digits) or 3-letter country code.
+|===
+
+=== Return Value
+
+Two letter country code. `NULL` if country not found.
+
+=== Example
+
+[.result]
+....
+  >>> CountryAlphaCode('020')
+  AN
+  >>> CountryAlphaCode('AND')
+  AN
+  >>> CountryAlphaCode('124')
+  CA
+....
+
+== CountryName
+
+== CurrencyAlphaCode
+
+== CurrencyExponent
+
+== CurrencyName
+
+== ReadPersistentStorage
+
+Read value from global persistent key-value storage.
+
+=== Declaration
+
+[source,cpp]
+----
+string ReadPersistentStorage(string key)
+----
+
+=== Parameters
+[cols="1,3"]
+|===
+| key | Record key to lookup.
+|===
+
+=== Return Value
+
+Value referenced by `key` or NULL if key not exist.
+
+=== Example
+
+[.result]
+....
+  >>> ReadPersistentStorage("key1")
+  value1
+  >>> ReadPersistentStorage("key2")
+  null
+  >>> WritePersistentStorage("key2", "value2")
+  >>> ReadPersistentStorage("key2")
+  value2
+....
+
+== WritePersistentStorage(`key`, `value`)
+
+Create or update value in global persistent key-value store.
+
+=== Declaration
+
+[source,cpp]
+----
+void WritePersistentStorage(string key, string value)
+----
+
+=== Parameters
+[cols="1,3"]
+|===
+| key | String key.
+| value | String value to be saved.
+|===
+
+=== Return Value
+
+None.
+
+=== Example
+
+[.result]
+....
+  >>> WritePersistentStorage("key1", "value1")
+  >>> ReadPersistentStorage("key1")
+  value1
+....
+
+== GetConfigurationVariable(`key`, `default=null`)
+
+Read server configuration parameter by `key`. If parameter not found, `default` value is returned.
+
+.Example
+----
+>>> GetConfigurationVariable("NumberOfStatusPollers")
+10
+>>> GetConfigurationVariable("BadVariable")
+NULL
+>>> GetConfigurationVariable("BadVariable", 22)
+22
+----
+
+== _exit(`exitCode=0`)
+
+Stop script execution and return `exitCode`.
+
+== classof(instance)
+
+Return class name of the `instance`
+
+.Example
+----
+>>> classof($node)
+Node
+----
+
+== typeof(instance)
+
+Return type of the `instance`.
+
+.Example
+----
+>>> typeof(1)
+int32
+>>> typeof(1L)
+int64
+>>> typeof(%(1, 2, 3))
+array
+>>> typeof(null)
+null
+----
+
+== inList(`string`, `separator`, `pattern`)
+
+Split input `string` by `separator` compare each element with `pattern`.
+
+.Example
+----
+>>> inList("1,2,3", ",", "1")
+true
+>>> inList("ab|cd|ef", "|", "test")
+false
+----
+
+== d2x(`decValue`, `padding=0`)
+
+Convert decimal `devValue` to hex string with optional `padding`.
+
+.Example
+----
+>>> d2x(1234)
+4D2
+>>> d2x(1234, 8)
+000004D2
+----
+
+== x2d(`hexValue`)
+
+Convert hexadecimal string to decimal value.
+
+.Example
+----
+>>> x2d("4D2")
+1234
+----
+
+== trace(`debugLevel`, `message`)
+
+Writes `message` to NetXMS main log if current debug level is equal or higher than `debugLevel`.
+
+== map
+
+Lookup value from mapping table.
+
+  map(table, key, [default])
+
+Arguments:
+
+. `table` – name or ID of the mapping table
+. `key` – string key to lookup
+. `default` – (optional) default value
+
+When key or table is not found, return `null` or default value if provided.
+
+== mapList
+
+Lookup multiple keys (separated by user-defined separator) from mapping table.
+Result string is joined using the same separator.
+
+  mapList(table, list, separator, [default])
+
+Arguments:
+
+. `table` – name or ID of the mapping table
+. `list` – string of keys separated by `separator`
+. `separator` – separator used to split `list` and to produce output
+
+.Example
+[.output]
+....
+>>> mapList("table1", "10,20,30", ",")
+value1,value2,value3
+....
+
+== GetSyslogRuleCheckCount
+
+== GetSyslogRuleMatchCount
+
+== FindAlarmById
+
+== FindAlarmByKey
