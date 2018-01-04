@@ -7,6 +7,9 @@ Base class for all NetXMS objects.
 
 Object custom attributes can be accessed in the same way as instance attribute, if names do not overlap. <<func-GetCustomAttribute>> should be used otherwise.
 
+`alarms`::
+Array of <<class-alarm, Alarm objects>> of object`s active alarms.
+
 `id`::
 Object identifier (`uint32`).
 
@@ -36,6 +39,9 @@ Postal address - city.
 
 `postcode`::
 Postal address – postal code.
+
+`responsibleUsers`::
+Array of <<class-userdb, UserDBObject objects>> of object`s responsible users
 
 `country`::
 Postal address – country.

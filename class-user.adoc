@@ -1,0 +1,52 @@
+[[class-user]]
+=== User
+
+Represents NetXMS User object. Extends <<class-userdb>>
+
+==== Instance attributes
+
+`authMethod`::
+Authentication method (`int32`).
+
+`certMappingData`::
+Certificate mapping data (`string`).
+
+`certMappingMethod`::
+Certificate mapping method (`int32`).
+
+`disabledUntil`::
+Disabled until or 0 if enabled (in seconds since epoch) (`int64`).
+
+`fullName`::
+Full name (`string`).
+
+`graceLogins`::
+Grace login count (`int32`).
+
+`lastLogin`::
+Last login or 0 if user has never logged in (in seconds since epoch) (`int64`).
+
+`xmppId`::
+XMPP Id (`string`).
+
+[[enum-user-auth-method]]
+.User authentication methods
+|===
+| Code | Description
+
+| 0
+| NetXMS Password
+
+| 1
+| Radius
+
+| 2
+| Certificate
+
+| 3
+| Certificate or Password
+
+| 4
+| Certificate or Radius
+
+|===

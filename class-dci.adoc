@@ -1,3 +1,4 @@
+[[class-dci]]
 === DCI
 
 Represents Data Collection Item (DCI).

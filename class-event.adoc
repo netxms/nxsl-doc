@@ -1,3 +1,4 @@
+[[class-event]]
 === Event
 
 Represents NetXMS event object.

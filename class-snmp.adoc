@@ -1,3 +1,4 @@
+[[class-snmp]]
 === SNMP_Transport
 
 Represents SNMP Transport functionality. Objects of this class are typically obtained from nodes that support SNMP. Objects of this class used to access <<func-group-snmp,SNMP functions>> of nodes.

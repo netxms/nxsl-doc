@@ -1,0 +1,194 @@
+[[class-userdb]]
+=== UserDBObject
+
+Represents NetXMS UserDatabaseObject object.
+
+==== Instance attributes
+
+`description`::
+Object`s description (`string`).
+
+`flags`::
+Object`s flags (`uint32`).
+
+`guid`::
+Object`s guid (`string`).
+
+`id`::
+Object`s id (`uint32`).
+
+`isDeleted`::
+TRUE if object is deleted (`boolean`).
+
+`isDisabled`::
+TRUE if object is disabled (`boolean`).
+
+`isGroup`::
+TRUE if object is of class <<class-usergroup, UserGroup>> (`boolean`).
+
+`isLDAPUser`::
+TRUE if object is an LDAP user (`boolean`).
+
+`LDAPDomain`::
+Object`s LDAP domain (`string`).
+
+`LDAPId`::
+Object`s LDAP id (`string`).
+
+`systemRights`::
+Object`s system rights (`uint64`).
+
+[[enum-userdb-flags]]
+.UserDBObject flags
+|===
+| Flag | Description
+
+| 0x0001
+| Modified
+
+| 0x0002
+| Deleted
+
+| 0x0004
+| Disabled
+
+| 0x0008
+| Required to change password
+
+| 0x0010
+| Cannot change password
+
+| 0x0020
+| Intruder lockout
+
+| 0x0040
+| Password never expires
+
+| 0x0080
+| LDAP user
+
+| 0x0100
+| Sync exception
+
+| 0x0200
+| Close other sessions
+
+|===
+
+[[enum-userdb-sys-rights]]
+.UserDBObject system rights
+|===
+| Flag | Description
+
+| 0x000000000001
+| Manage users
+
+| 0x000000000002
+| Edit server configuration variables
+
+| 0x000000000004
+| Configure SNMP traps
+
+| 0x000000000008
+| Control user sessions
+
+| 0x000000000010
+| View event templates configuration
+
+| 0x000000000020
+| Configure event templates
+
+| 0x000000000040
+| Edit event processing policy
+
+| 0x000000000080
+| Configure server actions
+
+| 0x000000000200
+| Manage packages
+
+| 0x000000000400
+| View event log
+
+| 0x000000000800
+| Configure object tools
+
+| 0x000000001000
+| Manage script library
+
+| 0x000000002000
+| View SNMP trap log
+
+| 0x000000004000
+| View audit log
+
+| 0x000000008000
+| Manage agent configurations
+
+| 0x000000010000
+| Manage persistent storage
+
+| 0x000000020000
+| Send SMS
+
+| 0x000000040000
+| Login as mobile device
+
+| 0x000000080000
+| Register agents
+
+| 0x000000100000
+| Read server files
+
+| 0x000000200000
+| Access server console
+
+| 0x000000400000
+| Manage server files
+
+| 0x000000800000
+| Manage mapping tables
+
+| 0x000001000000
+| Manage DCI summary tables
+
+| 0x000002000000
+| Reporting server access
+
+| 0x000004000000
+| Execute commands via XMPP
+
+| 0x000008000000
+| Manage Image Library
+
+| 0x000010000000
+| Unlink helpdesk tickets
+
+| 0x000020000000
+| View syslog
+
+| 0x000040000000
+| Manage user scheduled tasks
+
+| 0x000080000000
+| Manage own scheduled tasks
+
+| 0x000100000000
+| Manage all scheduled tasks
+
+| 0x000200000000
+| Schedule script execution
+
+| 0x000400000000
+| Schedule file upload
+
+| 0x000800000000
+| Schedule object maintenance
+
+| 0x004000000000
+| View all alarm categories
+
+| 0x008000000000
+| External tool integration account
+
+|===
