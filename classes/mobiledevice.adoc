@@ -1,0 +1,6 @@
+[[class-mobiledevice]]
+=== MobileDevice
+
+==== Instance attributes
+
+==== Instance methods

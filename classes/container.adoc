@@ -1,0 +1,15 @@
+[[class-container]]
+=== Container
+
+…
+
+==== Instance attributes
+
+`attribute`::
+Description.
+
+==== Instance methods
+
+`method() ⇒ void`::
+Description.
+
