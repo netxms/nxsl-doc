@@ -1,0 +1,41 @@
+=== DCI::INT32
+
+Integer value: `0`
+
+Data type of <<class-dci>> instance – singed 32 bit integer.
+
+=== DCI::UINT32
+
+Integer value: `1`
+
+Data type of <<class-dci>> instance – unsinged 32 bit integer.
+
+=== DCI::INT64
+
+Integer value: `2`
+
+Data type of <<class-dci>> instance – singed 64 bit integer.
+
+=== DCI::UINT64
+
+Integer value: `3`
+
+Data type of <<class-dci>> instance – unsinged 64 bit integer.
+
+=== DCI::STRING
+
+Integer value: `4`
+
+Data type of <<class-dci>> instance – string.
+
+=== DCI::FLOAT
+
+Integer value: `5`
+
+Data type of <<class-dci>> instance – float.
+
+=== DCI::NULL
+
+Integer value: `6`
+
+Data type of <<class-dci>> instance – null.

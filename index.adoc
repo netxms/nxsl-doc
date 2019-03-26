@@ -66,6 +66,12 @@ include::classes.adoc[]
 
 <<<
 
+== Global Constants
+
+include::constants.adoc[]
+
+<<<
+
 == Formal Grammar
 
 include::grammar.adoc[]
