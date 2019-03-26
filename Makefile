@@ -6,6 +6,9 @@ else
    OPTS = -a extended
 endif
 
+
+OPTS:=$(OPTS) -a revdate="$(shell date +"%d %B, %Y")"
+
 all: prepare html pdf
 
 .PHONY: prepare
