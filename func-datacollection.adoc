@@ -1,31 +1,17 @@
 = Data Collection
 
-== CreateDCI
-
-== FindAllDCIs
-
-== FindDCIByName
-
-== FindDCIByDescription
-
-== GetAvgDCIValue
-
-== GetDCIObject
-
-== GetDCIRawValue
-
-== GetDCIValue
-
-== GetDCIValues
-
-== GetDCIValueByDescription
-
-== GetDCIValueByName
-
-== GetMaxDCIValue
-
-== GetMinDCIValue
-
-== GetSumDCIValue
-
-== PushDCIData
+include::functions/CreateDCI.adoc[]
+include::functions/FindAllDCIs.adoc[]
+include::functions/FindDCIByDescription.adoc[]
+include::functions/FindDCIByName.adoc[]
+include::functions/GetAvgDCIValue.adoc[]
+include::functions/GetDCIObject.adoc[]
+include::functions/GetDCIRawValue.adoc[]
+include::functions/GetDCIValue.adoc[]
+include::functions/GetDCIValueByDescription.adoc[]
+include::functions/GetDCIValueByName.adoc[]
+include::functions/GetDCIValues.adoc[]
+include::functions/GetMaxDCIValue.adoc[]
+include::functions/GetMinDCIValue.adoc[]
+include::functions/GetSumDCIValue.adoc[]
+include::functions/PushDCIData.adoc[]

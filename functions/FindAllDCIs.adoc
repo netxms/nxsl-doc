@@ -1,0 +1,50 @@
+[[func-FindAllDCIs]]
+== FindAllDCIs()
+
+[source,c]
+----
+FindAllDCIs(node, nameFilter, descriptionFilter) ⇒ Array
+----
+
+Find all DCI on the `node` matching `nameFilter` *and* `descriptionFilter`. Filter can contain glob symbols "?" and "*". If filter is `null`, it's ignored.
+
+.Parameters
+[cols="1,3" grid="none", frame="none"]
+|===
+|node|<<class-node>> object instance (e.g. `$node`)
+|nameFilter|GLOB for mastching DCI name or `null` if name should be ignored.
+|descriptionFilter|GLOB for mastching DCI description or `null` if description should be ignored.
+|===
+
+.Return
+Array of <<class-dci>>.
+
+.Example
+[source,c]
+----
+>>> list = FindAllDCIs($node, "Server*", "*MAIN*");
+>>> foreach (row : list) {
+>>> 	println(row->id . ": " . row->description . " (" . row->name . ")");
+>>> }
+91: Server thread pool MAIN: usage (Server.ThreadPool.Usage(MAIN))
+92: Server thread pool MAIN: normalized load average (1 minute) (Server.ThreadPool.LoadAverage(MAIN,1))
+93: Server thread pool MAIN: current load (Server.ThreadPool.Load(MAIN))
+
+>>> list = FindAllDCIs($node, "Server*");
+>>> foreach (row : list) {
+>>> 	println(row->id . ": " . row->description . " (" . row->name . ")");
+>>> }
+100: NetXMS server: database writer's request queue (other queries) (Server.AverageDBWriterQueueSize.Other)
+101: NetXMS server: database writer's request queue (Server.AverageDBWriterQueueSize)
+103: NetXMS server: data collector's request queue (Server.AverageDataCollectorQueueSize)
+…
+
+>>> list = FindAllDCIs($node, null, "*load average*");
+>>> foreach (row : list) {
+>>> 	println(row->id . ": " . row->description . " (" . row->name . ")");
+>>> }
+119: CPU: load average (15 minutes) (System.CPU.LoadAvg15)
+123: CPU: load average (5 minutes) (System.CPU.LoadAvg5)
+83: Server thread pool AGENT: normalized load average (1 minute) (Server.ThreadPool.LoadAverage(AGENT,1))
+…
+----
