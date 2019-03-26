@@ -1,20 +1,7 @@
-= Agent
+= Agent Related
 
-== AgentExecuteAction
-
-== AgentExecuteActionWithOutput
-
-== AgentReadList
-
-== AgentReadParameter(`node`, `name`)
-
-Request `name` metric directly from agent on given <<class-node, node>> and return it's value or `null` if failed.
-
-.Example
-----
->>> v = AgentReadParameter($node, "Agent.Version")
->>> println(v)
-2.0.2
-----
-
-== AgentReadTable
+include::functions/AgentExecuteAction.adoc[]
+include::functions/AgentExecuteActionWithOutput.adoc[]
+include::functions/AgentReadList.adoc[]
+include::functions/AgentReadParameter.adoc[]
+include::functions/AgentReadTable.adoc[]

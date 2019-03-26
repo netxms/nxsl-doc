@@ -1,0 +1,26 @@
+== AgentReadParameter()
+
+[source,c]
+----
+AgentReadParameter(node, name) ⇒ String
+----
+
+Request metric directly from agent on given node.
+
+.Parameters
+[cols="1,3" grid="none", frame="none"]
+|===
+|node|<<class-node>> object instance (e.g. `$node`)
+|name|Metric name
+|===
+
+.Return
+String value or `null` if failed.
+
+.Example
+[source,c]
+----
+>>> v = AgentReadParameter($node, "Agent.Version")
+>>> println(v)
+2.2.13
+----
