@@ -1,97 +1,36 @@
 = Object search
 
-== GetAllNodes
+include::functions/findobject.adoc[]
+include::functions/findnodeobject.adoc[]
+include::functions/getallnodes.adoc[]
 
-== FindObject
+= Custom attributes
 
-[[func-FindNodeObject]]
-== FindNodeObject(`currentNode`, `key`)
+include::functions/deletecustomattribute.adoc[]
+include::functions/getcustomattribute.adoc[]
+include::functions/setcustomattribute.adoc[]
 
-Look up <<Node>> object by the `key` (either string name or integer id) or return `null` if not found.
+= Object management
 
-Unless <<security,trusted node validation>> is disabled, `currentNode` should be set to current context node (predefined variable `$node` in most cases).
-If validation is disabled, `currentNode` is ignored and can be set to `null`.
+include::functions/manageobject.adoc[]
+include::functions/unmanageobject.adoc[]
 
-  >>> FindNodeObject($node, "server.netxms.org")
-  object
-  >>> FindNodeObject(null, 12)
-  object
-  >>> FindNodeObject($node, "bad_node_name")
-  NULL
+= Maintenance mode
 
-== GetObjectChildren(`object`)
+include::functions/entermaintenance.adoc[]
+include::functions/leavemaintenance.adoc[]
 
-Return array of children of `object`.
+= …
 
-== GetObjectParents(`object`)
-
-Return array of parents of `object`.
-
-=== Custom attributes
-
-[[func-GetCustomAttribute]]
-== GetCustomAttribute(`node`, `name`)
-
-Get custom attribute by `name` from `node`.
-If attribute is not found – return `NULL`.
-
-Attributes can be accessed in the same way as instance attribues:
-
-  >>> GetCustomAttribute($node, "test")
-  testvalue
-  >>> $node->test
-  testvalue
-
-== SetCustomAttribute(`node`, `name`, `value`)
-
-Set custom attribute `name` to `value` on `node`.
-
-== DeleteCustomAttribute(`node`, `name`)
-
-Delete custom attribute `name` from `node`.
-
-=== Object management
-
-== ManageObject
-
-== UnmanageObject
-
-=== Maintenance mode
-
-== EnterMaintenance
-
-== LeaveMaintenance
-
-== GetInterfaceName
-
-== GetInterfaceObject
-
-== GetNodeInterfaces
-
-== GetNodeParents
-
-== GetNodeTemplates
-
-== RenameObject
-
-== SetInterfaceExpectedState
-
-== BindObject
-
-AF_ENABLE_NXSL_CONTAINER_FUNCS
-
-== CreateContainer
-
-AF_ENABLE_NXSL_CONTAINER_FUNCS
-
-== CreateNode
-
-AF_ENABLE_NXSL_CONTAINER_FUNCS
-
-== DeleteObject
-
-AF_ENABLE_NXSL_CONTAINER_FUNCS
-
-== UnbindObject
-
-AF_ENABLE_NXSL_CONTAINER_FUNCS
+include::functions/getinterfacename.adoc[]
+include::functions/getinterfaceobject.adoc[]
+include::functions/getnodeinterfaces.adoc[]
+include::functions/getnodeparents.adoc[]
+include::functions/getnodetemplates.adoc[]
+include::functions/renameobject.adoc[]
+include::functions/setinterfaceexpectedstate.adoc[]
+include::functions/bindobject.adoc[]
+include::functions/createcontainer.adoc[]
+include::functions/createnode.adoc[]
+include::functions/deleteobject.adoc[]
+include::functions/unbindobject.adoc[]

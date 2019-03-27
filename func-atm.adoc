@@ -1,4 +1,0 @@
-= ATM Extension
-
-== GetAtmData
-

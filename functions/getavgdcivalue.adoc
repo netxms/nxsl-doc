@@ -1,0 +1,30 @@
+== GetAvgDCIValue()
+
+[source,c]
+----
+GetAvgDCIValue(object, dciId, periodStart, periodEnd) ⇒ Number
+----
+
+Get the average value of the DCI for the given period. The DCI value type must be numeric.
+
+.Parameters
+[cols="1,3" grid="none", frame="none"]
+|===
+|object|Instance of <<class-node>>, <<class-cluster>>, or <<class-mobiledevice>> object (e.g. `$node`).
+|dciId|ID of the DCI to retrive.
+|periodStart|link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the period start.
+|periodEnd|link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the period end.
+|===
+
+.Return
+Average value or `null` on failure.
+
+.Example
+[.output]
+....
+>>> obj = FindObject("Server1");
+>>> dciID = FindDCIByName(obj, "CPU.Usage")
+>>> val = GetAvgDCIValue(obj, dciId, 0, time()); // time range from January 1, 1970 untill now
+>>> println("Average CPU Usage: ". val . "%");
+Average CPU Usage: 17%
+....

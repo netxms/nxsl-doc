@@ -1,7 +1,7 @@
 = Agent Related
 
-include::functions/AgentExecuteAction.adoc[]
-include::functions/AgentExecuteActionWithOutput.adoc[]
-include::functions/AgentReadList.adoc[]
-include::functions/AgentReadParameter.adoc[]
-include::functions/AgentReadTable.adoc[]
+include::functions/agentexecuteaction.adoc[]
+include::functions/agentexecuteactionwithoutput.adoc[]
+include::functions/agentreadlist.adoc[]
+include::functions/agentreadparameter.adoc[]
+include::functions/agentreadtable.adoc[]

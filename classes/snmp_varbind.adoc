@@ -1,0 +1,27 @@
+[[class-snmp_varbind]]
+=== SNMP_VarBind
+
+Represents an SNMP varbind concept in NetXMS. A varbind logically consists of an OID and a value.
+
+==== Instance attributes
+
+`comments`::
+Object's comments.
+
+`type`::
+ASN.1 type.
+
+`name`::
+Object name (OID string).
+
+`value`::
+Object value as a string.
+
+`printableValue`::
+Object value as a printable string.
+
+`valueAsIp`::
+Object value IP address, represented as string.
+
+`valueAsMac`::
+Object value as MAC address, represented as string.

@@ -1,0 +1,9 @@
+[[class-snmp_transport]]
+=== SNMP_Transport
+
+Represents SNMP Transport functionality. Objects of this class are typically obtained from nodes that support SNMP. Objects of this class used to access <<func-group-snmp,SNMP functions>> of nodes.
+
+==== Instance attributes
+
+`snmpVersion`::
+SNMP version used by the transport. Can be "1", "2c" or "3"

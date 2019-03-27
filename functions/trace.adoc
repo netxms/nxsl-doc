@@ -1,0 +1,23 @@
+== trace()
+
+[source,c]
+----
+trace(debugLevel, message) ⇒ void
+----
+
+Writes `message` to NetXMS main log if current debug level is equal or higher than `debugLevel`.
+
+.Parameters
+[cols="1,3" grid="none", frame="none"]
+|===
+|debugLevel|Target debug level.
+|message|String to be written.
+|===
+
+.Return
+
+.Example
+[.output]
+....
+>>> trace(0, "Test");
+....

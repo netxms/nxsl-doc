@@ -1,0 +1,31 @@
+== floor()
+
+[source,c]
+----
+floor(input) ⇒ Integer
+----
+
+Round down value.
+
+.Parameters
+[cols="1,3" grid="none", frame="none"]
+|===
+|input|Input value.
+|===
+
+.Return
+
+Value round down to nearest integer.
+
+.Example
+[.output]
+....
+>>> floor(2.3)
+2
+>>> floor(3.8)
+3
+>>> floor(-2.3)
+-3
+>>> floor(-3.8)
+-4
+....

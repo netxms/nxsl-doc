@@ -1,0 +1,21 @@
+== round()
+
+[source,c]
+----
+round() ⇒ void
+----
+
+…
+
+.Parameters
+[cols="1,3" grid="none", frame="none"]
+|===
+||
+|===
+
+.Return
+
+.Example
+[.output]
+....
+....

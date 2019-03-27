@@ -1,8 +1,5 @@
 = Events
 
-== GetEventParameter
-
-== SetEventParameter
-
-== PostEvent
-
+include::functions/geteventparameter.adoc[]
+include::functions/seteventparameter.adoc[]
+include::functions/postevent.adoc[]

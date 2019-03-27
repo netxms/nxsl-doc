@@ -7,7 +7,7 @@ else
 endif
 
 
-OPTS:=$(OPTS) -a revdate="$(shell date +"%d %B, %Y")"
+OPTS:=$(OPTS) -a revdate="$(shell date +"%d %B, %Y")" --failure-level WARN -v
 
 all: prepare html pdf
 

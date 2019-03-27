@@ -5,7 +5,7 @@ Base class for all NetXMS objects.
 
 ==== Instance attributes
 
-Object custom attributes can be accessed in the same way as instance attribute, if names do not overlap. <<func-GetCustomAttribute>> should be used otherwise.
+Object custom attributes can be accessed in the same way as instance attribute, if names do not overlap. <<func-getcustomattribute>> should be used otherwise.
 
 `alarms`::
 Array of <<class-alarm, Alarm objects>> of object`s active alarms.
@@ -47,7 +47,7 @@ Array of <<class-userdb, UserDBObject objects>> of object`s responsible users
 Postal address – country.
 
 `customAttributes`::
-<<class-HashMap>> of object custom attributes.
+Hash map of object custom attributes.
 
 `geolocation`::
 Object <<class-geolocation,geographical location>>.
@@ -58,7 +58,7 @@ Object <<class-geolocation,geographical location>>.
 Clears GeoLocation data from the node
 
 `setGeoLocation(GeoLocation location)`::
-Sets node geographical <<class-GeoLocation,location>>.
+Sets node geographical <<class-geolocation,location>>.
 
 [[enum-object-status]]
 .Object Statuses

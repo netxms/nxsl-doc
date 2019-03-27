@@ -1,4 +1,6 @@
 .DS_Store
-/.bundle
-/build
+.bundle
+.vscode/ipch
 bin
+build
+gen.sh

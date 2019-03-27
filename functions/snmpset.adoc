@@ -1,0 +1,41 @@
+== SNMPSet()
+
+[source,c]
+----
+SNMPSet(transport, oid, value, dataType) ⇒ Boolean
+----
+
+Perform SNMP SET request for `oid` over provided <<class-snmp_transport,transport>>. Return boolean success indicator.
+`value` is automatically converted from string based in `dataType`. If `dataType` is not provided, default type "STRING" will be used.
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|transport|<<class-snmp_transport,Transport>> created by <<func-createsnmptransport>>.
+|oid|SNMP OID string.
+|value|New value.
+
+|dataType
+|Type of the `value`, default to "STRING":
+
+* "INTEGER" or "INT" – Integer.
+* "STRING" – Octet string.
+* "OID" – Object id.
+* "IPADDR" or "IP ADDRESS" – IP address.
+* "COUNTER32" – 32-bit counter.
+* "GAUGE32" – 32-bit unsigned integer.
+* "TIMETICKS" – Timeticks.
+* "COUNTER64" – 64-bit counter.
+* "UINTEGER32" or "UINT32" – 32-bit unsigned integer.
+
+|===
+
+.Return
+
+.Example
+[.output]
+....
+>>> if (!SNMPSet(transport, oid, "192.168.0.1", "IPADDR") {
+>>>     trace(1, "SNMPSet failed");
+>>> }
+....

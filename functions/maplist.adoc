@@ -1,0 +1,26 @@
+== mapList()
+
+[source,c]
+----
+mapList(table, list, separator, default) ⇒ String
+----
+
+Lookup multiple keys (separated by user-defined separator) from mapping table.
+Result string is joined using the same separator.
+
+.Parameters
+[cols="1,3" grid="none", frame="none"]
+|===
+|table|name or ID of the mapping table.
+|list|string of keys separated by `separator`.
+|separator|separator used to split `list` and to produce output.
+|===
+
+.Return
+
+.Example
+[.output]
+....
+>>> mapList("table1", "10,20,30", ",")
+value1,value2,value3
+....

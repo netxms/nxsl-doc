@@ -1,6 +1,4 @@
 = Situations
 
-== FindSituation
-
-== GetSituationAttribute
-
+include::functions/findsituation.adoc[]
+include::functions/getsituationattribute.adoc[]

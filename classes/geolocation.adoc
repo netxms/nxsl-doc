@@ -18,13 +18,18 @@ Longitude as floating point number
 Longitude as text
 
 `type`::
-Location <<enum-geolocation-type,type>>.
+Data source type:
+
+* 0 – Unset
+* 1 – Manual
+* 2 - GPS
+* 3 - Network
 
 ==== Constructors
 
 `GeoLocation(latitude, longitude, type=1)`::
 
-Create instance of the class based on floating-point `latitude` and `longitude`. Optional argument `type` can be used to override default value ("<<enum-geolocation-type,Manual>>").
+Create instance of the class based on floating-point `latitude` and `longitude`. Optional argument `type` can be used to override default value 1 ("Manual").
 
 ==== Constants
 
