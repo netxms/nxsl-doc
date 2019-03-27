@@ -1,3 +1,4 @@
+[[func-getdciobject]]
 == GetDCIObject()
 
 [source,c]

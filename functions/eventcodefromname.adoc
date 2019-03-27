@@ -1,3 +1,4 @@
+[[func-eventcodefromname]]
 == EventCodeFromName()
 
 [source,c]

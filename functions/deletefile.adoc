@@ -1,3 +1,4 @@
+[[func-deletefile]]
 == DeleteFile()
 
 [source,c]

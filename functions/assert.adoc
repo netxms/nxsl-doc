@@ -1,3 +1,4 @@
+[[func-assert]]
 == assert()
 
 [source,c]

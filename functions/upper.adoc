@@ -1,3 +1,4 @@
+[[func-upper]]
 == upper()
 
 [source,c]

@@ -1,3 +1,4 @@
+[[func-ltrim]]
 == ltrim()
 
 [source,c]

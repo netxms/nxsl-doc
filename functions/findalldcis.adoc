@@ -1,4 +1,4 @@
-[[func-FindAllDCIs]]
+[[func-findalldcis]]
 == FindAllDCIs()
 
 [source,c]

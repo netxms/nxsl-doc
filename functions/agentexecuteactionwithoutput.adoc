@@ -1,3 +1,4 @@
+[[func-agentexecuteactionwithoutput]]
 == AgentExecuteActionWithOutput()
 
 [source,c]

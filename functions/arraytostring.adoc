@@ -1,3 +1,4 @@
+[[func-arraytostring]]
 == ArrayToString()
 
 [source,c]

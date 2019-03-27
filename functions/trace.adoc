@@ -1,3 +1,4 @@
+[[func-trace]]
 == trace()
 
 [source,c]

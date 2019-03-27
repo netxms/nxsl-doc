@@ -1,3 +1,4 @@
+[[func-map]]
 == map()
 
 [source,c]

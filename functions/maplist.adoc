@@ -1,3 +1,4 @@
+[[func-maplist]]
 == mapList()
 
 [source,c]

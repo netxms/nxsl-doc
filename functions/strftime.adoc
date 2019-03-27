@@ -1,3 +1,4 @@
+[[func-strftime]]
 == strftime()
 
 [source,c]

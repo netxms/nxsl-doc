@@ -1,3 +1,4 @@
+[[func-agentreadlist]]
 == AgentReadList()
 
 [source,c]

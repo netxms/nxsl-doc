@@ -1,4 +1,4 @@
-[[class-userdb]]
+[[class-userdbobject]]
 === UserDBObject
 
 Represents NetXMS UserDatabaseObject object.

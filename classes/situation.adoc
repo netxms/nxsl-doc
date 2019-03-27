@@ -1,3 +1,4 @@
+[[class-situation]]
 === Situation
 
 ==== Instance attributes

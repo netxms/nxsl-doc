@@ -1,3 +1,4 @@
+[[func-mktime]]
 == mktime()
 
 [source,c]

@@ -1,3 +1,4 @@
+[[func-snmpset]]
 == SNMPSet()
 
 [source,c]

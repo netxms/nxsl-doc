@@ -1,3 +1,4 @@
+[[func-currencyexponent]]
 == CurrencyExponent()
 
 [source,c]

@@ -1,4 +1,4 @@
-[func-getallnodes]
+[[func-getallnodes]]
 == GetAllNodes()
 
 [source,c]

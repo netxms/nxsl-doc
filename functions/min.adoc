@@ -1,3 +1,4 @@
+[[func-min]]
 == min()
 
 [source,c]

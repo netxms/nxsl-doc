@@ -1,3 +1,4 @@
+[[func-unbindobject]]
 == UnbindObject()
 
 [source,c]

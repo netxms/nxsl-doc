@@ -1,3 +1,4 @@
+[[func-agentreadtable]]
 == AgentReadTable()
 
 [source,c]

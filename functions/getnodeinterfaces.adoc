@@ -1,3 +1,4 @@
+[[func-getnodeinterfaces]]
 == GetNodeInterfaces()
 
 [source,c]

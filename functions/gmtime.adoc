@@ -1,3 +1,4 @@
+[[func-gmtime]]
 == gmtime()
 
 [source,c]

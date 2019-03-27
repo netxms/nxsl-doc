@@ -1,3 +1,4 @@
+[[func-x2d]]
 == x2d()
 
 [source,c]

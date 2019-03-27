@@ -1,3 +1,4 @@
+[[func-seteventparameter]]
 == SetEventParameter()
 
 [source,c]

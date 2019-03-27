@@ -1,3 +1,4 @@
+[[func-gethostbyname]]
 == gethostbyname()
 
 [source,c]

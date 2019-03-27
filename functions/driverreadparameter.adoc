@@ -1,3 +1,4 @@
+[[func-driverreadparameter]]
 == DriverReadParameter()
 
 [source,c]

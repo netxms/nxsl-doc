@@ -1,3 +1,4 @@
+[[func-md5]]
 == md5()
 
 [source,c]

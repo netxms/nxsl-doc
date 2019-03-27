@@ -1,3 +1,4 @@
+[[func-getdcirawvalue]]
 == GetDCIRawValue()
 
 [source,c]

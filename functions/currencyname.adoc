@@ -1,3 +1,4 @@
+[[func-currencyname]]
 == CurrencyName()
 
 [source,c]

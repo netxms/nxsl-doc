@@ -1,3 +1,4 @@
+[[func-rindex]]
 == rindex()
 
 [source,c]

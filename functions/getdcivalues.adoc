@@ -1,3 +1,4 @@
+[[func-getdcivalues]]
 == GetDCIValues()
 
 [source,c]

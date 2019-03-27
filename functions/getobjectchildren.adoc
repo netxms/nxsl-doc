@@ -1,4 +1,4 @@
-[func-getobjectchildren]
+[[func-getobjectchildren]]
 == GetObjectChildren()
 
 [source,c]

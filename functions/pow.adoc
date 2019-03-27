@@ -1,3 +1,4 @@
+[[func-pow]]
 == pow()
 
 [source,c]

@@ -1,3 +1,4 @@
+[[func-agentreadparameter]]
 == AgentReadParameter()
 
 [source,c]

@@ -1,3 +1,4 @@
+[[func-postevent]]
 == PostEvent()
 
 [source,c]

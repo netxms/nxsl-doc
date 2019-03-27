@@ -1,3 +1,4 @@
+[[func-getinterfacename]]
 == GetInterfaceName()
 
 [source,c]

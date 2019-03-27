@@ -1,3 +1,4 @@
+[[func-localtime]]
 == localtime()
 
 [source,c]

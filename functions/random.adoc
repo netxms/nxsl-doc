@@ -1,3 +1,4 @@
+[[func-random]]
 == random()
 
 [source,c]

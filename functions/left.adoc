@@ -1,3 +1,4 @@
+[[func-left]]
 == left()
 
 [source,c]

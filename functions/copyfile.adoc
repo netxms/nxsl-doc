@@ -1,3 +1,4 @@
+[[func-copyfile]]
 == CopyFile()
 
 [source,c]

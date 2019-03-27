@@ -1,3 +1,4 @@
+[[func-getobjectparents]]
 == GetObjectParents()
 
 [source,c]

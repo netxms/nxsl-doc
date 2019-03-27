@@ -1,3 +1,4 @@
+[[func-createdirectory]]
 == CreateDirectory()
 
 [source,c]

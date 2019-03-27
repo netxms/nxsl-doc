@@ -1,3 +1,4 @@
+[[func-substr]]
 == substr()
 
 [source,c]

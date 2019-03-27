@@ -1,3 +1,4 @@
+[[func-base64decode]]
 == Base64Decode()
 
 [source,c]

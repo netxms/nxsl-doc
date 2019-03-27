@@ -1,3 +1,4 @@
+[[func-tcpconnector]]
 == TCPConnector()
 
 [source,c]

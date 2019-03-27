@@ -1,3 +1,4 @@
+[[func-writepersistentstorage]]
 == WritePersistentStorage()
 
 [source,c]

@@ -1,3 +1,4 @@
+[[func-countscheduledtasksbykey]]
 == CountScheduledTasksByKey()
 
 [source,c]

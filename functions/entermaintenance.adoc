@@ -1,3 +1,4 @@
+[[func-entermaintenance]]
 == EnterMaintenance()
 
 [source,c]

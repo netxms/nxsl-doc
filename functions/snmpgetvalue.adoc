@@ -1,3 +1,4 @@
+[[func-snmpgetvalue]]
 == SNMPGetValue()
 
 [source,c]

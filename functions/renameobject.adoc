@@ -1,3 +1,4 @@
+[[func-renameobject]]
 == RenameObject()
 
 [source,c]

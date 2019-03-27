@@ -1,3 +1,4 @@
+[[func-length]]
 == length()
 
 [source,c]

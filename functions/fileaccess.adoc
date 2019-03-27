@@ -1,3 +1,4 @@
+[[func-fileaccess]]
 == FileAccess()
 
 [source,c]

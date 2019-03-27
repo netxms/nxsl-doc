@@ -1,3 +1,4 @@
+[[func-log10]]
 == log10()
 
 [source,c]

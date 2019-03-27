@@ -1,3 +1,4 @@
+[[func-format]]
 == format()
 
 [source,c]

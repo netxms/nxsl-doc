@@ -41,7 +41,7 @@ Postal address - city.
 Postal address – postal code.
 
 `responsibleUsers`::
-Array of <<class-userdb, UserDBObject objects>> of object`s responsible users
+Array of <<class-userdbobject, UserDBObject objects>> of object`s responsible users
 
 `country`::
 Postal address – country.

@@ -1,3 +1,4 @@
+[[func-trim]]
 == trim()
 
 [source,c]

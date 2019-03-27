@@ -1,3 +1,4 @@
+[[func-readpersistentstorage]]
 == ReadPersistentStorage()
 
 [source,c]

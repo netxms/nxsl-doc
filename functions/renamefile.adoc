@@ -1,3 +1,4 @@
+[[func-renamefile]]
 == RenameFile()
 
 [source,c]

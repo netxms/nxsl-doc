@@ -1,3 +1,4 @@
+[[func-manageobject]]
 == ManageObject()
 
 [source,c]

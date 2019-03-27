@@ -1,3 +1,4 @@
+[[func-createcontainer]]
 == CreateContainer()
 
 [source,c]

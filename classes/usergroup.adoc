@@ -1,7 +1,7 @@
 [[class-usergroup]]
 === UserGroup
 
-Represents NetXMS Group object. Extends <<class-userdb>>.
+Represents NetXMS Group object. Extends <<class-userdbobject>>.
 
 ==== Instance attributes
 
@@ -9,4 +9,4 @@ Represents NetXMS Group object. Extends <<class-userdb>>.
 Member count (`uint32`).
 
 `members`::
-Array of <<class-userdb, UserDBObject objects>> of members.
+Array of <<class-userdbobject, UserDBObject objects>> of members.

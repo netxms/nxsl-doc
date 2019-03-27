@@ -1,3 +1,4 @@
+[[func-sha256]]
 == sha256()
 
 [source,c]

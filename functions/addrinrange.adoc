@@ -1,3 +1,4 @@
+[[func-addrinrange]]
 == AddrInRange()
 
 [source,c]

@@ -1,7 +1,7 @@
 [[class-user]]
 === User
 
-Represents NetXMS User object. Extends <<class-userdb>>
+Represents NetXMS User object. Extends <<class-userdbobject>>
 
 ==== Instance attributes
 

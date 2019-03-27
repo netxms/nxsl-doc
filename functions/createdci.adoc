@@ -1,3 +1,4 @@
+[[func-createdci]]
 == CreateDCI()
 
 [source,c]
@@ -11,7 +12,6 @@ Create new data collection item on <<class-node,node>>, return <<class-dci>> obj
 [cols="1,3a" grid="none", frame="none"]
 |===
 |node|<<class-node>> object instance (e.g. `$node`), where DCI should be created.
-
 | origin
 | data origin, supported values:
 

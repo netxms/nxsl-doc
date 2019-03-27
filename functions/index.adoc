@@ -1,3 +1,4 @@
+[[func-index]]
 == index()
 
 [source,c]

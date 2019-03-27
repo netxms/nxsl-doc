@@ -1,3 +1,4 @@
+[[func-getconfigurationvariable]]
 == GetConfigurationVariable()
 
 [source,c]

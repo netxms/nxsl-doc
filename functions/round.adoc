@@ -1,3 +1,4 @@
+[[func-round]]
 == round()
 
 [source,c]

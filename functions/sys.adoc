@@ -1,3 +1,4 @@
+[[func-sys]]
 == sys()
 
 [source,c]
