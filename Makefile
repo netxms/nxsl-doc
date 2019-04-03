@@ -9,6 +9,13 @@ endif
 
 OPTS:=$(OPTS) -a revdate="$(shell date +"%d %B, %Y")" --failure-level WARN -v
 
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)
+	WATCHCMD=fswatch -r -e '\.swp' -e '\.git' -e build . | xargs -n1 -I{} make html
+else
+	WATCHCMD=inotifywait -q -m -r --format gotchange --exclude '\.swp' --exclude '\.git' --exclude build -e modify | xargs -n1 -I{} make html
+endif
+
 all: prepare html pdf
 
 .PHONY: prepare
@@ -25,3 +32,6 @@ pdf:
 
 clean:
 	rm -rf build/nxsl.pdf build/nxsl.html
+
+watch:
+	$(WATCHCMD)
