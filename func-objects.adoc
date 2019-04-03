@@ -1,36 +1,26 @@
-= Object search
+= Object related functions
 
-include::functions/findobject.adoc[]
-include::functions/findnodeobject.adoc[]
-include::functions/getallnodes.adoc[]
-
-= Custom attributes
-
+include::functions/bindobject.adoc[]
+include::functions/createcontainer.adoc[]
+include::functions/createnode.adoc[]
 include::functions/deletecustomattribute.adoc[]
-include::functions/getcustomattribute.adoc[]
-include::functions/setcustomattribute.adoc[]
-
-= Object management
-
-include::functions/manageobject.adoc[]
-include::functions/unmanageobject.adoc[]
-
-= Maintenance mode
-
+include::functions/deleteobject.adoc[]
 include::functions/entermaintenance.adoc[]
-include::functions/leavemaintenance.adoc[]
-
-= …
-
+include::functions/findnodeobject.adoc[]
+include::functions/findobject.adoc[]
+include::functions/getallnodes.adoc[]
+include::functions/getcustomattribute.adoc[]
 include::functions/getinterfacename.adoc[]
 include::functions/getinterfaceobject.adoc[]
 include::functions/getnodeinterfaces.adoc[]
 include::functions/getnodeparents.adoc[]
 include::functions/getnodetemplates.adoc[]
+include::functions/getobjectchildren.adoc[]
+include::functions/getobjectparents.adoc[]
+include::functions/leavemaintenance.adoc[]
+include::functions/manageobject.adoc[]
 include::functions/renameobject.adoc[]
+include::functions/setcustomattribute.adoc[]
 include::functions/setinterfaceexpectedstate.adoc[]
-include::functions/bindobject.adoc[]
-include::functions/createcontainer.adoc[]
-include::functions/createnode.adoc[]
-include::functions/deleteobject.adoc[]
 include::functions/unbindobject.adoc[]
+include::functions/unmanageobject.adoc[]

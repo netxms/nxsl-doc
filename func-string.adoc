@@ -1,1 +1,17 @@
 = String functions
+
+include::functions/chr.adoc[]
+include::functions/format.adoc[]
+include::functions/index.adoc[]
+include::functions/left.adoc[]
+include::functions/length.adoc[]
+include::functions/lower.adoc[]
+include::functions/ltrim.adoc[]
+include::functions/ord.adoc[]
+include::functions/right.adoc[]
+include::functions/rindex.adoc[]
+include::functions/rtrim.adoc[]
+include::functions/splitstring.adoc[]
+include::functions/substr.adoc[]
+include::functions/trim.adoc[]
+include::functions/upper.adoc[]

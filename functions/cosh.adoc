@@ -1,0 +1,21 @@
+== cosh()
+
+[source,c]
+----
+cosh() ⇒ void
+----
+
+…
+
+.Parameters
+[cols="1,3" grid="none", frame="none"]
+|===
+||
+|===
+
+.Return
+
+.Example
+[source,c]
+----
+----

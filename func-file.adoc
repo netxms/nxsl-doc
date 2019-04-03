@@ -1,0 +1,10 @@
+= Filesystem functions
+
+! require additional server configuration
+
+include::functions/copyfile.adoc[]
+include::functions/createdirectory.adoc[]
+include::functions/deletefile.adoc[]
+include::functions/fileaccess.adoc[]
+include::functions/openfile.adoc[]
+include::functions/renamefile.adoc[]
