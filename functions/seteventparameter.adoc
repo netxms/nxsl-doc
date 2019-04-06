@@ -1,9 +1,11 @@
 [[func-seteventparameter]]
 == SetEventParameter()
 
+// TODO: add description
+
 [source,c]
 ----
-SetEventParameter() ⇒ void
+SetEventParameter() => void
 ----
 
 …

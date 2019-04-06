@@ -1,9 +1,11 @@
 [[func-eventcodefromname]]
 == EventCodeFromName()
 
+// TODO: add description
+
 [source,c]
 ----
-EventCodeFromName() ⇒ void
+EventCodeFromName() => void
 ----
 
 …

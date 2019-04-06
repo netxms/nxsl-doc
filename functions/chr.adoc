@@ -1,9 +1,11 @@
 [[func-chr]]
 == chr()
 
+// TODO: add description
+
 [source,c]
 ----
-chr() ⇒ void
+chr() => void
 ----
 
 …

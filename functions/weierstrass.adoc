@@ -1,8 +1,11 @@
+[[func-weierstrass]]
 == weierstrass()
+
+// TODO: add description
 
 [source,c]
 ----
-weierstrass() ⇒ void
+weierstrass() => void
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-getnodeinterfaces]]
 == GetNodeInterfaces()
 
+// TODO: add description
+
 [source,c]
 ----
-GetNodeInterfaces() ⇒ void
+GetNodeInterfaces() => void
 ----
 
 …

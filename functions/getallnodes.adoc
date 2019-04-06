@@ -1,9 +1,11 @@
 [[func-getallnodes]]
 == GetAllNodes()
 
+// TODO: add description
+
 [source,c]
 ----
-GetAllNodes() ⇒ void
+GetAllNodes() => void
 ----
 
 …

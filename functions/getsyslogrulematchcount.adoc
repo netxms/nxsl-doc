@@ -1,9 +1,11 @@
 [[func-getsyslogrulematchcount]]
 == GetSyslogRuleMatchCount()
 
+// TODO: add description
+
 [source,c]
 ----
-GetSyslogRuleMatchCount() ⇒ void
+GetSyslogRuleMatchCount() => void
 ----
 
 …

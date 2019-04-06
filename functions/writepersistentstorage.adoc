@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-WritePersistentStorage(key, value) ⇒ void
+WritePersistentStorage(key, value) => void
 ----
 
 Create or update value in global persistent key-value store.

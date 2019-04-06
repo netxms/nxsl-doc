@@ -1,9 +1,11 @@
 [[func-getsituationattribute]]
 == GetSituationAttribute()
 
+// TODO: add description
+
 [source,c]
 ----
-GetSituationAttribute() ⇒ void
+GetSituationAttribute() => void
 ----
 
 …

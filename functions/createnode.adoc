@@ -1,9 +1,11 @@
 [[func-createnode]]
 == CreateNode()
 
+// TODO: add description
+
 [source,c]
 ----
-CreateNode() ⇒ void
+CreateNode() => void
 ----
 
 AF_ENABLE_NXSL_CONTAINER_FUNCS

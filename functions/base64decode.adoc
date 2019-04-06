@@ -1,9 +1,11 @@
 [[func-base64decode]]
 == Base64Decode()
 
+// TODO: add description
+
 [source,c]
 ----
-Base64Decode() ⇒ void
+Base64Decode() => void
 ----
 
 …

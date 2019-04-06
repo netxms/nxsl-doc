@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-SNMPWalk(transport, oid) ⇒ Array
+SNMPWalk(transport, oid) => Array
 ----
 
 Perform SNMP WALK request for `oid` over provided <<class-snmp_transport,transport>> and return collected values as array of <<class-snmp_varbind>> or `null` on failure.

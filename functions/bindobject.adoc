@@ -1,9 +1,11 @@
 [[func-bindobject]]
 == BindObject()
 
+// TODO: add description
+
 [source,c]
 ----
-BindObject() ⇒ void
+BindObject() => void
 ----
 
 AF_ENABLE_NXSL_CONTAINER_FUNCS

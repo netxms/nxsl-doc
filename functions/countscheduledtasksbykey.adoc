@@ -1,9 +1,11 @@
 [[func-countscheduledtasksbykey]]
 == CountScheduledTasksByKey()
 
+// TODO: add description
+
 [source,c]
 ----
-CountScheduledTasksByKey() ⇒ void
+CountScheduledTasksByKey() => void
 ----
 
 …

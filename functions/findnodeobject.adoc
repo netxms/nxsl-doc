@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-FindNodeObject(currentNode, key) ⇒ Node
+FindNodeObject(currentNode, key) => Node
 ----
 
 Look up <<Node>> object by the `key` (either string name or integer id) or return `null` if not found.

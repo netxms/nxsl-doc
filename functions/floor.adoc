@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-floor(input) ⇒ Integer
+floor(input) => Integer
 ----
 
 Round down value.

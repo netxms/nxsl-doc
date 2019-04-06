@@ -1,9 +1,11 @@
 [[func-secondstouptime]]
 == SecondsToUptime()
 
+// TODO: add description
+
 [source,c]
 ----
-SecondsToUptime() ⇒ void
+SecondsToUptime() => void
 ----
 
 …

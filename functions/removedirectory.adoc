@@ -1,9 +1,11 @@
 [[func-removedirectory]]
 == RemoveDirectory()
 
+// TODO: add description
+
 [source,c]
 ----
-RemoveDirectory() ⇒ void
+RemoveDirectory() => void
 ----
 
 AF_ENABLE_NXSL_FILE_IO_FUNCTIONS

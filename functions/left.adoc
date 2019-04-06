@@ -1,9 +1,11 @@
 [[func-left]]
 == left()
 
+// TODO: add description
+
 [source,c]
 ----
-left() ⇒ void
+left() => void
 ----
 
 …

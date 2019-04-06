@@ -1,9 +1,11 @@
 [[func-currencyname]]
 == CurrencyName()
 
+// TODO: add description
+
 [source,c]
 ----
-CurrencyName() ⇒ void
+CurrencyName() => void
 ----
 
 …

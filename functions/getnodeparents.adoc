@@ -1,9 +1,11 @@
 [[func-getnodeparents]]
 == GetNodeParents()
 
+// TODO: add description
+
 [source,c]
 ----
-GetNodeParents() ⇒ void
+GetNodeParents() => void
 ----
 
 …

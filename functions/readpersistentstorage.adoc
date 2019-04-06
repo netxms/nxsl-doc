@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-ReadPersistentStorage(key) ⇒ String
+ReadPersistentStorage(key) => String
 ----
 
 Read value from global persistent key-value storage.

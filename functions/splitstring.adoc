@@ -1,9 +1,11 @@
 [[func-splitstring]]
 == SplitString()
 
+// TODO: add description
+
 [source,c]
 ----
-SplitString() ⇒ void
+SplitString() => void
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-getdcirawvalue]]
 == GetDCIRawValue()
 
+// TODO: add description
+
 [source,c]
 ----
-GetDCIRawValue() ⇒ Boolean
+GetDCIRawValue() => Boolean
 ----
 
 …

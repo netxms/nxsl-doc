@@ -1,8 +1,11 @@
+[[func-sin]]
 == sin()
+
+// TODO: add description
 
 [source,c]
 ----
-sin() ⇒ void
+sin() => void
 ----
 
 …

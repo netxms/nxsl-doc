@@ -1,8 +1,11 @@
+[[func-cos]]
 == cos()
+
+// TODO: add description
 
 [source,c]
 ----
-cos() ⇒ void
+cos() => void
 ----
 
 …

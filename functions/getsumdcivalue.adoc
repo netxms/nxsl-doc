@@ -1,9 +1,11 @@
 [[func-getsumdcivalue]]
 == GetSumDCIValue()
 
+// TODO: add description
+
 [source,c]
 ----
-GetSumDCIValue() ⇒ Boolean
+GetSumDCIValue() => Boolean
 ----
 
 …

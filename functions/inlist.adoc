@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-inList(string, separator, token) ⇒ Boolean
+inList(string, separator, token) => Boolean
 ----
 
 Split input `string` by `separator` into elements and compare each element with `token`.

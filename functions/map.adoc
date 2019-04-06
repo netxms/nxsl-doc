@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-map(table, key, default=null) ⇒ String
+map(table, key, default=null) => String
 ----
 
 Lookup value from mapping table.

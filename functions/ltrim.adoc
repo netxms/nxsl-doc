@@ -1,9 +1,11 @@
 [[func-ltrim]]
 == ltrim()
 
+// TODO: add description
+
 [source,c]
 ----
-ltrim() ⇒ void
+ltrim() => void
 ----
 
 …

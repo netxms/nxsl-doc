@@ -1,0 +1,5 @@
+= Alarm functions
+
+include::functions/findalarmbyid.adoc[]
+include::functions/findalarmbykey.adoc[]
+include::functions/findalarmbykeyregex.adoc[]

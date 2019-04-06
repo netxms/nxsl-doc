@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-FindAllDCIs(node, nameFilter, descriptionFilter) ⇒ Array
+FindAllDCIs(node, nameFilter, descriptionFilter) => Array
 ----
 
 Find all DCI on the `node` matching `nameFilter` *and* `descriptionFilter`. Filter can contain glob symbols "?" and "*". If filter is `null`, it's ignored.

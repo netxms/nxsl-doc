@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-AgentReadTable(node, name) ⇒ Table
+AgentReadTable(node, name) => Table
 ----
 
 Request table metric directly from agent on given node.

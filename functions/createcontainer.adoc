@@ -1,9 +1,11 @@
 [[func-createcontainer]]
 == CreateContainer()
 
+// TODO: add description
+
 [source,c]
 ----
-CreateContainer() ⇒ void
+CreateContainer() => void
 ----
 
 AF_ENABLE_NXSL_CONTAINER_FUNCS

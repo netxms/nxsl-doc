@@ -1,9 +1,11 @@
 [[func-copyfile]]
 == CopyFile()
 
+// TODO: add description
+
 [source,c]
 ----
-CopyFile() ⇒ void
+CopyFile() => void
 ----
 
 AF_ENABLE_NXSL_FILE_IO_FUNCTIONS

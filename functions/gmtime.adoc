@@ -1,9 +1,11 @@
 [[func-gmtime]]
 == gmtime()
 
+// TODO: add description
+
 [source,c]
 ----
-gmtime() ⇒ void
+gmtime() => void
 ----
 
 …

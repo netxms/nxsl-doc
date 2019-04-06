@@ -1,9 +1,11 @@
 [[func-sys]]
 == sys()
 
+// TODO: add description
+
 [source,c]
 ----
-sys() ⇒ void
+sys() => void
 ----
 
 …

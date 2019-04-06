@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-typeof(instance) ⇒ string
+typeof(instance) => string
 ----
 
 Return type of the `instance`.

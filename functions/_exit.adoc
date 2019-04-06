@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-_exit(exitCode=0) ⇒ void
+_exit(exitCode=0) => void
 ----
 
 Stop script execution and return `exitCode`.

@@ -1,9 +1,11 @@
 [[func-renamefile]]
 == RenameFile()
 
+// TODO: add description
+
 [source,c]
 ----
-RenameFile() ⇒ void
+RenameFile() => void
 ----
 
 AF_ENABLE_NXSL_FILE_IO_FUNCTIONS

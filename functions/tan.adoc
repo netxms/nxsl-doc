@@ -1,8 +1,11 @@
+[[func-tan]]
 == tan()
+
+// TODO: add description
 
 [source,c]
 ----
-tan() ⇒ void
+tan() => void
 ----
 
 …

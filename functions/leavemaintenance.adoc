@@ -1,9 +1,11 @@
 [[func-leavemaintenance]]
 == LeaveMaintenance()
 
+// TODO: add description
+
 [source,c]
 ----
-LeaveMaintenance() ⇒ void
+LeaveMaintenance() => void
 ----
 
 …

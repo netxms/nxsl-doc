@@ -1,9 +1,11 @@
 [[func-ord]]
 == ord()
 
+// TODO: add description
+
 [source,c]
 ----
-ord() ⇒ void
+ord() => void
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-findalarmbyid]]
 == FindAlarmById()
 
+// TODO: add description
+
 [source,c]
 ----
-FindAlarmById() ⇒ void
+FindAlarmById() => void
 ----
 
 …

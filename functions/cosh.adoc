@@ -1,8 +1,11 @@
+[[func-cosh]]
 == cosh()
+
+// TODO: add description
 
 [source,c]
 ----
-cosh() ⇒ void
+cosh() => void
 ----
 
 …

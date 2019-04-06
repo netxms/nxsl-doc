@@ -1,8 +1,11 @@
+[[func-sinh]]
 == sinh()
+
+// TODO: add description
 
 [source,c]
 ----
-sinh() ⇒ void
+sinh() => void
 ----
 
 …

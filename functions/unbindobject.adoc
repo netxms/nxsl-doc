@@ -1,9 +1,11 @@
 [[func-unbindobject]]
 == UnbindObject()
 
+// TODO: add description
+
 [source,c]
 ----
-UnbindObject() ⇒ void
+UnbindObject() => void
 ----
 
 AF_ENABLE_NXSL_CONTAINER_FUNCS

@@ -1,9 +1,11 @@
 [[func-unmanageobject]]
 == UnmanageObject()
 
+// TODO: add description
+
 [source,c]
 ----
-UnmanageObject() ⇒ void
+UnmanageObject() => void
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-getmindcivalue]]
 == GetMinDCIValue()
 
+// TODO: add description
+
 [source,c]
 ----
-GetMinDCIValue() ⇒ Boolean
+GetMinDCIValue() => Boolean
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-round]]
 == round()
 
+// TODO: add description
+
 [source,c]
 ----
-round() ⇒ void
+round() => void
 ----
 
 …

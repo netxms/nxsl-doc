@@ -1,8 +1,11 @@
+[[func-tanh]]
 == tanh()
+
+// TODO: add description
 
 [source,c]
 ----
-tanh() ⇒ void
+tanh() => void
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-max]]
 == max()
 
+// TODO: add description
+
 [source,c]
 ----
-max() ⇒ void
+max() => void
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-setinterfaceexpectedstate]]
 == SetInterfaceExpectedState()
 
+// TODO: add description
+
 [source,c]
 ----
-SetInterfaceExpectedState() ⇒ void
+SetInterfaceExpectedState() => void
 ----
 
 …

@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-AgentExecuteActionWithOutput(node, actionName, …) ⇒ String
+AgentExecuteActionWithOutput(node, actionName, …) => String
 ----
 
 Execute agent action on given node and collect standard output of the application defined by action.

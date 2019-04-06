@@ -1,9 +1,11 @@
 [[func-gethostbyaddr]]
 == gethostbyaddr()
 
+// TODO: add description
+
 [source,c]
 ----
-gethostbyaddr() ⇒ void
+gethostbyaddr() => void
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-addrinrange]]
 == AddrInRange()
 
+// TODO: add description
+
 [source,c]
 ----
-AddrInRange() ⇒ void
+AddrInRange() => void
 ----
 
 …

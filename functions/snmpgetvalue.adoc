@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-SNMPGetValue(transport, oid) ⇒ String
+SNMPGetValue(transport, oid) => String
 ----
 
 Perform SNMP GET request for `oid` over provided <<class-snmp_transport,transport>> and return single string value instead of varbind.

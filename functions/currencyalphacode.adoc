@@ -1,9 +1,11 @@
 [[func-currencyalphacode]]
 == CurrencyAlphaCode()
 
+// TODO: add description
+
 [source,c]
 ----
-CurrencyAlphaCode() ⇒ void
+CurrencyAlphaCode() => void
 ----
 
 …

@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-GetObjectParents(object) ⇒ void
+GetObjectParents(object) => Array
 ----
 
 Return array of object parents.

@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-exp(input) ⇒ Float
+exp(input) => Float
 ----
 
 Computes `e**x`, the http://en.wikipedia.org/wiki/Exponential_function[base-e] exponential.

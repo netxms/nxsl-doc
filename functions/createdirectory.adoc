@@ -1,9 +1,11 @@
 [[func-createdirectory]]
 == CreateDirectory()
 
+// TODO: add description
+
 [source,c]
 ----
-CreateDirectory() ⇒ void
+CreateDirectory() => void
 ----
 
 AF_ENABLE_NXSL_FILE_IO_FUNCTIONS

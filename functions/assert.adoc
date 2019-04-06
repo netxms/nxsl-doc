@@ -1,9 +1,11 @@
 [[func-assert]]
 == assert()
 
+// TODO: add description
+
 [source,c]
 ----
-assert() ⇒ void
+assert() => void
 ----
 
 …

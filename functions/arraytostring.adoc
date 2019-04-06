@@ -1,9 +1,11 @@
 [[func-arraytostring]]
 == ArrayToString()
 
+// TODO: add description
+
 [source,c]
 ----
-ArrayToString() ⇒ void
+ArrayToString() => void
 ----
 
 …

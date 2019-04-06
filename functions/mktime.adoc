@@ -1,9 +1,11 @@
 [[func-mktime]]
 == mktime()
 
+// TODO: add description
+
 [source,c]
 ----
-mktime() ⇒ void
+mktime() => void
 ----
 
 …

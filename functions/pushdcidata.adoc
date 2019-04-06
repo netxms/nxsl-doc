@@ -1,9 +1,11 @@
 [[func-pushdcidata]]
 == PushDCIData()
 
+// TODO: add description
+
 [source,c]
 ----
-PushDCIData() ⇒ Boolean
+PushDCIData() => Boolean
 ----
 
 …

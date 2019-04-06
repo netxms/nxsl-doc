@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-ceil(input) ⇒ Integer
+ceil(input) => Integer
 ----
 
 Round up value.

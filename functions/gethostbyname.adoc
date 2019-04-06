@@ -1,9 +1,11 @@
 [[func-gethostbyname]]
 == gethostbyname()
 
+// TODO: add description
+
 [source,c]
 ----
-gethostbyname() ⇒ void
+gethostbyname() => void
 ----
 
 …

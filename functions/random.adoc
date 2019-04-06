@@ -1,9 +1,11 @@
 [[func-random]]
 == random()
 
+// TODO: add description
+
 [source,c]
 ----
-random() ⇒ void
+random() => void
 ----
 
 …

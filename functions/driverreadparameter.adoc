@@ -1,9 +1,11 @@
 [[func-driverreadparameter]]
 == DriverReadParameter()
 
+// TODO: add description
+
 [source,c]
 ----
-DriverReadParameter() ⇒ void
+DriverReadParameter() => void
 ----
 
 …

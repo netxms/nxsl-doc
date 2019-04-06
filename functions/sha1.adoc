@@ -1,9 +1,11 @@
 [[func-sha1]]
 == sha1()
 
+// TODO: add description
+
 [source,c]
 ----
-sha1() ⇒ void
+sha1() => void
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-substr]]
 == substr()
 
+// TODO: add description
+
 [source,c]
 ----
-substr() ⇒ void
+substr() => void
 ----
 
 …

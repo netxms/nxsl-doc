@@ -1,9 +1,11 @@
 [[func-upper]]
 == upper()
 
+// TODO: add description
+
 [source,c]
 ----
-upper() ⇒ void
+upper() => void
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-findsituation]]
 == FindSituation()
 
+// TODO: add description
+
 [source,c]
 ----
-FindSituation() ⇒ void
+FindSituation() => void
 ----
 
 …

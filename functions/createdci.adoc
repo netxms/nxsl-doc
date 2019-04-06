@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-CreateDCI(node, origin, name, description, dataType, pollingInterval, retentionTime) ⇒ DCI
+CreateDCI(node, origin, name, description, dataType, pollingInterval, retentionTime) => DCI
 ----
 
 Create new data collection item on <<class-node,node>>, return <<class-dci>> object instance of `null` if failed.

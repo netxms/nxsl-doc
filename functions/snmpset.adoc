@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-SNMPSet(transport, oid, value, dataType) ⇒ Boolean
+SNMPSet(transport, oid, value, dataType) => Boolean
 ----
 
 Perform SNMP SET request for `oid` over provided <<class-snmp_transport,transport>>. Return boolean success indicator.

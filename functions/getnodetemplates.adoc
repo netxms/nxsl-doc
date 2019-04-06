@@ -1,9 +1,11 @@
 [[func-getnodetemplates]]
 == GetNodeTemplates()
 
+// TODO: add description
+
 [source,c]
 ----
-GetNodeTemplates() ⇒ void
+GetNodeTemplates() => void
 ----
 
 …

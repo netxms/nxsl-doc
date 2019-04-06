@@ -1,9 +1,11 @@
 [[func-openfile]]
 == OpenFile()
 
+// TODO: add description
+
 [source,c]
 ----
-OpenFile() ⇒ void
+OpenFile() => void
 ----
 
 AF_ENABLE_NXSL_FILE_IO_FUNCTIONS

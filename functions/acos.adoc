@@ -1,8 +1,11 @@
+[[func-acos]]
 == acos()
+
+// TODO: add description
 
 [source,c]
 ----
-acos() ⇒ void
+acos() => void
 ----
 
 …

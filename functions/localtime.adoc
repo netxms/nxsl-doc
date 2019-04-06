@@ -1,9 +1,11 @@
 [[func-localtime]]
 == localtime()
 
+// TODO: add description
+
 [source,c]
 ----
-localtime() ⇒ void
+localtime() => void
 ----
 
 …

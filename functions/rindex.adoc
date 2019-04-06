@@ -1,9 +1,11 @@
 [[func-rindex]]
 == rindex()
 
+// TODO: add description
+
 [source,c]
 ----
-rindex() ⇒ void
+rindex() => void
 ----
 
 …

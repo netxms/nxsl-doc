@@ -1,9 +1,11 @@
 [[func-deletefile]]
 == DeleteFile()
 
+// TODO: add description
+
 [source,c]
 ----
-DeleteFile() ⇒ void
+DeleteFile() => void
 ----
 
 AF_ENABLE_NXSL_FILE_IO_FUNCTIONS

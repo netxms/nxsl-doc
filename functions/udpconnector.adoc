@@ -1,9 +1,11 @@
 [[func-udpconnector]]
 == UDPConnector()
 
+// TODO: add description
+
 [source,c]
 ----
-UDPConnector() ⇒ void
+UDPConnector() => void
 ----
 
 …

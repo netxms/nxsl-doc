@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-GetAvgDCIValue(object, dciId, periodStart, periodEnd) ⇒ Number
+GetAvgDCIValue(object, dciId, periodStart, periodEnd) => Number
 ----
 
 Get the average value of the DCI for the given period. The DCI value type must be numeric.

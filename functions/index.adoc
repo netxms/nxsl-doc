@@ -1,9 +1,11 @@
 [[func-index]]
 == index()
 
+// TODO: add description
+
 [source,c]
 ----
-index() ⇒ void
+index() => void
 ----
 
 …

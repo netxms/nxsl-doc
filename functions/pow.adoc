@@ -1,9 +1,11 @@
 [[func-pow]]
 == pow()
 
+// TODO: add description
+
 [source,c]
 ----
-pow() ⇒ void
+pow() => void
 ----
 
 …

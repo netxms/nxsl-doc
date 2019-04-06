@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-GetCustomAttribute(object, name) ⇒ String
+GetCustomAttribute(object, name) => String
 ----
 
 Lookup custom attribute of the object.

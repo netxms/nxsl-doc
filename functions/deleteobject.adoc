@@ -1,9 +1,11 @@
 [[func-deleteobject]]
 == DeleteObject()
 
+// TODO: add description
+
 [source,c]
 ----
-DeleteObject() ⇒ void
+DeleteObject() => void
 ----
 
 AF_ENABLE_NXSL_CONTAINER_FUNCS

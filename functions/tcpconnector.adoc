@@ -1,9 +1,11 @@
 [[func-tcpconnector]]
 == TCPConnector()
 
+// TODO: add description
+
 [source,c]
 ----
-TCPConnector() ⇒ void
+TCPConnector() => void
 ----
 
 …

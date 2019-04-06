@@ -5,8 +5,6 @@ include::functions/_exit.adoc[]
 include::functions/addrinrange.adoc[]
 include::functions/addrinsubnet.adoc[]
 
-include::functions/arraytostring.adoc[]
-
 include::functions/assert.adoc[]
 
 include::functions/classof.adoc[]
@@ -16,34 +14,36 @@ include::functions/countscheduledtasksbykey.adoc[]
 include::functions/currencyalphacode.adoc[]
 include::functions/currencyexponent.adoc[]
 include::functions/currencyname.adoc[]
-include::functions/d2x.adoc[]
 include::functions/driverreadparameter.adoc[]
 include::functions/eventcodefromname.adoc[]
 include::functions/eventnamefromcode.adoc[]
-include::functions/findalarmbyid.adoc[]
-include::functions/findalarmbykey.adoc[]
-include::functions/findalarmbykeyregex.adoc[]
+
 include::functions/getconfigurationvariable.adoc[]
 include::functions/gethostbyaddr.adoc[]
 include::functions/gethostbyname.adoc[]
+
 include::functions/getsyslogrulecheckcount.adoc[]
 include::functions/getsyslogrulematchcount.adoc[]
-include::functions/inlist.adoc[]
+
 include::functions/map.adoc[]
 include::functions/maplist.adoc[]
+
 include::functions/random.adoc[]
+
 include::functions/readpersistentstorage.adoc[]
-include::functions/removedirectory.adoc[]
-include::functions/round.adoc[]
+
 include::functions/secondstouptime.adoc[]
 
 include::functions/sleep.adoc[]
+
 include::functions/sys.adoc[]
-include::functions/tcpconnector.adoc[]
 include::functions/trace.adoc[]
+
 include::functions/typeof.adoc[]
-include::functions/udpconnector.adoc[]
+
 include::functions/writepersistentstorage.adoc[]
-include::functions/x2d.adoc[]
 
 include::functions/weierstrass.adoc[]
+
+include::functions/tcpconnector.adoc[]
+include::functions/udpconnector.adoc[]

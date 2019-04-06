@@ -1,9 +1,11 @@
 [[func-length]]
 == length()
 
+// TODO: add description
+
 [source,c]
 ----
-length() ⇒ void
+length() => void
 ----
 
 …

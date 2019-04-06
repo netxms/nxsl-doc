@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-mapList(table, list, separator, default) ⇒ String
+mapList(table, list, separator, default) => String
 ----
 
 Lookup multiple keys (separated by user-defined separator) from mapping table.

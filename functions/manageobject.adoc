@@ -1,9 +1,11 @@
 [[func-manageobject]]
 == ManageObject()
 
+// TODO: add description
+
 [source,c]
 ----
-ManageObject() ⇒ void
+ManageObject() => void
 ----
 
 …

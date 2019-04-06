@@ -1,9 +1,11 @@
 [[func-getdciobject]]
 == GetDCIObject()
 
+// TODO: add description
+
 [source,c]
 ----
-GetDCIObject() ⇒ Boolean
+GetDCIObject() => Boolean
 ----
 
 …

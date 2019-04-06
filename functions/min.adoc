@@ -1,9 +1,11 @@
 [[func-min]]
 == min()
 
+// TODO: add description
+
 [source,c]
 ----
-min() ⇒ void
+min() => void
 ----
 
 …

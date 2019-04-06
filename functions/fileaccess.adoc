@@ -1,9 +1,11 @@
 [[func-fileaccess]]
 == FileAccess()
 
+// TODO: add description
+
 [source,c]
 ----
-FileAccess() ⇒ void
+FileAccess() => void
 ----
 
 AF_ENABLE_NXSL_FILE_IO_FUNCTIONS

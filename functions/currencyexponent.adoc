@@ -1,9 +1,11 @@
 [[func-currencyexponent]]
 == CurrencyExponent()
 
+// TODO: add description
+
 [source,c]
 ----
-CurrencyExponent() ⇒ void
+CurrencyExponent() => void
 ----
 
 …

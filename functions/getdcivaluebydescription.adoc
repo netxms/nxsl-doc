@@ -1,9 +1,11 @@
 [[func-getdcivaluebydescription]]
 == GetDCIValueByDescription()
 
+// TODO: add description
+
 [source,c]
 ----
-GetDCIValueByDescription() ⇒ Boolean
+GetDCIValueByDescription() => Boolean
 ----
 
 …

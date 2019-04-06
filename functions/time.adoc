@@ -1,9 +1,11 @@
 [[func-time]]
 == time()
 
+// TODO: add description
+
 [source,c]
 ----
-time() ⇒ void
+time() => void
 ----
 
 …

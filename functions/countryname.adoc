@@ -1,9 +1,11 @@
 [[func-countryname]]
 == CountryName()
 
+// TODO: add description
+
 [source,c]
 ----
-CountryName() ⇒ void
+CountryName() => void
 ----
 
 …

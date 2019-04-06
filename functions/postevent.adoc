@@ -1,9 +1,11 @@
 [[func-postevent]]
 == PostEvent()
 
+// TODO: add description
+
 [source,c]
 ----
-PostEvent() ⇒ void
+PostEvent() => void
 ----
 
 …

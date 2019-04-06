@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-AgentExecuteAction(node, actionName, …) ⇒ Boolean
+AgentExecuteAction(node, actionName, …) => Boolean
 ----
 
 Execute agent action on given node.

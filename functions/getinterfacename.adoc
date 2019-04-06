@@ -1,9 +1,11 @@
 [[func-getinterfacename]]
 == GetInterfaceName()
 
+// TODO: add description
+
 [source,c]
 ----
-GetInterfaceName() ⇒ void
+GetInterfaceName() => void
 ----
 
 …

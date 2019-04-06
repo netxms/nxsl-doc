@@ -1,9 +1,11 @@
 [[func-trim]]
 == trim()
 
+// TODO: add description
+
 [source,c]
 ----
-trim() ⇒ void
+trim() => void
 ----
 
 …

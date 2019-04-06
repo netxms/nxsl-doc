@@ -1,9 +1,11 @@
 [[func-sleep]]
 == sleep()
 
+// TODO: add description
+
 [source,c]
 ----
-sleep() ⇒ void
+sleep() => void
 ----
 
 …

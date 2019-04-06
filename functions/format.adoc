@@ -1,9 +1,11 @@
 [[func-format]]
 == format()
 
+// TODO: add description
+
 [source,c]
 ----
-format() ⇒ void
+format() => void
 ----
 
 …

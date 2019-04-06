@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-SNMPGet(transport, oid) ⇒ SNMP_VarBind
+SNMPGet(transport, oid) => SNMP_VarBind
 ----
 
 Perform SNMP GET request for `oid` over provided <<class-snmp_transport,transport>>.

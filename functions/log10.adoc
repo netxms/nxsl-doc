@@ -1,9 +1,11 @@
 [[func-log10]]
 == log10()
 
+// TODO: add description
+
 [source,c]
 ----
-log10() ⇒ void
+log10() => void
 ----
 
 …

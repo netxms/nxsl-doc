@@ -1,9 +1,11 @@
 [[func-strftime]]
 == strftime()
 
+// TODO: add description
+
 [source,c]
 ----
-strftime() ⇒ void
+strftime() => void
 ----
 
 …

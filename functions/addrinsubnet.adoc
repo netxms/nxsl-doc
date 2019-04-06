@@ -1,9 +1,11 @@
 [[func-addrinsubnet]]
 == AddrInSubnet()
 
+// TODO: add description
+
 [source,c]
 ----
-AddrInSubnet() ⇒ void
+AddrInSubnet() => void
 ----
 
 …

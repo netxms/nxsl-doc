@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-x2d(hexValue) ⇒ Integer
+x2d(hexValue) => Integer
 ----
 
 Convert hexadecimal string to decimal value.

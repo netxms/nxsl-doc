@@ -1,9 +1,11 @@
 [[func-renameobject]]
 == RenameObject()
 
+// TODO: add description
+
 [source,c]
 ----
-RenameObject() ⇒ void
+RenameObject() => void
 ----
 
 …

@@ -1,9 +1,11 @@
 [[func-lower]]
 == lower()
 
+// TODO: add description
+
 [source,c]
 ----
-lower() ⇒ void
+lower() => void
 ----
 
 …

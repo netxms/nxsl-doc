@@ -3,7 +3,7 @@
 
 [source,c]
 ----
-classof(instance) ⇒ String
+classof(instance) => String
 ----
 
 Return class name of the `instance`.

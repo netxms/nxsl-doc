@@ -1,8 +1,11 @@
 = String functions
 
+include::functions/arraytostring.adoc[]
 include::functions/chr.adoc[]
+include::functions/d2x.adoc[]
 include::functions/format.adoc[]
 include::functions/index.adoc[]
+include::functions/inlist.adoc[]
 include::functions/left.adoc[]
 include::functions/length.adoc[]
 include::functions/lower.adoc[]
@@ -15,3 +18,4 @@ include::functions/splitstring.adoc[]
 include::functions/substr.adoc[]
 include::functions/trim.adoc[]
 include::functions/upper.adoc[]
+include::functions/x2d.adoc[]

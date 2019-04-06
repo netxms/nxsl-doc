@@ -1,9 +1,11 @@
 [[func-sha256]]
 == sha256()
 
+// TODO: add description
+
 [source,c]
 ----
-sha256() ⇒ void
+sha256() => void
 ----
 
 …

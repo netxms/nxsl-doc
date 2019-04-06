@@ -1,9 +1,11 @@
 [[func-findobject]]
 == FindObject()
 
+// TODO: add description
+
 [source,c]
 ----
-FindObject() ⇒ void
+FindObject() => void
 ----
 
 …

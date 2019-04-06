@@ -1,9 +1,11 @@
 [[func-md5]]
 == md5()
 
+// TODO: add description
+
 [source,c]
 ----
-md5() ⇒ void
+md5() => void
 ----
 
 …

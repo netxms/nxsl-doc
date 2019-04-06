@@ -1,9 +1,11 @@
 [[func-rtrim]]
 == rtrim()
 
+// TODO: add description
+
 [source,c]
 ----
-rtrim() ⇒ void
+rtrim() => void
 ----
 
 …
