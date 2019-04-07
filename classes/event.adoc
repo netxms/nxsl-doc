@@ -5,43 +5,91 @@ Represents NetXMS event object.
 
 ==== Instance attributes
 
-`code`::
+`code => Number`::
 Event code
 
-`customMessage`::
-Custom message set in event processing policy
+`customMessage => String`::
+Custom message set in event processing policy by calling `setMessage`.
 
-`id`::
-Unique event identifier
+`id => Number`::
+Unique event identifier.
 
-`message`::
-Event message
+`message => String`::
+Event message.
 
-`name`::
-Event name
+`name => String`::
+Event name.
 
-`parameters`::
-Array of event parameters. Starting index is 1.
+`parameters => Array`::
+List of event parameters. Starting index is 1.
 
-`severity`::
-Event severity
+`parameterNames => Array`::
+List of named event parameters (e.g. "dciId"), which can be accessed by `+object->parameterName+`.
+
+`severity => Number`::
+Event severity code.
+
+`source => NetObj`::
+Source object (inherited from <<class-netobj>>, exact type can be checked with <<func-classof>> function) for the event.
+
+`sourceId => Number`::
+ID of the source object for the event.
 
 `timestamp`::
-Timestamp as number of seconds since epoch (1 Jan 1970 00:00:00 UTC)
+link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the event.
 
 `userTag`::
-User tag associated with event
+User tag associated with event (set by calling `setUserTag()`).
+
+`$1…$n`::
+Shortcut for `parameters[n]` (e.g. "$event->parameters[3]" can be replaced with "$event->$3").
+
+`$...`::
+Named event parameters can be accessed directly by the name (e.g `+$event->dciId+`). List of available named parameters can be accessed with `parameterNames` attribute.
 
 ==== Instance methods
 
-`void setMessage(???)`::
+`setMessage(message) => void`::
 
-TODO: add description
+Set event message to `message`.
 
-`void setSeverity(???)`::
+.Parameters
+[cols="1,3" grid="none", frame="none"]
+|===
+|message|Message string
+|===
 
-TODO: add description
+`setSeverity(severityCode) => void`::
 
-`void setUserTag(???)`::
+Change event severity to `severityCode`.
 
-TODO: add description
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|severityCode
+|Numeric severity code:
+
+* 0 - NORMAL
+* 1 - WARNING
+* 2 - MINOR
+* 3 - MAJOR
+* 4 - CRITICAL
+|===
+
+`setUserTag(tag) => void`::
+
+Set custom tag, which can be later accessed via `userTag` attribute.
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|tag|String tag
+|===
+
+`toJson() => String`::
+
+Serialize object to JSON.
+
+.Return
+
+String representation of the object in JSON format.
