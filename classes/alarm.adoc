@@ -5,68 +5,71 @@ Represents NetXMS alarm.
 
 ==== Instance attributes
 
-`ackBy`::
-ID of user who acknowledges this alarm
+`ackBy => Number`::
+ID of user who acknowledged this alarm.
 
-`creationTime`::
-Alarm creation time (in seconds since epoch)
+`creationTime => Number`::
+link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the alarm creation time.
 
-`eventCode`::
-Event code of originating event
+`dciId => Number`::
+If alarm was created as a result of DCI threshold violation, this attribute will contain ID of the DCI.
 
-`eventId`::
-ID of originating event
+`eventCode => Number`::
+Event code of originating event.
 
-`helpdeskReference`::
-Helpdesk system reference
+`eventId => Number`::
+ID of originating event.
 
-`helpdeskState`::
+`helpdeskReference => String`::
+Helpdesk system reference (e.g. issue ID).
+
+`helpdeskState => Number`::
 Helpdesk state:
-  * 0 = ignored
-  * 1 = open
-  * 2 = closed
+  * 0 = Ignored
+  * 1 = Open
+  * 2 = Closed
 
-`id`::
-Alarm's unique identifier
+`id => Number`::
+Unique identifier of the alarm.
 
-`key`::
-Alarm key
+`key => String`::
+Alarm key.
 
-`lastChangeTime`::
-Time of last change (in seconds since epoch)
+`lastChangeTime => Number`::
+link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the last update.
 
-`message`::
-Alarm's message
+`message => String`::
+Alarm message.
 
-`originalSeverity`::
-Alarm's original severity
+`originalSeverity => Number`::
+Original severity of the alarm.
 
-`repeatCount`::
-Repeat count
+`repeatCount => Number`::
+Repeat count.
 
-`resolvedBy`::
-ID of user who resolves this alarm
+`resolvedBy => Number`::
+ID of user who resolved this alarm.
 
-`severity`::
-Alarm's current severity
+`severity => Number`::
+Current alarm severity.
 
-`sourceObject`::
-ID of event source object
+`sourceObject => Number`::
+ID of the object where alarm is raised.
 
-`state`::
-Alarm state
-  * 0 = outstanding
-  * 1 = acknowledged
-  * 2 = resolved
-  * 17 = sticky acknowledged
+`state => Number`::
+Alarm state:
+  * 0 = Outstanding
+  * 1 = Acknowledged
+  * 2 = Resolved
+  * 17 = Sticky acknowledged
 
 ==== Instance methods
 
-`void acknowledge()`::
-Acknowledge alarm.
+`acknowledge() => Number`::
+Acknowledge alarm. Return `0` on success or error code on failure.
 
-`resolve()`::
-Resolve alarm.
+`resolve() => Number`::
+Resolve alarm. Return `0` on success or error code on failure.
 
-`terminate()`::
-Terminate alarm.
+`terminate() => Number`::
+Terminate alarm. Return `0` on success or error code on failure.
