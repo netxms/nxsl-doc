@@ -1,0 +1,44 @@
+[[class-inetaddress]]
+=== InetAddress
+
+// TODO: 
+
+==== Instance attributes
+
+`address -> ?`::
+// TODO:
+
+`family -> ?`::
+// TODO: 
+
+`isAnyLocal -> ?`::
+// TODO: 
+
+`isBroadcast -> ?`::
+// TODO: 
+
+`isLinkLocal -> ?`::
+// TODO: 
+
+`isLoopback -> ?`::
+// TODO: 
+
+`isMulticast -> ?`::
+// TODO: 
+
+`isValid -> ?`::
+// TODO: 
+
+`isValidUnicast -> ?`::
+// TODO: 
+
+`mask -> ?`::
+// TODO: 
+
+==== Constructors
+
+`InetAddress()`::
+// TODO: 
+
+`InetAddress(string)`::
+// TODO: 

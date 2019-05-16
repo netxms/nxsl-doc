@@ -44,7 +44,7 @@ User tag associated with event (set by calling `setUserTag()`).
 `$1…$n`::
 Shortcut for `parameters[n]` (e.g. "$event->parameters[3]" can be replaced with "$event->$3").
 
-`$...`::
+`$…`::
 Named event parameters can be accessed directly by the name (e.g `+$event->dciId+`). List of available named parameters can be accessed with `parameterNames` attribute.
 
 ==== Instance methods

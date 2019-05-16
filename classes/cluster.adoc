@@ -1,15 +1,30 @@
 [[class-cluster]]
 === Cluster
 
-…
+// TODO: extends <<class-DataCollectionTarget>>
 
 ==== Instance attributes
 
-`attribute`::
-Description.
+`nodes`::
+// TODO: 
+
+`zone`::
+// TODO: 
+
+`zoneUIN`::
+// TODO: 
 
 ==== Instance methods
 
-`method() => void`::
-Description.
+`getResourceOwner(name) => Node`::
+Get node which currently owns named resource.
 
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Name of the resource.
+|===
+
+.Return
+
+<<class-node>> object instance which currently owns resource of `null` if failed.

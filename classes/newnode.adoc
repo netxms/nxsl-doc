@@ -3,6 +3,8 @@
 
 Represents newly discovered node object. Used by discovery filters.
 
+// TODO: 
+
 ==== Instance attributes
 
 `agentVersion`::
@@ -52,3 +54,9 @@ Detected SNMP version:
 
 `subnet`::
 IP subnet address as string. Example: node with IP address 192.168.2.7 and network mask 255.255.255.0, is in a subnet 192.168.2.0.
+
+`zone => ?`::
+// TODO: 
+
+`zoneUIN => ?`::
+// TODO: 

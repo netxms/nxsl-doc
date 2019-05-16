@@ -1,0 +1,24 @@
+[[class-subnet]]
+=== Subnet
+
+// TODO: extends NetObj
+
+==== Instance attributes
+
+`ipNetMask => ?`::
+// TODO: 
+
+`isSyntheticMask => ?`::
+// TODO: 
+
+`zone => ?`::
+// TODO: 
+
+`zoneUIN => ?`::
+// TODO: 
+
+==== Instance methods
+
+`method() => void`::
+Description.
+

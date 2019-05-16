@@ -44,6 +44,3 @@ include::functions/typeof.adoc[]
 include::functions/writepersistentstorage.adoc[]
 
 include::functions/weierstrass.adoc[]
-
-include::functions/tcpconnector.adoc[]
-include::functions/udpconnector.adoc[]

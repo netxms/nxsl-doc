@@ -1,15 +1,10 @@
 [[class-datacollectiontarget]]
 === DataCollectionTarget
 
-…
-
-==== Instance attributes
-
-`attribute`::
-Description.
+// TODO: abstract class, extends <<class-NetObj>>
 
 ==== Instance methods
 
-`method() => void`::
-Description.
+`readInternalParameter(name) => String`::
+// TODO: 
 

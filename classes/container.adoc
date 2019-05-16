@@ -1,15 +1,37 @@
 [[class-container]]
 === Container
 
-…
+Object represent container, extends <<class-netobj>>.
 
 ==== Instance attributes
 
-`attribute`::
-Description.
+`autoBindScript => String`::
+Source of the script for automatic binding.
+
+`isAutoBindEnabled => Boolean`::
+Indicate if automatic binding is enabled.
+
+`isAutoUnbindEnabled => Boolean`::
+Indicate if automatic unbinding is enabled.
 
 ==== Instance methods
 
-`method() => void`::
-Description.
+`setAutoBindMode(enableBind, enableUnbind) => void`::
+Set automatic bind mode for the container.
 
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|enableBind|Boolean|Script should be used for automatic binding.
+|enableUnbind|Boolean|Script should be used for automatic unbinding.
+|===
+
+
+`setAutoBindScript(script) => void`::
+Update automatic binding script source.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|script|String|Script source.
+|===

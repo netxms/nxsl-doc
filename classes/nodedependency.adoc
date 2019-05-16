@@ -1,15 +1,24 @@
 [[class-nodedependency]]
 === NodeDependency
 
-…
+// TODO: 
 
 ==== Instance attributes
 
-`attribute`::
-Description.
+`id => ?`::
+// TODO: 
 
-==== Instance methods
+`isAgentProxy => ?`::
+// TODO: 
 
-`method() => void`::
-Description.
+`isDataCollectionSource => ?`::
+// TODO: 
 
+`isICMPProxy => ?`::
+// TODO: 
+
+`isSNMPProxy => ?`::
+// TODO: 
+
+`type => ?`::
+// TODO: 

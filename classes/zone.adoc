@@ -3,16 +3,15 @@
 
 Represent network zone. Inherit all attributes and methods of the <<class-netobj>> class.
 
+// TODO: 
+
 ==== Instance attributes
 
-`agentProxy`::
-Identifier of node object used as agent proxy
+`proxyNode => ?`::
+// TODO: 
 
-`icmpProxy`::
-Identifier of node object used as ICMP proxy
+`proxyNodeId => ?`::
+// TODO: 
 
-`snmpProxy`::
-Identifier of node object used as SNMP proxy
-
-`zoneId`::
-Zone ID
+`uin => ?`::
+// TODO: 

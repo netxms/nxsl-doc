@@ -1,15 +1,44 @@
 [[class-component]]
 === Component
 
-…
+// TODO: 
 
 ==== Instance attributes
 
-`attribute`::
-Description.
+`class => String`::
+Type of the component:
 
-==== Instance methods
+* `unknown`
+* `chassis`
+* `backplane`
+* `container`
+* `power supply`
+* `fan`
+* `sensor`
+* `module`
+* `port`
+* `stack`
 
-`method() => void`::
-Description.
+`children => Array`::
+List of direct children (Array of <<class-component>> object intances).
 
+`description => String`::
+// TODO: 
+
+`firmware => String`::
+Component firmware version, if available.
+
+`ifIndex => Number`::
+// TODO: 
+
+`model => String`::
+Component model number, if available.
+
+`name => String`::
+Component name, if available.
+
+`serial => String`::
+Component serial number, if available.
+
+`vendor => String`::
+Component vendor, if available.

@@ -5,19 +5,25 @@ Represents geographical location (defined by latitude and longitude).
 
 ==== Instance attributes
 
-`latitude`::
+`isManual => ?`::
+// TODO: 
+
+`isValid -> ?`::
+// TODO: 
+
+`latitude => Number`::
 Latitude as floating point number
 
-`latitudeText`::
+`latitudeText => String`::
 Latitude as text
 
-`longitude`::
+`longitude => Number`::
 Longitude as floating point number
 
-`longitudeText`::
+`longitudeText => String`::
 Longitude as text
 
-`type`::
+`type => Number`::
 Data source type:
 
 * 0 – Unset

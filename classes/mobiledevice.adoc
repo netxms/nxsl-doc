@@ -1,6 +1,30 @@
 [[class-mobiledevice]]
 === MobileDevice
 
+// TODO: 
+
 ==== Instance attributes
 
-==== Instance methods
+`batteryLevel -> ?`::
+// TODO: 
+
+`deviceId -> ?`::
+// TODO: 
+
+`model -> ?`::
+// TODO: 
+
+`osName -> ?`::
+// TODO: 
+
+`osVersion -> ?`::
+// TODO: 
+
+`serialNumber -> ?`::
+// TODO: 
+
+`userId -> ?`::
+// TODO: 
+
+`vendor -> ?`::
+// TODO: 

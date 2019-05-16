@@ -5,29 +5,38 @@ Class containing a calendar date and time broken down into its components. For c
 
 ==== Instance attributes
 
-`sec`::
-Seconds after the minute. Alias: `tm_sec`.
+`sec => Number`::
+`tm_sec => Number`::
+Seconds after the minute.
 
-`min`::
-Minutes after the hour. Alias: `tm_min`.
+`min => Number`::
+`tm_min => Number`::
+Minutes after the hour.
 
-`hour`::
-Hours since midnight. Alias: `tm_hour`.
+`hour => Number`::
+`tm_hour => Number`::
+Hours since midnight.
 
-`mday`::
-Day of the month. Alias: `tm_mday`.
+`mday => Number`::
+`tm_mday => Number`::
+Day of the month.
 
-`mon`::
-Months since January. Alias: `tm_mon`.
+`mon => Number`::
+`tm_mon => Number`::
+Months since January.
 
-`year`::
-Year. Alias: `tm_year`.
+`year => Number`::
+`tm_year => Number`::
+Year.
 
-`wday`::
-Days since Sunday. Alias: `tm_wday`.
+`yday => Number`::
+`tm_yday => Number`::
+Days since January 1.
 
-`yday`::
-Days since January 1. Alias: `tm_yday`.
+`wday => Number`::
+`tm_wday => Number`::
+Days since Sunday.
 
-`isdst`::
-Daylight Saving Time flag. Alias: `tm_isdst`.
+`isdst => Boolean`::
+`tm_isdst => Boolean`::
+Daylight Saving Time flag.

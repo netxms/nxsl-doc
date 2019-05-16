@@ -1,15 +1,27 @@
 [[class-chassis]]
 === Chassis
 
-…
+// TODO: 
 
 ==== Instance attributes
 
-`attribute`::
-Description.
+`controller`::
+// TODO: 
 
-==== Instance methods
+`controllerId`::
+// TODO: 
 
-`method() => void`::
-Description.
+`flags`::
+// TODO: 
 
+`rack`::
+// TODO: 
+
+`rackId`::
+// TODO: 
+
+`rackHeight`::
+// TODO: 
+
+`rackPosition`::
+// TODO: 

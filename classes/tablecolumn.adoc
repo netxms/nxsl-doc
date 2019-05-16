@@ -1,0 +1,20 @@
+[[class-tablecolumn]]
+=== TableColumn
+
+Represents table column definition object (used by Table class).
+
+// TODO:
+
+==== Instance attributes
+
+`dataType`::
+Data type
+
+`displayName`::
+Display name
+
+`isInstanceColumn`::
+`TRUE` if column is marked as instance column
+
+`name`::
+Column name

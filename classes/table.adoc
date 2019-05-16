@@ -3,61 +3,48 @@
 
 Represents table object (usually it's value of table DCI).
 
+// TODO
+
 ==== Instance attributes
 
-`columnCount`::
+`columnCount => Number`::
 Number of columns.
 
-`columns`::
+`columns => Array<TableColumn>`::
 Array of <<class-tablecolumn,column definitions>>.
 
-`rowCount`::
+`rowCount => Numbers`::
 Number of rows.
 
-`title`::
+`rows => Array<TableRow>`::
+Array of rows with data.
+
+`title => String`::
 Title of table.
 
 ==== Instance methods
 
-`addColumn`::
-// TODO: add description
+`addColumn(name, [type], [displayName], [isInstance]) => Number`::
+// TODO: 
 
-`addRow`::
-// TODO: add description
+`addRow() => Number`::
+// TODO: 
 
-`deleteColumn`::
-// TODO: add description
+`deleteColumn(columnId) => void`::
+// TODO: 
 
-`deleteRow`::
-// TODO: add description
+`deleteRow(rowId) => void`::
+// TODO: 
 
-`get`::
-// TODO: add description
+`get(rowId, columnId) => String`::
+// TODO: 
 
-`getColumnIndex`::
-// TODO: add description
+`getColumnIndex(columnName) => Number`::
+// TODO: 
 
-`getColumnName`::
-// TODO: add description
+`getColumnName(columnId) => String`::
+// TODO: 
 
-`set`::
-// TODO: add description
+`set(rowId, columnId, value) => void`::
+// TODO: 
 
-[[class-tablecolumn]]
-=== TableColumn
-
-Represents table column definition object (used by Table class).
-
-==== Instance attributes
-
-`dataType`::
-Data type
-
-`displayName`::
-Display name
-
-`isInstanceColumn`::
-`TRUE` if column is marked as instance column
-
-`name`::
-Column name

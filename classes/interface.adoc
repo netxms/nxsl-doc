@@ -3,6 +3,31 @@
 
 Represent interface object. Inherit all attributes and methods of the <<class-netobj>> class.
 
+// TODO: formatting, types
+
+==== Constants
+
+[[enum-interface-state]]
+.Interface states
+|===
+| Code | Description
+
+| 0    | Unknown
+| 1    | Up
+| 2    | Down
+| 3    | Testing
+|===
+
+[[enum-interface-expected-state]]
+.Interface expected states
+|===
+| Code | Description
+
+| 0    | Up
+| 1    | Down
+| 2    | Ignore
+|===
+
 ==== Instance attributes
 
 `adminState`::
@@ -17,11 +42,11 @@ Bridge port number for this interface.
 `description`::
 Interface description
 
-`dot1xPaeAuthState`::
-802.1x PAE authentication state
-
 `dot1xBackendAuthState`::
 802.1x back-end authentication state
+
+`dot1xPaeAuthState`::
+802.1x PAE authentication state
 
 `expectedState`::
 <<enum-interface-expected-state,Expected state>> of the interface.
@@ -35,6 +60,12 @@ Interface index.
 `ifType`::
 Interface type
 
+`ipAddressList -> ?`::
+// TODO: 
+
+`ipNetMask`::
+IP network mask (number of bits).
+
 `isExcludedFromTopology`::
 `TRUE` if this interface excluded from network topology
 
@@ -46,9 +77,6 @@ Interface type
 
 `isPhysicalPort`::
 `TRUE` if this interface object represents physical port
-
-`ipNetMask`::
-IP network mask (number of bits).
 
 `macAddr`::
 String representation of MAC address separated by ":".
@@ -77,43 +105,34 @@ Slot number.
 `speed`::
 Speed of the interface.
 
+`vlans -> ?`::
+// TODO: 
+
 `zone`::
 <<class-zone>> object (null if zoning is disabled).
 
-`zoneId`::
-Zone ID (0 if zoning is disabled)
+`zoneUIN -> ?`::
+// TODO: 
 
-[[enum-interface-state]]
-.Interface states
+==== Instance methods
+
+`setExcludeFromTopology(excluded) => void`::
+
+Change `isExcludedFromTopology` flag.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
 |===
-| Code | Description
-
-| 0
-| Unknown
-
-| 1
-| Up
-
-| 2
-| Down
-
-| 3
-| Testing
-
+|excluded|Boolean|`TRUE` if interface should be excluded.
 |===
 
-[[enum-interface-expected-state]]
-.Interface expected states
+`setExpectedState(newState) => void`::
+
+Set expected state to `newState`.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
 |===
-| Code | Description
-
-| 0
-| Up
-
-| 1
-| Down
-
-| 2
-| Ignore
-
+|newState|Number|New state as defined by <<enum-interface-expected-state>>.
 |===
+

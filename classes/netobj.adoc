@@ -3,62 +3,9 @@
 
 Base class for all NetXMS objects.
 
-==== Instance attributes
+// TODO: 
 
-Object custom attributes can be accessed in the same way as instance attribute, if names do not overlap. <<func-getcustomattribute>> should be used otherwise.
-
-`alarms`::
-Array of <<class-alarm, Alarm objects>> of object`s active alarms.
-
-`id`::
-Object identifier (`uint32`).
-
-`guid`::
-Object GUID as `string`.
-
-`ipAddr`::
-Primary IP address (`string`).
-
-`name`::
-Object name.
-
-`status`::
-<<enum-object-status,Object status>>.
-
-`type`::
-<<enum-object-type,Object type>>.
-
-`comments`::
-Object comments.
-
-`streetAddress`::
-Postal address – street.
-
-`city`::
-Postal address - city.
-
-`postcode`::
-Postal address – postal code.
-
-`responsibleUsers`::
-Array of <<class-userdbobject, UserDBObject objects>> of object`s responsible users
-
-`country`::
-Postal address – country.
-
-`customAttributes`::
-Hash map of object custom attributes.
-
-`geolocation`::
-Object <<class-geolocation,geographical location>>.
-
-==== Instance methods
-
-`void clearGeoLocation()`::
-Clears GeoLocation data from the node
-
-`setGeoLocation(GeoLocation location)`::
-Sets node geographical <<class-geolocation,location>>.
+==== Constants
 
 [[enum-object-status]]
 .Object Statuses
@@ -145,3 +92,78 @@ Sets node geographical <<class-geolocation,location>>.
 | Cluster
 
 |===
+
+==== Instance attributes
+
+Object custom attributes can be accessed in the same way as instance attribute, if names do not overlap. <<func-getcustomattribute>> should be used otherwise.
+
+`alarms`::
+Array of <<class-alarm, Alarm objects>> of object`s active alarms.
+
+`city`::
+Postal address - city.
+
+`comments`::
+Object comments.
+
+`country`::
+Postal address – country.
+
+`customAttributes`::
+Hash map of object custom attributes.
+
+`geolocation`::
+Object <<class-geolocation,geographical location>>.
+
+`guid`::
+Object GUID as `string`.
+
+`id`::
+Object identifier (`uint32`).
+
+`ipAddr`::
+Primary IP address (`string`).
+
+`mapImage => ?`::
+// TODO: 
+
+`name`::
+Object name.
+
+`postcode`::
+Postal address – postal code.
+
+`status`::
+<<enum-object-status,Object status>>.
+
+`streetAddress`::
+Postal address – street.
+
+`type`::
+<<enum-object-type,Object type>>.
+
+==== Instance methods
+
+`clearGeoLocation() => void`::
+Clears GeoLocation data from the node
+
+`setComments => ?`::
+// TODO: 
+
+`setGeoLocation(newLocation)`::
+Sets node geographical <<class-geolocation,location>>.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|newLocation|<<class-geolocation>>|
+|===
+
+`setMapImage() => ?`::
+// TODO: 
+
+`setStatusCalculation() => ?`::
+// TODO: 
+
+`setStatusPropagation() => ?`::
+// TODO: 

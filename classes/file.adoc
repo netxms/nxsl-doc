@@ -1,0 +1,29 @@
+[[class-file]]
+=== FILE
+
+// TODO: 
+
+==== Instance attributes
+
+`eof => ?`::
+// TODO:
+
+`name => ?`::
+// TODO: 
+
+==== Instance methods
+
+`close() => ?`::
+// TODO: 
+
+`read() => ?`::
+// TODO: 
+
+`readLine() => ?`::
+// TODO: 
+
+`write() => ?`::
+// TODO: 
+
+`writeLine() => ?`::
+// TODO: 

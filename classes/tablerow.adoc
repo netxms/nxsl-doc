@@ -1,0 +1,20 @@
+[[class-tablerow]]
+=== TableRow
+
+// TODO: 
+
+==== Instance attributes
+
+`index => Number`::
+// TODO: 
+
+`values => Array<String>`::
+// TODO: 
+
+==== Instance methods
+
+`get(columnId) => String`::
+// TODO: 
+
+`set(columnId, value) => void`::
+// TODO: 

@@ -5,6 +5,9 @@ Represents Data Collection Item (DCI).
 
 ==== Instance attributes
 
+`activeThresholdSeverity`::
+// TODO: 
+
 `comments`::
 Comments (since 2.0-M5)
 
@@ -24,11 +27,17 @@ Description
 `errorCount`::
 Number of consecutive data collection errors
 
+`hasActiveThreshold`::
+// TODO: 
+
 `id`::
 Unique DCI identifier
 
 `instance`::
 DCI instance (only for single value DCIs)
+
+`instanceData`::
+// TODO: 
 
 `lastPollTime`::
 Time of last DCI poll (either successful or not) as number of seconds since epoch (1 Jan 1970 00:00:00 UTC)
@@ -52,6 +61,15 @@ DCI status; possible values are:
 
 `systemTag`::
 System tag. Always empty for user-defined DCIs.
+
+`template`::
+// TODO: 
+
+`templateId`::
+// TODO: 
+
+`templateItemId`::
+// TODO: 
 
 `type`::
 DCI type:

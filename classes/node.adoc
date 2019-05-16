@@ -1,9 +1,15 @@
 [[class-node]]
 === Node
 
-Represents NetXMS node object. Extends <<class-netobj>>.
+Represents NetXMS node object. Extends <<class-datacollectiontarget>>.
 
 ==== Instance attributes
+
+`agentCertificateSubject => ?`::
+// TODO: 
+
+`agentId => ?`::
+// TODO: 
 
 `agentVersion`::
 NetXMS agent version as `string`.
@@ -14,20 +20,28 @@ Number of seconds since node start or `0` if unknown.
 `bridgeBaseAddress`::
 Base address of the switch formatted as 12 character `string` without separators. Value is only valid for bridges and switches. Special value `000000000000` indicates that address is unknown.
 
+`components => ?`::
+// TODO: 
+
+`dependentNodes => ?`::
+// TODO: 
+
 `driver`::
 Named of selected device-specific SNMP driver.
 
 `flags`::
 Bit mask of <<node-flags>>, `uint32`.
 
+`hypervisorInfo => ?`::
+// TODO: 
+
+`hypervisorType => ?`::
+// TODO: 
+
 `is802_1x`::
-`TRUE` if node supports 802.1x.
+`TRUE` if node supports 802.1x. Equivalent of `isPAE`.
 
-`isPAE`::
-`TRUE` if node supports 802.1x.
-
-`isAgent`::
-
+`isAgent => ?`::
 `TRUE` if NetXMS agent detected on node
 
 `isBridge`::
@@ -36,14 +50,20 @@ TRUE if node is a bridge
 `isCDP`::
 TRUE if node supports CDP (Cisco Discovery Protocol)
 
+`isInMaintenanceMode => ?`::
+// TODO: 
+
 `isLLDP`::
 TRUE if node supports LLDP (Link Layer Discovery Protocol)
+
+`isLocalManagement`::
+`TRUE` if node is a local management server (NetXMS server)
 
 `isLocalMgmt`::
 `TRUE` if node is a local management server (NetXMS server)
 
-`isLocalManagement`::
-`TRUE` if node is a local management server (NetXMS server)
+`isPAE`::
+`TRUE` if node supports 802.1x. Equivalent of `is802_1x`.
 
 `isPrinter`::
 `TRUE` if node is a printer
@@ -51,17 +71,41 @@ TRUE if node supports LLDP (Link Layer Discovery Protocol)
 `isRouter`::
 `TRUE` if node is a router (has IP forwarding enabled)
 
-`isSMCLP`::
-`TRUE` if SMCLP agent detected on node
-
 `isSNMP`::
 `TRUE` if SNMP agent detected on node
 
 `isSONMP`::
 `TRUE` if node supports SONMP/NDP (Synoptics/Nortel Discovery Protocol)
 
+`isSTP => ?`::
+// TODO: 
+
+`isVirtual => ?`::
+// TODO: 
+
+`lastAgentCommTime => ?`::
+// TODO: 
+
+`nodeSubType => ?`::
+// TODO: 
+
+`nodeType => ?`::
+// TODO: 
+
 `platformName`::
 Platform name reported by NetXMS agent
+
+`rack => ?`::
+// TODO: 
+
+`rackHeight => ?`::
+// TODO: 
+
+`rackId => ?`::
+// TODO: 
+
+`rackPosition => ?`::
+// TODO: 
 
 `runtimeFlags`::
 Bit mask of <<node-runtime-flags>>, `uint32`.
@@ -91,16 +135,10 @@ System description (value of `System.Uname` for nodes with agents or `.1.3.6.1.2
 `zone`::
 <<class-zone>> object (`null` if zoning is disabled)
 
-`zoneId`::
-Zone ID (`0` if zoning is disabled)
+`zoneUIN => ?`::
+// TODO: 
 
 ==== Instance methods
-
-`void clearGeoLocation()`::
-Clears GeoLocation data from the node
-
-`void setGeoLocation(<<class-geolocation,GeoLocation>> location)`::
-Sets GeoLocation data for the node to `location`
 
 `void enableAgent(boolean flag)`::
 Enable or disable usage of NetXMS agent for all polls.
@@ -108,8 +146,14 @@ Enable or disable usage of NetXMS agent for all polls.
 `void enableConfigurationPolling(boolean)`::
 Enable or disable configuration polling for a node
 
+`enableDiscoveryPolling() => ?`::
+// TODO: 
+
 `enableIcmp(boolean)`::
 Enable or disable usage of ICMP pings for status polls
+
+`enableRoutingTablePolling() => ?`::
+// TODO: 
 
 `enableSnmp(boolean)`::
 Enable or disable usage of SNMP for all polls
