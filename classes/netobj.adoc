@@ -100,6 +100,12 @@ Object custom attributes can be accessed in the same way as instance attribute, 
 `alarms`::
 Array of <<class-alarm, Alarm objects>> of object`s active alarms.
 
+`backupZoneProxy`::
+currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
+
+`backupZoneProxyId`::
+ID of currently selected backup zone proxy (`0` if zoning is disabled or backup proxy is not assigned)
+
 `city`::
 Postal address - city.
 
@@ -132,6 +138,12 @@ Object name.
 
 `postcode`::
 Postal address – postal code.
+
+`primaryZoneProxy`::
+currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabled or primary proxy is not assigned)
+
+`primaryZoneProxyId`::
+ID of currently selected primary zone proxy (`0` if zoning is disabled or primary proxy is not assigned)
 
 `status`::
 <<enum-object-status,Object status>>.

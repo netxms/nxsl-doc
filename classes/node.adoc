@@ -135,6 +135,12 @@ System description (value of `System.Uname` for nodes with agents or `.1.3.6.1.2
 `zone`::
 <<class-zone>> object (`null` if zoning is disabled)
 
+`zoneProxyAssignments => Integer`::
+Number of objects where this node is selected as either primary or backup zone proxy (`0` if zoning is disabled or this node is not a zone proxy).
+
+`zoneProxyStatus => Boolean`::
+Status of this node as zone proxy (`true` if active).
+
 `zoneUIN => ?`::
 // TODO: 
 
