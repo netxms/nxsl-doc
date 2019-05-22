@@ -6,3 +6,4 @@ NetXMS Scripting Language documentation
 * gem install asciidoctor
 * gem install asciidoctor-pdf --pre
 * gem install coderay
+* gem install bundler
