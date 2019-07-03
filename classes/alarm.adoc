@@ -73,3 +73,24 @@ Resolve alarm. Return `0` on success or error code on failure.
 
 `terminate() => Number`::
 Terminate alarm. Return `0` on success or error code on failure.
+
+`addComment(commentText, syncWithHelpdesk) => Number`::
+Add new alarm comment.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|commentText|String|Text of the new alarm comment.
+|syncWithHelpdesk|String|Optional. If synchronization with helpdesk should be done. TRUE by default.
+|===
+
+.Return
+
+Id of the newly created alarm comment.
+
+`getComments() => Array`::
+Get array of alarm comments.
+
+.Return
+
+Array of <<class-alarm-comment>> objects.

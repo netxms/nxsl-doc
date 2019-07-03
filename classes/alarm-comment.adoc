@@ -1,0 +1,18 @@
+[[class-alarm-comment]]
+=== Alarm comment
+
+Represents NetXMS alarm comment.
+
+==== Instance attributes
+
+`id => Number`::
+Alarm comment ID.
+
+`changeTime => Number`::
+link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the alarm comment last modification time.
+
+`userId => Number`::
+ID of user who last modified this alarm commant.
+
+`text => Number`::
+Alarm comment text.
