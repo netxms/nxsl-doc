@@ -1,0 +1,60 @@
+[[class-access-point]]
+=== Access point
+
+Represents NetXMS access point object.
+
+==== Instance attributes
+
+`icmpAverageRTT => Integer`::
+ICMP average response time for primary address. Will return null if no information.
+
+`icmpLastRTT => Integer`::
+ICMP last response time for primary address. Will return null if no information.
+
+`icmpMaxRTT => Integer`::
+ICMP maximal response time for primary address. Will return null if no information.
+
+`icmpMinRTT => Integer`::
+ICMP minimal response time for primary address. Will return null if no information.
+
+`icmpPacketLoss => Integer`::
+ICMP packet loss for primary address. Will return null if no information.
+
+`index => Integer`::
+Index
+
+`model => String`::
+Model
+
+`node => <<class-node>>`::
+Parent node
+
+`serialNumber => String`::
+Serial number
+
+`state => String`::
+State from <<accesspoint-state>>
+
+`vendor => String`::
+Vendor
+
+==== Constants
+
+[[accesspoint-state]]
+[cols="1,4a"]
+.Access point state
+|===
+| Description | Value
+
+|AP_ADOPTED  
+|0
+
+|AP_UNADOPTED  
+|1
+
+|AP_DOWN  
+|2
+
+|AP_UNKNOWN  
+|3
+|===

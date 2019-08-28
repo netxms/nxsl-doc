@@ -35,11 +35,14 @@ Source object (inherited from <<class-netobj>>, exact type can be checked with <
 `sourceId => Number`::
 ID of the source object for the event.
 
+`tags => Array`::
+Event tags as an array of strings.
+
+`tagList => String`::
+Event tags as a coma separated list.
+
 `timestamp`::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the event.
-
-`userTag`::
-User tag associated with event (set by calling `setUserTag()`).
 
 `$1…$n`::
 Shortcut for `parameters[n]` (e.g. "$event->parameters[3]" can be replaced with "$event->$3").
@@ -76,9 +79,29 @@ Change event severity to `severityCode`.
 * 4 - CRITICAL
 |===
 
-`setUserTag(tag) => void`::
+`hasTag(tag) => Boolean`::
 
-Set custom tag, which can be later accessed via `userTag` attribute.
+Return if event has specific tag.
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|tag|String tag
+|===
+
+`addTag(tag) => void`::
+
+Set event tag, which can be later accessed via `tags` attribute.
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|tag|String tag
+|===
+
+`removeTag(tag) => void`::
+
+Remove tag form event tag list
 
 .Parameters
 [cols="1,3a" grid="none", frame="none"]

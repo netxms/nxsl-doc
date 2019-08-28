@@ -20,6 +20,9 @@ Event code of originating event.
 `eventId => Number`::
 ID of originating event.
 
+`eventTagList => Number`::
+List of event tags as a coma separated string
+
 `helpdeskReference => String`::
 Helpdesk system reference (e.g. issue ID).
 
@@ -49,6 +52,9 @@ Repeat count.
 
 `resolvedBy => Number`::
 ID of user who resolved this alarm.
+
+`ruleGuid => String`::
+Guid of the rule that generated the event.
 
 `severity => Number`::
 Current alarm severity.

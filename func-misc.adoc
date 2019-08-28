@@ -26,6 +26,8 @@ include::functions/gethostbyname.adoc[]
 include::functions/getsyslogrulecheckcount.adoc[]
 include::functions/getsyslogrulematchcount.adoc[]
 
+include::functions/jsonparse.adoc[]
+
 include::functions/map.adoc[]
 include::functions/maplist.adoc[]
 

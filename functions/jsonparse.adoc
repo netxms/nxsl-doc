@@ -1,0 +1,20 @@
+[[func-jsonparse]]
+== JsonParse()
+
+[source,c]
+----
+JsonParse(string) => JSON object
+----
+
+Parse input `string` to <<json-object>>
+
+.Parameters
+[cols="1,3" grid="none", frame="none"]
+|===
+|string|JSON as a string.
+|===
+
+.Return
+
+<<json-object>> if parsing was sucessfull or null
+

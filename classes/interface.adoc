@@ -39,6 +39,9 @@ Interface alias (usually value of SNMP ifAlias).
 `bridgePortNumber`::
 Bridge port number for this interface.
 
+`chassis`::
+Parent chassis
+
 `description`::
 Interface description
 
@@ -53,6 +56,21 @@ Interface description
 
 `flags`
 Interface flags (bit mask, `uint32`).
+
+`icmpAverageRTT => Integer`::
+ICMP average response time for current interface. Will return null if no information.
+
+`icmpLastRTT => Integer`::
+ICMP last response time for current interface. Will return null if no information.
+
+`icmpMaxRTT => Integer`::
+ICMP maximal response time for current interface. Will return null if no information.
+
+`icmpMinRTT => Integer`::
+ICMP minimal response time for current interface. Will return null if no information.
+
+`icmpPacketLoss => Integer`::
+ICMP packet loss for current interface. Will return null if no information.
 
 `ifIndex`::
 Interface index.
@@ -69,6 +87,9 @@ IP network mask (number of bits).
 `isExcludedFromTopology`::
 `TRUE` if this interface excluded from network topology
 
+`isIncludedInIcmpPoll`::
+`TRUE` if this interface is included in ICMP statistics
+
 `isLoopback`::
 `TRUE` if this interface is a loopback
 
@@ -80,6 +101,9 @@ IP network mask (number of bits).
 
 `macAddr`::
 String representation of MAC address separated by ":".
+
+`module`::
+Module
 
 `mtu`::
 Interface MTU (0 if unknown).
@@ -96,11 +120,11 @@ Peer interface object if known, otherwise `null`.
 `peerNode`::
 Peer <<class-node,node object>> if known, otherwise `null`.
 
-`port`::
-Port number.
+`pic => Integer`::
+Phisical location.
 
-`slot`::
-Slot number.
+`port= > Integer`::
+Port number.
 
 `speed`::
 Speed of the interface.
@@ -111,8 +135,8 @@ Speed of the interface.
 `zone`::
 <<class-zone>> object (null if zoning is disabled).
 
-`zoneUIN -> ?`::
-// TODO: 
+`zoneUIN -> Integer`::
+Zone UIN of this interface.
 
 ==== Instance methods
 
@@ -134,5 +158,15 @@ Set expected state to `newState`.
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |newState|Number|New state as defined by <<enum-interface-expected-state>>.
+|===
+
+`setIncludeInIcmpPoll(enabled) => void`::
+
+Enabele/Disable ICMP statistics collection for current interface.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|enabled|Boolean|If this interface should be included in ICMP statistics.
 |===
 

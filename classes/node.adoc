@@ -44,6 +44,9 @@ Bit mask of <<node-flags>>.
 `hasIfXTable => Boolean`::
 `TRUE` if supports ifXTable.
 
+`hasUserAgent => Boolean`::
+`TRUE` if has user agent
+
 `hasVLANs => Boolean`::
 `TRUE` if VLAN information available.
 
@@ -56,28 +59,43 @@ Bit mask of <<node-flags>>.
 `hypervisorType => ?`::
 // TODO: 
 
-`is802_1x`::
+`icmpAverageRTT => Integer`::
+ICMP average response time for primary address. Will return null if no information.
+
+`icmpLastRTT => Integer`::
+ICMP last response time for primary address. Will return null if no information.
+
+`icmpMaxRTT => Integer`::
+ICMP maximal response time for primary address. Will return null if no information.
+
+`icmpMinRTT => Integer`::
+ICMP minimal response time for primary address. Will return null if no information.
+
+`icmpPacketLoss => Integer`::
+ICMP packet loss for primary address. Will return null if no information.
+
+`is802_1x => Boolean`::
 `TRUE` if node supports 802.1x. Equivalent of `isPAE`.
 
-`isAgent => ?`::
+`isAgent => Boolean`::
 `TRUE` if NetXMS agent detected on node
 
-`isBridge`::
+`isBridge => Boolean`::
 `TRUE` if node is a bridge
 
-`isCDP`::
+`isCDP => Boolean`::
 `TRUE` if node supports CDP (Cisco Discovery Protocol)
 
-`isInMaintenanceMode => ?`::
-// TODO: 
+`isInMaintenanceMode => Boolean`::
+`TRUE` if node is in maintenace mode
 
-`isLLDP`::
+`isLLDP => Boolean`::
 `TRUE` if node supports LLDP (Link Layer Discovery Protocol)
 
-`isLocalManagement`::
+`isLocalManagement => Boolean`::
 `TRUE` if node is a local management server (NetXMS server)
 
-`isLocalMgmt`::
+`isLocalMgmt => Boolean`::
 `TRUE` if node is a local management server (NetXMS server)
 
 `isNDP => Boolean`::
@@ -113,8 +131,8 @@ Bit mask of <<node-flags>>.
 `isVRRP => Boolean`
 `TURE` if VRRP supported.
 
-`lastAgentCommTime => ?`::
-// TODO: 
+`lastAgentCommTime => Integer`::
+Unix timestamp of last time when communication with agent was
 
 `nodeSubType => ?`::
 // TODO: 
@@ -122,7 +140,7 @@ Bit mask of <<node-flags>>.
 `nodeType => ?`::
 // TODO: 
 
-`platformName`::
+`platformName => String`::
 Platform name reported by NetXMS agent
 
 `rack => ?`::

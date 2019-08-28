@@ -1,0 +1,33 @@
+[[json-array]]
+=== JSON array
+
+Represents JSON object
+
+==== Instance methods
+
+`append(value) => void`::
+Appends value to JSON array.
+
+`get(index) => ?`::
+Retruns aarray value by the index. Value type depensd on the type used in JSON.
+
+.Return 
+Arrtubute value
+
+`insert(index, value) => void`::
+Sets value to the provided index in JSON array, moving existing element in this position
+
+`serialize() => String`::
+Returns string with serialized JSON
+
+`set(index, value) => void`::
+Sets value to the provided index in JSON array, replasing existing element in this position
+
+.Return 
+String with JSON
+
+
+==== Constructors
+
+`JsonArray()`::
+Creates new JSON array.

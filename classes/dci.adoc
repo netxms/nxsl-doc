@@ -53,6 +53,9 @@ Data origin (source); possible values are:
   * 3	= Check Point SNMP agent
   * 4	= Push
 
+`relatedObject => <<class-netobj>>`::
+Related object or null if there is no object
+
 `status`::
 DCI status; possible values are:
   * 0 =	Active

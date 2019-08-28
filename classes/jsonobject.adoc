@@ -1,0 +1,37 @@
+[[json-object]]
+=== JSON object
+
+Represents JSON object
+
+==== Instance attributes
+
+Attribute values can be accessed in the same way as instance attribute.
+
+==== Instance methods
+
+`get(key) => ?`::
+Retruns attribute value by the key. Value type depensd on the type used in JSON.
+
+.Return 
+Arrtubute value
+
+`keys() => Array`::
+Returns attribute array
+
+.Return 
+Arrtubute array
+
+`serialize() => String`::
+Returns string with serialized JSON
+
+.Return 
+String with JSON
+
+`set(key, value) => void`::
+Sets attribute referenced by key to the given value.
+
+
+==== Constructors
+
+`JsonObject()`::
+Creates new JSON object.
