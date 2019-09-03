@@ -9,16 +9,30 @@ Represents NetXMS event object.
 Event code
 
 `customMessage => String`::
-Custom message set in event processing policy by calling `setMessage`.
+Custom message set in event processing policy by calling `setMessage`. Get/set attribute.
 
 `id => Number`::
 Unique event identifier.
 
 `message => String`::
-Event message.
+Event message. Get/set attribute.
 
 `name => String`::
 Event name.
+
+`origin => Number`::
+Origin of the event
+
+* 0 - SYSTEM 
+* 1 - AGENT 
+* 2 - CLIENT
+* 3 - SYSLOG
+* 4 - SNMP
+* 5 - NXSL
+* 6 - REMOTE_SERVER 
+
+`originTimestamp => Number`::
+The time when the event was generated in the origin.
 
 `parameters => Array`::
 List of event parameters. Starting index is 1.
@@ -27,7 +41,7 @@ List of event parameters. Starting index is 1.
 List of named event parameters (e.g. "dciId"), which can be accessed by `+object->parameterName+`.
 
 `severity => Number`::
-Event severity code.
+Event severity code. Get/set attribute.
 
 `source => NetObj`::
 Source object (inherited from <<class-netobj>>, exact type can be checked with <<func-classof>> function) for the event.
@@ -48,7 +62,7 @@ link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the event.
 Shortcut for `parameters[n]` (e.g. "$event->parameters[3]" can be replaced with "$event->$3").
 
 `$…`::
-Named event parameters can be accessed directly by the name (e.g `+$event->dciId+`). List of available named parameters can be accessed with `parameterNames` attribute.
+Named event parameters can be accessed directly by the name (e.g `+$event->dciId+`). List of available named parameters can be accessed with `parameterNames` attribute. Get/set attribute.
 
 ==== Instance methods
 
@@ -88,6 +102,25 @@ Return if event has specific tag.
 |===
 |tag|String tag
 |===
+
+`addParameter(name, value) => void`::
+
+Set event parameter
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Parameter name. Optional parameter.
+|value|String|Parameter value.
+|===
+
+`toJson() => String`::
+
+Serialize object to JSON.
+
+.Return
+
+String representation of the object in JSON format.
 
 `addTag(tag) => void`::
 
