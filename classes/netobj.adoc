@@ -3,7 +3,216 @@
 
 Base class for all NetXMS objects.
 
-// TODO: 
+==== Instance attributes
+
+Object custom attributes can be accessed in the same way as instance attribute, if names do not overlap. <<func-getcustomattribute>> should be used otherwise.
+
+`alarms`::
+Array of <<class-alarm, Alarm objects>> of object`s active alarms.
+
+`backupZoneProxy`::
+currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
+
+`backupZoneProxyId`::
+ID of currently selected backup zone proxy (`0` if zoning is disabled or backup proxy is not assigned)
+
+`children`::
+Array of <<class-netobj, NetObjects>> of object`s children.  
+
+`city`::
+Postal address - city.
+
+`comments`::
+Object comments.
+
+`country`::
+Postal address – country.
+
+`customAttributes`::
+Hash map of object custom attributes.
+
+`geolocation`::
+Object <<class-geolocation,geographical location>>.
+
+`guid`::
+Object GUID as `string`.
+
+`id`::
+Object identifier (`uint32`).
+
+`ipAddr`::
+Primary IP address (`string`).
+
+`mapImage => String`::
+GUID of object image.
+
+`name`::
+Object name.
+
+`parents`::
+Array of <<class-netobj, NetObjects>> of object`s direct parents.
+
+`postcode`::
+Postal address – postal code.
+
+`primaryZoneProxy`::
+currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabled or primary proxy is not assigned)
+
+`primaryZoneProxyId`::
+ID of currently selected primary zone proxy (`0` if zoning is disabled or primary proxy is not assigned)
+
+`status`::
+<<enum-object-status,Object status>>.
+
+`streetAddress`::
+Postal address – street.
+
+`type`::
+<<enum-object-type,Object type>>.
+
+==== Instance methods
+
+`bind(object) => void`::
+Bind provided object as a child to the current object.
+This function can be disabled in server configuration file by "NXSL.EnableContainerFunctions" server configuration parameter.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|object|<<class-netobj>>|Object to bind as a child to the current object.
+|===
+
+`bindTo(object) => void`::
+Bind current object as a child to the provided object.
+This function can be disabled in server configuration file by "NXSL.EnableContainerFunctions" server configuration parameter.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|object|<<class-netobj>>|Object to bind as a parent to the current object.
+|===
+
+`clearGeoLocation() => void`::
+Clears GeoLocation data from the node
+
+`delete() => void`::
+Deletes current object.
+
+`deleteCustomAttribute(name) => void`::
+Delete custom attribute. 
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|name|String|Name of the attribute to delete.
+|===
+
+`enterMaintenance() => void`::
+Puts object in maintenance mode. 
+
+`getCustomAttribute(name) => String`::
+Returns value of the custom attribute with the provided name. 
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|name|String|Name of the attribute to get value form.
+|===
+
+`leaveMaintenance() => void`::
+Removes object from maintenance mode. 
+
+`manage() => void`::
+Sets object to managed mode. Has no affect if object already managed.
+
+`rename(name) => void`::
+Rename object.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|name|String|New object name
+|===
+
+`setComments(comment) => void`::
+Set object comments
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|comment|String|Comment to be set
+|===
+
+`setCustomAttribute(key, value) => void`::
+Update or create custom attribute with the given key and value. 
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|key|String|Attribute key
+|value|String|Attribute value
+|===
+
+`setGeoLocation(newLocation)`::
+Sets node geographical <<class-geolocation,location>>.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|newLocation|<<class-geolocation>>|
+|===
+
+`setMapImage(image) => void`::
+Sets object image, that will be used to display object on network map
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|image|String|GUID of image from image library
+|===
+
+`setStatusCalculation(type, ...) => void`::
+Sets status calculation method.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|type|Integer|Status calculation type. One of <<enum-status-calculation-type>>
+|...|Integer(s)|If single threshold or multiple thresholds type is selected, then threshold or thresholds in percentage should be provided as next parameters. 
+|===
+
+`setStatusPropagation(type, ...) => void`::
+Sets status propagation method.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|type|Integer|Status propagation type. One of <<enum-status-propagation-type>>
+|...|Integer(s)| For fixed value type - value (<<enum-object-status>>) should be provided. For relative - offset should be provided. For severity - severity mapping should be provided (4 numbers <<enum-object-status>>).
+|===
+
+`unbind(object) => void`::
+Unbind provided object from the current object.
+This function can be disabled in server configuration file by "NXSL.EnableContainerFunctions" server configuration parameter.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|object|<<class-netobj>>|Object to unbind from the current object.
+|===
+
+`unbindFrom(object) => void`::
+Unbind current object from the provided object.
+This function can be disabled in server configuration file by "NXSL.EnableContainerFunctions" server configuration parameter.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|object|<<class-netobj>>|Object to unbind from the current object.
+|===
+
+`unmanage() => void`::
+Set object into unmanaged state. Has no effect if object is already in unmanaged state.
 
 ==== Constants
 
@@ -93,89 +302,44 @@ Base class for all NetXMS objects.
 
 |===
 
-==== Instance attributes
-
-Object custom attributes can be accessed in the same way as instance attribute, if names do not overlap. <<func-getcustomattribute>> should be used otherwise.
-
-`alarms`::
-Array of <<class-alarm, Alarm objects>> of object`s active alarms.
-
-`backupZoneProxy`::
-currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
-
-`backupZoneProxyId`::
-ID of currently selected backup zone proxy (`0` if zoning is disabled or backup proxy is not assigned)
-
-`city`::
-Postal address - city.
-
-`comments`::
-Object comments.
-
-`country`::
-Postal address – country.
-
-`customAttributes`::
-Hash map of object custom attributes.
-
-`geolocation`::
-Object <<class-geolocation,geographical location>>.
-
-`guid`::
-Object GUID as `string`.
-
-`id`::
-Object identifier (`uint32`).
-
-`ipAddr`::
-Primary IP address (`string`).
-
-`mapImage => ?`::
-// TODO: 
-
-`name`::
-Object name.
-
-`postcode`::
-Postal address – postal code.
-
-`primaryZoneProxy`::
-currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabled or primary proxy is not assigned)
-
-`primaryZoneProxyId`::
-ID of currently selected primary zone proxy (`0` if zoning is disabled or primary proxy is not assigned)
-
-`status`::
-<<enum-object-status,Object status>>.
-
-`streetAddress`::
-Postal address – street.
-
-`type`::
-<<enum-object-type,Object type>>.
-
-==== Instance methods
-
-`clearGeoLocation() => void`::
-Clears GeoLocation data from the node
-
-`setComments => ?`::
-// TODO: 
-
-`setGeoLocation(newLocation)`::
-Sets node geographical <<class-geolocation,location>>.
-
-.Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[[enum-status-calculation-type]]
+.Status callculation types
 |===
-|newLocation|<<class-geolocation>>|
+| Code | Description
+
+| 0
+| Default
+
+| 1
+| Most critical
+
+| 2
+| Single threshold
+
+| 3
+| Multiple thresholds
+
 |===
 
-`setMapImage() => ?`::
-// TODO: 
+[[enum-status-propagation-type]]
+.Status propagation types
+|===
+| Code | Description
 
-`setStatusCalculation() => ?`::
-// TODO: 
+| 0
+| Default
 
-`setStatusPropagation() => ?`::
-// TODO: 
+| 1
+| Unchanged
+
+| 2
+| Fixed
+
+| 3
+| Relative
+
+| 4
+| Translated
+
+|===
+

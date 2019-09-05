@@ -1,6 +1,14 @@
 [[func-getobjectchildren]]
 == GetObjectChildren()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use children attribute in <<class-netobj>>. 
+====
+****
+
 [source,c]
 ----
 GetObjectChildren(object) => Array
@@ -21,4 +29,10 @@ Array of <<class-netobj>> instances.
 .Example
 [.output]
 ....
+// Log names and ids of all accessible child objects for current node
+children = GetObjectChildren($node);
+for(p : children)
+{
+	trace(1, "Child object: name='" . p->name . "' id=" . p->id);
+}
 ....

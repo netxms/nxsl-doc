@@ -1,24 +1,32 @@
 [[func-unmanageobject]]
 == UnmanageObject()
 
-// TODO: add description
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use unmanage functions in <<class-netobj>>. 
+====
+****
 
 [source,c]
 ----
-UnmanageObject() => void
+UnmanageObject(object) => void
 ----
 
-…
+Set object into unmanaged state. Has no effect if object is already in unmanaged state.
 
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
-||
+|object|NetXMS object to be modified. Can be NXSL class NetObj, Node, or Interface. Reference to object can be obtained using FindObject function.
 |===
 
 .Return
+None.
 
 .Example
 [.output]
 ....
+UnmanageObject(FindObject(2));    // Set "Infrastructure Services" object to unmanaged state
 ....

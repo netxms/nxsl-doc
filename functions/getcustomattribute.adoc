@@ -1,6 +1,14 @@
 [[func-getcustomattribute]]
 == GetCustomAttribute()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use getCustomAttribute functions in <<class-netobj>>. 
+====
+****
+
 [source,c]
 ----
 GetCustomAttribute(object, name) => String

@@ -1,6 +1,14 @@
 [[func-getobjectparents]]
 == GetObjectParents()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use parents attribute in <<class-netobj>>. 
+====
+****
+
 [source,c]
 ----
 GetObjectParents(object) => Array
@@ -21,4 +29,10 @@ Array of <<class-netobj>> instances.
 .Example
 [.output]
 ....
+// Log names and ids of all accessible parents for current node
+parents = GetObjectParents($node);
+for(p : parents)
+{
+	trace(1, "Parent object: name='" . p->name . "' id=" . p->id);
+}
 ....

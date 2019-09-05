@@ -1,26 +1,34 @@
 [[func-unbindobject]]
 == UnbindObject()
 
-// TODO: add description
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use unbind and unbindFrom functions in <<class-netobj>>. 
+====
+****
 
 [source,c]
 ----
-UnbindObject() => void
+UnbindObject(parent, child) => void
 ----
 
-AF_ENABLE_NXSL_CONTAINER_FUNCS
-
-…
+Remove (unbind) object from a container.
+This function can be disabled in server configuration file by "NXSL.EnableContainerFunctions" server configuration parameter.
 
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
-||
+|parent|Parent object (<<class-netobj>> referring to container object or infrastructure service root).
+|child|The NetXMS object to be unlinked from given parent object (<<class-node>> or <<class-netobj>> referring to node, subnet, container, or cluster).
 |===
 
 .Return
+None.
 
 .Example
 [.output]
 ....
+UnbindObject(FindObject("Services"), FindObject("Service_1"));    // Unlink object named "Service_1" from container "Services"
 ....
