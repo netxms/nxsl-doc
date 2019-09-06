@@ -1,6 +1,14 @@
 [[func-snmpwalk]]
 == SNMPWalk()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use set function in <<class-snmp_transport>>. 
+====
+****
+
 [source,c]
 ----
 SNMPWalk(transport, oid) => Array

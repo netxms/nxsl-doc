@@ -1,6 +1,14 @@
 [[func-agentreadtable]]
 == AgentReadTable()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use readDriverParameter function in <<class-node>>. 
+====
+****
+
 [source,c]
 ----
 AgentReadTable(node, name) => Table

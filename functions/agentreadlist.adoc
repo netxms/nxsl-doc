@@ -1,6 +1,14 @@
 [[func-agentreadlist]]
 == AgentReadList()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use readAgentList function in <<class-node>>. 
+====
+****
+
 [source,c]
 ----
 AgentReadList(node, name) => Array

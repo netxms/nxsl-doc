@@ -1,6 +1,14 @@
 [[func-snmpget]]
 == SNMPGet()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use get function in <<class-snmp_transport>>. 
+====
+****
+
 [source,c]
 ----
 SNMPGet(transport, oid) => SNMP_VarBind

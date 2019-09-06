@@ -1,6 +1,14 @@
 [[func-agentreadparameter]]
 == AgentReadParameter()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use readAgentParameter function in <<class-node>>. 
+====
+****
+
 [source,c]
 ----
 AgentReadParameter(node, name) => String

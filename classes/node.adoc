@@ -23,8 +23,8 @@ Base address of the switch formatted as 12 character `string` without separators
 `capabilities => Integer`::
 Bit mask of <<node-capabilities>>.
 
-`components => ?`::
-// TODO: 
+`components => String`::
+// TODO:
 
 `dependentNodes => ?`::
 // TODO: 
@@ -73,6 +73,9 @@ ICMP minimal response time for primary address. Will return null if no informati
 
 `icmpPacketLoss => Integer`::
 ICMP packet loss for primary address. Will return null if no information.
+
+`interfaces => Array`::
+Array with <<class-interface>> objects, that are under this node. First object placed at index 0.
 
 `is802_1x => Boolean`::
 `TRUE` if node supports 802.1x. Equivalent of `isPAE`.
@@ -189,34 +192,146 @@ Number of objects where this node is selected as either primary or backup zone p
 `zoneProxyStatus => Boolean`::
 Status of this node as zone proxy (`true` if active).
 
-`zoneUIN => ?`::
-// TODO: 
+`zoneUIN => Integer`::
+This node zone UIN
 
 ==== Instance methods
 
-`void enableAgent(boolean flag)`::
+`void createSNMPTransport(port, context) => <<class-snmp_transport>>`::
+Create SNMP transport object of class <<class-snmp_transport>> with communication settings defined on the node. 
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|port|Integer|Optional parameter with port.
+|context|String|Optional parameter with context.
+|===
+
+`void enableAgent(flag)`::
 Enable or disable usage of NetXMS agent for all polls.
 
-`void enableConfigurationPolling(boolean)`::
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If agent usage should be enabled. 
+|===
+
+`void enableConfigurationPolling(flag) => void`::
 Enable or disable configuration polling for a node
 
-`enableDiscoveryPolling() => ?`::
-// TODO: 
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If configuration polling should be enabled. 
+|===
 
-`enableIcmp(boolean)`::
-Enable or disable usage of ICMP pings for status polls
+`enableDiscoveryPolling(flag) => void`::
+Enable or disable discovery polling.
 
-`enableRoutingTablePolling() => ?`::
-// TODO: 
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If discovery polling should be enabled. 
+|=== 
 
-`enableSnmp(boolean)`::
-Enable or disable usage of SNMP for all polls
+`enableIcmp(flag) => void`::
+Enable or disable usage of ICMP pings for status polls.
 
-`enableStatusPolling`::
-Enable or disable status polling for a node
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If ICMP pings should be enabled. 
+|=== 
 
-`enableTopologyPolling(boolean)`::
-Enable or disable topology polling
+`enableRoutingTablePolling(flag) => void`::
+Enable or disable routing table polling.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If routing table polls should be enabled. 
+|=== 
+
+`enableSnmp(flag) => void`::
+Enable or disable usage of SNMP for all polls.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If SNMP communication should be enabled. 
+|=== 
+
+`enableStatusPolling(flag) => void`::
+Enable or disable status polling for a node.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If status polls should be enabled. 
+|=== 
+
+`enableTopologyPolling(flag) => void`::
+Enable or disable topology polling.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If topology polls should be enabled. 
+|=== 
+
+`getInterface(ifIndex) => <<class-interface>>`::
+Get interface object by index.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|ifIndex|Integer|Index of interface. 
+|=== 
+
+`getInterfaceName(ifIndex) => String`::
+Get interface name by index.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|ifIndex|Integer|Index of interface. 
+|=== 
+
+`readAgentParameter(name) => String`::
+Reads current value of agent metric. 
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|name|String|Parameter name. 
+|=== 
+
+`readAgentList(name) => Array`::
+Reads current value of agent list metric and returns array of strings.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|name|String|List name. 
+|=== 
+
+`readAgentTable(name) => <<class-table>>`::
+Reads current value of agent table metric and returns <<class-table>>.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|name|String|Table name. 
+|=== 
+
+`readDriverParameter(name) => String`::
+Reads current value of driver metric.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|name|String|List name. 
+|=== 
 
 ==== Constants
 

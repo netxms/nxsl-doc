@@ -153,7 +153,7 @@ Update or create custom attribute with the given key and value.
 |value|String|Attribute value
 |===
 
-`setGeoLocation(newLocation)`::
+`setGeoLocation(newLocation) => void`::
 Sets node geographical <<class-geolocation,location>>.
 
 .Parameters

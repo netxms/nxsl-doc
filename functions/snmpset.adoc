@@ -1,6 +1,14 @@
 [[func-snmpset]]
 == SNMPSet()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated. Starting form version 3.0.* 
+Please use set function in <<class-snmp_transport>>. 
+====
+****
+
 [source,c]
 ----
 SNMPSet(transport, oid, value, dataType) => Boolean
@@ -17,21 +25,11 @@ Perform SNMP SET request for `oid` over provided <<class-snmp_transport,transpor
 |value|New value.
 
 |dataType
-|Type of the `value`, default to "STRING":
-
-* "INTEGER" or "INT" – Integer.
-* "STRING" – Octet string.
-* "OID" – Object id.
-* "IPADDR" or "IP ADDRESS" – IP address.
-* "COUNTER32" – 32-bit counter.
-* "GAUGE32" – 32-bit unsigned integer.
-* "TIMETICKS" – Timeticks.
-* "COUNTER64" – 64-bit counter.
-* "UINTEGER32" or "UINT32" – 32-bit unsigned integer.
-
+|Type of the `value`, default to "STRING". <<<<snmp-data-types>>
 |===
 
 .Return
+Boolean. TRUE on success and FALSE in case of failure.
 
 .Example
 [.output]
