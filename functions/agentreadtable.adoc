@@ -30,12 +30,12 @@ Instance of <<class-table>> or `null` if failed.
 [.output]
 ....
 >>> t = AgentReadTable($node, "Agent.SubAgents");
->>> foreach (c : t->columns) {
+>>> for (c : t->columns) {
 >>>   print(c->name . " | ");
 >>> }
 >>> println("");
->>> foreach (row : t->rows) {
->>>   foreach(cell : row->values) {
+>>> for (row : t->rows) {
+>>>   for(cell : row->values) {
 >>>      print(cell . " | ");
 >>>   }
 >>>   println("");

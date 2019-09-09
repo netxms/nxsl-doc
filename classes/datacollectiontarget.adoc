@@ -1,10 +1,21 @@
 [[class-datacollectiontarget]]
 === DataCollectionTarget
 
-// TODO: abstract class, extends <<class-NetObj>>
+Abstract class that represents any object that can collect data. Extends <<class-netobj>>.
+
+==== Instance attributes
+
+`templates => Array`::
+Returns array of templates (<<class-netobj>>) applied on this object.
 
 ==== Instance methods
 
 `readInternalParameter(name) => String`::
-// TODO: 
+Reads server internal object metric (metric with source "Internal"). 
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|name|String|Metric name.
+|===
 
