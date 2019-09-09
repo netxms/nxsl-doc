@@ -183,7 +183,10 @@ Configured SNMP version:
 `sysDescription`::
 System description (value of `System.Uname` for nodes with agents or `.1.3.6.1.2.1.1.1.0` for SNMP nodes)
 
-`zone`::
+`vlans => Array`::
+Array with object <<class-vlan>> objects (`null` if there are no VLANs)
+
+`zone => <<class-zone>>`::
 <<class-zone>> object (`null` if zoning is disabled)
 
 `zoneProxyAssignments => Integer`::

@@ -1,0 +1,15 @@
+[[class-vlan]]
+=== VLAN
+
+Represents VLAN object.
+
+==== Instance attributes
+
+`id => Integer`::
+VLAN id.
+
+`name => String`::
+VLAN name.
+
+`interfaces => Array`::
+Interfaces in that VLAN (array of objects of class <<class-interface>>).

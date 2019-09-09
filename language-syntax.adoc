@@ -654,4 +654,8 @@ Without short-circuit evaluation, `trim(x)` would cause run-time error if
 [[chapter-regular-expressions]]
 ===  Regular expressions
 
+Before: 3.0 
+libtre is used for regular expression matching. Syntax can be checked on link:++ https://laurikari.net/tre/documentation/regex-syntax/++[here].
+
+Since: 3.0
 PCRE is used for regular expression matching. Syntax can be checked on link:++https://www.pcre.org/++[PCRE official portal].
