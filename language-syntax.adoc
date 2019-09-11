@@ -78,6 +78,8 @@ None
 
 False
 
+NULL
+
 zero of any numeric type, for example, 0, 0.0, 0j.
 
 any empty sequence, for example, '', (), [].
