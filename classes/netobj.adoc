@@ -43,6 +43,9 @@ Object identifier (`uint32`).
 `ipAddr`::
 Primary IP address (`string`).
 
+`isInMaintenanceMode`::
+Maintenance mode indicator (true if object currently is in maintennace mode) (`boolean`).
+
 `mapImage => String`::
 GUID of object image.
 

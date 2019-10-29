@@ -5,11 +5,11 @@ Represents NetXMS node object. Extends <<class-datacollectiontarget>>.
 
 ==== Instance attributes
 
-`agentCertificateSubject => ?`::
-// TODO: 
+`agentCertificateSubject => String`::
+Subject of certificate issued for agent tunnel on this node.
 
-`agentId => ?`::
-// TODO: 
+`agentId => String`::
+NetXMS agent unique ID (`string` representation of GUID). Will return all zeroes GUID if agent is not detected on node or does not have unique ID.
 
 `agentVersion`::
 NetXMS agent version as `string`.
@@ -53,11 +53,11 @@ Bit mask of <<node-flags>>.
 `hasWinPDH => Boolean`::
 `TRUE` if node supports Windows PDH parameters.
 
-`hypervisorInfo => ?`::
-// TODO: 
+`hypervisorInfo => String`::
+Additional information about hypervisor for this node.
 
-`hypervisorType => ?`::
-// TODO: 
+`hypervisorType => String`::
+Hypervisor type as `string` (usually hypervisor vendor or product name, like VMWare or XEN).
 
 `icmpAverageRTT => Integer`::
 ICMP average response time for primary address. Will return null if no information.
