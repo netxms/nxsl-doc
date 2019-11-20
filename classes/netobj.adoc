@@ -146,7 +146,7 @@ Set object comments
 |comment|String|Comment to be set
 |===
 
-`setCustomAttribute(key, value) => void`::
+`setCustomAttribute(key, value, inherit) => void`::
 Update or create custom attribute with the given key and value. 
 
 .Parameters
@@ -154,6 +154,7 @@ Update or create custom attribute with the given key and value.
 |===
 |key|String|Attribute key
 |value|String|Attribute value
+|inherit|Boolean|Optional parameter. If not set - inheritance will not be changed. TRUE to inherit, FALSE not to inherit. 
 |===
 
 `setGeoLocation(newLocation) => void`::

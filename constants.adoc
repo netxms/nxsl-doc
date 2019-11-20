@@ -39,3 +39,11 @@ Data type of <<class-dci>> instance – float.
 Integer value: `6`
 
 Data type of <<class-dci>> instance – null.
+
+=== NXSL::VERSION
+
+Current server version
+
+=== NXSL::BUILD_TAG
+
+Current server build tag

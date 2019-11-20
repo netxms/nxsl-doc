@@ -78,3 +78,8 @@ System tag. Always empty for user-defined DCIs.
 DCI type:
   * 1 = single value
   * 2 = table
+
+==== Instance methods
+
+`forcePoll() => void`::
+Start DCI force poll. 

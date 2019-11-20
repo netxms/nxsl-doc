@@ -89,9 +89,6 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `isCDP => Boolean`::
 `TRUE` if node supports CDP (Cisco Discovery Protocol)
 
-`isInMaintenanceMode => Boolean`::
-`TRUE` if node is in maintenace mode
-
 `isLLDP => Boolean`::
 `TRUE` if node supports LLDP (Link Layer Discovery Protocol)
 
@@ -244,6 +241,15 @@ Enable or disable usage of ICMP pings for status polls.
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If ICMP pings should be enabled. 
+|=== 
+
+`enablePrimaryIPPing(flag) => void`::
+Enable or disable usage of ICMP ping for primary IP.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If primary IP ping should be enabled. 
 |=== 
 
 `enableRoutingTablePolling(flag) => void`::

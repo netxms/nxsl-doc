@@ -11,6 +11,12 @@ Event code
 `customMessage => String`::
 Custom message set in event processing policy by calling `setMessage`. Get/set attribute.
 
+`dci => DCI`::
+DCI object of class <<class-dci>> that is source for this event or NULL if generated not by threshold
+
+`dci => Number`::
+DCI id that is source for this event or 0 if generated not by threshold
+
 `id => Number`::
 Unique event identifier.
 
@@ -131,6 +137,30 @@ Set event tag, which can be later accessed via `tags` attribute.
 |===
 |tag|String tag
 |===
+
+`corelateTo(eventId) => void`::
+
+Sets root cause id for the event
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|eventId|Root cause event id
+|===
+
+`expandString(String) => String`::
+
+Expand string, by replacing macros. 
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|String|String to expand
+|===
+
+.Return
+
+Formated string
 
 `removeTag(tag) => void`::
 

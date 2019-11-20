@@ -196,6 +196,8 @@ sub add(numberA, numberB)
 If parameter was not provided at function call, value of appropriate variable
 will be `NULL`.
 
+Arguments also available as $ARGS array, that contains all arguments. First argument available as $ARGS[1];
+
 ==== Return Values from a Function
 
 You can return a value from a function using the `return` keyword:
@@ -351,21 +353,21 @@ Comparison operators allow you to compare two values.
 |`a > b` | Greater than| `TRUE` if `a` is strictly greater than `b`.
 |`a \<= b` | Less than or equal to| `TRUE` if `a` is less than or equal to `b`.
 |`a >= b` | Greater than or equal to| `TRUE` if `a` is greater than or equal to `b`.
-|`a ~= b` | Match| array with full match of b in the position 0 and other matches 
+|`a ~= b` | Match| Array with full match of b in the position 0 and other matches 
 starting from 1st position if `a` is matched to regular expression `b` or NULL if 
 not matched. As a side effect, assigns values to special variables `$1`, `$2`, `$3`, etc.
 See see <<chapter-regular-expressions>> for details.
 
 System message: Unknown interpreted text role "ref".
 
-|`a match b`| Match| array with full match of b in the position 0 and other matches 
+|`a match b`| Match| Array with full match of b in the position 0 and other matches 
 starting from 1st position if `a` is matched to regular expression `b` or NULL if 
 not matched. As a side effect, assigns values to special variables `$1`, `$2`, `$3`, etc.
 See see <<chapter-regular-expressions>> for details.
 
 System message: Unknown interpreted text role "ref".
 
-|`a imatch b`| Match (case insensitive)|array with full match of b in the position 0 and other matches 
+|`a imatch b`| Match (case insensitive)|Array with full match of b in the position 0 and other matches 
 starting from 1st position if `a` is matched to regular expression `b` (case insensitive) or NULL if 
 not matched. As a side effect, assigns values to special variables `$1`, `$2`, `$3`, etc.
 See see <<chapter-regular-expressions>> for details.
