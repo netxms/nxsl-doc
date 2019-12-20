@@ -4,8 +4,8 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated. Starting form version 3.0.* 
-Please use readDriverParameter function in <<class-node>>. 
+*This function is deprecated starting from version 3.0.*
+Please use readDriverParameter function in <<class-node>>.
 ====
 ****
 
@@ -40,8 +40,8 @@ Instance of <<class-table>> or `null` if failed.
 >>>   }
 >>>   println("");
 >>> }
-NAME | VERSION | FILE | 
-Darwin | 2.2.13 | darwin.nsm | 
-FILEMGR | 2.2.13-3-g4c02b65c50 | filemgr.nsm | 
-PING | 2.2.13-3-g4c02b65c50 | ping.nsm | 
+NAME | VERSION | FILE |
+Darwin | 2.2.13 | darwin.nsm |
+FILEMGR | 2.2.13-3-g4c02b65c50 | filemgr.nsm |
+PING | 2.2.13-3-g4c02b65c50 | ping.nsm |
 ....

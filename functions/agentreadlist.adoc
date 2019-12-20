@@ -4,7 +4,7 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated. Starting form version 3.0.* 
+*This function is deprecated starting from version 3.0.* 
 Please use readAgentList function in <<class-node>>. 
 ====
 ****
