@@ -19,6 +19,6 @@ chr() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

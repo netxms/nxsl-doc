@@ -26,7 +26,7 @@ Make an object enter Maintenance mode.
 None.
 
 .Example
-[.output]
+[.source]
 ....
 EnterMaintenance($node);    // Enter current node in maintenance mode
 EnterMaintenance(FindObject("Services"));    // Enter container "Services" in maintenance mode

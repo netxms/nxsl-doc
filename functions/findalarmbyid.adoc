@@ -19,6 +19,6 @@ FindAlarmById() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

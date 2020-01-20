@@ -19,6 +19,6 @@ round() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

@@ -19,6 +19,6 @@ Base64Encode() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

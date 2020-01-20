@@ -25,6 +25,6 @@ Request table metric from driver on given node.
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

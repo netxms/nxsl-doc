@@ -19,7 +19,7 @@ Round down value.
 Value round down to nearest integer.
 
 .Example
-[.output]
+[.source]
 ....
 >>> floor(2.3)
 2

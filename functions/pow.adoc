@@ -19,6 +19,6 @@ pow() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

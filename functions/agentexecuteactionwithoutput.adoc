@@ -21,7 +21,7 @@ Optional arguments starting from 3^rd^ are passed as action arguments to the age
 Output of the action or `null` if execution failed.
 
 .Example
-[.output]
+[.source]
 ....
 >>> AgentExecuteActionWithOutput($node, "Custom.Ping", "10.10.8.16");
 PING 10.10.8.16 (10.10.8.16): 56 data bytes

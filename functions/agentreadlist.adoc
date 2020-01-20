@@ -27,7 +27,7 @@ Request list metric directly from agent on given node.
 Array of strings or `null` if failed.
 
 .Example
-[.output]
+[.source]
 ....
 >>> supportedLists = AgentReadList($node, "Agent.SupportedLists");
 >>> foreach (l : supportedLists) { println(l); }

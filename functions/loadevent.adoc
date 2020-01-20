@@ -19,7 +19,7 @@ Will load event form the database and return <<class-event>> object or NULL if e
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 >>>event = LoadEvent(315);
 >>>event->id;

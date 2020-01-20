@@ -21,6 +21,6 @@ AF_ENABLE_NXSL_CONTAINER_FUNCS
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

@@ -18,7 +18,7 @@ Writes `message` to NetXMS main log if current debug level is equal or higher th
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 >>> trace(0, "Test");
 ....

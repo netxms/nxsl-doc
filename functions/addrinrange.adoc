@@ -19,6 +19,6 @@ AddrInRange() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

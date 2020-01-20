@@ -26,7 +26,7 @@ Make an object leave Maintenance mode.
 None.
 
 .Example
-[.output]
+[.source]
 ....
 LeaveMaintenance($node);    // Make current node leave maintenance mode
 LeaveMaintenance(FindObject("Services"));    // Make container "Services" leave maintenance mode

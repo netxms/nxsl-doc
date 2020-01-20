@@ -21,7 +21,7 @@ Split input `string` by `separator` into elements and compare each element with 
 `True` if token is found in input string.
 
 .Example
-[.output]
+[.source]
 ....
 >>> inList("1,2,3", ",", "1")
 true

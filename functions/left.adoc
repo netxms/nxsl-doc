@@ -19,6 +19,6 @@ left() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

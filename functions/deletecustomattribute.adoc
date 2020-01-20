@@ -26,7 +26,7 @@ Delete custom attribute `name` from `object`.
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 >>> DeleteCustomAttribute($node, "test")
 >>> test@$node

@@ -19,6 +19,6 @@ CurrencyExponent() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

@@ -20,6 +20,6 @@ GetMaxDCIValue() => Boolean
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

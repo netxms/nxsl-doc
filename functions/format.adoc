@@ -19,6 +19,6 @@ format() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

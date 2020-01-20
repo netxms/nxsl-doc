@@ -19,6 +19,6 @@ ord() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

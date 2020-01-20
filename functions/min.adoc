@@ -19,6 +19,6 @@ min() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

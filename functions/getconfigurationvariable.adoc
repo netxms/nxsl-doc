@@ -19,7 +19,7 @@ Read server configuration parameter by `key`.
 Value of the server configuration parameter. If key is not found, `null` is returned or `defaultValue` is specified.
 
 .Example
-[.output]
+[.source]
 ....
 >>> GetConfigurationVariable("NumberOfStatusPollers")
 10

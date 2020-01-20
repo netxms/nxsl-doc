@@ -19,6 +19,6 @@ GetAllNodes() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

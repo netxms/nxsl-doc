@@ -19,7 +19,7 @@ Return class name of the `instance`.
 Class name.
 
 .Example
-[.output]
+[.source]
 ....
 >>> classof($node)
 Node

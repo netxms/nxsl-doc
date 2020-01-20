@@ -19,6 +19,6 @@ time() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

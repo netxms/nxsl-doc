@@ -19,6 +19,6 @@ SecondsToUptime() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

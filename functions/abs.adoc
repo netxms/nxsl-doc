@@ -19,7 +19,7 @@ Returns the absolute value of the number.
 Absolue value of the input.
 
 .Example
-[.output]
+[.source]
 ....
 >>> abs(12.3)
 12.3

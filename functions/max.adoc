@@ -19,6 +19,6 @@ max() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

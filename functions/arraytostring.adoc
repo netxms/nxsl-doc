@@ -19,6 +19,6 @@ ArrayToString() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

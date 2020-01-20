@@ -20,6 +20,6 @@ GetDCIRawValue() => Boolean
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

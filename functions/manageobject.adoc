@@ -25,7 +25,7 @@ Set object into managed state. Has no effect if object is already in managed sta
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ManageObject(FindObject(125));    // Set object with id 125 to managed state
 ....

@@ -19,6 +19,6 @@ gethostbyaddr() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

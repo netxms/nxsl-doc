@@ -27,7 +27,7 @@ Request table metric directly from agent on given node.
 Instance of <<class-table>> or `null` if failed.
 
 .Example
-[.output]
+[.source]
 ....
 >>> t = AgentReadTable($node, "Agent.SubAgents");
 >>> for (c : t->columns) {

@@ -19,6 +19,6 @@ substr() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

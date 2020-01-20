@@ -19,6 +19,6 @@ rtrim() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

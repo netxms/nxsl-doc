@@ -19,6 +19,6 @@ right() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

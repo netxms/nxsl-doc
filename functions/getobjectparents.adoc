@@ -27,7 +27,7 @@ Return array of object parents.
 Array of <<class-netobj>> instances.
 
 .Example
-[.output]
+[.source]
 ....
 // Log names and ids of all accessible parents for current node
 parents = GetObjectParents($node);

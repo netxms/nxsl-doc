@@ -19,6 +19,6 @@ localtime() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

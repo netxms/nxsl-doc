@@ -19,6 +19,6 @@ sha1() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

@@ -20,7 +20,7 @@ Convert decimal `devValue` to hex string with optional left-padding with zeroes.
 Hex string.
 
 .Example
-[.output]
+[.source]
 ....
 >>> d2x(1234)
 4D2

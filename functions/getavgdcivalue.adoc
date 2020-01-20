@@ -21,7 +21,7 @@ Get the average value of the DCI for the given period. The DCI value type must b
 Average value or `null` on failure.
 
 .Example
-[.output]
+[.source]
 ....
 >>> obj = FindObject("Server1");
 >>> dciID = FindDCIByName(obj, "CPU.Usage")

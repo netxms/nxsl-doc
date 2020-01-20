@@ -19,6 +19,6 @@ CountScheduledTasksByKey() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

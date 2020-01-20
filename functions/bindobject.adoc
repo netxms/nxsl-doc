@@ -28,7 +28,7 @@ This function can be disabled in server configuration file by "NXSL.EnableContai
 None.
 
 .Example
-[.output]
+[.source]
 ....
 BindObject(FindObject(2), $node);    // Link current node directly to "Infrastructure Services"
 BindObject(FindObject("Services"), FindObject("Service_1"));    // Link object named "Service_1" to container "Services"

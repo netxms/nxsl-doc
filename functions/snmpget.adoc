@@ -28,7 +28,7 @@ Perform SNMP GET request for `oid` over provided <<class-snmp_transport,transpor
 Instance of <<class-snmp_varbind>> or `null` on failure.
 
 .Example
-[.output]
+[.source]
 ....
 >>> transport = CreateSNMPTransport(FindObject("Server1"));
 >>> if (transport != null) {

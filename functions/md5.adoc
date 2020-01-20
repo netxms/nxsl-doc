@@ -19,6 +19,6 @@ md5() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

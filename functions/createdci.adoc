@@ -46,7 +46,7 @@ Create new data collection item on <<class-node,node>>, return <<class-dci>> obj
 Instance of newly created <<class-dci>> of `null` if failed.
 
 .Example
-[.output]
+[.source]
 ....
 >>> d = CreateDCI($node, "agent", "Agent.Version", "Agent Version", "string", 0, 0);
 >>> println(d->id);

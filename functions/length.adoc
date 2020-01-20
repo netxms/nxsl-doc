@@ -19,6 +19,6 @@ length() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

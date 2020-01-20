@@ -21,6 +21,6 @@ Lookup value from mapping table.
 When key or table is not found, return `null` or default value if provided.
 
 .Example
-[.output]
+[.source]
 ....
 ....

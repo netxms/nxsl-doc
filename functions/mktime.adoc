@@ -19,6 +19,6 @@ mktime() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

@@ -26,7 +26,7 @@ Get template objects applied on given node.
 Array of objects, with first object placed at index 0. Return value also affected by trusted nodes settings.
 
 .Example
-[.output]
+[.source]
 ....
 // Log names and ids of all accessible templates for current node
 templates = GetNodeTemplates($node);

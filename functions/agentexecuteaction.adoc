@@ -21,7 +21,7 @@ Optional arguments starting from 3^rd^ are passed as action arguments to the age
 Boolean indicator of success
 
 .Example
-[.output]
+[.source]
 ....
 >>> AgentExecuteAction($node, "System.Restart");
 true

@@ -29,7 +29,7 @@ Create SNMP transport with communication settings defined on the node.
 Instance of <<class-snmp_transport>> or `null` if failed.
 
 .Example
-[.output]
+[.source]
 ....
 >>> transport = CreateSNMPTransport(FindObject("Server1"))
 >>> print transport->snmpVersion

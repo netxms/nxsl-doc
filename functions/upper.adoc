@@ -19,6 +19,6 @@ upper() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

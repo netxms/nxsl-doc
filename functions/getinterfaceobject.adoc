@@ -19,6 +19,6 @@ GetInterfaceObject() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

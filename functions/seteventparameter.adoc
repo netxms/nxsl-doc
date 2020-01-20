@@ -19,6 +19,6 @@ SetEventParameter() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

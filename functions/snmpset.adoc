@@ -32,7 +32,7 @@ Perform SNMP SET request for `oid` over provided <<class-snmp_transport,transpor
 Boolean. TRUE on success and FALSE in case of failure.
 
 .Example
-[.output]
+[.source]
 ....
 >>> if (!SNMPSet(transport, oid, "192.168.0.1", "IPADDR") {
 >>>     trace(1, "SNMPSet failed");

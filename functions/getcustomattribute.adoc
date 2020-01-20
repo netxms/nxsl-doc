@@ -30,7 +30,7 @@ Alternatively, attributes can be accessed as instance attribues (with `->`, attr
 String value of the custom attribute of `null` if not found.
 
 .Example
-[.output]
+[.source]
 ....
 >>> GetCustomAttribute($node, "test")
 testvalue

@@ -30,7 +30,7 @@ This function is a wrapper for <<func-snmpget>>.
 String value of the result or `null` on failure.
 
 .Example
-[.output]
+[.source]
 ....
 >>> transport = CreateSNMPTransport(FindObject("Server1"));
 >>> if (transport != null) {

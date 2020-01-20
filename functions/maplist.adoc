@@ -20,7 +20,7 @@ Result string is joined using the same separator.
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 >>> mapList("table1", "10,20,30", ",")
 value1,value2,value3

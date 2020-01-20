@@ -27,7 +27,7 @@ Set expected state for given interface.
 None.
 
 .Example
-[.output]
+[.source]
 ....
 // Set expected state to "ignore" for all interfaces of given node
 interfaces = GetNodeInterfaces($node);

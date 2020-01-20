@@ -19,6 +19,6 @@ lower() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

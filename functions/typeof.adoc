@@ -19,7 +19,7 @@ Return type of the `instance`.
 Name of the type.
 
 .Example
-[.output]
+[.source]
 ....
 >>> typeof(1)
 int32

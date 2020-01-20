@@ -19,6 +19,6 @@ GetSyslogRuleCheckCount() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

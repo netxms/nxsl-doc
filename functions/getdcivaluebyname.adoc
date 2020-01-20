@@ -20,6 +20,6 @@ GetDCIValueByName() => Boolean
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

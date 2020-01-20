@@ -19,6 +19,6 @@ rindex() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

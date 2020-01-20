@@ -19,6 +19,6 @@ FindAlarmByKeyRegex() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

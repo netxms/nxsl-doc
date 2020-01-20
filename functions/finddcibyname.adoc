@@ -20,7 +20,7 @@ Find ID of the DCI on node by name (exact match). <<func-findalldcis>> can be us
 Integer ID of the DCI or `null` if not found.
 
 .Example
-[.output]
+[.source]
 ....
 >>> d = FindDCIByName($node, "Agent.Version");
 >>> print(d);

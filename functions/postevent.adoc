@@ -19,6 +19,6 @@ PostEvent() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

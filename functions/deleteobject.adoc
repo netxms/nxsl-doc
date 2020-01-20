@@ -27,7 +27,7 @@ This function can be disabled in server configuration file by "NXSL.EnableContai
 None.
 
 .Example
-[.output]
+[.source]
 ....
 DeleteObject(FindObject("Service_1")); //delete object named Service_1
 ....

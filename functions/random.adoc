@@ -19,6 +19,6 @@ random() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

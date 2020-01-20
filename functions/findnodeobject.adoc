@@ -23,7 +23,7 @@ If validation is disabled, `currentNode` is ignored and can be set to `null`.
 Instance of <<Node>> object or `null` if not found or not accessible.
 
 .Example
-[.output]
+[.source]
 ....
 >>> FindNodeObject($node, "server.netxms.org")
 object

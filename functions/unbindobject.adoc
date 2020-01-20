@@ -28,7 +28,7 @@ This function can be disabled in server configuration file by "NXSL.EnableContai
 None.
 
 .Example
-[.output]
+[.source]
 ....
 UnbindObject(FindObject("Services"), FindObject("Service_1"));    // Unlink object named "Service_1" from container "Services"
 ....

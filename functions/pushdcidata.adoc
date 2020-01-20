@@ -20,6 +20,6 @@ PushDCIData() => Boolean
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

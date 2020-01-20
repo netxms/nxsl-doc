@@ -19,6 +19,6 @@ sleep() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

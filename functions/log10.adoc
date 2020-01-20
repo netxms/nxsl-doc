@@ -19,6 +19,6 @@ log10() => void
 .Return
 
 .Example
-[.output]
+[.source]
 ....
 ....

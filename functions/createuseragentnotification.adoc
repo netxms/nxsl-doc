@@ -23,7 +23,7 @@ CreateUserAgentNotification(object, message, startTime, endTime) => Number
 New user agent notification id
 
 .Example
-[.output]
+[.source]
 ....
 >>> AgentExecuteAction($node, "One time notification text", 0, 0);
 14
