@@ -5,7 +5,7 @@
 :table-caption!:
 = NetXMS Scripting Language
 http://netxms.org/
-v3.0, 16 September, 2019
+v3.1, 20 January, 2020
 
 ifdef::html[+++You can download offline version here <a href="nxsl.pdf">here</a>.+++]
 
