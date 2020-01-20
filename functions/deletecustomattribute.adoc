@@ -1,13 +1,7 @@
 [[func-deletecustomattribute]]
 == DeleteCustomAttribute()
 
-****
-[IMPORTANT]
-====
-*This function is deprecated starting from version 3.0.* 
-Please use deleteCustomAttribute functions in <<class-netobj>>. 
-====
-****
+NOTE: Deprecated since 3.0, use <<class-netobj-deletecustomattribute>> instead.
 
 [source,c]
 ----

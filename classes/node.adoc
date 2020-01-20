@@ -6,6 +6,7 @@ Represents NetXMS node object. Extends <<class-datacollectiontarget>>.
 ==== Instance attributes
 
 `agentCertificateSubject => String`::
+
 Subject of certificate issued for agent tunnel on this node.
 
 `agentId => String`::
@@ -20,8 +21,9 @@ Number of seconds since node start or `0` if unknown.
 `bridgeBaseAddress`::
 Base address of the switch formatted as 12 character `string` without separators. Value is only valid for bridges and switches. Special value `000000000000` indicates that address is unknown.
 
+[[class-node-capabilities,Node::capabilities]]
 `capabilities => Integer`::
-Bit mask of <<node-capabilities>>.
+Detected node capabilities ("Have Agent", "Support SNMP", etc.) Bitwise AND of <<node-capabilities>> constants.
 
 `components => String`::
 // TODO:
@@ -315,6 +317,7 @@ Get interface name by index.
 |ifIndex|Integer|Index of interface. 
 |=== 
 
+[[class-node-readagentparameter,Node::readAgentParameter()]]
 `readAgentParameter(name) => String`::
 Reads current value of agent metric. 
 
@@ -324,6 +327,7 @@ Reads current value of agent metric.
 |name|String|Parameter name. 
 |=== 
 
+[[class-node-readagentlist,Node::readAgentList()]]
 `readAgentList(name) => Array`::
 Reads current value of agent list metric and returns array of strings.
 
@@ -333,6 +337,7 @@ Reads current value of agent list metric and returns array of strings.
 |name|String|List name. 
 |=== 
 
+[[class-node-readagenttable,Node::readAgentTable()]]
 `readAgentTable(name) => <<class-table>>`::
 Reads current value of agent table metric and returns <<class-table>>.
 
@@ -342,8 +347,9 @@ Reads current value of agent table metric and returns <<class-table>>.
 |name|String|Table name. 
 |=== 
 
+[[class-node-readdriverparameter,Node::readDriverParameter()]]
 `readDriverParameter(name) => String`::
-Reads current value of driver metric.
+Request driver-specific metric directly from network device driver (e.g. Rital).
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
@@ -448,78 +454,78 @@ Reads current value of driver metric.
 |===
 
 [[node-capabilities]]
-[cols="1,4a"]
-.Node capabilities
+[cols="1,5a"]
+.Node capability flags
 |===
-| Description | Value
+| Value | Description
 
-|NC_IS_SNMP  
-|0x00000001 
+|0x00000001
+|Node supports SNMP
 
-|NC_IS_NATIVE_AGENT  
-|0x00000002 
+|0x00000002
+|NetXMS agent detected on the node
 
-|NC_IS_BRIDGE  
 |0x00000004 
+|Node is network bridge
 
-|NC_IS_ROUTER  
 |0x00000008 
+|Node is IP router
 
-|NC_IS_LOCAL_MGMT  
 |0x00000010 
+|Node is management server (NetXMS server itself)
 
-|NC_IS_PRINTER  
 |0x00000020 
+|Node is printer
 
-|NC_IS_OSPF  
 |0x00000040 
+|Node supports OSPF
 
-|NC_IS_CPSNMP. CheckPoint SNMP agent on port 260. 
 |0x00000080 
+|CheckPoint SNMP agent detected on port 260
 
-|NC_IS_CDP  
 |0x00000100 
+|CDP supported
 
-|NC_IS_NDP. Supports Nortel (Synoptics/Bay Networks) topology discovery. SONMP is an old name for NDP. 
 |0x00000200 
+|NDP(SONMP) support detected on the node (Nortel/Synoptics/Bay Networks) topology discovery)
 
-|NC_IS_LLDP. Supports Link Layer Discovery Protocol. 
 |0x00000400 
+|Node supports LLDP
 
-|NC_IS_VRRP. VRRP support. 
 |0x00000800 
+|Node supportes VRRP
 
-|NC_HAS_VLANS. VLAN information available. 
 |0x00001000 
+|VLAN information available on the node
 
-|NC_IS_8021X. 802.1x support enabled on node. 
 |0x00002000 
+|802.1x support detected
 
-|NC_IS_STP. Spanning Tree (IEEE 802.1d) enabled on node. 
 |0x00004000 
+|Spanning Tree (IEEE 802.1d) enabled on node
 
-|NC_HAS_ENTITY_MIB. Supports ENTITY-MIB. 
 |0x00008000 
+|Node supports ENTITY-MIB
 
-|NC_HAS_IFXTABLE. Supports ifXTable. 
 |0x00010000 
+|Node supports ifXTable
 
-|NC_HAS_AGENT_IFXCOUNTERS. Agent supports 64-bit interface counters. 
 |0x00020000 
+|Agent supports 64-bit interface counters
 
-|NC_HAS_WINPDH. Node supports Windows PDH parameters. 
 |0x00040000 
+|Node supports Windows PDH parameters
 
-|NC_IS_WIFI_CONTROLLER. Node is wireless network controller. 
 |0x00080000 
+|Node is wireless network controller
 
-|NC_IS_SMCLP. Node supports SMCLP protocol. 
 |0x00100000 
+|Node supports SMCLP protocol
 
-|NC_IS_NEW_POLICY_TYPES. Defines if agent is already upgraded to new policy type. 
 |0x00200000 
+|Running agent is upgraded to new policy type
 
-|NC_IS_USER_AGENT_INSTALLED 
 |0x00400000
+|User (support) agent is installed
 
 |===

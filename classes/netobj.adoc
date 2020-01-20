@@ -5,79 +5,84 @@ Base class for all NetXMS objects.
 
 ==== Instance attributes
 
-Object custom attributes can be accessed in the same way as instance attribute, if names do not overlap. <<func-getcustomattribute>> should be used otherwise.
+NOTE: Object custom attributes can be accessed in the same way as instance attribute.
+If name of the custom attribute overlaps with the instance attribute, method <<class-netobj-getcustomattribute>> should be used instead.
 
-`alarms`::
-Array of <<class-alarm, Alarm objects>> of object`s active alarms.
+`alarms => array`::
+List of active <<class-alarm, Alarms>> for this object.
 
-`backupZoneProxy`::
-currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
+`backupZoneProxy => Node`::
+Currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
 
-`backupZoneProxyId`::
+`backupZoneProxyId => Integer`::
 ID of currently selected backup zone proxy (`0` if zoning is disabled or backup proxy is not assigned)
 
-`children`::
-Array of <<class-netobj, NetObjects>> of object`s children.  
+`children => array`::
+List of child objects (inherited from <<class-netobj>>). Use <<func-classof>> to differentiate.
 
-`city`::
+`city => String`::
 Postal address - city.
 
-`comments`::
+`comments => String`::
 Object comments.
 
-`country`::
+`country => String`::
 Postal address – country.
 
 `customAttributes`::
 Hash map of object custom attributes.
 
-`geolocation`::
+`geolocation => GeoLocation`::
 Object <<class-geolocation,geographical location>>.
 
-`guid`::
+`guid => String`::
 Object GUID as `string`.
 
-`id`::
-Object identifier (`uint32`).
+`id => Integer`::
+Unique object identifier.
 
-`ipAddr`::
-Primary IP address (`string`).
+`ipAddr => String`::
+Primary IP address.
 
-`isInMaintenanceMode`::
-Maintenance mode indicator (true if object currently is in maintennace mode) (`boolean`).
+`isInMaintenanceMode => Boolean`::
+Maintenance mode indicator (`true` if object currently is in maintenace mode).
 
 `mapImage => String`::
-GUID of object image.
+GUID of object image used for representation on the maps.
 
-`name`::
+`name => String`::
 Object name.
 
-`parents`::
-Array of <<class-netobj, NetObjects>> of object`s direct parents.
+`parents => array`::
+List of direct parents for this object (inherited from <<class-netobj>>, most likely either <<class-container>> or <<class-cluster>>).
 
-`postcode`::
+`postcode => String`::
 Postal address – postal code.
 
-`primaryZoneProxy`::
+`primaryZoneProxy => Node`::
 currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabled or primary proxy is not assigned)
 
-`primaryZoneProxyId`::
+`primaryZoneProxyId => Integer`::
 ID of currently selected primary zone proxy (`0` if zoning is disabled or primary proxy is not assigned)
 
-`status`::
-<<enum-object-status,Object status>>.
+`status => Integer`::
+Current <<enum-object-status,object status>>.
 
-`streetAddress`::
+`streetAddress => String`::
 Postal address – street.
 
-`type`::
+`type => Integer`::
 <<enum-object-type,Object type>>.
 
 ==== Instance methods
 
-`bind(object) => void`::
-Bind provided object as a child to the current object.
-This function can be disabled in server configuration file by "NXSL.EnableContainerFunctions" server configuration parameter.
+[[class-netobj-bind,NetObj::bind()]]
+`bind(childObject) => void`::
+
+[NOTE]
+This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+
+Bind `childObject` to the current object as a child.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
@@ -85,9 +90,13 @@ This function can be disabled in server configuration file by "NXSL.EnableContai
 |object|<<class-netobj>>|Object to bind as a child to the current object.
 |===
 
-`bindTo(object) => void`::
-Bind current object as a child to the provided object.
-This function can be disabled in server configuration file by "NXSL.EnableContainerFunctions" server configuration parameter.
+[[class-netobj-bindto,NetObj::bindTo()]]
+`bindTo(parentObject) => void`::
+
+[NOTE]
+This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+
+Bind current object to `parentObject` as a child.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
@@ -98,9 +107,11 @@ This function can be disabled in server configuration file by "NXSL.EnableContai
 `clearGeoLocation() => void`::
 Clears GeoLocation data from the node
 
+[[class-netobj-delete,NetObj::delete()]]
 `delete() => void`::
 Deletes current object.
 
+[[class-netobj-deletecustomattribute,NetObj::deleteCustomAttribute()]]
 `deleteCustomAttribute(name) => void`::
 Delete custom attribute. 
 
@@ -110,9 +121,11 @@ Delete custom attribute.
 |name|String|Name of the attribute to delete.
 |===
 
+[[class-netobj-entermaintenance,NetObj::enterMaintenance()]]
 `enterMaintenance() => void`::
-Puts object in maintenance mode. 
+Enable maintenance mode for the object.
 
+[[class-netobj-getcustomattribute,NetObj::getCustomAttribute()]]
 `getCustomAttribute(name) => String`::
 Returns value of the custom attribute with the provided name. 
 
@@ -122,11 +135,12 @@ Returns value of the custom attribute with the provided name.
 |name|String|Name of the attribute to get value form.
 |===
 
+[[class-netobj-leavemaintenance,NetObj::leaveMaintenance()]]
 `leaveMaintenance() => void`::
-Removes object from maintenance mode. 
+Disable maintenance mode for the object.
 
 `manage() => void`::
-Sets object to managed mode. Has no affect if object already managed.
+Sets object to managed state. Has no affect if object already managed.
 
 `rename(name) => void`::
 Rename object.
@@ -146,7 +160,7 @@ Set object comments
 |comment|String|Comment to be set
 |===
 
-`setCustomAttribute(key, value, inherit) => void`::
+`setCustomAttribute(key, value, inherit=false) => void`::
 Update or create custom attribute with the given key and value. 
 
 .Parameters
@@ -154,7 +168,7 @@ Update or create custom attribute with the given key and value.
 |===
 |key|String|Attribute key
 |value|String|Attribute value
-|inherit|Boolean|Optional parameter. If not set - inheritance will not be changed. TRUE to inherit, FALSE not to inherit. 
+|inherit|Boolean|Optional parameter. If not set - inheritance will not be changed. `true` to inherit, `false` not to inherit. 
 |===
 
 `setGeoLocation(newLocation) => void`::
@@ -195,9 +209,13 @@ Sets status propagation method.
 |...|Integer(s)| For fixed value type - value (<<enum-object-status>>) should be provided. For relative - offset should be provided. For severity - severity mapping should be provided (4 numbers <<enum-object-status>>).
 |===
 
+[[class-netobj-unbind,NetObj::unbind()]]
 `unbind(object) => void`::
+
+[NOTE]
+This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+
 Unbind provided object from the current object.
-This function can be disabled in server configuration file by "NXSL.EnableContainerFunctions" server configuration parameter.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
@@ -205,9 +223,13 @@ This function can be disabled in server configuration file by "NXSL.EnableContai
 |object|<<class-netobj>>|Object to unbind from the current object.
 |===
 
+[[class-netobj-unbindfrom,NetObj::unbindFrom()]]
 `unbindFrom(object) => void`::
+
+[NOTE]
+This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+
 Unbind current object from the provided object.
-This function can be disabled in server configuration file by "NXSL.EnableContainerFunctions" server configuration parameter.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
@@ -221,6 +243,7 @@ Set object into unmanaged state. Has no effect if object is already in unmanaged
 ==== Constants
 
 [[enum-object-status]]
+[cols="1,4a"]
 .Object Statuses
 |===
 | Code | Description
@@ -255,6 +278,7 @@ Set object into unmanaged state. Has no effect if object is already in unmanaged
 |===
 
 [[enum-object-type]]
+[cols="1,4a"]
 .Object Types
 |===
 | Code | Description
@@ -307,6 +331,7 @@ Set object into unmanaged state. Has no effect if object is already in unmanaged
 |===
 
 [[enum-status-calculation-type]]
+[cols="1,4a"]
 .Status callculation types
 |===
 | Code | Description
@@ -326,6 +351,7 @@ Set object into unmanaged state. Has no effect if object is already in unmanaged
 |===
 
 [[enum-status-propagation-type]]
+[cols="1,4a"]
 .Status propagation types
 |===
 | Code | Description

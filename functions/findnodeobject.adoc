@@ -6,10 +6,11 @@
 FindNodeObject(currentNode, key) => Node
 ----
 
-Look up <<Node>> object by the `key` (either string name or integer id) or return `null` if not found.
+Look up <<class-node>> object by either name or object id, will return `null` if object not found or not accessible.
+This function search for nodes only.
 
-Unless <<security,trusted node validation>> is disabled, `currentNode` should be set to current context node (predefined variable `$node` in most cases).
-If validation is disabled, `currentNode` is ignored and can be set to `null`.
+If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object (instance of <<class-netobj>>, `$node` in most cases).
+If trusted nodes are disabled (default server configuration), `currentNode` can be set to `null`.
 
 .Parameters
 [cols="1,3" grid="none", frame="none"]
@@ -20,7 +21,7 @@ If validation is disabled, `currentNode` is ignored and can be set to `null`.
 
 .Return
 
-Instance of <<Node>> object or `null` if not found or not accessible.
+Instance of <<class-node>> object or `null` if not found or not accessible.
 
 .Example
 [.source]

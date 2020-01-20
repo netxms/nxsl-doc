@@ -1,24 +1,24 @@
 [[func-getallnodes]]
 == GetAllNodes()
 
-// TODO: add description
-
 [source,c]
 ----
-GetAllNodes() => void
+GetAllNodes() => array
 ----
 
-…
-
-.Parameters
-[cols="1,3" grid="none", frame="none"]
-|===
-||
-|===
+Get list of all <<class-node>> objects in the system as array.
 
 .Return
+Array of node objects.
 
 .Example
 [.source]
 ....
+>>> for (n : GetAllNodes()) {
+>>>   println(n->id . " - " . n->name);
+>>> }
+
+6766 - demo-netxms
+6901 - Control Unit 1
+6902 - Control Unit 2
 ....

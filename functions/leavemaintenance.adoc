@@ -1,13 +1,7 @@
 [[func-leavemaintenance]]
 == LeaveMaintenance()
 
-****
-[IMPORTANT]
-====
-*This function is deprecated starting from version 3.0.* 
-Please use leaveMaintenance functions in <<class-netobj>>. 
-====
-****
+NOTE: Deprecated since 3.0, use <<class-netobj-leavemaintenance>> instead.
 
 [source,c]
 ----

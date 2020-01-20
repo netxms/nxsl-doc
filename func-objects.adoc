@@ -1,63 +1,26 @@
 = Object functions
 
+include::functions/bindobject.adoc[]
 include::functions/createcontainer.adoc[]
 include::functions/createnode.adoc[]
-include::functions/renameobject.adoc[]
+include::functions/deletecustomattribute.adoc[]
 include::functions/deleteobject.adoc[]
-
-include::functions/manageobject.adoc[]
-include::functions/unmanageobject.adoc[]
-
-== Finding objects
-
-:leveloffset: +1
-
-include::functions/getallnodes.adoc[]
-include::functions/findobject.adoc[]
+include::functions/entermaintenance.adoc[]
 include::functions/findnodeobject.adoc[]
-include::functions/getobjectparents.adoc[]
-include::functions/getnodeparents.adoc[]
-include::functions/getobjectchildren.adoc[]
-
-include::functions/getnodetemplates.adoc[]
-
-:leveloffset: -1
-
-== Binding objects to containers
-
-:leveloffset: +1
-
-include::functions/bindobject.adoc[]
-include::functions/unbindobject.adoc[]
-
-:leveloffset: -1
-
-== Interfaces
-
-:leveloffset: +1
-
+include::functions/findobject.adoc[]
+include::functions/getallnodes.adoc[]
+include::functions/getcustomattribute.adoc[]
 include::functions/getinterfacename.adoc[]
 include::functions/getinterfaceobject.adoc[]
 include::functions/getnodeinterfaces.adoc[]
-include::functions/setinterfaceexpectedstate.adoc[]
-
-:leveloffset: -1
-
-== Custom attributes
-
-:leveloffset: +1
-
-include::functions/getcustomattribute.adoc[]
-include::functions/setcustomattribute.adoc[]
-include::functions/deletecustomattribute.adoc[]
-
-:leveloffset: -1
-
-== Maintenance mode
-
-:leveloffset: +1
-
-include::functions/entermaintenance.adoc[]
+include::functions/getnodeparents.adoc[]
+include::functions/getnodetemplates.adoc[]
+include::functions/getobjectchildren.adoc[]
+include::functions/getobjectparents.adoc[]
 include::functions/leavemaintenance.adoc[]
-
-:leveloffset: -1
+include::functions/manageobject.adoc[]
+include::functions/renameobject.adoc[]
+include::functions/setcustomattribute.adoc[]
+include::functions/setinterfaceexpectedstate.adoc[]
+include::functions/unbindobject.adoc[]
+include::functions/unmanageobject.adoc[]
