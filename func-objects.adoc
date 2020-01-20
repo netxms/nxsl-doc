@@ -10,6 +10,8 @@ include::functions/unmanageobject.adoc[]
 
 == Finding objects
 
+:leveloffset: +1
+
 include::functions/getallnodes.adoc[]
 include::functions/findobject.adoc[]
 include::functions/findnodeobject.adoc[]
@@ -19,25 +21,43 @@ include::functions/getobjectchildren.adoc[]
 
 include::functions/getnodetemplates.adoc[]
 
+:leveloffset: -1
+
 == Binding objects to containers
+
+:leveloffset: +1
 
 include::functions/bindobject.adoc[]
 include::functions/unbindobject.adoc[]
 
+:leveloffset: -1
+
 == Interfaces
+
+:leveloffset: +1
 
 include::functions/getinterfacename.adoc[]
 include::functions/getinterfaceobject.adoc[]
 include::functions/getnodeinterfaces.adoc[]
 include::functions/setinterfaceexpectedstate.adoc[]
 
+:leveloffset: -1
+
 == Custom attributes
+
+:leveloffset: +1
 
 include::functions/getcustomattribute.adoc[]
 include::functions/setcustomattribute.adoc[]
 include::functions/deletecustomattribute.adoc[]
 
+:leveloffset: -1
+
 == Maintenance mode
+
+:leveloffset: +1
 
 include::functions/entermaintenance.adoc[]
 include::functions/leavemaintenance.adoc[]
+
+:leveloffset: -1
