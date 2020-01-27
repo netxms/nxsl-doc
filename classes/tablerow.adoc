@@ -1,3 +1,4 @@
+[.nxsl-class]
 [[class-tablerow]]
 === TableRow
 

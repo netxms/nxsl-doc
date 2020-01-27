@@ -1,3 +1,4 @@
+[.nxsl-class]
 [[json-object]]
 === JSON object
 

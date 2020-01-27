@@ -1,3 +1,4 @@
+[.nxsl-class]
 [[class-snmp_transport]]
 === SNMP_Transport
 

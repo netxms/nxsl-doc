@@ -1,3 +1,4 @@
+[.nxsl-function]
 [[func-getdcivaluebydescription]]
 == GetDCIValueByDescription()
 

@@ -1,3 +1,4 @@
+[.nxsl-function]
 [[func-base64decode]]
 == Base64Decode()
 

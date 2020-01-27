@@ -1,3 +1,4 @@
+[.nxsl-function]
 [[func-sha1]]
 == sha1()
 

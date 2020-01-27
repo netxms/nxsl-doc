@@ -1,3 +1,4 @@
+[.nxsl-function]
 [[func-md5]]
 == md5()
 

@@ -1,3 +1,4 @@
+[.nxsl-function]
 [[func-sha256]]
 == sha256()
 

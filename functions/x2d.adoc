@@ -1,3 +1,4 @@
+[.nxsl-function]
 [[func-x2d]]
 == x2d()
 

@@ -1,3 +1,4 @@
+[.nxsl-function]
 [[func-_exit]]
 == _exit()
 

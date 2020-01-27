@@ -1,3 +1,4 @@
+[.nxsl-class]
 [[class-snmp_varbind]]
 === SNMP_VarBind
 

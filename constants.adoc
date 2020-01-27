@@ -1,44 +1,22 @@
-=== DCI::INT32
+[[const-dci-datatype]]
+== Data types of the <<class-dci>> class
 
-Integer value: `0`
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
 
-Data type of <<class-dci>> instance – singed 32 bit integer.
+|DCI::INT32|0|Signed 32 bit integer
+|DCI::UINT32|1|Unsigner 32 bit integer
+|DCI::INT64|2|Signer 64 bit integer
+|DCI::UINT64|3|Unsigned 64 bit integer
+|DCI::STRING|4|String
+|DCI::FLOAT|5|Floating point number
+|DCI::NULL|6|Used internally; should be used in the scripts
+|DCI::COUNTER32|7|32 bit counter
+|DCI::COUNTER64|8|64 bit counter
+|===
 
-=== DCI::UINT32
-
-Integer value: `1`
-
-Data type of <<class-dci>> instance – unsinged 32 bit integer.
-
-=== DCI::INT64
-
-Integer value: `2`
-
-Data type of <<class-dci>> instance – singed 64 bit integer.
-
-=== DCI::UINT64
-
-Integer value: `3`
-
-Data type of <<class-dci>> instance – unsinged 64 bit integer.
-
-=== DCI::STRING
-
-Integer value: `4`
-
-Data type of <<class-dci>> instance – string.
-
-=== DCI::FLOAT
-
-Integer value: `5`
-
-Data type of <<class-dci>> instance – float.
-
-=== DCI::NULL
-
-Integer value: `6`
-
-Data type of <<class-dci>> instance – null.
+== Other constants
 
 === NXSL::VERSION
 

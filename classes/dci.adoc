@@ -1,3 +1,4 @@
+[.nxsl-class]
 [[class-dci]]
 === DCI
 
@@ -6,20 +7,13 @@ Represents Data Collection Item (DCI).
 ==== Instance attributes
 
 `activeThresholdSeverity`::
-// TODO: 
+Severity of the active threshold. If there are no active thresholds, defaults to `0` (NORMAL).
 
-`comments`::
-Comments (since 2.0-M5)
+`comments => String`::
+DCI Comments (since 2.0-M5)
 
-`dataType`::
-Configured data type; possible values are:
-  * DCI::INT32 (0) = Integer
-  * DCI::UINT32 (1) = Unsigned integer
-  * DCI::INT64 (2) = 64 bit integer
-  * DCI::UINT64 (3) = 64 bit unsigned integer
-  * DCI::STRING (4) = String
-  * DCI::FLOAT (5) = Floating point number
-  * DCI::NULL (6) = null
+`dataType => Integer`::
+<<const-dci-datatype,Data type>> of the DCI.
 
 `description`::
 Description
