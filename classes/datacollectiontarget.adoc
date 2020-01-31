@@ -7,16 +7,26 @@ Abstract class that represents any object that can collect data. Extends <<class
 ==== Instance attributes
 
 `templates => Array`::
-Returns array of templates (<<class-netobj>>) applied on this object.
+Returns array of templates (<<class-netobj>>) applied on this object. Return value also affected by trusted nodes settings.
+
+.Example
+[.source]
+....
+// Log names and ids of all accessible templates for current node
+templates = $node->templates;
+foreach(t : templates)
+{
+	trace(1, "Template object: name='" . t->name . "' id=" . t->id);
+}
+....
 
 ==== Instance methods
 
 `readInternalParameter(name) => String`::
-Reads server internal object metric (metric with source "Internal"). 
+Reads server internal object metric (metric with source "Internal").
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |name|String|Metric name.
 |===
-

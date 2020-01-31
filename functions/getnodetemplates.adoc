@@ -5,14 +5,14 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 3.0.* 
-Please use set function in <<class-snmp_transport>>. 
+*This function is deprecated starting from version 3.0.*
+Please use templates attribute of <<class-DataCollectionTarget>>.
 ====
 ****
 
 [source,c]
 ----
-GetNodeTemplates() => void
+GetNodeTemplates()
 ----
 
 Get template objects applied on given node.
@@ -20,19 +20,8 @@ Get template objects applied on given node.
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
-|node| <<class-node>> object. 
+|node| <<class-node>> object.
 |===
 
 .Return
 Array of objects, with first object placed at index 0. Return value also affected by trusted nodes settings.
-
-.Example
-[.source]
-....
-// Log names and ids of all accessible templates for current node
-templates = GetNodeTemplates($node);
-foreach(t : templates)
-{
-	trace(1, "Template object: name='" . t->name . "' id=" . t->id);
-}
-....
