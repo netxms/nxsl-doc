@@ -653,7 +653,7 @@ Without short-circuit evaluation, `trim(x)` would cause run-time error if
 [[chapter-regular-expressions]]
 ===  Regular expressions
 
-PCRE is used for regular expression matching. Syntax can be checked on link:++https://www.pcre.org/++[PCRE official portal].
+Since version 3.0, regular expression engine is changed to PCRE (Perl compatible). Syntax can be checked with `pcregrep`, perl itself or on https://regex101.com/[regex101.com] (select PCRE flavour).
 
 === Comments
 
