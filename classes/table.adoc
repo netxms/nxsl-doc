@@ -14,6 +14,12 @@ Number of columns.
 `columns => Array<TableColumn>`::
 Array of <<class-tablecolumn,column definitions>>.
 
+`instanceColumns => Array<TableColumn>`::
+Array of <<class-tablecolumn,column definitions>> including only columns marked as instance columns. 
+
+`instanceColumnIndexes => Array<Integer>`::
+Array with indexes of columns marked as instance columns. 
+
 `rowCount => Numbers`::
 Number of rows.
 
