@@ -6,7 +6,7 @@
 :toclevels: 3
 = NetXMS Scripting Language
 http://netxms.org/
-v3.2, 20 January, 2020
+v3.3, 20 January, 2020
 
 ifdef::html[+++You can download offline version here <a href="nxsl.pdf">here</a>.+++]
 

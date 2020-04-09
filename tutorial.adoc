@@ -55,13 +55,14 @@ This is a function definition. A function is a part of a program that can be
 called by other parts of the program. A function definition always has the
 following form: 
 
-
-*sub* _name_ **(**__parameters__**)**
+[source,c]
+----
+sub name(parameters)
 {
-
-    \\the function code goes here
-
+    // the function code goes here
 }
+----
+
 
 The function can return a value to the caller and accept zero or more
 parameters.
