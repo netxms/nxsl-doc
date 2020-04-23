@@ -13,27 +13,48 @@ Subject of certificate issued for agent tunnel on this node.
 `agentId => String`::
 NetXMS agent unique ID (`string` representation of GUID). Will return all zeroes GUID if agent is not detected on node or does not have unique ID.
 
-`agentVersion`::
+`agentVersion => String`::
 NetXMS agent version as `string`.
 
-`bootTime`::
+`bootTime => Integer64`::
 Number of seconds since node start or `0` if unknown.
 
-`bridgeBaseAddress`::
+`bridgeBaseAddress => String`::
 Base address of the switch formatted as 12 character `string` without separators. Value is only valid for bridges and switches. Special value `000000000000` indicates that address is unknown.
 
 [[class-node-capabilities,Node::capabilities]]
 `capabilities => Integer`::
 Detected node capabilities ("Have Agent", "Support SNMP", etc.) Bitwise AND of <<node-capabilities>> constants.
 
-`components => String`::
-// TODO:
+`cipDeviceType => Integer`::
+EtherNet/IP device type
 
-`dependentNodes => ?`::
-// TODO: 
+`cipDeviceTypeAsText => String`::
+EtherNet/IP device type as text
 
-`driver`::
+`cipExtendedStatus => Integer`::
+EtherNet/IP device extended status
+
+`cipExtendedStatusAsText => String`::
+EtherNet/IP device extended status as text
+
+`cipStatus => Integer`::
+EtherNet/IP device status
+
+`cipStatusAsText => String`::
+EtherNet/IP device status as text
+
+`components => <<class-component>>`::
+Node components of class <<class-component>>.
+
+`dependentNodes => Array`::
+Will return array with <<class-node-dependency>> class objects. This array contains all objects that have current node as a proxy or data collection sources. 
+
+`driver => String`::
 Named of selected device-specific SNMP driver.
+
+`downSince => Integer64`::
+Number of seconds node is down.
 
 `flags => Integer`::
 Bit mask of <<node-flags>>.
@@ -52,6 +73,9 @@ Bit mask of <<node-flags>>.
 
 `hasVLANs => Boolean`::
 `TRUE` if VLAN information available.
+
+`hardwareId => String`::
+Nodes' unique hardware id
 
 `hasWinPDH => Boolean`::
 `TRUE` if node supports Windows PDH parameters.
@@ -92,6 +116,12 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `isCDP => Boolean`::
 `TRUE` if node supports CDP (Cisco Discovery Protocol)
 
+`isEtherNetIP => Boolean`::
+`TRUE` if node supports EtherNet/IP (Industrial Protocol)
+
+`isInMaintenanceMode => Boolean`::
+`TRUE` if node is in maintenance mode
+
 `isLLDP => Boolean`::
 `TRUE` if node supports LLDP (Link Layer Discovery Protocol)
 
@@ -104,84 +134,124 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `isNDP => Boolean`::
 `TRUE` if node supports OSPF/NDP. Equivalent of `isOSPF`.
 
+`isModbusTCP => Boolean`::
+`TRUE` if node supports Modbus TCP
+
 `isOSPF => Boolean`::
 `TRUE` if node supports OSPF/NDP. Equivalent of `isNDP`.
 
-`isPAE`::
+`isPAE => Boolean`::
 `TRUE` if node supports 802.1x. Equivalent of `is802_1x`.
 
-`isPrinter`::
+`isPrinter => Boolean`::
 `TRUE` if node is a printer
 
-`isRouter`::
+`isProfiNet => Boolean`::
+TRUE` if node supports PROFINET (Process Field Network)
+
+`isRemotelyManaged => Boolean`::
+TRUE` if node is remotely managed node
+
+`isRouter => Boolean`::
 `TRUE` if node is a router (has IP forwarding enabled)
 
-`isSNMP`::
+`isSMCLP => Boolean`::
+`TRUE` if node supports SMCLP (Server Management Command Line Protocol)
+
+`isSNMP => Boolean`::
 `TRUE` if SNMP agent detected on node
 
-`isSONMP`::
+`isSONMP => Boolean`::
 `TRUE` if node supports SONMP/NDP (Synoptics/Nortel Discovery Protocol)
 
-`isSTP => ?`::
-// TODO: 
+`isSTP  => Boolean`::
+`TRUE` if node supports STP (Spanning Tree Protocol)
 
 `isUserAgentInstalled => Boolean`::
-`TURE` if user agent is installed.
+`TRUE` if user agent is installed.
 
-`isVirtual => ?`::
-// TODO: 
+`isVirtual  => Boolean`::
+`TRUE` if node is virtual
 
-`isVRRP => Boolean`
+`isVRRP => Boolean`::
 `TURE` if VRRP supported.
 
 `lastAgentCommTime => Integer`::
 Unix timestamp of last time when communication with agent was
 
-`nodeSubType => ?`::
-// TODO: 
+`nodeSubType => String`::
+Node sub type
 
-`nodeType => ?`::
-// TODO: 
+[[class-node-types,Node::types]]
+`nodeType => Integer`::
+Node type <<node-types>>
 
 `platformName => String`::
 Platform name reported by NetXMS agent
 
-`rack => ?`::
-// TODO: 
+`physicalContainer => Object`::
+Physical container object: Rack <<class-netobj>> or Chassis <<class-chassis>>
 
-`rackHeight => ?`::
-// TODO: 
+`physicalContainerId => Integer`::
+Physical container object id (Rack or Chassis)
 
-`rackId => ?`::
-// TODO: 
+`platformName => String`::
+Platform name
 
-`rackPosition => ?`::
-// TODO: 
+`primaryHostName => String`::
+Primary host name
 
-`runtimeFlags`::
+`productCode => String`::
+Hardware system property - product code
+
+`productName => String`::
+Hardware system property - product name
+
+`productVersion => String`::
+Hardware system property - product version
+
+`rack => <<class-netobj>>`::
+Will return Rack object as <<class-netobj>> if node is added in rack
+
+`rackId => Integer`::
+Will return Rack id if node is added in rack
+
+`rackHeight => Integer`::
+Object height in rack 
+
+`rackPosition => Integer`::
+Object position in rack 
+
+`runtimeFlags => Integer`::
 Bit mask of <<node-runtime-flags>>, `uint32`.
 
-`snmpOID`::
+`serialNumber => String`::
+Serial number form hardware system property
+
+`snmpOID => String`::
 SNMP object identifier (result of `.1.3.6.1.2.1.1.2.0` request)
 
-`snmpSysContact`::
+`snmpSysContact => String`::
 SNMP system contact (result of `.1.3.6.1.2.1.1.4.0` request)
 
-`snmpSysLocation`::
+`snmpSysLocation => String`::
 SNMP system location (result of `.1.3.6.1.2.1.1.6.0` request)
 
-`snmpSysName`::
+`snmpSysName => String`::
 SNMP system name (result of `.1.3.6.1.2.1.1.5.0` request)
 
-`snmpVersion`::
+`snmpVersion => Integer`::
 Configured SNMP version:
 
 * 0: SNMP version 1
 * 1: SNMP version 2c
 * 2: SNMP version 3
 
-`sysDescription`::
+`sysDescription => String`::
 System description (value of `System.Uname` for nodes with agents or `.1.3.6.1.2.1.1.1.0` for SNMP nodes)
+
+`vendor => String`::
+Hardware vendor information
 
 `vlans => Array`::
 Array with object <<class-vlan>> objects (`null` if there are no VLANs)
@@ -528,5 +598,29 @@ Request driver-specific metric directly from network device driver (e.g. Rital).
 
 |0x00400000
 |User (support) agent is installed
+
+|===
+
+
+[[node-types]]
+[cols="1,5a"]
+.Node types
+|===
+| Value | Description
+
+|0
+|Unknown
+
+|1
+|Physical
+
+|2
+|Virtual
+
+|0
+|Controller
+
+|0
+|Container
 
 |===

@@ -2,7 +2,7 @@
 [[class-component]]
 === Component
 
-// TODO: 
+ Node components
 
 ==== Instance attributes
 
@@ -24,13 +24,13 @@ Type of the component:
 List of direct children (Array of <<class-component>> object intances).
 
 `description => String`::
-// TODO: 
+Component description
 
 `firmware => String`::
 Component firmware version, if available.
 
 `ifIndex => Number`::
-// TODO: 
+Interface index number
 
 `model => String`::
 Component model number, if available.
