@@ -6,7 +6,7 @@ Represents Data Collection Item (DCI).
 
 ==== Instance attributes
 
-`activeThresholdSeverity`::
+`activeThresholdSeverity => Integer`::
 Severity of the active threshold. If there are no active thresholds, defaults to `0` (NORMAL).
 
 `comments => String`::
@@ -15,58 +15,53 @@ DCI Comments (since 2.0-M5)
 `dataType => Integer`::
 <<const-dci-datatype,Data type>> of the DCI.
 
-`description`::
+`description => String`::
 Description
 
-`errorCount`::
+`errorCount => Integer`::
 Number of consecutive data collection errors
 
-`hasActiveThreshold`::
-// TODO: 
+`hasActiveThreshold => Boolean`::
+`TRUE` if DCI has active threshold
 
-`id`::
+`id => Integer`::
 Unique DCI identifier
 
-`instance`::
+`instance => String`::
 DCI instance (only for single value DCIs)
 
-`instanceData`::
+`instanceData => String`::
 // TODO: 
 
-`lastPollTime`::
+`lastPollTime => Integer64`::
 Time of last DCI poll (either successful or not) as number of seconds since epoch (1 Jan 1970 00:00:00 UTC)
 
-`name`::
+`name => String`::
 Parameter's name
 
-`origin`::
-Data origin (source); possible values are:
-  * 0 =	Internal
-  * 1	= NetXMS agent
-  * 2	= SNMP agent
-  * 3	= Check Point SNMP agent
-  * 4	= Push
+`origin => Integer`::
+<<const-dci-origin,Data origin>> of the DCI.
+
+`pollingInterval => Integer`::
+Current polling interval
 
 `relatedObject => <<class-netobj>>`::
 Related object or null if there is no object
 
-`status`::
-DCI status; possible values are:
-  * 0 =	Active
-  * 1	= Disabled
-  * 2	= Not supported
+`status => Integer`::
+<<const-dci-origin,Data status>> of the DCI.
 
-`systemTag`::
+`systemTag => String`::
 System tag. Always empty for user-defined DCIs.
 
-`template`::
-// TODO: 
+`template => <<class-template>>`::
+<<class-template,Template object>> if DCI came from Template or `NULL`.
 
 `templateId`::
-// TODO: 
+Template id if DCI came from Template or 0.
 
 `templateItemId`::
-// TODO: 
+DCI item id in template if DCI came from Template or 0.
 
 `type`::
 DCI type:

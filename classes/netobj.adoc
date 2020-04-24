@@ -30,6 +30,9 @@ Object comments.
 `country => String`::
 Postal address – country.
 
+`creationTime => Integer64`::
+Object creation time as UINX timestamp
+
 `customAttributes`::
 Hash map of object custom attributes.
 
@@ -66,8 +69,14 @@ currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabl
 `primaryZoneProxyId => Integer`::
 ID of currently selected primary zone proxy (`0` if zoning is disabled or primary proxy is not assigned)
 
+`responsibleUsers => Array`::
+Array with user objects that are added as responsible users for this object. Objects are <<class-user>> or <<class-user-group>>
+
+`state => Integer`::
+Current object state. One of: <<const-node-state>>, <<const-cluster-state>>, <<const-sensor-state>>
+
 `status => Integer`::
-Current <<enum-object-status,object status>>.
+Current <<const-object-status,object status>>.
 
 `streetAddress => String`::
 Postal address – street.
@@ -207,7 +216,7 @@ Sets status propagation method.
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |type|Integer|Status propagation type. One of <<enum-status-propagation-type>>
-|...|Integer(s)| For fixed value type - value (<<enum-object-status>>) should be provided. For relative - offset should be provided. For severity - severity mapping should be provided (4 numbers <<enum-object-status>>).
+|...|Integer(s)| For fixed value type - value (<<const-object-status>>) should be provided. For relative - offset should be provided. For severity - severity mapping should be provided (4 numbers <<const-object-status>>).
 |===
 
 [[class-netobj-unbind,NetObj::unbind()]]
@@ -242,41 +251,6 @@ Unbind current object from the provided object.
 Set object into unmanaged state. Has no effect if object is already in unmanaged state.
 
 ==== Constants
-
-[[enum-object-status]]
-[cols="1,4a"]
-.Object Statuses
-|===
-| Code | Description
-
-| 0
-| Normal
-
-| 1
-| Warning
-
-| 2
-| Minor
-
-| 3
-| Major
-
-| 4
-| Critical
-
-| 5
-| Unknown
-
-| 6
-| Unmanaged
-
-| 7
-| Disabled
-
-| 8
-| Testing
-
-|===
 
 [[enum-object-type]]
 [cols="1,4a"]
@@ -352,6 +326,29 @@ Set object into unmanaged state. Has no effect if object is already in unmanaged
 |===
 
 [[enum-status-propagation-type]]
+[cols="1,4a"]
+.Status propagation types
+|===
+| Code | Description
+
+| 0
+| Default
+
+| 1
+| Unchanged
+
+| 2
+| Fixed
+
+| 3
+| Relative
+
+| 4
+| Translated
+
+|===
+
+[[enum-state]]
 [cols="1,4a"]
 .Status propagation types
 |===

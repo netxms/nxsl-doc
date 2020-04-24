@@ -2,7 +2,7 @@
 [[class-cluster]]
 === Cluster
 
-// TODO: extends <<class-DataCollectionTarget>>
+Object represent cluster, extends <<class-datacollectiontarget>>
 
 ==== Instance attributes
 

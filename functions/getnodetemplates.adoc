@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 3.0.*
-Please use templates attribute of <<class-DataCollectionTarget>>.
+Please use templates attribute of <<class-datacollectiontarget>>.
 ====
 ****
 

@@ -16,6 +16,98 @@
 |DCI::COUNTER64|8|64 bit counter
 |===
 
+[[const-dci-states]]
+== DCI states of the <<class-dci>> class
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|DCI::ACTIVE|0|Active
+|DCI::DISABLED|1|Disabled
+|DCI::UNSUPPORTED|2|Unsupported
+|===
+
+[[const-dci-origin]]
+== DCI data source (origin) of the <<class-dci>> class
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|DataSource::INTERNAL|0|Internal
+|DataSource::AGENT|1|Agent
+|DataSource::SNMP|2|SNMP
+|DataSource::WEB_SERVICE|3|Web service
+|DataSource::PUSH|4|Push data
+|DataSource::WINPERF|5|Windows Performance Counters
+|DataSource::SMCLP|6|SMCLP
+|DataSource::SCRIPT|7|Script
+|DataSource::SSH|8|SSH
+|DataSource::MQTT|9|MQTT
+|DataSource::DEVICE_DRIVER|10|Network Device driver
+|===
+
+[[const-node-state]]
+== Node state
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|NodeState::Unreachable|0x00000001|Signed 32 bit integer
+|NodeState::NetworkPathProblem|0x00000002|Unsigner 32 bit integer
+|NodeState::AgentUnreachable|0x00010000|Signer 64 bit integer
+|NodeState::SNMPUnreachable|0x00020000|String
+|NodeState::EtherNetIPUnreachable|0x00040000|Unsigned 64 bit integer
+|NodeState::CacheModeNotSupported|0x00080000|Floating point number
+|===
+
+[[const-object-status]]
+== Object status codes
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|Status::NORMAL|0|Normal
+|Status::WARNING|1|Warning
+|Status::MINOR|2|Minor
+|Status::MAJOR|3|Major
+|Status::CRITICA|4|Critical
+|Status::UNKNOWN|5|Unknown
+|Status::UNMANAGED|6|Unmanaged
+|Status::DISABLED|7|Disabled
+|Status::TESTING|8|Testing
+|===
+
+[[const-cluster-state]]
+== Cluster state
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|ClusterState::Unreachable|0x00000001|Unreachable
+|ClusterState::NetworkPathProblem|0x00000002|Network Path Problem
+|ClusterState::Down|0x00010000|Down
+|===
+
+[[const-sensor-state]]
+== Sensor state
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|SensorState::Unreachable|0x00000001|Unreachable
+|SensorState::NetworkPathProblem|0x00000002|Network Path Problem
+|SensorState::Provisioned|0x00010000|Provisioned
+|SensorState::Registered|0x00020000|Registered
+|SensorState::Active|0x00040000|Active
+|SensorState::PendingConfigUpdate|0x00080000|Pending Config Update
+|===
+
 == Other constants
 
 === NXSL::VERSION

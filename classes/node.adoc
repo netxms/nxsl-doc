@@ -45,7 +45,7 @@ EtherNet/IP device status
 EtherNet/IP device status as text
 
 `components => <<class-component>>`::
-Node components of class <<class-component>>.
+Entity MIB components of class <<class-component>>.
 
 `dependentNodes => Array`::
 Will return array with <<class-node-dependency>> class objects. This array contains all objects that have current node as a proxy or data collection sources. 
@@ -305,6 +305,15 @@ Enable or disable discovery polling.
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If discovery polling should be enabled. 
+|=== 
+
+`enableEtherNetIP(flag) => void`::
+Enable or disable usage of EtherNet/IP for polls.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If EtherNet/IP should be enabled. 
 |=== 
 
 `enableIcmp(flag) => void`::

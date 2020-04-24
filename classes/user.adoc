@@ -1,0 +1,75 @@
+[.nxsl-class]
+[[class-user]]
+=== User
+
+Object represent user object and extends <<class-user-dbobject>>.
+
+==== Instance attributes
+
+`authMethod => Integer`::
+<<enum-auth-methods,Authentication method>>.
+
+`certMappingData => String`::
+Data that will be used to mpa certificate
+
+`certMappingMethod => Integer`::
+<<enum-mapping-methods,Certificate mapping methods>>.
+
+`disabledUntil => String`::
+UNIX timestamp with date until this user is disabled
+
+`fullName => String`::
+Full user name
+
+`graceLogins => Integer`::
+Grace login count
+
+`lastLogin => Integer`::
+UNIX timestamp with last user's login time
+
+`xmppId => String`::
+XMPP id
+
+==== Constants
+
+[[enum-auth-methods]]
+[cols="1,4a"]
+.Status propagation types
+|===
+| Code | Description
+
+| 0
+| Password
+
+| 1
+| Radius
+
+| 2
+| Certificate
+
+| 3
+| Certificate or password
+
+| 4
+| Certificate or radius
+
+|===
+
+
+[[enum-mapping-methods]]
+[cols="1,4a"]
+.Status propagation types
+|===
+| Code | Description
+
+| 0
+| Subject
+
+| 1
+| Public key
+
+| 2
+| CN
+
+|===
+

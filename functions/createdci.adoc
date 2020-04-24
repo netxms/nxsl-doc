@@ -13,32 +13,10 @@ Create new data collection item on <<class-node,node>>, return <<class-dci>> obj
 [cols="1,3a" grid="none", frame="none"]
 |===
 |node|<<class-node>> object instance (e.g. `$node`), where DCI should be created.
-| origin
-| data origin, supported values:
-
-* "internal"
-* "agent"
-* "snmp"
-* "cpsnmp"
-* "push"
-* "winperf"
-* "smclp"
-* "script"
-* "ssh"
-* "mqtt"
-* "driver"
-
+|origin| <<const-dci-origin,Data origin>>
 |name|name of the metric (e.g. "Agent.Version")
 |description|human readable description.
-|dataType|type of the collected data, supported values:
-
-* "int32"
-* "uint32"
-* "int64"
-* "uint64"
-* "string"
-* "float".
-
+|dataType|<<const-dci-datatype,Type>> of the collected data
 |pollingInterval|polling interval in seconds or `0` for server-default value.
 |retentionTime|retention time in days or `0` for server-default value.
 |===
@@ -49,7 +27,7 @@ Instance of newly created <<class-dci>> of `null` if failed.
 .Example
 [.source]
 ....
->>> d = CreateDCI($node, "agent", "Agent.Version", "Agent Version", "string", 0, 0);
+>>> d = CreateDCI($node, DataSource::AGENT, "Agent.Version", "Agent Version", DCI::STRING, 0, 0);
 >>> println(d->id);
 145
 ....
