@@ -4,8 +4,6 @@
 
 Represent interface object. Inherit all attributes and methods of the <<class-netobj>> class.
 
-// TODO: formatting, types
-
 ==== Constants
 
 [[enum-interface-state]]
@@ -29,33 +27,312 @@ Represent interface object. Inherit all attributes and methods of the <<class-ne
 | 2    | Ignore
 |===
 
+[[enum-interface-types]]
+.Interface types
+|===
+| Code | Type
+
+| 1 |IFTYPE_OTHER
+| 2 |IFTYPE_REGULAR1822
+| 3 |IFTYPE_HDH1822
+| 4 |IFTYPE_DDN_X25
+| 5 |IFTYPE_RFC877_X25
+| 6 |IFTYPE_ETHERNET_CSMACD
+| 7 |IFTYPE_ISO88023_CSMACD
+| 8 |IFTYPE_ISO88024_TOKENBUS
+| 9 |IFTYPE_ISO88025_TOKENRING
+| 10 |IFTYPE_ISO88026_MAN
+| 11 |IFTYPE_STARLAN
+| 12 |IFTYPE_PROTEON_10MBIT
+| 13 |IFTYPE_PROTEON_80MBIT
+| 14 |IFTYPE_HYPERCHANNEL
+| 15 |IFTYPE_FDDI
+| 16 |IFTYPE_LAPB
+| 17 |IFTYPE_SDLC
+| 18 |IFTYPE_DS1
+| 19 |IFTYPE_E1
+| 20 |IFTYPE_BASIC_ISDN
+| 21 |IFTYPE_PRIMARY_ISDN
+| 22 |IFTYPE_PROP_PTP_SERIAL
+| 23 |IFTYPE_PPP
+| 24 |IFTYPE_SOFTWARE_LOOPBACK
+| 25 |IFTYPE_EON
+| 26 |IFTYPE_ETHERNET_3MBIT
+| 27 |IFTYPE_NSIP
+| 28 |IFTYPE_SLIP
+| 29 |IFTYPE_ULTRA
+| 30 |IFTYPE_DS3
+| 31 |IFTYPE_SMDS
+| 32 |IFTYPE_FRAME_RELAY
+| 33 |IFTYPE_RS232
+| 34 |IFTYPE_PARA
+| 35 |IFTYPE_ARCNET
+| 36 |IFTYPE_ARCNET_PLUS
+| 37 |IFTYPE_ATM
+| 38 |IFTYPE_MIOX25
+| 39 |IFTYPE_SONET
+| 40 |IFTYPE_X25PLE
+| 41 |IFTYPE_ISO88022LLC
+| 42 |IFTYPE_LOCALTALK
+| 43 |IFTYPE_SMDS_DXI
+| 44 |IFTYPE_FRAME_RELAY_SERVICE
+| 45 |IFTYPE_V35
+| 46 |IFTYPE_HSSI
+| 47 |IFTYPE_HIPPI
+| 48 |IFTYPE_MODEM
+| 49 |IFTYPE_AAL5
+| 50 |IFTYPE_SONET_PATH
+| 51 |IFTYPE_SONET_VT
+| 52 |IFTYPE_SMDS_ICIP
+| 53 |IFTYPE_PROP_VIRTUAL
+| 54 |IFTYPE_PROP_MULTIPLEXOR
+| 55 |IFTYPE_IEEE80212
+| 56 |IFTYPE_FIBRECHANNEL
+| 57 |IFTYPE_HIPPIINTERFACE
+| 58 |IFTYPE_FRAME_RELAY_INTERCONNECT
+| 59 |IFTYPE_AFLANE8023
+| 60 |IFTYPE_AFLANE8025
+| 61 |IFTYPE_CCTEMUL
+| 62 |IFTYPE_FAST_ETHERNET
+| 63 |IFTYPE_ISDN
+| 64 |IFTYPE_V11
+| 65 |IFTYPE_V36
+| 66 |IFTYPE_G703_AT64K
+| 67 |IFTYPE_G703_AT2MB
+| 68 |IFTYPE_QLLC
+| 69 |IFTYPE_FASTETHERFX
+| 70 |IFTYPE_CHANNEL
+| 71 |IFTYPE_IEEE80211
+| 72 |IFTYPE_IBM370_PARCHAN
+| 73 |IFTYPE_ESCON
+| 74 |IFTYPE_DLSW
+| 75 |IFTYPE_ISDNS
+| 76 |IFTYPE_ISDNU
+| 77 |IFTYPE_LAPD
+| 78 |IFTYPE_IPSWITCH
+| 79 |IFTYPE_RSRB
+| 80 |IFTYPE_ATMLOGICAL
+| 81 |IFTYPE_DS0
+| 82 |IFTYPE_DS0_BUNDLE
+| 83 |IFTYPE_BSC
+| 84 |IFTYPE_ASYNC
+| 85 |IFTYPE_CNR
+| 86 |IFTYPE_ISO88025DTR
+| 87 |IFTYPE_EPLRS
+| 88 |IFTYPE_ARAP
+| 89 |IFTYPE_PROPCNLS
+| 90 |IFTYPE_HOSTPAD
+| 91 |IFTYPE_TERMPAD
+| 92 |IFTYPE_FRAME_RELAY_MPI
+| 93 |IFTYPE_X213
+| 94 |IFTYPE_ADSL
+| 95 |IFTYPE_RADSL
+| 96 |IFTYPE_SDSL
+| 97 |IFTYPE_VDSL
+| 98 |IFTYPE_ISO88025CRFPINT
+| 99 |IFTYPE_MYRINET
+| 100 |IFTYPE_VOICEEM
+| 101 |IFTYPE_VOICEFXO
+| 102 |IFTYPE_VOICEFXS
+| 103 |IFTYPE_VOICEENCAP
+| 104 |IFTYPE_VOICEOVERIP
+| 105 |IFTYPE_ATMDXI
+| 106 |IFTYPE_ATMFUNI
+| 107 |IFTYPE_ATMIMA
+| 108 |IFTYPE_PPPMULTILINKBUNDLE
+| 109 |IFTYPE_IPOVERCDLC
+| 110 |IFTYPE_IPOVERCLAW
+| 111 |IFTYPE_STACKTOSTACK
+| 112 |IFTYPE_VIRTUAL_IP_ADDRESS
+| 113 |IFTYPE_MPC
+| 114 |IFTYPE_IPOVERATM
+| 115 |IFTYPE_ISO88025FIBER
+| 116 |IFTYPE_TDLC
+| 117 |IFTYPE_GIGABIT_ETHERNET
+| 118 |IFTYPE_HDLC
+| 119 |IFTYPE_LAPF
+| 120 |IFTYPE_V37
+| 121 |IFTYPE_X25MLP
+| 122 |IFTYPE_X25_HUNT_GROUP
+| 123 |IFTYPE_TRANSPHDLC
+| 124 |IFTYPE_INTERLEAVE
+| 125 |IFTYPE_FAST
+| 126 |IFTYPE_IP
+| 127 |IFTYPE_DOCSCABLE_MACLAYER
+| 128 |IFTYPE_DOCSCABLE_DOWNSTREAM
+| 129 |IFTYPE_DOCSCABLE_UPSTREAM
+| 130 |IFTYPE_A12MPPSWITCH
+| 131 |IFTYPE_TUNNEL
+| 132 |IFTYPE_COFFEE
+| 133 |IFTYPE_CES
+| 134 |IFTYPE_ATM_SUBINTERFACE
+| 135 |IFTYPE_L2VLAN
+| 136 |IFTYPE_L3IPVLAN
+| 137 |IFTYPE_L3IPXVLAN
+| 138 |IFTYPE_DIGITAL_POWERLINE
+| 139 |IFTYPE_MEDIAMAIL_OVER_IP
+| 140 |IFTYPE_DTM
+| 141 |IFTYPE_DCN
+| 142 |IFTYPE_IPFORWARD
+| 143 |IFTYPE_MSDSL
+| 144 |IFTYPE_IEEE1394
+| 145 |IFTYPE_GSN
+| 146 |IFTYPE_DVBRCC_MACLAYER
+| 147 |IFTYPE_DVBRCC_DOWNSTREAM
+| 148 |IFTYPE_DVBRCC_UPSTREAM
+| 149 |IFTYPE_ATM_VIRTUAL
+| 150 |IFTYPE_MPLS_TUNNEL
+| 151 |IFTYPE_SRP
+| 152 |IFTYPE_VOICE_OVER_ATM
+| 153 |IFTYPE_VOICE_OVER_FRAME_RELAY
+| 154 |IFTYPE_IDSL
+| 155 |IFTYPE_COMPOSITE_LINK
+| 156 |IFTYPE_SS7_SIGLINK
+| 157 |IFTYPE_PROPWIRELESSP2P
+| 158 |IFTYPE_FRFORWARD
+| 159 |IFTYPE_RFC1483
+| 160 |IFTYPE_USB
+| 161 |IFTYPE_IEEE8023ADLAG
+| 162 |IFTYPE_BGP_POLICY_ACCOUNTING
+| 163 |IFTYPE_FRF16MFR_BUNDLE
+| 164 |IFTYPE_H323_GATEKEEPER
+| 165 |IFTYPE_H323_PROXY
+| 166 |IFTYPE_MPLS
+| 167 |IFTYPE_MFSIGLINK
+| 168 |IFTYPE_HDSL2
+| 169 |IFTYPE_SHDSL
+| 170 |IFTYPE_DS1FDL
+| 171 |IFTYPE_POS
+| 172 |IFTYPE_DVBASI_IN
+| 173 |IFTYPE_DVBASI_OUT
+| 174 |IFTYPE_PLC
+| 175 |IFTYPE_NFAS
+| 176 |IFTYPE_TR008
+| 177 |IFTYPE_GR303RDT
+| 178 |IFTYPE_GR303IDT
+| 179 |IFTYPE_ISUP
+| 180 |IFTYPE_PROPDOCSWIRELESSMACLAYER
+| 181 |IFTYPE_PROPDOCSWIRELESSDOWNSTREAM
+| 182 |IFTYPE_PROPDOCSWIRELESSUPSTREAM
+| 183 |IFTYPE_HIPERLAN2
+| 184 |IFTYPE_PROPBWAP2MP
+| 185 |IFTYPE_SONET_OVERHEAD_CHANNEL
+| 186 |IFTYPE_DW_OVERHEAD_CHANNEL
+| 187 |IFTYPE_AAL2
+| 188 |IFTYPE_RADIOMAC
+| 189 |IFTYPE_ATMRADIO
+| 190 |IFTYPE_IMT
+| 191 |IFTYPE_MVL
+| 192 |IFTYPE_REACHDSL
+| 193 |IFTYPE_FRDLCIENDPT
+| 194 |IFTYPE_ATMVCIENDPT
+| 195 |IFTYPE_OPTICAL_CHANNEL
+| 196 |IFTYPE_OPTICAL_TRANSPORT
+| 197 |IFTYPE_PROPATM
+| 198 |IFTYPE_VOICE_OVER_CABLE
+| 199 |IFTYPE_INFINIBAND
+| 200 |IFTYPE_TELINK
+| 201 |IFTYPE_Q2931
+| 202 |IFTYPE_VIRTUALTG
+| 203 |IFTYPE_SIPTG
+| 204 |IFTYPE_SIPSIG
+| 205 |IFTYPE_DOCSCABLEUPSTREAMCHANNEL
+| 206 |IFTYPE_ECONET
+| 207 |IFTYPE_PON155
+| 208 |IFTYPE_PON622
+| 209 |IFTYPE_BRIDGE
+| 210 |IFTYPE_LINEGROUP
+| 211 |IFTYPE_VOICEEMFGD
+| 212 |IFTYPE_VOICEFGDEANA
+| 213 |IFTYPE_VOICEDID
+| 214 |IFTYPE_MPEG_TRANSPORT
+| 215 |IFTYPE_SIXTOFOUR
+| 216 |IFTYPE_GTP
+| 217 |IFTYPE_PDNETHERLOOP1
+| 218 |IFTYPE_PDNETHERLOOP2
+| 219 |IFTYPE_OPTICAL_CHANNEL_GROUP
+| 220 |IFTYPE_HOMEPNA
+| 221 |IFTYPE_GFP
+| 222 |IFTYPE_CISCO_ISL_VLAN
+| 223 |IFTYPE_ACTELIS_METALOOP
+| 224 |IFTYPE_FCIPLINK
+| 225 |IFTYPE_RPR
+| 226 |IFTYPE_QAM
+| 227 |IFTYPE_LMP
+| 228 |IFTYPE_CBLVECTASTAR
+| 229 |IFTYPE_DOCSCABLEMCMTSDOWNSTREAM
+| 230 |IFTYPE_ADSL2
+| 231 |IFTYPE_MACSECCONTROLLEDIF
+| 232 |IFTYPE_MACSECUNCONTROLLEDIF
+| 233 |IFTYPE_AVICIOPTICALETHER
+| 234 |IFTYPE_ATM_BOND
+| 235 |IFTYPE_VOICEFGDOS
+| 236 |IFTYPE_MOCA_VERSION1
+| 237 |IFTYPE_IEEE80216WMAN
+| 238 |IFTYPE_ADSL2PLUS
+| 239 |IFTYPE_DVBRCSMACLAYER
+| 240 |IFTYPE_DVBTDM
+| 241 |IFTYPE_DVBRCSTDMA
+| 242 |IFTYPE_X86LAPS
+| 243 |IFTYPE_WWANPP
+| 244 |IFTYPE_WWANPP2
+| 245 |IFTYPE_VOICEEBS
+| 246 |IFTYPE_IFPWTYPE
+| 247 |IFTYPE_ILAN
+| 248 |IFTYPE_PIP
+| 249 |IFTYPE_ALUELP
+| 250 |IFTYPE_GPON
+| 251 |IFTYPE_VDSL2
+| 252 |IFTYPE_CAPWAP_DOT11_PROFILE
+| 253 |IFTYPE_CAPWAP_DOT11_BSS
+| 254 |IFTYPE_CAPWAP_WTP_VIRTUAL_RADIO
+| 255 |IFTYPE_BITS
+| 256 |IFTYPE_DOCSCABLEUPSTREAMRFPORT
+| 257 |IFTYPE_CABLEDOWNSTREAMRFPORT
+| 258 |IFTYPE_VMWARE_VIRTUAL_NIC
+| 259 |IFTYPE_IEEE802154
+| 260 |IFTYPE_OTNODU
+| 261 |IFTYPE_OTNOTU
+| 262 |IFTYPE_IFVFITYPE
+| 263 |IFTYPE_G9981
+| 264 |IFTYPE_G9982
+| 265 |IFTYPE_G9983
+| 266 |IFTYPE_ALUEPON
+| 267 |IFTYPE_ALUEPONONU
+| 268 |IFTYPE_ALUEPONPHYSICALUNI
+| 269 |IFTYPE_ALUEPONLOGICALLINK
+| 270 |IFTYPE_ALUGPONONU
+| 271 |IFTYPE_ALUGPONPHYSICALUNI
+| 272 |IFTYPE_VMWARE_NIC_TEAM
+|===
+
 ==== Instance attributes
 
-`adminState`::
+`adminState => Integer`::
 Administrative <<enum-interface-state,state>> of the interface.
 
-`alias`::
+`alias => String`::
 Interface alias (usually value of SNMP ifAlias).
 
-`bridgePortNumber`::
+`bridgePortNumber => Integer`::
 Bridge port number for this interface.
 
-`chassis`::
-Parent chassis
+`chassis => <<class-chassis>>`::
+Parent <<class-chassis>>
 
-`description`::
+`description => String`::
 Interface description
 
-`dot1xBackendAuthState`::
+`dot1xBackendAuthState => Integer`::
 802.1x back-end authentication state
 
-`dot1xPaeAuthState`::
+`dot1xPaeAuthState => Integer`::
 802.1x PAE authentication state
 
-`expectedState`::
+`expectedState => Integer`::
 <<enum-interface-expected-state,Expected state>> of the interface.
 
-`flags`
+`flags => Integer`::
 Interface flags (bit mask, `uint32`).
 
 `icmpAverageRTT => Integer`::
@@ -73,70 +350,67 @@ ICMP minimal response time for current interface. Will return null if no informa
 `icmpPacketLoss => Integer`::
 ICMP packet loss for current interface. Will return null if no information.
 
-`ifIndex`::
+`ifIndex => Integer`::
 Interface index.
 
-`ifType`::
-Interface type
+`ifType => Integer`::
+<<enum-interface-types,Interface type>>
 
-`ipAddressList -> ?`::
-// TODO: 
+`ipAddressList => Array`::
+Array with <<class-inetaddress>> objects, that represent all adresses that has this interface
 
-`ipNetMask`::
-IP network mask (number of bits).
-
-`isExcludedFromTopology`::
+`isExcludedFromTopology => Boolean`::
 `TRUE` if this interface excluded from network topology
 
-`isIncludedInIcmpPoll`::
+`isIncludedInIcmpPoll => Boolean`::
 `TRUE` if this interface is included in ICMP statistics
 
-`isLoopback`::
+`isLoopback => Boolean`::
 `TRUE` if this interface is a loopback
 
-`isManuallyCreated`::
+`isManuallyCreated => Boolean`::
 `TRUE` if this interface object was created manually by NetXMS administrator
 
-`isPhysicalPort`::
+`isPhysicalPort => Boolean`::
 `TRUE` if this interface object represents physical port
 
-`macAddr`::
+`macAddr => String`::
 String representation of MAC address separated by ":".
 
-`module`::
+`module => Integer`::
 Module
 
-`mtu`::
+`mtu => Integer`::
 Interface MTU (0 if unknown).
 
-`node`::
+`node => <<class-node>>`::
 Parent node object
 
-`operState`::
+`operState => Integer`::
 Operational <<enum-interface-state,state>>.
 
-`peerInterface`::
+`peerInterface => <class-inteface>`::
 Peer interface object if known, otherwise `null`.
 
-`peerNode`::
+`peerNode => <<class-node>>`::
 Peer <<class-node,node object>> if known, otherwise `null`.
 
 `pic => Integer`::
 Phisical location.
 
-`port= > Integer`::
+`port => Integer`::
 Port number.
 
 `speed`::
 Speed of the interface.
 
-`vlans -> ?`::
-// TODO: 
+`vlans => Array`::
+Array with this inteface <<class-vlan, vlan objects>>
 
-`zone`::
+`zone => <<class-zone>>`::
 <<class-zone>> object (null if zoning is disabled).
 
-`zoneUIN -> Integer`::
+`zoneUIN => Integer`::
 Zone UIN of this interface.
 
 ==== Instance methods

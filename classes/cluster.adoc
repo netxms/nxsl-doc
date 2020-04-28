@@ -6,18 +6,18 @@ Object represent cluster, extends <<class-datacollectiontarget>>
 
 ==== Instance attributes
 
-`nodes`::
-// TODO: 
+`nodes => Array`::
+Will return all nodes of class <<class-node>>, that are under this cluster
 
-`zone`::
-// TODO: 
+`zone => <<class-zone>>`::
+Will return zone this cluster is under
 
-`zoneUIN`::
-// TODO: 
+`zoneUIN => Integer`::
+Will return zone UIN this cluster is under
 
 ==== Instance methods
 
-`getResourceOwner(name) => Node`::
+`getResourceOwner(name) => <<class-node>>`::
 Get node which currently owns named resource.
 
 .Parameters

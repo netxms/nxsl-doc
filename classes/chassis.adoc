@@ -2,27 +2,39 @@
 [[class-chassis]]
 === Chassis
 
-// TODO: 
+Object represent chassis, extends <<class-datacollectiontarget>>
 
 ==== Instance attributes
 
-`controller`::
-// TODO: 
+`controller => <<class-node>>`::
+Chassis controller node
 
-`controllerId`::
-// TODO: 
+`controllerId => Integer`::
+Chassis controller's node id
 
 `flags`::
-// TODO: 
+<<chassis-flags,Bit flags>> 
 
-`rack`::
-// TODO: 
+`rack => <<class-netobj>>`::
+Will return Rack object as <<class-netobj>> if chassis is added in rack
 
-`rackId`::
-// TODO: 
+`rackId => Integer`::
+Will return Rack id if chassis is added in rack
 
-`rackHeight`::
-// TODO: 
+`rackHeight => Integer`::
+Object height in rack 
 
-`rackPosition`::
-// TODO: 
+`rackPosition => Integer`::
+Object position in rack 
+
+==== Constants
+
+[[chassis-flags]]
+[cols="1,4a"]
+.Access point state
+|===
+| Description | Value
+
+|Bind under controller  
+|0x00000001
+|===

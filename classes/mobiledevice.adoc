@@ -2,30 +2,30 @@
 [[class-mobiledevice]]
 === MobileDevice
 
-// TODO: 
+Class that represents mobile device object, extends <<class-datacollectiontarget>>
 
 ==== Instance attributes
 
-`batteryLevel -> ?`::
-// TODO: 
+`batteryLevel => Integer`::
+Battery percentage
 
-`deviceId -> ?`::
-// TODO: 
+`deviceId => String`::
+Device id
 
-`model -> ?`::
-// TODO: 
+`model => String`::
+Device model
 
-`osName -> ?`::
-// TODO: 
+`osName => String`::
+OS name installed on device
 
-`osVersion -> ?`::
-// TODO: 
+`osVersion => String`::
+OS version
 
-`serialNumber -> ?`::
-// TODO: 
+`serialNumber => String`::
+Serial number 
 
-`userId -> ?`::
-// TODO: 
+`userId => String`::
+User id
 
-`vendor -> ?`::
-// TODO: 
+`vendor => String`::
+Vendor

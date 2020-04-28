@@ -36,6 +36,9 @@ Helpdesk state:
 `id => Number`::
 Unique identifier of the alarm.
 
+`impact => String`::
+Alarm impact text
+
 `key => String`::
 Alarm key.
 
@@ -47,6 +50,9 @@ Alarm message.
 
 `originalSeverity => Number`::
 Original severity of the alarm.
+
+`parentId => Number`::
+Parent alarm id
 
 `repeatCount => Number`::
 Repeat count.

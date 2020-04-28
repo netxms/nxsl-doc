@@ -1,0 +1,44 @@
+[.nxsl-class]
+[[class-sensor]]
+=== Sensor
+
+Object represent sensor, extends <<class-datacollectiontarget>>
+
+==== Instance attributes
+
+`description => String`::
+Description
+
+`frameCount => Integer`::
+Frame count
+
+`metaType => String`::
+Meta type
+
+`protocol => Integer`::
+Communication protocol
+
+`serial => String`::
+Serial number
+
+`type => Integer`::
+<<sensor-type>
+
+`vendor => String`::
+Vendor
+
+==== Constants
+
+[[sensor-type]]
+[cols="1,4a"]
+.Sensor type
+|===
+| Description | Value
+
+|Unknown
+|1
+|LoraWAN
+|2
+|DLMS
+|3
+|===

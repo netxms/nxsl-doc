@@ -15,5 +15,5 @@ link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the alarm commen
 `userId => Number`::
 ID of user who last modified this alarm commant.
 
-`text => Number`::
+`text => String`::
 Alarm comment text.
