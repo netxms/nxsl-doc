@@ -51,6 +51,9 @@ Primary IP address.
 `isInMaintenanceMode => Boolean`::
 Maintenance mode indicator (`true` if object currently is in maintenace mode).
 
+`maintenanceInitiator => Integer`::
+Maintenance initiator user id
+
 `mapImage => String`::
 GUID of object image used for representation on the maps.
 

@@ -4,24 +4,22 @@
 
 Represents an SNMP varbind concept in NetXMS. A varbind logically consists of an OID and a value.
 
-// TODO: 
-
 ==== Instance attributes
 
-`name`::
+`name => String`::
 Object name (OID string).
 
-`printableValue`::
+`printableValue => String`::
 Object value as a printable string.
 
-`type`::
+`type => Integer`::
 ASN.1 type.
 
-`value`::
+`value => String`::
 Object value as a string.
 
-`valueAsIp`::
+`valueAsIp => String`::
 Object value IP address, represented as string.
 
-`valueAsMac`::
+`valueAsMac => String`::
 Object value as MAC address, represented as string.
