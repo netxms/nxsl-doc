@@ -2,33 +2,62 @@
 [[json-array]]
 === JSON array
 
-Represents JSON object
+Represents JSON array object
 
 ==== Instance methods
 
 `append(value) => void`::
 Appends value to JSON array.
 
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value|?|Add value to JSON array. Value type may vary. 
+|===
+
 `get(index) => ?`::
-Retruns aarray value by the index. Value type depensd on the type used in JSON.
+Returns array value by the index. Value type depends on the type used in JSON.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|index|Integer|Index of element in array
+|===
 
 .Return 
-Arrtubute value
+Attribute value
 
 `insert(index, value) => void`::
 Sets value to the provided index in JSON array, moving existing element in this position
 
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|index|Integer|Index of element in array
+|value|?|Add value to JSON array. Value type may vary.
+|===
+
 `serialize() => String`::
 Returns string with serialized JSON
 
-`set(index, value) => void`::
-Sets value to the provided index in JSON array, replasing existing element in this position
-
 .Return 
-String with JSON
+String with serialized JSON
 
+`set(index, value) => void`::
+Sets value to the provided index in JSON array, in place of existing element in this position
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|index|Integer|Index of element in array
+|value|?|Add value to JSON array. Value type may vary.
+|===
 
 ==== Constructors
 
 `JsonArray()`::
 Creates new JSON array.
+
+.Return
+
+JsonArray object 

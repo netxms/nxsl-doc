@@ -31,27 +31,133 @@ Title of table.
 
 ==== Instance methods
 
-`addColumn(name, [type], [displayName], [isInstance]) => Number`::
-// TODO: 
+`addColumn(name, [type], [displayName], [isInstance]) => Integer`::
 
-`addRow() => Number`::
-// TODO: 
+Adds column to table
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Column name
+|type|Integer|<<const-dci-datatype,Data type>>, optional parameter. Default is String
+|displayName|String|Column display name
+|isInstance|Boolean|`True` if column is instance column
+|===
+
+.Return 
+
+Column index
+
+`addRow() => Integer`::
+
+Adds row to table
+
+.Return 
+
+Row index
 
 `deleteColumn(columnId) => void`::
-// TODO: 
+
+Delete column
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|columnId|Integer|Column index
+|===
 
 `deleteRow(rowId) => void`::
-// TODO: 
+
+Delete row
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|rowId|Integer|Row index
+|===
+
+`findRowByInstance(instance) => <<class-tablerow>>`::
+
+Finds row by instance
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|instance|String|Instance string
+|===
+
+.Return 
+<<class-tablerow, Table row>> that corresponds to provided instance
+
+`findRowIndexByInstance(instance) => Integer`::
+
+Finds row index by instance
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|instance|String|Instance string
+|===
+
+.Return 
+Table row index corresponds to provided instance
 
 `get(rowId, columnId) => String`::
-// TODO: 
 
-`getColumnIndex(columnName) => Number`::
-// TODO: 
+Get cell value by row and column id
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|rowId|Integer|Row index
+|columnId|Integer|Column index
+|===
+
+.Return 
+
+Cell value as string
+
+`getColumnIndex(columnName) => Integer`::
+
+Get column index by column name
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|columnName|String|Column name 
+|===
+
+.Return 
+
+Column name
 
 `getColumnName(columnId) => String`::
-// TODO: 
+
+Get column name by column index
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|columnName|Integer|Column name 
+|===
+
+.Return 
+
+Column index
 
 `set(rowId, columnId, value) => void`::
-// TODO: 
+
+Set column value by row and column index
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|rowId|Integer|Row index
+|columnId|Integer|Column index
+|value|String|New value
+|===
+
+.Return 
+
+Column index 
 

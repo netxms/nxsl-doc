@@ -2,20 +2,43 @@
 [[class-tablerow]]
 === TableRow
 
-// TODO: 
+Represents table row definition object (used by Table class).
 
 ==== Instance attributes
 
-`index => Number`::
-// TODO: 
+`index => Integer`::
+Row index number
+
+`instance => String`::
+Row instance name
 
 `values => Array<String>`::
-// TODO: 
+Row values for all columns
 
 ==== Instance methods
 
 `get(columnId) => String`::
-// TODO: 
+
+Get cell value 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|columnId|Integer|Column id
+|===
+
+.Return 
+
+Cell value
 
 `set(columnId, value) => void`::
-// TODO: 
+
+Set cell value 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|columnId|Integer|Column id
+|value|Integer|New cell value
+|===
+

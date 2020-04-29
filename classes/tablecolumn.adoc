@@ -4,18 +4,16 @@
 
 Represents table column definition object (used by Table class).
 
-// TODO:
-
 ==== Instance attributes
 
-`dataType`::
-Data type
+`dataType => Integer`::
+<<const-dci-datatype,Data type>>
 
-`displayName`::
+`displayName => String`::
 Display name
 
-`isInstanceColumn`::
+`isInstanceColumn => Boolean`::
 `TRUE` if column is marked as instance column
 
-`name`::
+`name => String`::
 Column name

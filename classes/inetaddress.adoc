@@ -2,44 +2,62 @@
 [[class-inetaddress]]
 === InetAddress
 
-// TODO: 
+Object that contains all information about network address
 
 ==== Instance attributes
 
-`address -> ?`::
-// TODO:
+`address => String`::
+IP address
 
-`family -> ?`::
-// TODO: 
+`family => String`::
+Internet address, one of:
 
-`isAnyLocal -> ?`::
-// TODO: 
+ * inet
+ * inet6
+ * unspec
 
-`isBroadcast -> ?`::
-// TODO: 
+`isAnyLocal => Boolean`::
+`TRUE` if address is a wildcard address
 
-`isLinkLocal -> ?`::
-// TODO: 
+`isBroadcast => Boolean`::
+`TRUE` if address is a broadcast address
 
-`isLoopback -> ?`::
-// TODO: 
+`isLinkLocal => Boolean`::
+`TRUE` if address is a link local address
 
-`isMulticast -> ?`::
-// TODO: 
+`isLoopback => Boolean`::
+`TRUE` if address is a loopback address
 
-`isValid -> ?`::
-// TODO: 
+`isMulticast => Boolean`::
+`TRUE` if address is a multicast address
 
-`isValidUnicast -> ?`::
-// TODO: 
+`isValid => Boolean`::
+`TRUE` if address valid
 
-`mask -> ?`::
-// TODO: 
+`isValidUnicast => Boolean`::
+`TRUE` if address valid unicast
+
+`mask => Integer`::
+Address bit mask
 
 ==== Constructors
 
 `InetAddress()`::
-// TODO: 
+Constructor for internet address
 
-`InetAddress(string)`::
-// TODO: 
+.Return
+
+InetAddress object 
+
+`InetAddress(address)`::
+Constructor for internet address
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|address|String|IP address as a string
+|===
+
+.Return
+
+InetAddress object 

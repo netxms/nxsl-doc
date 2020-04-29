@@ -48,7 +48,7 @@ List of event parameters. Starting index is 1.
 List of named event parameters (e.g. "dciId"), which can be accessed by `+object->parameterName+`.
 
 `rootId => Number64`::
-//TODO:
+Id of event that is root cause of this event or 0 if there is no such event.
 
 `severity => Number`::
 Event severity code. Get/set attribute.

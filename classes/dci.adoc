@@ -28,10 +28,10 @@ Number of consecutive data collection errors
 Unique DCI identifier
 
 `instance => String`::
-DCI instance (only for single value DCIs)
+DCI instance name (only for single value DCIs): %{instance-name}
 
 `instanceData => String`::
-// TODO: 
+DCI instance (only for single value DCIs): %{instance}
 
 `lastPollTime => Integer64`::
 Time of last DCI poll (either successful or not) as number of seconds since epoch (1 Jan 1970 00:00:00 UTC)

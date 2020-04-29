@@ -6,11 +6,11 @@ Represents geographical location (defined by latitude and longitude).
 
 ==== Instance attributes
 
-`isManual => ?`::
-// TODO: 
+`isManual => Boolean`::
+`TRUE` if location is entered manually
 
-`isValid -> ?`::
-// TODO: 
+`isValid => Boolean`::
+`TRUE` if location is valid
 
 `latitude => Number`::
 Latitude as floating point number
