@@ -2,24 +2,28 @@
 [[func-arraytostring]]
 == ArrayToString()
 
-// TODO: add description
-
 [source,c]
 ----
-ArrayToString() => void
+ArrayToString(array,separator) => String
 ----
 
-…
+Convert array to string
 
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
-||
+|array|Array|Array with elements to concatenate
+|separator|String|Separator between array elements
 |===
 
 .Return
 
+Concatenated string
+
 .Example
 [.source]
-....
-....
+----
+a = %(1, 2, 3, 4);
+b = ArrayToString(a, ";");
+println(b); // will print "1;2;3;4"
+----
