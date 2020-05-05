@@ -1,0 +1,49 @@
+[.nxsl-class]
+[[class-discoveredinterface]]
+=== Discovered Interface
+
+Represent discovered interface objects in <<class-discoverednode,discovered node class>>
+
+==== Instance attributes
+
+`alias => String`::
+Interface alias (usually value of SNMP ifAlias).
+
+`chassis => Integer`::
+Chassis id
+
+`description => String`::
+Interface description
+
+`index => Integer`::
+Interface index.
+
+`ipAddressList => Array`::
+Array with <<class-inetaddress>> objects, that represent all adresses that has this interface
+
+`isPhysicalPort => Boolean`::
+`TRUE` if this interface object represents physical port
+
+`macAddr => String`::
+String representation of MAC address separated by ":".
+
+`module => Integer`::
+Module
+
+`mtu => Integer`::
+Interface MTU (0 if unknown).
+
+`name => String`::
+Interface name
+
+`pic => Integer`::
+Phisical location.
+
+`port => Integer`::
+Port number.
+
+`speed => Integer64`::
+Speed of the interface.
+
+`type => Integer`::
+<<enum-interface-types,Interface type>>

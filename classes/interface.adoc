@@ -4,6 +4,146 @@
 
 Represent interface object. Inherit all attributes and methods of the <<class-netobj>> class.
 
+==== Instance attributes
+
+`adminState => Integer`::
+Administrative <<enum-interface-state,state>> of the interface.
+
+`alias => String`::
+Interface alias (usually value of SNMP ifAlias).
+
+`bridgePortNumber => Integer`::
+Bridge port number for this interface.
+
+`chassis => <<class-chassis>>`::
+Parent <<class-chassis>>
+
+`description => String`::
+Interface description
+
+`dot1xBackendAuthState => Integer`::
+802.1x back-end authentication state
+
+`dot1xPaeAuthState => Integer`::
+802.1x PAE authentication state
+
+`expectedState => Integer`::
+<<enum-interface-expected-state,Expected state>> of the interface.
+
+`flags => Integer`::
+Interface flags (bit mask, `uint32`).
+
+`icmpAverageRTT => Integer`::
+ICMP average response time for current interface. Will return null if no information.
+
+`icmpLastRTT => Integer`::
+ICMP last response time for current interface. Will return null if no information.
+
+`icmpMaxRTT => Integer`::
+ICMP maximal response time for current interface. Will return null if no information.
+
+`icmpMinRTT => Integer`::
+ICMP minimal response time for current interface. Will return null if no information.
+
+`icmpPacketLoss => Integer`::
+ICMP packet loss for current interface. Will return null if no information.
+
+`ifIndex => Integer`::
+Interface index.
+
+`ifType => Integer`::
+<<enum-interface-types,Interface type>>
+
+`ipAddressList => Array`::
+Array with <<class-inetaddress>> objects, that represent all adresses that has this interface
+
+`isExcludedFromTopology => Boolean`::
+`TRUE` if this interface excluded from network topology
+
+`isIncludedInIcmpPoll => Boolean`::
+`TRUE` if this interface is included in ICMP statistics
+
+`isLoopback => Boolean`::
+`TRUE` if this interface is a loopback
+
+`isManuallyCreated => Boolean`::
+`TRUE` if this interface object was created manually by NetXMS administrator
+
+`isPhysicalPort => Boolean`::
+`TRUE` if this interface object represents physical port
+
+`macAddr => String`::
+String representation of MAC address separated by ":".
+
+`module => Integer`::
+Module
+
+`mtu => Integer`::
+Interface MTU (0 if unknown).
+
+`node => <<class-node>>`::
+Parent node object
+
+`operState => Integer`::
+Operational <<enum-interface-state,state>>.
+
+`peerInterface => <class-inteface>`::
+Peer interface object if known, otherwise `null`.
+
+`peerNode => <<class-node>>`::
+Peer <<class-node,node object>> if known, otherwise `null`.
+
+`pic => Integer`::
+Phisical location.
+
+`port => Integer`::
+Port number.
+
+`speed => Integer64`::
+Speed of the interface.
+
+`vlans => Array`::
+Array with this inteface <<class-vlan, vlan objects>>
+
+`zone => <<class-zone>>`::
+<<class-zone>> object (null if zoning is disabled).
+
+`zoneUIN => Integer`::
+Zone UIN of this interface.
+
+==== Instance methods
+
+`setExcludeFromTopology(excluded) => void`::
+
+Change `isExcludedFromTopology` flag.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|excluded|Boolean|`TRUE` if interface should be excluded.
+|===
+
+`setExpectedState(newState) => void`::
+
+Set expected state to `newState`.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|newState|Number|New state as defined by <<enum-interface-expected-state>>.
+|===
+
+`setIncludeInIcmpPoll(enabled) => void`::
+
+Enabele/Disable ICMP statistics collection for current interface.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|enabled|Boolean|If this interface should be included in ICMP statistics.
+|===
+
+
 ==== Constants
 
 [[enum-interface-state]]
@@ -305,143 +445,3 @@ Represent interface object. Inherit all attributes and methods of the <<class-ne
 | 271 |IFTYPE_ALUGPONPHYSICALUNI
 | 272 |IFTYPE_VMWARE_NIC_TEAM
 |===
-
-==== Instance attributes
-
-`adminState => Integer`::
-Administrative <<enum-interface-state,state>> of the interface.
-
-`alias => String`::
-Interface alias (usually value of SNMP ifAlias).
-
-`bridgePortNumber => Integer`::
-Bridge port number for this interface.
-
-`chassis => <<class-chassis>>`::
-Parent <<class-chassis>>
-
-`description => String`::
-Interface description
-
-`dot1xBackendAuthState => Integer`::
-802.1x back-end authentication state
-
-`dot1xPaeAuthState => Integer`::
-802.1x PAE authentication state
-
-`expectedState => Integer`::
-<<enum-interface-expected-state,Expected state>> of the interface.
-
-`flags => Integer`::
-Interface flags (bit mask, `uint32`).
-
-`icmpAverageRTT => Integer`::
-ICMP average response time for current interface. Will return null if no information.
-
-`icmpLastRTT => Integer`::
-ICMP last response time for current interface. Will return null if no information.
-
-`icmpMaxRTT => Integer`::
-ICMP maximal response time for current interface. Will return null if no information.
-
-`icmpMinRTT => Integer`::
-ICMP minimal response time for current interface. Will return null if no information.
-
-`icmpPacketLoss => Integer`::
-ICMP packet loss for current interface. Will return null if no information.
-
-`ifIndex => Integer`::
-Interface index.
-
-`ifType => Integer`::
-<<enum-interface-types,Interface type>>
-
-`ipAddressList => Array`::
-Array with <<class-inetaddress>> objects, that represent all adresses that has this interface
-
-`isExcludedFromTopology => Boolean`::
-`TRUE` if this interface excluded from network topology
-
-`isIncludedInIcmpPoll => Boolean`::
-`TRUE` if this interface is included in ICMP statistics
-
-`isLoopback => Boolean`::
-`TRUE` if this interface is a loopback
-
-`isManuallyCreated => Boolean`::
-`TRUE` if this interface object was created manually by NetXMS administrator
-
-`isPhysicalPort => Boolean`::
-`TRUE` if this interface object represents physical port
-
-`macAddr => String`::
-String representation of MAC address separated by ":".
-
-`module => Integer`::
-Module
-
-`mtu => Integer`::
-Interface MTU (0 if unknown).
-
-`node => <<class-node>>`::
-Parent node object
-
-`operState => Integer`::
-Operational <<enum-interface-state,state>>.
-
-`peerInterface => <class-inteface>`::
-Peer interface object if known, otherwise `null`.
-
-`peerNode => <<class-node>>`::
-Peer <<class-node,node object>> if known, otherwise `null`.
-
-`pic => Integer`::
-Phisical location.
-
-`port => Integer`::
-Port number.
-
-`speed`::
-Speed of the interface.
-
-`vlans => Array`::
-Array with this inteface <<class-vlan, vlan objects>>
-
-`zone => <<class-zone>>`::
-<<class-zone>> object (null if zoning is disabled).
-
-`zoneUIN => Integer`::
-Zone UIN of this interface.
-
-==== Instance methods
-
-`setExcludeFromTopology(excluded) => void`::
-
-Change `isExcludedFromTopology` flag.
-
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|excluded|Boolean|`TRUE` if interface should be excluded.
-|===
-
-`setExpectedState(newState) => void`::
-
-Set expected state to `newState`.
-
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|newState|Number|New state as defined by <<enum-interface-expected-state>>.
-|===
-
-`setIncludeInIcmpPoll(enabled) => void`::
-
-Enabele/Disable ICMP statistics collection for current interface.
-
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|enabled|Boolean|If this interface should be included in ICMP statistics.
-|===
-
