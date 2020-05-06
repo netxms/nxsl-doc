@@ -2,26 +2,30 @@
 [[func-createnode]]
 == CreateNode()
 
-// TODO: add description
+NOTE: This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 [source,c]
 ----
-CreateNode() => void
+CreateNode(parent, name, primaryHostName, zoneUIN) => Node
 ----
 
-AF_ENABLE_NXSL_CONTAINER_FUNCS
-
-…
+Create node object.
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
-||
+|parent|<<class-netobj>>|Parent object
+|name|String|Name for new node
+|primaryHostName|String|Primary host name for new node (optional)
+|zoneUIN|Integer|zone UIN (optional)
 |===
 
 .Return
 
+New <<class-node,node object>> or null on failure
+
 .Example
 [.source]
-....
-....
+----
+CreateNode(FindObject(2), "SERVER", "10.10.10.1");    // Create node directly under "Infrastructure Services"
+----

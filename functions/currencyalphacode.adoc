@@ -2,24 +2,25 @@
 [[func-currencyalphacode]]
 == CurrencyAlphaCode()
 
-// TODO: add description
-
 [source,c]
 ----
-CurrencyAlphaCode() => void
+CurrencyAlphaCode(code) => String
 ----
 
-…
+Get currency alpha code from numeric code
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
-||
+|code|String|Numeric code as a string
 |===
 
 .Return
 
+Currency alpha code form numeric code
+
 .Example
 [.source]
-....
-....
+----
+print CurrencyAlphaCode("978"); // Will print "EUR"
+----

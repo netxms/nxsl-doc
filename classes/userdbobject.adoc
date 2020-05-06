@@ -10,7 +10,7 @@ Base class for <<class-user>> and <<class-user-group>> with common fields
 Description
 
 `flags => Integer`::
-?
+Flags
 
 `guid => String`::
 GUID

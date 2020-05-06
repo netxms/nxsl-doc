@@ -2,24 +2,24 @@
 [[func-cosh]]
 == cosh()
 
-// TODO: add description
-
 [source,c]
 ----
-cosh() => void
+cosh(x) => Number
 ----
 
-…
+Calculates hyperbolic cosine x
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
-||
+|x|Number|Angle in rad
 |===
 
 .Return
+Result of hyperbolic cosine for this angle
 
 .Example
 [source,c]
 ----
+print cosh(0.5); //will print 0.877583
 ----

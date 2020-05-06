@@ -26,7 +26,7 @@ foreach(t : templates)
 Reads server internal object metric (metric with source "Internal").
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Metric name.
 |===

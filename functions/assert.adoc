@@ -10,7 +10,7 @@ assert(expression) => void
 Check if given value is `TRUE`
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
 |expression|Boolean|Expression or value to evaluate
 |===

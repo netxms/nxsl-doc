@@ -15,7 +15,7 @@ SNMP version used by the transport. Can be "1", "2c" or "3"
 Get the object value from specific node with SNMP GET request. The node and all SNMP communication details defined by SNMP transport. Will return null on failure.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |oid|String|SNMP object id.
 |===
@@ -24,7 +24,7 @@ Get the object value from specific node with SNMP GET request. The node and all 
 Get the object value from specific node with SNMP GET request. The node and all SNMP communication details defined by SNMP transport. This function is similar to SNMPGet but returns string instead of an SNMP_VarBind object. Will return null on failure.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |oid|String|SNMP object id.
 |===
@@ -33,7 +33,7 @@ Get the object value from specific node with SNMP GET request. The node and all 
 Assign a specific value to the given SNMP object for the node. The node and all SNMP communication details defined by SNMP transport. Will return TRUE on success, FALSE in case of failure.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |oid|String|SNMP object id.
 |oid|String|Value to assign to oid.
@@ -44,7 +44,7 @@ Assign a specific value to the given SNMP object for the node. The node and all 
 Get an array of the <<class-snmp_varbind>> from specific node with SNMP WALK request. The node and all SNMP communication details defined by SNMP transport. Will return null on failure.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |oid|String|SNMP object id.
 |===

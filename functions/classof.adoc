@@ -16,7 +16,6 @@ Return class name of the `instance`.
 |===
 
 .Return
-
 Class name.
 
 .Example

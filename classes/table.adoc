@@ -4,8 +4,6 @@
 
 Represents table object (usually it's value of table DCI).
 
-// TODO
-
 ==== Instance attributes
 
 `columnCount => Number`::

@@ -271,7 +271,7 @@ This node zone UIN
 Create SNMP transport object of class <<class-snmp_transport>> with communication settings defined on the node. 
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |port|Integer|Optional parameter with port.
 |context|String|Optional parameter with context.
@@ -281,7 +281,7 @@ Create SNMP transport object of class <<class-snmp_transport>> with communicatio
 Enable or disable usage of NetXMS agent for all polls.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If agent usage should be enabled. 
 |===
@@ -290,7 +290,7 @@ Enable or disable usage of NetXMS agent for all polls.
 Enable or disable configuration polling for a node
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If configuration polling should be enabled. 
 |===
@@ -299,7 +299,7 @@ Enable or disable configuration polling for a node
 Enable or disable discovery polling.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If discovery polling should be enabled. 
 |=== 
@@ -317,7 +317,7 @@ Enable or disable usage of EtherNet/IP for polls.
 Enable or disable usage of ICMP pings for status polls.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If ICMP pings should be enabled. 
 |=== 
@@ -335,7 +335,7 @@ Enable or disable usage of ICMP ping for primary IP.
 Enable or disable routing table polling.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If routing table polls should be enabled. 
 |=== 
@@ -353,7 +353,7 @@ Enable or disable usage of SNMP for all polls.
 Enable or disable status polling for a node.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If status polls should be enabled. 
 |=== 
@@ -362,7 +362,7 @@ Enable or disable status polling for a node.
 Enable or disable topology polling.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If topology polls should be enabled. 
 |=== 
@@ -371,7 +371,7 @@ Enable or disable topology polling.
 Execute SSH command on node.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |command|String|Command to be executed. 
 |=== 
@@ -389,7 +389,7 @@ Get interface object by index.
 Get interface name by index.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |ifIndex|Integer|Index of interface. 
 |=== 
@@ -409,7 +409,7 @@ Reads current value of agent metric.
 Reads current value of agent list metric and returns array of strings.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|List name. 
 |=== 
@@ -429,7 +429,7 @@ Reads current value of agent table metric and returns <<class-table>>.
 Request driver-specific metric directly from network device driver (e.g. Rital).
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|List name. 
 |=== 

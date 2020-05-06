@@ -98,7 +98,7 @@ This method is disabled by default and should be explicitly enabled by setting c
 Bind `childObject` to the current object as a child.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|<<class-netobj>>|Object to bind as a child to the current object.
 |===
@@ -112,7 +112,7 @@ This method is disabled by default and should be explicitly enabled by setting c
 Bind current object to `parentObject` as a child.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|<<class-netobj>>|Object to bind as a parent to the current object.
 |===
@@ -129,7 +129,7 @@ Deletes current object.
 Delete custom attribute.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Name of the attribute to delete.
 |===
@@ -143,7 +143,7 @@ Enable maintenance mode for the object.
 Returns value of the custom attribute with the provided name.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Name of the attribute to get value form.
 |===
@@ -159,7 +159,7 @@ Sets object to managed state. Has no affect if object already managed.
 Rename object.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|New object name
 |===
@@ -168,7 +168,7 @@ Rename object.
 Set object comments
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |comment|String|Comment to be set
 |===
@@ -177,7 +177,7 @@ Set object comments
 Update or create custom attribute with the given key and value.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |key|String|Attribute key
 |value|String|Attribute value
@@ -188,7 +188,7 @@ Update or create custom attribute with the given key and value.
 Sets node geographical <<class-geolocation,location>>.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |newLocation|<<class-geolocation>>|
 |===
@@ -197,7 +197,7 @@ Sets node geographical <<class-geolocation,location>>.
 Sets object image, that will be used to display object on network map
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |image|String|GUID or name of image from image library
 |===
@@ -206,7 +206,7 @@ Sets object image, that will be used to display object on network map
 Sets status calculation method.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |type|Integer|Status calculation type. One of <<enum-status-calculation-type>>
 |...|Integer(s)|If single threshold or multiple thresholds type is selected, then threshold or thresholds in percentage should be provided as next parameters.
@@ -216,7 +216,7 @@ Sets status calculation method.
 Sets status propagation method.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |type|Integer|Status propagation type. One of <<enum-status-propagation-type>>
 |...|Integer(s)| For fixed value type - value (<<const-object-status>>) should be provided. For relative - offset should be provided. For severity - severity mapping should be provided (4 numbers <<const-object-status>>).
@@ -231,7 +231,7 @@ This method is disabled by default and should be explicitly enabled by setting c
 Unbind provided object from the current object.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|<<class-netobj>>|Object to unbind from the current object.
 |===
@@ -245,7 +245,7 @@ This method is disabled by default and should be explicitly enabled by setting c
 Unbind current object from the provided object.
 
 .Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|<<class-netobj>>|Object to unbind from the current object.
 |===

@@ -2,24 +2,24 @@
 [[func-cos]]
 == cos()
 
-// TODO: add description
-
 [source,c]
 ----
-cos() => void
+cos(x) => Number
 ----
 
-…
+Calculates cosine from given angle in radians. 
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
-||
+|x|Number|Angle in rad
 |===
 
 .Return
+Result of cosine for this angle
 
 .Example
 [source,c]
 ----
+print cos(0.5); //will print 0.877583
 ----
