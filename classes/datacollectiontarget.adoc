@@ -22,6 +22,19 @@ foreach(t : templates)
 
 ==== Instance methods
 
+`applyTemplate(template) => void`::
+
+[NOTE]
+This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+
+Apply template to node
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|template|<<class-template>>|Template object to apply
+|===
+
 `readInternalParameter(name) => String`::
 Reads server internal object metric (metric with source "Internal").
 
@@ -29,4 +42,17 @@ Reads server internal object metric (metric with source "Internal").
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Metric name.
+|===
+
+`removeTemplate(template) => void`::
+
+[NOTE]
+This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+
+Remove template from node 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|template|<<class-template>>|Template object to remove
 |===

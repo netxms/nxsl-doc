@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-FindAlarmById(is) => Alarm
+FindAlarmById(id) => Alarm
 ----
 
 Finds alarm object by id

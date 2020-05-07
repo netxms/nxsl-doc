@@ -19,7 +19,7 @@ Interface description
 Interface index.
 
 `ipAddressList => Array`::
-Array with <<class-inetaddress>> objects, that represent all adresses that has this interface
+Array with <<class-inetaddress>> objects, that represent all adresses that has this interface has
 
 `isPhysicalPort => Boolean`::
 `TRUE` if this interface object represents physical port

@@ -2,7 +2,7 @@
 [[class-discoverednode]]
 === Discovered Node
 
-Represents NetXMS node found while network discovery. Is available as a $node in script that is set as DiscoveryFilter.
+Represents NetXMS node found while *performing* network discovery. Is available as a $node in script that is set as DiscoveryFilter.
 
 ==== Instance attributes
 

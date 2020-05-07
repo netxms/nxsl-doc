@@ -2,25 +2,28 @@
 [[func-getmaxdcivalue]]
 == GetMaxDCIValue()
 
-// TODO: add description
-
 [source,c]
 ----
-GetMaxDCIValue() => Boolean
+GetMaxDCIValue(node, dciId, from, to) => String
 ----
 
-…
+Get the maximum value of the DCI for the given period. The DCI value must be of numeric type.
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
-|node|<<class-node>> object instance (e.g. )
-||
+|node|<<class-node>>|node object instance (e.g. )
+|id|Integer|DCI ID
+|from|Integer|Start of the period (as UNIX timestamp).
+|to|Integer|End of the period (as UNIX timestamp).
 |===
 
 .Return
+Maximum value or null on failure.
 
 .Example
 [.source]
 ....
+value = GetMaxDCIValue(FindObject("MYWORKPC"), 18, 0, time()); //Max value from the beginning till now\
+println value; //Will print maximum value
 ....

@@ -2,24 +2,24 @@
 [[func-min]]
 == min()
 
-// TODO: add description
-
 [source,c]
 ----
-min() => void
+min(number1 ,number2, ...) => Number
 ----
 
-…
+Returns minimal value from a list of values.
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
-||
+|numbers|Number|Coma separated numbers
 |===
 
 .Return
+Minimal value of numbers.
 
 .Example
 [.source]
 ....
+println min(2, 3, 4, 8); // Will print "2"
 ....

@@ -2,24 +2,27 @@
 [[func-ord]]
 == ord()
 
-// TODO: add description
-
 [source,c]
 ----
-ord() => void
+ord(character) => Integer
 ----
 
-…
+Convert a character into it's ASCII/Unicode value.
+
+Only processes one character.
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
-||
+|character|String|Character
 |===
 
 .Return
+An ASCII/Unicode value
 
 .Example
 [.source]
 ....
+println ord("a"); //Will pritn 97
+println ord("abc"); //Will pritn 97
 ....

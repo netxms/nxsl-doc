@@ -55,7 +55,7 @@ Interface index.
 <<enum-interface-types,Interface type>>
 
 `ipAddressList => Array`::
-Array with <<class-inetaddress>> objects, that represent all adresses that has this interface
+Array with <<class-inetaddress>> objects, that represent all addresses that has this interface has
 
 `isExcludedFromTopology => Boolean`::
 `TRUE` if this interface excluded from network topology

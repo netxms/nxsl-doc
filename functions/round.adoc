@@ -2,24 +2,30 @@
 [[func-round]]
 == round()
 
-// TODO: add description
-
 [source,c]
 ----
-round() => void
+round(x, precision) => Number
 ----
 
-…
+Round floating point value to the nearest integral value or floating point value with given precision.
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
-||
+|x|Number|Floating point value.
+|precision|Integer|Optional number of decimal places to be left. If omitted or set to 0, x will be rounded to integral value.
 |===
 
 .Return
+The integral value that is closest to x if precision is omitted or set to 0, or floating point value rounded to have given number of decimal places.
 
 .Example
 [.source]
 ....
+println round(2.3); // Will print "2"
+println round(3.8); // Will print "4"
+println round(-2.3); // Will print "-2"
+println round(-3.8); // Will print "-4"
+println round(2.378, 2); // Will print "2.38"
+println round(2.378, 1); // Will print "2.4"
 ....

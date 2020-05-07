@@ -2,11 +2,9 @@
 [[func-loadevent]]
 == LoadEvent()
 
-// TODO: add description
-
 [source,c]
 ----
-LoadEvent(eventId) => <<class-event>>
+LoadEvent(eventId) => Event
 ----
 
 Will load event form the database and return <<class-event>> object or NULL if event not found. 
@@ -18,6 +16,7 @@ Will load event form the database and return <<class-event>> object or NULL if e
 |===
 
 .Return
+<<class-event, Event>> loaded form database or NULL if event not found. 
 
 .Example
 [.source]

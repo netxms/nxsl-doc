@@ -2,24 +2,26 @@
 [[func-geteventparameter]]
 == GetEventParameter()
 
-// TODO: add description
-
 [source,c]
 ----
-GetEventParameter() => void
+GetEventParameter(event, parameterName) => String
 ----
 
-…
+Get value of event's named parameter.
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
-||
+|event|<<class-event>>|Event object, you can use predefined variable $event to refer to current event.
+|parameterName|String|Parameter's name.
 |===
 
 .Return
+String value of requested parameter or null if no such parameter exist.
 
 .Example
 [.source]
 ....
+GetNamedParameter($event, "ifName")	// "eth0"
+GetNamedParameter($event, "bad_name")	// NULL
 ....

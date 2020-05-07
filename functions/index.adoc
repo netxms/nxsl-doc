@@ -2,24 +2,28 @@
 [[func-index]]
 == index()
 
-// TODO: add description
-
 [source,c]
 ----
-index() => void
+index(string, substring, position) => Integer
 ----
 
-…
+Returns the position of the first occurrence of substring in string at or after position if specified. All index values are 1-based (i.e. the first character has index 1, not 0).
 
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
-||
+|string|String|The string which will be examined.
+|substring|String|The string which we will search for.
+|position|Integer|The starting position in the string to begin our search from the left. Optional parameter
 |===
 
 .Return
+Integer value of the position substring was found at, will return 0 if not found.
 
 .Example
 [.source]
 ....
+println index("abcdef","cd"); //Will print "3"
+println index("abcdef","cd",4); //Will print "0"
+println index("abcdefabcdef","cd",4); //Will print "9"
 ....

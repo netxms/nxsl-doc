@@ -2,25 +2,25 @@
 [[func-getdcivaluebyname]]
 == GetDCIValueByName()
 
-// TODO: add description
-
 [source,c]
 ----
-GetDCIValueByName() => Boolean
+GetDCIValueByName(node, name) => String or Table
 ----
 
-…
+Get last value of DCI with given name on given node.
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
-|node|<<class-node>> object instance (e.g. )
-||
+|node|<<class-node>>|Node object instance (e.g. )
+|name|String|DCI name (parameter's name for agent or internal source, and OID for SNMP source).
 |===
 
 .Return
+Last value for given DCI (string for normal DCIs and <<class-table,Table object>> for table DCIs) or null if DCI with given name does not exist or has no collected values.
 
 .Example
 [.source]
 ....
+GetDCIValueByName($node, "Agent.Version")	// "1.2.0"
 ....
