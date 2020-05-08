@@ -39,7 +39,6 @@ include::functions/secondstouptime.adoc[]
 
 include::functions/sleep.adoc[]
 
-include::functions/sys.adoc[]
 include::functions/trace.adoc[]
 
 include::functions/typeof.adoc[]
