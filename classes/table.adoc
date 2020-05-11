@@ -159,3 +159,8 @@ Set column value by row and column index
 
 Column index 
 
+==== Constructors
+
+`Table()`::
+Creates new Table object.
+

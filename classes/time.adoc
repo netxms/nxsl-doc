@@ -41,3 +41,8 @@ Days since Sunday.
 `isdst => Boolean`::
 `tm_isdst => Boolean`::
 Daylight Saving Time flag.
+
+==== Constructors
+
+`TIME()`::
+Creates new TIME object.
