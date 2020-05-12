@@ -196,6 +196,25 @@ sub add(numberA, numberB)
 If parameter was not provided at function call, value of appropriate variable
 will be `NULL`.
 
+Another option to name parameters is to provide named parameters inside of function. 
+In this case leave braces of function empty and add names to function call. In this case 
+parameters will be available in function as $parameterName.
+
+Example:
+
+
+[source,c]
+----
+func(param2: "text2", param1: "text1");
+return 0;
+
+sub func()
+{
+    println $param1; //Will print "text1"
+    println $param2; //Will print "text2"
+}
+----
+
 Arguments also available as $ARGS array, that contains all arguments. First argument available as $ARGS[1];
 
 ==== Return Values from a Function
