@@ -94,3 +94,6 @@ return 0;
 
 ``return`` is another built-in operator which exits the function and sets it's
 return value.
+
+
+Some eal life examples can be found there: https://wiki.netxms.org/wiki/SG:Script_Examples

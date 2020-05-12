@@ -269,6 +269,7 @@ a[1] = 1;
 a[2] = 2;
 a[260] = 260;    
 println(a[1]); // will print 1
+println(a); // will print "[1, 2, 260]"
 ----
 
 Second way is to use %( ) construct to create array already populated with values.
@@ -281,6 +282,7 @@ This statement will create array with four elements at positions 0, 1, 2, and 3,
 a = %(1, 2, 3, 4);
 
 println(a[0]); // will actually print 1, since 1 is the 0th member
+println(a); // will print "[1, 2, 3, 4]"
 ----
 
 Array initialization can also be used directly in expressions, like this:
@@ -295,6 +297,25 @@ sub f()
 
 In this example function `f` returns array of 3 elements - number, text, and
 another array of 3 numeric elements.
+
+
+==== Array conversion
+
+Array can be converted to string. `string(array)` function is used to get string 
+representation of array. The string representation consists of a list of the array’s 
+elements, enclosed in square brackets (“[]”). Adjacent elements are separated by the 
+characters “, ” (a comma followed by a space). 
+
+Printed array is automatically converted to string.
+
+[source,c]
+----
+a = %(1, 2, 3, 4, 5, 6, 7);
+println a; // will print "[1, 2, 3, 4, 5, 6, 7]"
+println a . " is an array"; // will print "[1, 2, 3, 4, 5, 6, 7] is an array"
+println %("one", "two"); // will print "[one, two]" 
+println(%(2, "text", %(1, 2, 3))); // will print "[2, text, [1, 2, 3]]"
+----
 
 === Operators
 
@@ -555,6 +576,27 @@ switch (input)
     break;
   case "2":
     trace(0,"Input is 2");
+    break;
+  default:
+    trace(0, "Input is unknown");
+}
+----
+
+
+The `switch` statement also allows to check ranges:
+
+[source,c]
+----
+switch (input)
+{
+  case 1:
+    trace(0,"Input is 1");
+    break;
+  case 2:
+    trace(0,"Input is 2");
+    break;
+  case 3...7:
+    trace(0,"Input is from 3 till 7");
     break;
   default:
     trace(0, "Input is unknown");
