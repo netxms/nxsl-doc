@@ -32,6 +32,7 @@ include::functions/jsonparse.adoc[]
 
 include::functions/map.adoc[]
 include::functions/maplist.adoc[]
+include::functions/instance.adoc[]
 
 include::functions/random.adoc[]
 
