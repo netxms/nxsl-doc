@@ -96,4 +96,4 @@ return 0;
 return value.
 
 
-Some eal life examples can be found there: https://wiki.netxms.org/wiki/SG:Script_Examples
+Some real life examples can be found there: https://wiki.netxms.org/wiki/SG:Script_Examples
