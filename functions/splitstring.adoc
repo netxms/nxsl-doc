@@ -10,7 +10,7 @@ SplitString(string, separator) => Array
 Split string into array of strings at given separator.
 
 .Parameters
-[cols="1,3" grid="none", frame="none"]
+[cols="1,1,3" grid="none", frame="none"]
 |===
 |string|String|String to split.
 |separator|String|Separator character. If supplied string is longer than 1 character, it's first character will be used as separator.

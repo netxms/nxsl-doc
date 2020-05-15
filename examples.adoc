@@ -1,0 +1,341 @@
+Some real life examples.
+
+=== Additional Information About Connected Node
+
+==== Requirements
+
+Add information about name, IP address, and MAC address about connected node to notification about switch port being down.
+
+==== Solution
+
+Use named event attribute additionalInfo to pass information into e-mail body (using %<additionalInfo> macro). To populate this attribute the following script can be used:
+
+[source,c]
+----
+// only for interface up and down events
+if (($event->name != "SYS_IF_DOWN") && ($event->name != "SYS_IF_UP"))
+	return true;
+	
+// get interface object from interface index
+iface = GetInterfaceObject($node, $5);
+if (iface == null)
+	return true;
+
+// get peer node (node connected to this interface) object
+peer = iface->peerNode;
+if (peer == null)
+	return true;
+	
+// get peer interface object (needed to obtain MAC address)
+peerIface = iface->peerInterface;
+if (peerIface != null)
+{
+	macAddr = peerIface->macAddr;
+}
+else
+{
+	macAddr = "<MAC unknown>";
+}
+
+// set event's named parameter	
+SetEventParameter($event, "additionalInfo",
+	"Peer: " . peer->name . " " . peer->ipAddr . " " . macAddr);
+
+return true;
+----
+
+=== Enumerate All Nodes
+
+==== Requirements
+
+Enumerate all nodes in NetXMS database.
+
+==== Solution
+
+Create script in script library which will find "Entire Networks" object and walk down the tree. This script can be executes as an action from event processing policy, or directly from server debug console via exec command.
+
+In order to be able to access info about all nodes, the CheckTrustedNodes server configuration variable needs to be set to 0.
+
+[source,c]
+----
+// Find "Entire Network" object and start enumeration from it
+EnumerateNodes(FindObject(1));
+
+// This function walks object tree recursively starting from given root
+sub EnumerateNodes(rootObject)
+{
+	// Walk all child objects
+	foreach(o : GetObjectChildren(rootObject))
+	{
+		if (classof(o) == "Node")
+		{
+			// Process node object
+			trace(1, "  + " . o->name);
+		}
+		else if (classof(o) == "NetObj")
+		{
+			// For all other objects, go down the tree
+			// There can be additional checks for object class, like
+			// if (o->type == 5)
+			EnumerateNodes(o);
+		}
+	}
+}
+----
+
+=== Enumerate All Custom Attributes for Node
+
+==== Requirements
+
+Enumerate all custom attributes on a node.
+
+==== Solution
+
+Note: this script requires NetXMS version 2.0.2 or higher.
+
+[source,c]
+----
+attributes = $node->customAttributes;
+foreach(a : attributes->keys)
+{
+        println a . "=" . attributes[a];
+}
+----
+
+=== Aggregation of DCI values and applying the 95% percentile average
+
+The example is based around a template which configuers ICMP Packet Loss probes. This script will loop around the nodes, collect the required DCI values. The values are then ordered and the top 5 percent discarded, the remaining entries are averaged to give the required value;
+
+
+[source,c]
+----
+sub main()
+{
+
+trace(1, "Global Ping Loss 95");
+array pValue;
+arrayI  = 0;
+
+foreach(parent : GetNodeParents($node))
+{
+	trace(3, "Parent object: name='" . parent->name ."' id=" . parent->id);
+	if (parent->name == "all voice")
+	{
+		foreach(vNode : GetObjectChildren(parent))
+		{
+			dciName = "ICMP: Packet loss to ".vNode->name;
+			dciId = FindDCIByDescription(vNode, dciName);
+			if (dciId > 0)
+			{
+				tmpValue = GetDCIValue(vNode,dciId);				
+				if (tmpValue != null)
+				{
+					pValue[arrayI++] = tmpValue;
+				}
+			}
+		}
+	}
+}
+
+// Sort the Array
+bubbleSort(pValue);
+
+// Apply the 95 percent rule
+upTo = arrayI * 0.95;
+pLoss = 0;
+pCount = 0;
+for(ia = 0; ia < upTo; ia++)
+{
+	pLoss += pValue[ia];
+	pCount = ia;
+}
+p95AvgLoss = pLoss / pCount;
+
+trace(1, "Global Ping Loss 95 Summary: arrayI=".arrayI." upTo=".upTo." p95AvgLoss=".p95AvgLoss );
+
+return p95AvgLoss;
+}
+
+sub bubbleSort(arr)
+{
+	swapped = true;
+	while (swapped == true){
+		swapped = false;
+		for(ia = 1; arr[ia] != null; ia++)
+		{
+			ib = ia - 1;
+			
+			if (arr[ib] > arr[ia]){
+				trace(3,"swap: ".ib.":".arr[ib]." with ".ia.":".arr[ia]);
+				swapped=true;
+				t = arr[ib];
+				arr[ib] = arr[ia];
+				arr[ia] = t;
+				swapped = true;
+			}
+		}
+	}
+}
+
+sub printArray(arr)
+{
+	for(ia = 0; arr[ia] != null; ia++)
+	{
+		trace(1,"printArray: ".ia.":".arr[ia]);
+	}
+}
+----
+
+=== Read SNMP Value From Node
+
+This script can be put into Script Library and run from server's debug console. It accepts node object name or ID as parameter and prints value of SNMP sysDescription to console.
+
+
+[source,c]
+----
+if ($1 == null)
+{
+   println "Please specify node name as parameter";
+   return 3;
+}
+
+transport = CreateSNMPTransport(FindObject($1));    // Create SNMP transport for node
+if (transport == null)
+{
+    println "Failed to create SNMP transport, exit";
+    return 1;
+}
+
+value = SNMPGetValue(transport, ".1.3.6.1.2.1.1.1.0");
+if (value == null)
+{
+    println "Failed to issue SNMP GET request";
+    return 2;
+}
+else
+{
+    println "System description: " . value;
+    return 0;
+}
+----
+
+Example of output:
+
+[source,c]
+----
+C:\Source\NetXMS\x64\debug>nxadm -c "exec GetSysDescr cisco-2600-central"
+System description: Cisco IOS Software, C2600 Software (C2600-ADVSECURITYK9-M), Version 12.4(1a), RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2005 by Cisco Systems, Inc.
+Compiled Fri 27-May-05 15:09 by hqluong
+INFO: Script finished with rc=0
+
+C:\Source\NetXMS\x64\debug>
+----
+
+=== Read Table From Agent
+
+This script can be put into Script Library and run from server's debug console. It accepts node object name or ID as first parameter, table name as second parameter, and prints content of given table to console.
+
+[source,c]
+----
+// Find node object
+node = FindObject($1);
+if (node == null)
+{
+	println "ERROR: Node not found";
+	return;
+}
+
+// REad table data from agent
+table = AgentReadTable(node, $2);
+if (table == null)
+{
+	println "ERROR: Cannot read table from agent";
+	return;
+}
+
+// Print column names
+for(i = 0; i < table->columnCount; i++)
+	print "| " . left(table->getColumnName(i), 20);
+println "|";
+for(i = 0; i < table->columnCount; i++)
+	print "+" . left("-", 21, "-");
+println "+";
+
+// Print data
+for(i = 0; i < table->rowCount; i++)
+{
+	for(j = 0; j < table->columnCount; j++)
+	{
+		print "| " . left(table->get(i, j), 20);
+	}
+	println "|";
+}
+----
+
+=== Recursively Collect Values from Custom Attributes
+
+This script recursively collects values of custom attribute contacts from all node parents. Collected values concatenated into single string and separated by semicolons. Duplicate values added only once.
+
+
+[source,c]
+----
+global contacts = "";  // concatenated values will be stored here
+global presence = %{ };  // value presence indicator (hash map)
+
+// walk through each parent object for current node
+foreach(o : GetObjectParents($node))
+{
+	add_contacts(o);
+}
+
+// Concatenated result is in "contacts" global variable
+println "Contacts: " . contacts;
+
+/**
+ * Recursively add contacts from object and it's parents
+ */
+sub add_contacts(curr)
+{
+	c = GetCustomAttribute(curr, "contacts");
+	if ((c != null) && (presence[c] == null))
+	{
+		if (length(contacts) > 0)
+			contacts = contacts . ";" . c;
+		else
+			contacts = c;
+		presence[c] = true;
+	}
+	
+	foreach(o : GetObjectParents(curr))
+	{
+		add_contacts(o);
+	}
+}
+----
+
+=== Setting node geolocation from SNMP
+
+Adjust the OIDs in SNMPGetValue as required.
+
+
+[source,c]
+----
+transport = CreateSNMPTransport($node);
+if (transport == null) {
+  return null;
+}
+
+lat = SNMPGetValue(transport, ".1.2.3.4.1");
+lon = SNMPGetValue(transport, ".1.2.3.4.2");
+
+if (lat == null || lon == null) {
+  return null;
+}
+
+geoLoc = new GeoLocation(lat, lon);
+$node->setGeoLocation(geoLoc);
+
+return 0;
+----
