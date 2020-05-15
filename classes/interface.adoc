@@ -87,7 +87,7 @@ Parent node object
 `operState => Integer`::
 Operational <<enum-interface-state,state>>.
 
-`peerInterface => <class-inteface>`::
+`peerInterface => <<class-inteface>>`::
 Peer interface object if known, otherwise `null`.
 
 `peerNode => <<class-node>>`::

@@ -1,5 +1,119 @@
 Some real life examples.
 
+=== Small utility scripts
+
+==== UNIX timestamp to human readable
+
+[source,c]
+----
+return strftime("%d.%m.%Y %H:%M:%S", $1);
+----
+
+==== Table DCI manipulation script
+
+Get table item. Is used to make DCI from Table DCI.
+
+[source,c]
+----
+// Warning: this script works only on the same node
+//
+// $1 - Description
+// $2 - column name
+table = GetDCIValueByDescription($node, $1);
+if (table != NULL) {
+	col = table->getColumnIndex($2);
+	if (col >= 0) {
+		return table->get(0, col);
+	}
+}
+return 0;
+----
+
+==== Primary mac address
+
+Script to print primary MAC address.
+
+[source,c]
+----
+for(i : $node->interfaces)
+{
+   for(a : i->ipAddressList)
+   {
+      if (a->address == $node->ipAddr)
+         println i->macAddr;
+   }
+}
+----
+
+==== Check if node is under cluster or container
+
+Script that returns `TRUE` if current node is already under container or cluster. 
+
+[source,c]
+----
+for (p : $node->parents) {
+    if (p->type == 5 orr p->type == 14) { //5 is container and 14 is cluster
+        return false;
+    }
+}
+return true;
+----
+
+=== Change expected state for all interfaces
+
+Set ignore expected state for all interfaces of all nodes.
+
+[source,c]
+----
+for (n : GetAllNodes()) {
+    println(n->name . "(" . n->id . ")");
+    for (i : n->interfaces) {
+        println("\t" . i->name);
+        i->setExpectedState("IGNORE");
+    }
+}
+----
+
+=== Instance filtering script for "Net.InterfaceList" 
+
+==== Requirements
+
+Instance filtering script for "Net.InterfaceList" list, that will filter only "eth*" and "bond*" interfaces, that can be used in 
+Net.Interface.BytesIn64 or Net.Interface.BytesOut64 DCIs. 
+
+==== Solution
+
+Select "Agent List" as instance discovery method. Set "Net.InterfaceList" as list name and add script to instance discovery filter script section:
+
+[source,c]
+----
+name=substr($1,rindex($1, " ")+1);
+if (name ~= "eth|bond")
+{
+    return Instance(displayName: name, name: name);
+}
+return false;
+----
+
+
+==== Filter some interfaces form creation
+
+==== Requirements
+
+Filter interfaces that should not be monitored by NetXMS. In this case "isatap*" interfaces. 
+
+==== Solution
+
+Update "Hook:CreateInterface" script in script library.
+
+[source,c]
+----
+if ( $1->name ~= "^isatap" ) 
+    return false;
+
+return true;
+----
+
 === Additional Information About Connected Node
 
 ==== Requirements
@@ -8,7 +122,7 @@ Add information about name, IP address, and MAC address about connected node to 
 
 ==== Solution
 
-Use named event attribute additionalInfo to pass information into e-mail body (using %<additionalInfo> macro). To populate this attribute the following script can be used:
+Use named event attribute additionalInfo to pass information into e-mail body (using %<additionalInfo> macro). To populate this attribute the following script can be used in Event Processing Policy:
 
 [source,c]
 ----
@@ -17,7 +131,7 @@ if (($event->name != "SYS_IF_DOWN") && ($event->name != "SYS_IF_UP"))
 	return true;
 	
 // get interface object from interface index
-iface = GetInterfaceObject($node, $5);
+iface = $node->getInterface($5);
 if (iface == null)
 	return true;
 
@@ -50,36 +164,38 @@ return true;
 
 Enumerate all nodes in NetXMS database.
 
-==== Solution
+==== Solution 1
 
-Create script in script library which will find "Entire Networks" object and walk down the tree. This script can be executes as an action from event processing policy, or directly from server debug console via exec command.
+Create script in script library which will find "Entire Networks" object and walk down the tree. This script can be executes as an action from event processing policy, or directly from server debug console via exec command or on any node.
 
 In order to be able to access info about all nodes, the CheckTrustedNodes server configuration variable needs to be set to 0.
 
 [source,c]
 ----
-// Find "Entire Network" object and start enumeration from it
-EnumerateNodes(FindObject(1));
-
 // This function walks object tree recursively starting from given root
-sub EnumerateNodes(rootObject)
+EnumerateNodes(FindObject(1));
+sub EnumerateNodes(obj, level)
 {
-	// Walk all child objects
-	foreach(o : GetObjectChildren(rootObject))
-	{
-		if (classof(o) == "Node")
-		{
-			// Process node object
-			trace(1, "  + " . o->name);
-		}
-		else if (classof(o) == "NetObj")
-		{
-			// For all other objects, go down the tree
-			// There can be additional checks for object class, like
-			// if (o->type == 5)
-			EnumerateNodes(o);
-		}
-	}
+    foreach(o : obj->children) {
+        for (i = 0; i < level; i++) { print("  "); }
+        println("[" . o->type . " / " . classof(o) . "] " . o->name);
+
+        EnumerateNodes(o, level + 1);
+    }
+}
+// Find "Entire Network" object and start enumeration from it
+EnumerateNodes(FindObject("Entire Network"), 0);
+----
+
+==== Solutions 2
+
+When only nodes are required, not walk down the tree then this script can be used:
+
+
+[source,c]
+----
+for (n : GetAllNodes()) {
+  println(n->name);
 }
 ----
 
@@ -90,8 +206,6 @@ sub EnumerateNodes(rootObject)
 Enumerate all custom attributes on a node.
 
 ==== Solution
-
-Note: this script requires NetXMS version 2.0.2 or higher.
 
 [source,c]
 ----
@@ -116,12 +230,12 @@ trace(1, "Global Ping Loss 95");
 array pValue;
 arrayI  = 0;
 
-foreach(parent : GetNodeParents($node))
+foreach(parent : $node->parents)
 {
 	trace(3, "Parent object: name='" . parent->name ."' id=" . parent->id);
 	if (parent->name == "all voice")
 	{
-		foreach(vNode : GetObjectChildren(parent))
+		foreach(vNode : parent->children)
 		{
 			dciName = "ICMP: Packet loss to ".vNode->name;
 			dciId = FindDCIByDescription(vNode, dciName);
@@ -199,7 +313,7 @@ if ($1 == null)
    return 3;
 }
 
-transport = CreateSNMPTransport(FindObject($1));    // Create SNMP transport for node
+transport = FindObject($1)->createSNMPTransport();    // Create SNMP transport for node
 if (transport == null)
 {
     println "Failed to create SNMP transport, exit";
@@ -285,7 +399,7 @@ global contacts = "";  // concatenated values will be stored here
 global presence = %{ };  // value presence indicator (hash map)
 
 // walk through each parent object for current node
-foreach(o : GetObjectParents($node))
+foreach(o : $node->parents)
 {
 	add_contacts(o);
 }
@@ -298,7 +412,7 @@ println "Contacts: " . contacts;
  */
 sub add_contacts(curr)
 {
-	c = GetCustomAttribute(curr, "contacts");
+	c = curr->getCustomAttribute("contacts");
 	if ((c != null) && (presence[c] == null))
 	{
 		if (length(contacts) > 0)
@@ -308,7 +422,7 @@ sub add_contacts(curr)
 		presence[c] = true;
 	}
 	
-	foreach(o : GetObjectParents(curr))
+	foreach(o : curr->parents)
 	{
 		add_contacts(o);
 	}
@@ -322,7 +436,7 @@ Adjust the OIDs in SNMPGetValue as required.
 
 [source,c]
 ----
-transport = CreateSNMPTransport($node);
+transport = $node->createSNMPTransport();
 if (transport == null) {
   return null;
 }
