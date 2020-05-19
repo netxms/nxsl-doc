@@ -390,7 +390,6 @@ name is number method will assume that it is index.
 <<class-interface>> object. 
 
 .Example
-.Example
 [.source]
 ....
 println $node->getInterface("00:14:22:04:25:37")->name; // Will print "wlp4s0"
@@ -412,7 +411,6 @@ name is number method will assume that it is index.
 <<class-interface>> object. 
 
 .Example
-.Example
 [.source]
 ....
 println $node->getInterfaceByIndex(3)->name; // Will print "wlp4s0"
@@ -432,7 +430,6 @@ name is number method will assume that it is index.
 <<class-interface>> object. 
 
 .Example
-.Example
 [.source]
 ....
 println $node->getInterfaceByMACAddress("00:14:22:04:25:37")->name; // Will print "wlp4s0"
@@ -451,7 +448,6 @@ name is number method will assume that it is index.
 .Return 
 <<class-interface>> object. 
 
-.Example
 .Example
 [.source]
 ....
