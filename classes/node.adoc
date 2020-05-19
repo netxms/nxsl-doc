@@ -376,14 +376,87 @@ Execute SSH command on node.
 |command|String|Command to be executed. 
 |=== 
 
-`getInterface(ifIndex) => <<class-interface>>`::
-Get interface object by index.
+`getInterface(ifIdentifier) => <<class-interface>>`::
+Get interface object by index, MAC address or name. If 
+name is number method will assume that it is index. 
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|ifIdentifier|Integer or String|Index, MAC address or name of interface. 
+|=== 
+
+.Return 
+<<class-interface>> object. 
+
+.Example
+.Example
+[.source]
+....
+println $node->getInterface("00:14:22:04:25:37")->name; // Will print "wlp4s0"
+println $node->getInterface(3)->name; // Will print "wlp4s0"
+println $node->getInterface("wlp4s0")->name; // Will print "wlp4s0"
+....
+
+`getInterfaceByIndex(ifIndex) => <<class-interface>>`::
+Get interface object by index, MAC address or name. If 
+name is number method will assume that it is index. 
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |ifIndex|Integer|Index of interface. 
 |=== 
+
+.Return 
+<<class-interface>> object. 
+
+.Example
+.Example
+[.source]
+....
+println $node->getInterfaceByIndex(3)->name; // Will print "wlp4s0"
+....
+
+`getInterfaceByMACAddress(ifMACAddr) => <<class-interface>>`::
+Get interface object by index, MAC address or name. If 
+name is number method will assume that it is index. 
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|ifMACAddr|String|MAC address of interface. 
+|=== 
+
+.Return 
+<<class-interface>> object. 
+
+.Example
+.Example
+[.source]
+....
+println $node->getInterfaceByMACAddress("00:14:22:04:25:37")->name; // Will print "wlp4s0"
+....
+
+`getInterfaceByName(IfName) => <<class-interface>>`::
+Get interface object by index, MAC address or name. If 
+name is number method will assume that it is index. 
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|IfName|String|Name of interface. 
+|=== 
+
+.Return 
+<<class-interface>> object. 
+
+.Example
+.Example
+[.source]
+....
+println $node->getInterfaceByName("wlp4s0")->name; // Will print "wlp4s0"
+....
 
 `getInterfaceName(ifIndex) => String`::
 Get interface name by index.
