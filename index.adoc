@@ -47,7 +47,7 @@ include::classes.adoc[]
 
 == Global Constants
 
-include::constants.adoc[leveloffset+=1]
+include::constants.adoc[leveloffset=+1]
 
 <<<
 
