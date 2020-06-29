@@ -6,12 +6,12 @@
 |Constant|Value|Description
 
 |DCI::INT32|0|Signed 32 bit integer
-|DCI::UINT32|1|Unsigner 32 bit integer
-|DCI::INT64|2|Signer 64 bit integer
+|DCI::UINT32|1|Unsigned 32 bit integer
+|DCI::INT64|2|Signed 64 bit integer
 |DCI::UINT64|3|Unsigned 64 bit integer
 |DCI::STRING|4|String
 |DCI::FLOAT|5|Floating point number
-|DCI::NULL|6|Used internally; should be used in the scripts
+|DCI::NULL|6|Used internally; should not be used in the scripts
 |DCI::COUNTER32|7|32 bit counter
 |DCI::COUNTER64|8|64 bit counter
 |===
