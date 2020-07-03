@@ -13,10 +13,10 @@ Create new data collection item on <<class-node,node>>, return <<class-dci>> obj
 [cols="1,3a" grid="none", frame="none"]
 |===
 |node|<<class-node>> object instance (e.g. `$node`), where DCI should be created.
-|origin| Data origin. Possible values: "agent", "snmp", "internal", "push", "websvc", "winperf", "script", "ssh", "mqtt", "driver", "cpsnmp"
+|origin| Data origin. Possible values: "agent", "snmp", "internal", "push", "websvc", "winperf", "script", "ssh", "mqtt", "driver", "cpsnmp". Alternatively, you can use <<const-dci-origin,Data origin constants>>. 
 |name|name of the metric (e.g. "Agent.Version")
 |description|human readable description.
-|dataType|Type of the collected data. Possible values: "int32", "uint32", "int64", "uint64", "counter32", "counter64", "float", "string"
+|dataType|Type of the collected data. Possible values: "int32", "uint32", "int64", "uint64", "counter32", "counter64", "float", "string". Alternatively, you can use <<const-dci-datatype,DCI data type constants>>.
 |pollingInterval|polling interval in seconds or `0` for server-default value.
 |retentionTime|retention time in days or `0` for server-default value.
 |===
