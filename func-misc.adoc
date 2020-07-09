@@ -40,6 +40,8 @@ include::functions/readpersistentstorage.adoc[]
 
 include::functions/secondstouptime.adoc[]
 
+include::functions/sendmail.adoc[]
+
 include::functions/sleep.adoc[]
 
 include::functions/trace.adoc[]
