@@ -49,7 +49,7 @@ Current polling interval
 Related object or null if there is no object
 
 `status => Integer`::
-<<const-dci-origin,Data status>> of the DCI.
+<<const-dci-states,Data status>> of the DCI.
 
 `systemTag => String`::
 System tag. Always empty for user-defined DCIs.
