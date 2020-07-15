@@ -54,7 +54,7 @@ Will return array with <<class-node-dependency>> class objects. This array conta
 Named of selected device-specific SNMP driver.
 
 `downSince => Integer64`::
-Number of seconds node is down.
+UNIX timestamp when node went down.
 
 `flags => Integer`::
 Bit mask of <<node-flags>>.
