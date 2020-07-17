@@ -1,0 +1,11 @@
+= Files
+
+Available only if 'NXSL.EnableFileIOFunctions' configuration parameter is turned on. 
+
+include::functions/copyfile.adoc[]
+include::functions/createdirectory.adoc[]
+include::functions/deletefile.adoc[]
+include::functions/fileaccess.adoc[]
+include::functions/openfile.adoc[]
+include::functions/removedirectory.adoc[]
+include::functions/renamefile.adoc[]
