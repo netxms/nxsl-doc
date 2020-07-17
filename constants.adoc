@@ -110,10 +110,14 @@
 
 == Other constants
 
-=== NXSL::VERSION
+=== NXSL::Version
 
 Current server version
 
-=== NXSL::BUILD_TAG
+=== NXSL::BuildTag
 
 Current server build tag
+
+=== NXSL::SystemIsBigEndian
+
+`TRUE` if system is big endian otherwise `FALSE`
