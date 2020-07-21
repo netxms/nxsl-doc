@@ -453,8 +453,11 @@ NXSL supports C-style pre- and post-increment and decrement operators.
 |===
 | Example| Name| Result
 |`! a`| Not| `TRUE` if `a` is not `TRUE`.
+|`not a`| Not| Same as above. `TRUE` if `a` is not `TRUE`.
 |`a && b`| And| `TRUE` if both `a` and `b` is `TRUE`.
+|`a and b`| And| Same as above. `TRUE` if both `a` and `b` is `TRUE`.
 |`a \|\| b`| Or| `TRUE` if either `a` or `b` is `TRUE`.
+|`a or b`| Or| Same as above. `TRUE` if either `a` or `b` is `TRUE`.
 |===
 
 ==== String Operators
@@ -491,6 +494,8 @@ statement by itself as well. The various statement types are supported:
 * continue
 
 * switch
+
+* with
 
 * return
 
@@ -640,6 +645,43 @@ switch (input)
 }
 ----
 
+
+====  with
+
+With statement is made to make the code cleaner and much more readable and to 
+expose variable section to global scope for "Object query" Dashboard element. 
+This statement consists form 2 parts: variable declaration (optional) and expression. 
+
+Structure:
+
+[source,c]
+----
+with 
+  var = {code},
+  ...
+  var = {code}
+expression
+----
+
+Example for "Object query" Dashboard element. This example will filter out only nodes that are 
+unreachable and will create 2 variables as data providers for columns: time node is down since and 
+oldest alarm time. 
+
+[source,c]
+----
+with
+  _down = { return SecondsToUptime(time() - downSince); },
+ _oldestAlarm = {
+  oldestAlarmTime = 99999999999;
+  for (a : $node->alarms) {
+   oldestAlarmTime = min(oldestAlarmTime, a->creationTime);
+  }
+  return strftime("%Y-%m-%d %H:%M", oldestAlarmTime);
+ } 
+type == NODE and state & NodeState::Unreachable 
+//In Object query object attributes are available just using name.
+//Like state ($node->state in other scripts)
+----
 
 ====  return
 
