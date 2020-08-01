@@ -15,7 +15,7 @@ Sends e-mail to specified recipients.
 |recipients|String|List of e-mail addresses. Multiple recipients should be separated by ";". 
 |subject|String|E-mail subject.
 |text|String|E-mail text (body).
-|ishtml|Boolean|Indicates whether the text is in HTML.
+|ishtml|Boolean|Indicates whether the text is in HTML. If omitted then false is assumed.
 |===
 
 .Return
