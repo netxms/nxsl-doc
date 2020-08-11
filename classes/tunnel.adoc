@@ -1,0 +1,64 @@
+[.nxsl-class]
+[[class-tunnel]]
+=== Tunnel
+
+Object contains information about tunnel.
+
+==== Instance attributes
+
+`address => InetAddress`::
+<<class-inetaddress>> class object with address of the node that opened this tunnel 
+
+`agentBuildTag => String`::
+Agent build tag
+
+`agentId => String`::
+Agent ID of the agent that opened the tunnel
+
+`agentVersion => String`::
+Agent version of the node that opened the tunnel
+
+`certificateExpirationTime => Number`::
+UNIX timestamp with current certificate expiration day
+
+`guid => String`::
+Tunnel GUID
+
+`hostname => String`::
+Hostname of the node that opened the tunnel
+
+`hardwareId => String`::
+Hardware ID of the node that opened the tunnel
+
+`id => Number`::
+Tunnel id
+
+`isAgentProxy => Boolean`::
+`TRUE` if agent proxy is enabled on the agent that opened the tunnel
+
+`isBound => Boolean`::
+`TRUE` if tunnel is bound
+
+`isSnmpProxy => Boolean`::
+`TRUE` if SNMP proxy is enabled on the agent that opened the tunnel
+
+`isSnmpTrapProxy => Boolean`::
+`TRUE` if SNMP trap proxy is enabled on the agent that opened the tunnel
+
+`isUserAgentInstalled => Boolean`::
+`TRUE` if user agent is installed on the agent that opened the tunnel
+
+`platformName => String`::
+Platform name of the node that opened the tunnel
+
+`startTime => Number`::
+UNIX timestamp with tunnel start time
+
+`systemInfo => String`::
+System information of the node that opened the tunnel
+
+`systemName => String`::
+System name of the node that opened the tunnel
+
+`zoneUIN => Number`::
+Node's zone UIN if set in agent's configuration file
