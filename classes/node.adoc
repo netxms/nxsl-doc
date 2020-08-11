@@ -503,6 +503,26 @@ Request driver-specific metric directly from network device driver (e.g. Rital).
 |name|String|List name. 
 |=== 
 
+[[class-node-readWebServiceList,Node::readWebServiceList()]]
+`readWebServiceList(name) => String`::
+Read form node web service list
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Name is expected in form service:path or service(arguments):path
+|=== 
+
+[[class-node-readWebServiceParameter,Node::readWebServiceParameter()]]
+`readWebServiceParameter(name) => String`::
+Read form node web service parameter
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Name is expected in form service:path or service(arguments):path
+|=== 
+
 ==== Constants
 
 [[node-flags]]
