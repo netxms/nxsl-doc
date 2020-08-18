@@ -22,6 +22,6 @@ String value of requested parameter or null if no such parameter exist.
 .Example
 [.source]
 ....
-GetNamedParameter($event, "ifName")	// "eth0"
-GetNamedParameter($event, "bad_name")	// NULL
+GetEventParameter($event, "ifName")	// "eth0"
+GetEventParameter($event, "bad_name")	// NULL
 ....
