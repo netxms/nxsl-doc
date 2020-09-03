@@ -44,11 +44,14 @@ EtherNet/IP device status
 `cipStatusAsText => String`::
 EtherNet/IP device status as text
 
+`cipVendorCode => Integer`::
+EtherNet/IP vendor code in numeric form.
+
 `components => <<class-component>>`::
 Entity MIB components of class <<class-component>>.
 
 `dependentNodes => Array`::
-Will return array with <<class-node-dependency>> class objects. This array contains all objects that have current node as a proxy or data collection sources. 
+Will return array with <<class-node-dependency>> class objects. This array contains all objects that have current node as a proxy or data collection sources.
 
 `driver => String`::
 Named of selected device-specific SNMP driver.
@@ -214,10 +217,10 @@ Will return Rack object as <<class-netobj>> if node is added in rack
 Will return Rack id if node is added in rack
 
 `rackHeight => Integer`::
-Object height in rack 
+Object height in rack
 
 `rackPosition => Integer`::
-Object position in rack 
+Object position in rack
 
 `runtimeFlags => Integer`::
 Bit mask of <<node-runtime-flags>>, `uint32`.
@@ -268,7 +271,7 @@ This node zone UIN
 ==== Instance methods
 
 `void createSNMPTransport(port, context) => <<class-snmp_transport>>`::
-Create SNMP transport object of class <<class-snmp_transport>> with communication settings defined on the node. 
+Create SNMP transport object of class <<class-snmp_transport>> with communication settings defined on the node.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -283,7 +286,7 @@ Enable or disable usage of NetXMS agent for all polls.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If agent usage should be enabled. 
+|flag|Boolean|If agent usage should be enabled.
 |===
 
 `void enableConfigurationPolling(flag) => void`::
@@ -292,7 +295,7 @@ Enable or disable configuration polling for a node
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If configuration polling should be enabled. 
+|flag|Boolean|If configuration polling should be enabled.
 |===
 
 `enableDiscoveryPolling(flag) => void`::
@@ -301,8 +304,8 @@ Enable or disable discovery polling.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If discovery polling should be enabled. 
-|=== 
+|flag|Boolean|If discovery polling should be enabled.
+|===
 
 `enableEtherNetIP(flag) => void`::
 Enable or disable usage of EtherNet/IP for polls.
@@ -310,8 +313,8 @@ Enable or disable usage of EtherNet/IP for polls.
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If EtherNet/IP should be enabled. 
-|=== 
+|flag|Boolean|If EtherNet/IP should be enabled.
+|===
 
 `enableIcmp(flag) => void`::
 Enable or disable usage of ICMP pings for status polls.
@@ -319,8 +322,8 @@ Enable or disable usage of ICMP pings for status polls.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If ICMP pings should be enabled. 
-|=== 
+|flag|Boolean|If ICMP pings should be enabled.
+|===
 
 `enablePrimaryIPPing(flag) => void`::
 Enable or disable usage of ICMP ping for primary IP.
@@ -328,8 +331,8 @@ Enable or disable usage of ICMP ping for primary IP.
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If primary IP ping should be enabled. 
-|=== 
+|flag|Boolean|If primary IP ping should be enabled.
+|===
 
 `enableRoutingTablePolling(flag) => void`::
 Enable or disable routing table polling.
@@ -337,8 +340,8 @@ Enable or disable routing table polling.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If routing table polls should be enabled. 
-|=== 
+|flag|Boolean|If routing table polls should be enabled.
+|===
 
 `enableSnmp(flag) => void`::
 Enable or disable usage of SNMP for all polls.
@@ -346,8 +349,8 @@ Enable or disable usage of SNMP for all polls.
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If SNMP communication should be enabled. 
-|=== 
+|flag|Boolean|If SNMP communication should be enabled.
+|===
 
 `enableStatusPolling(flag) => void`::
 Enable or disable status polling for a node.
@@ -355,8 +358,8 @@ Enable or disable status polling for a node.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If status polls should be enabled. 
-|=== 
+|flag|Boolean|If status polls should be enabled.
+|===
 
 `enableTopologyPolling(flag) => void`::
 Enable or disable topology polling.
@@ -364,8 +367,8 @@ Enable or disable topology polling.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If topology polls should be enabled. 
-|=== 
+|flag|Boolean|If topology polls should be enabled.
+|===
 
 `executeSSHCommand(command) => void`::
 Execute SSH command on node.
@@ -373,21 +376,21 @@ Execute SSH command on node.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|command|String|Command to be executed. 
-|=== 
+|command|String|Command to be executed.
+|===
 
 `getInterface(ifIdentifier) => <<class-interface>>`::
-Get interface object by index, MAC address or name. If 
-name is number method will assume that it is index. 
+Get interface object by index, MAC address or name. If
+name is number method will assume that it is index.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
-|ifIdentifier|Integer or String|Index, MAC address or name of interface. 
-|=== 
+|ifIdentifier|Integer or String|Index, MAC address or name of interface.
+|===
 
-.Return 
-<<class-interface>> object. 
+.Return
+<<class-interface>> object.
 
 .Example
 [.source]
@@ -398,17 +401,17 @@ println $node->getInterface("wlp4s0")->name; // Will print "wlp4s0"
 ....
 
 `getInterfaceByIndex(ifIndex) => <<class-interface>>`::
-Get interface object by index, MAC address or name. If 
-name is number method will assume that it is index. 
+Get interface object by index, MAC address or name. If
+name is number method will assume that it is index.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
-|ifIndex|Integer|Index of interface. 
-|=== 
+|ifIndex|Integer|Index of interface.
+|===
 
-.Return 
-<<class-interface>> object. 
+.Return
+<<class-interface>> object.
 
 .Example
 [.source]
@@ -417,17 +420,17 @@ println $node->getInterfaceByIndex(3)->name; // Will print "wlp4s0"
 ....
 
 `getInterfaceByMACAddress(ifMACAddr) => <<class-interface>>`::
-Get interface object by index, MAC address or name. If 
-name is number method will assume that it is index. 
+Get interface object by index, MAC address or name. If
+name is number method will assume that it is index.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
-|ifMACAddr|String|MAC address of interface. 
-|=== 
+|ifMACAddr|String|MAC address of interface.
+|===
 
-.Return 
-<<class-interface>> object. 
+.Return
+<<class-interface>> object.
 
 .Example
 [.source]
@@ -436,17 +439,17 @@ println $node->getInterfaceByMACAddress("00:14:22:04:25:37")->name; // Will prin
 ....
 
 `getInterfaceByName(IfName) => <<class-interface>>`::
-Get interface object by index, MAC address or name. If 
-name is number method will assume that it is index. 
+Get interface object by index, MAC address or name. If
+name is number method will assume that it is index.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
-|IfName|String|Name of interface. 
-|=== 
+|IfName|String|Name of interface.
+|===
 
-.Return 
-<<class-interface>> object. 
+.Return
+<<class-interface>> object.
 
 .Example
 [.source]
@@ -460,18 +463,18 @@ Get interface name by index.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|ifIndex|Integer|Index of interface. 
-|=== 
+|ifIndex|Integer|Index of interface.
+|===
 
 [[class-node-readagentparameter,Node::readAgentParameter()]]
 `readAgentParameter(name) => String`::
-Reads current value of agent metric. 
+Reads current value of agent metric.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
-|name|String|Parameter name. 
-|=== 
+|name|String|Parameter name.
+|===
 
 [[class-node-readagentlist,Node::readAgentList()]]
 `readAgentList(name) => Array`::
@@ -480,8 +483,8 @@ Reads current value of agent list metric and returns array of strings.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|name|String|List name. 
-|=== 
+|name|String|List name.
+|===
 
 [[class-node-readagenttable,Node::readAgentTable()]]
 `readAgentTable(name) => <<class-table>>`::
@@ -490,8 +493,8 @@ Reads current value of agent table metric and returns <<class-table>>.
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
-|name|String|Table name. 
-|=== 
+|name|String|Table name.
+|===
 
 [[class-node-readdriverparameter,Node::readDriverParameter()]]
 `readDriverParameter(name) => String`::
@@ -500,18 +503,18 @@ Request driver-specific metric directly from network device driver (e.g. Rital).
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|name|String|List name. 
-|=== 
+|name|String|List name.
+|===
 
 [[class-node-readWebServiceList,Node::readWebServiceList()]]
 `readWebServiceList(name) => String`::
-Read form node web service list
+Read list from node using web service 
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Name is expected in form service:path or service(arguments):path
-|=== 
+|===
 
 [[class-node-readWebServiceParameter,Node::readWebServiceParameter()]]
 `readWebServiceParameter(name) => String`::
@@ -521,7 +524,7 @@ Read form node web service parameter
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Name is expected in form service:path or service(arguments):path
-|=== 
+|===
 
 ==== Constants
 
@@ -531,44 +534,44 @@ Read form node web service parameter
 |===
 | Description | Value
 
-|DCF_DISABLE_STATUS_POLL  
-|0x00000001 
+|DCF_DISABLE_STATUS_POLL
+|0x00000001
 
-|DCF_DISABLE_CONF_POLL  
-|0x00000002 
+|DCF_DISABLE_CONF_POLL
+|0x00000002
 
-|DCF_DISABLE_DATA_COLLECT  
-|0x00000004 
+|DCF_DISABLE_DATA_COLLECT
+|0x00000004
 
-|NF_REMOTE_AGENT  
-|0x00010000 
+|NF_REMOTE_AGENT
+|0x00010000
 
-|NF_DISABLE_DISCOVERY_POLL 
+|NF_DISABLE_DISCOVERY_POLL
 |0x00020000
 
-|NF_DISABLE_TOPOLOGY_POLL  
-|0x00040000 
+|NF_DISABLE_TOPOLOGY_POLL
+|0x00040000
 
-|NF_DISABLE_SNMP  
-|0x00080000 
+|NF_DISABLE_SNMP
+|0x00080000
 
-|NF_DISABLE_NXCP  
-|0x00100000 
+|NF_DISABLE_NXCP
+|0x00100000
 
-|NF_DISABLE_ICMP  
-|0x00200000 
+|NF_DISABLE_ICMP
+|0x00200000
 
-|NF_FORCE_ENCRYPTION  
-|0x00400000 
+|NF_FORCE_ENCRYPTION
+|0x00400000
 
-|NF_DISABLE_ROUTE_POLL  
-|0x00800000 
+|NF_DISABLE_ROUTE_POLL
+|0x00800000
 
 |NF_AGENT_OVER_TUNNEL_ONLY
 |0x01000000
 
-|NF_SNMP_SETTINGS_LOCKED  
-|0x02000000 
+|NF_SNMP_SETTINGS_LOCKED
+|0x02000000
 
 |===
 
@@ -578,44 +581,44 @@ Read form node web service parameter
 |===
 | Description | Value
 
-|DCDF_QUEUED_FOR_STATUS_POLL  
-|0x00000001 
+|DCDF_QUEUED_FOR_STATUS_POLL
+|0x00000001
 
-|DCDF_QUEUED_FOR_CONFIGURATION_POLL 
+|DCDF_QUEUED_FOR_CONFIGURATION_POLL
 |0x00000002
 
-|DCDF_QUEUED_FOR_INSTANCE_POLL  
-|0x00000004 
+|DCDF_QUEUED_FOR_INSTANCE_POLL
+|0x00000004
 
-|DCDF_DELETE_IN_PROGRESS  
-|0x00000008 
+|DCDF_DELETE_IN_PROGRESS
+|0x00000008
 
-|DCDF_FORCE_STATUS_POLL  
-|0x00000010 
+|DCDF_FORCE_STATUS_POLL
+|0x00000010
 
-|DCDF_FORCE_CONFIGURATION_POLL  
-|0x00000020 
+|DCDF_FORCE_CONFIGURATION_POLL
+|0x00000020
 
-|DCDF_CONFIGURATION_POLL_PASSED  
-|0x00000040 
+|DCDF_CONFIGURATION_POLL_PASSED
+|0x00000040
 
-|DCDF_CONFIGURATION_POLL_PENDING  
-|0x00000080 
+|DCDF_CONFIGURATION_POLL_PENDING
+|0x00000080
 
-|NDF_QUEUED_FOR_TOPOLOGY_POLL  
-|0x00010000 
+|NDF_QUEUED_FOR_TOPOLOGY_POLL
+|0x00010000
 
-|NDF_QUEUED_FOR_DISCOVERY_POLL  
-|0x00020000 
+|NDF_QUEUED_FOR_DISCOVERY_POLL
+|0x00020000
 
-|NDF_QUEUED_FOR_ROUTE_POLL  
-|0x00040000 
+|NDF_QUEUED_FOR_ROUTE_POLL
+|0x00040000
 
-|NDF_RECHECK_CAPABILITIES  
-|0x00080000 
+|NDF_RECHECK_CAPABILITIES
+|0x00080000
 
-|NDF_NEW_TUNNEL_BIND  
-|0x00100000 
+|NDF_NEW_TUNNEL_BIND
+|0x00100000
 
 |===
 
@@ -631,64 +634,64 @@ Read form node web service parameter
 |0x00000002
 |NetXMS agent detected on the node
 
-|0x00000004 
+|0x00000004
 |Node is network bridge
 
-|0x00000008 
+|0x00000008
 |Node is IP router
 
-|0x00000010 
+|0x00000010
 |Node is management server (NetXMS server itself)
 
-|0x00000020 
+|0x00000020
 |Node is printer
 
-|0x00000040 
+|0x00000040
 |Node supports OSPF
 
-|0x00000080 
+|0x00000080
 |CheckPoint SNMP agent detected on port 260
 
-|0x00000100 
+|0x00000100
 |CDP supported
 
-|0x00000200 
+|0x00000200
 |NDP(SONMP) support detected on the node (Nortel/Synoptics/Bay Networks) topology discovery)
 
-|0x00000400 
+|0x00000400
 |Node supports LLDP
 
-|0x00000800 
+|0x00000800
 |Node supportes VRRP
 
-|0x00001000 
+|0x00001000
 |VLAN information available on the node
 
-|0x00002000 
+|0x00002000
 |802.1x support detected
 
-|0x00004000 
+|0x00004000
 |Spanning Tree (IEEE 802.1d) enabled on node
 
-|0x00008000 
+|0x00008000
 |Node supports ENTITY-MIB
 
-|0x00010000 
+|0x00010000
 |Node supports ifXTable
 
-|0x00020000 
+|0x00020000
 |Agent supports 64-bit interface counters
 
-|0x00040000 
+|0x00040000
 |Node supports Windows PDH parameters
 
-|0x00080000 
+|0x00080000
 |Node is wireless network controller
 
-|0x00100000 
+|0x00100000
 |Node supports SMCLP protocol
 
-|0x00200000 
+|0x00200000
 |Running agent is upgraded to new policy type
 
 |0x00400000
