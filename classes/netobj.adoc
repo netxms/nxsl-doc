@@ -12,6 +12,9 @@ If name of the custom attribute overlaps with the instance attribute, method <<c
 `alarms => array`::
 List of active <<class-alarm, Alarms>> for this object.
 
+`alias => String`::
+Object alias. For interfaces it is automatically collected on configuration poll (e.g. from SNMP ifAlias).
+
 `backupZoneProxy => Node`::
 Currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
 

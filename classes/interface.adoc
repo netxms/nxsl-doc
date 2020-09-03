@@ -9,9 +9,6 @@ Represent interface object. Inherit all attributes and methods of the <<class-ne
 `adminState => Integer`::
 Administrative <<enum-interface-state,state>> of the interface.
 
-`alias => String`::
-Interface alias (usually value of SNMP ifAlias).
-
 `bridgePortNumber => Integer`::
 Bridge port number for this interface.
 
