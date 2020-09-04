@@ -41,6 +41,7 @@ include::functions/readpersistentstorage.adoc[]
 include::functions/secondstouptime.adoc[]
 
 include::functions/sendmail.adoc[]
+include::functions/sendnotification.adoc[]
 
 include::functions/sleep.adoc[]
 

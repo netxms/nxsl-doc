@@ -36,7 +36,16 @@ Apply template to node
 |===
 
 `readInternalParameter(name) => String`::
-Reads server internal object metric (metric with source "Internal").
+Reads object internal metric (metric with source "Internal").
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Metric name.
+|===
+
+`readInternalTable(name) => String`::
+Reads object internal metric (metric with source "Internal").
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -49,7 +58,7 @@ Reads server internal object metric (metric with source "Internal").
 [NOTE]
 This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
-Remove template from node 
+Remove template from node
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
