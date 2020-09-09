@@ -2,7 +2,13 @@
 [[func-entermaintenance]]
 == EnterMaintenance()
 
-NOTE: Deprecated since 3.0, use <<class-netobj-entermaintenance>> instead.
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 3.0.*
+Please use <<class-netobj-entermaintenance>> instead.
+====
+****
 
 [source,c]
 ----

@@ -15,7 +15,7 @@ Sends notification to specified recipients.
 |===
 |channelName|String|Name of notification channel.
 |recipients|String|List of recipients. Multiple recipients should be separated by ";".
-|subject|String|Subject. No all notification channel may support this field, in this case empty string "" should be provided.
+|subject|String|Subject. Not all notification channel may support this field, in this case empty string "" should be provided.
 |text|String|Message text.
 |===
 

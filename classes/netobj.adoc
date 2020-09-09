@@ -148,7 +148,7 @@ Returns value of the custom attribute with the provided name.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|name|String|Name of the attribute to get value form.
+|name|String|Name of the attribute to get value from.
 |===
 
 [[class-netobj-leavemaintenance,NetObj::leaveMaintenance()]]

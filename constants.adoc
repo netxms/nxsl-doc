@@ -110,14 +110,22 @@
 
 == Other constants
 
-=== NXSL::Version
-
-Current server version
-
 === NXSL::BuildTag
 
 Current server build tag
 
+=== NXSL::Classes
+
+Array containing all NXSL classes
+
+=== NXSL::Functions
+
+Array containing names of all NXSL functions
+
 === NXSL::SystemIsBigEndian
 
 `TRUE` if system is big endian otherwise `FALSE`
+
+=== NXSL::Version
+
+Current server version

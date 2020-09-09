@@ -47,7 +47,7 @@ for(i : $node->interfaces)
 
 ==== Check if node is under cluster or container
 
-Script that returns `TRUE` if current node is already under container or cluster. 
+Script that returns `TRUE` if current node is already under container or cluster.
 
 [source,c]
 ----
@@ -74,12 +74,12 @@ for (n : GetAllNodes()) {
 }
 ----
 
-=== Instance filtering script for "Net.InterfaceList" 
+=== Instance filtering script for "Net.InterfaceList"
 
 ==== Requirements
 
-Instance filtering script for "Net.InterfaceList" list, that will filter only "eth*" and "bond*" interfaces, that can be used in 
-Net.Interface.BytesIn64 or Net.Interface.BytesOut64 DCIs. 
+Instance filtering script for "Net.InterfaceList" list, that will filter only "eth*" and "bond*" interfaces, that can be used in
+Net.Interface.BytesIn64 or Net.Interface.BytesOut64 DCIs.
 
 ==== Solution
 
@@ -96,11 +96,11 @@ return false;
 ----
 
 
-==== Filter some interfaces form creation
+==== Filter out some interfaces from creation
 
 ==== Requirements
 
-Filter interfaces that should not be monitored by NetXMS. In this case "isatap*" interfaces. 
+Filter interfaces that should not be monitored by NetXMS. In this case "isatap*" interfaces.
 
 ==== Solution
 
@@ -108,7 +108,7 @@ Update "Hook:CreateInterface" script in script library.
 
 [source,c]
 ----
-if ( $1->name ~= "^isatap" ) 
+if ( $1->name ~= "^isatap" )
     return false;
 
 return true;
@@ -129,7 +129,7 @@ Use named event attribute additionalInfo to pass information into e-mail body (u
 // only for interface up and down events
 if (($event->name != "SYS_IF_DOWN") && ($event->name != "SYS_IF_UP"))
 	return true;
-	
+
 // get interface object from interface index
 iface = $node->getInterface($5);
 if (iface == null)
@@ -139,7 +139,7 @@ if (iface == null)
 peer = iface->peerNode;
 if (peer == null)
 	return true;
-	
+
 // get peer interface object (needed to obtain MAC address)
 peerIface = iface->peerInterface;
 if (peerIface != null)
@@ -151,7 +151,7 @@ else
 	macAddr = "<MAC unknown>";
 }
 
-// set event's named parameter	
+// set event's named parameter
 SetEventParameter($event, "additionalInfo",
 	"Peer: " . peer->name . " " . peer->ipAddr . " " . macAddr);
 
@@ -241,7 +241,7 @@ foreach(parent : $node->parents)
 			dciId = FindDCIByDescription(vNode, dciName);
 			if (dciId > 0)
 			{
-				tmpValue = GetDCIValue(vNode,dciId);				
+				tmpValue = GetDCIValue(vNode,dciId);
 				if (tmpValue != null)
 				{
 					pValue[arrayI++] = tmpValue;
@@ -278,7 +278,7 @@ sub bubbleSort(arr)
 		for(ia = 1; arr[ia] != null; ia++)
 		{
 			ib = ia - 1;
-			
+
 			if (arr[ib] > arr[ia]){
 				trace(3,"swap: ".ib.":".arr[ib]." with ".ia.":".arr[ia]);
 				swapped=true;
@@ -421,7 +421,7 @@ sub add_contacts(curr)
 			contacts = c;
 		presence[c] = true;
 	}
-	
+
 	foreach(o : curr->parents)
 	{
 		add_contacts(o);

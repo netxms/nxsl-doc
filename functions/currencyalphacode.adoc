@@ -17,7 +17,7 @@ Get currency alpha code from numeric code
 
 .Return
 
-Currency alpha code form numeric code
+Currency alpha code from numeric code
 
 .Example
 [.source]

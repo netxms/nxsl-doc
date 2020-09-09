@@ -274,7 +274,7 @@ access element with index `3` of array `a` you should use
 a[3];
 ----
 
-To get sub array form the array use `[a:b]` operator. This operator returns aub array of an array from the element with index `a` inclusive till the element with index `b` exclusive. If `a` is omitted then sub array will be taken form the start of the array and if `b` is omitted then sub array will be taken till the end of the array.
+To get sub array from the array use `[a:b]` operator. This operator returns aub array of an array from the element with index `a` inclusive till the element with index `b` exclusive. If `a` is omitted then sub array will be taken form the start of the array and if `b` is omitted then sub array will be taken till the end of the array.
 
 Example:
 
@@ -648,24 +648,24 @@ switch (input)
 
 ====  with
 
-With statement is made to make the code cleaner and much more readable and to 
-expose variable section to global scope for "Object query" Dashboard element. 
-This statement consists form 2 parts: variable declaration (optional) and expression. 
+With statement is made to make the code cleaner and much more readable and to
+expose variable section to global scope for "Object query" Dashboard element.
+This statement consists of 2 parts: variable declaration (optional) and expression. 
 
 Structure:
 
 [source,c]
 ----
-with 
+with
   var = {code},
   ...
   var = {code}
 expression
 ----
 
-Example for "Object query" Dashboard element. This example will filter out only nodes that are 
-unreachable and will create 2 variables as data providers for columns: time node is down since and 
-oldest alarm time. 
+Example for "Object query" Dashboard element. This example will filter out only nodes that are
+unreachable and will create 2 variables as data providers for columns: time node is down since and
+oldest alarm time.
 
 [source,c]
 ----
@@ -677,8 +677,8 @@ with
    oldestAlarmTime = min(oldestAlarmTime, a->creationTime);
   }
   return strftime("%Y-%m-%d %H:%M", oldestAlarmTime);
- } 
-type == NODE and state & NodeState::Unreachable 
+ }
+type == NODE and state & NodeState::Unreachable
 //In Object query object attributes are available just using name.
 //Like state ($node->state in other scripts)
 ----

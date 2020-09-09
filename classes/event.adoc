@@ -30,13 +30,13 @@ Event name.
 `origin => Number`::
 Origin of the event
 
-* 0 - SYSTEM 
-* 1 - AGENT 
+* 0 - SYSTEM
+* 1 - AGENT
 * 2 - CLIENT
 * 3 - SYSLOG
 * 4 - SNMP
 * 5 - NXSL
-* 6 - REMOTE_SERVER 
+* 6 - REMOTE_SERVER
 
 `originTimestamp => Number`::
 The time when the event was generated in the origin.
@@ -109,7 +109,7 @@ Sets root cause id for the event
 
 `expandString(String) => String`::
 
-Expand string, by replacing macros. 
+Expand string, by replacing macros.
 
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
@@ -133,7 +133,7 @@ Return if event has specific tag.
 
 `removeTag(tag) => void`::
 
-Remove tag form event tag list
+Remove tag from event tag list
 
 .Parameters
 [cols="1,3a" grid="none", frame="none"]

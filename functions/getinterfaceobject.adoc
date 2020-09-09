@@ -2,6 +2,14 @@
 [[func-getinterfaceobject]]
 == GetInterfaceObject()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 3.4.*
+Please use <<class-node-getinterface>>, <<class-node-getinterfacebyindex>>, <<class-node-getinterfacebymacaddress>> or <<class-node-getinterfacebyname>> instead.
+====
+****
+
 [source,c]
 ----
 GetInterfaceObject(node, interfaceIndex) => Interface

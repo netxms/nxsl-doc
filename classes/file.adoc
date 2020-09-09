@@ -2,13 +2,13 @@
 [[class-file]]
 === File
 
-Class that represents file on file system. Available only if 'NXSL.EnableFileIOFunctions' configuration parameter is turned on. 
+Class that represents file on file system. Available only if 'NXSL.EnableFileIOFunctions' configuration parameter is turned on.
 File read and write position in file depends on mode file was opened in.
 
 ==== Instance attributes
 
 `eof => Boolean`::
-If it's already end of file. 
+If it's already end of file.
 
 `name => String`::
 File name
@@ -19,7 +19,7 @@ File name
 Close file
 
 `read(numberOfSymbols) => String`::
-Read provided number of bytes form file. 
+Read provided number of bytes from file.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -27,14 +27,14 @@ Read provided number of bytes form file.
 |numberOfSymbols|Integer|Number of symbol to read from file
 |===
 
-.Return 
-String with symbols read form file or null if file closed or end of file reached.
+.Return
+String with symbols read from file or null if file closed or end of file reached.
 
 `readLine() => String`::
-Read line form file.
+Read line from file.
 
-.Return 
-String with read line form file or null if file closed or end of file reached.
+.Return
+String with read line from file or null if file closed or end of file reached.
 
 `write(text) => void`::
 Will write provided text to the file.
