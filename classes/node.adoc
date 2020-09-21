@@ -508,7 +508,7 @@ Request driver-specific metric directly from network device driver (e.g. Rital).
 |===
 
 [[class-node-readWebServiceList,Node::readWebServiceList()]]
-`readWebServiceList(name) => String`::
+`readWebServiceList(name) => Array`::
 Read list from node using web service
 
 .Parameters
@@ -516,6 +516,9 @@ Read list from node using web service
 |===
 |name|String|Name is expected in form service:path or service(arguments):path
 |===
+
+.Return
+Array with string with web service instances
 
 [[class-node-readWebServiceParameter,Node::readWebServiceParameter()]]
 `readWebServiceParameter(name) => String`::
@@ -526,6 +529,9 @@ Read from node web service parameter
 |===
 |name|String|Name is expected in form service:path or service(arguments):path
 |===
+
+.Return
+String with result read from web service
 
 ==== Constants
 
