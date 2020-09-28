@@ -107,19 +107,26 @@ Sets root cause id for the event
 |eventId|Root cause event id
 |===
 
-`expandString(String) => String`::
+`expandString(string) => String`::
 
-Expand string, by replacing macros.
+Expand string by replacing macros with their values.
 
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
-|String|String to expand
+|string|String to expand
 |===
 
 .Return
 
 Formated string
+
+.Example
+[.source]
+....
+>>> $event->expandString("%N")
+SYS_THRESHOLD_REACHED
+....
 
 `hasTag(tag) => Boolean`::
 
