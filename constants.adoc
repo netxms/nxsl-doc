@@ -74,7 +74,7 @@
 |Status::WARNING|1|Warning
 |Status::MINOR|2|Minor
 |Status::MAJOR|3|Major
-|Status::CRITICA|4|Critical
+|Status::CRITICAL|4|Critical
 |Status::UNKNOWN|5|Unknown
 |Status::UNMANAGED|6|Unmanaged
 |Status::DISABLED|7|Disabled
