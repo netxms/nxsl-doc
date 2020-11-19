@@ -1,0 +1,22 @@
+[.nxsl-function]
+[[func-getserverqueuenames]]
+== GetServerQueueNames()
+
+[source,c]
+----
+GetServerQueueNames() => Array
+----
+
+Get array with server queue names. 
+
+.Return
+Array with strings. 
+
+.Example
+[.source]
+....
+foreach(l : GetServerQueueNames())
+{
+  println(l);
+}
+....

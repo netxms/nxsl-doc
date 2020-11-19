@@ -23,16 +23,19 @@ include::functions/getconfigurationvariable.adoc[]
 include::functions/gethostbyaddr.adoc[]
 include::functions/gethostbyname.adoc[]
 
+include::functions/getserverqueuenames.adoc[]
+
 include::functions/getsyslogrulecheckcount.adoc[]
 include::functions/getsyslogrulematchcount.adoc[]
 
 include::functions/getthreadpoolnames.adoc[]
 
+include::functions/instance.adoc[]
+
 include::functions/jsonparse.adoc[]
 
 include::functions/map.adoc[]
 include::functions/maplist.adoc[]
-include::functions/instance.adoc[]
 
 include::functions/random.adoc[]
 
