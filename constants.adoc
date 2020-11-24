@@ -55,12 +55,12 @@
 |===
 |Constant|Value|Description
 
-|NodeState::Unreachable|0x00000001|Signed 32 bit integer
-|NodeState::NetworkPathProblem|0x00000002|Unsigner 32 bit integer
-|NodeState::AgentUnreachable|0x00010000|Signer 64 bit integer
-|NodeState::SNMPUnreachable|0x00020000|String
-|NodeState::EtherNetIPUnreachable|0x00040000|Unsigned 64 bit integer
-|NodeState::CacheModeNotSupported|0x00080000|Floating point number
+|NodeState::Unreachable|0x00000001|Node is unreachable
+|NodeState::NetworkPathProblem|0x00000002|Network path problem
+|NodeState::AgentUnreachable|0x00010000|NetXMS agent unreachable
+|NodeState::SNMPUnreachable|0x00020000|Unreachable via SNMP
+|NodeState::EtherNetIPUnreachable|0x00040000|Unreachable via EtherNet/IP industrial protocol
+|NodeState::CacheModeNotSupported|0x00080000|Cache mode is not supported on NetXMS agent
 |===
 
 [[const-object-status]]

@@ -7,8 +7,13 @@ include::functions/deletecustomattribute.adoc[]
 include::functions/deleteobject.adoc[]
 include::functions/entermaintenance.adoc[]
 include::functions/expandstring.adoc[]
+include::functions/findnodebyagentid.adoc[]
+include::functions/findnodebyipaddress.adoc[]
+include::functions/findnodebymacaddress.adoc[]
+include::functions/findnodebysysname.adoc[]
 include::functions/findnodeobject.adoc[]
 include::functions/findobject.adoc[]
+include::functions/findobjectbyguid.adoc[]
 include::functions/getallnodes.adoc[]
 include::functions/getcustomattribute.adoc[]
 include::functions/getinterfacename.adoc[]
@@ -25,3 +30,7 @@ include::functions/setcustomattribute.adoc[]
 include::functions/setinterfaceexpectedstate.adoc[]
 include::functions/unbindobject.adoc[]
 include::functions/unmanageobject.adoc[]
+
+
+
+
