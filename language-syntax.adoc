@@ -411,28 +411,21 @@ Comparison operators allow you to compare two values.
 |`a > b` | Greater than| `TRUE` if `a` is strictly greater than `b`.
 |`a \<= b` | Less than or equal to| `TRUE` if `a` is less than or equal to `b`.
 |`a >= b` | Greater than or equal to| `TRUE` if `a` is greater than or equal to `b`.
-|`a ~= b` | Match| Array with full match of b in the position 0 and other matches
-starting from 1st position if `a` is matched to regular expression `b` or NULL if
-not matched. As a side effect, assigns values to special variables `$1`, `$2`, `$3`, etc.
-See see <<chapter-regular-expressions>> for details.
-
-System message: Unknown interpreted text role "ref".
-
-|`a match b`| Match| Array with full match of b in the position 0 and other matches
-starting from 1st position if `a` is matched to regular expression `b` or NULL if
-not matched. As a side effect, assigns values to special variables `$1`, `$2`, `$3`, etc.
-See see <<chapter-regular-expressions>> for details.
-
-System message: Unknown interpreted text role "ref".
-
-|`a imatch b`| Match (case insensitive)|Array with full match of b in the position 0 and other matches
-starting from 1st position if `a` is matched to regular expression `b` (case insensitive) or NULL if
-not matched. As a side effect, assigns values to special variables `$1`, `$2`, `$3`, etc.
-See see <<chapter-regular-expressions>> for details.
-
-System message: Unknown interpreted text role "ref".
-
+|`a ~= b` | Match| Array containing full match of `b` and capture groups, if any. 
+If nothing was matched, false (boolean) is returned. 
+Capture groups are also assigned to special variables $1, $2, $3, etc. 
+See see <<chapter-regular-expressions>> for additional information. 
+|`a match b`| Match| Same as `a ~= b`
+|`a imatch b`| Match (case insensitive)|Same as `a ~= b` or `a match b`, but matching is case insensitive. 
 |===
+
+Example:
+
+[source,c]
+----
+println("aaa bbb ccc" ~= "b+") // will print [bbb]
+println("Username: John" ~= "Username: (\w+)"); // will print [Username: John, John]
+----
 
 ==== Incrementing/Decrementing Operators
 
