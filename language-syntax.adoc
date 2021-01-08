@@ -22,6 +22,8 @@ NXSL supports the following variable types:
 
 * string,
 
+* boolean,
+
 * array,
 
 * object.
@@ -56,19 +58,48 @@ type variables, use `classof()` function.
 
 ==== Truth Value Testing
 
-Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. The following values are considered false:
+Any variable can be tested for truth value, for use in an `if` or `while` condition 
+or as operand of the Boolean operations below. The following values are considered false:
 
-False
+* `false`
 
-NULL
+* `NULL`
 
-zero of any numeric type, for example, 0, 0.0, 0j.
+* zero of any numeric type, for example, `0`, `0.0`, `0j`.
 
-instances of user-defined classes, if the class defines a __bool__() or __len__() method, when that method returns the integer zero or bool value False. [1]
+* instances of user-defined classes, if the class defines a `__bool__()` or `__len__()` 
+method, when that method returns the integer zero or Boolean value `false`.
 
-All other values are considered true — so objects of many types and arrays are always true.
+All other values are considered `true` — so objects of various types and arrays are always `true`.
 
-Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.)
+Operations and built-in functions that have a Boolean result return boolean type. However, 
+there's an exception to this due to optimizations related to short-circuit evaluation of 
+`or` and `and` operators. For `or`, if first operand not boolean type, but it's value is 
+considered `true`, that operand will be returned as result. For `and`, if first operand is 
+considered `false`, that operand will be returned as result. This will not cause issues in
+subsequent logical operations, as returned value will be correctly considered as `true` or `false`;
+But when printing the result, it will not be converted to Boolean, so conversion 
+using boolean() function might be needed.
+
+For example:
+
+[source,c]
+----
+a = %(1,2,3);
+b = true;
+c = a or b;
+println c;  // will print "[1, 2, 3]" because first operand was returned by or operation
+if (c) println "TRUE";  // will print "TRUE" as the array contained in c is considered as true 
+----
+
+[source,c]
+----
+a = 0;
+b = true;
+c = a and b;
+println c; // will print "0" because first operand was returned by and operation
+println boolean(c);  // will print "false"
+----
 
 === Variables
 
@@ -415,7 +446,7 @@ Comparison operators allow you to compare two values.
 If nothing was matched, false (boolean) is returned. 
 Capture groups are also assigned to special variables $1, $2, $3, etc. 
 See see <<chapter-regular-expressions>> for additional information. 
-|`a match b`| Match| Same as `a ~= b`
+|`a match b`| Match| Same as `a ~= b` 
 |`a imatch b`| Match (case insensitive)|Same as `a ~= b` or `a match b`, but matching is case insensitive. 
 |===
 
