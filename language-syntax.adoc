@@ -431,7 +431,7 @@ println(a); // prints '[1, 2, 3, 4]'
 ....
 
 `insert(index, newElement) => void`::
-Inserts new element to the array at `index`. Indexes of existing elements that had index >= `index` are incremented. 
+Inserts new element to the array at `index`. Indexes of existing elements that had index greater or equal to `index` are incremented. 
 
 .Example
 [.source]
@@ -446,7 +446,7 @@ println(a[11]);  // prints "ccc" - because of the insert operation this element'
 ....
 
 `insertAll(index, anotherArray) => void`::
-Inserts elements of `anotherArray` to the array at `index`. Indexes of existing elements that have index >= `index` are incremented. 
+Inserts elements of `anotherArray` to the array at `index`. Indexes of existing elements that have index greater or equal to `index` are incremented. 
 
 .Example
 [.source]
@@ -475,7 +475,7 @@ println(a->pop());
 Same as `append()`.
 
 `remove(index) => void`::
-Removes element at specified `index`. Indexes of elements that have index >= `index` are decremented. 
+Removes element at specified `index`. Indexes of elements that have index greater or equal to `index` are decremented. 
 
 .Example
 [.source]
