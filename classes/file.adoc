@@ -1,6 +1,6 @@
 [.nxsl-class]
 [[class-file]]
-=== File
+=== FILE
 
 Class that represents file on file system. Available only if 'NXSL.EnableFileIOFunctions' configuration parameter is turned on.
 File read and write position in file depends on mode file was opened in.
