@@ -6,12 +6,20 @@ Represents NetXMS node object. Extends <<class-datacollectiontarget>>.
 
 ==== Instance attributes
 
-`agentCertificateSubject => String`::
+`agentCertificateMappingData => String`::
+Agent certificate mapping data (set in object properties).
 
+`agentCertificateMappingMethod => String`::
+Agent certificate mapping method (set in object properties).
+
+`agentCertificateSubject => String`::
 Subject of certificate issued for agent tunnel on this node.
 
 `agentId => String`::
 NetXMS agent unique ID (`string` representation of GUID). Will return all zeroes GUID if agent is not detected on node or does not have unique ID.
+
+`agentProxy => <<class-node>>`::
+Object that is set as agent proxy in object properties or NULL. 
 
 `agentVersion => String`::
 NetXMS agent version as `string`.
@@ -44,6 +52,12 @@ EtherNet/IP device status
 `cipStatusAsText => String`::
 EtherNet/IP device status as text
 
+`cipState => Integer`::
+EtherNet/IP device state
+
+`cipStateAsText => String`::
+EtherNet/IP device state as text
+
 `cipVendorCode => Integer`::
 EtherNet/IP vendor code in numeric form.
 
@@ -58,6 +72,15 @@ Named of selected device-specific SNMP driver.
 
 `downSince => Integer64`::
 UNIX timestamp when node went down.
+
+`effectiveAgentProxy => <<class-node>>`::
+Object that is effective agent proxy or NULL. 
+
+`effectiveIcmpProxy => <<class-node>>`::
+Object that is effective ICMP proxy or NULL. 
+
+`effectiveSnmpProxy => <<class-node>>`::
+Object that is effective SNMP proxy or NULL. 
 
 `flags => Integer`::
 Bit mask of <<node-flags>>.
@@ -103,6 +126,9 @@ ICMP minimal response time for primary address. Will return null if no informati
 
 `icmpPacketLoss => Integer`::
 ICMP packet loss for primary address. Will return null if no information.
+
+`icmpProxy => <<class-node>>`::
+Object that is set as ICMP proxy in object properties or NULL. 
 
 `interfaces => Array`::
 Array with <<class-interface>> objects, that are under this node. First object placed at index 0.
@@ -231,6 +257,9 @@ Serial number from hardware system property
 `snmpOID => String`::
 SNMP object identifier (result of `.1.3.6.1.2.1.1.2.0` request)
 
+`snmpProxy => <<class-node>>`::
+Object that is set as SNMP proxy in object properties or NULL. 
+
 `snmpSysContact => String`::
 SNMP system contact (result of `.1.3.6.1.2.1.1.4.0` request)
 
@@ -249,6 +278,9 @@ Configured SNMP version:
 
 `sysDescription => String`::
 System description (value of `System.Uname` for nodes with agents or `.1.3.6.1.2.1.1.1.0` for SNMP nodes)
+
+`tunnel => <<class-tunnel>>`::
+Tunnel object f this node or NULL if there is no tunnel active and bound to this node. 
 
 `vendor => String`::
 Hardware vendor information

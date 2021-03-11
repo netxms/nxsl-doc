@@ -33,11 +33,14 @@ Id
 `isLDAPUser => Boolean`::
 `TRUE` if user DB object is synchronized from LDAP
 
-`ldapDomain => String`::
+`ldapDN => String`::
 Get user DB object LDAP domain name
 
 `ldapId => String`::
 Get user DB object LDAP id (value depends on the field that is ues as LDAP object id)
+
+`name => String`::
+Object name
 
 `systemRights => Integer64`::
 Field with <<enum-system-rights,system rights>> as bit flags. 

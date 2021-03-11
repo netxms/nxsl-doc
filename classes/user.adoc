@@ -18,11 +18,20 @@ Data that will be used to mpa certificate
 `disabledUntil => String`::
 UNIX timestamp with date until this user is disabled
 
+`disabledUntil => String`::
+UNIX timestamp with date until this user is disabled
+
+`email => String`::
+Email set in user properties
+
 `fullName => String`::
-Full user name
+User full name
 
 `graceLogins => Integer`::
 Grace login count
+
+`phoneNumber => String`::
+Phone number set in user properties
 
 `lastLogin => Integer`::
 UNIX timestamp with last user's login time
