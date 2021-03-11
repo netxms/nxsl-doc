@@ -539,6 +539,30 @@ Request driver-specific metric directly from network device driver (e.g. Rital).
 |name|String|List name.
 |===
 
+`readInternalParameter(name) => String`::
+Read internal parameter
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Parameter name
+|===
+
+.Return
+Value of requested internal parameter
+
+`readInternalTable(name) => <<class-table>>`::
+Read internal table
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Table name
+|===
+
+.Return
+Value of requested internal table of class <<class-table>>
+
 [[class-node-readWebServiceList,Node::readWebServiceList()]]
 `readWebServiceList(name) => Array`::
 Read list from node using web service
@@ -564,6 +588,15 @@ Read from node web service parameter
 
 .Return
 String with result read from web service
+
+`setIfXTableUsageMode(mode) => void`::
+Set ifXTable usage mode 0 - use default, 1 - enable, 2 - disable 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|mode|Integer|usage mode
+|===
 
 ==== Constants
 

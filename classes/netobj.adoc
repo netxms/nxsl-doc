@@ -63,6 +63,9 @@ GUID of object image used for representation on the maps.
 `name => String`::
 Object name.
 
+`nameOnMap => String`::
+Object name displayed on map.
+
 `parents => array`::
 List of direct parents for this object (inherited from <<class-netobj>>, most likely either <<class-container>> or <<class-cluster>>).
 
@@ -137,6 +140,31 @@ Delete custom attribute.
 |name|String|Name of the attribute to delete.
 |===
 
+`isDirectChild(object) => Boolean`::
+If provided object is direct child of this object
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|object|<<class-netobj>>|Object to check
+|===
+
+.Return
+TRUE if provided object is direct child of this object
+
+`isDirectParent(object) => Boolean`::
+If provided object is direct parent of this object
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|object|<<class-netobj>>|Object to check
+|===
+
+.Return
+TRUE if provided object is direct parent of this object
+
+
 [[class-netobj-entermaintenance,NetObj::enterMaintenance()]]
 `enterMaintenance() => void`::
 Enable maintenance mode for the object.
@@ -172,6 +200,31 @@ Returns value of the custom attribute with the provided name.
 |name|String|Name of the attribute to get value from.
 |===
 
+`isChild(object) => Boolean`::
+If provided object is child of this object
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|object|<<class-netobj>>|Object to check
+|===
+
+.Return
+TRUE if provided object is child of this object
+
+`isParent(object) => Boolean`::
+If provided object is parent of this object
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|object|<<class-netobj>>|Object to check
+|===
+
+.Return
+TRUE if provided object is parent of this object
+
+
 [[class-netobj-leavemaintenance,NetObj::leaveMaintenance()]]
 `leaveMaintenance() => void`::
 Disable maintenance mode for the object.
@@ -186,6 +239,24 @@ Rename object.
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|New object name
+|===
+
+`setAlias(name) => void`::
+Set object alias name
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New alias name
+|===
+
+`setCategory(idOrName) => void`::
+Set object category id or name (used to get object display image)
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|idOrName|String|ID or name of category
 |===
 
 `setComments(comment) => void`::
@@ -224,6 +295,15 @@ Sets object image, that will be used to display object on network map
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |image|String|GUID or name of image from image library
+|===
+
+`setNameOnMap(name) => void`::
+Sets object's name, that will be used to display object on network map
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New object's name on map
 |===
 
 `setStatusCalculation(type, ...) => void`::

@@ -158,6 +158,17 @@ Set event message to `message`.
 |message|Message string
 |===
 
+`setNamedParameter(name, value) => void`::
+
+Set named parameter or change value of existing named parameter
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|name|String name of parameter
+|value|String value of parameter
+|===
+
 `setSeverity(severityCode) => void`::
 
 Change event severity to `severityCode`.

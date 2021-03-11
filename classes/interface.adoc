@@ -110,6 +110,37 @@ Zone UIN of this interface.
 
 ==== Instance methods
 
+`enableAgentStatusPolling(enabled) => void`::
+
+Enable\disable agent status polling for this interface
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|enabled|Boolean|`TRUE` if interface should be status polled by NetXMS agent
+|===
+
+`enableICMPStatusPolling(enabled) => void`::
+
+Enable\disable ICMP status polling for this interface
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|enabled|Boolean|`TRUE` if interface should be status polled by ICMP
+|===
+
+`enableSNMPStatusPolling(enabled) => void`::
+
+Enable\disable SNMP status polling for this interface
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|enabled|Boolean|`TRUE` if interface should be status polled by SNMP
+|===
+
+
 `setExcludeFromTopology(excluded) => void`::
 
 Change `isExcludedFromTopology` flag.

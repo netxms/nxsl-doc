@@ -6,11 +6,23 @@ Class that represents mobile device object, extends <<class-datacollectiontarget
 
 ==== Instance attributes
 
+`altitude => Integer`::
+Altitude
+
 `batteryLevel => Integer`::
 Battery percentage
 
+`commProtocol => String`::
+Communication Protocol
+
 `deviceId => String`::
 Device id
+
+`direction => String`::
+Direction
+
+`lastReportTime => Integer`::
+UNIX timestamp when device last reported data
 
 `model => String`::
 Device model
@@ -23,6 +35,9 @@ OS version
 
 `serialNumber => String`::
 Serial number 
+
+`speed => String`::
+Speed
 
 `userId => String`::
 User id
