@@ -19,7 +19,7 @@ This function has named parameters.
 |===
 
 .Return
-Array, where the first value is `1`, the second is `name`, the third is `displayName` and the forth is `object`.
+Array, where the first value is `true`, the second is `name`, the third is `displayName` and the forth is `object`.
 
 .Example
 [.source]
