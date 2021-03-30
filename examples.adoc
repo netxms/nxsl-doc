@@ -173,7 +173,6 @@ In order to be able to access info about all nodes, the CheckTrustedNodes server
 [source,c]
 ----
 // This function walks object tree recursively starting from given root
-EnumerateNodes(FindObject(1));
 sub EnumerateNodes(obj, level)
 {
     foreach(o : obj->children) {
