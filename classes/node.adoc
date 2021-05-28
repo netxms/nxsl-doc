@@ -302,7 +302,7 @@ This node zone UIN
 
 ==== Instance methods
 
-`void createSNMPTransport(port, context) => <<class-snmp_transport>>`::
+`createSNMPTransport(port, context) => <<class-snmp_transport>>`::
 Create SNMP transport object of class <<class-snmp_transport>> with communication settings defined on the node. 
 Creation of SNMP transport is a preparatory operation enabling subsequent sending of SNMP requests to node.  
 However, creation of SNMP transport does not guarantee that the node is accessible. 
@@ -318,7 +318,16 @@ However, creation of SNMP transport does not guarantee that the node is accessib
 
 Instance of <<class-snmp_transport>> or `null` if failed.
 
-`void enableAgent(flag)`::
+`enable8021xStatusPolling(flag) => void`::
+Enable or disable 802.1x port state checking duing status polls.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If 802.1x port state checking should be enabled.
+|===
+
+`enableAgent(flag) => void`::
 Enable or disable usage of NetXMS agent for all polls.
 
 .Parameters
@@ -327,7 +336,7 @@ Enable or disable usage of NetXMS agent for all polls.
 |flag|Boolean|If agent usage should be enabled.
 |===
 
-`void enableConfigurationPolling(flag) => void`::
+`enableConfigurationPolling(flag) => void`::
 Enable or disable configuration polling for a node
 
 .Parameters
