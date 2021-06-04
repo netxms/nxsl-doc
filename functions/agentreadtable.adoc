@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 3.0.*
-Please use readDriverParameter function in <<class-node>>.
+Please use method readDriverParameter of class <<class-node>>.
 ====
 ****
 

@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 3.0.* 
-Please use readAgentList function in <<class-node>>. 
+Please use method readAgentList of class <<class-node>>. 
 ====
 ****
 

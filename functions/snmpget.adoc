@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 3.0.* 
-Please use get function in <<class-snmp_transport>>. 
+Please use method get of class <<class-snmp_transport>>. 
 ====
 ****
 

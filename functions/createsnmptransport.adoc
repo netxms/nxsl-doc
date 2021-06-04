@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 3.0.* 
-Please use createSNMPTransport function in <<class-node>>. 
+Please use method createSNMPTransport of class <<class-node>>. 
 ====
 ****
 
