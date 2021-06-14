@@ -319,7 +319,7 @@ However, creation of SNMP transport does not guarantee that the node is accessib
 Instance of <<class-snmp_transport>> or `null` if failed.
 
 `enable8021xStatusPolling(flag) => void`::
-Enable or disable 802.1x port state checking duing status polls.
+Enable or disable 802.1x port state checking during status polls.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
