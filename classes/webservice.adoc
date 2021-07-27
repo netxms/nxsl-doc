@@ -1,0 +1,148 @@
+[.nxsl-class]
+[[class-web_service]]
+=== Web Service object
+
+Represents web service definition and node, that will be used for requests.
+
+==== Instance attributes
+
+`id => Integer`::
+Web service id
+
+`name => String`::
+Web service name
+
+`discription => String`::
+Web service description
+
+==== Instance methods
+
+`get(...) => <<class-web_service_response>>`::
+Execute GET request from node associated to this object and with all data from web service definition. 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|...|Strings|Additional parameter that will be used in web service definition to expand %1, %2... macro.
+|===
+
+.Return
+Instance of <<class-web_service_response>> with request result.
+
+.Example
+[.source]
+....
+webSvc = $node->getWebService("webSwcName"); 
+result = webSvc->get();
+println result->document; // will print result
+
+result = webSvc->get("additional", "parametera");
+println result->document; // will print result
+....
+
+`delete(...) => <<class-web_service_response>>`::
+Execute DELETE request from node associated to this object and with all data from web service definition. 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|...|Strings|Additional parameter that will be used in web service definition to expand %1, %2... macro.
+|===
+
+.Return
+Instance of <<class-web_service_response>> with request result.
+
+.Example
+[.source]
+....
+webSvc = $node->getWebService("webSwcName"); 
+result = webSvc->delete();
+println result->success; //will print if request was successful
+
+result = webSvc->delete("additional", "parametera");
+println result->success; //will print if request was successful
+....
+
+`patch(data, contentType, ...) => <<class-web_service_response>>`::
+Execute PATCH request from node associated to this object and with all data from web service definition. 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|data|String or <<class-json_object>> | Data that will be set to the web service.
+|contentType|String|Optional parameter. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
+|...|Strings|Additional parameter that will be used in web service definition to expand %1, %2... macro.
+|===
+
+.Return
+Instance of <<class-web_service_response>> with request result.
+
+.Example
+[.source]
+....
+webSvc = $node->getWebService("webSwcName"); 
+
+result = webSvc->patch("{ \"id\":10 }");
+println result->success; //will print if request was successful
+
+json = new JsonObject();
+json->set("id", 42);
+result = webSvc->patch(json,"application/json", "additional", "parametera");
+println result->success; //will print if request was successful
+....
+
+`post(data, contentType, ...) => <<class-web_service_response>>`::
+Execute POST request from node associated to this object and with all data from web service definition. 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|data|String or <<class-json_object>> | Data that will be set to the web service.
+|contentType|String|Optional parameter. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
+|...|Strings|Additional parameter that will be used in web service definition to expand %1, %2... macro.
+|===
+
+.Return
+Instance of <<class-web_service_response>> with request result.
+
+.Example
+[.source]
+....
+webSvc = $node->getWebService("webSwcName"); 
+
+result = webSvc->post("{ \"id\":10 }");
+println result->success; //will print if request was successful
+
+json = new JsonObject();
+json->set("id", 42);
+result = webSvc->post(json,"application/json", "additional", "parametera");
+println result->success; //will print if request was successful
+....
+
+`put(data, contentType, ...) => <<class-web_service_response>>`::
+Execute PUT request from node associated to this object and with all data from web service definition. 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|data|String or <<class-json_object>> | Data that will be set to the web service.
+|contentType|String|Optional parameter. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
+|...|Strings|Additional parameter that will be used in web service definition to expand %1, %2... macro.
+|===
+
+.Return
+Instance of <<class-web_service_response>> with request result.
+
+.Example
+[.source]
+....
+webSvc = $node->getWebService("webSwcName"); 
+
+result = webSvc->put("{ \"id\":10 }");
+println result->success; //will print if request was successful
+
+json = new JsonObject();
+json->set("id", 42);
+result = webSvc->put(json,"application/json", "additional", "parametera");
+println result->success; //will print if request was successful
+....

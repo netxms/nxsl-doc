@@ -302,6 +302,42 @@ This node zone UIN
 
 ==== Instance methods
 
+`callWebService(webSwcName, requestType, ...) => <<class-web_service_response>>`::
+Finds web service by name, makes request and returns the <<class-web_service_response>> object.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|webSwcName|String|Web service name.
+|requestType|String|Request type. One of: GET, DELETE, PATCH, POST, PUT
+|data|String or <<class-json_object>> |Depending on request type data might be required and provided as a string or json object. GET and DELETE requests do not allow data, others require data.
+|contentType|String|Optional parameter. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
+|...|Strings|Additional parameter that will be used in web service definition to expand %1, %2... macro.
+|===
+
+.Return
+Instance of <<class-web_service_response>> with request result.
+
+.Example
+[.source]
+....
+//Valid example when request fails because there is no connection with agent
+result = $node->callWebService("Web service name", "GET", "additional/ult/path"); 
+println result->success; // "false"
+println result->errorMessage; // "No connection with agent"
+println result->agentErrorCode; // "0"
+println result->httpResponseCode; // "0"
+println result->document; // ""
+
+//Successful post request
+result = $node2->callWebService("Web service name", "POST", "application/json",  "{ \"id\":10 }", "additional/ult/path");
+println result->success; // "true"
+println result->errorMessage; // ""
+println result->agentErrorCode; // "0"
+println result->httpResponseCode; // "200"
+println result->document; // ""
+....
+
 `createSNMPTransport(port, context) => <<class-snmp_transport>>`::
 Create SNMP transport object of class <<class-snmp_transport>> with communication settings defined on the node. 
 Creation of SNMP transport is a preparatory operation enabling subsequent sending of SNMP requests to node.  
@@ -513,6 +549,24 @@ Get interface name by index.
 |===
 |ifIndex|Integer|Index of interface.
 |===
+
+`getWebService(webSvcName) => <<class-web_service>>`::
+Get web service object by name.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|webSvcName|String|Name of interface.
+|===
+
+.Return
+<<class-web_service>> object.
+
+.Example
+[.source]
+....
+webSvc = $node->getWebService("webSwcName"); 
+....
 
 [[class-node-readagentparameter,Node::readAgentParameter()]]
 `readAgentParameter(name) => String`::

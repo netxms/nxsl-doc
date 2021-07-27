@@ -1,5 +1,5 @@
 [.nxsl-class]
-[[json-array]]
+[[class-json_array]]
 === JSON array
 
 Represents JSON array object

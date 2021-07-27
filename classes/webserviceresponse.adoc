@@ -1,0 +1,25 @@
+[.nxsl-class]
+[[class-web_service_response]]
+=== Web service response
+
+Contains all information about web service custom request execution result
+
+
+==== Instance attributes
+
+`agentErrorCode => Integer`::
+Agent error code
+
+`document => String`::
+Document that was returned by web service as a response to the request
+
+`errorMessage => String`::
+Human readable error message set by server or agent
+
+`httpResponseCode => Integer`::
+HTTP response code
+
+`success => Boolean`::
+Will return `True` in case of success and `False` if there was problem on server or on agent
+
+
