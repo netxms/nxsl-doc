@@ -18,7 +18,7 @@ Web service description
 ==== Instance methods
 
 `get(...) => <<class-web_service_response>>`::
-Execute GET request to node associated with this object using all data from web service definition. 
+Execute GET request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion. 
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -41,7 +41,7 @@ println result->document; // will print result
 ....
 
 `delete(...) => <<class-web_service_response>>`::
-Execute DELETE request to node associated with this object using all data from web service definition. 
+Execute DELETE request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -64,7 +64,7 @@ println result->success; //will print "true" if request was successful or "false
 ....
 
 `patch(data, contentType, ...) => <<class-web_service_response>>`::
-Execute PATCH request to node associated with this object using all data from web service definition. 
+Execute PATCH request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -92,7 +92,7 @@ println result->success; //will print "true" if request was successful or "false
 ....
 
 `post(data, contentType, ...) => <<class-web_service_response>>`::
-Execute POST request to node associated with this object using all data from web service definition. 
+Execute POST request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -120,7 +120,7 @@ println result->success; //will print "true" if request was successful or "false
 ....
 
 `put(data, contentType, ...) => <<class-web_service_response>>`::
-Execute PUT request from node associated to this object and with all data from web service definition. 
+Execute PUT request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
