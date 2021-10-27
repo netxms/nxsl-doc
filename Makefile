@@ -21,7 +21,8 @@ all: prepare html pdf
 .PHONY: prepare
 prepare:
 	mkdir -p build
-	bundle install --binstubs
+	bundle install
+	bundle binstubs --all
 
 html:
 	bundle exec asciidoctor -a html $(OPTS) -b html5 -a docinfo=shared -o build/nxsl.html index.adoc
