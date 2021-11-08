@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 3.0.*
-Please use method readDriverParameter of class <<class-node>>.
+Please use method readAgentTable() of class <<class-node>>.
 ====
 ****
 
