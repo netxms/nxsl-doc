@@ -52,7 +52,7 @@ Script that returns `TRUE` if current node is already under container or cluster
 [source,c]
 ----
 for (p : $node->parents) {
-    if (p->type == 5 orr p->type == 14) { //5 is container and 14 is cluster
+    if (p->type == 5 or p->type == 14) { //5 is container and 14 is cluster
         return false;
     }
 }
