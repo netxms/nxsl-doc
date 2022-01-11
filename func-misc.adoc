@@ -19,6 +19,8 @@ include::functions/driverreadparameter.adoc[]
 include::functions/eventcodefromname.adoc[]
 include::functions/eventnamefromcode.adoc[]
 
+include::functions/formatmetricprefix.adoc[]
+
 include::functions/getconfigurationvariable.adoc[]
 include::functions/gethostbyaddr.adoc[]
 include::functions/gethostbyname.adoc[]
