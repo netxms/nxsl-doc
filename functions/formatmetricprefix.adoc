@@ -1,0 +1,35 @@
+[.nxsl-function]
+[[func-formatmetricprefix]]
+== FormatMetricPrefix()
+
+[source,c]
+----
+FormatMetricPrefix(number, binary, precision) => String
+----
+
+Convert numeric value to human-readable form with metric prefix.
+
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|number|Number|Number to format.
+|binary|Boolean|Oprional argument. Set to true to use binary multipliers (Ki, Mi, etc.). Default value is false.
+|precision|Unsigned Integer|Oprional argument with rounding precision. Acceptable values are from 0 to 20. Default value is 2.
+|===
+
+.Return
+
+String containing the value converted to human-readable form with metric prefix.
+
+.Example
+[.source]
+....
+>>> FormatMetricPrefix(5000)
+5.00k
+>>> FormatMetricPrefix(5000, true)
+4.88Ki
+>>> FormatMetricPrefix(-1234567.89, false, 0)
+-1M
+>>> FormatMetricPrefix(-1234567.89,, 10)
+-1.2345678900M
+....
