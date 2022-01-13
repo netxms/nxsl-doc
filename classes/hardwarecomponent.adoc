@@ -10,12 +10,25 @@ Object that contains all information about node hardware component.
 Code of the changes that happened to the component during the last 
 configuration poll.
 
-Possible values are listed here: <<enum-hardwarecomponent-changecode>>
+Possible values are listed here: <<const-changecode>>
 
 `category => Integer`::
 Code of the component category.
 
-Possible values are listed here: <<enum-hardwarecomponent-category>>
+Possible values are:
+
+[cols="1,1" grid="none", frame="none"]
+|===
+|Constant                                   |Value
+
+|HardwareComponentCategory::OTHER           |0
+|HardwareComponentCategory::BASEBOARD       |1
+|HardwareComponentCategory::PROCESSOR       |2
+|HardwareComponentCategory::MEMORY          |3
+|HardwareComponentCategory::STORAGE         |4
+|HardwareComponentCategory::BATTERY         |5
+|HardwareComponentCategory::NETWORK_ADAPTER |6
+|===
 
 `index => Integer`::
 Index of the component.
@@ -43,30 +56,3 @@ Component serial number.
 
 `description => String`::
 Component description.
-
-==== Constants
-
-[[enum-hardwarecomponent-changecode]]
-.Hardware component change code
-|===
-| Code | Constant
-
-| 0    | HardwareComponent::NOCHANGE
-| 1    | HardwareComponent::ADDED
-| 2    | HardwareComponent::UPDATED
-| 3    | HardwareComponent::REMOVED
-|===
-
-[[enum-hardwarecomponent-category]]
-.Hardware component Categories
-|===
-| Code | Constant
-
-| 0    | HardwareComponent::OTHER
-| 1    | HardwareComponent::BASEBOARD
-| 2    | HardwareComponent::PROCESSOR
-| 3    | HardwareComponent::MEMORY
-| 4    | HardwareComponent::STORAGE
-| 5    | HardwareComponent::BATTERY
-| 6    | HardwareComponent::NETWORK_ADAPTER
-|===
