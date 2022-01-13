@@ -1,0 +1,72 @@
+[.nxsl-class]
+[[class-hardwarecomponent]]
+=== Hardware Component
+
+Object that contains all information about node hardware component.
+
+==== Instance Attributes
+
+`changeCode => Integer`::
+Code of the changes that happened to the component during the last 
+configuration poll.
+
+Possible values are listed here: <<enum-hardwarecomponent-changecode>>
+
+`category => Integer`::
+Code of the component category.
+
+Possible values are listed here: <<enum-hardwarecomponent-category>>
+
+`index => Integer`::
+Index of the component.
+
+`capacity => Integer`::
+Component capacity depending on the type.
+
+`type => String`::
+Component type depending on the category.
+
+`vendor => String`::
+Component vendor.
+
+`model => String`::
+Component model.
+
+`location => String`::
+Component installation location in the system.
+
+`partNumber => String`::
+Component part number.
+
+`serialNumber => String`::
+Component serial number.
+
+`description => String`::
+Component description.
+
+==== Constants
+
+[[enum-hardwarecomponent-changecode]]
+.Hardware component change code
+|===
+| Code | Constant
+
+| 0    | HardwareComponent::NOCHANGE
+| 1    | HardwareComponent::ADDED
+| 2    | HardwareComponent::UPDATED
+| 3    | HardwareComponent::REMOVED
+|===
+
+[[enum-hardwarecomponent-category]]
+.Hardware component Categories
+|===
+| Code | Constant
+
+| 0    | HardwareComponent::OTHER
+| 1    | HardwareComponent::BASEBOARD
+| 2    | HardwareComponent::PROCESSOR
+| 3    | HardwareComponent::MEMORY
+| 4    | HardwareComponent::STORAGE
+| 5    | HardwareComponent::BATTERY
+| 6    | HardwareComponent::NETWORK_ADAPTER
+|===

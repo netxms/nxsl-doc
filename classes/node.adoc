@@ -103,6 +103,9 @@ Bit mask of <<node-flags>>.
 `hardwareId => String`::
 Nodes' unique hardware id
 
+`hardwareComponents => Array`::
+Retutrns an array of awailiable hardware of class <<class-hardwarecomponent>>.
+
 `hasWinPDH => Boolean`::
 `TRUE` if node supports Windows PDH parameters.
 
