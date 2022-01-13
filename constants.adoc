@@ -108,6 +108,21 @@
 |SensorState::PendingConfigUpdate|0x00080000|Pending Config Update
 |===
 
+[[const-changecode]]
+== Change Code
+
+Node attributes change code
+
+[cols="1,1" grid="none", frame="none"]
+|===
+|Constant            |Value
+
+|ChangeCode::NONE    |0
+|ChangeCode::ADDED   |1
+|ChangeCode::UPDATED |2
+|ChangeCode::REMOVED |3
+|===
+
 == Other constants
 
 === NXSL::BuildTag
