@@ -1,0 +1,36 @@
+[.nxsl-class]
+[[class-software-package]]
+=== Software package
+
+Represents software package installed on <<class-node>> object.
+
+==== Instance attributes
+
+`changeCode => Integer`::
+Change conde one of next:
+
+* CHANGE_NONE: 0
+* CHANGE_ADDED: 1
+* CHANGE_UPDATED: 2
+* CHANGE_REMOVED: 3
+
+`date => String`::
+Change date in YYYYMMDD format 
+
+`description => String`::
+PAckage description
+
+`name => String`::
+Package name
+
+`timestamp => Integer`::
+Package change date as UNIX timestamp
+
+`url => String`::
+PAckage URL
+
+`vendor => String`::
+PAckage vendor
+
+`version => String`::
+Package version
