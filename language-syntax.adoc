@@ -56,6 +56,23 @@ To get a human-readable representation of a variable or expression type for
 debugging, use the `typeof()` function, and to get a class name for object
 type variables, use `classof()` function.
 
+==== String literals
+
+A string literal is where you specify the contents of a string in a program.
+There are few different string literal types:
+
+* "string" - string literal where some characters preceded by a backslash have special meaning.
+If you need to insert double quote character you should prepend it with backslash.
+
+* 'string' - string literal with backslash being an ordinary character without special meaning.
+You cannot insert single quote character into such string literal.
+
+* """ Multi
++
+line
++
+string""" - string literal that can span multiple lines with backslash being an ordinary character.
+
 ==== Truth Value Testing
 
 Any variable can be tested for truth value, for use in an `if` or `while` condition 
