@@ -21,5 +21,5 @@ Source string with blanks at both sides removed.
 .Example
 [.source]
 ....
-print trim("  abc def  "); //will print "abc def"
+print(trim("  abc def  ")); //will print "abc def"
 ....

@@ -29,5 +29,5 @@ t->hour = 10;
 t->min = 16;
 t->sec = 55;
 t->isdst = -1;	// auto detect daylight saving
-println mktime(t); //Will print "1523344615"
+println(mktime(t)); //Will print "1523344615"
 ....

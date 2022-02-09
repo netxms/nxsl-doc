@@ -26,6 +26,6 @@ Instance of object inherited from <<class-netobj>> or `null` if not found or not
 [.source]
 ----
 node = FindObject("Infrastructure Services"); //Will find node with name "Infrastructure Services"
-println node->name; //Will print "Infrastructure Services"
-println node->id; //Will print "2"
+println(node->name); //Will print "Infrastructure Services"
+println(node->id); //Will print "2"
 ----

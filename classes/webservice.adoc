@@ -34,10 +34,10 @@ Instance of <<class-web_service_response>> with request result.
 ....
 webSvc = $node->getWebService("webSvcName"); 
 result = webSvc->get();
-println result->document; // will print result
+println(result->document); // will print result
 
 result = webSvc->get("additional", "parameters");
-println result->document; // will print result
+println(result->document); // will print result
 ....
 
 `delete(...) => <<class-web_service_response>>`::
@@ -57,10 +57,10 @@ Instance of <<class-web_service_response>> with request result.
 ....
 webSvc = $node->getWebService("webSvcName"); 
 result = webSvc->delete();
-println result->success; //will print "true" if request was successful or "false" otherwise
+println(result->success); //will print "true" if request was successful or "false" otherwise
 
 result = webSvc->delete("additional", "parameters");
-println result->success; //will print "true" if request was successful or "false" otherwise
+println(result->success); //will print "true" if request was successful or "false" otherwise
 ....
 
 `patch(data, contentType, ...) => <<class-web_service_response>>`::
@@ -83,12 +83,12 @@ Instance of <<class-web_service_response>> with request result.
 webSvc = $node->getWebService("webSvcName"); 
 
 result = webSvc->patch("{ \"id\":10 }");
-println result->success; //will print "true" if request was successful or "false" otherwise
+println(result->success); //will print "true" if request was successful or "false" otherwise
 to
 json = new JsonObject();
 json->set("id", 42);
 result = webSvc->patch(json,"application/json", "additional", "parameters");
-println result->success; //will print "true" if request was successful or "false" otherwise
+println(result->success); //will print "true" if request was successful or "false" otherwise
 ....
 
 `post(data, contentType, ...) => <<class-web_service_response>>`::
@@ -111,12 +111,12 @@ Instance of <<class-web_service_response>> with request result.
 webSvc = $node->getWebService("webSvcName"); 
 
 result = webSvc->post("{ \"id\":10 }");
-println result->success;//will print "true" if request was successful or "false" otherwise
+println(result->success);//will print "true" if request was successful or "false" otherwise
 
 json = new JsonObject();
 json->set("id", 42);
 result = webSvc->post(json,"application/json", "additional", "parameters");
-println result->success; //will print "true" if request was successful or "false" otherwise
+println(result->success); //will print "true" if request was successful or "false" otherwise
 ....
 
 `put(data, contentType, ...) => <<class-web_service_response>>`::
@@ -139,10 +139,10 @@ Instance of <<class-web_service_response>> with request result.
 webSvc = $node->getWebService("webSvcName"); 
 
 result = webSvc->put("{ \"id\":10 }");
-println result->success; //will print "true" if request was successful or "false" otherwise
+println(result->success); //will print "true" if request was successful or "false" otherwise
 
 json = new JsonObject();
 json->set("id", 42);
 result = webSvc->put(json,"application/json", "additional", "parameters");
-println result->success; //will print "true" if request was successful or "false" otherwise
+println(result->success); //will print "true" if request was successful or "false" otherwise
 ....

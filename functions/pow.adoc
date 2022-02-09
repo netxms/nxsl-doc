@@ -22,5 +22,5 @@ x raised to the power of y.
 .Example
 [.source]
 ....
-println pow(2, 3); //Will print "8"
+println(pow(2, 3)); //Will print "8"
 ....

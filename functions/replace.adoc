@@ -25,6 +25,6 @@ Source string with substrings replaced.
 .Example
 [.source]
 ....
-println replace("one four three","four","two"); //Will print "one two three"
-println replace("abc  def"," ",""); //Will print "abcdef"
+println(replace("one four three","four","two")); //Will print "one two three"
+println(replace("abc  def"," ","")); //Will print "abcdef"
 ....

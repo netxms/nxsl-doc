@@ -22,5 +22,5 @@ Syslog rule check count or -1 if syslog daemon not initialized
 .Example
 [.source]
 ....
-println GetSyslogRuleCheckCount("RuleName", $object); // Will print rule check count for rule with name "RuleName"
+println(GetSyslogRuleCheckCount("RuleName", $object)); // Will print rule check count for rule with name "RuleName"
 ....

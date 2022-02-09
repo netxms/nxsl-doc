@@ -22,10 +22,10 @@ The integral value that is closest to x if precision is omitted or set to 0, or 
 .Example
 [.source]
 ....
-println round(2.3); // Will print "2"
-println round(3.8); // Will print "4"
-println round(-2.3); // Will print "-2"
-println round(-3.8); // Will print "-4"
-println round(2.378, 2); // Will print "2.38"
-println round(2.378, 1); // Will print "2.4"
+println(round(2.3)); // Will print "2"
+println(round(3.8)); // Will print "4"
+println(round(-2.3)); // Will print "-2"
+println(round(-3.8)); // Will print "-4"
+println(round(2.378, 2)); // Will print "2.38"
+println(round(2.378, 1)); // Will print "2.4"
 ....

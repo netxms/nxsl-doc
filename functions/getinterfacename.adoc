@@ -30,5 +30,5 @@ Interface name as a string
 .Example
 [.source]
 ....
-println GetInterfaceName($node, 1); //Will print "lo"
+println(GetInterfaceName($node, 1)); //Will print "lo"
 ....

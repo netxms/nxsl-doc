@@ -22,5 +22,5 @@ Country name
 .Example
 [.source]
 ----
-print CountryName("BE"); // Will print "Belgium"
+print(CountryName("BE")); // Will print "Belgium"
 ----

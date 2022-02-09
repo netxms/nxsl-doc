@@ -23,5 +23,5 @@ Decoded string
 .Example
 [.source]
 ....
-print Base64Decode("U29tZSB0ZXh0"); //Will print "Some text"
+print(Base64Decode("U29tZSB0ZXh0")); //Will print "Some text"
 ....

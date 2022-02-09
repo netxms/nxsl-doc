@@ -21,6 +21,6 @@ Converts time in UNIX format (number of seconds since epoch) to calendar date an
 .Example
 [.source]
 ....
-println localtime(time())->year; //Will print 2020
-println localtime()->year; //Will print 2020
+println(localtime(time())->year); //Will print 2020
+println(localtime()->year); //Will print 2020
 ....

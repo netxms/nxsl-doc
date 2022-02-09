@@ -21,5 +21,5 @@ System uptime in format "n days, hh:mm".
 .Example
 [.source]
 ....
-println SecondsToUptime(600); // Will print "0 days, 00:10"
+println(SecondsToUptime(600)); // Will print "0 days, 00:10"
 ....

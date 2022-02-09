@@ -40,7 +40,7 @@ for(i : $node->interfaces)
    for(a : i->ipAddressList)
    {
       if (a->address == $node->ipAddr)
-         println i->macAddr;
+         println(i->macAddr);
    }
 }
 ----
@@ -211,7 +211,7 @@ Enumerate all custom attributes on a node.
 attributes = $node->customAttributes;
 foreach(a : attributes->keys)
 {
-        println a . "=" . attributes[a];
+        println(a . "=" . attributes[a]);
 }
 ----
 
@@ -308,26 +308,26 @@ This script can be put into Script Library and run from server's debug console. 
 ----
 if ($1 == null)
 {
-   println "Please specify node name as parameter";
+   println("Please specify node name as parameter");
    return 3;
 }
 
 transport = FindObject($1)->createSNMPTransport();    // Create SNMP transport for node
 if (transport == null)
 {
-    println "Failed to create SNMP transport, exit";
+    println("Failed to create SNMP transport, exit");
     return 1;
 }
 
 value = SNMPGetValue(transport, ".1.3.6.1.2.1.1.1.0");
 if (value == null)
 {
-    println "Failed to issue SNMP GET request";
+    println("Failed to issue SNMP GET request");
     return 2;
 }
 else
 {
-    println "System description: " . value;
+    println("System description: " . value);
     return 0;
 }
 ----
@@ -356,7 +356,7 @@ This script can be put into Script Library and run from server's debug console. 
 node = FindObject($1);
 if (node == null)
 {
-	println "ERROR: Node not found";
+	println("ERROR: Node not found");
 	return;
 }
 
@@ -364,26 +364,26 @@ if (node == null)
 table = AgentReadTable(node, $2);
 if (table == null)
 {
-	println "ERROR: Cannot read table from agent";
+	println("ERROR: Cannot read table from agent");
 	return;
 }
 
 // Print column names
 for(i = 0; i < table->columnCount; i++)
-	print "| " . left(table->getColumnName(i), 20);
-println "|";
+	print("| " . left(table->getColumnName(i), 20));
+println("|");
 for(i = 0; i < table->columnCount; i++)
-	print "+" . left("-", 21, "-");
-println "+";
+	print("+" . left("-", 21, "-"));
+println("+");
 
 // Print data
 for(i = 0; i < table->rowCount; i++)
 {
 	for(j = 0; j < table->columnCount; j++)
 	{
-		print "| " . left(table->get(i, j), 20);
+		print("| " . left(table->get(i, j), 20));
 	}
-	println "|";
+	println("|");
 }
 ----
 
@@ -404,7 +404,7 @@ foreach(o : $node->parents)
 }
 
 // Concatenated result is in "contacts" global variable
-println "Contacts: " . contacts;
+println("Contacts: " . contacts);
 
 /**
  * Recursively add contacts from object and it's parents

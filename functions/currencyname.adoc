@@ -21,6 +21,6 @@ Currency name
 .Example
 [.source]
 ....
-println CurrencyName("EUR"); //Will print "Euro"
-println CurrencyName("978"); //Will print "Euro"
+println(CurrencyName("EUR")); //Will print "Euro"
+println(CurrencyName("978")); //Will print "Euro"
 ....

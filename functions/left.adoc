@@ -23,7 +23,7 @@ String of the left length characters.
 .Example
 [.source]
 ....
-println left("abc d",8); //Will print "abc d   "
-println left("abc d",8,"."); //Will print "abc d..."
-println left("abc  def",7); //Will print "abc  de"
+println(left("abc d",8)); //Will print "abc d   "
+println(left("abc d",8,".")); //Will print "abc d..."
+println(left("abc  def",7)); //Will print "abc  de"
 ....

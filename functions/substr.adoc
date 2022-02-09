@@ -23,7 +23,7 @@ Extracted substring.
 .Example
 [.source]
 ....
-print substr("abcdef", 3, 2); //Will print: "cd"
-print substr("abcdef", 8); //Will print: ""
-print substr("abcdef", 4); //Will print: "def"
+print(substr("abcdef", 3, 2)); //Will print: "cd"
+print(substr("abcdef", 8)); //Will print: ""
+print(substr("abcdef", 4)); //Will print: "def"
 ....

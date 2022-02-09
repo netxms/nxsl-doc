@@ -15,5 +15,5 @@ Array with strings.
 .Example
 [.source]
 ....
-print GetThreadPoolNames()[0]; //will print "MAIN"
+print(GetThreadPoolNames()[0]); //will print "MAIN"
 ....

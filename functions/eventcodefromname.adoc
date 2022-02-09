@@ -21,5 +21,5 @@ Event code
 .Example
 [.source]
 ....
-println EventCodeFromName("SYS_NODE_DOWN"); // will print "28"
+println(EventCodeFromName("SYS_NODE_DOWN")); // will print "28"
 ....

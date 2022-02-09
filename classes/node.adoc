@@ -329,19 +329,19 @@ Instance of <<class-web_service_response>> with request result.
 ....
 //Valid example when request fails because there is no connection to agent
 result = $node->callWebService("Web service name", "GET", "additional/ult/path"); 
-println result->success; // "false"
-println result->errorMessage; // "No connection with agent"
-println result->agentErrorCode; // "0"
-println result->httpResponseCode; // "0"
-println result->document; // ""
+println(result->success); // "false"
+println(result->errorMessage); // "No connection with agent"
+println(result->agentErrorCode); // "0"
+println(result->httpResponseCode); // "0"
+println(result->document); // ""
 
 //Successful post request
 result = $node2->callWebService("Web service name", "POST", "application/json",  "{ \"id\":10 }", "additional/ult/path");
-println result->success; // "true"
-println result->errorMessage; // ""
-println result->agentErrorCode; // "0"
-println result->httpResponseCode; // "200"
-println result->document; // ""
+println(result->success); // "true"
+println(result->errorMessage); // ""
+println(result->agentErrorCode); // "0"
+println(result->httpResponseCode); // "200"
+println(result->document); // ""
 ....
 
 `createSNMPTransport(port, context) => <<class-snmp_transport>>`::
@@ -486,9 +486,9 @@ name is number method will assume that it is index.
 .Example
 [.source]
 ....
-println $node->getInterface("00:14:22:04:25:37")->name; // Will print "wlp4s0"
-println $node->getInterface(3)->name; // Will print "wlp4s0"
-println $node->getInterface("wlp4s0")->name; // Will print "wlp4s0"
+println($node->getInterface("00:14:22:04:25:37")->name); // Will print "wlp4s0"
+println($node->getInterface(3)->name); // Will print "wlp4s0"
+println($node->getInterface("wlp4s0")->name); // Will print "wlp4s0"
 ....
 
 [[class-node-getinterfacebyindex,Node::getInterfaceByIndex()]]
@@ -507,7 +507,7 @@ Get interface object by index.
 .Example
 [.source]
 ....
-println $node->getInterfaceByIndex(3)->name; // Will print "wlp4s0"
+println($node->getInterfaceByIndex(3)->name); // Will print "wlp4s0"
 ....
 
 [[class-node-getinterfacebymacaddress,Node::getInterfaceByMACAddress()]]
@@ -526,7 +526,7 @@ Get interface object by MAC address.
 .Example
 [.source]
 ....
-println $node->getInterfaceByMACAddress("00:14:22:04:25:37")->name; // Will print "wlp4s0"
+println($node->getInterfaceByMACAddress("00:14:22:04:25:37")->name); // Will print "wlp4s0"
 ....
 
 [[class-node-getinterfacebyname,Node::getInterfaceByName()]]
@@ -545,7 +545,7 @@ Get interface object by name.
 .Example
 [.source]
 ....
-println $node->getInterfaceByName("wlp4s0")->name; // Will print "wlp4s0"
+println($node->getInterfaceByName("wlp4s0")->name); // Will print "wlp4s0"
 ....
 
 `getInterfaceName(ifIndex) => String`::

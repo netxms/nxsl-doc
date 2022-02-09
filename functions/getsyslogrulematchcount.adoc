@@ -22,5 +22,5 @@ Syslog rule match count or -1 if syslog daemon not initialized
 .Example
 [.source]
 ....
-println GetSyslogRuleMatchCount("RuleName", $object); // Will print rule match count for rule with name "RuleName"
+println(GetSyslogRuleMatchCount("RuleName", $object)); // Will print rule match count for rule with name "RuleName"
 ....

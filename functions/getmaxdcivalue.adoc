@@ -25,5 +25,5 @@ Maximum value or null on failure.
 [.source]
 ....
 value = GetMaxDCIValue(FindObject("MYWORKPC"), 18, 0, time()); //Max value from the beginning till now\
-println value; //Will print maximum value
+println(value); //Will print maximum value
 ....

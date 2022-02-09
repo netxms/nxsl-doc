@@ -22,5 +22,5 @@ Random value in range minValue..maxValue.
 .Example
 [.source]
 ....
-println random(0, 100); // Will print random value in 0..100 range
+println(random(0, 100)); // Will print random value in 0..100 range
 ....

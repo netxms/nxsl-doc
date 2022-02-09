@@ -21,5 +21,5 @@ MD5 hash
 .Example
 [.source]
 ....
-println md5("Some text"); //Will print "9DB5682A4D778CA2CB79580BDB67083F"
+println(md5("Some text")); //Will print "9DB5682A4D778CA2CB79580BDB67083F"
 ....

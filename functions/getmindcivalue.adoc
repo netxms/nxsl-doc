@@ -25,5 +25,5 @@ Minimum value or null on failure.
 [.source]
 ....
 value = GetMinDCIValue(FindObject("MYWORKPC"), 18, 0, time()); //Minimal value from the beginning till now
-println value; //Will print minimal value
+println(value); //Will print minimal value
 ....

@@ -23,5 +23,5 @@ Encoded string
 .Example
 [.source]
 ....
-print Base64Encode("Some text"); //Will print "U29tZSB0ZXh0"
+print(Base64Encode("Some text")); //Will print "U29tZSB0ZXh0"
 ....

@@ -26,5 +26,5 @@ Sum value or null on failure.
 [.source]
 ....
 value = GetSumDCIValue(FindObject("MYWORKPC"), 18, 0, time()); //sum value from the beginning till now
-println value; //Prints value 
+println(value); //Prints value 
 ....

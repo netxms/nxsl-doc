@@ -21,6 +21,6 @@ Object of class <<class-time>>.
 .Example
 [.source]
 ....
-println gmtime(time())->year;	// 2020
-println gmtime()->year;		// 2020
+println(gmtime(time())->year);	// 2020
+println(gmtime()->year);		// 2020
 ....

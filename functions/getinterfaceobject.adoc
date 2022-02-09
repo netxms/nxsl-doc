@@ -31,5 +31,5 @@ Get node's <<class-interface,interface>>  by it's index
 [.source]
 ....
 interface = GetInterfaceObject($node, 1); //Will return interface with index 1
-println interface->ifIndex; //Will print "1"
+println(interface->ifIndex); //Will print "1"
 ....

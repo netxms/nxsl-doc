@@ -23,7 +23,7 @@ String of the right length characters.
 .Example
 [.source]
 ....
-println right("abc  d",8); //Will print "  abc  d"
-println right("abc def",5); //Will print "c def"
-println right("17",5,"0"); //Will print "00017"
+println(right("abc  d",8)); //Will print "  abc  d"
+println(right("abc def",5)); //Will print "c def"
+println(right("17",5,"0")); //Will print "00017"
 ....

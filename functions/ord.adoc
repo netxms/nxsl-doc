@@ -23,6 +23,6 @@ An ASCII/Unicode value
 .Example
 [.source]
 ....
-println ord("a"); //Will pritn 97
-println ord("abc"); //Will pritn 97
+println(ord("a")); //Will pritn 97
+println(ord("abc")); //Will pritn 97
 ....

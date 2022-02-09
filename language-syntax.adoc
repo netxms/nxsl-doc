@@ -85,8 +85,8 @@ For example:
 a = %(1,2,3);
 b = true;
 c = a or b;
-println c;  // will print "[1, 2, 3]" because first operand was returned by or operation
-if (c) println "TRUE";  // will print "TRUE" as the array contained in c is considered as true 
+println(c);  // will print "[1, 2, 3]" because first operand was returned by or operation
+if (c) println("TRUE");  // will print "TRUE" as the array contained in c is considered as true 
 ----
 
 [source,c]
@@ -94,8 +94,8 @@ if (c) println "TRUE";  // will print "TRUE" as the array contained in c is cons
 a = 0;
 b = true;
 c = a and b;
-println c; // will print "0" because first operand was returned by and operation
-println boolean(c);  // will print "false"
+println(c); // will print "0" because first operand was returned by and operation
+println(boolean(c));  // will print "false"
 ----
 
 === Variables
@@ -118,7 +118,7 @@ myFunction();
 
 sub myFunction()
 {
-    println "x=" . x;
+    println("x=" . x);
 }
 ----
 
@@ -134,7 +134,7 @@ myFunction();
 
 sub myFunction()
 {
-    println "x=" . x;
+    println("x=" . x);
 }
 ----
 
@@ -167,7 +167,7 @@ To give a quick example of a simple subroutine:
 ----
 sub message()
 {
-    println "Hello!";
+    println("Hello!");
 }
 ----
 
@@ -182,7 +182,7 @@ function adds two numbers and prints the result:
 sub add()
 {
     result = $1 + $2;
-    println "The result was: " . result;
+    println("The result was: " . result);
 }
 ----
 
@@ -201,7 +201,7 @@ provided in function declaration inside the brackets:
 sub add(numberA, numberB)
 {
     result = numberA + numberB;
-    println "The result was: " . result;
+    println("The result was: " . result);
 }
 ----
 
@@ -222,8 +222,8 @@ return 0;
 
 sub func()
 {
-    println $param1; //Will print "text1"
-    println $param2; //Will print "text2"
+    println($param1); //Will print "text1"
+    println($param2); //Will print "text2"
 }
 ----
 
@@ -494,9 +494,9 @@ Printed array is automatically converted to string.
 [source,c]
 ----
 a = %(1, 2, 3, 4, 5, 6, 7);
-println a; // will print "[1, 2, 3, 4, 5, 6, 7]"
-println a . " is an array"; // will print "[1, 2, 3, 4, 5, 6, 7] is an array"
-println %("one", "two"); // will print "[one, two]"
+println(a); // will print "[1, 2, 3, 4, 5, 6, 7]"
+println(a . " is an array"); // will print "[1, 2, 3, 4, 5, 6, 7] is an array"
+println(%("one", "two")); // will print "[one, two]"
 println(%(2, "text", %(1, 2, 3))); // will print "[2, text, [1, 2, 3]]"
 ----
 

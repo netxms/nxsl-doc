@@ -23,7 +23,7 @@ Integer value of the position substring was found at, will return 0 if not found
 .Example
 [.source]
 ....
-println rindex("abcdabcd","cd"); // Will print "7"
-println rindex("abcdef","cd",2); // Will print "0"
-println rindex("abcdefabcdef","cd",4); // Will print "3"
+println(rindex("abcdabcd","cd")); // Will print "7"
+println(rindex("abcdef","cd",2)); // Will print "0"
+println(rindex("abcdefabcdef","cd",4)); // Will print "3"
 ....

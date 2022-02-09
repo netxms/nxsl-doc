@@ -21,5 +21,5 @@ IP address as a String
 .Example
 [.source]
 ....
-println gethostbyname("localhost"); //Will print "127.0.0.1"
+println(gethostbyname("localhost")); //Will print "127.0.0.1"
 ....

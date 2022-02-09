@@ -21,6 +21,6 @@ Currency exponent
 .Example
 [.source]
 ....
-println CurrencyExponent("EUR"); // Will print 2
-println CurrencyExponent("978"); //Will print 2
+println(CurrencyExponent("EUR")); // Will print 2
+println(CurrencyExponent("978")); //Will print 2
 ....
