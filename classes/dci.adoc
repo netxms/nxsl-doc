@@ -36,6 +36,9 @@ DCI instance (only for single value DCIs): %{instance}
 `lastPollTime => Integer64`::
 Time of last DCI poll (either successful or not) as number of seconds since epoch (1 Jan 1970 00:00:00 UTC)
 
+`lastCollectionTime => Integer64`::
+Time of last successful DCI poll as number of seconds since epoch (1 Jan 1970 00:00:00 UTC). Added in version 4.0.
+
 `name => String`::
 Parameter's name
 
