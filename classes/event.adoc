@@ -10,7 +10,7 @@ Represents NetXMS event object.
 Event code
 
 `customMessage => String`::
-Custom message set in event processing policy by calling `setMessage`. Get/set attribute.
+Custom message set in event processing policy by calling `setMessage`. Deprecated and will be removed in a future version. 
 
 `dci => DCI`::
 DCI object of class <<class-dci>> that is source for this event or NULL if generated not by threshold
