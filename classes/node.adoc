@@ -344,7 +344,7 @@ println(result->httpResponseCode); // "200"
 println(result->document); // ""
 ....
 
-`createSNMPTransport(port, context) => <<class-snmp_transport>>`::
+`createSNMPTransport(port, context, community) => <<class-snmp_transport>>`::
 Create SNMP transport object of class <<class-snmp_transport>> with communication settings defined on the node. It is possible to specify a community string but only community strings listed in Network Credentials will be accepted.
 Creation of SNMP transport is a preparatory operation enabling subsequent sending of SNMP requests to node.  
 However, creation of SNMP transport does not guarantee that the node is accessible. 
