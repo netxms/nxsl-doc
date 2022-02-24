@@ -35,9 +35,9 @@ Assign a specific value to the given SNMP object for the node. The node and all 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|oid|String|SNMP object id.
-|value|String|Value to assign to oid.
-|dataType|String|<<snmp-data-types,SNMP data type>> (optional).
+|oid     |String                          |SNMP object id.
+|value   |String / <<class-bytestream>>  |Value to assign to oid.
+|dataType|String                          |<<snmp-data-types,SNMP data type>> (optional).
 |===
 
 `walk(oid) => Array`::

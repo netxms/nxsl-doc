@@ -23,3 +23,11 @@ Object value IP address, represented as string.
 
 `valueAsMac => String`::
 Object value as MAC address, represented as string.
+
+==== Instance methods
+
+`getValueAsString() => String`::
+Get object value as a string.
+
+`getValueAsByteStream() => ByteStream`::
+Get object value as a <<class-bytestream>>.
