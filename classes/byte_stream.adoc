@@ -1,0 +1,299 @@
+[.nxsl-class]
+[[class-bytestream]]
+=== ByteStream
+
+Represents a stream of bytes.
+
+==== Instance attributes
+
+`size => Integer`::
+Current stream buffer size.
+
+`pos => Integer`::
+Current carriage position in the stream.
+
+`eos => Boolean`::
+Returns true if carriage is located at the end of the stream (pos = size). False otherwise.
+
+==== Instance methods
+
+`seek(position, [whence]) => Integer`::
+Moves carriage to a certain position in the stream.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|position |Integer |Offset where to move to. For more information see <<seek-origin-constants>>.
+|whence   |Integer |<<seek-origin-constants>> constant that specifies where to begin position search from. Optional parameter. Default value is `SeekOrigin::Begin`.
+|===
+
+.Return
+New position in the stream. Returns -1 and does nothing if position is out of bounds of the stream.
+
+
+`writeByte(value) => void`::
+Writes one byte to the stream.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value |Integer |Byte to write.
+|===
+
+`writeInt16B(value) => void`::
+Writes int16 to the stream in big endian (network byte order).
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value |Integer |Value to write.
+|===
+
+`writeInt32B(value) => void`::
+Writes int32 to the stream in big endian (network byte order).
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value |Integer |Value to write.
+|===
+
+`writeInt64B(value) => void`::
+Writes int64 to the stream in big endian (network byte order).
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value |Integer |Value to write.
+|===
+
+`writeFloatB(value) => void`::
+Writes float to the stream in big endian (network byte order).
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value |Float |Value to write.
+|===
+
+`writeInt16L(value) => void`::
+Writes int16 to the stream in little endian.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value |Integer |Value to write.
+|===
+
+`writeInt32L(value) => void`::
+Writes int32 to the stream in little endian.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value |Integer |Value to write.
+|===
+
+`writeInt64L(value) => void`::
+Writes int64 to the stream in little endian.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value |Integer |Value to write.
+|===
+
+`writeFloatL(value) => void`::
+Writes float to the stream in little endian.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value |Float |Value to write.
+|===
+
+`writeString(string, length, [codepage]) => Integer`::
+Writes string to the stream without any length information.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|string  |String  |String to write.
+|codepage|String  |Encoding of the stored string. Optional parameter. Default value is null (default host encoding).
+|===
+
+.Return
+Number of bytes written.
+
+
+`writeCString(string, [codepage]) => Integer`::
+Writes null-terminated string (C type) to the stream.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|string  |String  |String to write.
+|codepage|String  |Encoding of the stored string. Optional parameter. Default value is null (default host encoding).
+|===
+
+.Return
+Number of bytes written.
+
+
+`writePString(string, [codepage]) => Integer`::
+Writes string prepended with length (Pascal type) to the stream.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|string  |String  |String to write.
+|codepage|String  |Encoding of the stored string. Optional parameter. Default value is null (default host encoding).
+|===
+
+.Return
+Number of bytes written.
+
+[NOTE]
+If length < 2^15 string gets prepended with 2 bytes (0xxx xxxx). Otherwise it is prepended with 4 bytes with higher bit set (1xxx xxxx xxxx xxxx)
+
+`readByte() => Integer`::
+Reads one byte from the stream.
+
+.Return
+Value read.
+
+`readInt16B() => Integer`::
+Reads int16 from the stream considering it to be stored in big endian (network byte order).
+
+.Return
+Value read.
+
+`readInt32B() => Integer`::
+Reads int32 from the stream considering it to be stored in big endian (network byte order).
+
+.Return
+Value read.
+
+`readInt64B() => Integer`::
+Reads int32 from the stream considering it to be stored in big endian (network byte order).
+
+.Return
+Value read.
+
+`readUInt16B() => Integer`::
+Reads int16 from the stream considering it to be stored in big endian (network byte order).
+
+.Return
+Value read.
+
+`readUInt32B() => Integer`::
+Reads int32 from the stream considering it to be stored in big endian (network byte order).
+
+.Return
+Value read.
+
+`readUInt64B() => Integer`::
+Reads int32 from the stream considering it to be stored in big endian (network byte order).
+
+.Return
+Value read.
+
+`readFloatB() => Float`::
+Reads float from the stream considering it to be stored in big endian (network byte order).
+
+.Return
+Value read.
+
+`readInt16L() => Integer`::
+Reads int16 from the stream considering it to be stored in little endian.
+
+.Return
+Value read.
+
+`readInt32L() => Integer`::
+Reads int32 from the stream considering it to be stored in little endian.
+
+.Return
+Value read.
+
+`readInt64L() => Integer`::
+Reads int32 from the stream considering it to be stored in little endian.
+
+.Return
+Value read.
+
+`readUInt16L() => Integer`::
+Reads int16 from the stream considering it to be stored in little endian.
+
+.Return
+Value read.
+
+`readUInt32L() => Integer`::
+Reads int32 from the stream considering it to be stored in little endian.
+
+.Return
+Value read.
+
+`readUInt64L() => Integer`::
+Reads int32 from the stream considering it to be stored in little endian.
+
+.Return
+Value read.
+
+`readFloatL() => Float`::
+Reads float from the stream considering it to be stored in little endian.
+
+.Return
+Value read.
+
+`readString(length, [codepage]) => String`::
+Reads certain amount of bytes from the stream as a string.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|length  |Integer |Number of bytes to read.
+|codepage|String  |Encoding of the stored string. Optional parameter. Default value is null (default host encoding).
+|===
+
+.Return
+String read.
+
+`readCString([codepage]) => String`::
+Reads null-terminated string (C type) to the stream.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|codepage|String  |Encoding of the stored string. Optional parameter. Default value is null (default host encoding).
+|===
+
+.Return
+String read.
+
+`readPString([codepage]) => String`::
+Reads string prepended with length (Pascal type) to the stream.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|codepage|String  |Encoding of the stored string. Optional parameter. Default value is null (default host encoding).
+|===
+
+.Return
+String read.
+
+[NOTE]
+If length < 2^15 string gets prepended with 2 bytes (0xxx xxxx). Otherwise it is prepended with 4 bytes with higher bit set (1xxx xxxx xxxx xxxx)
+
+==== Constants
+[[seek-origin-constants]]
+
+.Seek Origin
+[cols="1,3a"]
+|===
+| Value                 | Description
+| SeekOrigin::Begin     | Starting position is 0. `Position` parameter represents index of the byte to move to.
+| SeekOrigin::Current   | Starting position is current position. `Position` parameter represents offset.
+| SeekOrigin::End       | Starting position is the last byte written. `Position` parameter represents offset and is expected to be negative.
+|===
