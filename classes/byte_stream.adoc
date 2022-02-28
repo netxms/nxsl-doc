@@ -159,92 +159,47 @@ If length < 2^15 string gets prepended with 2 bytes (0xxx xxxx). Otherwise it is
 `readByte() => Integer`::
 Reads one byte from the stream.
 
-.Return
-Value read.
-
 `readInt16B() => Integer`::
 Reads int16 from the stream considering it to be stored in big endian (network byte order).
-
-.Return
-Value read.
 
 `readInt32B() => Integer`::
 Reads int32 from the stream considering it to be stored in big endian (network byte order).
 
-.Return
-Value read.
-
 `readInt64B() => Integer`::
-Reads int32 from the stream considering it to be stored in big endian (network byte order).
-
-.Return
-Value read.
+Reads int64 from the stream considering it to be stored in big endian (network byte order).
 
 `readUInt16B() => Integer`::
-Reads int16 from the stream considering it to be stored in big endian (network byte order).
-
-.Return
-Value read.
+Reads uint16 from the stream considering it to be stored in big endian (network byte order).
 
 `readUInt32B() => Integer`::
-Reads int32 from the stream considering it to be stored in big endian (network byte order).
-
-.Return
-Value read.
+Reads uint32 from the stream considering it to be stored in big endian (network byte order).
 
 `readUInt64B() => Integer`::
-Reads int32 from the stream considering it to be stored in big endian (network byte order).
-
-.Return
-Value read.
+Reads uint64 from the stream considering it to be stored in big endian (network byte order).
 
 `readFloatB() => Float`::
 Reads float from the stream considering it to be stored in big endian (network byte order).
 
-.Return
-Value read.
-
 `readInt16L() => Integer`::
 Reads int16 from the stream considering it to be stored in little endian.
-
-.Return
-Value read.
 
 `readInt32L() => Integer`::
 Reads int32 from the stream considering it to be stored in little endian.
 
-.Return
-Value read.
-
 `readInt64L() => Integer`::
-Reads int32 from the stream considering it to be stored in little endian.
-
-.Return
-Value read.
+Reads int64 from the stream considering it to be stored in little endian.
 
 `readUInt16L() => Integer`::
-Reads int16 from the stream considering it to be stored in little endian.
-
-.Return
-Value read.
+Reads uint16 from the stream considering it to be stored in little endian.
 
 `readUInt32L() => Integer`::
-Reads int32 from the stream considering it to be stored in little endian.
-
-.Return
-Value read.
+Reads uint32 from the stream considering it to be stored in little endian.
 
 `readUInt64L() => Integer`::
-Reads int32 from the stream considering it to be stored in little endian.
-
-.Return
-Value read.
+Reads uint64 from the stream considering it to be stored in little endian.
 
 `readFloatL() => Float`::
 Reads float from the stream considering it to be stored in little endian.
-
-.Return
-Value read.
 
 `readString(length, [codepage]) => String`::
 Reads certain amount of bytes from the stream as a string.
@@ -256,9 +211,6 @@ Reads certain amount of bytes from the stream as a string.
 |codepage|String  |Encoding of the stored string. Optional parameter. Default value is null (default host encoding).
 |===
 
-.Return
-String read.
-
 `readCString([codepage]) => String`::
 Reads null-terminated string (C type) to the stream.
 
@@ -268,9 +220,6 @@ Reads null-terminated string (C type) to the stream.
 |codepage|String  |Encoding of the stored string. Optional parameter. Default value is null (default host encoding).
 |===
 
-.Return
-String read.
-
 `readPString([codepage]) => String`::
 Reads string prepended with length (Pascal type) to the stream.
 
@@ -279,9 +228,6 @@ Reads string prepended with length (Pascal type) to the stream.
 |===
 |codepage|String  |Encoding of the stored string. Optional parameter. Default value is null (default host encoding).
 |===
-
-.Return
-String read.
 
 [NOTE]
 If length < 2^15 string gets prepended with 2 bytes (0xxx xxxx). Otherwise it is prepended with 4 bytes with higher bit set (1xxx xxxx xxxx xxxx)
