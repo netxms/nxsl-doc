@@ -17,8 +17,8 @@ Create new data collection item on <<class-node,node>>, return <<class-dci>> obj
 |name|name of the metric (e.g. "Agent.Version")
 |description|human readable description.
 |dataType|Type of the collected data. Possible values: "int32", "uint32", "int64", "uint64", "counter32", "counter64", "float", "string". Alternatively, you can use <<const-dci-datatype,DCI data type constants>>.
-|pollingInterval|polling interval in seconds or `0` for server-default value.
-|retentionTime|retention time in days or `0` for server-default value.
+|pollingInterval|polling interval in seconds or `null` for server-default value.
+|retentionTime|retention time in days, `0` for "Do not save collected data to database" or `null` for server-default value.
 |===
 
 .Return
