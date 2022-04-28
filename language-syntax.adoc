@@ -386,6 +386,7 @@ sub f()
 In this example function `f` returns array of 3 elements - number, text, and
 another array of 3 numeric elements.
 
+
 ==== Array attributes
 
 `maxIndex => Integer`::
@@ -399,6 +400,7 @@ println(a->maxIndex); // prints '2'
 println(a[a->maxIndex]); // prints '3'
 ....
 
+
 `minIndex => Integer`::
 Returns lowest index in the array.
 
@@ -408,6 +410,7 @@ Returns lowest index in the array.
 a = %(1, 2, 3);
 println(a->minIndex); // prints '0'
 ....
+
 
 `size => Integer`::
 Returns number of elements in the array.
@@ -432,6 +435,7 @@ a->append("d");
 println(a); // prints '[a, b, c, d]'
 ....
 
+
 `appendAll(anotherArray) => Integer`::
 Appends elements of `anotherArray` to the array. Returns highest index in the array. 
 
@@ -443,6 +447,7 @@ b = %(3,4);
 a->appendAll(b);
 println(a); // prints '[1, 2, 3, 4]'
 ....
+
 
 `insert(index, newElement) => void`::
 Inserts new element to the array at `index`. Indexes of existing elements that had index greater or equal to `index` are incremented. 
@@ -459,6 +464,7 @@ println(a[5]);  // prints "bbb"
 println(a[11]);  // prints "ccc" - because of the insert operation this element's index is now 11. 
 ....
 
+
 `insertAll(index, anotherArray) => void`::
 Inserts elements of `anotherArray` to the array at `index`. Indexes of existing elements that have index greater or equal to `index` are incremented. 
 
@@ -470,6 +476,7 @@ b = %(3,4);
 a->insertAll(1,b);
 println(a); // prints '[1, 3, 4, 2]'
 ....
+
 
 `pop() => Element with highest index`::
 Removes element with highest index from the array. Using `push(value)` and `pop()` methods it's possible to use array as a stack. Or, using
@@ -485,8 +492,10 @@ println(a->pop());
 println(a->pop());
 ....
 
+
 `push(newElement) => Integer`::
 Same as `append()`.
+
 
 `remove(index) => void`::
 Removes element at specified `index`. Indexes of elements that have index greater or equal to `index` are decremented. 
@@ -498,6 +507,7 @@ a = %(1,2,3);
 a->remove(0);
 println(a);
 ....
+
 
 ==== Array conversion
 
@@ -516,6 +526,119 @@ println(a . " is an array"); // will print "[1, 2, 3, 4, 5, 6, 7] is an array"
 println(%("one", "two")); // will print "[one, two]"
 println(%(2, "text", %(1, 2, 3))); // will print "[2, text, [1, 2, 3]]"
 ----
+
+
+=== Hash maps
+
+Hash map allows to store data values in key:value pairs. A key is string. Numeric 
+type can also be supplied as key, but it will be internally converted to string. 
+Hash map cannot have two items with the same key. 
+The values can be of any data type, including null, objects, arrays or hash maps. 
+
+Hash maps are not objects, it's a separate variable type. However, hash maps have
+methods and attributes described below. 
+
+Array elements can be accessed using [key] operator. For example, to
+access element with key key of hash map h you should use
+
+[source,c]
+----
+h["key"];
+----
+
+
+==== Hash Map Initialization
+
+This statement will create an empty hash map and assign reference to in to variable h:
+
+[source,c]
+----
+h = %{};
+----
+
+It's also possible to create hash map already populated with values, e.g.: 
+
+[source,c]
+----
+h = %{"key":123, "another_key":456};
+----
+
+
+==== Hash Map Attributes
+`keys => Array`::
+Returns array with keys of items in the hash map.
+
+.Example
+[.source]
+....
+h = %{100:"value1", 101:"value2"};
+println(h->keys); // prints '[100,101]'
+....
+
+
+`size => Integer`::
+Returns number of items in the hash map.
+
+.Example
+[.source]
+....
+h = %{"a":null, "b":null, "c":null};
+println(h->size); // prints '3'
+....
+
+
+`values => Array`::
+Returns array with values of items in the hash map.
+
+.Example
+[.source]
+....
+h = %{"key1":123, "key2":456};
+println(h->keys); // prints '[123,456]'
+....
+
+
+==== Hash Map Methods
+
+`contains(key) => Boolean`::
+Returns `true`, if hash map contains specified key or `false` otherwise.
+
+.Example
+[.source]
+....
+h = %{"key1":123, "key2":456};
+println(h->contains("key2")); // prints 'true'
+....
+
+
+`remove(key) => void`::
+Removes item with specified `key`. 
+
+.Example
+[.source]
+....
+h = %{"key1":123, "key2":456};
+h->remove("key1");
+println(h); // prints '{key2=456}'
+....
+
+
+==== Hash Map Conversion
+
+Hash Map can be converted to string. `string(hash-map)` function is used to get string
+representation of hash map. The string representation lists all key-value pairs 
+enclosed in curly brackets (“{}”). Value is separate from the key with equals sigh ("="). 
+Items are separated by the characters “, ” (a comma followed by a space).
+
+Printed array is automatically converted to string.
+
+[source,c]
+----
+h = %{"key1":123, "key2":456};
+println("This is a hash map: " . string(h));
+println("Or we can just print it this way: " . h);
+----
+
 
 === Operators
 
@@ -541,10 +664,12 @@ divisible, in which case an integer value will be returned.
 
 Calling modulus on float operands will yield runtime error.
 
+
 ==== Assignment Operator
 
 The assignment operator is `=`, which means that the left operand gets set to
 the value of the expression on the rights (that is, "gets set to").
+
 
 ==== Bitwise Operators
 
@@ -560,6 +685,7 @@ the value of the expression on the rights (that is, "gets set to").
 |`a >> b` | Shift right| Shift the bits of `a` for `b` steps to the right (each step equals
 "divide by two").
 |===
+
 
 ==== Comparison Operators
 
@@ -597,6 +723,7 @@ println("Username: John" ~= "Username: (\w+)"); // prints "[Username: John, John
 println("abc" like "?bc*"); // prints "true"
 ----
 
+
 ==== Incrementing/Decrementing Operators
 
 NXSL supports C-style pre- and post-increment and decrement operators.
@@ -609,6 +736,7 @@ NXSL supports C-style pre- and post-increment and decrement operators.
 |`--a`| Pre-decrement| Decrements `a` by one, then returns `a`.
 |`a--`| Post-decrement| Returns `a`, then decrements `a` by one.
 |===
+
 
 ==== Logical Operators
 
@@ -623,6 +751,7 @@ NXSL supports C-style pre- and post-increment and decrement operators.
 |`a or b`| Or| Same as above. `TRUE` if either `a` or `b` is `TRUE`.
 |===
 
+
 ==== String Operators
 
 [cols="<33,<33,<33",options="header"]
@@ -632,6 +761,7 @@ NXSL supports C-style pre- and post-increment and decrement operators.
 |`.=`| Concatenating assignment operator| Appends the argument on the right side to the argument on the left side.
 |`[a:b]`| Substring operator| Returns substring of a string from the character with index `a` inclusive till the character with index `b` exclusive. Example: "1234"[1:3] will be "23". If `a` is omitted then substring will be taken form the start of the string and if `b` is omitted then substring will be taken till the end of the string.
 |===
+
 
 === Control structures
 
@@ -664,8 +794,8 @@ statement by itself as well. The various statement types are supported:
 
 * exit
 
-====  if
 
+====  if
 
 The `if` construct is one of the most important features of many languages. It allows for conditional execution of code fragments. NXSL features an `if` structure that is similar to that of C:
 
@@ -678,7 +808,6 @@ if (expr)
 
 ====  else
 
-
 Often you'd want to execute a statement if a certain condition is met, and a
 different statement if the condition is not met. This is what `else` is for.
 `else` extends an `if` statement to execute a statement in case the
@@ -687,7 +816,6 @@ statement is only executed if the `if` expression evaluated to `FALSE`.
 
 
 ====  while
-
 
 `while` loops are the simplest type of loop in NXSL. They behave just like
 their C counterparts. The basic form of a `while` statement is:
@@ -707,7 +835,6 @@ statement(s), execution will not stop until the end of the iteration.
 
 ====  do-while
 
-
 `do-while` loops are very similar to `while` loops, except the truth
 expression is checked at the end of each iteration instead of in the beginning.
 The main difference from regular `while` loops is that the first iteration of
@@ -719,7 +846,6 @@ execution would end immediately).
 
 
 ====  for
-
 
 `for` loops are the most complex loops in NXSL. They behave in two different ways:
 like their C counterparts or in Java way. The syntax of a `for` loop is:
@@ -748,13 +874,11 @@ array. Element will be available as `varName`.
 
 ====  break
 
-
 `break` ends execution of the current `for`, `while`, `do-while` or
 `switch` structure.
 
 
 ====  continue
-
 
 `continue` is used within looping structures to skip the rest of the current
 loop iteration and continue execution at the condition evaluation and then the
@@ -762,7 +886,6 @@ beginning of the next iteration.
 
 
 ====  switch
-
 
 The `switch` statement is similar to a series of `if` statements on the
 same expression. In many occasions, you may want to compare the same variable
@@ -848,7 +971,6 @@ type == NODE and state & NodeState::Unreachable
 
 ====  return
 
-
 If called from within a function, the `return` statement immediately ends
 execution of the current function, and returns its argument as the value of the
 function call. Calling `return` from `main()` function (either explicitly
@@ -857,13 +979,11 @@ or implicitly defined) is equivalent of calling `exit`.
 
 ====  exit
 
-
 The `exit` statement immediately ends execution of the entire script, and
 returns its argument as script execution result.
 
 
 ===  Expressions
-
 
 The simplest yet most accurate way to define an expression is "anything that
 has a value".
@@ -910,7 +1030,6 @@ two-place operator can be used in this operator-assignment mode.
 
 ====  Short-circuit evaluation
 
-
 link:++http://en.wikipedia.org/wiki/Short-circuit_evaluation++[Short-circuit evaluation] denotes the semantics
 of some Boolean operators in which the second argument is only executed or
 evaluated if the first argument does not suffice to determine the value of the
@@ -937,9 +1056,12 @@ Without short-circuit evaluation, `trim(x)` would cause run-time error if
 
 
 [[chapter-regular-expressions]]
+
+
 ===  Regular expressions
 
 Since version 3.0, regular expression engine is changed to PCRE (Perl compatible). Syntax can be checked with `pcregrep`, perl itself or on https://regex101.com/[regex101.com] (select PCRE flavour).
+
 
 === Comments
 
