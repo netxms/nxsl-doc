@@ -1,6 +1,6 @@
 [.nxsl-class]
 [[class-json_object]]
-=== JSON object
+=== JsonObject
 
 Represents JSON object
 
