@@ -17,5 +17,5 @@ Parse input `string` to <<class-json_object>>
 
 .Return
 
-<<class-json_object>> if parsing was sucessfull or null
+<<class-json_object>> if root object is Json object and <<class-json_array>> if root object is Json array or null if failed to parse
 
