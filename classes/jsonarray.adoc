@@ -4,6 +4,14 @@
 
 Represents JSON array object
 
+==== Instance attributes
+
+`size => Number`::
+Number of elements in array
+
+`values => Array`::
+NXSL array with JSON array elements
+
 ==== Instance methods
 
 `append(value) => void`::
