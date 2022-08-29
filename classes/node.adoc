@@ -92,7 +92,7 @@ Bit mask of <<node-flags>>.
 `TRUE` if supports ENTITY-MIB.
 
 `hasIfXTable => Boolean`::
-`TRUE` if supports ifXTable.
+`TRUE` if supports ifXTable via SNMP (64-bit counters for interface statistics).
 
 `hasUserAgent => Boolean`::
 `TRUE` if has user agent
@@ -837,7 +837,7 @@ Set ifXTable usage mode 0 - use default, 1 - enable, 2 - disable
 |Node supports ENTITY-MIB
 
 |0x00010000
-|Node supports ifXTable
+|Node supports ifXTable via SNMP (64-bit counters for interface statistics)
 
 |0x00020000
 |Agent supports 64-bit interface counters
