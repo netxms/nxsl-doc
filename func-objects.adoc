@@ -23,6 +23,8 @@ include::functions/getnodeparents.adoc[]
 include::functions/getnodetemplates.adoc[]
 include::functions/getobjectchildren.adoc[]
 include::functions/getobjectparents.adoc[]
+include::functions/getservernode.adoc[]
+include::functions/getservernodeid.adoc[]
 include::functions/leavemaintenance.adoc[]
 include::functions/manageobject.adoc[]
 include::functions/renameobject.adoc[]
@@ -30,7 +32,3 @@ include::functions/setcustomattribute.adoc[]
 include::functions/setinterfaceexpectedstate.adoc[]
 include::functions/unbindobject.adoc[]
 include::functions/unmanageobject.adoc[]
-
-
-
-

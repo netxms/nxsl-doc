@@ -1,0 +1,20 @@
+[.nxsl-function]
+[[func-getservernodeid]]
+== GetServerNodeId()
+
+[source,c]
+----
+GetServerNodeId() => Node
+----
+
+Get ID of management server's node.
+
+.Return
+ID of node instance.
+
+.Example
+[.source]
+....
+>>> GetServerNodeId()
+161
+....

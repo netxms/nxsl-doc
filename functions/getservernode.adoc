@@ -1,0 +1,20 @@
+[.nxsl-function]
+[[func-getservernode]]
+== GetServerNode()
+
+[source,c]
+----
+GetServerNode() => Node
+----
+
+Get node object of the management server.
+
+.Return
+Node instance.
+
+.Example
+[.source]
+....
+>>> GetServerNode()
+Node@0x7facac2889e0
+....

@@ -54,6 +54,8 @@ include::functions/trace.adoc[]
 
 include::functions/typeof.adoc[]
 
+include::functions/pollertrace.adoc[]
+
 include::functions/writepersistentstorage.adoc[]
 
 include::functions/weierstrass.adoc[]
