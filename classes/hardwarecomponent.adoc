@@ -1,6 +1,6 @@
 [.nxsl-class]
 [[class-hardwarecomponent]]
-=== Hardware Component
+=== HardwareComponent
 
 Object that contains all information about node hardware component.
 

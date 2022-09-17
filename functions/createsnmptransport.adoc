@@ -28,7 +28,7 @@ Create SNMP transport with communication settings defined on the node. It is pos
 
 .Return
 
-Instance of <<class-snmp_transport>> or `null` if failed.
+Instance of <<class-snmptransport>> or `null` if failed.
 
 .Example
 [.source]

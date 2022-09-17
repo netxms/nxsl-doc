@@ -1,6 +1,6 @@
 [.nxsl-class]
-[[class-alarm-comment]]
-=== Alarm comment
+[[class-alarmcomment]]
+=== AlarmComment
 
 Represents NetXMS alarm comment.
 

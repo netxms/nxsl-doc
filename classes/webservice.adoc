@@ -1,6 +1,6 @@
 [.nxsl-class]
-[[class-web_service]]
-=== Web Service object
+[[class-webservice]]
+=== WebService
 
 An object that represents a combination of node and web service definition, that will be used for requests.
 
@@ -17,7 +17,7 @@ Web service description
 
 ==== Instance methods
 
-`get(...) => <<class-web_service_response>>`::
+`get(...) => <<class-webserviceresponse>>`::
 Execute GET request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion. 
 
 .Parameters
@@ -27,7 +27,7 @@ Execute GET request from agent on associated node. Associated node is the node o
 |===
 
 .Return
-Instance of <<class-web_service_response>> with request result.
+Instance of <<class-webserviceresponse>> with request result.
 
 .Example
 [.source]
@@ -40,7 +40,7 @@ result = webSvc->get("additional", "parameters");
 println(result->document); // will print result
 ....
 
-`delete(...) => <<class-web_service_response>>`::
+`delete(...) => <<class-webserviceresponse>>`::
 Execute DELETE request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
@@ -50,7 +50,7 @@ Execute DELETE request from agent on associated node. Associated node is the nod
 |===
 
 .Return
-Instance of <<class-web_service_response>> with request result.
+Instance of <<class-webserviceresponse>> with request result.
 
 .Example
 [.source]
@@ -63,19 +63,19 @@ result = webSvc->delete("additional", "parameters");
 println(result->success); //will print "true" if request was successful or "false" otherwise
 ....
 
-`patch(data, contentType, ...) => <<class-web_service_response>>`::
+`patch(data, contentType, ...) => <<class-webserviceresponse>>`::
 Execute PATCH request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|data|String or <<class-json_object>> | Data that will be set to the web service.
+|data|String or <<class-jsonobject>> | Data that will be set to the web service.
 |contentType|String|Optional parameter. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
 |...|Strings|Optional additional parameter(s) that will be used in web service definition to expand %1, %2... macro.
 |===
 
 .Return
-Instance of <<class-web_service_response>> with request result.
+Instance of <<class-webserviceresponse>> with request result.
 
 .Example
 [.source]
@@ -91,19 +91,19 @@ result = webSvc->patch(json,"application/json", "additional", "parameters");
 println(result->success); //will print "true" if request was successful or "false" otherwise
 ....
 
-`post(data, contentType, ...) => <<class-web_service_response>>`::
+`post(data, contentType, ...) => <<class-webserviceresponse>>`::
 Execute POST request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|data|String or <<class-json_object>> | Data that will be set to the web service.
+|data|String or <<class-jsonobject>> | Data that will be set to the web service.
 |contentType|String|Optional parameter. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
 |...|Strings|Optional additional parameter(s) that will be used in web service definition to expand %1, %2... macro.
 |===
 
 .Return
-Instance of <<class-web_service_response>> with request result.
+Instance of <<class-webserviceresponse>> with request result.
 
 .Example
 [.source]
@@ -119,19 +119,19 @@ result = webSvc->post(json,"application/json", "additional", "parameters");
 println(result->success); //will print "true" if request was successful or "false" otherwise
 ....
 
-`put(data, contentType, ...) => <<class-web_service_response>>`::
+`put(data, contentType, ...) => <<class-webserviceresponse>>`::
 Execute PUT request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|data|String or <<class-json_object>> | Data that will be set to the web service.
+|data|String or <<class-jsonobject>> | Data that will be set to the web service.
 |contentType|String|Optional parameter. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
 |...|Strings|Optional additional parameter(s) that will be used in web service definition to expand %1, %2... macro.
 |===
 
 .Return
-Instance of <<class-web_service_response>> with request result.
+Instance of <<class-webserviceresponse>> with request result.
 
 .Example
 [.source]

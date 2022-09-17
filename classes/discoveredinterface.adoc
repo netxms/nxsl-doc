@@ -1,6 +1,6 @@
 [.nxsl-class]
 [[class-discoveredinterface]]
-=== Discovered Interface
+=== DiscoveredInterface
 
 Represent discovered interface objects in <<class-discoverednode,discovered node class>>
 

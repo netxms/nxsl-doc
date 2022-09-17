@@ -65,7 +65,7 @@ EtherNet/IP vendor code in numeric form.
 Entity MIB components of class <<class-component>>.
 
 `dependentNodes => Array`::
-Will return array with <<class-node-dependency>> class objects. This array contains all objects that have current node as a proxy or data collection sources.
+Will return array with <<class-nodedependency>> class objects. This array contains all objects that have current node as a proxy or data collection sources.
 
 `driver => String`::
 Named of selected device-specific SNMP driver.
@@ -280,7 +280,7 @@ Configured SNMP version:
 * 2: SNMP version 3
 
 `softwarePackages => Array`::
-Returns array of <<class-software-package>> class objects
+Returns array of <<class-softwarepackage>> class objects
 
 `sysDescription => String`::
 System description (value of `System.Uname` for nodes with agents or `.1.3.6.1.2.1.1.1.0` for SNMP nodes)
@@ -308,21 +308,21 @@ This node zone UIN
 
 ==== Instance methods
 
-`callWebService(webSvcName, requestType, ...) => <<class-web_service_response>>`::
-Finds web service by name, makes request and returns the <<class-web_service_response>> object.
+`callWebService(webSvcName, requestType, ...) => <<class-webserviceresponse>>`::
+Finds web service by name, makes request and returns the <<class-webserviceresponse>> object.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |webSvcName|String|Web service name.
 |requestType|String|Request type. One of: GET, DELETE, PATCH, POST, PUT
-|data|String or <<class-json_object>> |Depending on request type data might be required and provided as a string or JSON object. GET and DELETE requests do not allow data, PATCH, POST, PUT require data.
+|data|String or <<class-jsonobject>> |Depending on request type data might be required and provided as a string or JSON object. GET and DELETE requests do not allow data, PATCH, POST, PUT require data.
 |contentType|String|Optional parameter. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
 |...|Strings|Optional additional parameter(s) that will be used in web service definition to expand %1, %2... macro.
 |===
 
 .Return
-Instance of <<class-web_service_response>> with request result.
+Instance of <<class-webserviceresponse>> with request result.
 
 .Example
 [.source]
@@ -344,8 +344,8 @@ println(result->httpResponseCode); // "200"
 println(result->document); // ""
 ....
 
-`createSNMPTransport(port, context, community) => <<class-snmp_transport>>`::
-Create SNMP transport object of class <<class-snmp_transport>> with communication settings defined on the node. It is possible to specify a community string but only community strings listed in Network Credentials will be accepted.
+`createSNMPTransport(port, context, community) => <<class-snmptransport>>`::
+Create SNMP transport object of class <<class-snmptransport>> with communication settings defined on the node. It is possible to specify a community string but only community strings listed in Network Credentials will be accepted.
 Creation of SNMP transport is a preparatory operation enabling subsequent sending of SNMP requests to node.  
 However, creation of SNMP transport does not guarantee that the node is accessible. 
 
@@ -359,7 +359,7 @@ However, creation of SNMP transport does not guarantee that the node is accessib
 
 .Return
 
-Instance of <<class-snmp_transport>> or `null` if failed.
+Instance of <<class-snmptransport>> or `null` if failed.
 
 `enable8021xStatusPolling(flag) => void`::
 Enable or disable 802.1x port state checking during status polls.
@@ -557,7 +557,7 @@ Get interface name by index.
 |ifIndex|Integer|Index of interface.
 |===
 
-`getWebService(webSvcName) => <<class-web_service>>`::
+`getWebService(webSvcName) => <<class-webservice>>`::
 Get web service object by name.
 
 .Parameters
@@ -567,7 +567,7 @@ Get web service object by name.
 |===
 
 .Return
-<<class-web_service>> object.
+<<class-webservice>> object.
 
 .Example
 [.source]

@@ -2,7 +2,7 @@
 [[class-user]]
 === User
 
-Object represent user object and extends <<class-user-dbobject>>.
+Object represent user object and extends <<class-userdbobject>>.
 
 ==== Instance attributes
 

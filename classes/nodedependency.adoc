@@ -1,5 +1,5 @@
 [.nxsl-class]
-[[class-node-dependency]]
+[[class-nodedependency]]
 === NodeDependency
 
 Object with information about the node that uses as a proxy or data collection source node that returned this object. 

@@ -1,6 +1,6 @@
 [.nxsl-class]
-[[class-web_service_response]]
-=== Web service response
+[[class-webserviceresponse]]
+=== WebServiceResponse
 
 Contains all information about web service custom request execution result
 

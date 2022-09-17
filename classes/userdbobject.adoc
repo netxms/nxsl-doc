@@ -1,8 +1,8 @@
 [.nxsl-class]
-[[class-user-dbobject]]
-=== User DB Object
+[[class-userdbobject]]
+=== UserDBObject
 
-Base class for <<class-user>> and <<class-user-group>> with common fields
+Base class for <<class-user>> and <<class-usergroup>> with common fields
 
 ==== Instance attributes
 
@@ -25,7 +25,7 @@ Id
 `TRUE` if user DB object is disabled
 
 `isGroup => Boolean`::
-`TRUE` if user DB object is group object: <<class-user-group>>
+`TRUE` if user DB object is group object: <<class-usergroup>>
 
 `isModified => Boolean`::
 `TRUE` if user DB object is modified

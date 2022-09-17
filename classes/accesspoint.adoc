@@ -1,6 +1,6 @@
 [.nxsl-class]
-[[class-access-point]]
-=== Access point
+[[class-accesspoint]]
+=== AccessPoint
 
 Represents NetXMS access point object.
 

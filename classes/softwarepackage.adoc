@@ -1,6 +1,6 @@
 [.nxsl-class]
-[[class-software-package]]
-=== Software package
+[[class-softwarepackage]]
+=== SoftwarePackage
 
 Represents software package installed on <<class-node>> object.
 

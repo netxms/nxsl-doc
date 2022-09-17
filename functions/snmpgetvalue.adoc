@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 3.0.* 
-Please use method getValue of class <<class-snmp_transport>>. 
+Please use method getValue of class <<class-snmptransport>>. 
 ====
 ****
 
@@ -15,14 +15,14 @@ Please use method getValue of class <<class-snmp_transport>>.
 SNMPGetValue(transport, oid) => String
 ----
 
-Perform SNMP GET request for `oid` over provided <<class-snmp_transport,transport>> and return single string value instead of varbind.
+Perform SNMP GET request for `oid` over provided <<class-snmptransport,transport>> and return single string value instead of varbind.
 
 This function is a wrapper for <<func-snmpget>>.
 
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
-|transport|<<class-snmp_transport,Transport>> created by <<func-createsnmptransport>>.
+|transport|<<class-snmptransport,Transport>> created by <<func-createsnmptransport>>.
 |oid|SNMP OID string.
 |===
 

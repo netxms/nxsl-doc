@@ -1,8 +1,8 @@
 [.nxsl-class]
-[[class-user-group]]
-=== User Group
+[[class-usergroup]]
+=== UserGroup
 
-Object represent user group object and extends <<class-user-dbobject>>.
+Object represent user group object and extends <<class-userdbobject>>.
 
 ==== Instance attributes
 
@@ -10,4 +10,4 @@ Object represent user group object and extends <<class-user-dbobject>>.
 Group member count
 
 `members => Array`::
-Array with objects: <<class-user>> or <<class-user-group>>
+Array with objects: <<class-user>> or <<class-usergroup>>

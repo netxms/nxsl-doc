@@ -79,7 +79,7 @@ currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabl
 ID of currently selected primary zone proxy (`0` if zoning is disabled or primary proxy is not assigned)
 
 `responsibleUsers => Array`::
-Array with user objects that are added as responsible users for this object. Objects are <<class-user>> or <<class-user-group>>
+Array with user objects that are added as responsible users for this object. Objects are <<class-user>> or <<class-usergroup>>
 
 `state => Integer`::
 Current object state. One of: <<const-node-state>>, <<const-cluster-state>>, <<const-sensor-state>>
@@ -151,7 +151,7 @@ Returns responsible users that have escalation level equal to specified level.
 
 .Return
 Array with user objects that are added as responsible users for this object.
-Objects are <<class-user>> or <<class-user-group>>
+Objects are <<class-user>> or <<class-usergroup>>
 
 `isDirectChild(object) => Boolean`::
 If provided object is direct child of this object

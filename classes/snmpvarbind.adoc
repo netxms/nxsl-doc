@@ -1,6 +1,6 @@
 [.nxsl-class]
-[[class-snmp_varbind]]
-=== SNMP_VarBind
+[[class-snmpvarbind]]
+=== SNMPVarBind
 
 Represents an SNMP varbind concept in NetXMS. A varbind logically consists of an OID and a value.
 

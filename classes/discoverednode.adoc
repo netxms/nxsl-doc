@@ -1,6 +1,6 @@
 [.nxsl-class]
 [[class-discoverednode]]
-=== Discovered Node
+=== DiscoveredNode
 
 Represents NetXMS node found while *performing* network discovery. Is available as a $node in script that is set as DiscoveryFilter.
 

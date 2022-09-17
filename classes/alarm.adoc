@@ -120,4 +120,4 @@ Get array of alarm comments.
 
 .Return
 
-Array of <<class-alarm-comment>> objects.
+Array of <<class-alarmcomment>> objects.

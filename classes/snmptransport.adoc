@@ -1,6 +1,6 @@
 [.nxsl-class]
-[[class-snmp_transport]]
-=== SNMP_Transport
+[[class-snmptransport]]
+=== SNMPTransport
 
 Represents SNMP Transport functionality. Objects of this class are typically obtained from nodes that support SNMP. Objects of this class used to access <<func-group-snmp,SNMP functions>> of nodes.
 
@@ -11,7 +11,7 @@ SNMP version used by the transport. Can be "1", "2c" or "3"
 
 ==== Instance methods
 
-`get(oid) => <<class-snmp_varbind>>`::
+`get(oid) => <<class-snmpvarbind>>`::
 Get the object value from specific node with SNMP GET request. The node and all SNMP communication details defined by SNMP transport. Will return null on failure.
 
 .Parameters
@@ -41,7 +41,7 @@ Assign a specific value to the given SNMP object for the node. The node and all 
 |===
 
 `walk(oid) => Array`::
-Get an array of the <<class-snmp_varbind>> from specific node with SNMP WALK request. The node and all SNMP communication details defined by SNMP transport. Will return null on failure.
+Get an array of the <<class-snmpvarbind>> from specific node with SNMP WALK request. The node and all SNMP communication details defined by SNMP transport. Will return null on failure.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]

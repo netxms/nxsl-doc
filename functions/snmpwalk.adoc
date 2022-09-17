@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 3.0.* 
-Please use method set of class <<class-snmp_transport>>. 
+Please use method set of class <<class-snmptransport>>. 
 ====
 ****
 
@@ -15,18 +15,18 @@ Please use method set of class <<class-snmp_transport>>.
 SNMPWalk(transport, oid) => Array
 ----
 
-Perform SNMP WALK request for `oid` over provided <<class-snmp_transport,transport>> and return collected values as array of <<class-snmp_varbind>> or `null` on failure.
+Perform SNMP WALK request for `oid` over provided <<class-snmptransport,transport>> and return collected values as array of <<class-snmpvarbind>> or `null` on failure.
 
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
-|transport|<<class-snmp_transport,Transport>> created by <<func-createsnmptransport>>.
+|transport|<<class-snmptransport,Transport>> created by <<func-createsnmptransport>>.
 |oid|SNMP OID string.
 |===
 
 .Return
 
-Array of <<class-snmp_varbind>> or `null` or failure.
+Array of <<class-snmpvarbind>> or `null` or failure.
 
 .Example
 [.source]

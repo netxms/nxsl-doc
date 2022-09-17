@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 3.0.* 
-Please use method set of class <<class-snmp_transport>>. 
+Please use method set of class <<class-snmptransport>>. 
 ====
 ****
 
@@ -15,13 +15,13 @@ Please use method set of class <<class-snmp_transport>>.
 SNMPSet(transport, oid, value, dataType) => Boolean
 ----
 
-Perform SNMP SET request for `oid` over provided <<class-snmp_transport,transport>>. Return boolean success indicator.
+Perform SNMP SET request for `oid` over provided <<class-snmptransport,transport>>. Return boolean success indicator.
 `value` is automatically converted from string based in `dataType`. If `dataType` is not provided, default type "STRING" will be used.
 
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
-|transport|<<class-snmp_transport,Transport>> created by <<func-createsnmptransport>>.
+|transport|<<class-snmptransport,Transport>> created by <<func-createsnmptransport>>.
 |oid|SNMP OID string.
 |value|New value.
 

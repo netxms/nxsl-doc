@@ -1,5 +1,5 @@
 [.nxsl-class]
-[[class-json_object]]
+[[class-jsonobject]]
 === JsonObject
 
 Represents JSON object
