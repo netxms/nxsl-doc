@@ -2,7 +2,7 @@
 [[class-nodedependency]]
 === NodeDependency
 
-Object with information about the node that uses as a proxy or data collection source node that returned this object. 
+Detailed information about dependent nodes, usually accessible via instance attribute `dependentNodes` in class <<class-node>>.
 
 ==== Instance attributes
 
@@ -10,27 +10,25 @@ Object with information about the node that uses as a proxy or data collection s
 Node id
 
 `isAgentProxy => Boolean`::
-If this node is agent proxy
+Node is an agent proxy. Helper function for accesing specific bit of `type` field.
 
 `isDataCollectionSource => Boolean`::
-If this node is data collection source
+Node is a data collection source for another node. Helper function for accesing specific bit of `type` field.
 
 `isICMPProxy => Boolean`::
-If this node is ICMP proxy 
+Node is an ICMP proxy for another node. Helper function for accesing specific bit of `type` field.
 
 `isSNMPProxy => Boolean`::
-If this node is SNMP proxy 
+Node is a SNMP proxy for another node. Helper function for accesing specific bit of `type` field.
 
-[[class-nodedependency-type,NodeDependency::type]]
 `type => Integer`::
-Will return this node's dependency type bit flags: <<node-dependency-type>>
-
+Type of of the dependencty this object represent. This field is a bitmask, flags are documented at <<enum-dependency-type>>.
 
 ==== Constants
 
-[[node-dependency-type]]
+[[enum-dependency-type]]
 [cols="1,5a"]
-.NodeDependency type
+.Type bitmask
 |===
 | Value | Description
 
