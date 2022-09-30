@@ -61,6 +61,9 @@
 |NodeState::SNMPUnreachable|0x00020000|Unreachable via SNMP
 |NodeState::EtherNetIPUnreachable|0x00040000|Unreachable via EtherNet/IP industrial protocol
 |NodeState::CacheModeNotSupported|0x00080000|Cache mode is not supported on NetXMS agent
+|NodeState::SNMPTrapFlood|0x00100000|SNMP trap flood detected
+|NodeState::ICMPUnreachable|0x00200000|Unreachable via ICMP
+|NodeState::SSHUnreachable|0x00400000|Unreachable via SSH
 |===
 
 [[const-object-status]]
