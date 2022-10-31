@@ -460,7 +460,33 @@ Enable or disable topology polling.
 |flag|Boolean|If topology polls should be enabled.
 |===
 
-`executeSSHCommand(command) => void`::
+`executeAgentCommand(command, …) => Boolean`::
+Execute agent command (action) on node.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|command|String|Command to be executed.
+|…|Optional arguments for command
+|===
+
+.Return
+True if command execution is successful or false otherwise. 
+
+`executeAgentCommandWithOutput(command, …) => String`::
+Execute agent command (action) on node and return it's output.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|command|String|Command to be executed.
+|…|Optional arguments for command
+|===
+
+.Return
+String with output of the command or null on failure. 
+
+`executeSSHCommand(command) => array`::
 Execute SSH command on node.
 
 .Parameters
@@ -468,6 +494,9 @@ Execute SSH command on node.
 |===
 |command|String|Command to be executed.
 |===
+
+.Return
+Array of strings with output of the command or null on failure.
 
 [[class-node-getinterface,Node::getInterface()]]
 `getInterface(ifIdentifier) => <<class-interface>>`::

@@ -1,7 +1,7 @@
 = Agent related functions
 
-include::functions/agentexecuteaction.adoc[]
-include::functions/agentexecuteactionwithoutput.adoc[]
+include::functions/agentexecutecommand.adoc[]
+include::functions/agentexecutecommandwithoutput.adoc[]
 include::functions/agentreadlist.adoc[]
 include::functions/agentreadparameter.adoc[]
 include::functions/agentreadtable.adoc[]
