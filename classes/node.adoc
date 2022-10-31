@@ -467,7 +467,7 @@ Execute agent command (action) on node.
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |command|String|Command to be executed.
-|…|Optional arguments for command
+|…|String|Optional arguments for command
 |===
 
 .Return
@@ -480,7 +480,7 @@ Execute agent command (action) on node and return it's output.
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |command|String|Command to be executed.
-|…|Optional arguments for command
+|…|String|Optional arguments for command
 |===
 
 .Return
