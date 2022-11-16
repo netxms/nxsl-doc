@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 3.0.* 
-Please use setCustomAttribute functions in <<class-netobj>>. 
+Please use setCustomAttribute method in <<class-netobj>>. 
 ====
 ****
 

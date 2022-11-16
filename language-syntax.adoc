@@ -546,7 +546,7 @@ in-between. Attempting to access an array key which has not been defined is the
 same as accessing any other undefined variable: the result will be `NULL`.
 
 Arrays are not objects, it's a separate variable type. However, arrays have
-methods and attributes decribed below. 
+methods and attributes described below. 
 
 Array elements can be accessed using [`index`] operator. For example, to
 access element with index `3` of array `a` you should use
