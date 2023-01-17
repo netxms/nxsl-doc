@@ -1,0 +1,169 @@
+[.nxsl-class]
+[[class-bytestream]]
+=== Byte Stream
+
+Object represents stream of bytes
+
+
+==== Instance attributes
+
+`pos => Integer`::
+Current position in the byte stream
+
+`size => Integer`::
+Size of byte stream in bytes
+
+`eos => boolean`::
+Indicates, if current position is in the end of byte stream
+
+
+==== Instance methods
+
+`seek(position) => Integer`::
+Change current position in byte stream. 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|position|Integer|Position to seek to
+|===
+
+.Return
+
+Actual position if position change was successful or `-1` if position change was
+not successful. 
+
+
+`readByte() => Integer (32 bit)`:: 
+Read byte from byte stream and return it's value.  
+
+`readInt16B() => Integer (32 bit)`:: 
+Read big-endian 16-bit signed integer from byte stream and return it's value.
+
+
+`readInt32B() => Integer (32 bit)`:: 
+Read big-endian 32-bit signed integer from byte stream and return it's value.
+
+
+`readInt64B() => Integer (64 bit)`:: 
+Read big-endian 64-bit signed integer from byte stream and return it's value.
+
+
+`readUInt16B() => Integer (32 bit)`:: 
+Read big-endian 16-bit unsigned integer from byte stream and return it's value.
+
+
+`readUInt32B() => Integer (32 bit)`:: 
+Read big-endian 32-bit unsigned integer from byte stream and return it's value.
+
+
+`readUInt64B() => Integer (64 bit)`:: 
+Read big-endian 64-bit unsigned integer from byte stream and return it's value.
+
+
+`readFloatB() => Floating-point number`:: 
+Read 8 bytes from stream as big-endian floating-point number and return it's
+value. 
+
+`readInt16L() => Integer (32 bit)`:: 
+Read little-endian 16-bit signed integer from byte stream and return it's value.
+
+
+`readInt32L() => Integer (32 bit)`:: 
+Read little-endian 32-bit signed integer from byte stream and return it's value.
+
+
+`readInt64L() => Integer (64 bit)`:: 
+Read little-endian 64-bit signed integer from byte stream and return it's value.
+
+
+`readUInt16L() => Integer (32 bit)`:: 
+Read littleig-endian 16-bit unsigned integer from byte stream and return it's
+value. 
+
+`readUInt32L() => Integer (32 bit)`:: 
+Read little-endian 32-bit unsigned integer from byte stream and return it's
+value. 
+
+`readUInt64L() => Integer (64 bit)`:: 
+Read little-endian 64-bit unsigned integer from byte stream and return it's
+value. 
+
+`readFloatL() => Floating-point number`:: 
+Read 8 bytes from stream as little-endian floating-point number and return it's
+value. 
+
+`readCString() => String`:: 
+Read C-string from stream and return it's value. It's expected that string in
+the stream is terminates by a null character. 
+
+`readPString() => String`:: 
+Read Pascal string from stream and return it's value. It's expected that first
+byte of string in the stream contains length of the string. 
+
+`readString(length) => String`:: 
+Read string from stream and return it's value. 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|length|Integer|Length of the string
+|===
+
+`writeByte(value) => void`:: 
+Write provided value as byte to the byte stream at current position. 
+
+`writeInt16B(value) => void`:: 
+Write provided value to the byte stream as big-endian 16-bit integer . 
+
+`writeInt32B(value) => void`:: 
+Write provided value to the byte stream as big-endian 32-bit integer. 
+
+`writeInt64B(value) => void`:: 
+Write provided value to the byte stream as big-endian 64-bit integer. 
+
+`writeFloatB(value) => void`:: 
+Write provided value to the byte stream as big-endian 64-bit float. 
+
+`writeInt16L(value) => void`:: 
+Write provided value to the byte stream as little-endian 16-bit integer. 
+
+`writeInt32L(value) => void`:: 
+Write provided value to the byte stream as little-endian 32-bit integer. 
+
+`writeInt64L(value) => void`:: 
+Write provided value to the byte stream as little-endian 64-bit integer. 
+
+`writeFloatL(value) => void`:: 
+Write provided value to the byte stream as little-endian 64-bit float. 
+
+`writeCString(string) => void`:: 
+Write provided string to the byte stream as null-terminated string (C-string).
+
+`writePString(string) => void`:: 
+Write provided string to the byte stream as Pascal string (first byte is string length).
+
+`writeString(string) => void`:: 
+Write provided string to the byte stream.
+
+
+==== Constructors
+
+`ByteStream()`::
+Creates new byte stream.
+
+.Return
+ByteStream object.
+
+.Example
+[.source]
+....
+bytestream = new ByteStream();
+bytestream->writeString("xyz");
+bytestream->seek(0);
+while (!bytestream->eos) {
+  b = bytestream->readByte();
+  print(d2x(b,2) .. " "); // prints "78 79 7A"
+}
+....
+

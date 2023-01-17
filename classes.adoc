@@ -1,6 +1,7 @@
 include::classes/accesspoint.adoc[]
 include::classes/alarm.adoc[]
 include::classes/alarmcomment.adoc[]
+include::classes/bytestream.adoc[]
 include::classes/chassis.adoc[]
 include::classes/cluster.adoc[]
 include::classes/component.adoc[]
