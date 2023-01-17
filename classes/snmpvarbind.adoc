@@ -18,8 +18,22 @@ ASN.1 type.
 `value => String`::
 Object value as a string.
 
+`printableValue => String`::
+Object value as a string with non-printable characters replaced by `?` character. 
+
 `valueAsIp => String`::
 Object value IP address, represented as string.
 
 `valueAsMac => String`::
 Object value as MAC address, represented as string.
+
+
+==== Methods
+
+`getValueAsByteStream() => ByteStream`::
+Returns object value as <<class-bytestream>>.
+
+`getValueAsString() => String`::
+Returns object value as string.
+
+
