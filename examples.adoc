@@ -2,12 +2,14 @@ Some real life examples.
 
 === Small utility scripts
 
+
 ==== UNIX timestamp to human readable
 
 [source,c]
 ----
 return strftime("%d.%m.%Y %H:%M:%S", $1);
 ----
+
 
 ==== Table DCI manipulation script
 
@@ -29,6 +31,7 @@ if (table != NULL) {
 return 0;
 ----
 
+
 ==== Primary mac address
 
 Script to print primary MAC address.
@@ -45,19 +48,22 @@ for(i : $node->interfaces)
 }
 ----
 
+
 ==== Check if node is under cluster or container
 
-Script that returns `TRUE` if current node is already under container or cluster.
+Script that returns `TRUE` if current node is under at least one container or
+cluster.
 
 [source,c]
 ----
 for (p : $node->parents) {
     if (p->type == 5 or p->type == 14) { //5 is container and 14 is cluster
-        return false;
+        return true;
     }
 }
-return true;
+return false;
 ----
+
 
 === Change expected state for all interfaces
 
@@ -66,28 +72,31 @@ Set ignore expected state for all interfaces of all nodes.
 [source,c]
 ----
 for (n : GetAllNodes()) {
-    println(n->name . "(" . n->id . ")");
+    println(n->name .. "(" .. n->id .. ")");
     for (i : n->interfaces) {
-        println("\t" . i->name);
+        println("\t" .. i->name);
         i->setExpectedState("IGNORE");
     }
 }
 ----
 
-=== Instance filtering script for "Net.InterfaceList"
+
+=== Instance filtering script for "Net.InterfaceNames"
 
 ==== Requirements
 
-Instance filtering script for "Net.InterfaceList" list, that will filter only "eth*" and "bond*" interfaces, that can be used in
-Net.Interface.BytesIn64 or Net.Interface.BytesOut64 DCIs.
+Instance filtering script for "Net.InterfaceNames" list, that will filter only
+"eth*" and "bond*" interfaces, that can be used in Net.Interface.BytesIn64 or
+Net.Interface.BytesOut64 DCIs.
 
 ==== Solution
 
-Select "Agent List" as instance discovery method. Set "Net.InterfaceList" as list name and add script to instance discovery filter script section:
+Select "Agent List" as instance discovery method. Set "Net.InterfaceNames" as
+list name and add script to instance discovery filter script section:
 
 [source,c]
 ----
-name=substr($1,rindex($1, " ")+1);
+name=$1;
 if (name ~= "eth|bond")
 {
     return Instance(displayName: name, name: name);
@@ -100,7 +109,8 @@ return false;
 
 ==== Requirements
 
-Filter interfaces that should not be monitored by NetXMS. In this case "isatap*" interfaces.
+Filter interfaces that should not be monitored by NetXMS. In this case "isatap*"
+interfaces.
 
 ==== Solution
 
@@ -114,15 +124,20 @@ if ( $1->name ~= "^isatap" )
 return true;
 ----
 
+
 === Additional Information About Connected Node
 
 ==== Requirements
 
-Add information about name, IP address, and MAC address about connected node to notification about switch port being down.
+Add information about name, IP address, and MAC address about connected node to
+notification about switch port being down and up.
 
 ==== Solution
 
-Use named event attribute additionalInfo to pass information into e-mail body (using %<additionalInfo> macro). To populate this attribute the following script can be used in Event Processing Policy:
+Script that is being called from Event Processing Policy that adds named event
+parameter to the event. Parameter is named `additionalInfo`, correspondingly
+`%<additionalInfo>` macro can be used to add value of that parameter to
+notification text. 
 
 [source,c]
 ----
@@ -153,10 +168,11 @@ else
 
 // set event's named parameter
 SetEventParameter($event, "additionalInfo",
-	"Peer: " . peer->name . " " . peer->ipAddr . " " . macAddr);
+	"Peer: " .. peer->name .. " " .. peer->ipAddr .. " " .. macAddr);
 
 return true;
 ----
+
 
 === Enumerate All Nodes
 
@@ -166,9 +182,13 @@ Enumerate all nodes in NetXMS database.
 
 ==== Solution 1
 
-Create script in script library which will find "Entire Networks" object and walk down the tree. This script can be executes as an action from event processing policy, or directly from server debug console via exec command or on any node.
+Create script in script library which will find "Entire Networks" object and
+walk down the tree. This script can be executes as an action from event
+processing policy, or directly from server debug console via exec command or on
+any node.
 
-In order to be able to access info about all nodes, the CheckTrustedNodes server configuration variable needs to be set to 0.
+In order to be able to access info about all nodes, the CheckTrustedNodes server
+configuration variable needs to be set to 0.
 
 [source,c]
 ----
@@ -177,7 +197,7 @@ sub EnumerateNodes(obj, level)
 {
     foreach(o : obj->children) {
         for (i = 0; i < level; i++) { print("  "); }
-        println("[" . o->type . " / " . classof(o) . "] " . o->name);
+        println("[" .. o->type .. " / " .. classof(o) .. "] " .. o->name);
 
         EnumerateNodes(o, level + 1);
     }
@@ -188,7 +208,8 @@ EnumerateNodes(FindObject("Entire Network"), 0);
 
 ==== Solutions 2
 
-When only nodes are required, not walk down the tree then this script can be used:
+When only nodes are required, not walk down the tree then this script can be
+used:
 
 
 [source,c]
@@ -197,6 +218,7 @@ for (n : GetAllNodes()) {
   println(n->name);
 }
 ----
+
 
 === Enumerate All Custom Attributes for Node
 
@@ -211,13 +233,73 @@ Enumerate all custom attributes on a node.
 attributes = $node->customAttributes;
 foreach(a : attributes->keys)
 {
-        println(a . "=" . attributes[a]);
+        println(a .. "=" .. attributes[a]);
 }
 ----
 
+
+=== Bubble sort with alphabetical sorting
+
+[source,c]
+----
+sub BubbleSort(a)
+{
+   n = a->maxIndex + 1;
+   do
+   {
+      newn = 0;
+      for(i = 1; i < n; i++)
+      {
+         if (a[i - 1]->compareTo(a[i]) > 0)
+         {
+            t = a[i - 1];
+            a[i - 1] = a[i];
+            a[i] = t;
+            newn = i;
+         }
+      }
+      n = newn;
+   }
+   while(n > 1);
+   return a;
+}
+----
+
+
+=== Bubble sort with numeric sorting
+
+[source,c]
+----
+sub BubbleSort(a)
+{
+   n = a->maxIndex + 1;
+   do
+   {
+      newn = 0;
+      for(i = 1; i < n; i++)
+      {
+         if (a[i - 1] > a[i])
+	     {
+            t = a[i - 1];
+            a[i - 1] = a[i];
+            a[i] = t;
+            newn = i;
+         }
+      }
+      n = newn;
+   }
+   while(n > 1);
+   return a;
+}
+----
+
+
 === Aggregation of DCI values and applying the 95% percentile average
 
-The example is based around a template which configuers ICMP Packet Loss probes. This script will loop around the nodes, collect the required DCI values. The values are then ordered and the top 5 percent discarded, the remaining entries are averaged to give the required value;
+The example is based around a template which configures ICMP Packet Loss probes.
+This script will loop around the nodes, collect the required DCI values. The
+values are then ordered and the top 5 percent discarded, the remaining entries
+are averaged to give the required value;
 
 
 [source,c]
@@ -231,7 +313,7 @@ arrayI  = 0;
 
 foreach(parent : $node->parents)
 {
-	trace(3, "Parent object: name='" . parent->name ."' id=" . parent->id);
+	trace(3, "Parent object: name='" .. parent->name ."' id=" .. parent->id);
 	if (parent->name == "all voice")
 	{
 		foreach(vNode : parent->children)
@@ -299,9 +381,12 @@ sub printArray(arr)
 }
 ----
 
+
 === Read SNMP Value From Node
 
-This script can be put into Script Library and run from server's debug console. It accepts node object name or ID as parameter and prints value of SNMP sysDescription to console.
+This script can be put into Script Library and run from server's debug console.
+It accepts node object name or ID as parameter and prints value of SNMP
+sysDescription to console.
 
 
 [source,c]
@@ -319,7 +404,7 @@ if (transport == null)
     return 1;
 }
 
-value = SNMPGetValue(transport, ".1.3.6.1.2.1.1.1.0");
+value = transport->getValue(".1.3.6.1.2.1.1.1.0");
 if (value == null)
 {
     println("Failed to issue SNMP GET request");
@@ -327,28 +412,34 @@ if (value == null)
 }
 else
 {
-    println("System description: " . value);
+    println("System description: " .. value);
     return 0;
 }
 ----
 
-Example of output:
+
+=== Read SNMP octet string as byte
 
 [source,c]
 ----
-C:\Source\NetXMS\x64\debug>nxadm -c "exec GetSysDescr cisco-2600-central"
-System description: Cisco IOS Software, C2600 Software (C2600-ADVSECURITYK9-M), Version 12.4(1a), RELEASE SOFTWARE (fc2)
-Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2005 by Cisco Systems, Inc.
-Compiled Fri 27-May-05 15:09 by hqluong
-INFO: Script finished with rc=0
+transport = $node->createSNMPTransport();   
+if (transport == null) exit;
 
-C:\Source\NetXMS\x64\debug>
+varbind = transport->get(".1.3.6.1.2.1.25.3.5.1.2.1");
+if (varbind == null) exit;
+
+bytestream = varbind->getValueAsByteStream();
+
+println(bytestream->pos); // after bytestream is created, it's position is set to 0
+println("0x" .. d2x(bytestream->readByte(), 2)); // prints the hex value of 0-th byte
 ----
+
 
 === Read Table From Agent
 
-This script can be put into Script Library and run from server's debug console. It accepts node object name or ID as first parameter, table name as second parameter, and prints content of given table to console.
+This script can be put into Script Library and run from server's debug console.
+It accepts node object name or ID as first parameter, table name as second
+parameter, and prints content of given table to console.
 
 [source,c]
 ----
@@ -370,10 +461,10 @@ if (table == null)
 
 // Print column names
 for(i = 0; i < table->columnCount; i++)
-	print("| " . left(table->getColumnName(i), 20));
+	print("| " .. left(table->getColumnName(i), 20));
 println("|");
 for(i = 0; i < table->columnCount; i++)
-	print("+" . left("-", 21, "-"));
+	print("+" .. left("-", 21, "-"));
 println("+");
 
 // Print data
@@ -381,15 +472,18 @@ for(i = 0; i < table->rowCount; i++)
 {
 	for(j = 0; j < table->columnCount; j++)
 	{
-		print("| " . left(table->get(i, j), 20));
+		print("| " .. left(table->get(i, j), 20));
 	}
 	println("|");
 }
 ----
 
+
 === Recursively Collect Values from Custom Attributes
 
-This script recursively collects values of custom attribute contacts from all node parents. Collected values concatenated into single string and separated by semicolons. Duplicate values added only once.
+This script recursively collects values of custom attribute contacts from all
+node parents. Collected values concatenated into single string and separated by
+semicolons. Duplicate values added only once.
 
 
 [source,c]
@@ -404,7 +498,7 @@ foreach(o : $node->parents)
 }
 
 // Concatenated result is in "contacts" global variable
-println("Contacts: " . contacts);
+println("Contacts: " .. contacts);
 
 /**
  * Recursively add contacts from object and it's parents
@@ -415,7 +509,7 @@ sub add_contacts(curr)
 	if ((c != null) && (presence[c] == null))
 	{
 		if (length(contacts) > 0)
-			contacts = contacts . ";" . c;
+			contacts = contacts .. ";" .. c;
 		else
 			contacts = c;
 		presence[c] = true;
@@ -427,6 +521,7 @@ sub add_contacts(curr)
 	}
 }
 ----
+
 
 === Setting node geolocation from SNMP
 
@@ -440,8 +535,8 @@ if (transport == null) {
   return null;
 }
 
-lat = SNMPGetValue(transport, ".1.2.3.4.1");
-lon = SNMPGetValue(transport, ".1.2.3.4.2");
+lat = transport->get(".1.2.3.4.1");
+lon = transport->get(".1.2.3.4.2");
 
 if (lat == null || lon == null) {
   return null;

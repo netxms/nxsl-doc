@@ -16,7 +16,7 @@ Object value as a printable string.
 ASN.1 type.
 
 `value => String`::
-Object value as a string.
+Object value as a string. 
 
 `printableValue => String`::
 Object value as a string with non-printable characters replaced by `?` character. 
@@ -33,7 +33,5 @@ Object value as MAC address, represented as string.
 `getValueAsByteStream() => ByteStream`::
 Returns object value as <<class-bytestream>>.
 
-`getValueAsString() => String`::
-Returns object value as string.
-
-
+`getValueAsString(codepage) => String`::
+Constructs a new String by decoding the varbind value using the specified codepage. 

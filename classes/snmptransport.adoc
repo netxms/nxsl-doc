@@ -12,7 +12,7 @@ SNMP version used by the transport. Can be "1", "2c" or "3"
 ==== Instance methods
 
 `get(oid) => <<class-snmpvarbind>>`::
-Get the object value from specific node with SNMP GET request. The node and all SNMP communication details defined by SNMP transport. Will return null on failure.
+Get the object value from specific node with SNMP GET request. The node and all SNMP communication details defined by SNMP transport. Returns <<class-snmpvarbind>> object. Will return null on failure.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -21,7 +21,7 @@ Get the object value from specific node with SNMP GET request. The node and all 
 |===
 
 `getValue(oid) => String`::
-Get the object value from specific node with SNMP GET request. The node and all SNMP communication details defined by SNMP transport. This function is similar to SNMPGet but returns string instead of an SNMP_VarBind object. Will return null on failure.
+Get the object value from specific node with SNMP GET request. The node and all SNMP communication details defined by SNMP transport. This function is similar to SNMPGet but returns string instead of an SNMPVarBind object. Will return null on failure.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
