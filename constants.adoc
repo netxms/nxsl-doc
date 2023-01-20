@@ -1,3 +1,28 @@
+[[const-business-service-state]]
+== Status of the <<class-businessservice>> class object
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|BusinessServiceState::OPERATIONAL|0|No failed checks
+|BusinessServiceState::DEGRADED|2|One of checks returned not normal, but is not failed yet
+|BusinessServiceState::FAILED|4|At least one of checks failed
+|===
+
+[[const-business-service-check-type]]
+== Type of <<class-businessservicecheck>> class
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|BusinessServiceType::NONE|0|None 
+|BusinessServiceType::SCRIPT|1|Script
+|BusinessServiceType::DCI|2|DCI
+|BusinessServiceType::OBJECT|3|Object
+|===
+
 [[const-dci-datatype]]
 == Data types of the <<class-dci>> class
 
@@ -46,6 +71,70 @@
 |DataSource::SSH|8|SSH
 |DataSource::MQTT|9|MQTT
 |DataSource::DEVICE_DRIVER|10|Network Device driver
+|===
+
+[[const-dci-flags]]
+== Flags for <<class-dci>> class
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|DCI::ALL_THRESHOLDS|0x00002|Process all thresholds 
+|DCI::RAW_VALUE_OCTET_STRING|0x00004|Raw value is octet string
+|DCI::SHOW_ON_OBJECT_TOOLTIP|0x00008|Show DCI on object tooltip
+|DCI::AGGREGATE_ON_CLUSTER|0x00080|Aggregate data on cluster
+|DCI::TRANSFORM_AGGREGATED|0x00100|Transform agregated data
+|DCI::CALCULATE_NODE_STATUS|0x00400|Used in node status calculation
+|DCI::SHOW_IN_OBJECT_OVERVIEW|0x00800|Show in object overview
+|DCI::AGGREGATE_WITH_ERRORS|0x04000|Aggregate with errors
+|DCI::HIDE_ON_LAST_VALUES_PAGE|0x08000|Hoide on last values page
+|DCI::STORE_CHANGES_ONLY|0x40000|Stor changed values only
+|===
+
+[[const-event-origin]]
+== Origin of <<class-event>> class
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|EventOrigin::SYSTEM|0|System
+|EventOrigin::AGENT|1|Agent
+|EventOrigin::CLIENT|2|Client
+|EventOrigin::SYSLOG|3|Syslog
+|EventOrigin::SNMP|4|SNMP
+|EventOrigin::NXSL|5|NXSL
+|EventOrigin::REMOTE_SERVER|6|Remote server
+|EventOrigin::WINDOWS_EVENT|7|Windows event
+|===
+
+[[const-hardware-component-category]]
+== Category of <<class-hardwarecomponent>> class
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|HardwareComponentCategory::OTHER|0|Other
+|HardwareComponentCategory::BASEBOARD|1|Baseboard
+|HardwareComponentCategory::PROCESSOR|2|Processor
+|HardwareComponentCategory::MEMORY|3|Memory
+|HardwareComponentCategory::STORAGE|4|Storage
+|HardwareComponentCategory::BATTERY|5|Battery
+|HardwareComponentCategory::NETWORK_ADAPTER|6|Network adapter
+|===
+
+[[const-interface-expected-state]]
+== Expected state for <<class-interface>> class
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|InterfaceExpectedState::UP|0|Up
+|InterfaceExpectedState::DOWN|1|Down
+|InterfaceExpectedState::IGNORE|2|Ignore
 |===
 
 [[const-node-state]]
@@ -109,6 +198,38 @@
 |SensorState::Registered|0x00020000|Registered
 |SensorState::Active|0x00040000|Active
 |SensorState::PendingConfigUpdate|0x00080000|Pending Config Update
+|===
+
+[[const-severity]]
+== Severity constants
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|Severity::NORMAL|0|Normal
+|Severity::WARNING|1|Warning
+|Severity::MINOR|2|Minor
+|Severity::MAJOR|3|Major
+|Severity::CRITICAL|4|Critical
+|===
+
+[[const-status-colors]]
+== Status colors
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|StatusColor::NORMAL|0|Normal
+|StatusColor::WARNING|1|Warning
+|StatusColor::MINOR|2|Minor
+|StatusColor::MAJOR|3|Major
+|StatusColor::CRITICAL|4|Critical
+|StatusColor::UNKNOWN|5|Critical
+|StatusColor::UNMANAGED|6|Critical
+|StatusColor::DISABLED|7|Critical
+|StatusColor::TESTING|8|Critical
 |===
 
 [[const-changecode]]

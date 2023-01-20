@@ -35,6 +35,33 @@ Apply template to node
 |template|<<class-template>>|Template object to apply
 |===
 
+`enableConfigurationPolling(flag) => void`::
+Enable or disable configuration polling for a node
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If configuration polling should be enabled.
+|===
+
+`enableDataCollection(flag) => void`::
+Enable or disable data collection polling for a node.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If data collection polls should be enabled.
+|===
+
+`enableStatusPolling(flag) => void`::
+Enable or disable status polling for a node.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If status polls should be enabled.
+|===
+
 `readInternalParameter(name) => String`::
 Reads object internal metric (metric with source "Internal").
 

@@ -12,6 +12,9 @@ Description
 `frameCount => Integer`::
 Frame count
 
+`lastContact => Integer`::
+Last contact UNIX timestamp
+
 `metaType => String`::
 Meta type
 

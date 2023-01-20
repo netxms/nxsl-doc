@@ -21,6 +21,9 @@ DCI id that is source for this event or 0 if generated not by threshold
 `id => Number`::
 Unique event identifier.
 
+`lastAlarmKey => String`::
+Key for last generated alarm for this event or null
+
 `message => String`::
 Event message. Get/set attribute.
 
@@ -65,7 +68,7 @@ Event tags as an array of strings.
 `tagList => String`::
 Event tags as a coma separated list.
 
-`timestamp`::
+`timestamp => Integer`::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the event.
 
 `$1…$n`::
@@ -97,7 +100,7 @@ Set event tag, which can be later accessed via `tags` attribute.
 |tag|String tag
 |===
 
-`corelateTo(eventId) => void`::
+`correlateTo(eventId) => void`::
 
 Sets root cause id for the event
 

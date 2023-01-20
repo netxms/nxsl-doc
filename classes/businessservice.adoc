@@ -1,0 +1,20 @@
+[.nxsl-class]
+[[class-businessservice]]
+=== BusinessService
+
+Object represents business service
+
+==== Instance attributes
+
+`checks => Array`::
+List of checks an array of <<class-businessservicecheck>> class objects
+
+`instance => String`::
+Instance of the check
+
+`prototypeId => Integer`::
+ID of the prototype object
+
+`serviceState => Integer`::
+Current state of the business service one of <<const-business-service-state,states>>
+

@@ -1,0 +1,43 @@
+[.nxsl-class]
+[[class-clientsession]]
+=== ClientSession
+
+Object represents client session
+
+==== Instance attributes
+
+`clientInfo => String`::
+Client app info string
+
+`clientType => Integer`::
+Client system type - desktop(0), web(1), mobile(2), tablet(3), application(4)
+
+`flags => Integer`::
+Client flags
+
+`id => Bigint`::
+ID of client session
+
+`loginName => String`::
+Login name 
+
+`loginTime => Integer`::
+Login time
+
+`name => String`::
+User name 
+
+`systemAccessRights => Bigint`::
+User access ritht bit flags
+
+`user => User`::
+object of <<class-user>>
+
+`userId => Integer`::
+User ID
+
+`webServerAddress => String`::
+Address for web server if it is web type connection
+
+`workstation => String`::
+Workstation information if available

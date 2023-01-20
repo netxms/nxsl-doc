@@ -12,6 +12,9 @@ configuration poll.
 
 Possible values are listed here: <<const-changecode>>
 
+`categoryName => String`::
+Component category name
+
 `category => Integer`::
 Code of the component category.
 

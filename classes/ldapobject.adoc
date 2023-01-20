@@ -1,0 +1,34 @@
+[.nxsl-class]
+[[class-ldapobject]]
+=== LDAPObject
+
+Represents object recieved form LDAP on synchronization 
+
+==== Instance attributes
+
+`description => String`::
+Description
+
+`email => String`::
+E-mail
+
+`fullName => String`::
+Full name
+
+`id => String`::
+Id
+
+`isGroup => Boolean`::
+If objec is a group
+
+`isUser => Boolean`::
+If object is an user
+
+`loginName => String`::
+Login name
+
+`phoneNumber => String`::
+Phone number
+
+`type => String`::
+String that repsesents type. One of: group, user, other

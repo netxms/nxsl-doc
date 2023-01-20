@@ -45,6 +45,9 @@ ICMP minimal response time for current interface. Will return null if no informa
 `icmpPacketLoss => Integer`::
 ICMP packet loss for current interface. Will return null if no information.
 
+`ifAlias => String`::
+Interface alias
+
 `ifIndex => Integer`::
 Interface index.
 
@@ -66,6 +69,9 @@ Array with <<class-inetaddress>> objects, that represent all addresses that has 
 `isManuallyCreated => Boolean`::
 `TRUE` if this interface object was created manually by NetXMS administrator
 
+`isOSPF => Boolean`::
+`TRUE` if this interface is OSPF
+
 `isPhysicalPort => Boolean`::
 `TRUE` if this interface object represents physical port
 
@@ -83,6 +89,21 @@ Parent node object
 
 `operState => Integer`::
 Operational <<enum-interface-state,state>>.
+
+`ospfAreaId => String`::
+OSPF area ID
+
+`ospfState => Integer`::
+OSPF state
+
+`ospfStateText => String`::
+OSPF state as a text
+
+`ospfType => Integer`::
+OSPF type
+
+`ospfTypeText => String`::
+OSPF type as s text
 
 `peerInterface => <<class-interface>>`::
 Peer interface object if known, otherwise `null`.

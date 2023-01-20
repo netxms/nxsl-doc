@@ -1,0 +1,25 @@
+[.nxsl-class]
+[[class-maintenancejournalrecord]]
+=== MaintenanceJournalRecord
+
+One maintenance journal record entry
+
+==== Instance attributes
+
+`authorId => Integer`::
+Autor user ID
+
+`creationTime => Integer`::
+UNIX timestamp of creation
+
+`description => String`::
+Description
+
+`editorId => Integer`::
+Editor user ID
+
+`modificationTime => Integer`::
+UNIX timestamp of last modification
+
+`objectId => Integer`::
+ID of an object that was under maintenance

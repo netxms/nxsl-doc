@@ -21,6 +21,12 @@ Currently selected backup <<class-node,zone proxy>> (`null` if zoning is disable
 `backupZoneProxyId => Integer`::
 ID of currently selected backup zone proxy (`0` if zoning is disabled or backup proxy is not assigned)
 
+`category => String`::
+Object's category name
+
+`category => Integer`::
+Object's category ID
+
 `children => array`::
 List of child objects (inherited from <<class-netobj>>). Use <<func-classof>> to differentiate.
 
@@ -31,13 +37,16 @@ Postal address - city.
 Object comments.
 
 `country => String`::
-Postal address – country.
+Postal address - country.
 
 `creationTime => Integer64`::
 Object creation time as UINX timestamp
 
-`customAttributes`::
+`customAttributes => HashMap`::
 Hash map of object custom attributes.
+
+`district => String`::
+Postal address - district.
 
 `geolocation => GeoLocation`::
 Object <<class-geolocation,geographical location>>.
@@ -70,13 +79,16 @@ Object name displayed on map.
 List of direct parents for this object (inherited from <<class-netobj>>, most likely either <<class-container>> or <<class-cluster>>).
 
 `postcode => String`::
-Postal address – postal code.
+Postal address - postal code.
 
 `primaryZoneProxy => Node`::
 currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabled or primary proxy is not assigned)
 
 `primaryZoneProxyId => Integer`::
 ID of currently selected primary zone proxy (`0` if zoning is disabled or primary proxy is not assigned)
+
+`region => String`::
+Postal address - region.
 
 `responsibleUsers => Array`::
 Array with user objects that are added as responsible users for this object. Objects are <<class-user>> or <<class-usergroup>>
@@ -88,7 +100,7 @@ Current object state. One of: <<const-node-state>>, <<const-cluster-state>>, <<c
 Current <<const-object-status,object status>>.
 
 `streetAddress => String`::
-Postal address – street.
+Postal address - street.
 
 `type => Integer`::
 <<enum-object-type,Object type>>.
@@ -245,6 +257,19 @@ Disable maintenance mode for the object.
 `manage() => void`::
 Sets object to managed state. Has no affect if object already managed.
 
+`readMaintenanceJournal(startTime, endTime) => Array`::
+Read maintenance entries
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|startTime|Integer|Period start
+|endTime|Integer|Period end
+|===
+
+.Return
+Array with <<class-maintenancejournalrecord>> objects
+
 `rename(name) => void`::
 Rename object.
 
@@ -369,6 +394,15 @@ Unbind current object from the provided object.
 
 `unmanage() => void`::
 Set object into unmanaged state. Has no effect if object is already in unmanaged state.
+
+`writeMaintenanceJournal(description) => void`::
+Add entry to maintenance journal
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|description|String|Message to be added
+|===
 
 ==== Constants
 

@@ -193,16 +193,19 @@ TRUE` if node is remotely managed node
 `isSNMP => Boolean`::
 `TRUE` if SNMP agent detected on node
 
+`isSSH => Boolean`::
+`TRUE` if SSH is connection available
+
 `isSONMP => Boolean`::
 `TRUE` if node supports SONMP/NDP (Synoptics/Nortel Discovery Protocol)
 
-`isSTP  => Boolean`::
+`isSTP => Boolean`::
 `TRUE` if node supports STP (Spanning Tree Protocol)
 
 `isUserAgentInstalled => Boolean`::
 `TRUE` if user agent is installed.
 
-`isVirtual  => Boolean`::
+`isVirtual => Boolean`::
 `TRUE` if node is virtual
 
 `isVRRP => Boolean`::
@@ -379,15 +382,6 @@ Enable or disable usage of NetXMS agent for all polls.
 |flag|Boolean|If agent usage should be enabled.
 |===
 
-`enableConfigurationPolling(flag) => void`::
-Enable or disable configuration polling for a node
-
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|flag|Boolean|If configuration polling should be enabled.
-|===
-
 `enableDiscoveryPolling(flag) => void`::
 Enable or disable discovery polling.
 
@@ -442,13 +436,13 @@ Enable or disable usage of SNMP for all polls.
 |flag|Boolean|If SNMP communication should be enabled.
 |===
 
-`enableStatusPolling(flag) => void`::
-Enable or disable status polling for a node.
+`enableSsh(flag) => void`::
+Enable or disable usage of SSH 
 
 .Parameters
-[cols="1,1,3a" grid="none", frame="none"]
+[cols="1,1a,3a" grid="none", frame="none"]
 |===
-|flag|Boolean|If status polls should be enabled.
+|flag|Boolean|If SSH communication should be enabled.
 |===
 
 `enableTopologyPolling(flag) => void`::

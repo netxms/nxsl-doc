@@ -21,6 +21,9 @@ Event code of originating event.
 `eventId => Number`::
 ID of originating event.
 
+`eventNAme => String`::
+Name of originating event.
+
 `eventTagList => Number`::
 List of event tags as a coma separated string
 
@@ -60,8 +63,14 @@ Repeat count.
 `resolvedBy => Number`::
 ID of user who resolved this alarm.
 
+`rcaScriptName => String`::
+Name of root cause analysis script
+
 `ruleGuid => String`::
 Guid of the rule that generated the event.
+
+`ruleDescription => String`::
+Description of the rule that generated the event.
 
 `severity => Number`::
 Current alarm severity.

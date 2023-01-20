@@ -6,7 +6,7 @@ Represents SNMP Transport functionality. Objects of this class are typically obt
 
 ==== Instance attributes
 
-`snmpVersion`::
+`snmpVersion => String`::
 SNMP version used by the transport. Can be "1", "2c" or "3"
 
 ==== Instance methods

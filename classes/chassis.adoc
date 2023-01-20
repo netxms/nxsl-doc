@@ -12,7 +12,7 @@ Chassis controller node
 `controllerId => Integer`::
 Chassis controller's node id
 
-`flags`::
+`flags => Integer`::
 <<chassis-flags,Bit flags>> 
 
 `rack => <<class-netobj>>`::
