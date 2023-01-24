@@ -20,6 +20,7 @@ Get the object value from specific node with SNMP GET request. The node and all 
 |oid|String|SNMP object id.
 |===
 
+
 `getValue(oid) => String`::
 Get the object value from specific node with SNMP GET request. The node and all SNMP communication details defined by SNMP transport. This function is similar to SNMPGet but returns string instead of an SNMPVarBind object. Will return null on failure.
 
@@ -28,6 +29,20 @@ Get the object value from specific node with SNMP GET request. The node and all 
 |===
 |oid|String|SNMP object id.
 |===
+
+
+`getValue(array) => String`::
+Get object values from specific node with SNMP GET request. Request will contain all values that are provided in array. The node and all SNMP communication details defined by SNMP transport.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|array|Array|Array with SNMP object ids to get
+|===
+
+.Return
+Array with resulting strings for each array
+
 
 `set(oid, value, dataType) => Boolean`::
 Assign a specific value to the given SNMP object for the node. The node and all SNMP communication details defined by SNMP transport. Will return TRUE on success, FALSE in case of failure.
@@ -39,6 +54,7 @@ Assign a specific value to the given SNMP object for the node. The node and all 
 |value|String|Value to assign to oid.
 |dataType|String|<<snmp-data-types,SNMP data type>> (optional).
 |===
+
 
 `walk(oid) => Array`::
 Get an array of the <<class-snmpvarbind>> from specific node with SNMP WALK request. The node and all SNMP communication details defined by SNMP transport. Will return null on failure.

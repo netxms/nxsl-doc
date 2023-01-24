@@ -1,0 +1,20 @@
+[.nxsl-function]
+[[func-getcurrenttimems]]
+== GetConfigurationVariable()
+
+[source,c]
+----
+GetConfigurationVariable() => Integer64
+----
+
+Get current time in milliseconds
+
+.Return
+Current time in milliseconds
+
+.Example
+[.source]
+....
+>>> GetConfigurationVariable("NumberOfStatusPollers")
+1674586722493
+....

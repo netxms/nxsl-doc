@@ -21,7 +21,7 @@ Event code of originating event.
 `eventId => Number`::
 ID of originating event.
 
-`eventNAme => String`::
+`eventName => String`::
 Name of originating event.
 
 `eventTagList => Number`::

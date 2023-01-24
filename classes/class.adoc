@@ -1,0 +1,19 @@
+[.nxsl-class]
+[[class-class]]
+=== Class
+
+Class represent classes and methodes in NXSL script
+
+==== Instance attributes
+
+`attributes => Array`::
+String aray with all attribute names
+
+`hierarchy => Array`::
+String aray with class inheritance hirarchy 
+
+`methods => Array`::
+String aray with all methode names
+
+`name => Integer`::
+Name of the class

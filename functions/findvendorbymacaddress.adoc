@@ -1,0 +1,27 @@
+[.nxsl-function]
+[[func-findvendorbymacaddress]]
+== FindVendorByMACAddress()
+
+[source,c]
+----
+FindVendorByMACAddress(text) => String
+----
+
+Find NIC vendor information by mac address
+
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|text|String|MAC address
+|===
+
+.Return
+
+NIC vendor name or null
+
+.Example
+[.source]
+....
+>>> FindVendorByMACAddress("00:00:5e:00:53:af")
+ICANN, IANA Department
+....

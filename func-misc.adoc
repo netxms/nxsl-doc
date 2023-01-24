@@ -21,6 +21,8 @@ include::functions/eventnamefromcode.adoc[]
 
 include::functions/formatmetricprefix.adoc[]
 
+include::functions/findvendorbymacaddress.adoc[]
+
 include::functions/getconfigurationvariable.adoc[]
 include::functions/gethostbyaddr.adoc[]
 include::functions/gethostbyname.adoc[]
@@ -38,6 +40,9 @@ include::functions/jsonparse.adoc[]
 
 include::functions/map.adoc[]
 include::functions/maplist.adoc[]
+
+include::functions/print.adoc[]
+include::functions/println.adoc[]
 
 include::functions/random.adoc[]
 

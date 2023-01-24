@@ -24,7 +24,7 @@ ID of currently selected backup zone proxy (`0` if zoning is disabled or backup 
 `category => String`::
 Object's category name
 
-`category => Integer`::
+`categoryId => Integer`::
 Object's category ID
 
 `children => array`::

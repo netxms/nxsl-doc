@@ -151,6 +151,9 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `isEtherNetIP => Boolean`::
 `TRUE` if node supports EtherNet/IP (Industrial Protocol)
 
+`isExternalGateway => Boolean`::
+`TRUE` if node is remotely managed node
+
 `isInMaintenanceMode => Boolean`::
 `TRUE` if node is in maintenance mode
 
@@ -179,10 +182,7 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `TRUE` if node is a printer
 
 `isProfiNet => Boolean`::
-TRUE` if node supports PROFINET (Process Field Network)
-
-`isRemotelyManaged => Boolean`::
-TRUE` if node is remotely managed node
+`TRUE` if node supports PROFINET (Process Field Network)
 
 `isRouter => Boolean`::
 `TRUE` if node is a router (has IP forwarding enabled)
@@ -220,6 +220,15 @@ Node sub type
 [[class-node-types,Node::types]]
 `nodeType => Integer`::
 Node type <<node-types>>
+
+`ospfAreas => <<class-ospfarea>>`::
+Returns <<class-ospfarea>> class object
+
+`ospfNeighbors => Array`::
+Array with <<class-ospfarea>> class objects
+
+`ospfRouterId => String`::
+OSPF router ID
 
 `platformName => String`::
 Platform name reported by NetXMS agent

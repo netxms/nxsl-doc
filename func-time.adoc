@@ -1,5 +1,6 @@
 = Time related functions
 
+include::functions/getcurrenttimems.adoc[]
 include::functions/gmtime.adoc[]
 include::functions/localtime.adoc[]
 include::functions/mktime.adoc[]

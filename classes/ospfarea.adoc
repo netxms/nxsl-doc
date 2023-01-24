@@ -1,0 +1,19 @@
+[.nxsl-class]
+[[class-ospfarea]]
+=== OSPFArea
+
+OSPF area 
+
+==== Instance attributes
+
+`areaBorderRouterCount => Integer`::
+Area border router count
+
+`asBorderRouterCount => Integer`::
+Autonomous system border router count
+
+`id => String`::
+Area ID
+
+`lsaCount => Integer`::
+Link state advertisement count

@@ -48,11 +48,17 @@ Tunnel id
 `isUserAgentInstalled => Boolean`::
 `TRUE` if user agent is installed on the agent that opened the tunnel
 
+`macAddresses => Array`::
+Array with MAC addresses as Strings
+
 `platformName => String`::
 Platform name of the node that opened the tunnel
 
 `startTime => Number`::
 UNIX timestamp with tunnel start time
+
+`serialNumber => String`::
+Serial number
 
 `systemInfo => String`::
 System information of the node that opened the tunnel

@@ -1,0 +1,34 @@
+[.nxsl-class]
+[[class-ospfneighbor]]
+=== OSPFNeighbor
+
+OSPF neighbor
+
+==== Instance attributes
+
+`areaId => String`::
+Area ID
+
+`ifIndex => String`::
+Interface index
+
+`ipAddress => String`::
+IP address
+
+`isVirtual => Boolean`::
+`TRUE` if it is virtual
+
+`node => <<class-node>>`::
+Object of <<class-node>> class
+
+`nodeId => Integer`::
+Node ID
+
+`routerId => String`::
+OSPF router ID
+
+`state => Integer`::
+State
+
+`stateText => String`::
+State text
