@@ -31,7 +31,7 @@ Get the object value from specific node with SNMP GET request. The node and all 
 |===
 
 
-`getValue(array) => String`::
+`getValues(array) => String`::
 Get object values from specific node with SNMP GET request. Request will contain all values that are provided in array. The node and all SNMP communication details defined by SNMP transport.
 
 .Parameters
