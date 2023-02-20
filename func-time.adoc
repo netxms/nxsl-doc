@@ -1,4 +1,4 @@
-= Time related functions
+= Time
 
 include::functions/getcurrenttimems.adoc[]
 include::functions/gmtime.adoc[]

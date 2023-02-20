@@ -1,4 +1,4 @@
-= Alarm functions
+= Alarms
 
 include::functions/findalarmbyid.adoc[]
 include::functions/findalarmbykey.adoc[]

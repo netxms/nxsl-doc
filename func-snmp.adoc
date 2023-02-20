@@ -1,5 +1,5 @@
 [[func-group-snmp]]
-= SNMP functions
+= SNMP
 
 include::functions/createsnmptransport.adoc[]
 include::functions/snmpget.adoc[]

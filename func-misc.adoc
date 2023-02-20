@@ -1,4 +1,4 @@
-= Miscelanious functions
+= Miscelanious
 
 include::functions/_exit.adoc[]
 

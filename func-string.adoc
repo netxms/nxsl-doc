@@ -1,4 +1,4 @@
-= String functions
+= Strings
 
 include::functions/arraytostring.adoc[]
 include::functions/chr.adoc[]

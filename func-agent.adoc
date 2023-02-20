@@ -1,4 +1,4 @@
-= Agent related functions
+= Agent
 
 include::functions/agentexecutecommand.adoc[]
 include::functions/agentexecutecommandwithoutput.adoc[]

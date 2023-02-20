@@ -1,4 +1,4 @@
-= Object functions
+= Objects
 
 include::functions/bindobject.adoc[]
 include::functions/createcontainer.adoc[]

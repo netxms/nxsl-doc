@@ -1,4 +1,4 @@
-= Data Collection
+= Data collection
 
 include::functions/createdci.adoc[]
 include::functions/findalldcis.adoc[]

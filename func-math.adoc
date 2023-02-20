@@ -1,4 +1,4 @@
-= Math functions
+= Math
 
 include::functions/abs.adoc[]
 include::functions/acos.adoc[]
