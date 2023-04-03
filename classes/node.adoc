@@ -24,6 +24,9 @@ Object that is set as agent proxy in object properties or NULL.
 `agentVersion => String`::
 NetXMS agent version as `string`.
 
+`asset => AssetData`::
+Reference to asset data (<<class-assetdata>>). TBD.
+
 `bootTime => Integer64`::
 Number of seconds since node start or `0` if unknown.
 
