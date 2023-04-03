@@ -15,6 +15,9 @@ List of active <<class-alarm, Alarms>> for this object.
 `alias => String`::
 Object alias. For interfaces it is automatically collected on configuration poll (e.g. from SNMP ifAlias).
 
+`asset => AssetData`::
+Reference to asset data (<<class-assetdata>>). TBD.
+
 `backupZoneProxy => Node`::
 Currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
 
