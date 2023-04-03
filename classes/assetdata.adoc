@@ -1,0 +1,13 @@
+[.nxsl-class]
+[[class-assetdata]]
+=== AssetData
+
+TBD
+
+==== Instance attributes
+
+TBD
+
+==== Constants
+
+TBD
