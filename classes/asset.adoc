@@ -1,6 +1,6 @@
 [.nxsl-class]
-[[class-assetdata]]
-=== AssetData
+[[class-asset]]
+=== Asset
 
 TBD
 
