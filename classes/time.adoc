@@ -2,7 +2,7 @@
 [[class-time]]
 === TIME
 
-Class containing a calendar date and time broken down into its components. For convenience, all attributes has aliases to match http://www.cplusplus.com/reference/clibrary/ctime/tm/[struct tm] provided in libc.
+Class containing a calendar date and time broken down into its components. For convenience, all attributes has aliases to match https://cplusplus.com/reference/ctime/tm/[struct tm] provided in libc.
 
 ==== Instance attributes
 
