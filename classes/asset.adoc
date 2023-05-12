@@ -2,12 +2,16 @@
 [[class-asset]]
 === Asset
 
-TBD
+Object represent asset, extends <<class-netobj>>
 
 ==== Instance attributes
 
-TBD
+`linkedObject => <<class-netobj>>`::
+Linked object
 
-==== Constants
+`linkedObjectId => Integer`::
+ID of the linked object
 
-TBD
+`properties => <<class-assetproperties>>`::
+Reference to <<class-assetproperties,asset properties class>>.
+

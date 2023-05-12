@@ -547,3 +547,46 @@ $node->setGeoLocation(geoLoc);
 
 return 0;
 ----
+
+=== Object query to list asset values
+
+Saved object query script to list all nodes linked to asset and 
+list values for serial, vendor, model asset properties.
+
+[source,c]
+----
+with
+	objName (order = "asc", name = "Object name") = {
+    	return $node->name;
+	},
+
+	serial (name = "Serial") = {
+		return $node->assetProperties->serial;
+	},
+
+	vendorVar (name = "Vendor") = {
+		return $node->assetProperties->vendor;
+	},
+
+	model (name = "Model") = {
+		return $node->assetProperties->model;
+	}
+ 
+(type == NODE) && $node->asset != null //show all nodes linked to asset
+----
+
+Exactly the same script, but without "with" syntax:
+
+[source,c]
+----
+if (($object->type == NODE) && $node->asset != null)
+{
+    global objName (order = "asc", name = "Object name") = $node->name;
+    global serial (name = "Serial") = $node->assetProperties->serial;
+    global vendorVar (name = "Vendor") = $node->assetProperties->vendor;
+    global model (name = "Model") = $node->assetProperties->model;
+}
+return ($object->type == NODE) && $node->asset != null; //show all nodes linked to asset
+----
+
+

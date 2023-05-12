@@ -1,0 +1,11 @@
+[.nxsl-class]
+[[class-assetproperties]]
+=== Asset Properties
+
+Object contains all asset properties accessible by property name. So value of asset property with name ipAddr can be accesed like: 
+
+[source,c]
+----
+    $node->assetProperties->ipAddr
+----
+
