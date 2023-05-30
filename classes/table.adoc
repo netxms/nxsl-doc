@@ -74,7 +74,7 @@ Delete row
 |rowId|Integer|Row index
 |===
 
-`findRowByInstance(instance) => <<class-tablerow>>`::
+`findRowByInstance(instance, instance2, ...) => <<class-tablerow>>`::
 
 Finds row by instance
 
@@ -82,12 +82,13 @@ Finds row by instance
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |instance|String|Instance string
+|instance2|String|Optional. If instance is composed of several columns, these can be supplied as additional parameters. 
 |===
 
 .Return 
 <<class-tablerow, Table row>> that corresponds to provided instance
 
-`findRowIndexByInstance(instance) => Integer`::
+`findRowIndexByInstance(instance, instance2, ...) => Integer`::
 
 Finds row index by instance
 
@@ -95,6 +96,7 @@ Finds row index by instance
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |instance|String|Instance string
+|instance2|String|Optional. If instance is composed of several columns, these can be supplied as additional parameters. 
 |===
 
 .Return 
