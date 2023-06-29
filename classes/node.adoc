@@ -348,7 +348,7 @@ println(result->httpResponseCode); // "0"
 println(result->document); // ""
 
 //Successful post request
-result = $node2->callWebService("Web service name", "POST", "application/json",  "{ \"id\":10 }", "additional/ult/path");
+result = $node2->callWebService("Web service name", "POST", "{ \"id\":10 }", "application/json", "additional/ult/path");
 println(result->success); // "true"
 println(result->errorMessage); // ""
 println(result->agentErrorCode); // "0"
