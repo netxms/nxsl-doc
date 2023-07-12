@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetDCIValues(node, id, startTime, endTime) => Array
+GetDCIValues(node, id, startTime, endTime, rawValues) => Array
 ----
 
 Get all values for period of DCI with given ID on given node.
@@ -15,7 +15,8 @@ Get all values for period of DCI with given ID on given node.
 |node|<<class-node>>|node object instance 
 |id|Integer|DCI ID
 |startTime|Integer|Start of the period (as UNIX timestamp).
-|endTime|Integer|End of the period (as UNIX timestamp).
+|endTime|Integer|End of the period (as UNIX timestamp). Optional, current time will be used if this parameter is not specified
+|rawValues|Boolean|False - return transformed values. True - return RAW values. Optional, False by default. This parameter was added in version 4.4.1. 
 |===
 
 .Return
