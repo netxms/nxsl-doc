@@ -234,6 +234,11 @@ Returns value of the custom attribute with the provided name.
 |name|String|Name of the attribute to get value from.
 |===
 
+Alternatively, attributes can be accessed as instance attribues (with `->`,
+attribute should exist) or by using `attribute@object` notion (which will return
+`null` instead of runtime error if attribue is missing).
+
+
 `isChild(object) => Boolean`::
 If provided object is child of this object
 
