@@ -2,10 +2,7 @@
 [[func-arraytostring]]
 == ArrayToString()
 
-[source,c]
-----
-ArrayToString(array,separator) => String
-----
+`ArrayToString(array,separator) => String`::
 
 Convert array to string
 

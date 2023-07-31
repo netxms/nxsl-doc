@@ -2,10 +2,7 @@
 [[func-addrinrange]]
 == AddrInRange()
 
-[source,c]
-----
-AddrInRange(address, start, end) => Boolean
-----
+`AddrInRange(address, start, end) => Boolean`::
 
 Check if IP address is within given range. IPv4 and IPv6 are supported. 
 

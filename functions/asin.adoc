@@ -2,10 +2,7 @@
 [[func-asin]]
 == asin()
 
-[source,c]
-----
-asin(number) => Number
-----
+`asin(number) => Number`::
 
 Calculates arc sine x
 

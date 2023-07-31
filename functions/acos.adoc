@@ -2,10 +2,7 @@
 [[func-acos]]
 == acos()
 
-[source,c]
-----
-acos(number) => Number
-----
+`acos(number) => Number`::
 
 Calculates arc cosine x
 

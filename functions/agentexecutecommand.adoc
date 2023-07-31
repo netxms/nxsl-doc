@@ -2,10 +2,7 @@
 [[func-agentexecutecommand]]
 == AgentExecuteCommand()
 
-[source,c]
-----
-AgentExecuteCommand(node, commandName, …) => Boolean
-----
+`AgentExecuteCommand(node, commandName, …) => Boolean`::
 
 Execute agent command (action) on given node.
 Optional arguments starting from 3^rd^ are passed as command arguments to the agent.

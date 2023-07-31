@@ -10,10 +10,7 @@ Please use method readAgentParameter of class <<class-node>>.
 ====
 ****
 
-[source,c]
-----
-AgentReadParameter(node, name) => String
-----
+`AgentReadParameter(node, name) => String`::
 
 Request metric directly from agent on given node.
 

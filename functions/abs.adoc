@@ -2,10 +2,7 @@
 [[func-abs]]
 == abs()
 
-[source,c]
-----
-abs(number) => Number
-----
+`abs(number) => Number`::
 
 Returns the absolute value of the number.
 

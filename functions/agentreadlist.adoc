@@ -10,10 +10,7 @@ Please use method readAgentList of class <<class-node>>.
 ====
 ****
 
-[source,c]
-----
-AgentReadList(node, name) => Array
-----
+`AgentReadList(node, name) => Array`::
 
 Request list metric directly from agent on given node.
 

@@ -2,10 +2,7 @@
 [[func-agentexecutecommandwithoutput]]
 == AgentExecuteCommandWithOutput()
 
-[source,c]
-----
-AgentExecuteCommandWithOutput(node, commandName, …) => String
-----
+`AgentExecuteCommandWithOutput(node, commandName, …) => String`::
 
 Execute agent command (action) on given node and collect standard output of the application defined by the command.
 Optional arguments starting from 3^rd^ are passed as command arguments to the agent.
