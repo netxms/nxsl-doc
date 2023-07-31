@@ -99,7 +99,7 @@ list name and add script to instance discovery filter script section:
 name=$1;
 if (name ~= "eth|bond")
 {
-    return Instance(displayName: name, name: name);
+    return %(name);
 }
 return false;
 ----
