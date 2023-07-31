@@ -13,8 +13,8 @@ Convert numeric value to human-readable form with metric prefix.
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |number|Number|Number to format.
-|binary|Boolean|Oprional argument. Set to true to use binary multipliers (Ki, Mi, etc.). Default value is false.
-|precision|Unsigned Integer|Oprional argument with rounding precision. Acceptable values are from 0 to 20. Default value is 2.
+|binary|Boolean|Optional argument. Set to true to use binary multipliers (Ki, Mi, etc.). Default value is false.
+|precision|Unsigned Integer|Optional argument with rounding precision. Acceptable values are from 0 to 20. Default value is 2.
 |===
 
 .Return
