@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-localtime() => void
+localtime(time) => void
 ----
 
 Converts time in UNIX format (number of seconds since epoch) to calendar date and time broken down into its components, using server time zone. Function uses either time given in time argument or current time if time is omitted.
