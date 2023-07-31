@@ -1,4 +1,0 @@
-= Situations
-
-include::functions/findsituation.adoc[]
-include::functions/getsituationattribute.adoc[]
