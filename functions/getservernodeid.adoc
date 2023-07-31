@@ -2,15 +2,12 @@
 [[func-getservernodeid]]
 == GetServerNodeId()
 
-[source,c]
-----
-GetServerNodeId() => Node
-----
+`GetServerNodeId() => Integer`::
 
 Get ID of management server's node.
 
 .Return
-ID of node instance.
+Object ID of the current server node.
 
 .Example
 [.source]
