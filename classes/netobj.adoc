@@ -147,6 +147,36 @@ Bind current object to `parentObject` as a child.
 `clearGeoLocation() => void`::
 Clears GeoLocation data from the node
 
+[[class-netobj-createContainer,NetObj::createContainer()]]
+`createContainer(name) => void`::
+
+[NOTE]
+This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+
+Create container under current object
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New container's name
+|===
+
+[[class-netobj-createNode,NetObj::createNode()]]
+`createNode(name, primaryHostName, zoneUIN) => void`::
+
+[NOTE]
+This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+
+Create node under current object
+
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|name|String|Name for new node
+|primaryHostName|String|Primary host name for new node (optional)
+|zoneUIN|Integer|zone UIN (optional)
+|===
+
 [[class-netobj-delete,NetObj::delete()]]
 `delete() => void`::
 Deletes current object.

@@ -2,7 +2,18 @@
 [[func-arraytostring]]
 == ArrayToString()
 
-`ArrayToString(array,separator) => String`::
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 3.0.*
+Please use <<class-array-join>>.
+====
+****
+
+[source,c]
+----
+ArrayToString(array,separator) => String
+----
 
 Convert array to string
 

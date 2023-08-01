@@ -1,6 +1,5 @@
 = Strings
 
-include::functions/arraytostring.adoc[]
 include::functions/chr.adoc[]
 include::functions/d2x.adoc[]
 include::functions/format.adoc[]
