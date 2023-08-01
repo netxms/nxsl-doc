@@ -4,6 +4,15 @@
 
 NOTE: This function is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
+
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-netobj-createNode>> instead.
+====
+****
+
 [source,c]
 ----
 CreateNode(parent, name, primaryHostName, zoneUIN) => Node
