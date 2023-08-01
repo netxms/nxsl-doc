@@ -2,6 +2,13 @@
 [[func-eventcodefromname]]
 == EventCodeFromName()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.* 
+====
+****
+
 [source,c]
 ----
 EventCodeFromName(name) => Integer

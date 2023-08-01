@@ -2,9 +2,6 @@
 
 include::functions/_exit.adoc[]
 
-include::functions/addrinrange.adoc[]
-include::functions/addrinsubnet.adoc[]
-
 include::functions/assert.adoc[]
 
 include::functions/classof.adoc[]
@@ -15,9 +12,6 @@ include::functions/createuseragentnotification.adoc[]
 include::functions/currencyalphacode.adoc[]
 include::functions/currencyexponent.adoc[]
 include::functions/currencyname.adoc[]
-include::functions/driverreadparameter.adoc[]
-include::functions/eventcodefromname.adoc[]
-include::functions/eventnamefromcode.adoc[]
 
 include::functions/formatmetricprefix.adoc[]
 
@@ -33,8 +27,6 @@ include::functions/getsyslogrulecheckcount.adoc[]
 include::functions/getsyslogrulematchcount.adoc[]
 
 include::functions/getthreadpoolnames.adoc[]
-
-include::functions/instance.adoc[]
 
 include::functions/jsonparse.adoc[]
 

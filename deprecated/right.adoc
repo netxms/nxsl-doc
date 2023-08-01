@@ -2,6 +2,14 @@
 [[func-right]]
 == right()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-right>>.
+====
+****
+
 [source,c]
 ----
 right(string, length, pad) => String

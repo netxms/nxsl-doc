@@ -2,6 +2,14 @@
 [[func-instance]]
 == Instance()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.* 
+Please return array wit instance values.
+====
+****
+
 [source,c]
 ----
 Instance(name, displayName, object) => Array

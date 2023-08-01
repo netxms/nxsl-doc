@@ -2,6 +2,14 @@
 [[func-rtrim]]
 == rtrim()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-trimRight>>.
+====
+****
+
 [source,c]
 ----
 rtrim(string) => String

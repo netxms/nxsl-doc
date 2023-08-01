@@ -2,6 +2,14 @@
 [[func-upper]]
 == upper()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 3.0.* 
+Please function <<class-string-toUpperCase>>. 
+====
+****
+
 [source,c]
 ----
 upper(string) => String

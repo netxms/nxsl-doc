@@ -2,7 +2,7 @@
 [[class-snmptransport]]
 === SNMPTransport
 
-Represents SNMP Transport functionality. Objects of this class are typically obtained from nodes that support SNMP. Objects of this class used to access <<func-group-snmp,SNMP functions>> of nodes.
+Represents SNMP Transport functionality. Objects of this class are typically obtained from nodes that support SNMP. Objects of this class used to access SNMP data form node.
 
 ==== Instance attributes
 

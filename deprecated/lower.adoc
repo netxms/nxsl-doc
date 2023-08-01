@@ -2,6 +2,14 @@
 [[func-lower]]
 == lower()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-toLowercase>>.
+====
+****
+
 [source,c]
 ----
 lower(string) => String

@@ -2,6 +2,14 @@
 [[func-rindex]]
 == rindex()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-lastIndexOf>>.
+====
+****
+
 [source,c]
 ----
 rindex(string, substring, position) => Integer

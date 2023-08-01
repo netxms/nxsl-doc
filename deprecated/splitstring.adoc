@@ -2,6 +2,14 @@
 [[func-splitstring]]
 == SplitString()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-split>>.
+====
+****
+
 [source,c]
 ----
 SplitString(string, separator) => Array

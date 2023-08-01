@@ -60,3 +60,12 @@ include::grammar.adoc[]
 == Examples
 
 include::examples.adoc[]
+
+
+== Deprecated functions
+
+This chapter contails deprecated functins that should not be used. 
+
+include::deprecated.adoc[leveloffset=+1]
+
+<<<

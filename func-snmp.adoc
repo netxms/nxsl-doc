@@ -1,8 +1,0 @@
-[[func-group-snmp]]
-= SNMP
-
-include::functions/createsnmptransport.adoc[]
-include::functions/snmpget.adoc[]
-include::functions/snmpgetvalue.adoc[]
-include::functions/snmpset.adoc[]
-include::functions/snmpwalk.adoc[]

@@ -1,7 +1,5 @@
 = Events
 
-include::functions/geteventparameter.adoc[]
-include::functions/seteventparameter.adoc[]
 include::functions/loadevent.adoc[]
 include::functions/postevent.adoc[]
 include::functions/posteventex.adoc[]

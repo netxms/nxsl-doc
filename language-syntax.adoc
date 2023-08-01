@@ -298,6 +298,7 @@ The other was is shown in this example:
 println( my_math_library::add(1, 2) );
 ----
 
+[[class-string]]
 === Strings
 
 Strings are not objects, it's a separate variable type. However, strings have
@@ -316,6 +317,7 @@ println(s->isEmpty); // prints "true"
 ....
 
 
+[[class-string-length,String::length]]
 `length => Integer`::
 Returns number of characters in the string.
 
@@ -392,6 +394,7 @@ println("abc"->equalsIgnoreCase("ABC")); // prints "true"
 ....
 
 
+[[class-string-indexOf,String::indexOf()]]
 `indexOf(string) => Integer`::
 Returns index of first occurence of argument string in this string or `-1`
 if the argument is not a substring of the string.
@@ -405,6 +408,7 @@ println("ABC-DEF-GHI"->indexOf("JKL")); // prints "-1"
 ....
 
 
+[[class-string-lastIndexOf,String::lastIndexOf()]]
 `lastIndexOf(string) => Integer`::
 Returns index of last occurence of argument string in this string or `-1`
 if the argument is not a substring of the string. 
@@ -418,6 +422,7 @@ println("ABC-DEF-GHI"->lastIndexOf("JKL")); // prints "-1"
 ....
 
 
+[[class-string-left,String::left()]]
 `left(numberOfCharacters) => String`::
 Returns left `numberOfCharacters` of this string. 
 
@@ -428,6 +433,7 @@ println("ABCDEFGHI"->left(2)); // prints "AB"
 ....
 
 
+[[class-string-replace,String::replace()]]
 `replace(whatToReplace, replaceBy) => String`::
 Returns string where all occurencies of `whatToReplace` are replaced with `replaceBy`.
 
@@ -438,6 +444,7 @@ println("A B C A D K L"->replace("A", "<A>")); // prints "<A> B C <A> D K L"
 ....
 
 
+[[class-string-right,String::right()]]
 `right(numberOfCharacters) => String`::
 Returns right `numberOfCharacters` of this string.
 
@@ -448,6 +455,7 @@ println("ABCDEFGHI"->right(2)); // prints "HI"
 ....
 
 
+[[class-string-split,String::split()]]
 `split(separator) => Array`::
 Split string into array of strings at given separator.
 
@@ -469,6 +477,7 @@ println("Just a sentence"->startsWith("Just a")); // prints "true"
 ....
 
 
+[[class-string-substring,String::substring()]]
 `substring(position, numberOfCharacters) => String`::
 Returns substring of this string starting from `position` and containing `numberOfCharacters`.
 
@@ -481,6 +490,7 @@ println("ABCDEFGHIJK"->substring(6,10)); // prints "GHIJK"
 ....
 
 
+[[class-string-toLowercase,String::toLowercase()]]
 `toLowercase() => String`::
 Converts this string to lowercase.
 
@@ -491,6 +501,7 @@ println("ABC def"->toLowerCase()); // prints "abc def"
 ....
 
 
+[[class-string-toUpperCase,String::toUpperCase()]]
 `toUpperCase() => String`::
 Converts this string to uppercase.
 
@@ -501,6 +512,7 @@ println("ABC def"->toUpperCase()); // prints "ABC DEF"
 ....
 
 
+[[class-string-trim,String::trim()]]
 `trim() => String`::
 Returns this string with whitespace from both sides removed.
 
@@ -511,6 +523,7 @@ println("|" . "  ABC  "->trim() . "|") // prints "|ABC|"
 ....
 
 
+[[class-string-trimLeft,String::trimLeft()]]
 `trimLeft() => String`::
 Returns this string with whitespace from left side removed.
 
@@ -521,6 +534,7 @@ println("|" . "  ABC  "->trimLeft() . "|") // prints "|ABC   |"
 ....
 
 
+[[class-string-trimRight,String::trimRight()]]
 `trimRight() => String`::
 Returns this string with whitespace from right side removed.
 

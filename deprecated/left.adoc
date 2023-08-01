@@ -2,6 +2,14 @@
 [[func-left]]
 == left()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-left>>.
+====
+****
+
 [source,c]
 ----
 left(string, length, pad) => String

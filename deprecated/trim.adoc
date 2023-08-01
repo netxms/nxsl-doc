@@ -2,6 +2,14 @@
 [[func-trim]]
 == trim()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-trim>>.
+====
+****
+
 [source,c]
 ----
 trim(string) => String

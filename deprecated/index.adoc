@@ -2,6 +2,14 @@
 [[func-index]]
 == index()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-indexOf>>.
+====
+****
+
 [source,c]
 ----
 index(string, substring, position) => Integer

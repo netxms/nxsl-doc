@@ -2,6 +2,14 @@
 [[func-replace]]
 == replace()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-replace>>.
+====
+****
+
 [source,c]
 ----
 replace(string, old, new) => String

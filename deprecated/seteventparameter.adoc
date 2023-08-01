@@ -2,6 +2,14 @@
 [[func-seteventparameter]]
 == SetEventParameter()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.* 
+Please use setNamedParameter method in <<class-event>>. 
+====
+****
+
 [source,c]
 ----
 SetEventParameter(event, parameterName, value) => void

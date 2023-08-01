@@ -2,6 +2,14 @@
 [[func-length]]
 == length()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-length>>.
+====
+****
+
 [source,c]
 ----
 length(string) => Integer

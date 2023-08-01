@@ -2,6 +2,14 @@
 [[func-geteventparameter]]
 == GetEventParameter()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use getParameter method in <<class-event>>. 
+====
+****
+
 [source,c]
 ----
 GetEventParameter(event, parameterName) => String

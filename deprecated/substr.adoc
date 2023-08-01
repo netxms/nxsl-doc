@@ -2,6 +2,14 @@
 [[func-substr]]
 == substr()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-string-substring>>.
+====
+****
+
 [source,c]
 ----
 substr(string, n, len) => void
