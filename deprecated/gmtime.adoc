@@ -2,6 +2,14 @@
 [[func-gmtime]]
 == gmtime()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.* 
+Please use <<class-datetime>> class.
+====
+****
+
 [source,c]
 ----
 gmtime(time) => TIME
