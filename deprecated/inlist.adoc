@@ -2,6 +2,14 @@
 [[func-inlist]]
 == inList()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.* 
+Please use <<class-string-split>> with in operator like: TOKEN in STRING->split(SAPARATOR)
+====
+****
+
 [source,c]
 ----
 inList(string, separator, token) => Boolean

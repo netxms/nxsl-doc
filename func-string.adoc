@@ -3,6 +3,5 @@
 include::functions/chr.adoc[]
 include::functions/d2x.adoc[]
 include::functions/format.adoc[]
-include::functions/inlist.adoc[]
 include::functions/ord.adoc[]
 include::functions/x2d.adoc[]
