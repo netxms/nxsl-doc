@@ -1,0 +1,95 @@
+[.nxsl-class]
+[[class-datetime]]
+=== DateTime
+
+Class containing a calendar date and time broken down into its components. For convenience, all attributes has aliases to match https://cplusplus.com/reference/ctime/tm/[struct tm] provided in libc.
+
+All class attributes are settable.
+
+==== Instance attributes
+
+`sec => Number`::
+`tm_sec => Number`::
+Seconds after the minute. Can be modified. 
+
+`min => Number`::
+`tm_min => Number`::
+Minutes after the hour. Can be modified. 
+
+`hour => Number`::
+`tm_hour => Number`::
+Hours since midnight. Can be modified. 
+
+`mday => Number`::
+`tm_mday => Number`::
+Day of the month. Can be modified. 
+
+`mon => Number`::
+`tm_mon => Number`::
+Months since January. Can be modified. 
+
+`year => Number`::
+`tm_year => Number`::
+Year. Can be modified. 
+
+`yday => Number`::
+`tm_yday => Number`::
+Days since January 1. Can be modified. 
+
+`wday => Number`::
+`tm_wday => Number`::
+Days since Sunday. Can be modified. 
+
+`isdst => Boolean`::
+`tm_isdst => Boolean`::
+Daylight Saving Time flag. Can be modified. 
+
+`timestamp => Integer`::
+UNIX time (number of seconds since epoch). 
+
+==== Instane methods
+
+`format(format) => void`::
+Formats a timestamp, and returns a string according to given formatting rules.
+
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|string|String|Formatting string - see this for available options http://www.cplusplus.com/reference/ctime/strftime/
+|===
+
+.Return
+Formatted time as a string.
+
+.Example
+[.source]
+....
+time = DataTime();
+println(time->format("%Y-%m-%d %H:%M")); //Will print: "2016-01-19 12:14"
+println(time->format("%Y-%m-%d %H:%M - timezone %Z - offset from UTC - %z")); //Will print: "2016-01-19 12:14 - timezone CET - offset from UTC - +0100"
+....
+
+==== Constructors
+
+`DateTime()`::
+Creates new DateTime object with current local time. 
+
+`DateTime(timestamp)`::
+Creates new DateTime with provided local time in UNIX time format.
+
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|timestamp|Integer|UNIX time (number of seconds since epoch).
+|===
+
+`DateTime(time, isUTC)`::
+Creates new DateTime object with provided time. Current time will be counted as UTC time if second parameter is true and as local time if second parameter is false.
+
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|timestamp|Integer|UNIX time (number of seconds since epoch).
+|isUTC|Boolean|If provided time is in UTC. 
+|===
+

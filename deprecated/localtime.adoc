@@ -2,6 +2,14 @@
 [[func-localtime]]
 == localtime()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.* 
+Please use <<class-datetime>> class.
+====
+****
+
 [source,c]
 ----
 localtime(time) => void
@@ -16,7 +24,7 @@ Converts time in UNIX format (number of seconds since epoch) to calendar date an
 |===
 
 .Return
-<<class-time>> object.
+<<class-datetime>> object.
 
 .Example
 [.source]
