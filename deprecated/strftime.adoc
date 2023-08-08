@@ -2,6 +2,14 @@
 [[func-strftime]]
 == strftime()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-datetime-format>>.
+====
+****
+
 [source,c]
 ----
 strftime(string, time) => String
