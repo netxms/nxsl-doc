@@ -490,8 +490,8 @@ println("ABCDEFGHIJK"->substring(6,10)); // prints "GHIJK"
 ....
 
 
-[[class-string-toLowercase,String::toLowercase()]]
-`toLowercase() => String`::
+[[class-string-toLowerCase,String::toLowerCase()]]
+`toLowerCase() => String`::
 Converts this string to lowercase.
 
 .Example
