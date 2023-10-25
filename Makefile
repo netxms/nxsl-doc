@@ -25,7 +25,7 @@ prepare:
 	bundle binstubs --all
 
 html:
-	bundle exec asciidoctor -a html $(OPTS) -b html5 -a docinfo=shared -o build/nxsl.html index.adoc
+	bundle exec asciidoctor -r ./lib/stats.rb -a html $(OPTS) -b html5 -a docinfo=shared -o build/nxsl.html index.adoc
 
 pdf:
 	#asciidoctor-pdf -a pdf-style=netxms-theme.yml -a pdf-fontsdir=fonts -o build/nxsl.pdf index.adoc
