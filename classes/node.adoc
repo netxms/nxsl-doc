@@ -356,7 +356,7 @@ println(result->httpResponseCode); // "200"
 println(result->document); // ""
 ....
 
-`createSNMPTransport(port, context, community) => <<class-snmptransport>>`::
+`createSNMPTransport(port, community, context, failIfUnreachable) => <<class-snmptransport>>`::
 Create SNMP transport object of class <<class-snmptransport>> with communication settings defined on the node. It is possible to specify a community string but only community strings listed in Network Credentials will be accepted.
 Creation of SNMP transport is a preparatory operation enabling subsequent sending of SNMP requests to node.  
 However, creation of SNMP transport does not guarantee that the node is accessible. 
@@ -365,13 +365,14 @@ However, creation of SNMP transport does not guarantee that the node is accessib
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |port|Integer|Optional parameter with port.
-|context|String|Optional parameter with context.
 |community|String|Optional parameter with community string.
+|context|String|Optional parameter with context.
+|failIfUnreachable|String|Optional parameter, is provided and is true, check that SNMP is reachable on the node before creating SNMP transport. *This parameter was added in version 4.4.1.*
 |===
 
 .Return
 
-Instance of <<class-snmptransport>> or `null` if failed.
+Instance of <<class-snmptransport>> or `null` if failed or node was not reacheable when failIfUnreachable was set to true.
 
 `enable8021xStatusPolling(flag) => void`::
 Enable or disable 802.1x port state checking during status polls.
