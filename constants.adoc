@@ -88,7 +88,7 @@
 |DCI::CALCULATE_NODE_STATUS|0x00400|Used in node status calculation
 |DCI::SHOW_IN_OBJECT_OVERVIEW|0x00800|Show in object overview
 |DCI::AGGREGATE_WITH_ERRORS|0x04000|Aggregate with errors
-|DCI::HIDE_ON_LAST_VALUES_PAGE|0x08000|Hoide on last values page
+|DCI::HIDE_ON_LAST_VALUES_PAGE|0x08000|Hide on last values page
 |DCI::STORE_CHANGES_ONLY|0x40000|Stor changed values only
 |===
 
