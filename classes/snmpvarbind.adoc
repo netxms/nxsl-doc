@@ -9,9 +9,6 @@ Represents an SNMP varbind concept in NetXMS. A varbind logically consists of an
 `name => String`::
 Object name (OID string).
 
-`printableValue => String`::
-Object value as a printable string.
-
 `type => Integer`::
 ASN.1 type.
 
