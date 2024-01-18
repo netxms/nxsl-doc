@@ -419,6 +419,15 @@ Enable or disable usage of ICMP pings for status polls.
 |flag|Boolean|If ICMP pings should be enabled.
 |===
 
+`enableModbusTcp(flag) => void`::
+Enable or disable usage of Modbus TCP for polls.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If Modbus TCP should be enabled.
+|===
+
 `enablePrimaryIPPing(flag) => void`::
 Enable or disable usage of ICMP ping for primary IP.
 
