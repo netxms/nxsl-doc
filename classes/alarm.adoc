@@ -9,6 +9,9 @@ Represents NetXMS alarm.
 `ackBy => Number`::
 ID of user who acknowledged this alarm.
 
+`categories => Array`::
+Array with alarm category names.
+
 `creationTime => Number`::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the alarm creation time.
 
