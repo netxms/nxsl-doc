@@ -424,12 +424,16 @@ println("ABC-DEF-GHI"->lastIndexOf("JKL")); // prints "-1"
 
 [[class-string-left,String::left()]]
 `left(numberOfCharacters) => String`::
-Returns left `numberOfCharacters` of this string. 
+Returns left `numberOfCharacters` of this string. If string length is less then
+`numberOfCharacters`, result will be padded on the right. `paddingCharacter` is 
+optional, if not specified, space character will be used for padding. 
 
 .Example
 [.source]
 ....
 println("ABCDEFGHI"->left(2)); // prints "AB"
+println("123"->left(5)); // prints "123  "
+println("123"->left(5, "_")); // prints "123__"
 ....
 
 
@@ -445,13 +449,17 @@ println("A B C A D K L"->replace("A", "<A>")); // prints "<A> B C <A> D K L"
 
 
 [[class-string-right,String::right()]]
-`right(numberOfCharacters) => String`::
-Returns right `numberOfCharacters` of this string.
+`right(numberOfCharacters, paddingCharacter) => String`::
+Returns right `numberOfCharacters` of this string. If string length is less then
+`numberOfCharacters`, result will be padded on the left. `paddingCharacter` is 
+optional, if not specified, space character will be used for padding. 
 
 .Example
 [.source]
 ....
 println("ABCDEFGHI"->right(2)); // prints "HI"
+println("123"->right(5)); // prints "  123"
+println("123"->right(5, "_")); // prints "__123"
 ....
 
 
