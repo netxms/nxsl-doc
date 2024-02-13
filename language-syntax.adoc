@@ -423,7 +423,7 @@ println("ABC-DEF-GHI"->lastIndexOf("JKL")); // prints "-1"
 
 
 [[class-string-left,String::left()]]
-`left(numberOfCharacters) => String`::
+`left(numberOfCharacters, paddingCharacter) => String`::
 Returns left `numberOfCharacters` of this string. If string length is less then
 `numberOfCharacters`, result will be padded on the right. `paddingCharacter` is 
 optional, if not specified, space character will be used for padding. 
