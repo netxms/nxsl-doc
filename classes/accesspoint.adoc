@@ -33,7 +33,7 @@ Parent node
 `serialNumber => String`::
 Serial number
 
-`state => String`::
+`apState => String`::
 State from <<accesspoint-state>>
 
 `vendor => String`::
@@ -47,10 +47,10 @@ Vendor
 |===
 | Description | Value
 
-|AP_ADOPTED  
+|AP_UP
 |0
 
-|AP_UNADOPTED  
+|AP_UNPROVISIONED
 |1
 
 |AP_DOWN  

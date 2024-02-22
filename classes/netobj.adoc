@@ -471,6 +471,64 @@ Add entry to maintenance journal
 | 14
 | Cluster
 
+| 15
+| Business Service Prototype
+
+| 16
+| Asset
+
+| 17
+| Asset Group
+
+| 18
+| Asset Root
+
+| 19
+| Network Map Root
+
+| 20
+| Network Map Group
+
+| 21
+| Network Map
+
+| 22
+| Dashboard Root
+
+| 23
+| Dashboard
+
+| 27
+| Business Service Root
+
+| 28
+| Business Service
+
+| 29
+| Collector
+
+| 31
+| Mobile Device
+
+| 32
+| Rack
+
+| 33
+| Access Point
+
+| 34
+| Wireless Domain
+
+| 35
+| Chassis
+
+| 36
+| Dashboard Group
+
+| 37
+| Sensor
+
+
 |===
 
 [[enum-status-calculation-type]]
