@@ -20,7 +20,7 @@ any_identifier ::=
   COMPOUND_IDENTFIER
 
 function ::=
-  sub IDENTIFIER "(" [ identifier_list ] ")" block
+  function IDENTIFIER "(" [ identifier_list ] ")" block
 
 identifier_list ::=
   IDENTIFIER { "," IDENTIFIER }

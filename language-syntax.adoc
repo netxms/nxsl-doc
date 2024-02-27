@@ -135,7 +135,7 @@ For example:
 x = 1;
 myFunction();
 
-sub myFunction()
+function myFunction()
 {
     println("x=" . x);
 }
@@ -151,7 +151,7 @@ produce expected result (prints `x=1`):
 global x = 1;
 myFunction();
 
-sub myFunction()
+function myFunction()
 {
     println("x=" . x);
 }
@@ -168,7 +168,7 @@ loaded in from other scripts via the use keywords.
 
 To define a function, you can use the following form:
 
-*sub*  _NAME_ *(*  _ARGUMENTS_ *)* *BLOCK*
+*function*  _NAME_ *(*  _ARGUMENTS_ *)* *BLOCK*
 
 where `NAME` is any valid identifier, `ARGUMENTS` is optional list of
 argument names, and `BLOCK` is code block.
@@ -184,7 +184,7 @@ To give a quick example of a simple subroutine:
 
 [source,c]
 ----
-sub message()
+function message()
 {
     println("Hello!");
 }
@@ -198,7 +198,7 @@ function adds two numbers and prints the result:
 
 [source,c]
 ----
-sub add()
+function add()
 {
     result = $1 + $2;
     println("The result was: " . result);
@@ -217,7 +217,7 @@ provided in function declaration inside the brackets:
 
 [source,c]
 ----
-sub add(numberA, numberB)
+function add(numberA, numberB)
 {
     result = numberA + numberB;
     println("The result was: " . result);
@@ -239,7 +239,7 @@ Example:
 func(param2: "text2", param1: "text1");
 return 0;
 
-sub func()
+function func()
 {
     println($param1); //Will print "text1"
     println($param2); //Will print "text2"
@@ -255,7 +255,7 @@ You can return a value from a function using the `return` keyword:
 
 [source,c]
 ----
-sub pct(value, total)
+function pct(value, total)
 {
     return value / total * 100.0;
 }
@@ -578,11 +578,11 @@ access element with index `3` of array `a` you should use
 a[3];
 ----
 
-To get sub array from the array use `[a:b]` operator. This operator returns sub
-array of an array from the element with index `a` inclusive till the element 
-with index `b` exclusive. If `a` is omitted then sub array will be taken from
-the start of the array and if `b` is omitted then sub array will be taken till
-the end of the array.
+To get subarray from the array use `[a:b]` operator. This operator returns
+subarray of an array from the element with index `a` inclusive till the element
+with index `b` exclusive. If `a` is omitted then subarray will be taken from the
+start of the array and if `b` is omitted then subarray will be taken till the
+end of the array.
 
 Example:
 
@@ -635,7 +635,7 @@ Array initialization can also be used directly in expressions, like this:
 
 [source,c]
 ----
-sub f()
+function f()
 {
     return %(2, "text", %(1, 2, 3));
 }

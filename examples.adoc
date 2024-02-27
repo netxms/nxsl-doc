@@ -193,7 +193,7 @@ configuration variable needs to be set to 0.
 [source,c]
 ----
 // This function walks object tree recursively starting from given root
-sub EnumerateNodes(obj, level)
+function EnumerateNodes(obj, level)
 {
     foreach(o : obj->children) {
         for (i = 0; i < level; i++) { print("  "); }
@@ -242,7 +242,7 @@ foreach(a : attributes->keys)
 
 [source,c]
 ----
-sub BubbleSort(a)
+function BubbleSort(a)
 {
    n = a->maxIndex + 1;
    do
@@ -270,7 +270,7 @@ sub BubbleSort(a)
 
 [source,c]
 ----
-sub BubbleSort(a)
+function BubbleSort(a)
 {
    n = a->maxIndex + 1;
    do
@@ -304,7 +304,7 @@ are averaged to give the required value;
 
 [source,c]
 ----
-sub main()
+function main()
 {
 
 trace(1, "Global Ping Loss 95");
@@ -351,7 +351,7 @@ trace(1, "Global Ping Loss 95 Summary: arrayI=".arrayI." upTo=".upTo." p95AvgLos
 return p95AvgLoss;
 }
 
-sub bubbleSort(arr)
+function bubbleSort(arr)
 {
 	swapped = true;
 	while (swapped == true){
@@ -372,7 +372,7 @@ sub bubbleSort(arr)
 	}
 }
 
-sub printArray(arr)
+function printArray(arr)
 {
 	for(ia = 0; arr[ia] != null; ia++)
 	{
@@ -503,7 +503,7 @@ println("Contacts: " .. contacts);
 /**
  * Recursively add contacts from object and it's parents
  */
-sub add_contacts(curr)
+function add_contacts(curr)
 {
 	c = curr->getCustomAttribute("contacts");
 	if ((c != null) && (presence[c] == null))

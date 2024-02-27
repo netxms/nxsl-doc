@@ -3,7 +3,7 @@ Syntactically, NXSL looks similar to Perl or C. Here's simple NXSL program:
 [source,c]
 ----
 /* sample program */
-sub main()
+function main()
 {
     println("Hello!");
     return 0;
@@ -17,7 +17,7 @@ the above could have been written as:
 
 [source,c]
 ----
-/* sample program */ sub main(){println("Hello!");return 0;}
+/* sample program */ function main(){println("Hello!");return 0;}
 ----
 
 Now we'll analyze this program:
@@ -46,7 +46,7 @@ Now onto next line:
 
 [source,c]
 ----
-sub main()
+function main()
 {
 }
 ----
@@ -57,7 +57,7 @@ following form:
 
 [source,c]
 ----
-sub name(parameters)
+function name(parameters)
 {
     // the function code goes here
 }
