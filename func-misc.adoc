@@ -30,6 +30,7 @@ include::functions/getthreadpoolnames.adoc[]
 
 include::functions/jsonparse.adoc[]
 
+include::functions/getmappingtablekeys.adoc[]
 include::functions/map.adoc[]
 include::functions/maplist.adoc[]
 

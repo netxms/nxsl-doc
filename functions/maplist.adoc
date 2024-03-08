@@ -21,8 +21,11 @@ Result string is joined using the same separator.
 .Return
 
 .Example
+Provided that there is a mapping table named "table1", which has keys 10, 20 and
+30 with corresponding values "value1", "value2" and "value3":
+
 [.source]
 ....
->>> mapList("table1", "10,20,30", ",")
-value1,value2,value3
+println(mapList("table1", "10,20,30", ",")); // prints "value1,value2,value3"
+println(mapList("t", "10,20,30,40", ",", "NOT FOUND"));  // prints "value1,value2,value3,NOT FOUND"
 ....
