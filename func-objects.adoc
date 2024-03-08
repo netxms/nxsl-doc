@@ -2,6 +2,7 @@
 
 include::functions/createcontainer.adoc[]
 include::functions/createnode.adoc[]
+include::functions/findaccesspointbymacaddress.adoc[]
 include::functions/findnodebyagentid.adoc[]
 include::functions/findnodebyipaddress.adoc[]
 include::functions/findnodebymacaddress.adoc[]
