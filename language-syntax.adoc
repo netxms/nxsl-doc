@@ -384,7 +384,7 @@ println("Just a sentence"->endsWith("a sentence")); // prints "true"
 
 
 `equalsIgnoreCase(string) => Boolean`::
-Returns `true`` if argument string is equal to this string ignoring the case or
+Returns `true` if argument string is equal to this string ignoring the case or
 `false` otherwise.
 
 .Example
