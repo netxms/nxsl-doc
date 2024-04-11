@@ -10,7 +10,7 @@ Please use <<class-netobj-bind>> or <<class-netobj-bindto>> instead.
 ====
 ****
 
-NOTE: This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+NOTE: This function is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 [source,c]
 ----

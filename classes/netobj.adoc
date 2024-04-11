@@ -120,7 +120,7 @@ Postal address - street.
 `bind(childObject) => void`::
 
 [NOTE]
-This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 Bind `childObject` to the current object as a child.
 
@@ -134,7 +134,7 @@ Bind `childObject` to the current object as a child.
 `bindTo(parentObject) => void`::
 
 [NOTE]
-This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 Bind current object to `parentObject` as a child.
 
@@ -382,7 +382,7 @@ Sets status propagation method.
 `unbind(object) => void`::
 
 [NOTE]
-This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 Unbind provided object from the current object.
 
@@ -396,7 +396,7 @@ Unbind provided object from the current object.
 `unbindFrom(object) => void`::
 
 [NOTE]
-This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 Unbind current object from the provided object.
 

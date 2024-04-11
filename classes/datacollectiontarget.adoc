@@ -25,7 +25,7 @@ foreach(t : templates)
 `applyTemplate(template) => void`::
 
 [NOTE]
-This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 Apply template to node
 
@@ -83,7 +83,7 @@ Reads object internal table metric (metric with source "Internal").
 `removeTemplate(template) => void`::
 
 [NOTE]
-This method is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 Remove template from node
 
