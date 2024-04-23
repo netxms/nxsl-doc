@@ -17,7 +17,7 @@ Post event on behalf of given node.
 |parameters|Array or Hash map|Event parameters. Hash map allows to use named parameters - hash map keys will become parameter names. Optional, can be set to null. 
 |tags|Array of Strings|User tags associated with event. Optional, can be set to null.
 |originTimestamp|Integer|Time as seconds since epoch (1 January 1970 00:00:00 UTC). Optional, can be set to null.
-|origin|Integer|One of the <<const-dci-origin,possible values>>. Optional, can be set to null.
+|origin|Integer|One of the <<const-event-origin,possible values>>. Optional, can be set to null.
 
 
 |===
