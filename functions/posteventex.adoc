@@ -2,4 +2,44 @@
 [[func-posteventex]]
 == PostEventEx()
 
-...
+[source,c]
+----
+PostEventEx(node, event, parameters, tags, originTimestamp, origin) => Boolean
+----
+
+Post event on behalf of given node.
+
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|node|<<class-node>>|Node object to send event on behalf of.
+|event|Integer or String|Event code or name.
+|parameters|Array or Hash map|Event parameters. Hash map allows to use named parameters - hash map keys will become parameter names. Optional, can be set to null. 
+|tags|Array of Strings|User tags associated with event. Optional, can be set to null.
+|originTimestamp|Integer|Time as seconds since epoch (1 January 1970 00:00:00 UTC). Optional, can be set to null.
+|origin|Integer|One of the <<const-dci-origin,possible values>>. Optional, can be set to null.
+
+
+|===
+
+.Return
+`TRUE` if event was posted successfully or `FALSE` if not.
+
+.Example
+[.source]
+....
+// event parameters as array
+r = PostEventEx($node, "MY_EVENT", %("text parameter", 123));
+
+// event parameters as hash map
+r = PostEventEx($node, "MY_EVENT", %{"someParam":"value", "anotherParam":456});
+
+// null is used to omit originTimestamp
+params = %{};
+params["someParam"] = "some value";
+params["anotherParam"] = 42;
+tags = %();
+tags->append("tag1");
+tags->append("tag2");
+r = PostEventEx($node, "MY_EVENT", params, tags, null, EventOrigin::NXSL);
+....
