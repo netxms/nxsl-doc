@@ -27,5 +27,5 @@ Instance of <<class-node>> object or `null` if not found or not accessible.
 [.source]
 ----
 node = FindNodeByMACAddress("AA:34:35:D8:12:45");
-if (node != NULL) println(node->name); // Prints node name if node with given MAC address is found
+if (node != NULL) println(node.name); // Prints node name if node with given MAC address is found
 ----

@@ -36,7 +36,7 @@ Instance of <<class-snmpvarbind>> or `null` on failure.
 >>>   oid = ".1.3.6.1.2.1.25.1.6.0"; // number of running processes
 >>>   varbind = SNMPGet(transport, oid);
 >>>   if (varbind != null) {
->>>     trace(1, varbind->name .. "=" .. varbind->value);
+>>>     trace(1, varbind.name .. "=" .. varbind.value);
 >>>   }
 >>>   else {
 >>>     trace(0, "SNMPGet() failed");

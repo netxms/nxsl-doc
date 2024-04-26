@@ -33,12 +33,12 @@ Instance of <<class-webserviceresponse>> with request result.
 .Example
 [.source]
 ....
-webSvc = $node->getWebService("webSvcName"); 
-result = webSvc->get();
-println(result->document); // will print result
+webSvc = $node.getWebService("webSvcName"); 
+result = webSvc.get();
+println(result.document); // will print result
 
-result = webSvc->get("additional", "parameters");
-println(result->document); // will print result
+result = webSvc.get("additional", "parameters");
+println(result.document); // will print result
 ....
 
 `delete(...) => <<class-webserviceresponse>>`:: Execute DELETE request from
@@ -57,12 +57,12 @@ Instance of <<class-webserviceresponse>> with request result.
 .Example
 [.source]
 ....
-webSvc = $node->getWebService("webSvcName"); 
-result = webSvc->delete();
-println(result->success); //will print "true" if request was successful or "false" otherwise
+webSvc = $node.getWebService("webSvcName"); 
+result = webSvc.delete();
+println(result.success); //will print "true" if request was successful or "false" otherwise
 
-result = webSvc->delete("additional", "parameters");
-println(result->success); //will print "true" if request was successful or "false" otherwise
+result = webSvc.delete("additional", "parameters");
+println(result.success); //will print "true" if request was successful or "false" otherwise
 ....
 
 `patch(data, contentType, ...) => <<class-webserviceresponse>>`:: Execute PATCH
@@ -83,15 +83,15 @@ Instance of <<class-webserviceresponse>> with request result.
 .Example
 [.source]
 ....
-webSvc = $node->getWebService("webSvcName"); 
+webSvc = $node.getWebService("webSvcName"); 
 
-result = webSvc->patch("{ \"id\":10 }");
-println(result->success); //will print "true" if request was successful or "false" otherwise
+result = webSvc.patch("{ \"id\":10 }");
+println(result.success); //will print "true" if request was successful or "false" otherwise
 to
 json = new JsonObject();
-json->set("id", 42);
-result = webSvc->patch(json,"application/json", "additional", "parameters");
-println(result->success); //will print "true" if request was successful or "false" otherwise
+json.set("id", 42);
+result = webSvc.patch(json,"application/json", "additional", "parameters");
+println(result.success); //will print "true" if request was successful or "false" otherwise
 ....
 
 `post(data, contentType, ...) => <<class-webserviceresponse>>`:: Execute POST
@@ -112,15 +112,15 @@ Instance of <<class-webserviceresponse>> with request result.
 .Example
 [.source]
 ....
-webSvc = $node->getWebService("webSvcName"); 
+webSvc = $node.getWebService("webSvcName"); 
 
-result = webSvc->post("{ \"id\":10 }");
-println(result->success);//will print "true" if request was successful or "false" otherwise
+result = webSvc.post("{ \"id\":10 }");
+println(result.success);//will print "true" if request was successful or "false" otherwise
 
 json = new JsonObject();
-json->set("id", 42);
-result = webSvc->post(json,"application/json", "additional", "parameters");
-println(result->success); //will print "true" if request was successful or "false" otherwise
+json.set("id", 42);
+result = webSvc.post(json,"application/json", "additional", "parameters");
+println(result.success); //will print "true" if request was successful or "false" otherwise
 ....
 
 `put(data, contentType, ...) => <<class-webserviceresponse>>`:: Execute PUT
@@ -141,13 +141,13 @@ Instance of <<class-webserviceresponse>> with request result.
 .Example
 [.source]
 ....
-webSvc = $node->getWebService("webSvcName"); 
+webSvc = $node.getWebService("webSvcName"); 
 
-result = webSvc->put("{ \"id\":10 }");
-println(result->success); //will print "true" if request was successful or "false" otherwise
+result = webSvc.put("{ \"id\":10 }");
+println(result.success); //will print "true" if request was successful or "false" otherwise
 
 json = new JsonObject();
-json->set("id", 42);
-result = webSvc->put(json,"application/json", "additional", "parameters");
-println(result->success); //will print "true" if request was successful or "false" otherwise
+json.set("id", 42);
+result = webSvc.put(json,"application/json", "additional", "parameters");
+println(result.success); //will print "true" if request was successful or "false" otherwise
 ....

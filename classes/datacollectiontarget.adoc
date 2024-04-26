@@ -13,10 +13,10 @@ Returns array of templates (<<class-template>>) applied on this object. Return v
 [.source]
 ....
 // Log names and ids of all accessible templates for current node
-templates = $node->templates;
+templates = $node.templates;
 foreach(t : templates)
 {
-	trace(1, "Template object: name='" .. t->name .. "' id=" .. t->id);
+	trace(1, "Template object: name='" .. t.name .. "' id=" .. t.id);
 }
 ....
 

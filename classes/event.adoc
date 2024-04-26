@@ -48,7 +48,7 @@ The time when the event was generated in the origin.
 List of event parameters. Starting index is 1.
 
 `parameterNames => Array`::
-List of named event parameters (e.g. "dciId"), which can be accessed by `+object->parameterName+`.
+List of named event parameters (e.g. "dciId"), which can be accessed by `+object.parameterName+`.
 
 `rootId => Number64`::
 Id of event that is root cause of this event or 0 if there is no such event.
@@ -72,10 +72,10 @@ Event tags as a coma separated list.
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the event.
 
 `$1…$n`::
-Shortcut for `parameters[n]` (e.g. "$event->parameters[3]" can be replaced with "$event->$3").
+Shortcut for `parameters[n]` (e.g. "$event.parameters[3]" can be replaced with "$event.$3").
 
 `$…`::
-Named event parameters can be accessed directly by the name (e.g `+$event->dciId+`). List of available named parameters can be accessed with `parameterNames` attribute. Get/set attribute.
+Named event parameters can be accessed directly by the name (e.g `+$event.dciId+`). List of available named parameters can be accessed with `parameterNames` attribute. Get/set attribute.
 
 ==== Instance methods
 
@@ -127,7 +127,7 @@ Formated string
 .Example
 [.source]
 ....
->>> $event->expandString("%N")
+>>> $event.expandString("%N")
 SYS_THRESHOLD_REACHED
 ....
 

@@ -27,5 +27,5 @@ Instance of <<class-accesspoint>> object or `null` if not found or not accessibl
 [.source]
 ----
 ap = FindAccessPointByMACAddress("AA:34:33:44:14:55");
-if (ap != NULL) println(ap->name); // Prints access point name if it is found
+if (ap != NULL) println(ap.name); // Prints access point name if it is found
 ----

@@ -159,10 +159,10 @@ ByteStream object.
 [.source]
 ....
 bytestream = new ByteStream();
-bytestream->writeString("xyz");
-bytestream->seek(0);
-while (!bytestream->eos) {
-  b = bytestream->readByte();
+bytestream.writeString("xyz");
+bytestream.seek(0);
+while (!bytestream.eos) {
+  b = bytestream.readByte();
   print(d2x(b,2) .. " "); // prints "78 79 7A"
 }
 ....

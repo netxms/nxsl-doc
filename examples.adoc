@@ -23,9 +23,9 @@ Get table item. Is used to make DCI from Table DCI.
 // $2 - column name
 table = GetDCIValueByDescription($node, $1);
 if (table != NULL) {
-	col = table->getColumnIndex($2);
+	col = table.getColumnIndex($2);
 	if (col >= 0) {
-		return table->get(0, col);
+		return table.get(0, col);
 	}
 }
 return 0;
@@ -38,12 +38,12 @@ Script to print primary MAC address.
 
 [source,c]
 ----
-for(i : $node->interfaces)
+for(i : $node.interfaces)
 {
-   for(a : i->ipAddressList)
+   for(a : i.ipAddressList)
    {
-      if (a->address == $node->ipAddr)
-         println(i->macAddr);
+      if (a.address == $node.ipAddr)
+         println(i.macAddr);
    }
 }
 ----
@@ -56,8 +56,8 @@ cluster.
 
 [source,c]
 ----
-for (p : $node->parents) {
-    if (p->type == 5 or p->type == 14) { //5 is container and 14 is cluster
+for (p : $node.parents) {
+    if (p.type == 5 or p.type == 14) { //5 is container and 14 is cluster
         return true;
     }
 }
@@ -72,10 +72,10 @@ Set ignore expected state for all interfaces of all nodes.
 [source,c]
 ----
 for (n : GetAllNodes()) {
-    println(n->name .. "(" .. n->id .. ")");
-    for (i : n->interfaces) {
-        println("\t" .. i->name);
-        i->setExpectedState("IGNORE");
+    println(n.name .. "(" .. n.id .. ")");
+    for (i : n.interfaces) {
+        println("\t" .. i.name);
+        i.setExpectedState("IGNORE");
     }
 }
 ----
@@ -118,7 +118,7 @@ Update "Hook:CreateInterface" script in script library.
 
 [source,c]
 ----
-if ( $1->name ~= "^isatap" )
+if ( $1.name ~= "^isatap" )
     return false;
 
 return true;
@@ -142,24 +142,24 @@ notification text.
 [source,c]
 ----
 // only for interface up and down events
-if (($event->name != "SYS_IF_DOWN") && ($event->name != "SYS_IF_UP"))
+if (($event.name != "SYS_IF_DOWN") && ($event.name != "SYS_IF_UP"))
 	return true;
 
 // get interface object from interface index
-iface = $node->getInterface($5);
+iface = $node.getInterface($5);
 if (iface == null)
 	return true;
 
 // get peer node (node connected to this interface) object
-peer = iface->peerNode;
+peer = iface.peerNode;
 if (peer == null)
 	return true;
 
 // get peer interface object (needed to obtain MAC address)
-peerIface = iface->peerInterface;
+peerIface = iface.peerInterface;
 if (peerIface != null)
 {
-	macAddr = peerIface->macAddr;
+	macAddr = peerIface.macAddr;
 }
 else
 {
@@ -168,7 +168,7 @@ else
 
 // set event's named parameter
 SetEventParameter($event, "additionalInfo",
-	"Peer: " .. peer->name .. " " .. peer->ipAddr .. " " .. macAddr);
+	"Peer: " .. peer.name .. " " .. peer.ipAddr .. " " .. macAddr);
 
 return true;
 ----
@@ -195,9 +195,9 @@ configuration variable needs to be set to 0.
 // This function walks object tree recursively starting from given root
 function EnumerateNodes(obj, level)
 {
-    foreach(o : obj->children) {
+    foreach(o : obj.children) {
         for (i = 0; i < level; i++) { print("  "); }
-        println("[" .. o->type .. " / " .. classof(o) .. "] " .. o->name);
+        println("[" .. o.type .. " / " .. classof(o) .. "] " .. o.name);
 
         EnumerateNodes(o, level + 1);
     }
@@ -215,7 +215,7 @@ used:
 [source,c]
 ----
 for (n : GetAllNodes()) {
-  println(n->name);
+  println(n.name);
 }
 ----
 
@@ -230,8 +230,8 @@ Enumerate all custom attributes on a node.
 
 [source,c]
 ----
-attributes = $node->customAttributes;
-foreach(a : attributes->keys)
+attributes = $node.customAttributes;
+foreach(a : attributes.keys)
 {
         println(a .. "=" .. attributes[a]);
 }
@@ -244,13 +244,13 @@ foreach(a : attributes->keys)
 ----
 function BubbleSort(a)
 {
-   n = a->maxIndex + 1;
+   n = a.maxIndex + 1;
    do
    {
       newn = 0;
       for(i = 1; i < n; i++)
       {
-         if (a[i - 1]->compareTo(a[i]) > 0)
+         if (a[i - 1].compareTo(a[i]) > 0)
          {
             t = a[i - 1];
             a[i - 1] = a[i];
@@ -272,7 +272,7 @@ function BubbleSort(a)
 ----
 function BubbleSort(a)
 {
-   n = a->maxIndex + 1;
+   n = a.maxIndex + 1;
    do
    {
       newn = 0;
@@ -311,14 +311,14 @@ trace(1, "Global Ping Loss 95");
 array pValue;
 arrayI  = 0;
 
-foreach(parent : $node->parents)
+foreach(parent : $node.parents)
 {
-	trace(3, "Parent object: name='" .. parent->name ."' id=" .. parent->id);
-	if (parent->name == "all voice")
+	trace(3, "Parent object: name='" .. parent.name ."' id=" .. parent.id);
+	if (parent.name == "all voice")
 	{
-		foreach(vNode : parent->children)
+		foreach(vNode : parent.children)
 		{
-			dciName = "ICMP: Packet loss to ".vNode->name;
+			dciName = "ICMP: Packet loss to " .. vNode.name;
 			dciId = FindDCIByDescription(vNode, dciName);
 			if (dciId > 0)
 			{
@@ -397,14 +397,14 @@ if ($1 == null)
    return 3;
 }
 
-transport = FindObject($1)->createSNMPTransport();    // Create SNMP transport for node
+transport = FindObject($1).createSNMPTransport();    // Create SNMP transport for node
 if (transport == null)
 {
     println("Failed to create SNMP transport, exit");
     return 1;
 }
 
-value = transport->getValue(".1.3.6.1.2.1.1.1.0");
+value = transport.getValue(".1.3.6.1.2.1.1.1.0");
 if (value == null)
 {
     println("Failed to issue SNMP GET request");
@@ -422,16 +422,16 @@ else
 
 [source,c]
 ----
-transport = $node->createSNMPTransport();   
+transport = $node.createSNMPTransport();   
 if (transport == null) exit;
 
-varbind = transport->get(".1.3.6.1.2.1.25.3.5.1.2.1");
+varbind = transport.get(".1.3.6.1.2.1.25.3.5.1.2.1");
 if (varbind == null) exit;
 
-bytestream = varbind->getValueAsByteStream();
+bytestream = varbind.getValueAsByteStream();
 
-println(bytestream->pos); // after bytestream is created, it's position is set to 0
-println("0x" .. d2x(bytestream->readByte(), 2)); // prints the hex value of 0-th byte
+println(bytestream.pos); // after bytestream is created, it's position is set to 0
+println("0x" .. d2x(bytestream.readByte(), 2)); // prints the hex value of 0-th byte
 ----
 
 
@@ -460,19 +460,19 @@ if (table == null)
 }
 
 // Print column names
-for(i = 0; i < table->columnCount; i++)
-	print("| " .. left(table->getColumnName(i), 20));
+for(i = 0; i < table.columnCount; i++)
+	print("| " .. left(table.getColumnName(i), 20));
 println("|");
-for(i = 0; i < table->columnCount; i++)
+for(i = 0; i < table.columnCount; i++)
 	print("+" .. left("-", 21, "-"));
 println("+");
 
 // Print data
-for(i = 0; i < table->rowCount; i++)
+for(i = 0; i < table.rowCount; i++)
 {
-	for(j = 0; j < table->columnCount; j++)
+	for(j = 0; j < table.columnCount; j++)
 	{
-		print("| " .. left(table->get(i, j), 20));
+		print("| " .. left(table.get(i, j), 20));
 	}
 	println("|");
 }
@@ -492,7 +492,7 @@ global contacts = "";  // concatenated values will be stored here
 global presence = %{ };  // value presence indicator (hash map)
 
 // walk through each parent object for current node
-foreach(o : $node->parents)
+foreach(o : $node.parents)
 {
 	add_contacts(o);
 }
@@ -505,7 +505,7 @@ println("Contacts: " .. contacts);
  */
 function add_contacts(curr)
 {
-	c = curr->getCustomAttribute("contacts");
+	c = curr.getCustomAttribute("contacts");
 	if ((c != null) && (presence[c] == null))
 	{
 		if (length(contacts) > 0)
@@ -515,7 +515,7 @@ function add_contacts(curr)
 		presence[c] = true;
 	}
 
-	foreach(o : curr->parents)
+	foreach(o : curr.parents)
 	{
 		add_contacts(o);
 	}
@@ -530,20 +530,20 @@ Adjust the OIDs in SNMPGetValue as required.
 
 [source,c]
 ----
-transport = $node->createSNMPTransport();
+transport = $node.createSNMPTransport();
 if (transport == null) {
   return null;
 }
 
-lat = transport->get(".1.2.3.4.1");
-lon = transport->get(".1.2.3.4.2");
+lat = transport.get(".1.2.3.4.1");
+lon = transport.get(".1.2.3.4.2");
 
 if (lat == null || lon == null) {
   return null;
 }
 
 geoLoc = new GeoLocation(lat, lon);
-$node->setGeoLocation(geoLoc);
+$node.setGeoLocation(geoLoc);
 
 return 0;
 ----
@@ -557,36 +557,36 @@ list values for serial, vendor, model asset properties.
 ----
 with
 	objName (order = "asc", name = "Object name") = {
-    	return $node->name;
+    	return $node.name;
 	},
 
 	serial (name = "Serial") = {
-		return $node->assetProperties->serial;
+		return $node.assetProperties.serial;
 	},
 
 	vendorVar (name = "Vendor") = {
-		return $node->assetProperties->vendor;
+		return $node.assetProperties.vendor;
 	},
 
 	model (name = "Model") = {
-		return $node->assetProperties->model;
+		return $node.assetProperties.model;
 	}
  
-(type == NODE) && $node->asset != null //show all nodes linked to asset
+(type == NODE) && $node.asset != null //show all nodes linked to asset
 ----
 
 Exactly the same script, but without "with" syntax:
 
 [source,c]
 ----
-if (($object->type == NODE) && $node->asset != null)
+if (($object.type == NODE) && $node.asset != null)
 {
-    global objName (order = "asc", name = "Object name") = $node->name;
-    global serial (name = "Serial") = $node->assetProperties->serial;
-    global vendorVar (name = "Vendor") = $node->assetProperties->vendor;
-    global model (name = "Model") = $node->assetProperties->model;
+    global objName (order = "asc", name = "Object name") = $node.name;
+    global serial (name = "Serial") = $node.assetProperties.serial;
+    global vendorVar (name = "Vendor") = $node.assetProperties.vendor;
+    global model (name = "Model") = $node.assetProperties.model;
 }
-return ($object->type == NODE) && $node->asset != null; //show all nodes linked to asset
+return ($object.type == NODE) && $node.asset != null; //show all nodes linked to asset
 ----
 
 

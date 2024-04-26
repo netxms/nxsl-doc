@@ -22,6 +22,6 @@ Will return object of <<class-alarm, class alarm>>
 [.source]
 ----
 alarm = FindAlarmByKey("NODE_DOWN_0x000023A2"); //Will find alarm with key "NODE_DOWN_0x000023A2"
-println(alarm->key); //Will print key "NODE_DOWN_0x000023A2"
-println(alarm->message); //Will print alarm message, for example "Node down"
+println(alarm.key); //Will print key "NODE_DOWN_0x000023A2"
+println(alarm.message); //Will print alarm message, for example "Node down"
 ----

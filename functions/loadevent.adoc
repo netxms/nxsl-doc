@@ -22,6 +22,6 @@ Will load event from the database and return <<class-event>> object or NULL if e
 [.source]
 ....
 >>>event = LoadEvent(315);
->>>event->id;
+>>>event.id;
 315
 ....

@@ -39,7 +39,7 @@ params = %{};
 params["someParam"] = "some value";
 params["anotherParam"] = 42;
 tags = %();
-tags->append("tag1");
-tags->append("tag2");
+tags.append("tag1");
+tags.append("tag2");
 r = PostEventEx($node, "MY_EVENT", params, tags, null, EventOrigin::NXSL);
 ....

@@ -27,5 +27,5 @@ Instance of <<class-node>> object or `null` if not found or not accessible.
 [.source]
 ----
 node = FindNodeByIPAddress("192.168.1.1", $node);
-if (node != NULL) println(node->name); // Prints node name if node with given IP address is found
+if (node != NULL) println(node.name); // Prints node name if node with given IP address is found
 ----

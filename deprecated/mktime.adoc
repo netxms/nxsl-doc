@@ -30,12 +30,12 @@ UNIX time (number of seconds since epoch).
 [.source]
 ....
 t = new TIME();  // create new TIME object
-t->year = 2018;
-t->mon = 3;	// April (0-based month numbering)
-t->mday = 10;
-t->hour = 10;
-t->min = 16;
-t->sec = 55;
-t->isdst = -1;	// auto detect daylight saving
+t.year = 2018;
+t.mon = 3;	// April (0-based month numbering)
+t.mday = 10;
+t.hour = 10;
+t.min = 16;
+t.sec = 55;
+t.isdst = -1;	// auto detect daylight saving
 println(mktime(t)); //Will print "1523344615"
 ....

@@ -28,6 +28,6 @@ Instance of newly created <<class-dci>> of `null` if failed.
 [.source]
 ....
 >>> d = CreateDCI($node, DataSource::AGENT, "Agent.Version", "Agent Version", DCI::STRING, 0, 0);
->>> println(d->id);
+>>> println(d.id);
 145
 ....
