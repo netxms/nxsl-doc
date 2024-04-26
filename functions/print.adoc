@@ -18,7 +18,7 @@ Prints any text or text representation of object
 .Example
 [source,c]
 ----
-a = %("a", 1, 1.5);
+a = ["a", 1, 1.5];
 print("Array: ");
 print(a); //Result: Array: [a, 1, 1.500000]
 ----

@@ -29,7 +29,7 @@ Post event on behalf of given node.
 [.source]
 ....
 // event parameters as array
-r = PostEventEx($node, "MY_EVENT", %("text parameter", 123));
+r = PostEventEx($node, "MY_EVENT", ["text parameter", 123]);
 
 // event parameters as hash map
 r = PostEventEx($node, "MY_EVENT", %{"someParam":"value", "anotherParam":456});
@@ -38,7 +38,7 @@ r = PostEventEx($node, "MY_EVENT", %{"someParam":"value", "anotherParam":456});
 params = %{};
 params["someParam"] = "some value";
 params["anotherParam"] = 42;
-tags = %();
+tags = [];
 tags.append("tag1");
 tags.append("tag2");
 r = PostEventEx($node, "MY_EVENT", params, tags, null, EventOrigin::NXSL);

@@ -101,7 +101,7 @@ For example:
 
 [source,c]
 ----
-a = %(1,2,3);
+a = [1,2,3];
 b = true;
 c = a or b;
 println(c);  // will print "[1, 2, 3]" because first operand was returned by or operation
@@ -588,9 +588,9 @@ Example:
 
 [source,c]
 ----
-a = %(1, 2, 3, 4);
-a2 = a[1:3]; // a2 will be %(2, 3)
-a3 = a[1:]; // a3 will be %(2, 3, 4)
+a = [1, 2, 3, 4];
+a2 = a[1:3]; // a2 will be [2, 3]
+a3 = a[1:]; // a3 will be [2, 3, 4]
 
 ----
 
@@ -618,14 +618,14 @@ println(a[1]); // will print 1
 println(a); // will print "[1, 2, 260]"
 ----
 
-Second way is to use %( ) construct to create array already populated with values.
+Second way is to use [] construct to create array already populated with values.
 
 This statement will create array with four elements at positions 0, 1, 2, and 3, and assign reference to this array to variable a.
 
 [source,c]
 ----
 // no need to use "array a;" here, since we are creating it directly
-a = %(1, 2, 3, 4);
+a = [1, 2, 3, 4];
 
 println(a[0]); // will actually print 1, since 1 is the 0th member
 println(a); // will print "[1, 2, 3, 4]"
@@ -637,7 +637,7 @@ Array initialization can also be used directly in expressions, like this:
 ----
 function f()
 {
-    return %(2, "text", %(1, 2, 3));
+    return [2, "text", [1, 2, 3]];
 }
 ----
 
@@ -653,7 +653,7 @@ Returns highest index in the array.
 .Example
 [.source]
 ....
-a = %(1, 2, 3);
+a = [1, 2, 3];
 println(a.maxIndex); // prints '2'
 println(a[a.maxIndex]); // prints '3'
 ....
@@ -665,7 +665,7 @@ Returns lowest index in the array.
 .Example
 [.source]
 ....
-a = %(1, 2, 3);
+a = [1, 2, 3];
 println(a.minIndex); // prints '0'
 ....
 
@@ -676,7 +676,7 @@ Returns number of elements in the array.
 .Example
 [.source]
 ....
-a = %(1, 2, 3);
+a = [1, 2, 3];
 println(a.size); // prints '3'
 ....
 
@@ -688,7 +688,7 @@ Appends new element to the array. Returns highest index in the array - that's in
 .Example
 [.source]
 ....
-a = %("a","b","c");
+a = ["a","b","c"];
 a.append("d");
 println(a); // prints '[a, b, c, d]'
 ....
@@ -700,8 +700,8 @@ Appends elements of `anotherArray` to the array. Returns highest index in the ar
 .Example
 [.source]
 ....
-a = %(1,2);
-b = %(3,4);
+a = [1,2];
+b = [3,4];
 a.appendAll(b);
 println(a); // prints '[1, 2, 3, 4]'
 ....
@@ -725,7 +725,7 @@ Concatenated string
 .Example
 [.source]
 ----
-a = %(1, 2, 3, 4);
+a = [1, 2, 3, 4];
 b = a.join(";");
 println(b); // will print "1;2;3;4"
 ----
@@ -752,8 +752,8 @@ Inserts elements of `anotherArray` to the array at `index`. Indexes of existing 
 .Example
 [.source]
 ....
-a = %(1,2);
-b = %(3,4);
+a = [1,2];
+b = [3,4];
 a.insertAll(1,b);
 println(a); // prints '[1, 3, 4, 2]'
 ....
@@ -766,7 +766,7 @@ Removes element with highest index from the array. Using `push(value)` and `pop(
 .Example
 [.source]
 ....
-a = %();
+a = []);
 a.push("one");
 a.push("two");
 println(a.pop());
@@ -784,7 +784,7 @@ Removes element at specified `index`. Indexes of elements that have index greate
 .Example
 [.source]
 ....
-a = %(1,2,3);
+a = [1,2,3];
 a.remove(0);
 println(a);
 ....
@@ -801,11 +801,11 @@ Printed array is automatically converted to string.
 
 [source,c]
 ----
-a = %(1, 2, 3, 4, 5, 6, 7);
+a = [1, 2, 3, 4, 5, 6, 7];
 println(a); // will print "[1, 2, 3, 4, 5, 6, 7]"
 println(a .. " is an array"); // will print "[1, 2, 3, 4, 5, 6, 7] is an array"
-println(%("one", "two")); // will print "[one, two]"
-println(%(2, "text", %(1, 2, 3))); // will print "[2, text, [1, 2, 3]]"
+println([]"one", "two"]); // will print "[one, two]"
+println([2, "text", [1, 2, 3]]); // will print "[2, text, [1, 2, 3]]"
 ----
 
 

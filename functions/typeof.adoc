@@ -26,7 +26,7 @@ Name of the type.
 int32
 >>> typeof(1L)
 int64
->>> typeof(%(1, 2, 3))
+>>> typeof([1, 2, 3])
 array
 >>> typeof(new Table())
 object
