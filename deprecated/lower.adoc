@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 5.0.*
-Please use <<class-string-toLowercase>>.
+Please use <<class-string-toLowerCase>>.
 ====
 ****
 
