@@ -4,14 +4,8 @@
 
 Represent network zone. Inherit all attributes and methods of the <<class-netobj>> class.
 
-==== Instance attributes
 
-****
-[IMPORTANT]
-====
-*Previously available attributes proxyNode and proxyNodeId were deprecated starting from version 3.0.*
-====
-****
+==== Instance attributes
 
 `proxyNodes => Array<Node>`::
 Array of <<class-node>> objects that are currently set as proxies for this zone.

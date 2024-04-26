@@ -15,7 +15,9 @@ Please use <<class-string-lastIndexOf>>.
 rindex(string, substring, position) => Integer
 ----
 
-Returns the position of the last occurrence of substring in string up to or before position if specified. All index values are 1-based (i.e. the first character has index 1, not 0).
+Returns the position of the last occurrence of substring in string up to or
+before position if specified. All index values are 1-based (i.e. the first
+character has index 1, not 0).
 
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]

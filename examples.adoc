@@ -346,7 +346,7 @@ for(ia = 0; ia < upTo; ia++)
 }
 p95AvgLoss = pLoss / pCount;
 
-trace(1, "Global Ping Loss 95 Summary: arrayI=".arrayI." upTo=".upTo." p95AvgLoss=".p95AvgLoss );
+trace(1, "Global Ping Loss 95 Summary: arrayI=" .. arrayI .. " upTo=" .. upTo .. " p95AvgLoss=" .. p95AvgLoss );
 
 return p95AvgLoss;
 }
@@ -361,7 +361,7 @@ function bubbleSort(arr)
 			ib = ia - 1;
 
 			if (arr[ib] > arr[ia]){
-				trace(3,"swap: ".ib.":".arr[ib]." with ".ia.":".arr[ia]);
+				trace(3, "swap: " .. ib .. ":" .. arr[ib] .. " with " .. ia .. ":" .. arr[ia]);
 				swapped=true;
 				t = arr[ib];
 				arr[ib] = arr[ia];
@@ -376,7 +376,7 @@ function printArray(arr)
 {
 	for(ia = 0; arr[ia] != null; ia++)
 	{
-		trace(1,"printArray: ".ia.":".arr[ia]);
+		trace(1, "printArray: " .. ia .. ":" .. arr[ia]);
 	}
 }
 ----

@@ -16,11 +16,12 @@ Get last value of DCI with given name on given node.
 |name|String|DCI name (parameter's name for agent or internal source, and OID for SNMP source).
 |===
 
-.Return
-Last value for given DCI (string for normal DCIs and <<class-table,Table object>> for table DCIs) or null if DCI with given name does not exist or has no collected values.
+.Return Last value for given DCI (string for normal DCIs and <<class-table,Table
+object>> for table DCIs) or null if DCI with given name does not exist or has no
+collected values.
 
 .Example
 [.source]
 ....
-GetDCIValueByName($node, "Agent.Version")	// "1.2.0"
+GetDCIValueByName($node, "Agent.Version")	// "5.0.0"
 ....

@@ -37,7 +37,7 @@ Array of <<class-snmpvarbind>> or `null` or failure.
 >>>     vars = SNMPWalk(transport, oid);
 >>>     if (vars != null) {
 >>>         foreach (v: vars) {
->>>             trace(1, v->name."=".v->value);
+>>>             trace(1, v->name .. "=" .. v->value);
 >>>         }
 >>>     }
 >>> }

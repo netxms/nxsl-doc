@@ -137,7 +137,7 @@ myFunction();
 
 function myFunction()
 {
-    println("x=" . x);
+    println("x=" .. x);
 }
 ----
 
@@ -153,7 +153,7 @@ myFunction();
 
 function myFunction()
 {
-    println("x=" . x);
+    println("x=" .. x);
 }
 ----
 
@@ -201,7 +201,7 @@ function adds two numbers and prints the result:
 function add()
 {
     result = $1 + $2;
-    println("The result was: " . result);
+    println("The result was: " .. result);
 }
 ----
 
@@ -220,7 +220,7 @@ provided in function declaration inside the brackets:
 function add(numberA, numberB)
 {
     result = numberA + numberB;
-    println("The result was: " . result);
+    println("The result was: " .. result);
 }
 ----
 
@@ -527,7 +527,7 @@ Returns this string with whitespace from both sides removed.
 .Example
 [.source]
 ....
-println("|" . "  ABC  "->trim() . "|") // prints "|ABC|"
+println("|" .. "  ABC  "->trim() .. "|") // prints "|ABC|"
 ....
 
 
@@ -538,7 +538,7 @@ Returns this string with whitespace from left side removed.
 .Example
 [.source]
 ....
-println("|" . "  ABC  "->trimLeft() . "|") // prints "|ABC   |"
+println("|" .. "  ABC  "->trimLeft() .. "|") // prints "|ABC   |"
 ....
 
 
@@ -549,7 +549,7 @@ Returns this string with whitespace from right side removed.
 .Example
 [.source]
 ....
-println("|" . "  ABC  "->trimRight() . "|") // prints "|   ABC|"
+println("|" .. "  ABC  "->trimRight() .. "|") // prints "|   ABC|"
 ....
 
 
@@ -779,7 +779,7 @@ Same as `append()`.
 
 
 `remove(index) => void`::
-Removes element at specified `index`. Indexes of elements that have index greater or equal to `index` are decremented. 
+Removes element at specified `index`. Indexes of elements that have index greater or equal to `index` are decremented.
 
 .Example
 [.source]
@@ -803,7 +803,7 @@ Printed array is automatically converted to string.
 ----
 a = %(1, 2, 3, 4, 5, 6, 7);
 println(a); // will print "[1, 2, 3, 4, 5, 6, 7]"
-println(a . " is an array"); // will print "[1, 2, 3, 4, 5, 6, 7] is an array"
+println(a .. " is an array"); // will print "[1, 2, 3, 4, 5, 6, 7] is an array"
 println(%("one", "two")); // will print "[one, two]"
 println(%(2, "text", %(1, 2, 3))); // will print "[2, text, [1, 2, 3]]"
 ----
@@ -813,11 +813,11 @@ println(%(2, "text", %(1, 2, 3))); // will print "[2, text, [1, 2, 3]]"
 
 Hash map allows to store data values in key:value pairs. A key is string. Numeric 
 type can also be supplied as key, but it will be internally converted to string. 
-Hash map cannot have two items with the same key. 
-The values can be of any data type, including null, objects, arrays or hash maps. 
+Hash map cannot have two items with the same key.
+The values can be of any data type, including null, objects, arrays or hash maps.
 
 Hash maps are not objects, it's a separate variable type. However, hash maps have
-methods and attributes described below. 
+methods and attributes described below.
 
 Array elements can be accessed using [key] operator. For example, to
 access element with key key of hash map h you should use
@@ -916,8 +916,8 @@ Printed array is automatically converted to string.
 [source,c]
 ----
 h = %{"key1":123, "key2":456};
-println("This is a hash map: " . string(h));
-println("Or we can just print it this way: " . h);
+println("This is a hash map: " .. string(h));
+println("Or we can just print it this way: " .. h);
 ----
 
 
@@ -1048,8 +1048,8 @@ NXSL supports C-style pre- and post-increment and decrement operators.
 [cols="<33,<33,<33",options="header"]
 |===
 | Example| Name| Result
-|`.`| Concatenation operator| Returns the concatenation of its right and left arguments.
-|`.=`| Concatenating assignment operator| Appends the argument on the right side to the argument on the left side.
+|`..`| Concatenation operator| Returns the concatenation of its right and left arguments.
+|`..=`| Concatenating assignment operator| Appends the argument on the right side to the argument on the left side.
 |`[a:b]`| Substring operator| Returns substring of a string from the character with index `a` inclusive till the character with index `b` exclusive. Example: "1234"[1:3] will be "23". If `a` is omitted then substring will be taken from the start of the string and if `b` is omitted then substring will be taken till the end of the string.
 |===
 
@@ -1309,7 +1309,7 @@ commonly used inside conditional execution, such as `if` statements.
 
 The last example of expressions is combined operator-assignment expressions.
 You already know that if you want to increment `a` by 1, you can simply write
-`a\++` or `++a`. But what if you want to add more than one to it, for
+`a\+\+` or `\+\+a`. But what if you want to add more than one to it, for
 instance 3? In NXSL, adding 3 to the current value of `a` can be written `a
 += 3`. This means exactly "take the value of `a`, add 3 to it, and assign it
 back into `a` ". In addition to being shorter and clearer, this also results
@@ -1351,7 +1351,9 @@ Without short-circuit evaluation, `trim(x)` would cause run-time error if
 
 ===  Regular expressions
 
-Since version 3.0, regular expression engine is changed to PCRE (Perl compatible). Syntax can be checked with `pcregrep`, perl itself or on https://regex101.com/[regex101.com] (select PCRE flavour).
+Since version 3.0, regular expression engine is changed to PCRE (Perl
+compatible). Syntax can be checked with `pcregrep`, perl itself or on
+https://regex101.com/[regex101.com] (select PCRE flavour).
 
 
 === Comments

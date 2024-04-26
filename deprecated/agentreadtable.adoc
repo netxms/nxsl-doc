@@ -29,12 +29,12 @@ Instance of <<class-table>> or `null` if failed.
 ....
 >>> t = AgentReadTable($node, "Agent.SubAgents");
 >>> for (c : t->columns) {
->>>   print(c->name . " | ");
+>>>   print(c->name .. " | ");
 >>> }
 >>> println("");
 >>> for (row : t->rows) {
 >>>   for(cell : row->values) {
->>>      print(cell . " | ");
+>>>      print(cell .. " | ");
 >>>   }
 >>>   println("");
 >>> }
