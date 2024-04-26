@@ -31,7 +31,7 @@ Concatenated string
 .Example
 [.source]
 ----
-a = %(1, 2, 3, 4);
+a = [1, 2, 3, 4];
 b = ArrayToString(a, ";");
 println(b); // will print "1;2;3;4"
 ----

@@ -18,7 +18,7 @@ Prints any text or text representation of object and adds new line symbol after 
 .Example
 [source,c]
 ----
-a = %("a", 1, 1.5);
+a = ["a", 1, 1.5];
 println("Array: ");
 println(a); 
 //Array: 

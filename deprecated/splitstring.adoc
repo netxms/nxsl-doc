@@ -30,6 +30,6 @@ Array with strings
 .Example
 [.source]
 ....
-SplitString("a;b;c;d", ";"); //Will be splited to %("a", "b", "c", "d")
-SplitString("abcd", ";"); //Will be splited to %("abcd")
+SplitString("a;b;c;d", ";"); //Will be splited to ["a", "b", "c", "d"]
+SplitString("abcd", ";"); //Will be splited to ["abcd"]
 ....
