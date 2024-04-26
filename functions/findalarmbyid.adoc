@@ -22,6 +22,6 @@ Finds alarm object by id
 [.source]
 ....
 alarm = FindAlarmById(72388); // Will find alarm with id 72388
-println(alarm->id); // Will print "72388"
-println(alarm->message); // Will print alarm message. For example: "Node down"
+println(alarm.id); // Will print "72388"
+println(alarm.message); // Will print alarm message. For example: "Node down"
 ....

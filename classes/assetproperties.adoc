@@ -6,6 +6,6 @@ Object contains all asset properties accessible by property name. So value of as
 
 [source,c]
 ----
-$node->assetProperties->ipAddr
+$node.assetProperties.ipAddr
 ----
 

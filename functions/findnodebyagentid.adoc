@@ -27,5 +27,5 @@ Instance of <<class-node>> object or `null` if not found or not accessible.
 [.source]
 ----
 node = FindNodeByAgentId("7e54f964-8942-504f-90eb-70e5d6abee92", $node);
-if (node != NULL) println(node->name); // Prints node name if node with given agent ID is found
+if (node != NULL) println(node.name); // Prints node name if node with given agent ID is found
 ----

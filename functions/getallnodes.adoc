@@ -16,7 +16,7 @@ Array of node objects.
 [.source]
 ....
 >>> for (n : GetAllNodes()) {
->>>   println(n->id . " - " . n->name);
+>>>   println(n.id . " - " . n.name);
 >>> }
 
 6766 - demo-netxms

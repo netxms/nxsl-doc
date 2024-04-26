@@ -95,7 +95,7 @@ global_variable_declaration ::=
 expression ::=
   "(" expression ")" |
   IDENTIFIER "=" expression |
-  expression "->" IDENTIFIER |
+  expression "." IDENTIFIER |
   "-" expression |
   "!" expression |
   "~" expression |

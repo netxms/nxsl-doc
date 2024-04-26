@@ -36,6 +36,6 @@ Instance of <<class-snmptransport>> or `null` if failed.
 [.source]
 ....
 >>> transport = CreateSNMPTransport(FindObject("Server1"))
->>> print transport->snmpVersion
+>>> print transport.snmpVersion
 2c
 ....

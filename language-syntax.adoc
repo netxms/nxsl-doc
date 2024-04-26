@@ -313,7 +313,7 @@ Returns "true" if string is empty or "false" otherwise.
 [.source]
 ....
 s = "";
-println(s->isEmpty); // prints "true"
+println(s.isEmpty); // prints "true"
 ....
 
 
@@ -325,7 +325,7 @@ Returns number of characters in the string.
 [.source]
 ....
 s = "1234567890";
-println(s->length); // prints '10'
+println(s.length); // prints '10'
 ....
 
 ==== String methods
@@ -342,12 +342,12 @@ values are converted to numberic type prior to comparison.
 .Example
 [.source]
 ....
-println("a"->compareTo("c")); // prints "-1"
-println("c"->compareTo("a")); // prints "1"
-println("a"->compareTo("aaa")); // prints "-1"
-println("aaa"->compareTo("a")); // prints "1"
+println("a".compareTo("c")); // prints "-1"
+println("c".compareTo("a")); // prints "1"
+println("a".compareTo("aaa")); // prints "-1"
+println("aaa".compareTo("a")); // prints "1"
 
-println("100"->compareTo("100.0")); // prints "-1"
+println("100".compareTo("100.0")); // prints "-1"
 println("100" == "100.0"); // prints true
 ....
 
@@ -358,7 +358,7 @@ Same as `compareTo`, but ignoring the case.
 .Example
 [.source]
 ....
-println("aaa"->compareToIgnoreCase("AAA")); // prints "0"
+println("aaa".compareToIgnoreCase("AAA")); // prints "0"
 ....
 
 
@@ -368,7 +368,7 @@ Returns `true`` if this string contains the argument string or `false` otherwise
 .Example
 [.source]
 ....
-println("aaa"->contains("a")); // prints "true"
+println("aaa".contains("a")); // prints "true"
 ....
 
 
@@ -378,8 +378,8 @@ Returns `true`` if this string ends with the argument string or `false` otherwis
 .Example
 [.source]
 ....
-println("abc"->endsWith("d")); // prints "false"
-println("Just a sentence"->endsWith("a sentence")); // prints "true"
+println("abc".endsWith("d")); // prints "false"
+println("Just a sentence".endsWith("a sentence")); // prints "true"
 ....
 
 
@@ -390,7 +390,7 @@ Returns `true` if argument string is equal to this string ignoring the case or
 .Example
 [.source]
 ....
-println("abc"->equalsIgnoreCase("ABC")); // prints "true"
+println("abc".equalsIgnoreCase("ABC")); // prints "true"
 ....
 
 
@@ -402,9 +402,9 @@ if the argument is not a substring of the string.
 .Example
 [.source]
 ....
-println("ABC-DEF-GHI"->indexOf("-")); // prints "3"
-println("ABC-DEF-GHI"->indexOf("ABC")); // prints "0"
-println("ABC-DEF-GHI"->indexOf("JKL")); // prints "-1"
+println("ABC-DEF-GHI".indexOf("-")); // prints "3"
+println("ABC-DEF-GHI".indexOf("ABC")); // prints "0"
+println("ABC-DEF-GHI".indexOf("JKL")); // prints "-1"
 ....
 
 
@@ -416,9 +416,9 @@ if the argument is not a substring of the string.
 .Example
 [.source]
 ....
-println("ABC-DEF-GHI"->lastIndexOf("-")); // prints "7"
-println("ABC-DEF-GHI"->lastIndexOf("ABC")); // prints "0"
-println("ABC-DEF-GHI"->lastIndexOf("JKL")); // prints "-1"
+println("ABC-DEF-GHI".lastIndexOf("-")); // prints "7"
+println("ABC-DEF-GHI".lastIndexOf("ABC")); // prints "0"
+println("ABC-DEF-GHI".lastIndexOf("JKL")); // prints "-1"
 ....
 
 
@@ -431,9 +431,9 @@ optional, if not specified, space character will be used for padding.
 .Example
 [.source]
 ....
-println("ABCDEFGHI"->left(2)); // prints "AB"
-println("123"->left(5)); // prints "123  "
-println("123"->left(5, "_")); // prints "123__"
+println("ABCDEFGHI".left(2)); // prints "AB"
+println("123".left(5)); // prints "123  "
+println("123".left(5, "_")); // prints "123__"
 ....
 
 
@@ -444,7 +444,7 @@ Returns string where all occurencies of `whatToReplace` are replaced with `repla
 .Example
 [.source]
 ....
-println("A B C A D K L"->replace("A", "<A>")); // prints "<A> B C <A> D K L"
+println("A B C A D K L".replace("A", "<A>")); // prints "<A> B C <A> D K L"
 ....
 
 
@@ -457,9 +457,9 @@ optional, if not specified, space character will be used for padding.
 .Example
 [.source]
 ....
-println("ABCDEFGHI"->right(2)); // prints "HI"
-println("123"->right(5)); // prints "  123"
-println("123"->right(5, "_")); // prints "__123"
+println("ABCDEFGHI".right(2)); // prints "HI"
+println("123".right(5)); // prints "  123"
+println("123".right(5, "_")); // prints "__123"
 ....
 
 
@@ -470,7 +470,7 @@ Split string into array of strings at given separator.
 .Example
 [.source]
 ....
-println("ABC--DEF--GHI"->split("--")); // prints "[ABC, DEF, GHI]"
+println("ABC--DEF--GHI".split("--")); // prints "[ABC, DEF, GHI]"
 ....
 
 
@@ -480,8 +480,8 @@ Returns `true`` if this string starts with the argument string or `false` otherw
 .Example
 [.source]
 ....
-println("abc"->startsWith("d")); // prints "false"
-println("Just a sentence"->startsWith("Just a")); // prints "true"
+println("abc".startsWith("d")); // prints "false"
+println("Just a sentence".startsWith("Just a")); // prints "true"
 ....
 
 
@@ -492,9 +492,9 @@ Returns substring of this string starting from `position` and containing `number
 .Example
 [.source]
 ....
-println("ABCDEFGHIJK"->substring(0,3)); // prints "ABC"
-println("ABCDEFGHIJK"->substring(6,3)); // prints "GHI"
-println("ABCDEFGHIJK"->substring(6,10)); // prints "GHIJK"
+println("ABCDEFGHIJK".substring(0,3)); // prints "ABC"
+println("ABCDEFGHIJK".substring(6,3)); // prints "GHI"
+println("ABCDEFGHIJK".substring(6,10)); // prints "GHIJK"
 ....
 
 
@@ -505,7 +505,7 @@ Converts this string to lowercase.
 .Example
 [.source]
 ....
-println("ABC def"->toLowerCase()); // prints "abc def"
+println("ABC def".toLowerCase()); // prints "abc def"
 ....
 
 
@@ -516,7 +516,7 @@ Converts this string to uppercase.
 .Example
 [.source]
 ....
-println("ABC def"->toUpperCase()); // prints "ABC DEF"
+println("ABC def".toUpperCase()); // prints "ABC DEF"
 ....
 
 
@@ -527,7 +527,7 @@ Returns this string with whitespace from both sides removed.
 .Example
 [.source]
 ....
-println("|" .. "  ABC  "->trim() .. "|") // prints "|ABC|"
+println("|" .. "  ABC  ".trim() .. "|") // prints "|ABC|"
 ....
 
 
@@ -538,7 +538,7 @@ Returns this string with whitespace from left side removed.
 .Example
 [.source]
 ....
-println("|" .. "  ABC  "->trimLeft() .. "|") // prints "|ABC   |"
+println("|" .. "  ABC  ".trimLeft() .. "|") // prints "|ABC   |"
 ....
 
 
@@ -549,7 +549,7 @@ Returns this string with whitespace from right side removed.
 .Example
 [.source]
 ....
-println("|" .. "  ABC  "->trimRight() .. "|") // prints "|   ABC|"
+println("|" .. "  ABC  ".trimRight() .. "|") // prints "|   ABC|"
 ....
 
 
@@ -654,8 +654,8 @@ Returns highest index in the array.
 [.source]
 ....
 a = %(1, 2, 3);
-println(a->maxIndex); // prints '2'
-println(a[a->maxIndex]); // prints '3'
+println(a.maxIndex); // prints '2'
+println(a[a.maxIndex]); // prints '3'
 ....
 
 
@@ -666,7 +666,7 @@ Returns lowest index in the array.
 [.source]
 ....
 a = %(1, 2, 3);
-println(a->minIndex); // prints '0'
+println(a.minIndex); // prints '0'
 ....
 
 
@@ -677,7 +677,7 @@ Returns number of elements in the array.
 [.source]
 ....
 a = %(1, 2, 3);
-println(a->size); // prints '3'
+println(a.size); // prints '3'
 ....
 
 ==== Array methods
@@ -689,7 +689,7 @@ Appends new element to the array. Returns highest index in the array - that's in
 [.source]
 ....
 a = %("a","b","c");
-a->append("d");
+a.append("d");
 println(a); // prints '[a, b, c, d]'
 ....
 
@@ -702,7 +702,7 @@ Appends elements of `anotherArray` to the array. Returns highest index in the ar
 ....
 a = %(1,2);
 b = %(3,4);
-a->appendAll(b);
+a.appendAll(b);
 println(a); // prints '[1, 2, 3, 4]'
 ....
 
@@ -726,7 +726,7 @@ Concatenated string
 [.source]
 ----
 a = %(1, 2, 3, 4);
-b = a->join(";");
+b = a.join(";");
 println(b); // will print "1;2;3;4"
 ----
 
@@ -739,7 +739,7 @@ Inserts new element to the array at `index`. Indexes of existing elements that h
 array a;
 a[0] = "aaa";
 a[10] = "ccc";
-a->insert(5, "bbb");
+a.insert(5, "bbb");
 println(a[0]);  // prints "aaa"
 println(a[5]);  // prints "bbb" 
 println(a[11]);  // prints "ccc" - because of the insert operation this element's index is now 11. 
@@ -754,7 +754,7 @@ Inserts elements of `anotherArray` to the array at `index`. Indexes of existing 
 ....
 a = %(1,2);
 b = %(3,4);
-a->insertAll(1,b);
+a.insertAll(1,b);
 println(a); // prints '[1, 3, 4, 2]'
 ....
 
@@ -767,10 +767,10 @@ Removes element with highest index from the array. Using `push(value)` and `pop(
 [.source]
 ....
 a = %();
-a->push("one");
-a->push("two");
-println(a->pop());
-println(a->pop());
+a.push("one");
+a.push("two");
+println(a.pop());
+println(a.pop());
 ....
 
 
@@ -785,7 +785,7 @@ Removes element at specified `index`. Indexes of elements that have index greate
 [.source]
 ....
 a = %(1,2,3);
-a->remove(0);
+a.remove(0);
 println(a);
 ....
 
@@ -853,7 +853,7 @@ Returns array with keys of items in the hash map.
 [.source]
 ....
 h = %{100:"value1", 101:"value2"};
-println(h->keys); // prints '[100,101]'
+println(h.keys); // prints '[100,101]'
 ....
 
 
@@ -864,7 +864,7 @@ Returns number of items in the hash map.
 [.source]
 ....
 h = %{"a":null, "b":null, "c":null};
-println(h->size); // prints '3'
+println(h.size); // prints '3'
 ....
 
 
@@ -875,7 +875,7 @@ Returns array with values of items in the hash map.
 [.source]
 ....
 h = %{"key1":123, "key2":456};
-println(h->keys); // prints '[123,456]'
+println(h.keys); // prints '[123,456]'
 ....
 
 
@@ -888,7 +888,7 @@ Returns `true`, if hash map contains specified key or `false` otherwise.
 [.source]
 ....
 h = %{"key1":123, "key2":456};
-println(h->contains("key2")); // prints 'true'
+println(h.contains("key2")); // prints 'true'
 ....
 
 
@@ -899,7 +899,7 @@ Removes item with specified `key`.
 [.source]
 ....
 h = %{"key1":123, "key2":456};
-h->remove("key1");
+h.remove("key1");
 println(h); // prints '{key2=456}'
 ....
 
@@ -1250,14 +1250,14 @@ with
   _down = { return SecondsToUptime(time() - downSince); },
  _oldestAlarm = {
   oldestAlarmTime = 99999999999;
-  for (a : $node->alarms) {
-   oldestAlarmTime = min(oldestAlarmTime, a->creationTime);
+  for (a : $node.alarms) {
+   oldestAlarmTime = min(oldestAlarmTime, a.creationTime);
   }
   return strftime("%Y-%m-%d %H:%M", oldestAlarmTime);
  }
 type == NODE and state & NodeState::Unreachable
 //In Object query object attributes are available just using name.
-//Like state ($node->state in other scripts)
+//Like state ($node.state in other scripts)
 ----
 
 ====  return

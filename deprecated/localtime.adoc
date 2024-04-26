@@ -31,6 +31,6 @@ either time given in time argument or current time if time is omitted.
 .Example
 [.source]
 ....
-println(localtime(time())->year); //Will print 2020
-println(localtime()->year); //Will print 2020
+println(localtime(time()).year); //Will print 2020
+println(localtime().year); //Will print 2020
 ....

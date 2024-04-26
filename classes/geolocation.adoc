@@ -61,26 +61,26 @@ Create instance of the class based on floating-point `latitude` and `longitude`.
 
 .Print node location
 ----
->>> nodeLoc = $node->geolocation
->>> println(nodeLoc->latitudeText)
+>>> nodeLoc = $node.geolocation
+>>> println(nodeLoc.latitudeText)
 N 48° 00' 0.000"
->>> println(nodeLoc->longitudeText)
+>>> println(nodeLoc.longitudeText)
 E 22° 00' 0.000"
 ----
 
 .Set node location
 ----
 >>> nodeLoc = GeoLocation(22.11, 48.12, 1)
->>> $node->setGeoLocation(nodeLoc)
->>> println($node->geolocation->latitudeText)
+>>> $node.setGeoLocation(nodeLoc)
+>>> println($node.geolocation.latitudeText)
 N 48° 12' 0.000"
->>> println($node->geolocation->longitudeText)
+>>> println($node.geolocation.longitudeText)
 E 22° 11' 0.000"
 ----
 
 .Clear location
 ----
->>> $node->clearGeoLocation()
->>> println($node->geolocation)
+>>> $node.clearGeoLocation()
+>>> println($node.geolocation)
 null
 ----
