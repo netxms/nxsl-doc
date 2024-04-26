@@ -33,6 +33,6 @@ Array of objects of class <<class-interface>>, with first object placed at index
 interfaces = GetNodeInterfaces($node);
 for(i : interfaces)
 {
-	trace(1, "Interface: name='" . i->name . "' id=" . i->id);
+	trace(1, "Interface: name='" .. i->name .. "' id=" .. i->id);
 }
 ....

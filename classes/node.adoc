@@ -493,7 +493,7 @@ Execute agent command (action) on node.
 |===
 
 .Return
-True if command execution is successful or false otherwise. 
+True if command execution is successful or false otherwise.
 
 `executeAgentCommandWithOutput(command, …) => String`::
 Execute agent command (action) on node and return it's output.
@@ -506,7 +506,7 @@ Execute agent command (action) on node and return it's output.
 |===
 
 .Return
-String with output of the command or null on failure. 
+String with output of the command or null on failure.
 
 `executeSSHCommand(command) => array`::
 Execute SSH command on node.

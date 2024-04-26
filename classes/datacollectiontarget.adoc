@@ -16,7 +16,7 @@ Returns array of templates (<<class-template>>) applied on this object. Return v
 templates = $node->templates;
 foreach(t : templates)
 {
-	trace(1, "Template object: name='" . t->name . "' id=" . t->id);
+	trace(1, "Template object: name='" .. t->name .. "' id=" .. t->id);
 }
 ....
 

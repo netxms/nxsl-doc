@@ -17,8 +17,9 @@ Web service description
 
 ==== Instance methods
 
-`get(...) => <<class-webserviceresponse>>`::
-Execute GET request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion. 
+`get(...) => <<class-webserviceresponse>>`:: Execute GET request from agent on
+associated node. Associated node is the node on which getWebService method was
+executed. This node is used for macro expansion. 
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -40,8 +41,9 @@ result = webSvc->get("additional", "parameters");
 println(result->document); // will print result
 ....
 
-`delete(...) => <<class-webserviceresponse>>`::
-Execute DELETE request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
+`delete(...) => <<class-webserviceresponse>>`:: Execute DELETE request from
+agent on associated node. Associated node is the node on which getWebService
+method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -63,8 +65,9 @@ result = webSvc->delete("additional", "parameters");
 println(result->success); //will print "true" if request was successful or "false" otherwise
 ....
 
-`patch(data, contentType, ...) => <<class-webserviceresponse>>`::
-Execute PATCH request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
+`patch(data, contentType, ...) => <<class-webserviceresponse>>`:: Execute PATCH
+request from agent on associated node. Associated node is the node on which
+getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -91,8 +94,9 @@ result = webSvc->patch(json,"application/json", "additional", "parameters");
 println(result->success); //will print "true" if request was successful or "false" otherwise
 ....
 
-`post(data, contentType, ...) => <<class-webserviceresponse>>`::
-Execute POST request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
+`post(data, contentType, ...) => <<class-webserviceresponse>>`:: Execute POST
+request from agent on associated node. Associated node is the node on which
+getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -119,8 +123,9 @@ result = webSvc->post(json,"application/json", "additional", "parameters");
 println(result->success); //will print "true" if request was successful or "false" otherwise
 ....
 
-`put(data, contentType, ...) => <<class-webserviceresponse>>`::
-Execute PUT request from agent on associated node. Associated node is the node on which getWebService method was executed. This node is used for macro expansion.
+`put(data, contentType, ...) => <<class-webserviceresponse>>`:: Execute PUT
+request from agent on associated node. Associated node is the node on which
+getWebService method was executed. This node is used for macro expansion.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]

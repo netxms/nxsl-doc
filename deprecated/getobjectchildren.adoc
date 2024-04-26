@@ -34,6 +34,6 @@ Array of <<class-netobj>> instances.
 children = GetObjectChildren($node);
 for(p : children)
 {
-	trace(1, "Child object: name='" . p->name . "' id=" . p->id);
+	trace(1, "Child object: name='" .. p->name .. "' id=" .. p->id);
 }
 ....

@@ -10,7 +10,8 @@ Please use <<class-netobj-delete>> instead.
 ====
 ****
 
-NOTE: This function is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+NOTE: This function is enabled by default, but can be disabled by setting
+configuration parameter "NXSL.EnableContainerFunctions".
 
 [source,c]
 ----

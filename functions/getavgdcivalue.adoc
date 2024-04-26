@@ -27,6 +27,6 @@ Average value or `null` on failure.
 >>> obj = FindObject("Server1");
 >>> dciID = FindDCIByName(obj, "CPU.Usage")
 >>> val = GetAvgDCIValue(obj, dciId, 0, time()); // time range from January 1, 1970 untill now
->>> println("Average CPU Usage: ". val . "%");
+>>> println("Average CPU Usage: ".. val .. "%");
 Average CPU Usage: 17%
 ....

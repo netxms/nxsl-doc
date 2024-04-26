@@ -33,6 +33,6 @@ Array of objects of <<class-netobj,class NetObj>> or inherited from it, with fir
 parents = GetNodeParents($node);
 foreach(p : parents)
 {
-	trace(1, "Parent object: name='" . p->name . "' id=" . p->id);
+	trace(1, "Parent object: name='" .. p->name .. "' id=" .. p->id);
 }
 ....

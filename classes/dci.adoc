@@ -10,7 +10,7 @@ Represents Data Collection Item (DCI).
 Severity of the active threshold. If there are no active thresholds, defaults to `0` (NORMAL).
 
 `comments => String`::
-DCI Comments (since 2.0-M5)
+DCI Comments
 
 `dataType => Integer`::
 <<const-dci-datatype,Data type>> of the DCI.

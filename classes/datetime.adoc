@@ -2,7 +2,9 @@
 [[class-datetime]]
 === DateTime
 
-Class containing a calendar date and time broken down into its components. For convenience, all attributes has aliases to match https://cplusplus.com/reference/ctime/tm/[struct tm] provided in libc.
+Class containing a calendar date and time broken down into its components. For
+convenience, all attributes has aliases to match
+https://cplusplus.com/reference/ctime/tm/[struct tm] provided in libc.
 
 All class attributes are settable.
 
@@ -84,8 +86,9 @@ Creates new DateTime with provided local time in UNIX time format.
 |timestamp|Integer|UNIX time (number of seconds since epoch).
 |===
 
-`DateTime(time, isUTC)`::
-Creates new DateTime object with provided time. Current time will be counted as UTC time if second parameter is true and as local time if second parameter is false.
+`DateTime(time, isUTC)`:: Creates new DateTime object with provided time.
+Current time will be counted as UTC time if second parameter is true and as
+local time if second parameter is false.
 
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]

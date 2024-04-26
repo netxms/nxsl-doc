@@ -13,10 +13,10 @@ Object name (OID string).
 ASN.1 type.
 
 `value => String`::
-Object value as a string. 
+Object value as a string.
 
 `printableValue => String`::
-Object value as a string with non-printable characters replaced by `?` character. 
+Object value as a string with non-printable characters replaced by `?` character.
 
 `valueAsIp => String`::
 Object value IP address, represented as string.
@@ -31,4 +31,4 @@ Object value as MAC address, represented as string.
 Returns object value as <<class-bytestream>>.
 
 `getValueAsString(codepage) => String`::
-Constructs a new String by decoding the varbind value using the specified codepage. 
+Constructs a new String by decoding the varbind value using the specified codepage.
