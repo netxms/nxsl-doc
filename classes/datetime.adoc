@@ -49,6 +49,7 @@ UNIX time (number of seconds since epoch).
 
 ==== Instane methods
 
+[[class-datetime-format,DateTime::format()]]
 `format(format) => void`::
 Formats a timestamp, and returns a string according to given formatting rules.
 
