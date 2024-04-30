@@ -2,10 +2,31 @@
 
 Available only if 'NXSL.EnableFileIOFunctions' configuration parameter is turned on. 
 
-include::functions/copyfile.adoc[]
-include::functions/createdirectory.adoc[]
-include::functions/deletefile.adoc[]
-include::functions/fileaccess.adoc[]
-include::functions/openfile.adoc[]
-include::functions/removedirectory.adoc[]
-include::functions/renamefile.adoc[]
+All files functions are availabke under **IO** package. They can be used by importing 
+math package in the script or using package name before the function name. Package name 
+together with function name used in documwntation. 
+
+Example with import:
+
+.Example
+[source,c]
+----
+import IO;
+CopyFile("/tmp/source", "/tmp/destination") // Will copy "/tmp/source" file content to "/tmp/destination" file.
+----
+
+Example without import:
+
+.Example
+[source,c]
+----
+IO::CopyFile("/tmp/source", "/tmp/destination") // Will copy "/tmp/source" file content to "/tmp/destination" file.
+----
+
+include::functions/io/copyfile.adoc[]
+include::functions/io/createdirectory.adoc[]
+include::functions/io/deletefile.adoc[]
+include::functions/io/fileaccess.adoc[]
+include::functions/io/openfile.adoc[]
+include::functions/io/removedirectory.adoc[]
+include::functions/io/renamefile.adoc[]

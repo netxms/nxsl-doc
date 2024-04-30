@@ -21,8 +21,6 @@ include::functions/formatmetricprefix.adoc[]
 include::functions/findvendorbymacaddress.adoc[]
 
 include::functions/getconfigurationvariable.adoc[]
-include::functions/gethostbyaddr.adoc[]
-include::functions/gethostbyname.adoc[]
 
 include::functions/getmappingtablekeys.adoc[]
 
@@ -41,8 +39,6 @@ include::functions/maplist.adoc[]
 include::functions/print.adoc[]
 include::functions/println.adoc[]
 
-include::functions/random.adoc[]
-
 include::functions/readpersistentstorage.adoc[]
 
 include::functions/secondstouptime.adoc[]
@@ -59,5 +55,3 @@ include::functions/typeof.adoc[]
 include::functions/pollertrace.adoc[]
 
 include::functions/writepersistentstorage.adoc[]
-
-include::functions/weierstrass.adoc[]

@@ -1,7 +1,0 @@
-= Hashes and encoding
-
-include::functions/base64decode.adoc[]
-include::functions/base64encode.adoc[]
-include::functions/md5.adoc[]
-include::functions/sha1.adoc[]
-include::functions/sha256.adoc[]
