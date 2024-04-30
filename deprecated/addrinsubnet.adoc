@@ -2,6 +2,14 @@
 [[func-addrinsubnet]]
 == AddrInSubnet()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-inetaddress-samesubnet>>.
+====
+****
+
 `AddrInSubnet(address, subnet, mask) => Boolean`::
 
 Checks if given IP address is within given subnet (including subnet and broadcast addresses). IPv4 and IPv6 are supported. 

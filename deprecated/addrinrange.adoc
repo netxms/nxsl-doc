@@ -2,6 +2,14 @@
 [[func-addrinrange]]
 == AddrInRange()
 
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<class-inetaddress-inrange>> or <<class-inetaddress-contains>>.
+====
+****
+
 `AddrInRange(address, start, end) => Boolean`::
 
 Check if IP address is within given range. IPv4 and IPv6 are supported. 

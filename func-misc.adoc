@@ -2,9 +2,6 @@
 
 include::functions/_exit.adoc[]
 
-include::functions/addrinrange.adoc[]
-include::functions/addrinsubnet.adoc[]
-
 include::functions/assert.adoc[]
 
 include::functions/classof.adoc[]
