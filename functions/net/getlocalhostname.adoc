@@ -1,5 +1,5 @@
 [.nxsl-function]
-[[func-net-resolveaddress]]
+[[func-net-getlocalhostname]]
 == Net::GetLocalHostName()
 
 [source,c]

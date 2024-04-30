@@ -40,6 +40,60 @@ Internet address, one of:
 `mask => Integer`::
 Address bit mask
 
+==== Instance methods
+
+[[class-inetaddress-contains,InetAddress::contains()]]
+`contains(address) => void`::
+If subnet contains internet address
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|address|<<class-inetaddress>>|Address to check for
+|===
+
+.Return 
+`TRUE` if contains, otherwise `FALSE`
+
+`equals(address) => void`::
+If adresses are equals
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|address|<<class-inetaddress>>|Address to check to
+|===
+
+.Return 
+`TRUE` if adresses are equals, otherwise `FALSE`
+
+[[class-inetaddress-inrange,InetAddress::inRange()]]
+`inRange(addressStart, addressEnd) => void`::
+If adresse is in range
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|addressStart|<<class-inetaddress>>|Start of the range address
+|addressEnd|<<class-inetaddress>>|End of the range address
+|===
+
+.Return 
+`TRUE` if adresse is in range, otherwise `FALSE`
+
+[[class-inetaddress-samesubnet,InetAddress::sameSubnet()]]
+`sameSubnet(address) => void`::
+If adresses are in the same subnet (using mask bits from this InetAddress) 
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|address|<<class-inetaddress>>|IP address
+|===
+
+.Return 
+`TRUE` if adresses are in the same subnet, otherwise `FALSE`
+
 ==== Constructors
 
 `InetAddress()`::
