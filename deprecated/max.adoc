@@ -1,0 +1,33 @@
+[.nxsl-function]
+[[func-max]]
+== max()
+
+****
+[IMPORTANT]
+====
+*This function is deprecated starting from version 5.0.*
+Please use <<func-math-max>> instead.
+====
+****
+
+[source,c]
+----
+max(number1 ,number2], ...) => void
+----
+
+Returns maximal value from a list of values.
+
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|numbers|Integer|Numbers separated by comma
+|===
+
+.Return
+Maximal value of numbers.
+
+.Example
+[.source]
+....
+max(2, 3, 4, 8); //Will print "8"
+....

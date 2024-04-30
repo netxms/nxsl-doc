@@ -1,23 +1,46 @@
 = Math
 
-include::functions/abs.adoc[]
-include::functions/acos.adoc[]
-include::functions/asin.adoc[]
-include::functions/atan.adoc[]
-include::functions/atan2.adoc[]
-include::functions/ceil.adoc[]
-include::functions/cos.adoc[]
-include::functions/cosh.adoc[]
-include::functions/exp.adoc[]
-include::functions/floor.adoc[]
-include::functions/log.adoc[]
-include::functions/log10.adoc[]
-include::functions/max.adoc[]
-include::functions/min.adoc[]
-include::functions/pow.adoc[]
-include::functions/round.adoc[]
-include::functions/sin.adoc[]
-include::functions/sinh.adoc[]
-include::functions/sqrt.adoc[]
-include::functions/tan.adoc[]
-include::functions/tanh.adoc[]
+All math functions are availabke under **Math** package. They can be used by importing 
+math package in the script or using package name before the function name. Package name 
+together with function name used in documwntation. 
+
+Example with import:
+
+.Example
+[source,c]
+----
+import Math;
+println(Atan2(1, 0.5)); //Result: 1.107149
+----
+
+Example without import:
+
+.Example
+[source,c]
+----
+println(Math::Atan2(1, 0.5)); //Result: 1.107149
+----
+
+include::functions/math/abs.adoc[]
+include::functions/math/acos.adoc[]
+include::functions/math/asin.adoc[]
+include::functions/math/atan.adoc[]
+include::functions/math/atan2.adoc[]
+include::functions/math/ceil.adoc[]
+include::functions/math/cos.adoc[]
+include::functions/math/cosh.adoc[]
+include::functions/math/exp.adoc[]
+include::functions/math/floor.adoc[]
+include::functions/math/log.adoc[]
+include::functions/math/log10.adoc[]
+include::functions/math/max.adoc[]
+include::functions/math/min.adoc[]
+include::functions/math/pow.adoc[]
+include::functions/math/random.adoc[]
+include::functions/math/round.adoc[]
+include::functions/math/sin.adoc[]
+include::functions/math/sinh.adoc[]
+include::functions/math/sqrt.adoc[]
+include::functions/math/tan.adoc[]
+include::functions/math/tanh.adoc[]
+include::functions/math/weierstrass.adoc[]

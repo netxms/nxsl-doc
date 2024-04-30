@@ -1,0 +1,27 @@
+= Encoding
+
+All files functions are availabke under **Crypto** package. They can be used by importing 
+math package in the script or using package name before the function name. Package name 
+together with function name used in documwntation. 
+
+Example with import:
+
+.Example
+[source,c]
+----
+import Crypto;
+println(MD5("Some text")); //Will print "9DB5682A4D778CA2CB79580BDB67083F"
+----
+
+Example without import:
+
+.Example
+[source,c]
+----
+println(Crypto::MD5("Some text")); //Will print "9DB5682A4D778CA2CB79580BDB67083F"
+----
+
+
+include::functions/crypto/md5.adoc[]
+include::functions/crypto/sha1.adoc[]
+include::functions/crypto/sha256.adoc[]
