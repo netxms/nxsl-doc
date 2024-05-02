@@ -41,6 +41,20 @@
 |DCI::COUNTER64|8|64 bit counter
 |===
 
+[[const-dci-exitcode]]
+== Data collection exit codes
+
+Should be used in order to return errors in script DCIs or in transoformation script.
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Description
+
+|DataCollection::ERROR|DCI collection eeror
+|DataCollection::NO_SUCH_INSTANCE|No sutch instance error
+|DataCollection::NOT_SUPPORTED|Not supported eeror
+|===
+
 [[const-dci-states]]
 == DCI states of the <<class-dci>> class
 
@@ -71,6 +85,7 @@
 |DataSource::SSH|8|SSH
 |DataSource::MQTT|9|MQTT
 |DataSource::DEVICE_DRIVER|10|Network Device driver
+|DataSource::MODBUS|11|MQTT
 |===
 
 [[const-dci-flags]]
@@ -137,6 +152,49 @@
 |InterfaceExpectedState::IGNORE|2|Ignore
 |===
 
+[[const-link-colorsource]]
+== Network map link color source
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|MapLinkColorSource::CustomColor|2|Link color source custom color
+|MapLinkColorSource::Default|0|Link color source default color
+|MapLinkColorSource::InterfaceStatus|5|Link color source interface status
+|MapLinkColorSource::InterfaceUtilization|4|Link color source interface utilization
+|MapLinkColorSource::ObjectStatus|1|Link color source object status
+|MapLinkColorSource::Script|3|Link color source script
+|===
+
+[[const-link-routingalgorithm]]
+== Network map link routing algorithm
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|MapLinkRoutingAlgorithm::Default|0|Map default
+|MapLinkRoutingAlgorithm::Direct|1|Direct
+|MapLinkRoutingAlgorithm::Manhattan|2|Manhattan
+|MapLinkRoutingAlgorithm::BendPoints|3|Bend points
+|===
+
+[[const-link-style]]
+== Network map link style
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|MapLinkStyle::Default|0|Map default
+|MapLinkStyle::Solid|1|Direct
+|MapLinkStyle::Dash|2|Manhattan
+|MapLinkStyle::Dot|3|Bend points
+|MapLinkStyle::DashDot|4|Bend points
+|MapLinkStyle::DashDotDot|5|Bend points
+|===
+
 [[const-node-state]]
 == Node state
 
@@ -153,6 +211,7 @@
 |NodeState::SNMPTrapFlood|0x00100000|SNMP trap flood detected
 |NodeState::ICMPUnreachable|0x00200000|Unreachable via ICMP
 |NodeState::SSHUnreachable|0x00400000|Unreachable via SSH
+|NodeState::MODBUSUnreachable|0x00800000|Unreachable via MODBUS
 |===
 
 [[const-object-status]]
@@ -194,10 +253,7 @@
 
 |SensorState::Unreachable|0x00000001|Unreachable
 |SensorState::NetworkPathProblem|0x00000002|Network Path Problem
-|SensorState::Provisioned|0x00010000|Provisioned
-|SensorState::Registered|0x00020000|Registered
-|SensorState::Active|0x00040000|Active
-|SensorState::PendingConfigUpdate|0x00080000|Pending Config Update
+|SensorState::MODBUSUnreachable|0x00800000|Unreachable via MODBUS
 |===
 
 [[const-severity]]
