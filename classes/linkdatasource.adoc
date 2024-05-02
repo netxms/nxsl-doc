@@ -1,0 +1,5 @@
+[.nxsl-class]
+[[class-linkdatasource]]
+=== LinkDataSource
+
+Data shource for Network Map link

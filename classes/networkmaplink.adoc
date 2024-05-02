@@ -1,0 +1,5 @@
+[.nxsl-class]
+[[class-networkmaplink]]
+=== NetworkMapLink
+
+Class represents Network Map link
