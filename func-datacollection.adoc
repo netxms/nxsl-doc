@@ -1,6 +1,7 @@
 = Data collection
 
 include::functions/createdci.adoc[]
+include::functions/detectanomalies.adoc[]
 include::functions/findalldcis.adoc[]
 include::functions/finddcibydescription.adoc[]
 include::functions/finddcibyname.adoc[]
