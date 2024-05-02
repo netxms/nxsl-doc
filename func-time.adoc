@@ -1,4 +1,5 @@
 = Time
 
+include::functions/getcurrenttime.adoc[]
 include::functions/getcurrenttimems.adoc[]
 include::functions/time.adoc[]

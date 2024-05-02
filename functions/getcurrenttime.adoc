@@ -1,0 +1,20 @@
+[.nxsl-function]
+[[func-getcurrenttime]]
+== GetCurrentTime()
+
+[source,c]
+----
+GetCurrentTime() => Integer
+----
+
+Get current time in seconds
+
+.Return
+Current time in seconds
+
+.Example
+[.source]
+....
+>>> GetCurrentTime()
+1714653725
+....
