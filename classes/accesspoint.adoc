@@ -6,38 +6,47 @@ Represents NetXMS access point object.
 
 ==== Instance attributes
 
-`icmpAverageRTT => Integer`::
-ICMP average response time for primary address. Will return null if no information.
+`apState => String`::
+State from <<accesspoint-state>>
 
-`icmpLastRTT => Integer`::
-ICMP last response time for primary address. Will return null if no information.
+`controller => <<class-node>>`::
+Acess point controller of class <<class-node>>.
 
-`icmpMaxRTT => Integer`::
-ICMP maximal response time for primary address. Will return null if no information.
-
-`icmpMinRTT => Integer`::
-ICMP minimal response time for primary address. Will return null if no information.
-
-`icmpPacketLoss => Integer`::
-ICMP packet loss for primary address. Will return null if no information.
+`controllerId => Integer`::
+Acess point controller object id.
 
 `index => Integer`::
 Index
 
+`macAddress => String`::
+Mac address
+
 `model => String`::
 Model
 
-`node => <<class-node>>`::
-Parent node
+`peerInterface => <<class-interface>>`::
+Peer interface of class <<class-interface>>
+
+`peerNode => <<class-node>>`::
+Peer interface of class <<class-node>>
+
+`radioInterfaces => <<class-radiointerface>>`::
+Radio interface of class <<class-radiointerface>>
 
 `serialNumber => String`::
 Serial number
 
-`apState => String`::
-State from <<accesspoint-state>>
-
 `vendor => String`::
 Vendor
+
+`wirelessDomain => <<class-wirelessdomain>>`::
+Wireless domain of class <<class-wirelessdomain>>
+
+`wirelessDomainId => Integer`::
+Wireless domain id
+
+`wirelessStations => String`::
+Wireless station of class <<class-wirelessstation>>
 
 ==== Constants
 

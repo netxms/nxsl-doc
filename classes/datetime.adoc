@@ -10,10 +10,12 @@ All class attributes are settable.
 
 ==== Instance attributes
 
+`second => Number`::
 `sec => Number`::
 `tm_sec => Number`::
 Seconds after the minute. Can be modified. 
 
+`minute => Number`::
 `min => Number`::
 `tm_min => Number`::
 Minutes after the hour. Can be modified. 
@@ -22,10 +24,12 @@ Minutes after the hour. Can be modified.
 `tm_hour => Number`::
 Hours since midnight. Can be modified. 
 
+`day => Number`::
 `mday => Number`::
 `tm_mday => Number`::
 Day of the month. Can be modified. 
 
+`month => Number`::
 `mon => Number`::
 `tm_mon => Number`::
 Months since January. Can be modified. 
@@ -34,20 +38,26 @@ Months since January. Can be modified.
 `tm_year => Number`::
 Year. Can be modified. 
 
+`dayOfYear => Number`::
 `yday => Number`::
 `tm_yday => Number`::
 Days since January 1. Can be modified. 
 
+`dayOfWeek => Number`::
 `wday => Number`::
 `tm_wday => Number`::
 Days since Sunday. Can be modified. 
 
+`isDST => Boolean`::
 `isdst => Boolean`::
 `tm_isdst => Boolean`::
 Daylight Saving Time flag. Can be modified. 
 
+`isUTC => Boolean`::
+UTC flag. Can be modified. 
+
 `timestamp => Integer`::
-UNIX time (number of seconds since epoch). 
+UNIX time (number of seconds since epoch). Can be modified. 
 
 ==== Instane methods
 
