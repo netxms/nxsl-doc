@@ -1,0 +1,5 @@
+[.nxsl-class]
+[[class-scoreddcivalue]]
+=== ScoredDciValue
+
+Scored dci value from anomaly prediction
