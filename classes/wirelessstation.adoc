@@ -1,0 +1,5 @@
+[.nxsl-class]
+[[class-wirelessstation]]
+=== WirelessStation
+
+Class represents wireless station

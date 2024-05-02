@@ -24,6 +24,9 @@ Longitude as floating point number
 `longitudeText => String`::
 Longitude as text
 
+`timestamp => Number`::
+Lat data update timestamp (UNIX format)
+
 `type => Number`::
 Data source type:
 

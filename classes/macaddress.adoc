@@ -1,0 +1,50 @@
+[.nxsl-class]
+[[class-macaddress]]
+=== MacAddress
+
+Represents MAC address 
+
+==== Instance attributes
+
+`isBroadcast => Boolean`::
+`TRUE` if is broadcats address
+
+`isMulticast => Boolean`::
+`TRUE` if multicast address
+
+`isValid => Boolean`::
+`TRUE` if is valid MAC address
+
+==== Instance methods
+
+`equals(mac) => Boolean`::
+Compates two MAC addresses
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|mac|<<class-macaddress>>|MAC address compate to
+|===
+
+.Return 
+`TRUE` if MAC addresses are equals
+
+`toString() => String`::
+Returnas MAC address string representation
+
+.Return 
+MAC address as a string
+
+==== Constructors
+
+`MacAddress(mac)`::
+Creates new JSON object.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|mac|String|Optional. String represenation of MAC address to parse to object
+|===
+
+.Return
+MacAddress object 
