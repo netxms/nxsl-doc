@@ -51,8 +51,14 @@ Interface alias
 `ifIndex => Integer`::
 Interface index.
 
+`ifName => Integer`::
+Interface name obtained form object.
+
 `ifType => Integer`::
 <<enum-interface-types,Interface type>>
+
+`inboundUtilization => Integer`::
+Inbound utilization
 
 `ipAddressList => Array`::
 Array with <<class-inetaddress>> objects, that represent all addresses that has this interface has
@@ -75,7 +81,7 @@ Array with <<class-inetaddress>> objects, that represent all addresses that has 
 `isPhysicalPort => Boolean`::
 `TRUE` if this interface object represents physical port
 
-`macAddr => String`::
+`macAddress => String`::
 String representation of MAC address separated by ":".
 
 `module => Integer`::
@@ -105,6 +111,9 @@ OSPF type
 `ospfTypeText => String`::
 OSPF type as s text
 
+`outboundUtilization => String`::
+Outbound utilization
+
 `peerInterface => <<class-interface>>`::
 Peer interface object if known, otherwise `null`.
 
@@ -119,6 +128,12 @@ Port number.
 
 `speed => Integer64`::
 Speed of the interface.
+
+`stpState => Integer`::
+<<enum-interface-stp-state,Spaning tree port state >> of the interface.
+
+`stpStateText => String`::
+<<enum-interface-stp-state,Spaning tree port state >> of the interface as a text.
 
 `vlans => Array`::
 Array with this inteface <<class-vlan, vlan objects>>
@@ -493,4 +508,19 @@ Enabele/Disable ICMP statistics collection for current interface.
 | 270 |IFTYPE_ALUGPONONU
 | 271 |IFTYPE_ALUGPONPHYSICALUNI
 | 272 |IFTYPE_VMWARE_NIC_TEAM
+|===
+
+
+[[enum-interface-stp-state]]
+.Interface spanning tree port states
+|===
+| Code | Description
+
+| 0    | UNKNOWN
+| 1    | DISABLED
+| 2    | BLOCKING
+| 3    | LISTENING
+| 4    | LEARNING
+| 5    | FORWARDING
+| 6    | BROKEN
 |===

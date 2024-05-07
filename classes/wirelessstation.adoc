@@ -3,3 +3,38 @@
 === WirelessStation
 
 Class represents wireless station
+
+==== Instance attributes
+
+`accessPointId => Integer`::
+Access point object id
+
+`bssid => String`::
+Basic Service Set Identifier
+
+`ipAddress => String`::
+IP address
+
+`macAddress => String`::
+MAC address
+
+`rfIndex => Integer`::
+Radio interface index
+
+`rfName => String`::
+Radio interface name
+
+`rxRate => Integer`::
+Radio interface rate
+
+`signalStrength => Integer`::
+Signal streight
+
+`ssid => String`::
+Service Set Identifier
+
+`txRate => Integer`::
+Tx rate
+
+`vlan => Integer`::
+Vlan

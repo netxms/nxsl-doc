@@ -3,3 +3,61 @@
 === RadioInterface
 
 Class represents radio interface
+
+==== Instance attributes
+
+`band => Integer`::
+Interface <<radiointerface-band,band>>
+
+`bandName => String`::
+Band name
+
+`bssid => String`::
+Basic Service Set Identifier
+
+`channel => Integer`::
+Channel
+
+`frequency => Integer`::
+Frequency
+
+`ifIndex => Integer`::
+Inteface index
+
+`name => String`::
+Inteface name
+
+`powerDBm => Integer`::
+Power dBm
+
+`powerMW => Integer`::
+Power MW
+
+`ssid => String`::
+Service Set Identifier
+
+
+==== Constants
+
+[[radiointerface-band]]
+[cols="1,5a"]
+.Node types
+|===
+| Value | Description
+
+|0
+|Unknown
+
+|1
+|2.4 GHZ
+
+|2
+|3.65 GHZ
+
+|3
+|5 GHZ
+
+|4
+|6 GHZ
+
+|===

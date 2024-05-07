@@ -61,6 +61,9 @@ EtherNet/IP device state as text
 `cipVendorCode => Integer`::
 EtherNet/IP vendor code in numeric form.
 
+`cluster => <<class-cluster>>`::
+Cluster this node is in.
+
 `components => <<class-component>>`::
 Entity MIB components of class <<class-component>>.
 
@@ -214,6 +217,18 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `lastAgentCommTime => Integer`::
 Unix timestamp of last time when communication with agent was
 
+`modbusProxy => <<class-node>>`::
+MODBUS proxy object
+
+`modbusProxy => Integer`::
+MODBUS proxy object id
+
+`modbusTCPPort => Integer`::
+MODBUS TCP port
+
+`modbusUnitId => Integer`::
+MODBUS unit id
+
 `nodeSubType => String`::
 Node sub type
 
@@ -275,6 +290,9 @@ SNMP object identifier (result of `.1.3.6.1.2.1.1.2.0` request)
 `snmpProxy => <<class-node>>`::
 Object that is set as SNMP proxy in object properties or NULL. 
 
+`snmpProxyId => Integer`::
+SNMP proxy object id. 
+
 `snmpSysContact => String`::
 SNMP system contact (result of `.1.3.6.1.2.1.1.4.0` request)
 
@@ -305,6 +323,15 @@ Hardware vendor information
 
 `vlans => Array`::
 Array with object <<class-vlan>> objects (`null` if there are no VLANs)
+
+`wirelessDomain => <<class-wirelessdomain>>`::
+Wireless domain of this node
+
+`wirelessDomainId => Integer`::
+Wireless domain id of this node
+
+`wirelessStations => Array`::
+Array with object <<class-wirelessstation>> objects (`null` if there are no Wireless Stations)
 
 `zone => <<class-zone>>`::
 <<class-zone>> object (`null` if zoning is disabled)

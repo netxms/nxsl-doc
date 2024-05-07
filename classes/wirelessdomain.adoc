@@ -3,3 +3,17 @@
 === WirelessDomain
 
 Class represents wireless domain
+
+==== Instance attributes
+
+`apCountDown => Integer`::
+Number of access points in 'Down' state
+
+`apCountUnknown => Integer`::
+Number of access points in 'Unknown' state
+
+`apCountUnprovisioned => Integer`::
+Number of access points in 'Unprovisioned' state
+
+`apCountUp => Integer`::
+Number of access points in 'Up' state

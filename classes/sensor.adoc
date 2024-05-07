@@ -6,42 +6,69 @@ Object represent sensor, extends <<class-datacollectiontarget>>
 
 ==== Instance attributes
 
-`description => String`::
-Description
+`capabilities => Integer`::
+Sensor capabilities - currently onle one capability: Modbus(1).
 
-`frameCount => Integer`::
-Frame count
+`deviceAddress => String`::
+Device addtess
 
-`lastContact => Integer`::
-Last contact UNIX timestamp
+`deviceClass => Integer`::
+<<sensor-class, Device class>>
 
-`metaType => String`::
-Meta type
+`gatewayNode => <<class-node>>`::
+Getway node
 
-`protocol => Integer`::
-Communication protocol
+`gatewayNodeId => Integer`::
+Getway node id
 
-`serial => String`::
+`isModbus => Boolen`::
+If sensor is Modbus sensor
+
+`macAddress => String`::
+MAC address
+
+`modbusUnitId => Integer`::
+MAC address
+
+`model => String`::
+Model
+
+`serialNumber => String`::
 Serial number
-
-`type => Integer`::
-<<sensor-type>
 
 `vendor => String`::
 Vendor
 
 ==== Constants
 
-[[sensor-type]]
+[[sensor-class]]
 [cols="1,4a"]
-.Sensor type
+.Sensor class
 |===
 | Description | Value
 
-|Unknown
+|Other
+|0
+|UPS
 |1
-|LoraWAN
+|Water meetr
 |2
-|DLMS
+|Electricity meeter
 |3
+|Temperature
+|4
+|Humidity
+|5
+|Temperature and humidity
+|6
+|CO2
+|7
+|Power supply
+|8
+|Current
+|9
+|Water leak
+|10
+|Smoke
+|11
 |===

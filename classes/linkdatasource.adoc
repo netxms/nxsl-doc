@@ -2,4 +2,21 @@
 [[class-linkdatasource]]
 === LinkDataSource
 
-Data shource for Network Map link
+Data shource item for Network Map link
+
+==== Instance attributes
+
+`dci => <<class-dci>>`::
+Data shource DCI item 
+
+`dciId => Integer`::
+Data shource DCI item id
+
+`format => String`::
+Data display format
+
+`object => <<class-datacollectiontarget>>`::
+DCI source object
+
+`objectId => Integer`::
+DCI source object id

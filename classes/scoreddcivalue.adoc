@@ -3,3 +3,14 @@
 === ScoredDciValue
 
 Scored dci value from anomaly prediction
+
+==== Instance attributes
+
+`score => Integer`::
+Score
+
+`timestamp => String`::
+Timestam as UNIX time
+
+`value => String`::
+Value
