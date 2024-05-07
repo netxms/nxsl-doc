@@ -22,7 +22,10 @@ Channel
 Frequency
 
 `ifIndex => Integer`::
-Inteface index
+Index of corresponding element from ifTable, if available
+
+`index => Integer`::
+Index
 
 `name => String`::
 Inteface name

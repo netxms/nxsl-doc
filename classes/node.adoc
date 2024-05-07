@@ -214,13 +214,19 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `isVRRP => Boolean`::
 `TURE` if VRRP supported.
 
+`isWirelessAP => Boolean`::
+`TURE` if node is wireless access point
+
+`isWirelessController => Boolean`::
+`TURE` if node is wireless controller
+
 `lastAgentCommTime => Integer`::
 Unix timestamp of last time when communication with agent was
 
 `modbusProxy => <<class-node>>`::
 MODBUS proxy object
 
-`modbusProxy => Integer`::
+`modbusProxyId => Integer`::
 MODBUS proxy object id
 
 `modbusTCPPort => Integer`::

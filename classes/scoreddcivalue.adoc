@@ -6,11 +6,11 @@ Scored dci value from anomaly prediction
 
 ==== Instance attributes
 
-`score => Integer`::
+`score => Number`::
 Score
 
 `timestamp => String`::
 Timestam as UNIX time
 
-`value => String`::
-Value
+`value => Number`::
+DCI Value
