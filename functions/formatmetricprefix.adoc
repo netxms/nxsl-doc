@@ -25,11 +25,11 @@ String containing the value converted to human-readable form with metric prefix.
 [.source]
 ....
 >>> FormatMetricPrefix(5000)
-5.00k
+5.00 k
 >>> FormatMetricPrefix(5000, true)
-4.88Ki
+4.88 Ki
 >>> FormatMetricPrefix(-1234567.89, false, 0)
--1M
+-1 M
 >>> FormatMetricPrefix(-1234567.89,, 10)
--1.2345678900M
+-1.2345678900 M
 ....
