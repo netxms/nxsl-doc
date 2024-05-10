@@ -59,7 +59,7 @@ UTC flag. Can be modified.
 `timestamp => Integer`::
 UNIX time (number of seconds since epoch). Can be modified. 
 
-==== Instane methods
+==== Instance methods
 
 [[class-datetime-format,DateTime::format()]]
 `format(format) => void`::

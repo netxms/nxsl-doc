@@ -291,7 +291,7 @@ Bit mask of <<node-runtime-flags>>, `uint32`.
 Serial number from hardware system property
 
 `snmpOID => String`::
-SNMP object identifier (result of `.1.3.6.1.2.1.1.2.0` request)
+SNMP object identifier (result of `1.3.6.1.2.1.1.2.0` request)
 
 `snmpProxy => <<class-node>>`::
 Object that is set as SNMP proxy in object properties or NULL. 
@@ -300,13 +300,13 @@ Object that is set as SNMP proxy in object properties or NULL.
 SNMP proxy object id. 
 
 `snmpSysContact => String`::
-SNMP system contact (result of `.1.3.6.1.2.1.1.4.0` request)
+SNMP system contact (result of `1.3.6.1.2.1.1.4.0` request)
 
 `snmpSysLocation => String`::
-SNMP system location (result of `.1.3.6.1.2.1.1.6.0` request)
+SNMP system location (result of `1.3.6.1.2.1.1.6.0` request)
 
 `snmpSysName => String`::
-SNMP system name (result of `.1.3.6.1.2.1.1.5.0` request)
+SNMP system name (result of `1.3.6.1.2.1.1.5.0` request)
 
 `snmpVersion => Integer`::
 Configured SNMP version:
@@ -319,7 +319,7 @@ Configured SNMP version:
 Returns array of <<class-softwarepackage>> class objects
 
 `sysDescription => String`::
-System description (value of `System.Uname` for nodes with agents or `.1.3.6.1.2.1.1.1.0` for SNMP nodes)
+System description (value of `System.Uname` for nodes with agents or `1.3.6.1.2.1.1.1.0` for SNMP nodes)
 
 `tunnel => <<class-tunnel>>`::
 Tunnel object f this node or NULL if there is no tunnel active and bound to this node. 

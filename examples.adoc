@@ -404,7 +404,7 @@ if (transport == null)
     return 1;
 }
 
-value = transport.getValue(".1.3.6.1.2.1.1.1.0");
+value = transport.getValue("1.3.6.1.2.1.1.1.0");
 if (value == null)
 {
     println("Failed to issue SNMP GET request");
@@ -425,7 +425,7 @@ else
 transport = $node.createSNMPTransport();   
 if (transport == null) exit;
 
-varbind = transport.get(".1.3.6.1.2.1.25.3.5.1.2.1");
+varbind = transport.get("1.3.6.1.2.1.25.3.5.1.2.1");
 if (varbind == null) exit;
 
 bytestream = varbind.getValueAsByteStream();
@@ -535,8 +535,8 @@ if (transport == null) {
   return null;
 }
 
-lat = transport.get(".1.2.3.4.1");
-lon = transport.get(".1.2.3.4.2");
+lat = transport.get("1.2.3.4.1");
+lon = transport.get("1.2.3.4.2");
 
 if (lat == null || lon == null) {
   return null;

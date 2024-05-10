@@ -21,7 +21,7 @@ failure.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|oid|String|SNMP object id.
+|oid|String|SNMP object id. Can be given with or without leading dot.
 |===
 
 
@@ -33,8 +33,14 @@ SNMPVarBind object. Will return null on failure.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|oid|String|SNMP object id.
+|oid|String|SNMP object id. Can be given with or without leading dot.
 |===
+
+.Example
+[.source]
+....
+println($node.createSNMPTransport()?.getValue("1.3.6.1.2.1.1.2.0")); // Will print e.g. 1.3.6.1.4.1.14988.1
+....
 
 
 `getValues(array) => String`:: Get object values from specific node with SNMP
@@ -58,7 +64,7 @@ SNMP transport. Will return TRUE on success, FALSE in case of failure.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|oid|String|SNMP object id.
+|oid|String|SNMP object id. Can be given with or without leading dot.
 |value|String|Value to assign to oid.
 |dataType|String|<<snmp-data-types,SNMP data type>> (optional).
 |===
@@ -71,13 +77,13 @@ by SNMP transport. Will return null on failure.
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|oid|String|SNMP object id.
+|oid|String|SNMP object id. Can be given with or without leading dot.
 |===
 
 ==== Constants
 
 [[snmp-data-types]]
-[cols="1,4a"]
+[cols="2,4a"]
 .SNMP data types
 |===
 | Description | Value
