@@ -160,7 +160,7 @@ Send user agent notification
 |showOnStartup|String|`TRUE` to show message on startup (optional, defaults to false)
 |===
 
-.Return 
+.Return
 
 Message id
 
@@ -212,7 +212,7 @@ Delete custom attribute.
 Returns responsible users that have escalation level equal to specified level.
 
 .Parameters
-[cols="1,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |level|Integer|Escalation level
 |===
@@ -225,7 +225,7 @@ Objects are <<class-user>> or <<class-usergroup>>
 If provided object is direct child of this object
 
 .Parameters
-[cols="1,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|<<class-netobj>>|Object to check
 |===
@@ -237,7 +237,7 @@ TRUE if provided object is direct child of this object
 If provided object is direct parent of this object
 
 .Parameters
-[cols="1,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|<<class-netobj>>|Object to check
 |===
@@ -255,9 +255,9 @@ Enable maintenance mode for the object.
 Expand string by replacing macros with their values.
 
 .Parameters
-[cols="1,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
-|string|String to expand
+|string|String|String to expand
 |===
 
 .Return
@@ -290,7 +290,7 @@ attribute should exist) or by using `attribute@object` notion (which will return
 If provided object is child of this object
 
 .Parameters
-[cols="1,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|<<class-netobj>>|Object to check
 |===
@@ -302,7 +302,7 @@ TRUE if provided object is child of this object
 If provided object is parent of this object
 
 .Parameters
-[cols="1,3a" grid="none", frame="none"]
+[cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|<<class-netobj>>|Object to check
 |===

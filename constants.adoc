@@ -17,7 +17,7 @@
 |===
 |Constant|Value|Description
 
-|BusinessServiceType::NONE|0|None 
+|BusinessServiceType::NONE|0|None
 |BusinessServiceType::SCRIPT|1|Script
 |BusinessServiceType::DCI|2|DCI
 |BusinessServiceType::OBJECT|3|Object
@@ -46,10 +46,9 @@
 
 Should be used in order to return errors in script DCIs or in transoformation script.
 
-[cols="2,1,7a" grid="none", frame="none"]
+[cols="2,7a" grid="none", frame="none"]
 |===
 |Constant|Description
-
 |DataCollection::ERROR|DCI collection eeror
 |DataCollection::NO_SUCH_INSTANCE|No sutch instance error
 |DataCollection::NOT_SUPPORTED|Not supported eeror
@@ -95,7 +94,7 @@ Should be used in order to return errors in script DCIs or in transoformation sc
 |===
 |Constant|Value|Description
 
-|DCI::ALL_THRESHOLDS|0x00002|Process all thresholds 
+|DCI::ALL_THRESHOLDS|0x00002|Process all thresholds
 |DCI::RAW_VALUE_OCTET_STRING|0x00004|Raw value is octet string
 |DCI::SHOW_ON_OBJECT_TOOLTIP|0x00008|Show DCI on object tooltip
 |DCI::AGGREGATE_ON_CLUSTER|0x00080|Aggregate data on cluster
