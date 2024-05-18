@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 5.0.*
-Please use <<class-string-right>>.
+Replaced with method <<class-string-right,right()>> of the string instance.
 ====
 ****
 

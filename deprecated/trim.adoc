@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 5.0.*
-Please use <<class-string-trim>>.
+Replaced with method <<class-string-trim,trim()>> of the string instance.
 ====
 ****
 

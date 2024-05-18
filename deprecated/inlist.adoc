@@ -5,8 +5,10 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 5.0.* 
-Please use <<class-string-split>> with in operator like: TOKEN in STRING.split(SAPARATOR)
+*This function is deprecated starting from version 5.0.*
+Replaced with method <<class-string-split,split()>> of the string instance.
+
+Sample usage: TOKEN in STRING.split(SAPARATOR)
 ====
 ****
 

@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 5.0.*
-Please use <<class-string-lastIndexOf>>.
+Replaced with method <<class-string-lastIndexOf,lastIndexOf()>> of the string instance.
 ====
 ****
 

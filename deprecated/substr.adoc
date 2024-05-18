@@ -6,7 +6,7 @@
 [IMPORTANT]
 ====
 *This function is deprecated starting from version 5.0.*
-Please use <<class-string-substring>>.
+Replaced with method <<class-string-substring,substring()>> of the string instance.
 ====
 ****
 

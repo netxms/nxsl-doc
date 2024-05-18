@@ -5,8 +5,8 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 3.0.* 
-Please function <<class-string-toUpperCase>>. 
+*This function is deprecated starting from version 3.0.*
+Replaced with method <<class-string-toUpperCase,toUpperCase()>> of the string instance.
 ====
 ****
 
