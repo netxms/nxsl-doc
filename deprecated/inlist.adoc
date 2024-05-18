@@ -5,10 +5,9 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 5.0.*
-Replaced with method <<class-string-split,split()>> of the string instance.
+*Deprecated in 5.0.*
 
-Sample usage: TOKEN in STRING.split(SAPARATOR)
+Replaced with method <<class-string-split,split()>> of the string instance. Sample usage: _"b" in "a,b,c".split(",")_
 ====
 ****
 

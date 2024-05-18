@@ -5,7 +5,7 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 5.0.* 
+*Deprecated in 5.0.*
 ====
 ****
 

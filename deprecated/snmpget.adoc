@@ -5,8 +5,9 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 3.0.* 
-Please use method get of class <<class-snmptransport>>. 
+*Deprecated in 3.0.*
+
+Please use method get of class <<class-snmptransport>>.
 ====
 ****
 

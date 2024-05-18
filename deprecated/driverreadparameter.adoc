@@ -2,7 +2,14 @@
 [[func-driverreadparameter]]
 == DriverReadParameter()
 
-NOTE: Deprecated since 3.0, use <<class-node-readdriverparameter>> instead.
+****
+[IMPORTANT]
+====
+*Deprecated in 3.0.*
+
+Replaced with <<class-node-readdriverparameter>>.
+====
+****
 
 [source,c]
 ----

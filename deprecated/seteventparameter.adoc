@@ -5,8 +5,9 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 5.0.* 
-Please use setNamedParameter method in <<class-event>>. 
+*Deprecated in 5.0.*
+
+Please use setNamedParameter method in <<class-event>>.
 ====
 ****
 

@@ -5,8 +5,9 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 3.0.* 
-Please use rename method in <<class-netobj>>. 
+*Deprecated in 3.0.*
+
+Please use rename method in <<class-netobj>>.
 ====
 ****
 

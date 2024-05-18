@@ -5,7 +5,8 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 5.0.*
+*Deprecated in 5.0.*
+
 Please use <<func-math-sqrt>> instead.
 ====
 ****
@@ -24,7 +25,7 @@ Gets square root from number.
 |===
 
 .Return
-Square root value. 
+Square root value.
 
 .Example
 [.source]
@@ -32,4 +33,3 @@ Square root value.
 >>> sqrt(4)
 2
 ....
-

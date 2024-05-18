@@ -5,7 +5,8 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 3.0.*
+*Deprecated in 3.0.*
+
 Please use <<class-netobj-deletecustomattribute>> instead.
 ====
 ****

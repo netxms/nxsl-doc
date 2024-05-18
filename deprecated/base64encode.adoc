@@ -5,7 +5,8 @@
 ****
 [IMPORTANT]
 ====
-*This function is deprecated starting from version 5.0.*
+*Deprecated in 5.0.*
+
 Please use <<func-base64-encode>> instead.
 ====
 
@@ -14,7 +15,7 @@ Please use <<func-base64-encode>> instead.
 Base64Encode() => String
 ----
 
-Encode string as base64. Accepts string to encode and optional character encoding. 
+Encode string as base64. Accepts string to encode and optional character encoding.
 Valid character encodings are "UTF-8", "UCS-2", "UCS-4", "SYSTEM". Default is UTF-8.
 
 .Parameters
