@@ -7,7 +7,7 @@
 ====
 *Deprecated in 3.0.*
 
-Please use manage functions in <<class-netobj>>.
+Please use manage() method of <<class-netobj>> class.
 ====
 ****
 

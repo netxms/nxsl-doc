@@ -7,7 +7,7 @@
 ====
 *Deprecated in 3.0.*
 
-Please use setExpectedState functions in <<class-interface>>.
+Please use setExpectedState() method of <<class-interface>> class.
 ====
 ****
 

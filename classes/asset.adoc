@@ -7,7 +7,7 @@ Object represent asset, extends <<class-netobj>>
 ==== Instance attributes
 
 `lastUpdateTimestamp => Integer`::
-Unix timestamp of lat update
+Unix timestamp of last update
 
 `lastUpdateUserId => Integer`::
 Iof the user for last update

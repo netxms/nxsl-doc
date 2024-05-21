@@ -7,7 +7,7 @@
 ====
 *Deprecated in 3.0.*
 
-Please use <<class-array-join>>.
+Please use <<class-array-join,join()>> method of Array.
 ====
 ****
 

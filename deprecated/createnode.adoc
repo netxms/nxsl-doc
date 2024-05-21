@@ -10,7 +10,7 @@ NOTE: This function is enabled by default, but can be disabled by setting config
 ====
 *Deprecated in 5.0.*
 
-Please use <<class-netobj-createNode>> instead.
+Please use <<class-netobj-createNode,createNode()>> method of NetObj class instead.
 ====
 ****
 

@@ -7,7 +7,7 @@
 ====
 *Deprecated in 3.0.*
 
-Please use  <<class-netobj-unbind>> and <<class-netobj-unbindfrom>> instead.
+Please use  <<class-netobj-unbind,unbind()>> and <<class-netobj-unbindfrom,unbindFrom()>> methods of NetObj class instead.
 ====
 ****
 

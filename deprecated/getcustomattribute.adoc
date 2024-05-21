@@ -7,7 +7,7 @@
 ====
 *Deprecated in 3.0.*
 
-Please use <<class-netobj-getcustomattribute>> instead.
+Please use <<class-netobj-getcustomattribute,getCustomAttribute()>> method of NetObj class instead.
 ====
 ****
 

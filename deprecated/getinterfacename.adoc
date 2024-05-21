@@ -7,7 +7,7 @@
 ====
 *Deprecated in 3.4.*
 
-Please use <<class-node-getinterface>>, <<class-node-getinterfacebyindex>>, <<class-node-getinterfacebymacaddress>> or <<class-node-getinterfacebyname>> to get interface object and name attribute to get it's name.
+Please use <<class-node-getinterface,getInterface()>>, <<class-node-getinterfacebyindex,getInterfaceByIndex()>>, <<class-node-getinterfacebymacaddress,getInterfaceByMACAddress()>> or <<class-node-getinterfacebyname,getInterfaceByName()>> methods of Node class to get interface object and name attribute to get it's name.
 ====
 ****
 

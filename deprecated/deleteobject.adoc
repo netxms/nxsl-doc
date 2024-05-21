@@ -7,7 +7,7 @@
 ====
 *Deprecated in 3.0.*
 
-Please use <<class-netobj-delete>> instead.
+Please use <<class-netobj-delete,delete()>> method of NetObj class instead.
 ====
 ****
 

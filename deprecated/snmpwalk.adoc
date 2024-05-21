@@ -7,7 +7,7 @@
 ====
 *Deprecated in 3.0.*
 
-Please use method set of class <<class-snmptransport>>.
+Please use walk method of <<class-snmptransport>> class.
 ====
 ****
 

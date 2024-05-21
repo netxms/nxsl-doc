@@ -7,7 +7,7 @@
 ====
 *Deprecated in 3.0.*
 
-Please use <<class-netobj-deletecustomattribute>> instead.
+Please use <<class-netobj-deletecustomattribute,deleteCustomAttribute()>> method of NetObj class instead.
 ====
 ****
 

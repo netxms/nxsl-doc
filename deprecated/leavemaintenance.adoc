@@ -7,7 +7,7 @@
 ====
 *Deprecated in 3.0.*
 
-Please use <<class-netobj-leavemaintenance>> instead.
+Please use <<class-netobj-leavemaintenance,leaveMaintenance()>> method of NetObj class instead.
 ====
 ****
 
