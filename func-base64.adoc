@@ -1,8 +1,8 @@
-= Hashes
+= Encoding
 
-All files functions are availabke under **Base64** package. They can be used by importing 
-math package in the script or using package name before the function name. Package name 
-together with function name used in documwntation. 
+All encoding functions are available under **Base64** package. They can be used by importing 
+the package in the script or using package name before the function name. Package name 
+together with function name used in documentation. 
 
 Example with import:
 

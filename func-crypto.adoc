@@ -1,8 +1,8 @@
-= Encoding
+= Hashes
 
-All files functions are availabke under **Crypto** package. They can be used by importing 
-math package in the script or using package name before the function name. Package name 
-together with function name used in documwntation. 
+All files functions are available under **Crypto** package. They can be used by importing 
+the package in the script or using package name before the function name. Package name 
+together with function name used in documentation. 
 
 Example with import:
 
