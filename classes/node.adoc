@@ -363,6 +363,7 @@ Finds web service by name, makes request and returns the <<class-webservicerespo
 |requestType|String|Request type. One of: GET, DELETE, PATCH, POST, PUT
 |data|String or <<class-jsonobject>> |Depending on request type data might be required and provided as a string or JSON object. GET and DELETE requests do not allow data, PATCH, POST, PUT require data.
 |contentType|String|Optional parameter. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
+|acceptCached|Boolean|True if response stored in the cache is allowed to be used. Named parameter. Default: false.
 |...|Strings|Optional additional parameter(s) that will be used in web service definition to expand %1, %2... macro.
 |===
 
@@ -387,6 +388,8 @@ println(result.errorMessage); // ""
 println(result.agentErrorCode); // "0"
 println(result.httpResponseCode); // "200"
 println(result.document); // ""
+
+result = $node3.callWebService("Web service name", "GET", "application/json", acceptCached: true);
 ....
 
 `createSNMPTransport(port, community, context, failIfUnreachable) => <<class-snmptransport>>`::
