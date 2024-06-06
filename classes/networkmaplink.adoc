@@ -161,7 +161,7 @@ Add or update link data source
 |===
 
 `clearDataSource() => void`:: 
-Remove all data shources form the list
+Remove all data sources form the list
 
 `removeDataSource(index) => void`:: 
 Remove data source by index
@@ -169,5 +169,5 @@ Remove data source by index
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|index|Integer|Index of data shource to be removed
+|index|Integer|Index of data source to be removed
 |===
