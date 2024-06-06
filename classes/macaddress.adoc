@@ -67,7 +67,7 @@ MacAddress object
 | MacAddressNotation::BYTEPAIR_COLON_SEPARATED | Bytepairs separated by colon, e.g. `1234:5678:9ABC`
 | MacAddressNotation::HYPHEN_SEPARATED         | Separated by hyphen, e.g. `12-34-56-78-9A-BC`
 | MacAddressNotation::DOT_SEPARATED            | Separated by dot, e.g. `123.456.789.ABC`
-| MacAddressNotation::BYTEPAIR_DOT_SEPARATED   | Bytepairs separated by dot, e.g. `123.456.789.ABC`
+| MacAddressNotation::BYTEPAIR_DOT_SEPARATED   | Bytepairs separated by dot, e.g. `1234.5678.9ABC`
 | MacAddressNotation::DECIMAL_DOT_SEPARATED    | Decimal, separated by dot, e.g. `18.52.86.120.154.188`
 |===
 

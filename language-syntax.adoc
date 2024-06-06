@@ -751,8 +751,8 @@ Concatenated string
 [.source]
 ----
 a = [1, 2, 3, 4];
-b = a.join(";");
-println(b); // will print "1;2;3;4"
+println(a.join(";")); // will print "1;2;3;4"
+println(a.join("; ")); // will print "1; 2; 3; 4"
 ----
 
 `insert(index, newElement) => void`::
@@ -817,10 +817,10 @@ println(a);
 
 ==== Array conversion
 
-Array can be converted to string. `string(array)` function is used to get string
-representation of array. The string representation consists of a list of the array’s
-elements, enclosed in square brackets (“[]”). Adjacent elements are separated by the
-characters “, ” (a comma followed by a space).
+String representation of array can be obtained by using `string(array)`
+function. The string representation consists of all array’s elements, enclosed
+in square brackets (“[]”). Adjacent elements are separated by the characters 
+“, ” (a comma followed by a space).
 
 Printed array is automatically converted to string.
 
@@ -829,7 +829,7 @@ Printed array is automatically converted to string.
 a = [1, 2, 3, 4, 5, 6, 7];
 println(a); // will print "[1, 2, 3, 4, 5, 6, 7]"
 println(a .. " is an array"); // will print "[1, 2, 3, 4, 5, 6, 7] is an array"
-println([]"one", "two"]); // will print "[one, two]"
+println(["one", "two"]); // will print "[one, two]"
 println([2, "text", [1, 2, 3]]); // will print "[2, text, [1, 2, 3]]"
 ----
 
