@@ -47,8 +47,8 @@ GEM
       pdf-reader (~> 2.0)
       prawn (~> 2.2)
     public_suffix (5.0.5)
-    rexml (3.2.8)
-      strscan (>= 3.0.9)
+    rexml (3.3.3)
+      strscan
     ruby-rc4 (0.1.5)
     strscan (3.1.0)
     treetop (1.6.12)
@@ -57,6 +57,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-23
+  x86_64-linux
 
 DEPENDENCIES
   asciidoctor (= 2.0.23)
