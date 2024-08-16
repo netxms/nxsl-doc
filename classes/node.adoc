@@ -25,7 +25,7 @@ Object that is set as agent proxy in object properties or NULL.
 NetXMS agent version as `string`.
 
 `bootTime => Integer64`::
-Number of seconds since node start or `0` if unknown.
+UNIX time (number of seconds since epoch) of the moment when node was started or `0` if unknown.
 
 `bridgeBaseAddress => String`::
 Base address of the switch formatted as 12 character `string` without separators. Value is only valid for bridges and switches. Special value `000000000000` indicates that address is unknown.
