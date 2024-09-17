@@ -16,7 +16,10 @@ Node's DNS name
 Array with node's <<class-discoveredinterface, interfaces>>
 
 `ipAddr => String`::
-Node's ip address
+Node's ip address. Deprecated and will be removed in a future version, use `ipAddress` instead. 
+
+`ipAddress => InetAddress`::
+Primary <<class-inetaddress,IP address>>. *This attribute was added in version 5.1*
 
 `isAgent => Boolean`::
 `TRUE` if NetXMS agent detected on node

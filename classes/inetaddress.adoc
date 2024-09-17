@@ -31,6 +31,12 @@ Internet address, one of:
 `isMulticast => Boolean`::
 `TRUE` if address is a multicast address
 
+`isSubnetBase => Boolean`::
+`TRUE` if address is a subnet base address
+
+`isSubnetBroadcast => Boolean`::
+`TRUE` if address is a subnet broadcast address
+
 `isValid => Boolean`::
 `TRUE` if address valid
 
@@ -39,6 +45,9 @@ Internet address, one of:
 
 `mask => Integer`::
 Address bit mask
+
+`subnet => InetAddress`::
+Subnet base address
 
 ==== Instance methods
 
@@ -55,8 +64,15 @@ If subnet contains internet address
 .Return 
 `TRUE` if contains, otherwise `FALSE`
 
+.Example
+[.source]
+....
+r = InetAddress("192.168.56.0", 24).contains($node.ipAddress);
+println(r); // will print "true", if primary IP address of node is in that subnet
+....
+
 `equals(address) => void`::
-If adresses are equals
+If addresses are equal
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -65,11 +81,18 @@ If adresses are equals
 |===
 
 .Return 
-`TRUE` if adresses are equals, otherwise `FALSE`
+`TRUE` if addresses are equal, otherwise `FALSE`
 
 [[class-inetaddress-inrange,InetAddress::inRange()]]
 `inRange(addressStart, addressEnd) => void`::
-If adresse is in range
+If address is in range
+
+.Example
+[.source]
+....
+r = $node.ipAddress.inRange(InetAddress("192.168.56.10"), InetAddress("192.168.56.20"));
+println(r); // will print "true", if primary IP address of node is in range
+....
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -110,6 +133,7 @@ Constructor for internet address
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |address|String|IP address as a string
+|mask|integer|mask in CIDR notation (optional parameter)
 |===
 
 .Return

@@ -12,8 +12,8 @@ Area ID
 `ifIndex => String`::
 Interface index
 
-`ipAddress => String`::
-IP address
+`ipAddress => InetAddress`::
+<<class-inetaddress,IP address>>.
 
 `isVirtual => Boolean`::
 `TRUE` if it is virtual

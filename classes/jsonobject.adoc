@@ -2,7 +2,9 @@
 [[class-jsonobject]]
 === JsonObject
 
-Represents JSON object
+Represents JSON object.
+
+Note: to parse string into JsonObject use <<func-jsonparse>>.
 
 ==== Instance attributes
 

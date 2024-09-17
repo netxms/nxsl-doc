@@ -2,7 +2,9 @@
 [[class-jsonarray]]
 === JsonArray
 
-Represents JSON array object
+Represents JSON array object.
+
+Note: to parse string into JsonObject use <<func-jsonparse>>.
 
 ==== Instance attributes
 
