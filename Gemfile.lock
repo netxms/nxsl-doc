@@ -18,8 +18,8 @@ GEM
       treetop (~> 1.6.0)
       ttfunk (~> 1.7.0)
     coderay (1.1.3)
-    concurrent-ruby (1.3.3)
-    css_parser (1.17.1)
+    concurrent-ruby (1.3.4)
+    css_parser (1.19.0)
       addressable
     hashery (2.1.2)
     matrix (0.4.2)
@@ -47,10 +47,8 @@ GEM
       pdf-reader (~> 2.0)
       prawn (~> 2.2)
     public_suffix (6.0.1)
-    rexml (3.3.4)
-      strscan
+    rexml (3.3.7)
     ruby-rc4 (0.1.5)
-    strscan (3.1.0)
     treetop (1.6.12)
       polyglot (~> 0.3)
     ttfunk (1.7.0)
