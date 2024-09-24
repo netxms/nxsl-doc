@@ -51,6 +51,14 @@ Parameter's name
 `pollingInterval => Integer`::
 Current polling interval
 
+`pollingSchedules => Array`::
+Array of custom schedules in cron format
+
+`pollingScheduleType => Integer`::
+ DEFAULT = 0,
+ CUSTOM = 1,
+ ADVANCED = 2
+
 `relatedObject => <<class-netobj>>`::
 Related object or null if there is no object
 
