@@ -126,7 +126,7 @@ Constructor for internet address
 
 InetAddress object 
 
-`InetAddress(address)`::
+`InetAddress(address, mask)`::
 Constructor for internet address
 
 .Parameters
