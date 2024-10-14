@@ -147,7 +147,7 @@ Bind current object to `parentObject` as a child.
 |object|<<class-netobj>>|Object to bind as a parent to the current object.
 |===
 
-`calculateDowntime(tag, periodStart, periodEnd) => string`::
+`calculateDowntime(tag, periodStart, periodEnd) => Integer`::
 Calculate node downtime
 
 .Parameters
