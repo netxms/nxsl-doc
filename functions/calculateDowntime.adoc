@@ -17,5 +17,5 @@ Calculate node downtime
 |endTime|End time of downtime
 |===
 
-
-end time of downtime
+.Return
+Downtime value in epoch
