@@ -1,0 +1,21 @@
+calculateDowntime(tag, periodStart, periodEnd) ⇒ Integer
+Calculate node downtime
+
+Table 3. Parameters
+tag
+
+String
+
+tag for downtime
+
+startTime
+
+String
+
+start time of downtime
+
+endTime
+
+String
+
+end time of downtime
