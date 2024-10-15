@@ -2,10 +2,10 @@
 [[class-assetproperties]]
 === AssetProperties
 
-Object contains all asset properties accessible by property name. So value of asset property with name ipAddr can be accesed like: 
+Object contains all asset properties accessible by property name. So value of asset property with name ipAddress can be accesed like: 
 
 [source,c]
 ----
-$node.assetProperties.ipAddr
+$node.assetProperties.ipAddress
 ----
 
