@@ -55,9 +55,10 @@ Current polling interval
 Array of custom schedules in cron format
 
 `pollingScheduleType => Integer`::
- DEFAULT = 0,
- CUSTOM = 1,
- ADVANCED = 2
+Collection schedule:
+  * 0 = Server default interval
+  * 1 = Custom interval
+  * 2 = Advanced schedule
 
 `relatedObject => <<class-netobj>>`::
 Related object or null if there is no object
