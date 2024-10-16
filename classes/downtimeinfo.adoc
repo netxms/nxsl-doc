@@ -1,0 +1,21 @@
+[.nxsl-class]
+[[class-downtimeinfo]]
+=== DowntimeInfo
+
+==== Instance attributes
+
+`object => String`::
+Object
+  
+`objectId => Integer`::
+Object ID
+
+`totalDowntime => Integer`::
+Downtime in miliseconds
+
+`uptimePercentage => Float`::
+Uptime percentage
+
+
+
+  
