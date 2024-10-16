@@ -42,7 +42,7 @@ for(i : $node.interfaces)
 {
    for(a : i.ipAddressList)
    {
-      if (a.address == $node.ipAddr)
+      if (a.address == $node.ipAddress)
          println(i.macAddr);
    }
 }
@@ -168,7 +168,7 @@ else
 
 // set event's named parameter
 SetEventParameter($event, "additionalInfo",
-	"Peer: " .. peer.name .. " " .. peer.ipAddr .. " " .. macAddr);
+	"Peer: " .. peer.name .. " " .. peer.ipAddress .. " " .. macAddr);
 
 return true;
 ----

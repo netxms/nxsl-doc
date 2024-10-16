@@ -147,6 +147,17 @@ Bind current object to `parentObject` as a child.
 |object|<<class-netobj>>|Object to bind as a parent to the current object.
 |===
 
+`calculateDowntime(tag, periodStart, periodEnd) => Array`::
+Calculate node downtime
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|tag|String|tag for downtime
+|startTime|String|start time of downtime
+|endTime|String|end time of downtime
+|===
+
 `clearGeoLocation() => void`::
 Clears GeoLocation data from the node
 
