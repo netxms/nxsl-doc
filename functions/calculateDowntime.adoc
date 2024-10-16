@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-CalculateDowntime(tag, periodStart, periodEnd) => Integer
+calculateDowntime(tag, periodStart, periodEnd) => Array
 ----
 
 Calculate node downtime 
@@ -17,5 +17,11 @@ Calculate node downtime
 |endTime|End time of downtime
 |===
 
-.Return
-Downtime value in epoch
+.Example
+[.source]
+....
+r = $node.calculateDowntime("NODE_DOWN",1727744400,1729066904);
+for (e : r) {
+  for (a : e.__class.attributes) println(a, e.__get(a));
+}
+....
