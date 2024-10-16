@@ -4,14 +4,14 @@
 
 ==== Instance attributes
 
-`object => String`::
+`object => <<class-netobj>>`::
 Object
   
 `objectId => Integer`::
 Object ID
 
 `totalDowntime => Integer`::
-Downtime in miliseconds
+Downtime in seconds
 
 `uptimePercentage => Float`::
 Uptime percentage

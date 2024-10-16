@@ -153,10 +153,14 @@ Calculate node downtime
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|tag|String|tag for downtime
-|startTime|String|start time of downtime
-|endTime|String|end time of downtime
+|tag|String|downtime tag
+|periodStart|Integer|link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the period start
+|periodEnd|Integer|link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the period end
 |===
+
+.Return
+
+Array of <<class-downtimeinfo>> objects.
 
 `clearGeoLocation() => void`::
 Clears GeoLocation data from the node
