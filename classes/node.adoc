@@ -235,7 +235,7 @@ MODBUS TCP port
 `modbusUnitId => Integer`::
 MODBUS unit id
 
-`networkPathCheckResult => String`::
+`networkPathCheckResult => <<class-networkpathcheckresult>>`::
 Node network path
 
 `nodeSubType => String`::
