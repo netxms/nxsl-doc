@@ -1,0 +1,23 @@
+[.nxsl-class]
+[[class-downtimeinfo]]
+=== NetworkPathCheckResult
+
+==== Instance attributes
+
+`description => String`::
+Description
+  
+`reason => Integer`::
+Reason
+
+`rootCauseInterface => <<class-node>> or null`::
+Interface name 
+
+`rootCauseInterfaceId => Integer`::
+Interface ID
+
+`rootCauseNode => <<class-interface>> or null`::
+Node name
+
+`rootCauseNodeId => Integer`::
+Node ID
