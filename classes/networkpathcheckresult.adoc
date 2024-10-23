@@ -10,13 +10,13 @@ Description
 `reason => Integer`::
 Reason
 
-`rootCauseInterface => <<class-node>> or null`::
+`rootCauseInterface => <<class-interface>> or null`::
 Interface name 
 
 `rootCauseInterfaceId => Integer`::
 Interface ID
 
-`rootCauseNode => <<class-interface>> or null`::
+`rootCauseNode => <<class-node>> or null`::
 Node name
 
 `rootCauseNodeId => Integer`::
