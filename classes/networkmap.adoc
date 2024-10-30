@@ -1,0 +1,60 @@
+[.nxsl-class]
+[[class-networkmap]]
+=== NetworkMap
+
+Class represents Network Map. Extends <<class-netobj>>.
+
+==== Instance attributes
+
+`backgroundColor => Integer`::
+Background color in css format.
+
+`backgroundImageId => Integer`::
+Background color Id.
+
+`backgroundLatitude => Float`::
+Background latitude as floating point number.
+
+`getBackgroundLongitude => Float`::
+Background longitude as floating point number.
+
+`backgroundZoom => Integer`::
+Background zoom.
+
+`defaultLinkColor => Integer`::
+Default link color.
+
+`defaultLinkRouting => Integer`::
+Default link routing.
+
+`defaultLinkStyle => Integer`::
+Default link style.
+
+`defaultLinkWidth => Integer`::
+Default link witdh.
+
+`discoveryRadius => Integer`::
+Discovery radius.
+
+`height => Integer`::
+Height.
+
+`isUpdateFailed => Boolean`::
+Update fail check.
+
+`layout => Integer`::
+Layout.
+
+`mapType => Integer`::
+Map type.
+
+`objectDisplayMode => Integer`::
+Object display mode.
+
+`seedObjects => Array`::
+Seed objects
+
+`width => Integer`::
+Width.
+
+
