@@ -164,7 +164,7 @@ specified input values into an output value, although this is not always the
 case. For example, the `trace()` function takes variables and static text and
 prints the values into server log. Like many languages, NXSL provides for
 user-defined functions. These may be located anywhere in the main program or
-loaded in from other scripts via the use keywords.
+loaded in from other scripts via the import keywords.
 
 To define a function, you can use the following form:
 
@@ -287,7 +287,7 @@ to use the `use` keyword accompanied by the name of the script:
 
 [source,c]
 ----
-use my_math_library;
+import my_math_library;
 println( add(1, 2) );
 ----
 
