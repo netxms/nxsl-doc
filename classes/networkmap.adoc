@@ -31,7 +31,7 @@ Default link routing <<const-link-routingalgorithm>>.
 Default link style <<const-link-style>>.
 
 `defaultLinkWidth => Integer`::
-Default link witdh <<class-class-networkmaplink>>.
+Default link witdh <<class-networkmaplink>>.
 
 `discoveryRadius => Integer`::
 Discovery radius <<class-user>>.
