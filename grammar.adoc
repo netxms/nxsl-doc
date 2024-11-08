@@ -12,8 +12,8 @@ module_component ::=
   statement_or_block |
   use_statement
 
-use_statement ::=
-  use any_identifier ";"
+import_statement ::=
+  import any_identifier ";"
 
 any_identifier ::=
   IDENTIFIER |
