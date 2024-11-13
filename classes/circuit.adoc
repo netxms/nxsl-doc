@@ -1,0 +1,19 @@
+[.nxsl-class]
+[[class-circuit]]
+=== Chassis
+
+Object represent containercircuit, extends <<class-datacollectiontarget>>.
+
+==== Instance attributes
+
+`autoBindScript => String`::
+Source of the script for automatic binding
+
+`interfaces => Array`::
+Array with node’s <<class-discoveredinterface>>
+
+`isAutoBindEnabled => Boolean`::
+Indicate if automatic binding is enabled. 
+
+`isAutoUnbindEnabled => Boolean`::
+Indicate if automatic unbinding is enabled.
