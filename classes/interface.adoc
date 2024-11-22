@@ -146,6 +146,9 @@ Zone UIN of this interface.
 
 ==== Instance methods
 
+`clearPeer(enabled) => void`::
+Clears peer information for interface.
+
 `enableAgentStatusPolling(enabled) => void`::
 
 Enable\disable agent status polling for this interface

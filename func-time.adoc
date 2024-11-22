@@ -2,4 +2,5 @@
 
 include::functions/getcurrenttime.adoc[]
 include::functions/getcurrenttimems.adoc[]
+include::functions/getmonotonicclocktime.adoc[]
 include::functions/time.adoc[]

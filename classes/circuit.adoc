@@ -1,6 +1,6 @@
 [.nxsl-class]
 [[class-circuit]]
-=== Chassis
+=== Circuit
 
 Object represent containercircuit, extends <<class-datacollectiontarget>>.
 

@@ -24,6 +24,9 @@ Radio interface index
 `rfName => String`::
 Radio interface name
 
+`rssi => Integer`::
+RSSI for this station
+
 `rxRate => Integer`::
 Radio interface rate
 
