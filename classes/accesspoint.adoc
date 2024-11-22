@@ -15,6 +15,9 @@ Acess point controller of class <<class-node>>.
 `controllerId => Integer`::
 Acess point controller object id.
 
+`downSince => Integer`::
+UNIX epoch timestamp down since.
+
 `index => Integer`::
 Index
 

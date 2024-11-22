@@ -25,6 +25,9 @@ Package name
 `timestamp => Integer`::
 Package change date as UNIX timestamp
 
+`uninstallKey => String`::
+Get product uninstall key if available.
+
 `url => String`::
 PAckage URL
 

@@ -10,7 +10,7 @@ Class represents Network Map. Extends <<class-netobj>>.
 Background color in css format <<const-link-colorsource>>.
 
 `backgroundImageId => Integer`::
-Background color Id.
+Image library GUID.
 
 `backgroundLatitude => Float`::
 Background latitude as floating point number <<class-geolocation>>.

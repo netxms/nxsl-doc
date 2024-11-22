@@ -12,6 +12,9 @@ If name of the custom attribute overlaps with the instance attribute, method <<c
 `alarms => array`::
 List of active <<class-alarm, Alarms>> for this object.
 
+`alarmStats => array`::
+Integer array that consists of 5 numbers - each number represents number of alarms for this and child objects for each of severity.
+
 `alias => String`::
 Object alias. For interfaces it is automatically collected on configuration poll (e.g. from SNMP ifAlias).
 

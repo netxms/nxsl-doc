@@ -145,6 +145,14 @@ Get column name by column index
 
 Column index
 
+`print() => String`::
+
+Prints the whole table with it's content and header
+
+.Return 
+
+String with formatted table
+
 `set(rowId, columnId, value) => void`::
 
 Set column value by row and column index
@@ -160,6 +168,23 @@ Set column value by row and column index
 .Return 
 
 Column index 
+
+
+`trace(tag, level, prefix, headers, delimiter) => void`::
+
+Dump table to log
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|tag|String|Target debug level, default "nxsl.trace"
+|level|Integer|Target debug level, default "0"
+|prefix|String|Optional target prefix; will be added before each line in log file, default 'NULL'
+|headers|Bolean|Optional target header, default 'true'
+|delimiter|String|Optional record separator, default ','
+|===
+
+
 
 ==== Constructors
 

@@ -78,6 +78,9 @@ Template id if DCI came from Template or 0.
 `templateItemId => Integer`::
 DCI item id in template if DCI came from Template or 0.
 
+`transformedDataType => Integer`::
+Tranformed data link:https://netxms.org/documentation/nxsl-latest/#const-dci-datatypetype[type].
+
 `type => Integer`::
 DCI type:
   * 1 = single value

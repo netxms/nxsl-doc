@@ -1,0 +1,21 @@
+[.nxsl-function]
+[[func-getmonotonicclocktime]]
+== GetMonotonicClockTime()
+
+[source,c]
+----
+GetMonotonicClockTime() => Integer
+----
+
+Get number of milliseconds counted by monotonic clock since some unspecified point in the past (system boot time on most systems).
+
+
+
+.Return
+Current time from monotonic clock in milliseconds.
+
+.Example
+[.source]
+....
+println(GetMonotonicClockTime()); // Will print "626624750"
+....
