@@ -6,7 +6,7 @@ Represents NetXMS event object.
 
 ==== Instance attributes
 
-`code => Number`::
+`code => Integer`::
 Event code
 
 `customMessage => String`::
@@ -15,10 +15,10 @@ Custom message set in event processing policy by calling `setMessage`. Deprecate
 `dci => DCI`::
 DCI object of class <<class-dci>> that is source for this event or NULL if generated not by threshold
 
-`dciId => Number`::
+`dciId => Integer`::
 DCI id that is source for this event or 0 if generated not by threshold
 
-`id => Number`::
+`id => Integer`::
 Unique event identifier.
 
 `lastAlarmKey => String`::
@@ -30,7 +30,7 @@ Event message. Get/set attribute.
 `name => String`::
 Event name.
 
-`origin => Number`::
+`origin => Integer`::
 Origin of the event
 
 * 0 - SYSTEM
@@ -41,7 +41,7 @@ Origin of the event
 * 5 - NXSL
 * 6 - REMOTE_SERVER
 
-`originTimestamp => Number`::
+`originTimestamp => Integer`::
 The time when the event was generated in the origin.
 
 `parameters => Array`::
@@ -50,16 +50,16 @@ List of event parameters. Starting index is 1.
 `parameterNames => Array`::
 List of named event parameters (e.g. "dciId"), which can be accessed by `+object.parameterName+`.
 
-`rootId => Number64`::
+`rootId => Integer64`::
 Id of event that is root cause of this event or 0 if there is no such event.
 
-`severity => Number`::
+`severity => Integer`::
 Event severity code. Get/set attribute.
 
 `source => NetObj`::
 Source object (inherited from <<class-netobj>>, exact type can be checked with <<func-classof>> function) for the event.
 
-`sourceId => Number`::
+`sourceId => Integer`::
 ID of the source object for the event.
 
 `tags => Array`::

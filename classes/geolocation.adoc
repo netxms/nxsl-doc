@@ -12,22 +12,22 @@ Represents geographical location (defined by latitude and longitude).
 `isValid => Boolean`::
 `TRUE` if location is valid
 
-`latitude => Number`::
+`latitude => Float`::
 Latitude as floating point number
 
 `latitudeText => String`::
 Latitude as text
 
-`longitude => Number`::
+`longitude => Float`::
 Longitude as floating point number
 
 `longitudeText => String`::
 Longitude as text
 
-`timestamp => Number`::
+`timestamp => Integer`::
 Lat data update timestamp (UNIX format)
 
-`type => Number`::
+`type => Integer`::
 Data source type:
 
 * 0 – Unset

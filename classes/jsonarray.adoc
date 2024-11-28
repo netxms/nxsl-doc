@@ -8,7 +8,7 @@ Note: to parse string into JsonObject use <<func-jsonparse>>.
 
 ==== Instance attributes
 
-`size => Number`::
+`size => Integer`::
 Number of elements in array
 
 `values => Array`::

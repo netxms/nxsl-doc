@@ -6,7 +6,7 @@ Represents table object (usually it's value of table DCI).
 
 ==== Instance attributes
 
-`columnCount => Number`::
+`columnCount => Integer`::
 Number of columns.
 
 `columns => Array<TableColumn>`::
@@ -18,7 +18,7 @@ Array of <<class-tablecolumn,column definitions>> including only columns marked 
 `instanceColumnIndexes => Array<Integer>`::
 Array with indexes of columns marked as instance columns. 
 
-`rowCount => Numbers`::
+`rowCount => Integer`::
 Number of rows.
 
 `rows => Array<TableRow>`::

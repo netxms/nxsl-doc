@@ -29,7 +29,7 @@ Component description
 `firmware => String`::
 Component firmware version, if available.
 
-`ifIndex => Number`::
+`ifIndex => Integer`::
 Interface index number
 
 `model => String`::

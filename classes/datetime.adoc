@@ -10,42 +10,42 @@ All class attributes are settable.
 
 ==== Instance attributes
 
-`second => Number`::
-`sec => Number`::
-`tm_sec => Number`::
+`second => Integer`::
+`sec => Integer`::
+`tm_sec => Integer`::
 Seconds after the minute. Can be modified. 
 
-`minute => Number`::
-`min => Number`::
-`tm_min => Number`::
+`minute => Integer`::
+`min => Integer`::
+`tm_min => Integer`::
 Minutes after the hour. Can be modified. 
 
-`hour => Number`::
-`tm_hour => Number`::
+`hour => integer`::
+`tm_hour => integer`::
 Hours since midnight. Can be modified. 
 
-`day => Number`::
-`mday => Number`::
-`tm_mday => Number`::
+`day => Integer`::
+`mday => Integer`::
+`tm_mday => Integer`::
 Day of the month. Can be modified. 
 
-`month => Number`::
-`mon => Number`::
-`tm_mon => Number`::
+`month => Integer`::
+`mon => Integer`::
+`tm_mon => Integer`::
 Months since January. Can be modified. 
 
-`year => Number`::
-`tm_year => Number`::
+`year => Integer`::
+`tm_year => Integer`::
 Year. Can be modified. 
 
-`dayOfYear => Number`::
-`yday => Number`::
-`tm_yday => Number`::
+`dayOfYear => Integer`::
+`yday => Integer`::
+`tm_yday => Integer`::
 Days since January 1. Can be modified. 
 
-`dayOfWeek => Number`::
-`wday => Number`::
-`tm_wday => Number`::
+`dayOfWeek => Integer`::
+`wday => Integer`::
+`tm_wday => Integer`::
 Days since Sunday. Can be modified. 
 
 `isDST => Boolean`::
