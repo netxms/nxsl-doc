@@ -18,7 +18,7 @@ Agent ID of the agent that opened the tunnel
 `agentVersion => String`::
 Agent version of the node that opened the tunnel
 
-`certificateExpirationTime => Number`::
+`certificateExpirationTime => Integer`::
 UNIX timestamp with current certificate expiration day
 
 `guid => String`::
@@ -30,7 +30,7 @@ Hostname of the node that opened the tunnel
 `hardwareId => String`::
 Hardware ID of the node that opened the tunnel
 
-`id => Number`::
+`id => Integer`::
 Tunnel id
 
 `isAgentProxy => Boolean`::
@@ -54,7 +54,7 @@ Array with MAC addresses as Strings
 `platformName => String`::
 Platform name of the node that opened the tunnel
 
-`startTime => Number`::
+`startTime => Integer`::
 UNIX timestamp with tunnel start time
 
 `serialNumber => String`::
@@ -66,5 +66,5 @@ System information of the node that opened the tunnel
 `systemName => String`::
 System name of the node that opened the tunnel
 
-`zoneUIN => Number`::
+`zoneUIN => Integer`::
 Node's zone UIN if set in agent's configuration file

@@ -6,13 +6,13 @@ Represents NetXMS alarm comment.
 
 ==== Instance attributes
 
-`id => Number`::
+`id => Integer`::
 Alarm comment ID.
 
-`changeTime => Number`::
+`changeTime => Integer`::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the alarm comment last modification time.
 
-`userId => Number`::
+`userId => Integer`::
 ID of user who last modified this alarm commant.
 
 `text => String`::

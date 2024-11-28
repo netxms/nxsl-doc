@@ -6,40 +6,40 @@ Represents NetXMS alarm.
 
 ==== Instance attributes
 
-`ackBy => Number`::
+`ackBy => Integer`::
 ID of user who acknowledged this alarm.
 
 `categories => Array`::
 Array with alarm category names.
 
-`creationTime => Number`::
+`creationTime => Integer`::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the alarm creation time.
 
-`dciId => Number`::
+`dciId => Integer`::
 If alarm was created as a result of DCI threshold violation, this attribute will contain ID of the DCI.
 
-`eventCode => Number`::
+`eventCode => Integer`::
 Event code of originating event.
 
-`eventId => Number`::
+`eventId => Integer`::
 ID of originating event.
 
 `eventName => String`::
 Name of originating event.
 
-`eventTagList => Number`::
+`eventTagList => Float`::
 List of event tags as a coma separated string
 
 `helpdeskReference => String`::
 Helpdesk system reference (e.g. issue ID).
 
-`helpdeskState => Number`::
+`helpdeskState => Integer`::
 Helpdesk state:
   * 0 = Ignored
   * 1 = Open
   * 2 = Closed
 
-`id => Number`::
+`id => Integer`::
 Unique identifier of the alarm.
 
 `impact => String`::
@@ -48,22 +48,22 @@ Alarm impact text
 `key => String`::
 Alarm key.
 
-`lastChangeTime => Number`::
+`lastChangeTime => Integer`::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the last update.
 
 `message => String`::
 Alarm message.
 
-`originalSeverity => Number`::
+`originalSeverity => Integer`::
 Original severity of the alarm.
 
-`parentId => Number`::
+`parentId => Integer`::
 Parent alarm id
 
-`repeatCount => Number`::
+`repeatCount => Integer`::
 Repeat count.
 
-`resolvedBy => Number`::
+`resolvedBy => Integer`::
 ID of user who resolved this alarm.
 
 `rcaScriptName => String`::
@@ -75,13 +75,13 @@ Guid of the rule that generated the event.
 `ruleDescription => String`::
 Description of the rule that generated the event.
 
-`severity => Number`::
+`severity => Integer`::
 Current alarm severity.
 
-`sourceObject => Number`::
+`sourceObject => Integer`::
 ID of the object where alarm is raised.
 
-`state => Number`::
+`state => Integer`::
 Alarm state:
   * 0 = Outstanding
   * 1 = Acknowledged
@@ -90,7 +90,7 @@ Alarm state:
 
 ==== Instance methods
 
-`acknowledge() => Number`::
+`acknowledge() => Integer`::
 Acknowledge alarm. Return `0` on success or error code on failure.
 
 `expandString(string) => String`::
@@ -107,13 +107,13 @@ Expand string by replacing macros with their values.
 
 Formated string
 
-`resolve() => Number`::
+`resolve() => Integer`::
 Resolve alarm. Return `0` on success or error code on failure.
 
-`terminate() => Number`::
+`terminate() => Integer`::
 Terminate alarm. Return `0` on success or error code on failure.
 
-`addComment(commentText, syncWithHelpdesk) => Number`::
+`addComment(commentText, syncWithHelpdesk) => Integer`::
 Add new alarm comment.
 
 .Parameters

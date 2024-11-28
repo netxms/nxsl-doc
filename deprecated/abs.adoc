@@ -11,14 +11,14 @@ Please use <<func-math-abs>> instead.
 ====
 ****
 
-`abs(number) => Number`::
+`abs(number) => Float`::
 
 Returns the absolute value of the number.
 
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
-|number|Number|Input value.
+|number|Float|Input value.
 |===
 
 .Return

@@ -13,7 +13,7 @@ Get DCI object by id
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |node|<<class-node>>|Node object instance
-|id|Number|DCI id
+|id|Integer|DCI id
 |===
 
 .Return
