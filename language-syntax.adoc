@@ -744,6 +744,30 @@ println(a); // prints '[1, 2, 3, 4]'
 
 .Return
 
+=== Array operators
+
+[cols="<33,<33,<33",options="header"]
+|===
+| Example| Name| Result
+|`...`| Spread operator| Used when all elements from an object or array need to be included in a new array or object or should be applied one-by-one in a function call's arguments list.
+|===
+
+.Example 
+[.source]
+....
+sub sum(i, j, k)
+{
+  return i + j + k;
+}
+
+data = %(10, 20, 30);
+println(sum(...data));
+
+a = %("one", "two");
+b = %("new", ...a);
+....
+
+
 Concatenated string
 
 
