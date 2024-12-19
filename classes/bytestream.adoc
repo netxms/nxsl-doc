@@ -63,7 +63,15 @@ Read big-endian 64-bit unsigned integer from byte stream and return it's value.
 
 `readFloatB() => Floating-point number`:: 
 Read 8 bytes from stream as big-endian floating-point number and return it's
-value. 
+value. Deprecated from v 5.1.2, readFloat64B should be used instead.
+
+`readFloat32B() => Floating-point number (32 bit)`::
+Read 32 bytes from stream as big-endian floating-point number and return it's
+value. Added in v 5.1.2.
+
+readFloat64B() => Floating-point number (64 bit)`::
+Read 64 bytes from stream as big-endian floating-point number and return it's
+value. Added in v 5.1.2.
 
 `readInt16L() => Integer (32 bit)`:: 
 Read little-endian 16-bit signed integer from byte stream and return it's value.
@@ -91,7 +99,15 @@ value.
 
 `readFloatL() => Floating-point number`:: 
 Read 8 bytes from stream as little-endian floating-point number and return it's
-value. 
+value. Deprecated from v 5.1.2, readFloat64L should be used instead.
+
+`readFloat32L() => Floating-point number (32 bit)`:: 
+Read 32 bytes from stream as little-endian floating-point number and return it's
+value. Added in v 5.1.2.
+
+`readFloatL64() => Floating-point number (64 bit)`:: 
+Read 64 bytes from stream as little-endian floating-point number and return it's
+value. Added in v 5.1.2.
 
 `readCString() => String`:: 
 Read C-string from stream and return it's value. It's expected that string in
@@ -123,7 +139,13 @@ Write provided value to the byte stream as big-endian 32-bit integer.
 Write provided value to the byte stream as big-endian 64-bit integer. 
 
 `writeFloatB(value) => void`:: 
-Write provided value to the byte stream as big-endian 64-bit float. 
+Write provided value to the byte stream as big-endian 64-bit float. Deprecated from v 5.1.2, writeFloat64B should be used instead.
+
+`writeFloat32B(value) => void`:: 
+Write provided value to the byte stream as big-endian 32-bit float. Added in v 5.1.2.
+
+`writeFloat64B(value) => void`:: 
+Write provided value to the byte stream as big-endian 64-bit float. Added in v 5.1.2.
 
 `writeInt16L(value) => void`:: 
 Write provided value to the byte stream as little-endian 16-bit integer. 
@@ -135,7 +157,13 @@ Write provided value to the byte stream as little-endian 32-bit integer.
 Write provided value to the byte stream as little-endian 64-bit integer. 
 
 `writeFloatL(value) => void`:: 
-Write provided value to the byte stream as little-endian 64-bit float. 
+Write provided value to the byte stream as little-endian 64-bit float. Deprecated from v 5.1.2, writeFloat64L should be used instead.
+
+`writeFloat32L(value) => void`:: 
+Write provided value to the byte stream as little-endian 32-bit float. Added in v 5.1.2.
+
+`writeFloat64L(value) => void`:: 
+Write provided value to the byte stream as little-endian 64-bit float. Added in v 5.1.2.
 
 `writeCString(string) => void`:: 
 Write provided string to the byte stream as null-terminated string (C-string).
