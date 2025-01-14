@@ -394,31 +394,6 @@ println("abc".equalsIgnoreCase("ABC")); // prints "true"
 ....
 
 
-[[class-string-format,String::format()]]
-`format(number, width, precision) => String`::
-
-Formats a numeric value.
-
-.Parameters
-[cols="1,1,3" grid="none", frame="none"]
-|===
-|width|Number|Minimum number of characters. If the number of characters in the output value is less than the specified width, blanks are added to the left or the right of the values — depending on whether the width is negative (for left alignment) or positive (for right alignment) — until the minimum width is reached. The width specification never causes a value to be truncated.
-|precision|Number|The number of decimal places. Floating point value will be rounded accordingly.
-|===
-
-.Return
-Formatted numeric value.
-
-.Example
-[.source]
-....
-"3.7".format(7, 2)		//	"   3.70"
-"3.7".format(-7, 2)		//	"3.70   "
-"5.7278".format(1, 2)	//	"5.73"
-"5.7278".format(1, 0)	//	"6"
-....
-
-
 [[class-string-indexOf,String::indexOf()]]
 `indexOf(string) => Integer`::
 Returns index of first occurence of argument string in this string or `-1`
