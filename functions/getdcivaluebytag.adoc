@@ -16,8 +16,9 @@ Get last value of DCI with given user tag on given node. *This function was adde
 |userTag|String|DCI user tag (exact match).
 |===
 
-.Return Last value for given DCI (string for normal DCIs and <<class-table,Table
-object>> for table DCIs) or null if DCI with given tag does not exist or has no
+.Return 
+
+Last value for given DCI (string for normal DCIs and <<class-table,Table object>> for table DCIs) or null if DCI with given tag does not exist or has no
 collected values.
 
 .Example
