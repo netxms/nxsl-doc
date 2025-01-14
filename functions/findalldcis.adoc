@@ -15,7 +15,7 @@ Find all DCI on the `node` matching `nameFilter`, `descriptionFilter` *and* `use
 |node|<<class-node>> object instance (e.g. `$node`)
 |nameFilter|GLOB for matching DCI name or `null` if name should be ignored.
 |descriptionFilter|GLOB for matching DCI description or `null` if description should be ignored. Optional parameter. 
-|userTagFilter|GLOB for matching DCI user tag or `null` if user tag should be ignored. Optional parameter. *This attribute was added in version 5.2*
+|userTagFilter|GLOB for matching DCI user tag or `null` if user tag should be ignored. Optional parameter. *This parameter was added in version 5.2*
 |===
 
 .Return

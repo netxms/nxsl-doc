@@ -7,7 +7,7 @@
 FindDCIByTagPattern(node, dciUserTagPattern) => Integer
 ----
 
-Find ID of the DCI on node by tag, using pattern matching. Glob symbols "?" and
+Find ID of the DCI on node by tag using pattern matching. Glob symbols "?" and
 "*" can be used. Function returns only one match. <<func-findalldcis>> can be
 used to get multiple matches.
 
