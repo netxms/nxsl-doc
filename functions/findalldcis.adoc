@@ -4,17 +4,18 @@
 
 [source,c]
 ----
-FindAllDCIs(node, nameFilter, descriptionFilter) => Array
+FindAllDCIs(node, nameFilter, descriptionFilter, userTagFilter) => Array
 ----
 
-Find all DCI on the `node` matching `nameFilter` *and* `descriptionFilter`. Filter can contain glob symbols "?" and "*". If filter is `null`, it's ignored.
+Find all DCI on the `node` matching `nameFilter`, `descriptionFilter` *and* `userTagFilter`. Filters can contain glob symbols "?" and "*". If filter is `null`, it's ignored.
 
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
 |node|<<class-node>> object instance (e.g. `$node`)
-|nameFilter|GLOB for mastching DCI name or `null` if name should be ignored.
-|descriptionFilter|GLOB for mastching DCI description or `null` if description should be ignored.
+|nameFilter|GLOB for matching DCI name or `null` if name should be ignored.
+|descriptionFilter|GLOB for matching DCI description or `null` if description should be ignored. Optional parameter. 
+|userTagFilter|GLOB for matching DCI user tag or `null` if user tag should be ignored. Optional parameter. *This attribute was added in version 5.2*
 |===
 
 .Return
