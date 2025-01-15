@@ -67,7 +67,7 @@ Related object or null if there is no object
 <<const-dci-states,Data status>> of the DCI.
 
 `systemTag => String`::
-System tag. Always empty for user-defined DCIs.
+System tag. Contains information about DCI Interpretation.
 
 `template => <<class-template>>`::
 <<class-template,Template object>> if DCI came from Template or `NULL`.
@@ -85,6 +85,10 @@ Tranformed data link:https://netxms.org/documentation/nxsl-latest/#const-dci-dat
 DCI type:
   * 1 = single value
   * 2 = table
+
+`userTag => String`::
+User tag. *This attribute was added in version 5.2*
+
 
 ==== Instance methods
 
