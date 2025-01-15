@@ -379,13 +379,14 @@ Set object category id or name (used to get object display image)
 |idOrName|String|ID or name of category
 |===
 
-`setComments(comment) => void`::
+`setComments(comment, [isMarkdown]) => void`::
 Set object comments
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|comment|String|Comment to be set
+|comment  |String|Comment to be set
+|isMarkdown|Boolean|Optional second argument ( v 5.1.2 ). If it is logical "true", Markdown indicator will be added if not present already; if it is logical "false" (but not NULL), Markdown indicator will be removed if present; if it is NULL or omitted, comment will be set as is (retaining existing behavior).
 |===
 
 `setCustomAttribute(key, value, inherit=false) => void`::

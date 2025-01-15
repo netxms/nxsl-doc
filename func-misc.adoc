@@ -28,7 +28,7 @@ include::functions/getsyslogrulecheckcount.adoc[]
 include::functions/getsyslogrulematchcount.adoc[]
 
 include::functions/getthreadpoolnames.adoc[]
-
+include::functions/IsMarkdownComment.adoc[]
 include::functions/jsonparse.adoc[]
 
 include::functions/map.adoc[]
