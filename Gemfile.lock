@@ -1,12 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    Ascii85 (1.1.1)
+    Ascii85 (2.0.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     afm (0.2.2)
     asciidoctor (2.0.23)
-    asciidoctor-pdf (2.3.18)
+    asciidoctor-pdf (2.3.19)
       asciidoctor (~> 2.0)
       concurrent-ruby (~> 1.1)
       matrix (~> 0.4)
@@ -19,13 +19,13 @@ GEM
       ttfunk (~> 1.7.0)
     coderay (1.1.3)
     concurrent-ruby (1.3.4)
-    css_parser (1.19.0)
+    css_parser (1.21.0)
       addressable
     hashery (2.1.2)
     matrix (0.4.2)
     pdf-core (0.9.0)
-    pdf-reader (2.12.0)
-      Ascii85 (~> 1.0)
+    pdf-reader (2.13.0)
+      Ascii85 (>= 1.0, < 3.0, != 2.0.0)
       afm (~> 0.2.1)
       hashery (~> 2.0)
       ruby-rc4
@@ -47,7 +47,7 @@ GEM
       pdf-reader (~> 2.0)
       prawn (~> 2.2)
     public_suffix (6.0.1)
-    rexml (3.3.7)
+    rexml (3.4.0)
     ruby-rc4 (0.1.5)
     treetop (1.6.12)
       polyglot (~> 0.3)
@@ -55,10 +55,11 @@ GEM
 
 PLATFORMS
   arm64-darwin-23
+  arm64-darwin-24
 
 DEPENDENCIES
   asciidoctor (= 2.0.23)
-  asciidoctor-pdf (= 2.3.18)
+  asciidoctor-pdf (= 2.3.19)
   coderay (= 1.1.3)
 
 BUNDLED WITH
