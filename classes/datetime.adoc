@@ -77,7 +77,7 @@ Formatted time as a string.
 .Example
 [.source]
 ....
-time = DataTime();
+time = DateTime();
 println(time.format("%Y-%m-%d %H:%M")); //Will print: "2016-01-19 12:14"
 println(time.format("%Y-%m-%d %H:%M - timezone %Z - offset from UTC - %z")); //Will print: "2016-01-19 12:14 - timezone CET - offset from UTC - +0100"
 ....
