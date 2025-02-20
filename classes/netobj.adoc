@@ -185,6 +185,20 @@ Send user agent notification
 
 Message id
 
+[[class-netobj-createCollector,NetObj::createCollector()]]
+`createCollector(name) => <<class-collector>>`::
+Create new collector child object. Collectors can be created only under <<class-container>>, <<class-collector>> and <<class-serviceroot>>.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Collector name
+|===
+
+.Return
+
+Newly created collector of <<class-collector>> class.
+
 [[class-netobj-createContainer,NetObj::createContainer()]]
 `createContainer(name) => void`::
 

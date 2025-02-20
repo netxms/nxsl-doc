@@ -17,19 +17,6 @@ Indicate if automatic unbinding is enabled.
 
 ==== Instance methods
 
-`createCollector(name) => <<class-collector>>`::
-Create new collector under current collector.
-
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|name|String|Collector name
-|===
-
-.Return
-
-Newly created collector of <<class-collector>> class.
-
 `createContainer(name) => <<class-container>>`::
 
 Create new container under current collector.
