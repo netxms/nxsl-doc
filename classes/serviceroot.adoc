@@ -33,15 +33,20 @@ Create new container under Service Root container.
 
 Newly created container of <<class-container>> class.
 
-`createNode(name, ipAddress) => <<class-node>>`::
-Create new node under Service Root container.
+
+[[class-serviceroot-createNode,ServiceRoot::createNode()]]
+`createNode(name, primaryHostName, zoneUIN) => <<class-node>>`::
+Create new node under the ServiceRoot.
+
+[NOTE]
+This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Node name if second options is set or primary host name or IP address.
-|ipAddress|String|Optional. Primary host name or IP address.
-|zoneUIN|Integer|Optional. New node's zone.
+|primaryHostName|String|Optional. Primary host name or IP address.
+|zoneUIN|Integer|Optional. New node's zone UIN.
 |===
 
 .Return

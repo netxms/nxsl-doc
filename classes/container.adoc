@@ -43,15 +43,19 @@ Create new collector under current container.
 
 Newly created collector of <<class-collector>> class.
 
-`createNode(name, ipAddress, zoneUIN) => <<class-node>>`::
+[[class-container-createNode,Container::createNode()]]
+`createNode(name, primaryHostName, zoneUIN) => <<class-node>>`::
 Create new node under current container.
+
+[NOTE]
+This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Node name if second options is set or primary host name or IP address.
-|ipAddress|String|Optional. Primary host name or IP address.
-|zoneUIN|Integer|Optional. New node's zone.
+|primaryHostName|String|Optional. Primary host name or IP address.
+|zoneUIN|Integer|Optional. New node's zone UIN.
 |===
 
 .Return

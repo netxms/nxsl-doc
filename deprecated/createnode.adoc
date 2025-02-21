@@ -4,13 +4,12 @@
 
 NOTE: This function is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
-
 ****
 [IMPORTANT]
 ====
 *Deprecated in 5.0.*
 
-Please use <<class-netobj-createNode,createNode()>> method of NetObj class instead.
+Please use ``createNode()`` of <<class-netobj-createNode,Container>>, <<class-netobj-createNode,Collector>> or <<class-netobj-createNode,ServiceRoot>> class instead.
 ====
 ****
 
@@ -33,9 +32,3 @@ Create node object.
 .Return
 
 New <<class-node,node object>> or null on failure
-
-.Example
-[.source]
-----
-CreateNode(FindObject(2), "SERVER", "10.10.10.1");    // Create node directly under "Infrastructure Services"
-----

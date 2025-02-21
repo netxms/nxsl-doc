@@ -363,7 +363,7 @@ println("aaa".compareToIgnoreCase("AAA")); // prints "0"
 
 
 `contains(string) => Boolean`::
-Returns `true`` if this string contains the argument string or `false` otherwise.
+Returns `true` if this string contains the argument string or `false` otherwise.
 
 .Example
 [.source]
@@ -373,7 +373,7 @@ println("aaa".contains("a")); // prints "true"
 
 
 `endsWith(string) => Boolean`::
-Returns `true`` if this string ends with the argument string or `false` otherwise.
+Returns `true` if this string ends with the argument string or `false` otherwise.
 
 .Example
 [.source]
@@ -475,7 +475,7 @@ println("ABC--DEF--GHI".split("--")); // prints "[ABC, DEF, GHI]"
 
 
 `startsWith(string) => Boolean`::
-Returns `true`` if this string starts with the argument string or `false` otherwise.
+Returns `true` if this string starts with the argument string or `false` otherwise.
 
 .Example
 [.source]
