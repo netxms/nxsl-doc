@@ -30,6 +30,19 @@ Create new container under current container.
 
 Newly created container of <<class-container>> class.
 
+`createCollector(name) => <<class-collector>>`::
+Create new collector under current container.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Collector name
+|===
+
+.Return
+
+Newly created collector of <<class-collector>> class.
+
 `createNode(name, ipAddress, zoneUIN) => <<class-node>>`::
 Create new node under current container.
 
