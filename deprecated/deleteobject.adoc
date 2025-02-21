@@ -11,7 +11,8 @@ Please use <<class-netobj-delete,delete()>> method of NetObj class instead.
 ====
 ****
 
-NOTE: This function is enabled by default, but can be disabled by setting
+[NOTE]
+This function is enabled by default, but can be disabled by setting
 configuration parameter "NXSL.EnableContainerFunctions".
 
 [source,c]

@@ -2,7 +2,8 @@
 [[func-createcontainer]]
 == CreateContainer()
 
-NOTE: This function is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+[NOTE]
+This function is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 
 ****
@@ -10,7 +11,7 @@ NOTE: This function is enabled by default, but can be disabled by setting config
 ====
 *Deprecated in 5.0.*
 
-Please use <<class-netobj-createContainer,createContainer()>> method of NetObj class instead.
+Please use `createContainer()` method of <<class-container-createContainer,Container>>, <<class-collector-createContainer,Collector>> or <<class-serviceRoot-createContainer,ServiceRoot>> class instead.
 ====
 ****
 
@@ -30,8 +31,3 @@ Create new container under `parent` object with desired `name`.
 
 .Return
 Instance of newly created <<class-container>> object or `null` if failed.
-
-.Example
-[.source]
-....
-....

@@ -11,7 +11,8 @@ Please use <<class-netobj-bind,bind()>> or <<class-netobj-bindto,bindTo()>> meth
 ====
 ****
 
-NOTE: This function is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+[NOTE]
+This function is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 [source,c]
 ----

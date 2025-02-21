@@ -4,7 +4,8 @@
 
 Represents JSON object.
 
-Note: to parse string into JsonObject use <<func-jsonparse>>.
+[NOTE]
+To parse string into JsonObject use <<func-jsonparse>>.
 
 ==== Instance attributes
 

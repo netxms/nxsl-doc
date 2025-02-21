@@ -6,27 +6,34 @@ Class represents Service Root container
 
 ==== Instance methods
 
+[[class-serviceRoot-createCollector,ServiceRoot::createCollector()]]
 `createCollector(name) => <<class-collector>>`::
-Create new collector under current container.
+Create new collector under current object
+
+[NOTE]
+This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|name|String|Collector name
+|name|String|New collector's name
 |===
 
 .Return
 
 Newly created collector of <<class-collector>> class.
 
-
+[[class-serviceRoot-createContainer,ServiceRoot::createContainer()]]
 `createContainer(name) => <<class-container>>`::
-Create new container under Service Root container.
+Create new container under current object
+
+[NOTE]
+This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|name|String|Container name
+|name|String|New container's name
 |===
 
 .Return
@@ -34,9 +41,9 @@ Create new container under Service Root container.
 Newly created container of <<class-container>> class.
 
 
-[[class-serviceroot-createNode,ServiceRoot::createNode()]]
+[[class-serviceRoot-createNode,ServiceRoot::createNode()]]
 `createNode(name, primaryHostName, zoneUIN) => <<class-node>>`::
-Create new node under the ServiceRoot.
+Create new node under current object.
 
 [NOTE]
 This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".

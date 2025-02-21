@@ -6,7 +6,8 @@ Base class for all NetXMS objects.
 
 ==== Instance attributes
 
-NOTE: Object custom attributes can be accessed in the same way as instance attribute.
+[NOTE]
+Object custom attributes can be accessed in the same way as instance attribute.
 If name of the custom attribute overlaps with the instance attribute, method <<class-netobj-getcustomattribute>> should be used instead.
 
 `alarms => array`::
@@ -124,11 +125,10 @@ Postal address - street.
 
 [[class-netobj-bind,NetObj::bind()]]
 `bind(childObject) => void`::
+Bind `childObject` to the current object as a child.
 
 [NOTE]
 This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
-
-Bind `childObject` to the current object as a child.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -138,11 +138,10 @@ Bind `childObject` to the current object as a child.
 
 [[class-netobj-bindto,NetObj::bindTo()]]
 `bindTo(parentObject) => void`::
+Bind current object to `parentObject` as a child.
 
 [NOTE]
 This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
-
-Bind current object to `parentObject` as a child.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -184,20 +183,6 @@ Send user agent notification
 .Return
 
 Message id
-
-[[class-netobj-createContainer,NetObj::createContainer()]]
-`createContainer(name) => void`::
-
-[NOTE]
-This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
-
-Create container under current object
-
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|name|String|New container's name
-|===
 
 [[class-netobj-delete,NetObj::delete()]]
 `delete() => void`::
@@ -433,11 +418,10 @@ Sets status propagation method.
 
 [[class-netobj-unbind,NetObj::unbind()]]
 `unbind(object) => void`::
+Unbind provided object from the current object.
 
 [NOTE]
 This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
-
-Unbind provided object from the current object.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -447,11 +431,10 @@ Unbind provided object from the current object.
 
 [[class-netobj-unbindfrom,NetObj::unbindFrom()]]
 `unbindFrom(object) => void`::
+Unbind current object from the provided object.
 
 [NOTE]
 This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
-
-Unbind current object from the provided object.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]

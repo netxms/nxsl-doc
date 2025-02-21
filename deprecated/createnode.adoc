@@ -2,14 +2,15 @@
 [[func-createnode]]
 == CreateNode()
 
-NOTE: This function is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
+[NOTE]
+This function is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 ****
 [IMPORTANT]
 ====
 *Deprecated in 5.0.*
 
-Please use ``createNode()`` of <<class-netobj-createNode,Container>>, <<class-netobj-createNode,Collector>> or <<class-netobj-createNode,ServiceRoot>> class instead.
+Please use ``createNode()`` of <<class-container-createNode,Container>>, <<class-collector-createNode,Collector>> or <<class-serviceRoot-createNode,ServiceRoot>> class instead.
 ====
 ****
 
