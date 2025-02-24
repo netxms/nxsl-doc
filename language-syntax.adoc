@@ -464,13 +464,31 @@ println("123".right(5, "_")); // prints "__123"
 
 
 [[class-string-split,String::split()]]
-`split(separator) => Array`::
+`split(separator, trimWhitespace) => Array`::
 Split string into array of strings at given separator.
+
+``trimWhitespace`` parameter is optional and is `false` by default. If set to
+`true`, space characters will be removed on both sides of strings produced by
+splitting. *This parameter was added in version 5.2.*  
 
 .Example
 [.source]
 ....
 println("ABC--DEF--GHI".split("--")); // prints "[ABC, DEF, GHI]"
+
+s = "Alice, Bob,  Carol";
+for (a : s.split(",")) println("|"..a.."|");
+// Will print:
+// |Alice |
+// | Bob|
+// |  Carol|
+
+s = "Alice , Bob,  Carol";
+for (a : s.split(",", true)) println("|"..a.."|");
+// Will print:
+// |Alice|
+// |Bob|
+// |Carol|
 ....
 
 
