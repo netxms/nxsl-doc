@@ -469,7 +469,7 @@ Split string into array of strings at given separator.
 
 ``trimWhitespace`` parameter is optional and is `false` by default. If set to
 `true`, space characters will be removed on both sides of strings produced by
-splitting. *This parameter was added in version 5.2.*  
+splitting. *This parameter was added in version 5.1.4.*  
 
 .Example
 [.source]
