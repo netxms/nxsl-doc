@@ -20,5 +20,5 @@ Prints any text or text representation of object
 ----
 a = ["a", 1, 1.5];
 print("Array: ");
-print(a); //Result: Array: [a, 1, 1.500000]
+print(a); // Will print "Array: [a, 1, 1.500000]"
 ----

@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-Math::Asin(x) => Float`
+Math::Asin(x) => Float
 ----
 
 Calculates arc sine of x.

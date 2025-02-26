@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-time() => void
+time() => Integer
 ----
 
 Gets the system time.

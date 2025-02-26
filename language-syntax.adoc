@@ -1334,7 +1334,7 @@ NXSL supports the following value types: integer values, floating point values
 into variables or returned from functions.
 
 Another good example of expression orientation is pre- and post-increment and
-decrement. You be familiar with the notation of `variable\++` and
+decrement. You be familiar with the notation of `variable\\++` and
 `variable--`. These are increment and decrement operators. In NXSL, like in
 C, there are two types of increment - pre-increment and post-increment. Both
 pre-increment and post-increment essentially increment the variable, and the

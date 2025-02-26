@@ -2,7 +2,7 @@
 
 All math functions are availabke under **Math** package. They can be used by importing 
 math package in the script or using package name before the function name. Package name 
-together with function name used in documwntation. 
+together with function name used in documentation. 
 
 Example with import:
 
@@ -10,7 +10,7 @@ Example with import:
 [source,c]
 ----
 import Math;
-println(Atan2(1, 0.5)); //Result: 1.107149
+println(Atan2(1, 0.5)); // Will print: "1.107149"
 ----
 
 Example without import:
@@ -18,7 +18,7 @@ Example without import:
 .Example
 [source,c]
 ----
-println(Math::Atan2(1, 0.5)); //Result: 1.107149
+println(Math::Atan2(1, 0.5)); // Will print: "1.107149"
 ----
 
 include::functions/math/abs.adoc[]
