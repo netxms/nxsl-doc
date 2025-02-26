@@ -28,7 +28,7 @@ ID of originating event.
 Name of originating event.
 
 `eventTagList => Float`::
-List of event tags as a coma separated string
+List of event tags as a comma separated string
 
 `helpdeskReference => String`::
 Helpdesk system reference (e.g. issue ID).

@@ -12,14 +12,15 @@ Calculate average value for set of values.
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
-|array|Array|Array of integers.
+|array|Array|Array of numbers.
 |===
 
 .Return
 Average value for set of values.
 
 .Example
-[.source]
----
-println(Math::Average([2, 2, 4, 4, 14])); // Will print '5.200000'
-println(Math::Average([2, 2, 4, 4, 10])); // Will print '4.400000'
+[source,c]
+----
+println(Math::Average([2, 2, 4, 4, 14])); // Will print "5.200000"
+println(Math::Average([2, 2, 4, 4, 10])); // Will print "4.400000"
+----

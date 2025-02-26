@@ -69,7 +69,7 @@ value. Deprecated from v 5.1.2, readFloat64B should be used instead.
 Read 32 bytes from stream as big-endian floating-point number and return it's
 value. Added in v 5.1.2.
 
-readFloat64B() => Floating-point number (64 bit)`::
+`readFloat64B() => Floating-point number (64 bit)`::
 Read 64 bytes from stream as big-endian floating-point number and return it's
 value. Added in v 5.1.2.
 
@@ -105,7 +105,7 @@ value. Deprecated from v 5.1.2, readFloat64L should be used instead.
 Read 32 bytes from stream as little-endian floating-point number and return it's
 value. Added in v 5.1.2.
 
-`readFloatL64() => Floating-point number (64 bit)`:: 
+`readFloat64L() => Floating-point number (64 bit)`:: 
 Read 64 bytes from stream as little-endian floating-point number and return it's
 value. Added in v 5.1.2.
 

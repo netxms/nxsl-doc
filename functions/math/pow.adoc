@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-Math::Pow(x, y) => Float
+Math::Pow(x, y) => Number
 ----
 
 Calculates x raised to the power of y.
@@ -12,15 +12,15 @@ Calculates x raised to the power of y.
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
-|x|Float|Initial value.
-|y|Float|Power.
+|x|Number|Base
+|y|Number|Power
 |===
 
 .Return
 x raised to the power of y.
 
 .Example
-[.source]
-....
-println(Math::Pow(2.5, 3.1)); //Will print "17.124347"
-....
+[source,c]
+----
+println(Math::Pow(2.5, 3.1)); // Will print "17.124347"
+----
