@@ -27,7 +27,7 @@ Compates two MAC addresses
 |===
 
 .Return 
-`TRUE` if MAC addresses are equals
+`TRUE` if MAC addresses are equal
 
 `toString(notation) => String`::
 Returnas MAC address string representation
@@ -44,7 +44,7 @@ MAC address as a string
 ==== Constructors
 
 `MacAddress(mac)`::
-Creates new JSON object.
+Creates new MAC address object.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
