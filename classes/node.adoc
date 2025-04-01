@@ -46,17 +46,17 @@ EtherNet/IP device extended status
 `cipExtendedStatusAsText => String`::
 EtherNet/IP device extended status as text
 
-`cipStatus => Integer`::
-EtherNet/IP device status
-
-`cipStatusAsText => String`::
-EtherNet/IP device status as text
-
 `cipState => Integer`::
 EtherNet/IP device state
 
 `cipStateAsText => String`::
 EtherNet/IP device state as text
+
+`cipStatus => Integer`::
+EtherNet/IP device status
+
+`cipStatusAsText => String`::
+EtherNet/IP device status as text
 
 `cipVendorCode => Integer`::
 EtherNet/IP vendor code in numeric form.
@@ -70,11 +70,11 @@ Entity MIB components of class <<class-component>>.
 `dependentNodes => Array`::
 Will return array with <<class-nodedependency>> class objects. This array contains all objects that have current node as a proxy or data collection sources.
 
-`driver => String`::
-Named of selected device-specific SNMP driver.
-
 `downSince => Integer64`::
 UNIX timestamp when node went down.
+
+`driver => String`::
+Named of selected device-specific SNMP driver.
 
 `effectiveAgentProxy => <<class-node>>`::
 Object that is effective agent proxy or NULL. 
@@ -87,6 +87,12 @@ Object that is effective SNMP proxy or NULL.
 
 `flags => Integer`::
 Bit mask of <<node-flags>>.
+
+`hardwareComponents => Array`::
+Returns an array of available hardware of class <<class-hardwarecomponent>>.
+
+`hardwareId => String`::
+Nodes' unique hardware id
 
 `hasAgentIfXCounters => Boolean`::
 `TRUE` if agent supports 64-bit interface counters.
@@ -102,12 +108,6 @@ Bit mask of <<node-flags>>.
 
 `hasVLANs => Boolean`::
 `TRUE` if VLAN information available.
-
-`hardwareId => String`::
-Nodes' unique hardware id
-
-`hardwareComponents => Array`::
-Retutrns an array of awailiable hardware of class <<class-hardwarecomponent>>.
 
 `hasWinPDH => Boolean`::
 `TRUE` if node supports Windows PDH parameters.
@@ -169,11 +169,11 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `isLocalMgmt => Boolean`::
 `TRUE` if node is a local management server (NetXMS server)
 
-`isNDP => Boolean`::
-`TRUE` if node supports OSPF/NDP. Equivalent of `isOSPF`.
-
 `isModbusTCP => Boolean`::
 `TRUE` if node supports Modbus TCP
+
+`isNDP => Boolean`::
+`TRUE` if node supports OSPF/NDP. Equivalent of `isOSPF`.
 
 `isOSPF => Boolean`::
 `TRUE` if node supports OSPF/NDP. Equivalent of `isNDP`.
@@ -196,11 +196,11 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `isSNMP => Boolean`::
 `TRUE` if SNMP agent detected on node
 
-`isSSH => Boolean`::
-`TRUE` if SSH is connection available
-
 `isSONMP => Boolean`::
 `TRUE` if node supports SONMP/NDP (Synoptics/Nortel Discovery Protocol)
+
+`isSSH => Boolean`::
+`TRUE` if SSH is connection available
 
 `isSTP => Boolean`::
 `TRUE` if node supports STP (Spanning Tree Protocol)
@@ -254,14 +254,14 @@ Array with <<class-ospfarea>> class objects
 `ospfRouterId => String`::
 OSPF router ID
 
-`platformName => String`::
-Platform name reported by NetXMS agent
-
 `physicalContainer => Object`::
 Physical container object: Rack <<class-netobj>> or Chassis <<class-chassis>>
 
 `physicalContainerId => Integer`::
 Physical container object id (Rack or Chassis)
+
+`platformName => String`::
+Platform name reported by NetXMS agent
 
 `primaryHostName => String`::
 Primary host name
@@ -278,11 +278,11 @@ Hardware system property - product version
 `rack => <<class-netobj>>`::
 Will return Rack object as <<class-netobj>> if node is added in rack
 
-`rackId => Integer`::
-Will return Rack id if node is added in rack
-
 `rackHeight => Integer`::
 Object height in rack
+
+`rackId => Integer`::
+Will return Rack id if node is added in rack
 
 `rackPosition => Integer`::
 Object position in rack
@@ -665,16 +665,6 @@ Get web service object by name.
 webSvc = $node.getWebService("webSvcName"); 
 ....
 
-[[class-node-readagentparameter,Node::readAgentParameter()]]
-`readAgentParameter(name) => String`::
-Reads current value of agent metric.
-
-.Parameters
-[cols="1,1a,3a" grid="none", frame="none"]
-|===
-|name|String|Parameter name.
-|===
-
 [[class-node-readagentlist,Node::readAgentList()]]
 `readAgentList(name) => Array`::
 Reads current value of agent list metric and returns array of strings.
@@ -683,6 +673,16 @@ Reads current value of agent list metric and returns array of strings.
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|List name.
+|===
+
+[[class-node-readagentparameter,Node::readAgentParameter()]]
+`readAgentParameter(name) => String`::
+Reads current value of agent metric.
+
+.Parameters
+[cols="1,1a,3a" grid="none", frame="none"]
+|===
+|name|String|Parameter name.
 |===
 
 [[class-node-readagenttable,Node::readAgentTable()]]
