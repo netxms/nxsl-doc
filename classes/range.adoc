@@ -1,0 +1,41 @@
+[.nxsl-class]
+[[class-range]]
+=== Range
+
+Class representing a range that has start and end indexes and step size. 
+
+All instance attributes are read-only.
+
+==== Instance attributes
+
+`start => Number`::
+Range start (inclusive).
+
+`end => Number`::
+Range end (exclusive).
+
+`step => Number`::
+Step size.
+
+==== Constructors
+
+`Range(end)`::
+`range(end)`::
+Creates new Range object with range from 0 till `end`.
+
+`Range(start, end)`::
+`range(start, end)`::
+Creates new Range object with range from `start` till `end`.
+
+`Range(start, end, step)`::
+`range(start, end, step)`::
+Creates new Range object with range from `start` till `end` with step size `step`.
+
+==== Examples
+
+.Loop from 0 till 9
+----
+a = [];
+for (i : range(0, 10)) a.append(i);
+println(a); // Will print "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+----
