@@ -725,6 +725,17 @@ println(a); // prints '[1, 2, 3, 4]'
 ....
 
 
+`indexOf(value) => Integer`:: Returns the index of first occurrence of the
+specified `value` or -1 if `value` is not found in the array.  
+
+.Example
+[.source]
+....
+a = ["Normal", "Warning", "Minor", "Major", "Critical"];
+println(a.indexOf("Major")); // Prints "3"
+....
+
+
 [[class-array-join,Array::join()]]
 `join(separator) => void`::
 
@@ -1281,7 +1292,7 @@ with
   var = {code}
 expression
 ----
-
+Good Night Simpsons
 Example for "Object query" Dashboard element. This example will filter out only nodes that are
 unreachable and will create 2 variables as data providers for columns: time node is down since and
 oldest alarm time.
