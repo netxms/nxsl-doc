@@ -1399,7 +1399,7 @@ Without short-circuit evaluation, `trim(x)` would cause run-time error if
 (`trim(x) == "abc"`) will be false.
 
 
-====  Try...Catch 
+===  Try...Catch 
 
 If run-time error happens during NXSL code execution, the execution will
 normally stop and error message will be generated. 
