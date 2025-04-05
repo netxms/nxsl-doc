@@ -283,7 +283,7 @@ The $main() function is constructed from code that is not a part of any other fu
 
 === Calling library script functions
 You can call functions from scripts that are stored in Script Library. One way is
-to use the `use` keyword accompanied by the name of the script:
+to use the `import` keyword accompanied by the name of the script:
 
 [source,c]
 ----
@@ -1345,7 +1345,7 @@ NXSL supports the following value types: integer values, floating point values
 into variables or returned from functions.
 
 Another good example of expression orientation is pre- and post-increment and
-decrement. You be familiar with the notation of `variable\\++` and
+decrement. You might be familiar with the notation of `variable\\++` and
 `variable--`. These are increment and decrement operators. In NXSL, like in
 C, there are two types of increment - pre-increment and post-increment. Both
 pre-increment and post-increment essentially increment the variable, and the
@@ -1399,8 +1399,46 @@ Without short-circuit evaluation, `trim(x)` would cause run-time error if
 (`trim(x) == "abc"`) will be false.
 
 
-[[chapter-regular-expressions]]
+====  Try...Catch 
 
+If run-time error happens during NXSL code execution, the execution will
+normally stop and error message will be generated. 
+
+The ``try`` statement allows to define a block of code to be tested for errors
+while it is being executed. Should run-time error occur within that block,
+execution of code after the block will continue. 
+
+The ``catch`` statement allows to define a block of code to be executed, if an
+error occurs in the ``try`` block.
+
+The ``try`` and ``catch`` keywords come in pairs:
+
+[source,c]
+----
+try
+{
+  // Block to code to try
+}
+catch
+{
+  // Block of code to handle errors
+}
+----
+
+The following variables with information about the error are avaiable within the
+``catch`` block:
+
+[cols="1,5" grid="none", frame="none"]
+|===
+|$errorcode|Error code
+|$errorline|Line number
+|$errormodule|If error happened in a function of script imported using ``import`` keyword - name of that script. Empty otherwise. 
+|$errormsg|Full error message including error code, line number, error text and, if available, module name. 
+|$errortext|Error text
+|===
+
+
+[[chapter-regular-expressions]]
 
 ===  Regular expressions
 
