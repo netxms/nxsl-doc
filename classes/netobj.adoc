@@ -2,7 +2,7 @@
 [[class-netobj]]
 === NetObj
 
-Base class for all NetXMS objects.
+Base class for all NetXMS objects. Extends <<class-object>>.
 
 ==== Instance attributes
 

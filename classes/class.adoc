@@ -13,7 +13,20 @@ String aray with all attribute names
 String aray with class inheritance hirarchy 
 
 `methods => Array`::
-String aray with all methode names
+String aray with all method names
 
 `name => Integer`::
 Name of the class
+
+.Example
+[.source]
+....
+println("Class hierarchy:");
+println($object.__class.hierarchy.join(" -> "));
+println();
+println("Attributes:");
+for (a : $object.__class.attributes) println(a .. " = " .. $object.__get(a));
+println();
+println("Methods:");
+for (m : $object.__class.methods) println(m);
+....
