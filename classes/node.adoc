@@ -512,6 +512,15 @@ Enable or disable topology polling.
 |flag|Boolean|If topology polls should be enabled.
 |===
 
+`enableVnc(flag) => void`::
+Enable or disable VNC detection on the node during configuration poll.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If VNC detection should be enabled.
+|===
+
 `enableWinPerfCountersCache(flag) => void`::
 Enable or disable reading of Windows performance counters metadata
 
