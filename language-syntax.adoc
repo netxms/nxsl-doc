@@ -75,6 +75,24 @@ line
 +
 string""" - string literal that can span multiple lines with backslash being an ordinary character.
 
+The following character combinations are supported in "string" literals:
+
+* `\b` - produces Backspace character
+
+* `\t` - produces Horizontal tab character
+
+* `\n` - produces Newline character
+
+* `\r` - produces Carriage return character 
+
+* '\xhh' - produces a character with code hh (where hh is two-digit hex number)
+
+* '\uhhhh' - produces a character with code hhhh (where hhhh is four-digit hex
+number). E.g. `\u2026` produces Greek small letter Mu (`μ`)
+
+* `\\` - produces Backslash character (`\`)
+
+
 ==== Truth Value Testing
 
 Any variable can be tested for truth value, for use in an `if` or `while` condition 
@@ -1362,7 +1380,7 @@ commonly used inside conditional execution, such as `if` statements.
 
 The last example of expressions is combined operator-assignment expressions.
 You already know that if you want to increment `a` by 1, you can simply write
-`a\+\+` or `\+\+a`. But what if you want to add more than one to it, for
+`a+\+` or `++a`. But what if you want to add more than one to it, for
 instance 3? In NXSL, adding 3 to the current value of `a` can be written `a
 += 3`. This means exactly "take the value of `a`, add 3 to it, and assign it
 back into `a` ". In addition to being shorter and clearer, this also results
