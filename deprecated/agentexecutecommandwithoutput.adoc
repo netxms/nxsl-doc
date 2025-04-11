@@ -2,6 +2,15 @@
 [[func-agentexecutecommandwithoutput]]
 == AgentExecuteCommandWithOutput()
 
+****
+[IMPORTANT]
+====
+*Deprecated in 5.0.*
+
+Please use executeAgentCommandWithOutput() method of <<class-netobj>> class.
+====
+****
+
 `AgentExecuteCommandWithOutput(node, commandName, …) => String`::
 
 Execute agent command (action) on given node and collect standard output of the application defined by the command.

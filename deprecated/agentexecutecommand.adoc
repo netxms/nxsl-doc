@@ -2,6 +2,15 @@
 [[func-agentexecutecommand]]
 == AgentExecuteCommand()
 
+****
+[IMPORTANT]
+====
+*Deprecated in 5.0.*
+
+Please use executeAgentCommand() method of <<class-netobj>> class.
+====
+****
+
 `AgentExecuteCommand(node, commandName, …) => Boolean`::
 
 Execute agent command (action) on given node.
