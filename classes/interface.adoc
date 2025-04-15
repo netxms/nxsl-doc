@@ -111,7 +111,7 @@ OSPF type
 `ospfTypeText => String`::
 OSPF type as s text
 
-`outboundUtilization => String`::
+`outboundUtilization => Integer`::
 Outbound utilization
 
 `peerInterface => <<class-interface>>`::
