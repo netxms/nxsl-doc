@@ -198,18 +198,22 @@ Delete custom attribute.
 |name|String|Name of the attribute to delete.
 |===
 
-`getResponsibleUsers(level) => array`::
-Returns responsible users that have escalation level equal to specified level.
+`getResponsibleUsers(tag) => array`::
+Returns list of responsible users with specific tag. Full list is acceessible via .responsibleUsers
+
+List of allowed tags are controlled by server parameter "Objects.ResponsibleUsers.AllowedTags".
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|level|Integer|Escalation level
+|level|String|Tag
 |===
 
 .Return
 Array with user objects that are added as responsible users for this object.
 Objects are <<class-user>> or <<class-usergroup>>
+
+This function return empty list if no users or groups are found for the tag.
 
 `isDirectChild(object) => Boolean`::
 If provided object is direct child of this object
