@@ -494,6 +494,15 @@ Enable or disable usage of SNMP for all polls.
 |flag|Boolean|If SNMP communication should be enabled.
 |===
 
+`enableSmclpPropertyPolling(flag) => void`::
+Enable or disable reading of SM-CLP available properties metadata during
+configuration poll.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If 802.1x port state checking should be enabled.
+|===
 `enableSsh(flag) => void`::
 Enable or disable usage of SSH 
 
@@ -522,7 +531,8 @@ Enable or disable VNC detection on the node during configuration poll.
 |===
 
 `enableWinPerfCountersCache(flag) => void`::
-Enable or disable reading of Windows performance counters metadata
+Enable or disable reading of Windows performance counters metadata during
+configuration poll.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
