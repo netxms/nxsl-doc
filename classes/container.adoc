@@ -69,7 +69,7 @@ Create new sensor under current object.
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Sensor name
-|deviceClass|Integer|Sensor device class, one of the following <<const-link-routingalgorithm,values>>. Optional, ``SensorDeviceClass::Other`` if omitted.
+|deviceClass|Integer|Sensor device class, one of the following <<const-sensor-device-class,values>>. Optional, ``SensorDeviceClass::Other`` if omitted.
 |gateway|<<class-netobj>>|Gateway used for communication sensor. Optional.
 |modbusUnitId|Integer|MODBUS Unit ID. Optional.
 |===
