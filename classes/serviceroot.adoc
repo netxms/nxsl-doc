@@ -10,9 +10,6 @@ Class represents Service Root container
 `createCollector(name) => <<class-collector>>`::
 Create new collector under current object
 
-[NOTE]
-This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
-
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -26,9 +23,6 @@ Newly created collector of <<class-collector>> class.
 [[class-serviceRoot-createContainer,ServiceRoot::createContainer()]]
 `createContainer(name) => <<class-container>>`::
 Create new container under current object
-
-[NOTE]
-This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -45,9 +39,6 @@ Newly created container of <<class-container>> class.
 `createNode(name, primaryHostName, zoneUIN) => <<class-node>>`::
 Create new node under current object.
 
-[NOTE]
-This function is disabled by default and should be explicitly enabled by setting configuration parameter "NXSL.EnableContainerFunctions".
-
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -59,3 +50,20 @@ This function is disabled by default and should be explicitly enabled by setting
 .Return
 
 Newly created node of <<class-node>> class or NULL if failed to create
+
+[[class-serviceroot-createSensor,ServiceRoot::createSensor()]]
+`createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>`::
+Create new sensor under current object.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Sensor name
+|deviceClass|Integer|Sensor device class, one of the following <<const-link-routingalgorithm,values>>. Optional, ``SensorDeviceClass::Other`` if omitted.
+|gateway|<<class-netobj>>|Gateway used for communication sensor. Optional.
+|modbusUnitId|Integer|MODBUS Unit ID. Optional.
+|===
+
+.Return
+
+Newly created sensor of <<class-sensor>> class or NULL if failed to create

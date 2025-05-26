@@ -25,9 +25,6 @@ foreach(t : templates)
 `applyTemplate(template) => void`::
 Apply template to node
 
-[NOTE]
-This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
-
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -80,9 +77,6 @@ Reads object internal table metric (metric with source "Internal").
 |===
 
 `removeTemplate(template) => void`::
-
-[NOTE]
-This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 Remove template from node
 

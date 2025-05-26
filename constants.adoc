@@ -243,6 +243,28 @@ Should be used in order to return errors in script DCIs or in transoformation sc
 |ClusterState::Down|0x00010000|Down
 |===
 
+
+[[const-sensor-device-class]]
+== Sensor device class
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+|SensorDeviceClass::Other|0|Other
+|SensorDeviceClass::UPS|1|UPS
+|SensorDeviceClass::WaterMeter|2|Water Meter
+|SensorDeviceClass::ElectricityMeter|3|Electricity Meter
+|SensorDeviceClass::Temperature|4|Temperature
+|SensorDeviceClass::Humidity|5|Humidity
+|SensorDeviceClass::TemperatureAndHumidity|6|Temperature And Humidity
+|SensorDeviceClass::CO2|7|CO2
+|SensorDeviceClass::PowerSupply|8|Power Supply
+|SensorDeviceClass::Current|9|Current
+|SensorDeviceClass::WaterLeak|10|Water Leak
+|SensorDeviceClass::Smoke|11|Smoke
+|===
+
+
 [[const-sensor-state]]
 == Sensor state
 

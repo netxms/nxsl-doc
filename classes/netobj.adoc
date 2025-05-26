@@ -127,9 +127,6 @@ Postal address - street.
 `bind(childObject) => void`::
 Bind `childObject` to the current object as a child.
 
-[NOTE]
-This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
-
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -139,9 +136,6 @@ This method is enabled by default, but can be disabled by setting configuration 
 [[class-netobj-bindto,NetObj::bindTo()]]
 `bindTo(parentObject) => void`::
 Bind current object to `parentObject` as a child.
-
-[NOTE]
-This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -424,9 +418,6 @@ Sets status propagation method.
 `unbind(object) => void`::
 Unbind provided object from the current object.
 
-[NOTE]
-This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
-
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -436,9 +427,6 @@ This method is enabled by default, but can be disabled by setting configuration 
 [[class-netobj-unbindfrom,NetObj::unbindFrom()]]
 `unbindFrom(object) => void`::
 Unbind current object from the provided object.
-
-[NOTE]
-This method is enabled by default, but can be disabled by setting configuration parameter "NXSL.EnableContainerFunctions".
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
