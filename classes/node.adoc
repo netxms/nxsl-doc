@@ -686,7 +686,7 @@ webSvc = $node.getWebService("webSvcName");
 
 [[class-node-readagentlist,Node::readAgentList()]]
 `readAgentList(name) => Array`::
-Reads current value of agent list metric and returns array of strings.
+Request agent list directly from agent on given node. Returns array of strings or `NULL` if failed.
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -696,17 +696,17 @@ Reads current value of agent list metric and returns array of strings.
 
 [[class-node-readagentparameter,Node::readAgentParameter()]]
 `readAgentParameter(name) => String`::
-Reads current value of agent metric.
+Request metric directly from agent on given node. Returns `NULL` if failed.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
-|name|String|Parameter name.
+|name|String|Metric name.
 |===
 
 [[class-node-readagenttable,Node::readAgentTable()]]
 `readAgentTable(name) => <<class-table>>`::
-Reads current value of agent table metric and returns <<class-table>>.
+Requests agent table directly from agent on given node. Returns <<class-table>> or `NULL` if failed.
 
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
@@ -716,7 +716,7 @@ Reads current value of agent table metric and returns <<class-table>>.
 
 [[class-node-readdriverparameter,Node::readDriverParameter()]]
 `readDriverParameter(name) => String`::
-Request driver-specific metric directly from network device driver (e.g. Rital).
+Request driver-specific metric from network device driver (e.g. Rital).
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
