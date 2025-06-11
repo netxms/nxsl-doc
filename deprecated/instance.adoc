@@ -7,7 +7,13 @@
 ====
 *Deprecated in 5.0.*
 
-Return array with instance values instead.
+Instead of using this function, just return an array with the following values:
+
+1. instance (`{instance}` in DCIs)
+2. instance name (`{instance-name}` in DCIs, optional)
+3. related object (optional)
+
+Unlike previous versions, `true` is not required as the first value in the array, since presence of the array itself is enough to accept the instance. However, old scripts with four values will still work.
 ====
 ****
 
