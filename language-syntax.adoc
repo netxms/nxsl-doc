@@ -1310,7 +1310,6 @@ with
   var = {code}
 expression
 ----
-Good Night Simpsons
 Example for "Object query" Dashboard element. This example will filter out only nodes that are
 unreachable and will create 2 variables as data providers for columns: time node is down since and
 oldest alarm time.
