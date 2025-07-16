@@ -93,26 +93,6 @@ Alarm state:
 `acknowledge() => Integer`::
 Acknowledge alarm. Return `0` on success or error code on failure.
 
-`expandString(string) => String`::
-
-Expand string by replacing macros with their values.
-
-.Parameters
-[cols="1,3a" grid="none", frame="none"]
-|===
-|string|String to expand
-|===
-
-.Return
-
-Formated string
-
-`resolve() => Integer`::
-Resolve alarm. Return `0` on success or error code on failure.
-
-`terminate() => Integer`::
-Terminate alarm. Return `0` on success or error code on failure.
-
 `addComment(commentText, syncWithHelpdesk) => Integer`::
 Add new alarm comment.
 
@@ -127,9 +107,30 @@ Add new alarm comment.
 
 Id of the newly created alarm comment.
 
+`expandString(string) => String`::
+
+Expand string by replacing macros with their values.
+
+.Parameters
+[cols="1,3a" grid="none", frame="none"]
+|===
+|string|String to expand
+|===
+
+.Return
+
+Formated string
+
 `getComments() => Array`::
 Get array of alarm comments.
 
 .Return
 
 Array of <<class-alarmcomment>> objects.
+
+`resolve() => Integer`::
+Resolve alarm. Return `0` on success or error code on failure.
+
+`terminate() => Integer`::
+Terminate alarm. Return `0` on success or error code on failure.
+

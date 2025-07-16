@@ -6,14 +6,8 @@ Object that contains all information about node hardware component.
 
 ==== Instance Attributes
 
-`changeCode => Integer`::
-Code of the changes that happened to the component during the last 
-configuration poll.
-
-Possible values are listed here: <<const-changecode>>
-
-`categoryName => String`::
-Component category name
+`capacity => Integer`::
+Component capacity depending on the type.
 
 `category => Integer`::
 Code of the component category.
@@ -33,23 +27,26 @@ Possible values are:
 |HardwareComponentCategory::NETWORK_ADAPTER |6
 |===
 
+`categoryName => String`::
+Component category name
+
+`changeCode => Integer`::
+Code of the changes that happened to the component during the last 
+configuration poll.
+
+Possible values are listed here: <<const-changecode>>
+
+`description => String`::
+Component description.
+
 `index => Integer`::
 Index of the component.
 
-`capacity => Integer`::
-Component capacity depending on the type.
-
-`type => String`::
-Component type depending on the category.
-
-`vendor => String`::
-Component vendor.
+`location => String`::
+Component installation location in the system.
 
 `model => String`::
 Component model.
-
-`location => String`::
-Component installation location in the system.
 
 `partNumber => String`::
 Component part number.
@@ -57,5 +54,8 @@ Component part number.
 `serialNumber => String`::
 Component serial number.
 
-`description => String`::
-Component description.
+`type => String`::
+Component type depending on the category.
+
+`vendor => String`::
+Component vendor.

@@ -36,8 +36,6 @@ Phone number set in user properties
 `lastLogin => Integer`::
 UNIX timestamp with last user's login time
 
-`xmppId => String`::
-XMPP id
 
 ==== Constants
 

@@ -7,14 +7,14 @@ Object represents stream of bytes
 
 ==== Instance attributes
 
+`eos => boolean`::
+Indicates, if current position is in the end of byte stream
+
 `pos => Integer`::
 Current position in the byte stream
 
 `size => Integer`::
 Size of byte stream in bytes
-
-`eos => boolean`::
-Indicates, if current position is in the end of byte stream
 
 
 ==== Instance methods
