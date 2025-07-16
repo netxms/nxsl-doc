@@ -192,48 +192,6 @@ Delete custom attribute.
 |name|String|Name of the attribute to delete.
 |===
 
-`getResponsibleUsers(tag) => array`::
-Returns list of responsible users with specific tag. Full list is acceessible via .responsibleUsers
-
-List of allowed tags are controlled by server parameter "Objects.ResponsibleUsers.AllowedTags".
-
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|level|String|Tag
-|===
-
-.Return
-Array with user objects that are added as responsible users for this object.
-Objects are <<class-user>> or <<class-usergroup>>
-
-This function return empty list if no users or groups are found for the tag.
-
-`isDirectChild(object) => Boolean`::
-If provided object is direct child of this object
-
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|object|<<class-netobj>>|Object to check
-|===
-
-.Return
-TRUE if provided object is direct child of this object
-
-`isDirectParent(object) => Boolean`::
-If provided object is direct parent of this object
-
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|object|<<class-netobj>>|Object to check
-|===
-
-.Return
-TRUE if provided object is direct parent of this object
-
-
 [[class-netobj-entermaintenance,NetObj::enterMaintenance()]]
 `enterMaintenance() => void`::
 Enable maintenance mode for the object.
@@ -273,6 +231,22 @@ Alternatively, attributes can be accessed as instance attribues (with `.`,
 attribute should exist) or by using `attribute@object` notion (which will return
 `null` instead of runtime error if attribue is missing).
 
+`getResponsibleUsers(tag) => array`::
+Returns list of responsible users with specific tag. Full list is acceessible via .responsibleUsers
+
+List of allowed tags are controlled by server parameter "Objects.ResponsibleUsers.AllowedTags".
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|level|String|Tag
+|===
+
+.Return
+Array with user objects that are added as responsible users for this object.
+Objects are <<class-user>> or <<class-usergroup>>
+
+This function return empty list if no users or groups are found for the tag.
 
 `isChild(object) => Boolean`::
 If provided object is child of this object
@@ -286,6 +260,30 @@ If provided object is child of this object
 .Return
 TRUE if provided object is child of this object
 
+`isDirectChild(object) => Boolean`::
+If provided object is direct child of this object
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|object|<<class-netobj>>|Object to check
+|===
+
+.Return
+TRUE if provided object is direct child of this object
+
+`isDirectParent(object) => Boolean`::
+If provided object is direct parent of this object
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|object|<<class-netobj>>|Object to check
+|===
+
+.Return
+TRUE if provided object is direct parent of this object
+
 `isParent(object) => Boolean`::
 If provided object is parent of this object
 
@@ -297,7 +295,6 @@ If provided object is parent of this object
 
 .Return
 TRUE if provided object is parent of this object
-
 
 [[class-netobj-leavemaintenance,NetObj::leaveMaintenance()]]
 `leaveMaintenance() => void`::
