@@ -22,5 +22,6 @@ Open file. Returns FILE object or null.
 .Example
 [.source]
 ....
-IO::OpenFile("/tmp/source", "/tmp/destination") // Will copy "/tmp/source" file content to "/tmp/destination" file.
+f = IO::OpenFile("/tmp/a.txt", "r");
+while (!f.eof) println(f.readLine()); // Will print contents of the file
 ....

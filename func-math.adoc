@@ -1,7 +1,7 @@
 = Math
 
-All math functions are availabke under **Math** package. They can be used by importing 
-math package in the script or using package name before the function name. Package name 
+All math functions are available under **Math** package. They can be used by importing 
+the package in the script or using package name before the function name. Package name 
 together with function name used in documentation. 
 
 Example with import:
