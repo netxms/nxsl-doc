@@ -21,12 +21,13 @@ Name of the class
 .Example
 [.source]
 ....
+obj = $object;
 println("Class hierarchy:");
-println($object.__class.hierarchy.join(" -> "));
+println(obj.__class.hierarchy.join(" -> "));
 println();
 println("Attributes:");
-for (a : $object.__class.attributes) println(a .. " = " .. $object.__get(a));
+for (a : obj.__class.attributes) println(a .. " = " .. obj.__get(a));
 println();
 println("Methods:");
-for (m : $object.__class.methods) println(m);
+for (m : obj.__class.methods) println(m);
 ....
