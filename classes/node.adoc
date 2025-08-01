@@ -365,8 +365,8 @@ Finds web service by name, makes request and returns the <<class-webservicerespo
 |webSvcName|String|Web service name.
 |requestType|String|Request type. One of: GET, DELETE, PATCH, POST, PUT
 |data|String or <<class-jsonobject>> |Depending on request type data might be required and provided as a string or JSON object. GET and DELETE requests do not allow data, PATCH, POST, PUT require data.
-|contentType|String|Optional parameter. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
-|acceptCached|Boolean|True if response stored in the cache is allowed to be used. Named parameter. Default: false.
+|contentType|String|Optional parameter, for PATCH, POST and PUT requests only. Type of provided data that will be set to "Content-Type" header of request. Default type is "application/json".
+|acceptCached|Boolean|Optional named parameter. If True, response stored in agent's cache will be used. Default: false.
 |...|Strings|Optional additional parameter(s) that will be used in web service definition to expand %1, %2... macro.
 |===
 
@@ -376,7 +376,7 @@ Instance of <<class-webserviceresponse>> with request result.
 .Example
 [.source]
 ....
-//Valid example when request fails because there is no connection to agent
+// Valid example when request fails because there is no connection to agent
 result = $node.callWebService("Web service name", "GET", "additional/ult/path"); 
 println(result.success); // "false"
 println(result.errorMessage); // "No connection with agent"
@@ -384,15 +384,17 @@ println(result.agentErrorCode); // "0"
 println(result.httpResponseCode); // "0"
 println(result.document); // ""
 
-//Successful post request
-result = $node2.callWebService("Web service name", "POST", "{ \"id\":10 }", "application/json", "additional/ult/path");
+// Successful post request
+result = $node.callWebService("Web service name", "POST", "{ \"id\":10 }", "application/json", "additional/ult/path");
 println(result.success); // "true"
 println(result.errorMessage); // ""
 println(result.agentErrorCode); // "0"
 println(result.httpResponseCode); // "200"
 println(result.document); // ""
 
-result = $node3.callWebService("Web service name", "GET", "application/json", acceptCached: true);
+// Get requests
+result = $node.callWebService("Web service name", "GET", "additional", "parameters");
+result = $node.callWebService("Web service name", "GET", acceptCached: true, "additional", "parameters);
 ....
 
 `createSNMPTransport(port, community, context, failIfUnreachable) => <<class-snmptransport>>`::
