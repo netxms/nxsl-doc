@@ -78,6 +78,11 @@ Template id if DCI came from Template or 0.
 `templateItemId => Integer`::
 DCI item id in template if DCI came from Template or 0.
 
+`thresholdDisableEndTime => Integer`::
+UNIX time (number of seconds since epoch) till which threshold processing for
+this DCI is disabled. -1 if threshold processing is disabled infinitely. 0 if
+threshold processing is enabled. 
+
 `transformedDataType => Integer`::
 Tranformed data link:https://netxms.org/documentation/nxsl-latest/#const-dci-datatypetype[type].
 
