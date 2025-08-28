@@ -194,6 +194,18 @@ Should be used in order to return errors in script DCIs or in transoformation sc
 |MapLinkStyle::DashDotDot|5|Bend points
 |===
 
+[[const-link-label-position]]
+== Network map link label position
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|LinkLabelPosition::Center|0|Locate label at the center of the link
+|LinkLabelPosition::Object1|1|Locate label at the first object
+|LinkLabelPosition::Object2|2|Locate label at the second object
+|===
+
 [[const-node-state]]
 == Node state
 
