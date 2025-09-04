@@ -309,12 +309,39 @@ import my_math_library;
 println( add(1, 2) );
 ----
 
-The other was is shown in this example:
+The other way is shown in this example:
 
 [source,c]
 ----
 println( my_math_library::add(1, 2) );
 ----
+
+=== Optional function calls 
+
+To prevent script errors when calling a function that may not exist, use the
+``optional`` keyword. If the function is present, it is called, and the
+expression evaluates to its return value. If the function does not exist, the
+call is safely ignored, and the expression evaluates to ``NULL`` without halting
+the script. *This keyword was added in version 5.3*  
+
+.Example
+[.source]
+....
+// If f() exists, v gets its return value.
+// If f() does not exist, v becomes NULL.
+v = optional f();
+....
+
+The same logic applies when calling a function from a specific library.
+
+.Example
+[.source]
+....
+// If my_library and function f() in it exists, v gets its return value.
+// Otherwise, v becomes NULL.
+v = optional my_library::f();
+....
+
 
 [[class-string]]
 === Strings
@@ -487,7 +514,7 @@ Split string into array of strings at given separator.
 
 ``trimWhitespace`` parameter is optional and is `false` by default. If set to
 `true`, space characters will be removed on both sides of strings produced by
-splitting. *This parameter was added in version 5.1.4.*  
+splitting. *This parameter was added in version 5.1.4*  
 
 .Example
 [.source]
