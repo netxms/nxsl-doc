@@ -9,6 +9,9 @@ Represents NetXMS alarm.
 `ackBy => Integer`::
 ID of user who acknowledged this alarm.
 
+`ackByUser => <<class-userdbobject>>`::
+User who acknowledged this alarm (class <<class-userdbobject>>).
+
 `categories => Array`::
 Array with alarm category names.
 
@@ -65,6 +68,9 @@ Repeat count.
 
 `resolvedBy => Integer`::
 ID of user who resolved this alarm.
+
+`resolvedByUser => <<class-userdbobject>>`::
+User who resolved this alarm (class <<class-userdbobject>>)
 
 `rcaScriptName => String`::
 Name of root cause analysis script

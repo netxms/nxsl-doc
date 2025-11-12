@@ -13,7 +13,10 @@ Alarm comment ID.
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the alarm comment last modification time.
 
 `userId => Integer`::
-ID of user who last modified this alarm commant.
+ID of user who last modified this alarm comment.
+
+`user => <<class-userdbobject>>`::
+User who last modified this alarm comment (class <<class-userdbobject>>).
 
 `text => String`::
 Alarm comment text.
