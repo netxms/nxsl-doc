@@ -75,6 +75,9 @@ User who resolved this alarm (class <<class-userdbobject>>)
 `rcaScriptName => String`::
 Name of root cause analysis script
 
+`relatedEvents => Array`::
+Array with related event IDs. *Added in version 6.0*
+
 `ruleGuid => String`::
 Guid of the rule that generated the event.
 
