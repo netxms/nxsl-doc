@@ -2,7 +2,7 @@
 
 The following sections describe the standard types that are built into the interpreter.
 
-NXSL is loose typed programming language. The system will automatically
+NXSL is loosely typed programming language. The system will automatically
 determine each variable type, assign a certain type to a variable and convert a
 variable type from one to another, if necessary. For example, a result for `3
 + "4"` will be `7`, because the system will automatically convert `"4"`
@@ -1469,7 +1469,7 @@ catch
 }
 ----
 
-The following variables with information about the error are avaiable within the
+The following variables with information about the error are available within the
 ``catch`` block:
 
 [cols="1,5" grid="none", frame="none"]
@@ -1493,4 +1493,52 @@ https://regex101.com/[regex101.com] (select PCRE flavour).
 
 === Comments
 
-//TODO: describe comment options in script
+NXSL supports two kinds of comments: single-line comments and block (multi-line)
+comments.
+
+- Single-line comments start with `//` and continue to the end of the current
+line. 
+
+- Block comments start with `/\*` and end with `*/`. Block comments may
+span multiple lines. 
+
+- Block comments in NXSL can be nested; an inner `/* ... */` pair is treated as
+part of the enclosing comment.
+
+Comments are treated as whitespace by the parser and may appear wherever
+whitespace is allowed (between tokens, at line start, at end of line, inside
+code blocks, etc.). Comment markers that appear inside string literals are not
+recognized as comment delimiters.
+
+Examples:
+
+[source,c]
+----
+// Single-line comment
+x = 1; // comment after code
+
+/* Multi-line comment
+   spanning several lines */
+y = 2;
+
+/* Nested block comments are allowed:
+   outer open
+   /* inner comment */
+   outer continues
+*/
+z = 3;
+----
+
+=== Metadata
+
+NXSL scripts may start with one or more metadata declarations. Metadata declarations must appear only at the very beginning of the script (before any other code or non-whitespace characters). Each declaration is a single line with the following syntax:
+
+[source,c]
+----
+@meta(key1=value1, key2=value2, ...)
+----
+
+Multiple @meta declarations are allowed; they are processed independently.
+
+Metadata keys and their meanings are domain-specific. 
+
