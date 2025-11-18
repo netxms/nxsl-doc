@@ -145,13 +145,10 @@ Get column name by column index
 
 Column index
 
-`print() => String`::
+`print() => void`::
 
-Prints the whole table with it's content and header
+Prints formatted table with header and contents
 
-.Return 
-
-String with formatted table
 
 `set(rowId, columnId, value) => void`::
 
@@ -172,7 +169,7 @@ Column index
 
 `trace(tag, level, prefix, headers, delimiter) => void`::
 
-Dump table to log
+Dump formatted table to log
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
