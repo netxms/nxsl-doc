@@ -129,7 +129,7 @@ Get column index by column name
 
 .Return 
 
-Column name
+Column index or -1 if column not found
 
 `getColumnName(columnId) => String`::
 
@@ -143,7 +143,7 @@ Get column name by column index
 
 .Return 
 
-Column index
+Column name or empty string if no column with given index
 
 `print() => void`::
 
