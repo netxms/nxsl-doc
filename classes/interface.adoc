@@ -53,8 +53,8 @@ Interface alias
 `ifIndex => Integer`::
 Interface index.
 
-`ifName => Integer`::
-Interface name obtained form object.
+`ifName => String`::
+Interface name obtained from object.
 
 `ifType => Integer`::
 <<enum-interface-types,Interface type>>

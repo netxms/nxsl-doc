@@ -168,7 +168,7 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `TRUE` if node supports EtherNet/IP (Industrial Protocol)
 
 `isExternalGateway => Boolean`::
-`TRUE` if node is remotely managed node
+`TRUE` if node is an external gateway (remotely managed node). Alias: `isRemotelyManaged`.
 
 `isInMaintenanceMode => Boolean`::
 `TRUE` if node is in maintenance mode
@@ -226,9 +226,6 @@ Array with <<class-interface>> objects, that are under this node. First object p
 
 `isSTP => Boolean`::
 `TRUE` if node supports STP (Spanning Tree Protocol)
-
-`isUserAgentInstalled => Boolean`::
-`TRUE` if user agent is installed.
 
 `isVirtual => Boolean`::
 `TRUE` if node is virtual
