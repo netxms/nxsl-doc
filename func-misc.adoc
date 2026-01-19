@@ -18,6 +18,7 @@ include::functions/formatmetricprefix.adoc[]
 
 include::functions/findvendorbymacaddress.adoc[]
 
+include::functions/getavailablepackages.adoc[]
 include::functions/getconfigurationvariable.adoc[]
 
 include::functions/getmappingtablekeys.adoc[]
@@ -28,7 +29,7 @@ include::functions/getsyslogrulecheckcount.adoc[]
 include::functions/getsyslogrulematchcount.adoc[]
 
 include::functions/getthreadpoolnames.adoc[]
-include::functions/IsMarkdownComment.adoc[]
+include::functions/ismarkdowncomment.adoc[]
 include::functions/jsonparse.adoc[]
 
 include::functions/map.adoc[]
@@ -36,8 +37,10 @@ include::functions/maplist.adoc[]
 
 include::functions/print.adoc[]
 include::functions/println.adoc[]
-
+include::functions/queryaiassistant.adoc[]
+include::functions/range.adoc[]
 include::functions/readpersistentstorage.adoc[]
+include::functions/registeraitask.adoc[]
 
 include::functions/secondstouptime.adoc[]
 

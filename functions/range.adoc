@@ -1,0 +1,44 @@
+[.nxsl-function]
+[[func-range]]
+== range()
+
+[source,c]
+----
+range(end) => Range
+range(start, end) => Range
+range(start, end, step) => Range
+----
+
+Creates a <<class-range,Range>> object for iteration.
+
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|start|Numeric|Start value (inclusive). If only one argument is provided, start defaults to 0 and the argument becomes end
+|end|Numeric|End value (exclusive)
+|step|Numeric|Step value. Optional, defaults to 1
+|===
+
+.Return
+
+<<class-range,Range>> object that is iterable and can be used in for-each loops.
+
+.Example
+[.source]
+....
+// Create range from 0 to 9
+for (i : range(10)) {
+    println(i);  // prints 0, 1, 2, ..., 9
+}
+
+// Create range from 5 to 9
+for (i : range(5, 10)) {
+    println(i);  // prints 5, 6, 7, 8, 9
+}
+
+// Create range from 0 to 10 with step 2
+for (i : range(0, 10, 2)) {
+    println(i);  // prints 0, 2, 4, 6, 8
+}
+....
+

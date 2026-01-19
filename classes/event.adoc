@@ -21,8 +21,14 @@ DCI id that is source for this event or 0 if generated not by threshold
 `id => Integer`::
 Unique event identifier.
 
+`lastAlarmId => Integer`::
+ID of the last alarm associated with this event, or 0 if none.
+
 `lastAlarmKey => String`::
 Key for last generated alarm for this event or null
+
+`lastAlarmMessage => String`::
+Message of the last alarm associated with this event, or null if none.
 
 `message => String`::
 Event message. Get/set attribute.

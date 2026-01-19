@@ -1,0 +1,89 @@
+[.nxsl-class]
+[[class-sshsession]]
+=== SSHSession
+
+Represents an interactive SSH session to a remote node for executing commands and managing privilege escalation. SSHSession objects are typically created through the <<class-node,Node>> class method `openSSHSession()`.
+
+==== Instance attributes
+
+`connected => Boolean`::
+Returns TRUE if the SSH channel is connected.
+
+`lastError => Integer`::
+Error code from the last operation (0 if connected and no error).
+
+`lastErrorMessage => String`::
+Text description of the last error.
+
+`nodeId => Integer`::
+ID of the node this session is connected to.
+
+`privileged => Boolean`::
+Returns TRUE if the session has escalated privileges.
+
+==== Instance methods
+
+`close() => void`::
+Close the SSH session.
+
+.Example
+[.source]
+....
+session = $node->openSSHSession();
+if (session->connected) {
+    // Execute commands...
+    session->close();
+}
+....
+
+
+`escalatePrivilege(password) => Boolean`::
+Escalate to privileged user.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|password|String|Password for privilege escalation
+|===
+
+.Return
+TRUE if successful, FALSE otherwise.
+
+.Example
+[.source]
+....
+session = $node->openSSHSession();
+if (session->connected) {
+    if (session->escalatePrivilege("secretpassword")) {
+        // Execute privileged commands...
+    }
+}
+....
+
+
+`execute(command, timeout) => Array`::
+Execute a command on the remote host.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|command|String|Command to execute
+|timeout|Integer|Optional timeout in milliseconds
+|===
+
+.Return
+Array of strings (command output lines) or NULL if not connected.
+
+.Example
+[.source]
+....
+session = $node->openSSHSession();
+if (session->connected) {
+    output = session->execute("ls -la", 5000);
+    foreach (line : output) {
+        println(line);
+    }
+    session->close();
+}
+....
+

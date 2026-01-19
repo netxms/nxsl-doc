@@ -336,6 +336,54 @@ Node attributes change code
 |ChangeCode::REMOVED |3
 |===
 
+[[const-node-capability]]
+== Node Capability
+
+Node capability flags. Used with <<class-node>> attributes `capabilities` and `expectedCapabilities`.
+
+[cols="2,1,7a" grid="none", frame="none"]
+|===
+|Constant|Value|Description
+
+|NodeCapability::SNMP|0x0000000001|Node supports SNMP
+|NodeCapability::Agent|0x0000000002|Node supports NetXMS native agent
+|NodeCapability::Bridge|0x0000000004|Node is a bridge
+|NodeCapability::Router|0x0000000008|Node is a router
+|NodeCapability::LocalManagement|0x0000000010|Local management capability
+|NodeCapability::Printer|0x0000000020|Node is a printer
+|NodeCapability::OSPF|0x0000000040|OSPF support
+|NodeCapability::SSH|0x0000000080|SSH support
+|NodeCapability::CDP|0x0000000100|Cisco Discovery Protocol support
+|NodeCapability::NDP|0x0000000200|Nortel (Synoptics/Bay Networks) topology discovery
+|NodeCapability::LLDP|0x0000000400|Link Layer Discovery Protocol support
+|NodeCapability::VRRP|0x0000000800|VRRP support
+|NodeCapability::VLAN|0x0000001000|VLAN information available
+|NodeCapability::IEEE802_1x|0x0000002000|802.1x support enabled on node
+|NodeCapability::STP|0x0000004000|Spanning Tree (IEEE 802.1d) enabled on node
+|NodeCapability::EntityMIB|0x0000008000|Supports ENTITY-MIB
+|NodeCapability::IfXTable|0x0000010000|Supports ifXTable (64-bit interface counters)
+|NodeCapability::AgentIfXCounters|0x0000020000|Agent supports 64-bit interface counters
+|NodeCapability::WindowsPDH|0x0000040000|Node supports Windows PDH parameters
+|NodeCapability::WiFiController|0x0000080000|Node is wireless network controller
+|NodeCapability::SMCLP|0x0000100000|Node supports SMCLP protocol
+|NodeCapability::NewPolicyTypes|0x0000200000|Agent upgraded to new policy type
+|NodeCapability::UserAgent|0x0000400000|User agent (desktop support app) is installed
+|NodeCapability::EtherNetIP|0x0000800000|EtherNet/IP support
+|NodeCapability::ModbusTCP|0x0001000000|Modbus TCP support
+|NodeCapability::ProfiNet|0x0002000000|PROFINET support
+|NodeCapability::FileManager|0x0004000000|Node has file manager support
+|NodeCapability::LLDPv2|0x0008000000|LLDP v2 MIB support
+|NodeCapability::EmulatedEntityMIB|0x0010000000|ENTITY MIB support emulated by driver
+|NodeCapability::DeviceView|0x0020000000|Device view is supported
+|NodeCapability::WiFiAccessPoint|0x0040000000|Node is wireless access point
+|NodeCapability::VNC|0x0080000000|Node supports VNC connection from server or zone proxy
+|NodeCapability::LocalVNC|0x0100000000|Node supports VNC connection via local agent
+|NodeCapability::RegisteredForBackup|0x0200000000|Node is registered for device configuration backup
+|NodeCapability::ServiceManager|0x0400000000|Node has service manager accessible via NetXMS agent
+|NodeCapability::SSHInteractiveChannel|0x0800000000|Interactive (shell) SSH channel can be established
+|NodeCapability::SSHCommandChannel|0x1000000000|SSH command channel can be established
+|===
+
 == Other constants
 
 === NXSL::BuildTag

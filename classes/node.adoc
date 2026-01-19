@@ -76,6 +76,9 @@ UNIX timestamp when node went down.
 `driver => String`::
 Named of selected device-specific SNMP driver.
 
+`expectedCapabilities => Integer`::
+Expected capabilities mask for the node. Bitwise AND of <<node-capabilities>> constants.
+
 `effectiveAgentProxy => <<class-node>>`::
 Object that is effective agent proxy or NULL. 
 
@@ -99,6 +102,9 @@ Nodes' unique hardware id
 
 `hasEntityMIB => Boolean`::
 `TRUE` if supports ENTITY-MIB.
+
+`hasServiceManager => Boolean`::
+`TRUE` if node has service manager accessible via NetXMS agent.
 
 `hasIfXTable => Boolean`::
 `TRUE` if supports ifXTable via SNMP (64-bit counters for interface statistics).
@@ -151,6 +157,9 @@ Array with <<class-interface>> objects, that are under this node. First object p
 `isCDP => Boolean`::
 `TRUE` if node supports CDP (Cisco Discovery Protocol)
 
+`isDecommissioned => Boolean`::
+`TRUE` if node is decommissioned.
+
 `isEtherNetIP => Boolean`::
 `TRUE` if node supports EtherNet/IP (Industrial Protocol)
 
@@ -171,6 +180,9 @@ Array with <<class-interface>> objects, that are under this node. First object p
 
 `isModbusTCP => Boolean`::
 `TRUE` if node supports Modbus TCP
+
+`isNativeAgent => Boolean`::
+`TRUE` if node is a native agent.
 
 `isNDP => Boolean`::
 `TRUE` if node supports OSPF/NDP. Equivalent of `isOSPF`.
@@ -201,6 +213,12 @@ Array with <<class-interface>> objects, that are under this node. First object p
 
 `isSSH => Boolean`::
 `TRUE` if SSH is connection available
+
+`isSSHCommandChannelAvailable => Boolean`::
+`TRUE` if SSH command channel can be established to this node.
+
+`isSSHInteractiveChannelAvailable => Boolean`::
+`TRUE` if SSH interactive (shell) channel can be established to this node.
 
 `isSTP => Boolean`::
 `TRUE` if node supports STP (Spanning Tree Protocol)
@@ -262,6 +280,9 @@ Physical container object id (Rack or Chassis)
 
 `platformName => String`::
 Platform name reported by NetXMS agent
+
+`pollCountForStatusChange => Integer`::
+Number of polls required before registering a status change.
 
 `primaryHostName => String`::
 Primary host name
@@ -580,6 +601,52 @@ Execute SSH command on node.
 .Return
 Array of strings with output of the command or null on failure.
 
+[[class-node-getblockedports,Node::getBlockedPorts()]]
+`getBlockedPorts(protocol) => Array`::
+Get array of blocked ports for the specified protocol.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|protocol|String|Protocol type - "tcp" or "udp"
+|===
+
+.Return
+Array of integers representing blocked port numbers.
+
+.Example
+[.source]
+....
+blockedTcpPorts = $node->getBlockedPorts("tcp");
+foreach (port : blockedTcpPorts) {
+    println("Blocked TCP port: " .. port);
+}
+....
+
+[[class-node-getinstalledpackages,Node::getInstalledPackages()]]
+`getInstalledPackages(filter, useRegex) => Array`::
+Get array of installed packages on the node.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|filter|String|Optional package name filter
+|useRegex|Boolean|Optional. If TRUE, use regex matching for filter. Default is FALSE
+|===
+
+.Return
+Array of installed packages on the node.
+
+.Example
+[.source]
+....
+// Get all packages
+packages = $node->getInstalledPackages();
+
+// Get packages matching filter
+packages = $node->getInstalledPackages("netxms", false);
+....
+
 [[class-node-getinterface,Node::getInterface()]]
 `getInterface(ifIdentifier) => <<class-interface>>`::
 Get interface object by index, MAC address or name. If
@@ -668,6 +735,28 @@ Get interface name by index.
 |ifIndex|Integer|Index of interface.
 |===
 
+[[class-node-isportblocked,Node::isPortBlocked()]]
+`isPortBlocked(port, protocol) => Boolean`::
+Check if a specific port is blocked for the given protocol.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|port|Integer|Port number (1-65535)
+|protocol|String|Protocol - "tcp" or "udp"
+|===
+
+.Return
+TRUE if the port is blocked, FALSE otherwise.
+
+.Example
+[.source]
+....
+if ($node->isPortBlocked(22, "tcp")) {
+    println("SSH port is blocked");
+}
+....
+
 `getWebService(webSvcName) => <<class-webservice>>`::
 Get web service object by name.
 
@@ -683,7 +772,35 @@ Get web service object by name.
 .Example
 [.source]
 ....
-webSvc = $node.getWebService("webSvcName"); 
+webSvc = $node.getWebService("webSvcName");
+....
+
+[[class-node-opensshsession,Node::openSSHSession()]]
+`openSSHSession(user, password, keyId) => <<class-sshsession>>`::
+Open an interactive SSH session to this node.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|user|String|Optional SSH login username
+|password|String|Optional SSH password
+|keyId|Integer|Optional SSH key identifier
+|===
+
+.Return
+<<class-sshsession>> object on success, or NULL on failure.
+
+.Example
+[.source]
+....
+session = $node->openSSHSession();
+if (session != null && session->connected) {
+    output = session->execute("ls -la");
+    foreach (line : output) {
+        println(line);
+    }
+    session->close();
+}
 ....
 
 [[class-node-readagentlist,Node::readAgentList()]]
@@ -776,13 +893,31 @@ Read from node web service parameter
 .Return
 String with result read from web service
 
+`setExpectedCapabilities(capabilities) => void`::
+Set the expected capabilities for this node.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|capabilities|Integer|Capability flags bitmask. Only allows capability bits for: native agent, SNMP, EtherNet/IP, Modbus TCP, and SSH.
+|===
+
 `setIfXTableUsageMode(mode) => void`::
-Set ifXTable usage mode 0 - use default, 1 - enable, 2 - disable 
+Set ifXTable usage mode 0 - use default, 1 - enable, 2 - disable
 
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |mode|Integer|usage mode
+|===
+
+`setPollCountForStatusChange(count) => void`::
+Set the required number of polls before registering a status change.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|count|Integer|Number of polls (must be >= 0)
 |===
 
 ==== Constants

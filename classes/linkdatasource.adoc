@@ -15,6 +15,9 @@ Data source DCI item id
 `format => String`::
 Data display format
 
+`location => Integer`::
+Location of the link data source. Possible values: 0 = CENTER, 1 = OBJECT1, 2 = OBJECT2.
+
 `object => <<class-datacollectiontarget>>`::
 DCI source object
 

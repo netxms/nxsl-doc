@@ -60,6 +60,9 @@ Link type
 `useActiveThresholds => Boolean`::
 If active thresholds should be used for link color.
 
+`useInterfaceUtilization => Boolean`::
+If interface utilization should be used for link color. Only applicable when colorSource is set to object status mode.
+
 `width => Integer`::
 Link width.
 

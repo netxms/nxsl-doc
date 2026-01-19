@@ -117,8 +117,14 @@ Outbound utilization
 `peerInterface => <<class-interface>>`::
 Peer interface object if known, otherwise `null`.
 
+`peerLastUpdateTime => Integer`::
+link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the last peer update.
+
 `peerNode => <<class-node>>`::
 Peer <<class-node,node object>> if known, otherwise `null`.
+
+`pollCountForStatusChange => Integer`::
+Number of polls required before registering a status change.
 
 `pic => Integer`::
 Phisical location.
@@ -208,6 +214,17 @@ Enabele/Disable ICMP statistics collection for current interface.
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |enabled|Boolean|If this interface should be included in ICMP statistics.
+|===
+
+
+`setPollCountForStatusChange(count) => void`::
+
+Set the required number of polls before registering a status change.
+
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|count|Integer|Number of polls (must be >= 0)
 |===
 
 

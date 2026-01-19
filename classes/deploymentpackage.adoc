@@ -1,0 +1,32 @@
+[.nxsl-class]
+[[class-deploymentpackage]]
+=== DeploymentPackage
+
+Represents a software deployment package with metadata for installation on managed nodes. DeploymentPackage objects are typically returned by <<func-getavailablepackages,GetAvailablePackages()>> function.
+
+==== Instance attributes
+
+`command => String`::
+Installation command to execute.
+
+`description => String`::
+Package description.
+
+`fileName => String`::
+Path to the package file.
+
+`id => Integer`::
+Unique package identifier.
+
+`name => String`::
+Package name.
+
+`platform => String`::
+Target platform (e.g., "Windows", "Linux").
+
+`type => String`::
+Package type identifier.
+
+`version => String`::
+Package version string.
+

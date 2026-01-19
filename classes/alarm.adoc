@@ -137,6 +137,13 @@ Get array of alarm comments.
 
 Array of <<class-alarmcomment>> objects.
 
+`requestAiAssistantComment() => String`::
+Request an AI assistant comment for this alarm.
+
+.Return
+String containing the AI assistant's response, or NULL if empty.
+
+
 `resolve() => Integer`::
 Resolve alarm. Return `0` on success or error code on failure.
 

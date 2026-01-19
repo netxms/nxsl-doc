@@ -15,7 +15,7 @@ Image library GUID.
 `backgroundLatitude => Float`::
 Background latitude as floating point number <<class-geolocation>>.
 
-`getBackgroundLongitude => Float`::
+`backgroundLongitude => Float`::
 Background longitude as floating point number <<class-geolocation>>.
 
 `backgroundZoom => Integer`::

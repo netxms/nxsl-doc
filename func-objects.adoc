@@ -1,5 +1,6 @@
 = Objects
 
+include::functions/calculatedowntime.adoc[]
 include::functions/findaccesspointbymacaddress.adoc[]
 include::functions/findnodebyagentid.adoc[]
 include::functions/findnodebyipaddress.adoc[]

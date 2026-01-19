@@ -3,5 +3,7 @@
 include::functions/chr.adoc[]
 include::functions/d2x.adoc[]
 include::functions/formatnumber.adoc[]
+include::functions/levenshteindistance.adoc[]
 include::functions/ord.adoc[]
+include::functions/similarityscore.adoc[]
 include::functions/x2d.adoc[]

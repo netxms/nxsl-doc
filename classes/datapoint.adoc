@@ -1,0 +1,14 @@
+[.nxsl-class]
+[[class-datapoint]]
+=== DataPoint
+
+Represents a single data point containing a timestamp and value pair. DataPoint objects are typically returned by functions that retrieve historical DCI values, such as <<func-getdcivaluesex,GetDCIValuesEx()>>.
+
+==== Instance attributes
+
+`timestamp => Integer`::
+link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the data point.
+
+`value => String`::
+The value associated with the timestamp.
+

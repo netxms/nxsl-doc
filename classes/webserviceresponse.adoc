@@ -10,6 +10,9 @@ Contains all information about web service custom request execution result
 `agentErrorCode => Integer`::
 Agent error code
 
+`body => String`::
+Response body. Alias for `document`.
+
 `document => String`::
 Document that was returned by web service as a response to the request
 
@@ -18,6 +21,9 @@ Human readable error message set by server or agent
 
 `httpResponseCode => Integer`::
 HTTP response code
+
+`statusCode => Integer`::
+HTTP response status code. Alias for `httpResponseCode`.
 
 `success => Boolean`::
 Will return `True` in case of success and `False` if there was problem on server or on agent

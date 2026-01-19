@@ -1,0 +1,36 @@
+[.nxsl-function]
+[[func-getavailablepackages]]
+== GetAvailablePackages()
+
+[source,c]
+----
+GetAvailablePackages(platformFilter, typeFilter) => Array
+----
+
+Retrieves all available deployment packages, optionally filtered by platform and/or package type.
+
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|platformFilter|String|Optional platform name filter (e.g., "Windows", "Linux"). Pass NULL to skip filtering
+|typeFilter|String|Optional package type filter. Pass NULL to skip filtering
+|===
+
+.Return
+
+Array of <<class-deploymentpackage,DeploymentPackage>> objects containing package metadata.
+
+.Example
+[.source]
+....
+// Get all packages
+packages = GetAvailablePackages(null, null);
+
+// Get only Linux packages
+linuxPackages = GetAvailablePackages("Linux", null);
+
+foreach (pkg : packages) {
+    println("Package: " .. pkg->name .. " v" .. pkg->version .. " (" .. pkg->platform .. ")");
+}
+....
+
