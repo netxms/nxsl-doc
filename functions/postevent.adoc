@@ -28,3 +28,6 @@ PostEvent($node, 100000);
 PostEvent($node, 100000, "my tag", "param1", "param2");
 PostEvent($node, "MY_EVENT_NAME", null, "param1");
 ....
+
+.See also
+<<func-posteventex>>, <<func-loadevent>>, <<class-event>>

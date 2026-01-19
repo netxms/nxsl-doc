@@ -34,3 +34,6 @@ object
 >>> FindNodeObject($node, "bad_node_name")
 NULL
 ....
+
+.See also
+<<func-findobject>>, <<func-findnodebyipaddress>>, <<func-findnodebysysname>>, <<func-findnodebymacaddress>>, <<func-findnodebyagentid>>, <<func-getallnodes>>, <<class-node>>

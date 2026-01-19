@@ -27,3 +27,6 @@ Integer ID of the DCI or 0 if not found.
 >>> print(d);
 144
 ....
+
+.See also
+<<func-finddcibydescription>>, <<func-finddcibytag>>, <<func-finddcibytagpattern>>, <<func-findalldcis>>, <<func-getdcivalue>>, <<func-getdciobject>>, <<class-dci>>

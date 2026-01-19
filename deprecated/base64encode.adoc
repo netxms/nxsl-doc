@@ -9,6 +9,7 @@
 
 Please use <<func-base64-encode>> instead.
 ====
+****
 
 [source,c]
 ----
