@@ -2,9 +2,11 @@
 [[class-template]]
 === Template
 
-Object represent template, extends <<class-netobj>>.
+Object represents template. Extends <<class-netobj>>.
 
 ==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
 
 `autoApplyScript => String`::
 Source of the script for automatic binding.

@@ -1,0 +1,27 @@
+// Shared DataCollectionTarget methods - include in classes that extend DataCollectionTarget
+// Usage: include::_shared/datacollectiontarget-methods.adoc[]
+
+.Inherited methods from DataCollectionTarget
+[%collapsible]
+====
+`applyTemplate(template) => void`::
+Apply template to node.
+
+`enableConfigurationPolling(flag) => void`::
+Enable or disable configuration polling.
+
+`enableDataCollection(flag) => void`::
+Enable or disable data collection polling.
+
+`enableStatusPolling(flag) => void`::
+Enable or disable status polling.
+
+`readInternalParameter(name) => String`::
+Reads object internal metric (metric with source "Internal").
+
+`readInternalTable(name) => String`::
+Reads object internal table metric (metric with source "Internal").
+
+`removeTemplate(template) => void`::
+Remove template from node.
+====

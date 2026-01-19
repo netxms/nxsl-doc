@@ -2,9 +2,11 @@
 [[class-interface]]
 === Interface
 
-Represent interface object. Inherit all attributes and methods of the <<class-netobj>> class.
+Represent interface object. Extends <<class-netobj>>.
 
 ==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
 
 `adminState => Integer`::
 Administrative <<enum-interface-state,state>> of the interface.
@@ -151,6 +153,8 @@ Array with this inteface <<class-vlan, vlan objects>>
 Zone UIN of this interface.
 
 ==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
 
 `clearPeer(enabled) => void`::
 Clears peer information for interface.

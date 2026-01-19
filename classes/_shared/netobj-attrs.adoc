@@ -1,0 +1,117 @@
+// Shared NetObj attributes - include in classes that extend NetObj
+// Usage: include::_shared/netobj-attrs.adoc[]
+
+.Inherited from NetObj
+[%collapsible]
+====
+`alarms => array`::
+List of active <<class-alarm, Alarms>> for this object.
+
+`alarmStats => array`::
+Integer array that consists of 5 numbers - each number represents number of alarms for this and child objects for each of severity.
+
+`alias => String`::
+Object alias. For interfaces it is automatically collected on configuration poll (e.g. from SNMP ifAlias).
+
+`asset => <<class-asset>>`::
+Reference to <<class-asset,asset class>> of asset linked to this object.
+
+`assetId => Integer`::
+Id of linked asset object.
+
+`assetProperties => <<class-assetproperties>>`::
+Reference to <<class-assetproperties,asset properties class>> of asset linked to this object.
+
+`backupZoneProxy => Node`::
+Currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
+
+`backupZoneProxyId => Integer`::
+ID of currently selected backup zone proxy (`0` if zoning is disabled or backup proxy is not assigned)
+
+`category => String`::
+Object's category name
+
+`categoryId => Integer`::
+Object's category ID
+
+`children => array`::
+List of child objects. Use <<func-classof>> to differentiate.
+
+`city => String`::
+Postal address - city.
+
+`comments => String`::
+Object comments.
+
+`country => String`::
+Postal address - country.
+
+`creationTime => Integer64`::
+Object creation time as UNIX timestamp
+
+`customAttributes => HashMap`::
+Hash map of object custom attributes.
+
+`district => String`::
+Postal address - district.
+
+`geolocation => GeoLocation`::
+Object <<class-geolocation,geographical location>>.
+
+`guid => String`::
+Object GUID as `string`.
+
+`id => Integer`::
+Unique object identifier.
+
+`ipAddr => String`::
+Primary IP address. Deprecated and will be removed in a future version, use `ipAddress` instead.
+
+`ipAddress => InetAddress`::
+Primary <<class-inetaddress,IP address>>. *This attribute was added in version 5.1*
+
+`isInMaintenanceMode => Boolean`::
+Maintenance mode indicator (`true` if object currently is in maintenace mode).
+
+`maintenanceInitiator => Integer`::
+Maintenance initiator user id
+
+`mapImage => String`::
+GUID of object image used for representation on the maps.
+
+`name => String`::
+Object name.
+
+`nameOnMap => String`::
+Object name displayed on map.
+
+`parents => array`::
+List of direct parents for this object (most likely either <<class-container>> or <<class-cluster>>).
+
+`postcode => String`::
+Postal address - postal code.
+
+`primaryZoneProxy => Node`::
+currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabled or primary proxy is not assigned)
+
+`primaryZoneProxyId => Integer`::
+ID of currently selected primary zone proxy (`0` if zoning is disabled or primary proxy is not assigned)
+
+`region => String`::
+Postal address - region.
+
+`responsibleUsers => Array`::
+Array with user objects that are added as responsible users for this object. Objects are <<class-user>> or <<class-usergroup>>
+
+`state => Integer`::
+Current object state. One of: <<const-node-state>>, <<const-cluster-state>>, <<const-sensor-state>>
+
+`status => Integer`::
+Current <<const-object-status,object status>>.
+
+`streetAddress => String`::
+Postal address - street.
+
+`type => Integer`::
+<<enum-object-type,Object type>>.
+====

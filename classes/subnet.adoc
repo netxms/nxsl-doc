@@ -2,9 +2,11 @@
 [[class-subnet]]
 === Subnet
 
-Object represent subnet, extends <<class-netobj>>
+Object represents subnet. Extends <<class-netobj>>.
 
 ==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
 
 `ipNetMask => Integer`::
 Subnet mask

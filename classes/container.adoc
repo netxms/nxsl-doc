@@ -2,9 +2,11 @@
 [[class-container]]
 === Container
 
-Object represent container, extends <<class-netobj>>.
+Object represents container. Extends <<class-netobj>>.
 
 ==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
 
 `autoBindScript => String`::
 Source of the script for automatic binding.
@@ -16,6 +18,8 @@ Indicate if automatic binding is enabled.
 Indicate if automatic unbinding is enabled.
 
 ==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
 
 [[class-container-createContainer,Container::createContainer()]]
 `createContainer(name) => <<class-container>>`::

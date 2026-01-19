@@ -1,11 +1,70 @@
-include::func-string.adoc[leveloffset=+2]
-include::func-math.adoc[leveloffset=+2]
-include::func-time.adoc[leveloffset=+2]
+// Function Reference - organized by use-case
+// Each section groups related functions for easier discovery
+
+=== Object Navigation
+
+Functions for finding and navigating NetXMS objects.
+
 include::func-objects.adoc[leveloffset=+2]
+
+=== Data Collection
+
+Functions for working with DCIs and collected data.
+
 include::func-datacollection.adoc[leveloffset=+2]
-include::func-alarms.adoc[leveloffset=+2]
+
+=== Events and Alarms
+
+Functions for event posting and alarm management.
+
 include::func-events.adoc[leveloffset=+2]
-include::func-misc.adoc[leveloffset=+2]
-include::func-base64.adoc[leveloffset=+2]
+
+include::func-alarms.adoc[leveloffset=+2]
+
+=== String Operations
+
+Functions for string manipulation and formatting.
+
+include::func-string.adoc[leveloffset=+2]
+
+=== Time and Date
+
+Functions for working with dates and times.
+
+include::func-time.adoc[leveloffset=+2]
+
+=== Math Package
+
+Mathematical functions under the `Math::` namespace.
+
+include::func-math.adoc[leveloffset=+2]
+
+=== Cryptography Package
+
+Cryptographic functions under the `Crypto::` namespace.
+
 include::func-crypto.adoc[leveloffset=+2]
+
+=== Base64 Package
+
+Base64 encoding/decoding functions under the `Base64::` namespace.
+
+include::func-base64.adoc[leveloffset=+2]
+
+=== Network Package
+
+Network operations under the `Net::` namespace.
+
+include::func-net.adoc[leveloffset=+2]
+
+=== File I/O Package
+
+File system operations under the `IO::` namespace.
+
 include::func-files.adoc[leveloffset=+2]
+
+=== Utility Functions
+
+General-purpose utility functions.
+
+include::func-misc.adoc[leveloffset=+2]

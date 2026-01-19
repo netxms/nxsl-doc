@@ -1,0 +1,9 @@
+// Shared DataCollectionTarget attributes - include in classes that extend DataCollectionTarget
+// Usage: include::_shared/datacollectiontarget-attrs.adoc[]
+
+.Inherited from DataCollectionTarget
+[%collapsible]
+====
+`templates => Array`::
+Returns array of templates (<<class-template>>) applied on this object. Return value also affected by trusted nodes settings.
+====
