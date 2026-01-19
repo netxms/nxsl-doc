@@ -187,8 +187,8 @@ walk down the tree. This script can be executes as an action from event
 processing policy, or directly from server debug console via exec command or on
 any node.
 
-In order to be able to access info about all nodes, the CheckTrustedNodes server
-configuration variable needs to be set to 0.
+In order to be able to access info about all nodes, the Objects.Security.CheckTrustedObjects server
+configuration variable needs to be set to 0 (which is the default).
 
 [source,c]
 ----
