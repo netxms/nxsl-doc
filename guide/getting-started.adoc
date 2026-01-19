@@ -17,22 +17,42 @@ That's it! This single line prints text to the output. Let's break it down:
 
 == Running Scripts in NetXMS
 
-NXSL scripts run in several contexts within NetXMS. The most common ways to test scripts are:
+NXSL scripts run in several contexts within NetXMS:
 
-**Script Console** (for testing)::
-Access via _Configuration → Script Library_, create a new script, and use the _Execute_ button.
+**Execute Script** (for testing)::
+Right-click on any node or object and select _Execute script_. This runs the script in the context of the selected object, with `$object` (and `$node` if the object is a Node) automatically set.
+
+**Script Library**::
+Access via _Configuration → Script Library_. Used to store reusable scripts that can be imported in other places via `import script_name`.
 
 **Transformation Scripts** (for DCIs)::
 Modify collected data before storing. Set in DCI properties under _Transformation_.
 
-**Filter Scripts** (for DCIs)::
-Decide whether to accept or reject collected values.
-
 **Event Processing Policy**::
-React to events with custom logic in EPP rules.
+React to events with custom logic in EPP rules. Includes filtering scripts to decide whether to process or skip events.
 
 **Object Tools**::
 Create custom actions available from object context menus.
+
+**nxscript** (command line)::
+Command-line tool bundled with NetXMS server for running NXSL scripts. Useful for testing and debugging.
++
+[source,shell]
+----
+nxscript [options] script [arg1 [... argN]]
+----
++
+Common options:
++
+[cols="1,3" grid="none", frame="none"]
+|===
+|-c|Compile only (syntax check)
+|-d|Dump compiled script code
+|-e <name>|Entry point (function to call)
+|-r|Print script return value
+|-t|Enable instruction trace
+|-m|Show memory usage information
+|===
 
 == Script Structure
 
@@ -46,22 +66,36 @@ y = 10;
 println("Sum: " .. (x + y));
 ----
 
-For more complex scripts, define a `main()` function:
+For more complex scripts, define helper functions. Code outside functions is automatically executed (the interpreter wraps it into an implicit `main()`):
 
 [source,c]
 ----
-function main()
-{
-    println("Script started");
-    result = calculate(5, 10);
-    println("Result: " .. result);
-    return 0;
-}
+println("Script started");
+result = calculate(5, 10);
+println("Result: " .. result);
+return 0;
 
 function calculate(a, b)
 {
     return a * b;
 }
+----
+
+Function definitions can be placed anywhere in the script - code outside functions executes sequentially:
+
+[source,c]
+----
+println("111");
+function myfunc() { println("333"); }
+println("222");
+myfunc();
+----
+
+Output:
+----
+111
+222
+333
 ----
 
 == Comments
@@ -86,7 +120,7 @@ x = 5; // Inline comment
 
 * `println(text)` - Print with newline
 * `print(text)` - Print without newline
-* `trace(level, text)` - Debug output (level 1-9)
+* `trace(level, text)` - Debug output (level 1-9), written to server debug console and log file if level is above current debug level
 
 **Script Parameters:**
 
