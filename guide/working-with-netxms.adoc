@@ -30,7 +30,7 @@ Common object types:
 Scripts run in a context that provides predefined variables:
 
 [cols="1,3"]
-|==
+|===
 |Variable|Description
 
 |`$node`|Current node object (<<class-node>>)
@@ -38,7 +38,7 @@ Scripts run in a context that provides predefined variables:
 |`$event`|Current event being processed (<<class-event>>)
 |`$alarm`|Current alarm (<<class-alarm>>)
 |`$dci`|Current DCI object (<<class-dci>>)
-|==
+|===
 
 Example - accessing node properties:
 

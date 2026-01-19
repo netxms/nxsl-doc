@@ -3,22 +3,10 @@ Syntactically, NXSL looks similar to Perl or C. Here's simple NXSL program:
 [source,c]
 ----
 /* sample program */
-function main()
-{
-    println("Hello!");
-    return 0;
-}
+println("Hello!");
 ----
 
-This program will print word ``Hello`` on screen.
-
-Also, keep in mind that you are free to choose your own formatting style. E.g.
-the above could have been written as: 
-
-[source,c]
-----
-/* sample program */ function main(){println("Hello!");return 0;}
-----
+This program will print word ``Hello`` on screen. Code outside functions is automatically executed by the interpreter.
 
 Now we'll analyze this program:
 
@@ -42,18 +30,9 @@ You can also use single line comments:
 x = 1; // everything between two slashes and end of line is a comment
 ----
 
-Now onto next line:
+== Functions
 
-[source,c]
-----
-function main()
-{
-}
-----
-
-This is a function definition. A function is a part of a program that can be
-called by other parts of the program. A function definition always has the
-following form: 
+A function is a part of a program that can be called by other parts of the program. A function definition always has the following form: 
 
 [source,c]
 ----
@@ -66,6 +45,8 @@ function name(parameters)
 
 The function can return a value to the caller and accept zero or more
 parameters.
+
+NOTE: In older scripts, you may see an explicit `main()` function. This is no longer required - the interpreter automatically wraps code outside functions into an implicit `main()`. The explicit `main()` function is still supported for backward compatibility.
 
 The function name follows the rules for all names (formally: identifiers): it
 must consist entirely of letters (uppercase and lowercase are different!),

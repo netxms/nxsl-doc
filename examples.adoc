@@ -304,9 +304,6 @@ are averaged to give the required value;
 
 [source,c]
 ----
-function main()
-{
-
 trace(1, "Global Ping Loss 95");
 array pValue;
 arrayI  = 0;
@@ -349,7 +346,6 @@ p95AvgLoss = pLoss / pCount;
 trace(1, "Global Ping Loss 95 Summary: arrayI=" .. arrayI .. " upTo=" .. upTo .. " p95AvgLoss=" .. p95AvgLoss );
 
 return p95AvgLoss;
-}
 
 function bubbleSort(arr)
 {
