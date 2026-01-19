@@ -224,3 +224,6 @@ Serialize object to JSON.
 .Return
 
 String representation of the object in JSON format.
+
+.See also
+<<func-postevent>>, <<func-posteventex>>, <<func-loadevent>>, <<class-alarm>>

@@ -29,3 +29,6 @@ Return `null` on error, <<class-table>> instance for table DCI or String otherwi
 >>> GetDCIValue($node, FindDCIByName($node, "Non-Existing"))
 null
 ....
+
+.See also
+<<func-getdcirawvalue>>, <<func-getdcivalues>>, <<func-getdcivaluesex>>, <<func-getdciobject>>, <<func-finddcibyname>>, <<func-finddcibydescription>>, <<class-dci>>

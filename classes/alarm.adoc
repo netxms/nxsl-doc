@@ -150,3 +150,5 @@ Resolve alarm. Return `0` on success or error code on failure.
 `terminate() => Integer`::
 Terminate alarm. Return `0` on success or error code on failure.
 
+.See also
+<<func-findalarmbykey>>, <<func-findalarmbykeyregex>>, <<func-findalarmbyid>>, <<class-alarmcomment>>, <<class-event>>

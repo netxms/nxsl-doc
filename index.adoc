@@ -15,9 +15,10 @@ This is the official documentation for NXSL (NetXMS Scripting Language), the emb
 
 The documentation is organized into the following main sections:
 
-* **Language Guide** - Introduction, script security, language syntax, and tutorial
+* **Language Guide** - Introduction, script security, getting started, working with NetXMS, language syntax, and tutorial
 * **Function Reference** - Complete reference of all NXSL functions organized by category
 * **Class Reference** - Complete reference of all NXSL classes organized by domain
+* **Alphabetical Index** - Quick-reference of all functions and classes in alphabetical order
 * **Appendices** - Global constants, formal grammar, examples, and deprecated functions
 
 ifdef::html[]
@@ -44,6 +45,21 @@ For environments where such strict security checks are not required (for example
 
 <<<
 
+[[getting-started]]
+== Getting Started
+
+include::guide/getting-started.adoc[leveloffset=+1]
+
+<<<
+
+[[working-with-netxms]]
+== Working with NetXMS
+
+include::guide/working-with-netxms.adoc[leveloffset=+1]
+
+<<<
+
+[[language-syntax]]
 == Language Syntax
 
 include::language-syntax.adoc[]
@@ -68,6 +84,7 @@ include::functions.adoc[]
 // CLASS REFERENCE
 // ============================================================================
 
+[[class-reference]]
 == Class Reference
 
 include::classes.adoc[]
@@ -96,8 +113,20 @@ include::examples.adoc[]
 
 <<<
 
+[[deprecated-functions]]
 == Deprecated Functions
 
 This chapter contains deprecated functions that should not be used in new scripts. Each function lists its recommended replacement.
 
 include::deprecated.adoc[leveloffset=+1]
+
+<<<
+
+// ============================================================================
+// ALPHABETICAL INDEX
+// ============================================================================
+
+[[alphabetical-index]]
+== Alphabetical Index
+
+include::index-alphabetical.adoc[]

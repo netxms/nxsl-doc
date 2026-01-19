@@ -29,3 +29,6 @@ node = FindObject("Infrastructure Services"); //Will find node with name "Infras
 println(node.name); //Will print "Infrastructure Services"
 println(node.id); //Will print "2"
 ----
+
+.See also
+<<func-findobjectbyguid>>, <<func-findnodeobject>>, <<func-findnodebyipaddress>>, <<func-findnodebysysname>>, <<func-getallnodes>>

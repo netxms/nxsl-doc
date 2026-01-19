@@ -23,3 +23,6 @@ Array of node objects.
 6901 - Control Unit 1
 6902 - Control Unit 2
 ....
+
+.See also
+<<func-findobject>>, <<func-findnodeobject>>, <<func-findnodebyipaddress>>, <<func-findnodebysysname>>, <<class-node>>

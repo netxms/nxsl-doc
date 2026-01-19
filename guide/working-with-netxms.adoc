@@ -1,0 +1,349 @@
+NetXMS organizes monitored infrastructure as a hierarchy of objects. In NXSL, you interact with these objects through predefined variables and lookup functions.
+
+== The Object Hierarchy
+
+[source]
+----
+Entire Network
+├── Zone
+│   └── Subnet
+│       └── Node
+│           ├── Interface
+│           └── AccessPoint
+├── Container
+│   └── Node
+└── Template
+    └── Node (linked)
+----
+
+Common object types:
+
+* **Node** - A monitored device (server, router, switch)
+* **Interface** - Network interface on a node
+* **Subnet** - IP subnet containing nodes
+* **Container** - Logical grouping of objects
+* **Template** - Reusable configuration applied to nodes
+* **Cluster** - Group of nodes acting as one
+
+== Context Variables
+
+Scripts run in a context that provides predefined variables:
+
+[cols="1,3"]
+|==
+|Variable|Description
+
+|`$node`|Current node object (<<class-node>>)
+|`$object`|Current object of any type (<<class-netobj>>)
+|`$event`|Current event being processed (<<class-event>>)
+|`$alarm`|Current alarm (<<class-alarm>>)
+|`$dci`|Current DCI object (<<class-dci>>)
+|==
+
+Example - accessing node properties:
+
+[source,c]
+----
+println("Node: " .. $node.name);
+println("IP: " .. $node.ipAddress);
+println("Status: " .. $node.status);
+----
+
+== Finding Objects by Name or ID
+
+Use <<func-findobject,FindObject()>> to locate any object:
+
+[source,c]
+----
+// Find by name
+router = FindObject("Core-Router-01");
+if (router != null)
+{
+    println("Found: " .. router.name);
+    println("Type: " .. classof(router));
+}
+
+// Find by ID
+node = FindObject(12345);
+----
+
+== Getting All Nodes
+
+Use <<func-getallnodes,GetAllNodes()>> to iterate over all nodes:
+
+[source,c]
+----
+for (n : GetAllNodes())
+{
+    println(n.name .. " - " .. n.ipAddress);
+}
+----
+
+== Navigating Object Relationships
+
+Objects have parent-child relationships:
+
+[source,c]
+----
+// Get node's parents (containers, subnets, etc.)
+for (parent : $node.parents)
+{
+    println("Parent: " .. parent.name .. " (type " .. parent.type .. ")");
+}
+
+// Get container's children
+container = FindObject("Production Servers");
+for (child : container.children)
+{
+    println("Child: " .. child.name);
+}
+----
+
+== Working with Interfaces
+
+Access a node's network interfaces:
+
+[source,c]
+----
+// Iterate all interfaces
+for (iface : $node.interfaces)
+{
+    println(iface.name .. " - " .. iface.macAddr);
+
+    // Check interface status
+    if (iface.operState == 1)  // Up
+        println("  Status: UP");
+}
+
+// Get specific interface by index
+iface = $node.getInterface(1);
+if (iface != null)
+    println("Interface 1: " .. iface.name);
+----
+
+== Reading DCI Values
+
+Data Collection Items (DCIs) are the core of NetXMS monitoring. NXSL lets you read and manipulate DCI values.
+
+Get current or historical DCI values:
+
+[source,c]
+----
+// Get current value by DCI ID
+value = GetDCIValue($node, 123);
+if (value != null)
+    println("Current value: " .. value);
+
+// Find DCI by description, then get value
+dciId = FindDCIByDescription($node, "CPU Usage");
+if (dciId > 0)
+{
+    value = GetDCIValue($node, dciId);
+    println("CPU: " .. value .. "%");
+}
+----
+
+== Transformation Scripts
+
+Transform collected data before storage. The input value is `$1`:
+
+[source,c]
+----
+// Convert bytes to megabytes
+return $1 / 1048576;
+----
+
+[source,c]
+----
+// Extract numeric value from string like "Temperature: 45C"
+match = $1 =~ "(\d+)";
+if (match)
+    return match[1];
+return null;
+----
+
+== Filter Scripts
+
+Decide whether to accept a value (return `true`) or reject it (`false`):
+
+[source,c]
+----
+// Only accept values within range
+if ($1 >= 0 && $1 <= 100)
+    return true;
+return false;
+----
+
+== Working with Table DCIs
+
+Table DCIs contain multiple rows and columns:
+
+[source,c]
+----
+table = GetDCIValueByDescription($node, "Process List");
+if (table != null)
+{
+    println("Columns: " .. table.columnCount);
+    println("Rows: " .. table.rowCount);
+
+    // Print first column name
+    println("Column 0: " .. table.getColumnName(0));
+
+    // Get cell value (row 0, column 0)
+    println("Value: " .. table.get(0, 0));
+}
+----
+
+== Event Context
+
+In event processing scripts, `$event` provides event details:
+
+[source,c]
+----
+println("Event: " .. $event.name);
+println("Source: " .. $event.sourceNode);
+println("Message: " .. $event.message);
+println("Severity: " .. $event.severity);
+
+// Access event parameters
+println("Parameter 1: " .. $event.parameters[1]);
+----
+
+== Modifying Events
+
+Add custom data to events:
+
+[source,c]
+----
+// Add custom parameter
+SetEventParameter($event, "location", $node.getCustomAttribute("location"));
+
+// The parameter is now available as %<location> in notifications
+----
+
+== Working with Alarms
+
+Access current alarms:
+
+[source,c]
+----
+// In alarm context
+println("Alarm: " .. $alarm.message);
+println("State: " .. $alarm.state);
+println("Ack: " .. $alarm.isAcknowledged);
+
+// Get alarm comments
+for (comment : $alarm.comments)
+{
+    println("Comment: " .. comment.text);
+}
+----
+
+== Check Node Capabilities
+
+[source,c]
+----
+// Check if node supports SNMP
+if ($node.capabilities & NC_IS_SNMP)
+    println("SNMP enabled");
+
+// Check if node has NetXMS agent
+if ($node.capabilities & NC_IS_NATIVE_AGENT)
+    println("Agent installed");
+----
+
+== Custom Attributes
+
+Read and write custom attributes on objects:
+
+[source,c]
+----
+// Read custom attribute
+location = $node.getCustomAttribute("location");
+if (location != null)
+    println("Location: " .. location);
+
+// Set custom attribute
+$node.setCustomAttribute("last_check", strftime("%Y-%m-%d %H:%M:%S", time()));
+
+// List all custom attributes
+attrs = $node.customAttributes;
+for (key : attrs.keys)
+{
+    println(key .. " = " .. attrs[key]);
+}
+----
+
+== SNMP Operations
+
+Perform SNMP queries on nodes:
+
+[source,c]
+----
+// Create SNMP transport
+transport = $node.createSNMPTransport();
+if (transport == null)
+{
+    trace(1, "Failed to create SNMP transport");
+    return null;
+}
+
+// Get single value
+sysDescr = transport.getValue("1.3.6.1.2.1.1.1.0");
+println("System: " .. sysDescr);
+
+// Walk a subtree
+results = transport.walk("1.3.6.1.2.1.2.2.1.2");  // ifDescr
+for (r : results)
+{
+    println(r.name .. " = " .. r.value);
+}
+----
+
+== Recursive Object Traversal
+
+Walk the object tree:
+
+[source,c]
+----
+function walkTree(obj, level)
+{
+    for (i = 0; i < level; i++)
+        print("  ");
+    println(obj.name .. " [" .. classof(obj) .. "]");
+
+    for (child : obj.children)
+    {
+        walkTree(child, level + 1);
+    }
+}
+
+// Start from root
+root = FindObject("Entire Network");
+walkTree(root, 0);
+----
+
+[[working-with-netxms-best-practices]]
+== Best Practices
+
+**Performance:**
+
+* Use `FindDCIByDescription` once and cache the ID
+* Avoid `GetAllNodes()` in transformation scripts (runs frequently)
+* Use `trace()` sparingly in production
+
+**Error Handling:**
+
+* Always check for `null` after `FindObject`, `GetDCIValue`, etc.
+* Use meaningful trace levels (1=errors, 5=debug, 9=verbose)
+
+**Security:**
+
+* Remember trusted node validation (see <<security>>)
+* Pass `$node` as context when required
+
+**Maintainability:**
+
+* Use descriptive variable names
+* Add comments for complex logic
+* Keep transformation scripts simple

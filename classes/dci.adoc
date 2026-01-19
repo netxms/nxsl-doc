@@ -98,4 +98,7 @@ User tag. *This attribute was added in version 5.2*
 ==== Instance methods
 
 `forcePoll() => void`::
-Start DCI force poll. 
+Start DCI force poll.
+
+.See also
+<<func-finddcibyname>>, <<func-finddcibydescription>>, <<func-findalldcis>>, <<func-getdcivalue>>, <<func-getdciobject>>, <<func-createdci>>, <<class-table>>, <<class-datapoint>> 

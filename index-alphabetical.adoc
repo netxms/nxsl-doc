@@ -1,0 +1,308 @@
+// Alphabetical Index
+// Quick-reference of all functions and classes in NXSL
+
+This appendix provides a quick alphabetical reference to all NXSL functions and classes.
+
+TIP: Use your browser's search (Ctrl+F / Cmd+F) to quickly find what you're looking for.
+
+=== Functions
+
+[cols="1,2", options="header", grid="rows", frame="none"]
+|===
+|Function |Category
+
+|<<func-_exit,_exit()>>|Utility
+|<<func-assert,assert()>>|Utility
+|<<func-base64-decode,Base64::Decode()>>|Base64 Package
+|<<func-base64-encode,Base64::Encode()>>|Base64 Package
+|<<func-calculatedowntime,CalculateDowntime()>>|Data Collection
+|<<func-cancelscheduledtasksbykey,CancelScheduledTasksByKey()>>|Utility
+|<<func-chr,chr()>>|String Operations
+|<<func-classof,classof()>>|Utility
+|<<func-countryalphacode,CountryAlphaCode()>>|Utility
+|<<func-countryname,CountryName()>>|Utility
+|<<func-countscheduledtasksbykey,CountScheduledTasksByKey()>>|Utility
+|<<func-createdci,CreateDCI()>>|Data Collection
+|<<func-createuseragentnotification,CreateUserAgentNotification()>>|Utility
+|<<func-crypto-md5,Crypto::MD5()>>|Cryptography Package
+|<<func-crypto-sha1,Crypto::SHA1()>>|Cryptography Package
+|<<func-crypto-sha256,Crypto::SHA256()>>|Cryptography Package
+|<<func-currencyalphacode,CurrencyAlphaCode()>>|Utility
+|<<func-currencyexponent,CurrencyExponent()>>|Utility
+|<<func-currencyname,CurrencyName()>>|Utility
+|<<func-d2x,d2x()>>|String Operations
+|<<func-detectanomalies,DetectAnomalies()>>|Data Collection
+|<<func-findalarmbyid,FindAlarmById()>>|Events and Alarms
+|<<func-findalarmbykey,FindAlarmByKey()>>|Events and Alarms
+|<<func-findalarmbykeyregex,FindAlarmByKeyRegex()>>|Events and Alarms
+|<<func-findaccesspointbymacaddress,FindAccessPointByMACAddress()>>|Object Navigation
+|<<func-findalldcis,FindAllDCIs()>>|Data Collection
+|<<func-finddcibydescription,FindDCIByDescription()>>|Data Collection
+|<<func-finddcibyname,FindDCIByName()>>|Data Collection
+|<<func-finddcibytag,FindDCIByTag()>>|Data Collection
+|<<func-finddcibytagpattern,FindDCIByTagPattern()>>|Data Collection
+|<<func-findnodebyagentid,FindNodeByAgentId()>>|Object Navigation
+|<<func-findnodebyipaddress,FindNodeByIPAddress()>>|Object Navigation
+|<<func-findnodebymacaddress,FindNodeByMACAddress()>>|Object Navigation
+|<<func-findnodebysysname,FindNodeBySysName()>>|Object Navigation
+|<<func-findnodeobject,FindNodeObject()>>|Object Navigation
+|<<func-findobject,FindObject()>>|Object Navigation
+|<<func-findobjectbyguid,FindObjectByGUID()>>|Object Navigation
+|<<func-findvendorbymacaddress,FindVendorByMACAddress()>>|Utility
+|<<func-formatmetricprefix,FormatMetricPrefix()>>|String Operations
+|<<func-formatnumber,FormatNumber()>>|String Operations
+|<<func-getallnodes,GetAllNodes()>>|Object Navigation
+|<<func-getavailablepackages,GetAvailablePackages()>>|Utility
+|<<func-getavgdcivalue,GetAvgDCIValue()>>|Data Collection
+|<<func-getconfigurationvariable,GetConfigurationVariable()>>|Utility
+|<<func-getcurrenttime,GetCurrentTime()>>|Time and Date
+|<<func-getcurrenttimems,GetCurrentTimeMs()>>|Time and Date
+|<<func-getdciobject,GetDCIObject()>>|Data Collection
+|<<func-getdcirawvalue,GetDCIRawValue()>>|Data Collection
+|<<func-getdcivalue,GetDCIValue()>>|Data Collection
+|<<func-getdcivaluebydescription,GetDCIValueByDescription()>>|Data Collection
+|<<func-getdcivaluebyname,GetDCIValueByName()>>|Data Collection
+|<<func-getdcivaluebytag,GetDCIValueByTag()>>|Data Collection
+|<<func-getdcivaluebytagpattern,GetDCIValueByTagPattern()>>|Data Collection
+|<<func-getdcivalues,GetDCIValues()>>|Data Collection
+|<<func-getdcivaluesex,GetDCIValuesEx()>>|Data Collection
+|<<func-getmappingtablekeys,GetMappingTableKeys()>>|Utility
+|<<func-getmaxdcivalue,GetMaxDCIValue()>>|Data Collection
+|<<func-getmindcivalue,GetMinDCIValue()>>|Data Collection
+|<<func-getmonotonicclocktime,GetMonotonicClockTime()>>|Time and Date
+|<<func-getservernode,GetServerNode()>>|Object Navigation
+|<<func-getservernodeid,GetServerNodeId()>>|Object Navigation
+|<<func-getserverqueuenames,GetServerQueueNames()>>|Utility
+|<<func-getsumdcivalue,GetSumDCIValue()>>|Data Collection
+|<<func-getsyslogrulecheckcount,GetSyslogRuleCheckCount()>>|Utility
+|<<func-getsyslogrulematchcount,GetSyslogRuleMatchCount()>>|Utility
+|<<func-getthreadpoolnames,GetThreadPoolNames()>>|Utility
+|<<func-io-copyfile,IO::CopyFile()>>|File I/O Package
+|<<func-io-createdirectory,IO::CreateDirectory()>>|File I/O Package
+|<<func-io-deletefile,IO::DeleteFile()>>|File I/O Package
+|<<func-io-fileaccess,IO::FileAccess()>>|File I/O Package
+|<<func-io-openfile,IO::OpenFile()>>|File I/O Package
+|<<func-io-removedirectory,IO::RemoveDirectory()>>|File I/O Package
+|<<func-io-renamefile,IO::RenameFile()>>|File I/O Package
+|<<func-IsMarkdownComment,IsMarkdownComment()>>|Utility
+|<<func-jsonparse,JsonParse()>>|Utility
+|<<func-levenshteindistance,LevenshteinDistance()>>|String Operations
+|<<func-loadevent,LoadEvent()>>|Events and Alarms
+|<<func-map,map()>>|Utility
+|<<func-maplist,mapList()>>|Utility
+|<<func-math-abs,Math::Abs()>>|Math Package
+|<<func-math-acos,Math::Acos()>>|Math Package
+|<<func-math-asin,Math::Asin()>>|Math Package
+|<<func-math-atan,Math::Atan()>>|Math Package
+|<<func-math-atan2,Math::Atan2()>>|Math Package
+|<<func-math-atanh,Math::Atanh()>>|Math Package
+|<<func-math-average,Math::Average()>>|Math Package
+|<<func-math-ceil,Math::Ceil()>>|Math Package
+|<<func-math-cos,Math::Cos()>>|Math Package
+|<<func-math-cosh,Math::Cosh()>>|Math Package
+|<<func-math-exp,Math::Exp()>>|Math Package
+|<<func-math-floor,Math::Floor()>>|Math Package
+|<<func-math-log,Math::Log()>>|Math Package
+|<<func-math-log10,Math::Log10()>>|Math Package
+|<<func-math-max,Math::Max()>>|Math Package
+|<<func-math-meanabsolutedeviation,Math::MeanAbsoluteDeviation()>>|Math Package
+|<<func-math-min,Math::Min()>>|Math Package
+|<<func-math-pow,Math::Pow()>>|Math Package
+|<<func-math-pow10,Math::Pow10()>>|Math Package
+|<<func-math-random,Math::Random()>>|Math Package
+|<<func-math-round,Math::Round()>>|Math Package
+|<<func-math-sin,Math::Sin()>>|Math Package
+|<<func-math-sinh,Math::Sinh()>>|Math Package
+|<<func-math-sqrt,Math::Sqrt()>>|Math Package
+|<<func-math-standarddeviation,Math::StandardDeviation()>>|Math Package
+|<<func-math-sum,Math::Sum()>>|Math Package
+|<<func-math-tan,Math::Tan()>>|Math Package
+|<<func-math-tanh,Math::Tanh()>>|Math Package
+|<<func-math-weierstrass,Math::Weierstrass()>>|Math Package
+|<<func-net-getlocalhostname,Net::GetLocalHostName()>>|Network Package
+|<<func-net-resolveaddress,Net::ResolveAddress()>>|Network Package
+|<<func-net-resolvehostname,Net::ResolveHostname()>>|Network Package
+|<<func-ord,ord()>>|String Operations
+|<<func-pollertrace,PollerTrace()>>|Utility
+|<<func-postevent,PostEvent()>>|Events and Alarms
+|<<func-posteventex,PostEventEx()>>|Events and Alarms
+|<<func-print,print()>>|Utility
+|<<func-println,println()>>|Utility
+|<<func-pushdcidata,PushDCIData()>>|Data Collection
+|<<func-queryaiassistant,QueryAIAssistant()>>|Utility
+|<<func-range,range()>>|Utility
+|<<func-readpersistentstorage,ReadPersistentStorage()>>|Utility
+|<<func-registeraitask,RegisterAITask()>>|Utility
+|<<func-secondstouptime,SecondsToUptime()>>|Time and Date
+|<<func-sendmail,SendMail()>>|Utility
+|<<func-sendnotification,SendNotification()>>|Utility
+|<<func-similarityscore,SimilarityScore()>>|String Operations
+|<<func-sleep,sleep()>>|Utility
+|<<func-time,time()>>|Time and Date
+|<<func-trace,trace()>>|Utility
+|<<func-typeof,typeof()>>|Utility
+|<<func-writepersistentstorage,WritePersistentStorage()>>|Utility
+|<<func-x2d,x2d()>>|String Operations
+|===
+
+=== Deprecated Functions
+
+These functions are deprecated and should not be used in new scripts. See <<deprecated-functions>> for replacement recommendations.
+
+[cols="1,2", options="header", grid="rows", frame="none"]
+|===
+|Function |Replacement
+
+|<<func-abs,abs()>>|<<func-math-abs,Math::Abs()>>
+|<<func-addrinrange,AddrInRange()>>|<<class-inetaddress-inrange,InetAddress::inRange()>>
+|<<func-addrinsubnet,AddrInSubnet()>>|<<class-inetaddress-samesubnet,InetAddress::sameSubnet()>>
+|<<func-agentexecutecommand,AgentExecuteCommand()>>|Node method
+|<<func-agentexecutecommandwithoutput,AgentExecuteCommandWithOutput()>>|Node method
+|<<func-agentreadlist,AgentReadList()>>|<<class-node-readagentlist,Node::readAgentList()>>
+|<<func-agentreadparameter,AgentReadParameter()>>|<<class-node-readagentparameter,Node::readAgentParameter()>>
+|<<func-agentreadtable,AgentReadTable()>>|<<class-node-readagenttable,Node::readAgentTable()>>
+|<<func-arraytostring,ArrayToString()>>|<<class-array-join,Array::join()>>
+|<<func-base64decode,Base64Decode()>>|<<func-base64-decode,Base64::Decode()>>
+|<<func-base64encode,Base64Encode()>>|<<func-base64-encode,Base64::Encode()>>
+|<<func-bindobject,BindObject()>>|<<class-netobj-bind,NetObj::bind()>>
+|<<func-ceil,ceil()>>|<<func-math-ceil,Math::Ceil()>>
+|<<func-cos,cos()>>|<<func-math-cos,Math::Cos()>>
+|<<func-createcontainer,CreateContainer()>>|Container/ServiceRoot method
+|<<func-createnode,CreateNode()>>|Container/ServiceRoot method
+|<<func-createsnmptransport,CreateSNMPTransport()>>|Node method
+|<<func-deletecustomattribute,DeleteCustomAttribute()>>|<<class-netobj-deletecustomattribute,NetObj::deleteCustomAttribute()>>
+|<<func-deleteobject,DeleteObject()>>|<<class-netobj-delete,NetObj::delete()>>
+|<<func-driverreadparameter,DriverReadParameter()>>|<<class-node-readdriverparameter,Node::readDriverParameter()>>
+|<<func-entermaintenance,EnterMaintenance()>>|<<class-netobj-entermaintenance,NetObj::enterMaintenance()>>
+|<<func-eventcodefromname,EventCodeFromName()>>|Event attribute
+|<<func-eventnamefromcode,EventNameFromCode()>>|Event attribute
+|<<func-expandstring,ExpandString()>>|String method
+|<<func-floor,floor()>>|<<func-math-floor,Math::Floor()>>
+|<<func-format,format()>>|<<func-formatnumber,FormatNumber()>>
+|<<func-getcustomattribute,GetCustomAttribute()>>|<<class-netobj-getcustomattribute,NetObj::getCustomAttribute()>>
+|<<func-geteventparameter,GetEventParameter()>>|Event attribute
+|<<func-getinterfacename,GetInterfaceName()>>|Interface attribute
+|<<func-getinterfaceobject,GetInterfaceObject()>>|<<class-node-getinterface,Node::getInterface()>>
+|<<func-getnodeinterfaces,GetNodeInterfaces()>>|Node attribute
+|<<func-getnodeparents,GetNodeParents()>>|NetObj attribute
+|<<func-getnodetemplates,GetNodeTemplates()>>|Node attribute
+|<<func-getobjectchildren,GetObjectChildren()>>|NetObj attribute
+|<<func-getobjectparents,GetObjectParents()>>|NetObj attribute
+|<<func-gmtime,gmtime()>>|DateTime class
+|<<func-index,index()>>|<<class-string-indexOf,String::indexOf()>>
+|<<func-inlist,inList()>>|Array method
+|<<func-instance,Instance()>>|classof()
+|<<func-leavemaintenance,LeaveMaintenance()>>|<<class-netobj-leavemaintenance,NetObj::leaveMaintenance()>>
+|<<func-left,left()>>|<<class-string-left,String::left()>>
+|<<func-length,length()>>|<<class-string-length,String::length>>
+|<<func-localtime,localtime()>>|DateTime class
+|<<func-lower,lower()>>|<<class-string-toLowerCase,String::toLowerCase()>>
+|<<func-ltrim,ltrim()>>|<<class-string-trimLeft,String::trimLeft()>>
+|<<func-manageobject,ManageObject()>>|NetObj method
+|<<func-max,max()>>|<<func-math-max,Math::Max()>>
+|<<func-min,min()>>|<<func-math-min,Math::Min()>>
+|<<func-mktime,mktime()>>|DateTime class
+|<<func-pow,pow()>>|<<func-math-pow,Math::Pow()>>
+|<<func-random,random()>>|<<func-math-random,Math::Random()>>
+|<<func-renameobject,RenameObject()>>|NetObj attribute
+|<<func-replace,replace()>>|<<class-string-replace,String::replace()>>
+|<<func-right,right()>>|<<class-string-right,String::right()>>
+|<<func-rindex,rindex()>>|<<class-string-lastIndexOf,String::lastIndexOf()>>
+|<<func-round,round()>>|<<func-math-round,Math::Round()>>
+|<<func-rtrim,rtrim()>>|<<class-string-trimRight,String::trimRight()>>
+|<<func-setcustomattribute,SetCustomAttribute()>>|NetObj method
+|<<func-seteventparameter,SetEventParameter()>>|Event method
+|<<func-setinterfaceexpectedstate,SetInterfaceExpectedState()>>|Interface method
+|<<func-sin,sin()>>|<<func-math-sin,Math::Sin()>>
+|<<func-snmpget,SNMPGet()>>|SNMPTransport method
+|<<func-snmpgetvalue,SNMPGetValue()>>|SNMPTransport method
+|<<func-snmpset,SNMPSet()>>|SNMPTransport method
+|<<func-snmpwalk,SNMPWalk()>>|SNMPTransport method
+|<<func-splitstring,SplitString()>>|<<class-string-split,String::split()>>
+|<<func-sqrt,sqrt()>>|<<func-math-sqrt,Math::Sqrt()>>
+|<<func-strftime,strftime()>>|<<class-datetime-format,DateTime::format()>>
+|<<func-substr,substr()>>|<<class-string-substring,String::substring()>>
+|<<func-tan,tan()>>|<<func-math-tan,Math::Tan()>>
+|<<func-trim,trim()>>|<<class-string-trim,String::trim()>>
+|<<func-unbindobject,UnbindObject()>>|<<class-netobj-unbind,NetObj::unbind()>>
+|<<func-unmanageobject,UnmanageObject()>>|NetObj method
+|<<func-upper,upper()>>|<<class-string-toUpperCase,String::toUpperCase()>>
+|===
+
+=== Classes
+
+[cols="1,2", options="header", grid="rows", frame="none"]
+|===
+|Class |Domain
+
+|<<class-accesspoint,AccessPoint>>|Network Objects
+|<<class-alarm,Alarm>>|Events and Alarms
+|<<class-alarmcomment,AlarmComment>>|Events and Alarms
+|<<class-asset,Asset>>|Infrastructure
+|<<class-assetproperties,AssetProperties>>|Infrastructure
+|<<class-businessservice,BusinessService>>|Infrastructure
+|<<class-businessservicecheck,BusinessServiceCheck>>|Infrastructure
+|<<class-bytestream,ByteStream>>|Data Structures
+|<<class-chassis,Chassis>>|Infrastructure
+|<<class-circuit,Circuit>>|Network Objects
+|<<class-class,Class>>|Data Structures
+|<<class-clientsession,ClientSession>>|Users and Security
+|<<class-cluster,Cluster>>|Infrastructure
+|<<class-collector,Collector>>|Infrastructure
+|<<class-component,Component>>|Hardware and Software
+|<<class-container,Container>>|Infrastructure
+|<<class-datacollectiontarget,DataCollectionTarget>>|Base Classes
+|<<class-datapoint,DataPoint>>|Data Collection
+|<<class-datetime,DateTime>>|Data Structures
+|<<class-dci,DCI>>|Data Collection
+|<<class-deploymentpackage,DeploymentPackage>>|Hardware and Software
+|<<class-discoveredinterface,DiscoveredInterface>>|Discovery and Diagnostics
+|<<class-discoverednode,DiscoveredNode>>|Discovery and Diagnostics
+|<<class-downtimeinfo,DowntimeInfo>>|Discovery and Diagnostics
+|<<class-event,Event>>|Events and Alarms
+|<<class-file,FILE>>|Data Structures
+|<<class-geolocation,GeoLocation>>|Networking Utilities
+|<<class-hardwarecomponent,HardwareComponent>>|Hardware and Software
+|<<class-inetaddress,InetAddress>>|Networking Utilities
+|<<class-interface,Interface>>|Network Objects
+|<<class-jsonarray,JsonArray>>|Data Structures
+|<<class-jsonobject,JsonObject>>|Data Structures
+|<<class-ldapobject,LDAPObject>>|LDAP Integration
+|<<class-linkdatasource,LinkDataSource>>|Data Collection
+|<<class-macaddress,MacAddress>>|Networking Utilities
+|<<class-maintenancejournalrecord,MaintenanceJournalRecord>>|Discovery and Diagnostics
+|<<class-mobiledevice,MobileDevice>>|Infrastructure
+|<<class-netobj,NetObj>>|Base Classes
+|<<class-networkmap,NetworkMap>>|Network Objects
+|<<class-networkmaplink,NetworkMapLink>>|Network Objects
+|<<class-networkpathcheckresult,NetworkPathCheckResult>>|Discovery and Diagnostics
+|<<class-node,Node>>|Network Objects
+|<<class-nodedependency,NodeDependency>>|Discovery and Diagnostics
+|<<class-object,Object>>|Base Classes
+|<<class-ospfarea,OSPFArea>>|OSPF and Routing
+|<<class-ospfneighbor,OSPFNeighbor>>|OSPF and Routing
+|<<class-radiointerface,RadioInterface>>|Hardware and Software
+|<<class-range,Range>>|Data Structures
+|<<class-scoreddcivalue,ScoredDciValue>>|Data Collection
+|<<class-sensor,Sensor>>|Infrastructure
+|<<class-serviceroot,ServiceRoot>>|Infrastructure
+|<<class-snmptransport,SNMPTransport>>|Networking Utilities
+|<<class-snmpvarbind,SNMPVarBind>>|Networking Utilities
+|<<class-softwarepackage,SoftwarePackage>>|Hardware and Software
+|<<class-sshsession,SSHSession>>|Networking Utilities
+|<<class-subnet,Subnet>>|Network Objects
+|<<class-table,Table>>|Data Collection
+|<<class-tablecolumn,TableColumn>>|Data Collection
+|<<class-tablerow,TableRow>>|Data Collection
+|<<class-template,Template>>|Infrastructure
+|<<class-tunnel,Tunnel>>|Network Objects
+|<<class-user,User>>|Users and Security
+|<<class-userdbobject,UserDBObject>>|Users and Security
+|<<class-usergroup,UserGroup>>|Users and Security
+|<<class-vlan,VLAN>>|Network Objects
+|<<class-webservice,WebService>>|Networking Utilities
+|<<class-webserviceresponse,WebServiceResponse>>|Networking Utilities
+|<<class-wirelessdomain,WirelessDomain>>|Network Objects
+|<<class-wirelessstation,WirelessStation>>|Network Objects
+|<<class-zone,Zone>>|Network Objects
+|===

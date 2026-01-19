@@ -1,0 +1,150 @@
+This section will help you write and run your first NXSL script. By the end, you'll understand the basic structure of NXSL programs and how to execute them in NetXMS.
+
+== Hello World
+
+Every programming journey starts with a simple program. Here's the classic "Hello World" in NXSL:
+
+[source,c]
+----
+println("Hello, World!");
+----
+
+That's it! This single line prints text to the output. Let's break it down:
+
+* `println` is a built-in function that prints text followed by a newline
+* The text inside quotes `"Hello, World!"` is a string
+* The semicolon `;` ends the statement (required in NXSL)
+
+== Running Scripts in NetXMS
+
+NXSL scripts run in several contexts within NetXMS. The most common ways to test scripts are:
+
+**Script Console** (for testing)::
+Access via _Configuration → Script Library_, create a new script, and use the _Execute_ button.
+
+**Transformation Scripts** (for DCIs)::
+Modify collected data before storing. Set in DCI properties under _Transformation_.
+
+**Filter Scripts** (for DCIs)::
+Decide whether to accept or reject collected values.
+
+**Event Processing Policy**::
+React to events with custom logic in EPP rules.
+
+**Object Tools**::
+Create custom actions available from object context menus.
+
+== Script Structure
+
+NXSL scripts can be as simple as a single expression or more structured with functions:
+
+[source,c]
+----
+// Simple script - just statements
+x = 5;
+y = 10;
+println("Sum: " .. (x + y));
+----
+
+For more complex scripts, define a `main()` function:
+
+[source,c]
+----
+function main()
+{
+    println("Script started");
+    result = calculate(5, 10);
+    println("Result: " .. result);
+    return 0;
+}
+
+function calculate(a, b)
+{
+    return a * b;
+}
+----
+
+== Comments
+
+Document your code with comments:
+
+[source,c]
+----
+// Single-line comment
+
+/*
+   Multi-line comment
+   spanning several lines
+*/
+
+x = 5; // Inline comment
+----
+
+== Basic Input and Output
+
+**Output:**
+
+* `println(text)` - Print with newline
+* `print(text)` - Print without newline
+* `trace(level, text)` - Debug output (level 1-9)
+
+**Script Parameters:**
+
+Scripts receive parameters through special variables `$1`, `$2`, etc.:
+
+[source,c]
+----
+// If script called with parameters "hello" and "world"
+println($1);  // Prints: hello
+println($2);  // Prints: world
+----
+
+== Your First Practical Script
+
+Let's write a script that does something useful - converting a UNIX timestamp to human-readable format:
+
+[source,c]
+----
+// Transform UNIX timestamp to readable date
+// Use as transformation script for timestamp DCIs
+
+if ($1 == null)
+    return null;
+
+return strftime("%Y-%m-%d %H:%M:%S", $1);
+----
+
+This script:
+
+1. Checks if input (`$1`) is null
+2. Uses `strftime` to format the timestamp
+3. Returns the formatted string
+
+== Error Handling Basics
+
+Always consider what happens when things go wrong:
+
+[source,c]
+----
+value = GetDCIValue($node, 123);
+if (value == null)
+{
+    trace(1, "Failed to get DCI value");
+    return null;
+}
+println("Value: " .. value);
+----
+
+Key practices:
+
+* Check for `null` after operations that might fail
+* Use `trace()` for debugging information
+* Return appropriate values for error conditions
+
+== Next Steps
+
+Now that you can write and run basic scripts, explore:
+
+* <<language-syntax>> - Complete language reference
+* <<working-with-netxms>> - Interacting with NetXMS objects
+* <<class-reference>> - All available classes
