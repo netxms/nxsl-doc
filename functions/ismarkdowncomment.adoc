@@ -1,5 +1,5 @@
 [.nxsl-function]
-[[func-IsMarkdownComment]]
+[[func-ismarkdowncomment]]
 == IsMarkdownComment()
 
 [source,c]
