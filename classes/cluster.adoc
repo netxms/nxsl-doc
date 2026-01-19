@@ -2,9 +2,13 @@
 [[class-cluster]]
 === Cluster
 
-Object represent cluster, extends <<class-datacollectiontarget>>
+Object represents cluster. Extends <<class-datacollectiontarget>>.
 
 ==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
+
+include::_shared/datacollectiontarget-attrs.adoc[]
 
 `nodes => Array`::
 Will return all nodes of class <<class-node>>, that are under this cluster
@@ -16,6 +20,10 @@ Will return zone this cluster is under
 Will return zone UIN this cluster is under
 
 ==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
+
+include::_shared/datacollectiontarget-methods.adoc[]
 
 `add(object) => void`::
 Add node to cluster

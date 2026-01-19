@@ -6,6 +6,10 @@ Represents NetXMS node object. Extends <<class-datacollectiontarget>>.
 
 ==== Instance attributes
 
+include::_shared/netobj-attrs.adoc[]
+
+include::_shared/datacollectiontarget-attrs.adoc[]
+
 `agentCertificateMappingData => String`::
 Agent certificate mapping data (set in object properties).
 
@@ -376,6 +380,10 @@ Status of this node as zone proxy (`true` if active).
 This node zone UIN
 
 ==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
+
+include::_shared/datacollectiontarget-methods.adoc[]
 
 `callWebService(webSvcName, requestType, ...) => <<class-webserviceresponse>>`::
 Finds web service by name, makes request and returns the <<class-webserviceresponse>> object.

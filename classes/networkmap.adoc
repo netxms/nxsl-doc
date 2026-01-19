@@ -6,6 +6,8 @@ Class represents Network Map. Extends <<class-netobj>>.
 
 ==== Instance attributes
 
+include::_shared/netobj-attrs.adoc[]
+
 `backgroundColor => Integer`::
 Background color in css format <<const-link-colorsource>>.
 

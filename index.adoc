@@ -6,21 +6,35 @@
 :toclevels: 3
 = NetXMS Scripting Language
 http://netxms.org/
-v5.0, 18 May, 2024
+v5.1, 19 January, 2026
 
+[preface]
+== About This Document
+
+This is the official documentation for NXSL (NetXMS Scripting Language), the embedded scripting language for the NetXMS network monitoring system.
+
+The documentation is organized into the following main sections:
+
+* **Language Guide** - Introduction, script security, language syntax, and tutorial
+* **Function Reference** - Complete reference of all NXSL functions organized by category
+* **Class Reference** - Complete reference of all NXSL classes organized by domain
+* **Appendices** - Global constants, formal grammar, examples, and deprecated functions
+
+ifdef::html[]
++++You can also download a <a href="nxsl.pdf">PDF version of this document</a>.+++
+endif::[]
+
+// ============================================================================
+// LANGUAGE GUIDE
+// ============================================================================
+
+[[introduction]]
 == Introduction
 
 In many parts of the system, fine tuning can be done by using NetXMS built-in scripting language called NXSL (stands for NetXMS Scripting Language). NXSL was designed specifically to be used as embedded scripting language within NetXMS, and because of this has some specific features and limitations. Most notable is very limited access to data outside script boundaries – for example, from NXSL script you cannot access files on server without explicit permission, nor call external programs, nor even access data of the node object other than script is running for without explicit permission. NXSL is interpreted language – scripts first compiled into internal representation (similar to byte code in Java), which than executed inside NXSL VM.
 
-ifdef::html[]
-
-=== PDF Version
-+++You can also download a <a href="nxsl.pdf">PDF version of this document</a>.+++
-
-endif::[]
-
 [[security]]
-== Script security
+== Script Security
 
 Because NXSL provides functions for searching objects, and because all scripts are executed on management server, user with write access to only one node can potentially acquire information about nodes to which he normally does not have access. For example, without additional security checks user with write access to node `A` and no access to node `B` can create transformation script for DCI on node `A` and use <<func-findnodeobject,FindNodeObject>> function to access node `B` and get information about it, thus breaking security settings.
 
@@ -30,7 +44,7 @@ For environments where such strict security checks are not required (for example
 
 <<<
 
-== Language syntax
+== Language Syntax
 
 include::language-syntax.adoc[]
 
@@ -38,17 +52,31 @@ include::language-syntax.adoc[]
 
 include::tutorial.adoc[]
 
+<<<
+
+// ============================================================================
+// FUNCTION REFERENCE
+// ============================================================================
+
 == Function Reference
 
 include::functions.adoc[]
 
 <<<
 
+// ============================================================================
+// CLASS REFERENCE
+// ============================================================================
+
 == Class Reference
 
 include::classes.adoc[]
 
 <<<
+
+// ============================================================================
+// APPENDICES
+// ============================================================================
 
 == Global Constants
 
@@ -66,11 +94,10 @@ include::grammar.adoc[]
 
 include::examples.adoc[]
 
+<<<
 
-== Deprecated functions
+== Deprecated Functions
 
-This chapter contails deprecated functins that should not be used.
+This chapter contains deprecated functions that should not be used in new scripts. Each function lists its recommended replacement.
 
 include::deprecated.adoc[leveloffset=+1]
-
-<<<

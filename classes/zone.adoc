@@ -2,10 +2,11 @@
 [[class-zone]]
 === Zone
 
-Represent network zone. Inherit all attributes and methods of the <<class-netobj>> class.
-
+Represents network zone. Extends <<class-netobj>>.
 
 ==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
 
 `proxyNodes => Array<Node>`::
 Array of <<class-node>> objects that are currently set as proxies for this zone.

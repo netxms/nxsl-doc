@@ -1,70 +1,132 @@
-include::classes/accesspoint.adoc[]
-include::classes/alarm.adoc[]
-include::classes/alarmcomment.adoc[]
-include::classes/asset.adoc[]
-include::classes/assetproperties.adoc[]
-include::classes/businessservice.adoc[]
-include::classes/businessservicecheck.adoc[]
-include::classes/bytestream.adoc[]
-include::classes/chassis.adoc[]
-include::classes/circuit.adoc[]
-include::classes/class.adoc[]
-include::classes/clientsession.adoc[]
-include::classes/cluster.adoc[]
-include::classes/collector.adoc[]
-include::classes/component.adoc[]
-include::classes/container.adoc[]
-include::classes/datacollectiontarget.adoc[]
-include::classes/datapoint.adoc[]
-include::classes/datetime.adoc[]
-include::classes/dci.adoc[]
-include::classes/deploymentpackage.adoc[]
-include::classes/discoveredinterface.adoc[]
-include::classes/discoverednode.adoc[]
-include::classes/downtimeinfo.adoc[]
-include::classes/event.adoc[]
-include::classes/file.adoc[]
-include::classes/geolocation.adoc[]
-include::classes/hardwarecomponent.adoc[]
-include::classes/inetaddress.adoc[]
-include::classes/interface.adoc[]
-include::classes/jsonarray.adoc[]
-include::classes/jsonobject.adoc[]
-include::classes/ldapobject.adoc[]
-include::classes/linkdatasource.adoc[]
-include::classes/macaddress.adoc[]
-include::classes/maintenancejournalrecord.adoc[]
-include::classes/mobiledevice.adoc[]
-include::classes/netobj.adoc[]
-include::classes/networkmap.adoc[]
-include::classes/networkmaplink.adoc[]
-include::classes/networkpathcheckresult.adoc[]
-include::classes/node.adoc[]
-include::classes/nodedependency.adoc[]
+// Class Reference - organized by domain
+// Each class shows all attributes including inherited ones via collapsible sections
+
+=== Base Classes
+
+These are the foundational classes from which other classes inherit.
+
 include::classes/object.adoc[]
-include::classes/ospfarea.adoc[]
-include::classes/ospfneighbor.adoc[]
-include::classes/radiointerface.adoc[]
-include::classes/range.adoc[]
-include::classes/scoreddcivalue.adoc[]
-include::classes/sensor.adoc[]
-include::classes/serviceroot.adoc[]
-include::classes/snmptransport.adoc[]
-include::classes/snmpvarbind.adoc[]
-include::classes/softwarepackage.adoc[]
-include::classes/sshsession.adoc[]
+include::classes/netobj.adoc[]
+include::classes/datacollectiontarget.adoc[]
+
+=== Network Objects
+
+Classes representing network infrastructure: nodes, interfaces, subnets, zones, and wireless components.
+
+include::classes/node.adoc[]
+include::classes/interface.adoc[]
 include::classes/subnet.adoc[]
-include::classes/table.adoc[]
-include::classes/tablecolumn.adoc[]
-include::classes/tablerow.adoc[]
-include::classes/template.adoc[]
-include::classes/tunnel.adoc[]
-include::classes/user.adoc[]
-include::classes/userdbobject.adoc[]
-include::classes/usergroup.adoc[]
-include::classes/vlan.adoc[]
-include::classes/webservice.adoc[]
-include::classes/webserviceresponse.adoc[]
+include::classes/zone.adoc[]
+include::classes/accesspoint.adoc[]
 include::classes/wirelessdomain.adoc[]
 include::classes/wirelessstation.adoc[]
-include::classes/zone.adoc[]
+include::classes/vlan.adoc[]
+include::classes/circuit.adoc[]
+include::classes/networkmap.adoc[]
+include::classes/networkmaplink.adoc[]
+include::classes/tunnel.adoc[]
+
+=== Data Collection
+
+Classes for data collection items, tables, and metric values.
+
+include::classes/dci.adoc[]
+include::classes/table.adoc[]
+include::classes/tablerow.adoc[]
+include::classes/tablecolumn.adoc[]
+include::classes/datapoint.adoc[]
+include::classes/scoreddcivalue.adoc[]
+include::classes/linkdatasource.adoc[]
+
+=== Events and Alarms
+
+Classes for event processing and alarm management.
+
+include::classes/event.adoc[]
+include::classes/alarm.adoc[]
+include::classes/alarmcomment.adoc[]
+
+=== Infrastructure
+
+Classes representing organizational and infrastructure objects: containers, templates, clusters, and physical components.
+
+include::classes/container.adoc[]
+include::classes/template.adoc[]
+include::classes/cluster.adoc[]
+include::classes/chassis.adoc[]
+include::classes/collector.adoc[]
+include::classes/sensor.adoc[]
+include::classes/mobiledevice.adoc[]
+include::classes/asset.adoc[]
+include::classes/assetproperties.adoc[]
+include::classes/serviceroot.adoc[]
+include::classes/businessservice.adoc[]
+include::classes/businessservicecheck.adoc[]
+
+=== Users and Security
+
+Classes for user and group management.
+
+include::classes/userdbobject.adoc[]
+include::classes/user.adoc[]
+include::classes/usergroup.adoc[]
+include::classes/clientsession.adoc[]
+
+=== Networking Utilities
+
+Classes for network addresses, SNMP, and SSH operations.
+
+include::classes/inetaddress.adoc[]
+include::classes/macaddress.adoc[]
+include::classes/geolocation.adoc[]
+include::classes/snmptransport.adoc[]
+include::classes/snmpvarbind.adoc[]
+include::classes/sshsession.adoc[]
+include::classes/webservice.adoc[]
+include::classes/webserviceresponse.adoc[]
+
+=== Data Structures
+
+Classes for common data structures: JSON, files, byte streams, and ranges.
+
+include::classes/jsonobject.adoc[]
+include::classes/jsonarray.adoc[]
+include::classes/bytestream.adoc[]
+include::classes/file.adoc[]
+include::classes/datetime.adoc[]
+include::classes/range.adoc[]
+include::classes/class.adoc[]
+
+=== Hardware and Software
+
+Classes for hardware components, software packages, and system information.
+
+include::classes/hardwarecomponent.adoc[]
+include::classes/softwarepackage.adoc[]
+include::classes/component.adoc[]
+include::classes/deploymentpackage.adoc[]
+include::classes/radiointerface.adoc[]
+
+=== Discovery and Diagnostics
+
+Classes for network discovery and diagnostic information.
+
+include::classes/discoverednode.adoc[]
+include::classes/discoveredinterface.adoc[]
+include::classes/nodedependency.adoc[]
+include::classes/networkpathcheckresult.adoc[]
+include::classes/downtimeinfo.adoc[]
+include::classes/maintenancejournalrecord.adoc[]
+
+=== OSPF and Routing
+
+Classes for OSPF protocol information.
+
+include::classes/ospfarea.adoc[]
+include::classes/ospfneighbor.adoc[]
+
+=== LDAP Integration
+
+Classes for LDAP directory integration.
+
+include::classes/ldapobject.adoc[]

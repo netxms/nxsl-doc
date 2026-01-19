@@ -2,9 +2,13 @@
 [[class-circuit]]
 === Circuit
 
-Object represent containercircuit, extends <<class-datacollectiontarget>>.
+Object represents circuit. Extends <<class-datacollectiontarget>>.
 
 ==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
+
+include::_shared/datacollectiontarget-attrs.adoc[]
 
 `autoBindScript => String`::
 Source of the script for automatic binding

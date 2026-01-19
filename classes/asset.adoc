@@ -2,9 +2,11 @@
 [[class-asset]]
 === Asset
 
-Object represent asset, extends <<class-netobj>>
+Object represents asset. Extends <<class-netobj>>.
 
 ==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
 
 `lastUpdateTimestamp => Integer`::
 Unix timestamp of last update

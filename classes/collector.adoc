@@ -2,9 +2,11 @@
 [[class-collector]]
 === Collector
 
-Object represent collector, extends <<class-netobj>>.
+Object represents collector. Extends <<class-netobj>>.
 
 ==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
 
 `autoBindScript => String`::
 Source of the script for automatic binding.
@@ -16,6 +18,8 @@ Indicate if automatic binding is enabled.
 Indicate if automatic unbinding is enabled.
 
 ==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
 
 [[class-collector-createCollector,Collector::createCollector()]]
 `createCollector(name) => <<class-collector>>`::
