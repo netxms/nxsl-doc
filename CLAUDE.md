@@ -77,3 +77,22 @@ Description with parameters table and examples.
 - `lib/stats.rb` - Asciidoctor extension for analytics (CI only)
 - `netxms-theme.yml` - PDF styling configuration
 - `Gemfile` - Ruby dependencies (asciidoctor 2.0.26, asciidoctor-pdf 2.3.24, coderay 1.1.3)
+
+## NXSL Language Notes
+
+**Return value semantics**:
+- Expression without semicolon → implicitly returns the expression's value
+- Statement with semicolon but no `return` → returns `null`
+- Semicolons are NOT required in NXSL (contrary to C-like expectations)
+
+**Implicit main**: Code outside functions is wrapped into `$main()` (note the `$` prefix).
+
+**main() override behavior**: If both explicit `main()` and top-level code exist, the top-level code is silently discarded - only `main()` executes.
+
+**Function argument counts**:
+- `trace(level, message)` - exactly 2 args, use string concatenation: `trace(3, "msg " .. value)`
+- `println(...)` - variadic, accepts multiple args: `println("a", "b", "c")`
+
+## Documentation Patterns Notes
+
+**Custom anchors**: Add explicit `[[anchor-name]]` for sections that need cross-references. Don't rely on auto-generated anchors.
