@@ -75,8 +75,8 @@ horizontal_rhythm: $base_line_height_length
 vertical_spacing: $vertical_rhythm
 link:
   font_color: 428bca
-# literal is currently used for inline monospaced in prose and table cells
-literal:
+# codespan is used for inline monospaced in prose and table cells
+codespan:
   font_color: b12146
   font_family: M+ 1mn
 menu_caret_content: " <font size=\"1.15em\"><color rgb=\"b12146\">\u203a</color></font> "
@@ -156,19 +156,19 @@ admonition:
   label:
     text_transform: uppercase
     font_style: bold
-blockquote:
+quote:
   font_color: $base_font_color
   font_size: $base_font_size_large
   border_color: $base_border_color
   border_width: 5
   # FIXME disable negative padding bottom once margin collapsing is implemented
-  padding: [0, $horizontal_rhythm, $block_margin_bottom * -0.75, $horizontal_rhythm + $blockquote_border_width / 2]
+  padding: [0, $horizontal_rhythm, $block_margin_bottom * -0.75, $horizontal_rhythm + $quote_border_width / 2]
   cite_font_size: $base_font_size_small
   cite_font_color: 999999
 # code is used for source blocks (perhaps change to source or listing?)
 code:
   font_color: $base_font_color
-  font_family: $literal_font_family
+  font_family: $codespan_font_family
   font_size: ceil($base_font_size)
   padding: $code_font_size
   line_height: 1.25
@@ -180,7 +180,7 @@ code:
   border_width: 0.75
 conum:
   font_family: M+ 1mn
-  font_color: $literal_font_color
+  font_color: $codespan_font_color
   font_size: $base_font_size
   line_height: 4 / 3
 example:
@@ -215,13 +215,15 @@ thematic_break:
   margin_top: $vertical_rhythm * 0.5
   margin_bottom: $vertical_rhythm * 1.5
 description_list:
-  term_font_style: italic
-  term_spacing: $vertical_rhythm / 4
+  term_font_style: bold
+  term_font_family: $codespan_font_family
+  term_font_size: $base_font_size
+  term_spacing: $vertical_rhythm / 2
   description_indent: $horizontal_rhythm * 1.25
-outline_list:
+list:
   indent: $horizontal_rhythm * 1.5
   #marker_font_color: 404040
-  # NOTE outline_list_item_spacing applies to list items that do not have complex content
+  # NOTE list_item_spacing applies to list items that do not have complex content
   item_spacing: $vertical_rhythm / 2
 table:
   background_color: $page_background_color

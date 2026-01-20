@@ -10,14 +10,21 @@ include::_shared/netobj-attrs.adoc[]
 
 include::_shared/datacollectiontarget-attrs.adoc[]
 
-`autoBindScript => String`::
+[.attr-list]
+--
+[[circuit-autoBindScript]]
+autoBindScript => String::
 Source of the script for automatic binding
 
-`interfaces => Array`::
-Array with node’s <<class-discoveredinterface>>
+[[circuit-interfaces]]
+interfaces => Array::
+Array with node's <<class-discoveredinterface>>
 
-`isAutoBindEnabled => Boolean`::
-Indicate if automatic binding is enabled. 
+[[circuit-isAutoBindEnabled]]
+isAutoBindEnabled => Boolean::
+Indicate if automatic binding is enabled.
 
-`isAutoUnbindEnabled => Boolean`::
+[[circuit-isAutoUnbindEnabled]]
+isAutoUnbindEnabled => Boolean::
 Indicate if automatic unbinding is enabled.
+--

@@ -4,28 +4,35 @@
 
 Contains all information about web service custom request execution result
 
-
 ==== Instance attributes
 
-`agentErrorCode => Integer`::
+[.attr-list]
+--
+[[webserviceresponse-agentErrorCode]]
+agentErrorCode => Integer::
 Agent error code
 
-`body => String`::
+[[webserviceresponse-body]]
+body => String::
 Response body. Alias for `document`.
 
-`document => String`::
+[[webserviceresponse-document]]
+document => String::
 Document that was returned by web service as a response to the request
 
-`errorMessage => String`::
+[[webserviceresponse-errorMessage]]
+errorMessage => String::
 Human readable error message set by server or agent
 
-`httpResponseCode => Integer`::
+[[webserviceresponse-httpResponseCode]]
+httpResponseCode => Integer::
 HTTP response code
 
-`statusCode => Integer`::
+[[webserviceresponse-statusCode]]
+statusCode => Integer::
 HTTP response status code. Alias for `httpResponseCode`.
 
-`success => Boolean`::
+[[webserviceresponse-success]]
+success => Boolean::
 Will return `True` in case of success and `False` if there was problem on server or on agent
-
-
+--

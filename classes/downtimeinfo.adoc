@@ -4,18 +4,21 @@
 
 ==== Instance attributes
 
-`object => <<class-netobj>>`::
+[.attr-list]
+--
+[[downtimeinfo-object]]
+object => <<class-netobj>>::
 Object
-  
-`objectId => Integer`::
+
+[[downtimeinfo-objectId]]
+objectId => Integer::
 Object ID
 
-`totalDowntime => Integer`::
+[[downtimeinfo-totalDowntime]]
+totalDowntime => Integer::
 Downtime in seconds
 
-`uptimePercentage => Float`::
+[[downtimeinfo-uptimePercentage]]
+uptimePercentage => Float::
 Uptime percentage
-
-
-
-  
+--

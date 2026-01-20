@@ -6,134 +6,154 @@ Object that contains all information about network address
 
 ==== Instance attributes
 
-`address => String`::
+[.attr-list]
+--
+[[inetaddress-address]]
+address => String::
 IP address
 
-`family => String`::
+[[inetaddress-family]]
+family => String::
 Internet address, one of:
-
++
  * inet
  * inet6
  * unspec
 
-`isAnyLocal => Boolean`::
+[[inetaddress-isanylocal]]
+isAnyLocal => Boolean::
 `TRUE` if address is a wildcard address
 
-`isBroadcast => Boolean`::
+[[inetaddress-isbroadcast]]
+isBroadcast => Boolean::
 `TRUE` if address is a broadcast address
 
-`isLinkLocal => Boolean`::
+[[inetaddress-islinklocal]]
+isLinkLocal => Boolean::
 `TRUE` if address is a link local address
 
-`isLoopback => Boolean`::
+[[inetaddress-isloopback]]
+isLoopback => Boolean::
 `TRUE` if address is a loopback address
 
-`isMulticast => Boolean`::
+[[inetaddress-ismulticast]]
+isMulticast => Boolean::
 `TRUE` if address is a multicast address
 
-`isSubnetBase => Boolean`::
+[[inetaddress-issubnetbase]]
+isSubnetBase => Boolean::
 `TRUE` if address is a subnet base address
 
-`isSubnetBroadcast => Boolean`::
+[[inetaddress-issubnetbroadcast]]
+isSubnetBroadcast => Boolean::
 `TRUE` if address is a subnet broadcast address
 
-`isValid => Boolean`::
+[[inetaddress-isvalid]]
+isValid => Boolean::
 `TRUE` if address valid
 
-`isValidUnicast => Boolean`::
+[[inetaddress-isvalidunicast]]
+isValidUnicast => Boolean::
 `TRUE` if address valid unicast
 
-`mask => Integer`::
+[[inetaddress-mask]]
+mask => Integer::
 Address bit mask
 
-`subnet => InetAddress`::
+[[inetaddress-subnet]]
+subnet => InetAddress::
 Subnet base address
+--
 
 ==== Instance methods
 
-[[class-inetaddress-contains,InetAddress::contains()]]
-`contains(address) => void`::
+[.method-list]
+--
+[[inetaddress-contains]]
+contains(address) => void::
 If subnet contains internet address
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |address|<<class-inetaddress>>|Address to check for
 |===
-
-.Return 
++
+.Return
 `TRUE` if contains, otherwise `FALSE`
-
++
 [.source]
 ....
 r = InetAddress("192.168.56.0", 24).contains($node.ipAddress);
 println(r); // will print "true", if primary IP address of node is in that subnet
 ....
 
-`equals(address) => void`::
+[[inetaddress-equals]]
+equals(address) => void::
 If addresses are equal
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |address|<<class-inetaddress>>|Address to check to
 |===
-
-.Return 
++
+.Return
 `TRUE` if addresses are equal, otherwise `FALSE`
 
-[[class-inetaddress-inrange,InetAddress::inRange()]]
-`inRange(addressStart, addressEnd) => void`::
+[[inetaddress-inrange]]
+inRange(addressStart, addressEnd) => void::
 If address is in range
-
++
 [.source]
 ....
 r = $node.ipAddress.inRange(InetAddress("192.168.56.10"), InetAddress("192.168.56.20"));
 println(r); // will print "true", if primary IP address of node is in range
 ....
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |addressStart|<<class-inetaddress>>|Start of the range address
 |addressEnd|<<class-inetaddress>>|End of the range address
 |===
-
-.Return 
++
+.Return
 `TRUE` if adresse is in range, otherwise `FALSE`
 
-[[class-inetaddress-samesubnet,InetAddress::sameSubnet()]]
-`sameSubnet(address) => void`::
-If adresses are in the same subnet (using mask bits from this InetAddress) 
-
+[[inetaddress-samesubnet]]
+sameSubnet(address) => void::
+If adresses are in the same subnet (using mask bits from this InetAddress)
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |address|<<class-inetaddress>>|IP address
 |===
-
-.Return 
++
+.Return
 `TRUE` if adresses are in the same subnet, otherwise `FALSE`
+--
 
 ==== Constructors
 
 `InetAddress()`::
 Constructor for internet address
-
++
 .Return
-
-InetAddress object 
++
+InetAddress object
 
 `InetAddress(address, mask)`::
 Constructor for internet address
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |address|String|IP address as a string
 |mask|integer|mask in CIDR notation (optional parameter)
 |===
-
++
 .Return
-
-InetAddress object 
++
+InetAddress object

@@ -10,26 +10,36 @@ include::_shared/netobj-attrs.adoc[]
 
 include::_shared/datacollectiontarget-attrs.adoc[]
 
-`controller => <<class-node>>`::
+[.attr-list]
+--
+[[chassis-controller]]
+controller => <<class-node>>::
 Chassis controller node
 
-`controllerId => Integer`::
+[[chassis-controllerId]]
+controllerId => Integer::
 Chassis controller's node id
 
-`flags => Integer`::
-<<chassis-flags,Bit flags>> 
+[[chassis-flagsAttr]]
+flags => Integer::
+<<chassis-flags,Bit flags>>
 
-`rack => <<class-netobj>>`::
+[[chassis-rack]]
+rack => <<class-netobj>>::
 Will return Rack object as <<class-netobj>> if chassis is added in rack
 
-`rackId => Integer`::
+[[chassis-rackId]]
+rackId => Integer::
 Will return Rack id if chassis is added in rack
 
-`rackHeight => Integer`::
-Object height in rack 
+[[chassis-rackHeight]]
+rackHeight => Integer::
+Object height in rack
 
-`rackPosition => Integer`::
-Object position in rack 
+[[chassis-rackPosition]]
+rackPosition => Integer::
+Object position in rack
+--
 
 ==== Constants
 
@@ -39,6 +49,6 @@ Object position in rack
 |===
 | Description | Value
 
-|Bind under controller  
+|Bind under controller
 |0x00000001
 |===

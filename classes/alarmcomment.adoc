@@ -6,17 +6,25 @@ Represents NetXMS alarm comment.
 
 ==== Instance attributes
 
-`id => Integer`::
+[.attr-list]
+--
+[[alarmcomment-id]]
+id => Integer::
 Alarm comment ID.
 
-`changeTime => Integer`::
+[[alarmcomment-changeTime]]
+changeTime => Integer::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the alarm comment last modification time.
 
-`userId => Integer`::
+[[alarmcomment-userId]]
+userId => Integer::
 ID of user who last modified this alarm comment.
 
-`user => <<class-userdbobject>>`::
+[[alarmcomment-user]]
+user => <<class-userdbobject>>::
 User who last modified this alarm comment (class <<class-userdbobject>>).
 
-`text => String`::
+[[alarmcomment-text]]
+text => String::
 Alarm comment text.
+--

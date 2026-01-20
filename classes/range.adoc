@@ -2,20 +2,26 @@
 [[class-range]]
 === Range
 
-Class representing a range that has start and end indexes and step size. 
+Class representing a range that has start and end indexes and step size.
 
 All instance attributes are read-only.
 
 ==== Instance attributes
 
-`start => Number`::
+[.attr-list]
+--
+[[range-start]]
+start => Number::
 Range start (inclusive).
 
-`end => Number`::
+[[range-end]]
+end => Number::
 Range end (exclusive).
 
-`step => Number`::
+[[range-step]]
+step => Number::
 Step size.
+--
 
 ==== Constructors
 

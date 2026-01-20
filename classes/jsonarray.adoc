@@ -9,38 +9,48 @@ To parse string into JsonObject use <<func-jsonparse>>.
 
 ==== Instance attributes
 
-`size => Integer`::
+[.attr-list]
+--
+[[jsonarray-size]]
+size => Integer::
 Number of elements in array
 
-`values => Array`::
+[[jsonarray-values]]
+values => Array::
 NXSL array with JSON array elements
+--
 
 ==== Instance methods
 
-`append(value) => void`::
+[.method-list]
+--
+[[jsonarray-append]]
+append(value) => void::
 Appends value to JSON array.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|value|?|Add value to JSON array. Value type may vary. 
+|value|?|Add value to JSON array. Value type may vary.
 |===
 
-`get(index) => ?`::
+[[jsonarray-get]]
+get(index) => ?::
 Returns array value by the index. Value type depends on the type used in JSON.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |index|Integer|Index of element in array
 |===
-
-.Return 
++
+.Return
 Attribute value
 
-`insert(index, value) => void`::
+[[jsonarray-insert]]
+insert(index, value) => void::
 Sets value to the provided index in JSON array, moving existing element in this position
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -48,41 +58,43 @@ Sets value to the provided index in JSON array, moving existing element in this 
 |value|?|Add value to JSON array. Value type may vary.
 |===
 
-`serialize() => String`::
+[[jsonarray-serialize]]
+serialize() => String::
 Returns string with serialized JSON
-
-.Return 
++
+.Return
 String with serialized JSON
 
-`set(index, value) => void`::
+[[jsonarray-set]]
+set(index, value) => void::
 Sets value to the provided index in JSON array, in place of existing element in this position
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |index|Integer|Index of element in array
 |value|?|Add value to JSON array. Value type may vary.
 |===
+--
 
 ==== Constructors
 
 `JsonArray()`::
 Creates new JSON array.
-
++
 .Return
-
-JsonArray object 
++
+JsonArray object
 
 `JsonArray(array)`::
 Creates new JSON array object from NXSL array. *Added in version 5.3*
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |array|array|NXSL array
 |===
-
++
 .Return
-
++
 JsonArray object
-

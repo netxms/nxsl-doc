@@ -6,33 +6,45 @@ Represents software package installed on <<class-node>> object.
 
 ==== Instance attributes
 
-`changeCode => Integer`::
+[.attr-list]
+--
+[[softwarepackage-changeCode]]
+changeCode => Integer::
 Change code one of next:
-
++
 * CHANGE_NONE: 0
 * CHANGE_ADDED: 1
 * CHANGE_UPDATED: 2
 
-`date => String`::
-Change date in YYYYMMDD format 
+[[softwarepackage-date]]
+date => String::
+Change date in YYYYMMDD format
 
-`description => String`::
+[[softwarepackage-description]]
+description => String::
 PAckage description
 
-`name => String`::
+[[softwarepackage-name]]
+name => String::
 Package name
 
-`timestamp => Integer`::
+[[softwarepackage-timestamp]]
+timestamp => Integer::
 Package change date as UNIX timestamp
 
-`uninstallKey => String`::
+[[softwarepackage-uninstallKey]]
+uninstallKey => String::
 Get product uninstall key if available.
 
-`url => String`::
+[[softwarepackage-url]]
+url => String::
 PAckage URL
 
-`vendor => String`::
+[[softwarepackage-vendor]]
+vendor => String::
 PAckage vendor
 
-`version => String`::
+[[softwarepackage-version]]
+version => String::
 Package version
+--

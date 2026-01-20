@@ -6,23 +6,32 @@ Detailed information about dependent nodes, usually accessible via instance attr
 
 ==== Instance attributes
 
-`id => Integer`::
+[.attr-list]
+--
+[[nodedependency-id]]
+id => Integer::
 Node id
 
-`isAgentProxy => Boolean`::
+[[nodedependency-isAgentProxy]]
+isAgentProxy => Boolean::
 Node is an agent proxy. Helper function for accesing specific bit of `type` field.
 
-`isDataCollectionSource => Boolean`::
+[[nodedependency-isDataCollectionSource]]
+isDataCollectionSource => Boolean::
 Node is a data collection source for another node. Helper function for accesing specific bit of `type` field.
 
-`isICMPProxy => Boolean`::
+[[nodedependency-isICMPProxy]]
+isICMPProxy => Boolean::
 Node is an ICMP proxy for another node. Helper function for accesing specific bit of `type` field.
 
-`isSNMPProxy => Boolean`::
+[[nodedependency-isSNMPProxy]]
+isSNMPProxy => Boolean::
 Node is a SNMP proxy for another node. Helper function for accesing specific bit of `type` field.
 
-`type => Integer`::
+[[nodedependency-type]]
+type => Integer::
 Type of of the dependencty this object represent. This field is a bitmask, flags are documented at <<enum-dependency-type>>.
+--
 
 ==== Constants
 
@@ -33,15 +42,15 @@ Type of of the dependencty this object represent. This field is a bitmask, flags
 | Value | Description
 
 |0x01
-|Agent proxy  
+|Agent proxy
 
 |0x02
-|SNMP proxy   
+|SNMP proxy
 
 |0x04
-|ICMP proxy   
+|ICMP proxy
 
 |0x08
-|Data collection source   
+|Data collection source
 
 |===

@@ -6,17 +6,24 @@ Class represent classes and methodes in NXSL script
 
 ==== Instance attributes
 
-`attributes => Array`::
+[.attr-list]
+--
+[[class-attributes]]
+attributes => Array::
 String aray with all attribute names
 
-`hierarchy => Array`::
-String aray with class inheritance hirarchy 
+[[class-hierarchy]]
+hierarchy => Array::
+String aray with class inheritance hirarchy
 
-`methods => Array`::
+[[class-methods]]
+methods => Array::
 String aray with all method names
 
-`name => Integer`::
+[[class-name]]
+name => Integer::
 Name of the class
+--
 
 [.source]
 ....

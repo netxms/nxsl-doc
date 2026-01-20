@@ -6,26 +6,37 @@ Represents an interactive SSH session to a remote node for executing commands an
 
 ==== Instance attributes
 
-`connected => Boolean`::
+[.attr-list]
+--
+[[sshsession-connected]]
+connected => Boolean::
 Returns TRUE if the SSH channel is connected.
 
-`lastError => Integer`::
+[[sshsession-lastError]]
+lastError => Integer::
 Error code from the last operation (0 if connected and no error).
 
-`lastErrorMessage => String`::
+[[sshsession-lastErrorMessage]]
+lastErrorMessage => String::
 Text description of the last error.
 
-`nodeId => Integer`::
+[[sshsession-nodeId]]
+nodeId => Integer::
 ID of the node this session is connected to.
 
-`privileged => Boolean`::
+[[sshsession-privileged]]
+privileged => Boolean::
 Returns TRUE if the session has escalated privileges.
+--
 
 ==== Instance methods
 
-`close() => void`::
+[.method-list]
+--
+[[sshsession-close]]
+close() => void::
 Close the SSH session.
-
++
 [.source]
 ....
 session = $node->openSSHSession();
@@ -35,19 +46,19 @@ if (session->connected) {
 }
 ....
 
-
-`escalatePrivilege(password) => Boolean`::
+[[sshsession-escalatePrivilege]]
+escalatePrivilege(password) => Boolean::
 Escalate to privileged user.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |password|String|Password for privilege escalation
 |===
-
++
 .Return
 TRUE if successful, FALSE otherwise.
-
++
 [.source]
 ....
 session = $node->openSSHSession();
@@ -58,20 +69,20 @@ if (session->connected) {
 }
 ....
 
-
-`execute(command, timeout) => Array`::
+[[sshsession-execute]]
+execute(command, timeout) => Array::
 Execute a command on the remote host.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |command|String|Command to execute
 |timeout|Integer|Optional timeout in milliseconds
 |===
-
++
 .Return
 Array of strings (command output lines) or NULL if not connected.
-
++
 [.source]
 ....
 session = $node->openSSHSession();
@@ -83,4 +94,4 @@ if (session->connected) {
     session->close();
 }
 ....
-
+--

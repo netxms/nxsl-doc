@@ -6,11 +6,17 @@ Represents VLAN object.
 
 ==== Instance attributes
 
-`id => Integer`::
+[.attr-list]
+--
+[[vlan-id]]
+id => Integer::
 VLAN id.
 
-`name => String`::
+[[vlan-name]]
+name => String::
 VLAN name.
 
-`interfaces => Array`::
+[[vlan-interfaces]]
+interfaces => Array::
 Interfaces in that VLAN (array of objects of class <<class-interface>>).
+--

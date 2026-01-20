@@ -6,33 +6,45 @@ Represents table object (usually it's value of table DCI).
 
 ==== Instance attributes
 
-`columnCount => Integer`::
+[.attr-list]
+--
+[[table-columnCount]]
+columnCount => Integer::
 Number of columns.
 
-`columns => Array<TableColumn>`::
+[[table-columns]]
+columns => Array<TableColumn>::
 Array of <<class-tablecolumn,column definitions>>.
 
-`instanceColumns => Array<TableColumn>`::
-Array of <<class-tablecolumn,column definitions>> including only columns marked as instance columns. 
+[[table-instanceColumns]]
+instanceColumns => Array<TableColumn>::
+Array of <<class-tablecolumn,column definitions>> including only columns marked as instance columns.
 
-`instanceColumnIndexes => Array<Integer>`::
-Array with indexes of columns marked as instance columns. 
+[[table-instanceColumnIndexes]]
+instanceColumnIndexes => Array<Integer>::
+Array with indexes of columns marked as instance columns.
 
-`rowCount => Integer`::
+[[table-rowCount]]
+rowCount => Integer::
 Number of rows.
 
-`rows => Array<TableRow>`::
+[[table-rows]]
+rows => Array<TableRow>::
 Array of rows with data.
 
-`title => String`::
+[[table-title]]
+title => String::
 Title of table.
+--
 
 ==== Instance methods
 
-`addColumn(name, [type], [displayName], [isInstance]) => Integer`::
-
+[.method-list]
+--
+[[table-addColumn]]
+addColumn(name, [type], [displayName], [isInstance]) => Integer::
 Adds column to table
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -41,119 +53,113 @@ Adds column to table
 |displayName|String|Column display name
 |isInstance|Boolean|`True` if column is instance column
 |===
-
-.Return 
-
++
+.Return
 Column index
 
-`addRow() => Integer`::
-
+[[table-addRow]]
+addRow() => Integer::
 Adds row to table
-
-.Return 
-
++
+.Return
 Row index
 
-`deleteColumn(columnId) => void`::
-
+[[table-deleteColumn]]
+deleteColumn(columnId) => void::
 Delete column
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |columnId|Integer|Column index
 |===
 
-`deleteRow(rowId) => void`::
-
+[[table-deleteRow]]
+deleteRow(rowId) => void::
 Delete row
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |rowId|Integer|Row index
 |===
 
-`findRowByInstance(instance, instance2, ...) => <<class-tablerow>>`::
-
+[[table-findRowByInstance]]
+findRowByInstance(instance, instance2, ...) => <<class-tablerow>>::
 Finds row by instance
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |instance|String|Instance string
-|instance2|String|Optional. If instance is composed of several columns, these can be supplied as additional parameters. 
+|instance2|String|Optional. If instance is composed of several columns, these can be supplied as additional parameters.
 |===
-
-.Return 
++
+.Return
 <<class-tablerow, Table row>> that corresponds to provided instance
 
-`findRowIndexByInstance(instance, instance2, ...) => Integer`::
-
+[[table-findRowIndexByInstance]]
+findRowIndexByInstance(instance, instance2, ...) => Integer::
 Finds row index by instance
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |instance|String|Instance string
-|instance2|String|Optional. If instance is composed of several columns, these can be supplied as additional parameters. 
+|instance2|String|Optional. If instance is composed of several columns, these can be supplied as additional parameters.
 |===
-
-.Return 
++
+.Return
 Table row index corresponds to provided instance
 
-`get(rowId, columnId) => String`::
-
+[[table-get]]
+get(rowId, columnId) => String::
 Get cell value by row and column id
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |rowId|Integer|Row index
 |columnId|Integer|Column index
 |===
-
-.Return 
-
++
+.Return
 Cell value as string
 
-`getColumnIndex(columnName) => Integer`::
-
+[[table-getColumnIndex]]
+getColumnIndex(columnName) => Integer::
 Get column index by column name
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|columnName|String|Column name 
+|columnName|String|Column name
 |===
-
-.Return 
-
++
+.Return
 Column index or -1 if column not found
 
-`getColumnName(columnId) => String`::
-
+[[table-getColumnName]]
+getColumnName(columnId) => String::
 Get column name by column index
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|columnName|Integer|Column name 
+|columnName|Integer|Column name
 |===
-
-.Return 
-
++
+.Return
 Column name or empty string if no column with given index
 
-`print() => void`::
-
+[[table-print]]
+print() => void::
 Prints formatted table with header and contents
 
-
-`set(rowId, columnId, value) => void`::
-
+[[table-set]]
+set(rowId, columnId, value) => void::
 Set column value by row and column index
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -161,16 +167,14 @@ Set column value by row and column index
 |columnId|Integer|Column index
 |value|String|New value
 |===
++
+.Return
+Column index
 
-.Return 
-
-Column index 
-
-
-`trace(tag, level, prefix, headers, delimiter) => void`::
-
+[[table-trace]]
+trace(tag, level, prefix, headers, delimiter) => void::
 Dump formatted table to log
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -180,8 +184,7 @@ Dump formatted table to log
 |headers|Bolean|Optional target header, default 'true'
 |delimiter|String|Optional record separator, default ','
 |===
-
-
+--
 
 ==== Constructors
 

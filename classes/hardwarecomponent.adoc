@@ -6,14 +6,18 @@ Object that contains all information about node hardware component.
 
 ==== Instance Attributes
 
-`capacity => Integer`::
+[.attr-list]
+--
+[[hardwarecomponent-capacity]]
+capacity => Integer::
 Component capacity depending on the type.
 
-`category => Integer`::
+[[hardwarecomponent-category]]
+category => Integer::
 Code of the component category.
-
++
 Possible values are:
-
++
 [cols="1,1" grid="none", frame="none"]
 |===
 |Constant                                   |Value
@@ -27,35 +31,46 @@ Possible values are:
 |HardwareComponentCategory::NETWORK_ADAPTER |6
 |===
 
-`categoryName => String`::
+[[hardwarecomponent-categoryname]]
+categoryName => String::
 Component category name
 
-`changeCode => Integer`::
-Code of the changes that happened to the component during the last 
+[[hardwarecomponent-changecode]]
+changeCode => Integer::
+Code of the changes that happened to the component during the last
 configuration poll.
-
++
 Possible values are listed here: <<const-changecode>>
 
-`description => String`::
+[[hardwarecomponent-description]]
+description => String::
 Component description.
 
-`index => Integer`::
+[[hardwarecomponent-index]]
+index => Integer::
 Index of the component.
 
-`location => String`::
+[[hardwarecomponent-location]]
+location => String::
 Component installation location in the system.
 
-`model => String`::
+[[hardwarecomponent-model]]
+model => String::
 Component model.
 
-`partNumber => String`::
+[[hardwarecomponent-partnumber]]
+partNumber => String::
 Component part number.
 
-`serialNumber => String`::
+[[hardwarecomponent-serialnumber]]
+serialNumber => String::
 Component serial number.
 
-`type => String`::
+[[hardwarecomponent-type]]
+type => String::
 Component type depending on the category.
 
-`vendor => String`::
+[[hardwarecomponent-vendor]]
+vendor => String::
 Component vendor.
+--

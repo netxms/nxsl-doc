@@ -6,45 +6,55 @@ Object represents template. Extends <<class-netobj>>.
 
 ==== Instance attributes
 
+[.attr-list]
+--
 include::_shared/netobj-attrs.adoc[]
 
-`autoApplyScript => String`::
+[[template-autoApplyScript]]
+autoApplyScript => String::
 Source of the script for automatic binding.
 
-`isAutoApplyEnabled => Boolean`::
+[[template-isAutoApplyEnabled]]
+isAutoApplyEnabled => Boolean::
 Indicate if automatic binding is enabled.
 
-`isAutoRemoveEnabled => Boolean`::
+[[template-isAutoRemoveEnabled]]
+isAutoRemoveEnabled => Boolean::
 Indicate if automatic unbinding is enabled.
 
-`version => Integer`::
+[[template-version]]
+version => Integer::
 Template version
+--
 
 ==== Instance methods
 
-`applyTo(object) => void`::
+[.method-list]
+--
+[[template-applyTo]]
+applyTo(object) => void::
 Apply teplate on object
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|Object|Object this template to be applied on
 |===
 
-
-`removeFrom(object) => void`::
+[[template-removeFrom]]
+removeFrom(object) => void::
 emplate form object
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|Object|Object this template to be removed form
 |===
 
-
-`setAutoApplyMode(enableBind, enableUnbind) => void`::
+[[template-setAutoApplyMode]]
+setAutoApplyMode(enableBind, enableUnbind) => void::
 Set automatic bind mode for the container.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -52,12 +62,13 @@ Set automatic bind mode for the container.
 |enableUnbind|Boolean|Script should be used for automatic unbinding.
 |===
 
-
-`setAutoApplyScript(script) => void`::
+[[template-setAutoApplyScript]]
+setAutoApplyScript(script) => void::
 Update automatic binding script source.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |script|String|Script content.
 |===
+--

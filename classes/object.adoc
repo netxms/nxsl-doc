@@ -2,41 +2,45 @@
 [[class-object]]
 === Object
 
-Class Object is the root of the class hierarchy. Every class has Object as a superclass. 
+Class Object is the root of the class hierarchy. Every class has Object as a superclass.
 
 ==== Instance attributes
 
-`__class => Class`::
+[.attr-list]
+--
+[[object-__class]]
+__class => Class::
 Object of <<class-class>> class
+--
 
 ==== Instance methods
 
-`__get(name) => Value`::
+[.method-list]
+--
+[[object-__get]]
+__get(name) => Value::
 Get any attribute value by it's name
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Name of the attribute
 |===
-
++
 .Return
-
 Attribute value
 
-
-`__invoke(name, ...) => Value`::
+[[object-__invoke]]
+__invoke(name, ...) => Value::
 Execute any method, by it's name
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Name of the method
 |...|Value|Any values that are required for method execution
 |===
-
++
 .Return
-
 Method return value if method returns something
-
-
+--

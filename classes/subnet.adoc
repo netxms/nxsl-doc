@@ -6,17 +6,23 @@ Object represents subnet. Extends <<class-netobj>>.
 
 ==== Instance attributes
 
+[.attr-list]
+--
 include::_shared/netobj-attrs.adoc[]
 
-`ipNetMask => Integer`::
+[[subnet-ipNetMask]]
+ipNetMask => Integer::
 Subnet mask
 
-`isSyntheticMask => Boolean`::
-`TRUE` is mask is synthetic 
+[[subnet-isSyntheticMask]]
+isSyntheticMask => Boolean::
+`TRUE` is mask is synthetic
 
-`zone => <<class-zone>>`::
+[[subnet-zone]]
+zone => <<class-zone>>::
 <<class-zone>> object (`null` if zoning is disabled)
 
-`zoneUIN => Integer`::
+[[subnet-zoneUIN]]
+zoneUIN => Integer::
 This subnet zone UIN
-
+--

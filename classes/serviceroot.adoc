@@ -6,39 +6,38 @@ Class represents Service Root container
 
 ==== Instance methods
 
-[[class-serviceRoot-createCollector,ServiceRoot::createCollector()]]
-`createCollector(name) => <<class-collector>>`::
+[.method-list]
+--
+[[serviceroot-createCollector]]
+createCollector(name) => <<class-collector>>::
 Create new collector under current object
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|New collector's name
 |===
-
++
 .Return
-
 Newly created collector of <<class-collector>> class.
 
-[[class-serviceRoot-createContainer,ServiceRoot::createContainer()]]
-`createContainer(name) => <<class-container>>`::
+[[serviceroot-createContainer]]
+createContainer(name) => <<class-container>>::
 Create new container under current object
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|New container's name
 |===
-
++
 .Return
-
 Newly created container of <<class-container>> class.
 
-
-[[class-serviceRoot-createNode,ServiceRoot::createNode()]]
-`createNode(name, primaryHostName, zoneUIN) => <<class-node>>`::
+[[serviceroot-createNode]]
+createNode(name, primaryHostName, zoneUIN) => <<class-node>>::
 Create new node under current object.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -46,15 +45,14 @@ Create new node under current object.
 |primaryHostName|String|Optional. Primary host name or IP address.
 |zoneUIN|Integer|Optional. New node's zone UIN.
 |===
-
++
 .Return
-
 Newly created node of <<class-node>> class or NULL if failed to create
 
-[[class-serviceroot-createSensor,ServiceRoot::createSensor()]]
-`createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>`::
+[[serviceroot-createSensor]]
+createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>::
 Create new sensor under current object.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -63,7 +61,7 @@ Create new sensor under current object.
 |gateway|<<class-netobj>>|Gateway used for communication sensor. Optional.
 |modbusUnitId|Integer|MODBUS Unit ID. Optional.
 |===
-
++
 .Return
-
 Newly created sensor of <<class-sensor>> class or NULL if failed to create
+--

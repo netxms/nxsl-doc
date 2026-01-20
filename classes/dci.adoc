@@ -6,99 +6,132 @@ Represents Data Collection Item (DCI).
 
 ==== Instance attributes
 
-`activeThresholdSeverity => Integer`::
+[.attr-list]
+--
+[[dci-activeThresholdSeverity]]
+activeThresholdSeverity => Integer::
 Severity of the active threshold. If there are no active thresholds, defaults to `0` (NORMAL).
 
-`comments => String`::
+[[dci-comments]]
+comments => String::
 DCI Comments
 
-`dataType => Integer`::
+[[dci-dataType]]
+dataType => Integer::
 <<const-dci-datatype,Data type>> of the DCI.
 
-`description => String`::
+[[dci-description]]
+description => String::
 Description
 
-`errorCount => Integer`::
+[[dci-errorCount]]
+errorCount => Integer::
 Number of consecutive data collection errors
 
-`flags => Integer`::
+[[dci-flags]]
+flags => Integer::
 DCI flags
 
-`hasActiveThreshold => Boolean`::
+[[dci-hasActiveThreshold]]
+hasActiveThreshold => Boolean::
 `TRUE` if DCI has active threshold
 
-`id => Integer`::
+[[dci-id]]
+id => Integer::
 Unique DCI identifier
 
-`instance => String`::
+[[dci-instance]]
+instance => String::
 DCI instance (only for single value DCIs): %{instance}
 
-`instanceName => String`::
+[[dci-instanceName]]
+instanceName => String::
 DCI instance name (only for single value DCIs): %{instance-name}
 
-`lastPollTime => Integer64`::
+[[dci-lastPollTime]]
+lastPollTime => Integer64::
 Time of last DCI poll (either successful or not) as number of seconds since epoch (1 Jan 1970 00:00:00 UTC)
 
-`lastCollectionTime => Integer64`::
+[[dci-lastCollectionTime]]
+lastCollectionTime => Integer64::
 Time of last successful DCI poll as number of seconds since epoch (1 Jan 1970 00:00:00 UTC). *Added in version 4.0*
 
-`name => String`::
+[[dci-name]]
+name => String::
 Parameter's name
 
-`origin => Integer`::
+[[dci-origin]]
+origin => Integer::
 <<const-dci-origin,Data origin>> of the DCI.
 
-`pollingInterval => Integer`::
+[[dci-pollingInterval]]
+pollingInterval => Integer::
 Current polling interval
 
-`pollingSchedules => Array`::
+[[dci-pollingSchedules]]
+pollingSchedules => Array::
 Array of custom schedules in cron format
 
-`pollingScheduleType => Integer`::
+[[dci-pollingScheduleType]]
+pollingScheduleType => Integer::
 Collection schedule:
   * 0 = Server default interval
   * 1 = Custom interval
   * 2 = Advanced schedule
 
-`relatedObject => <<class-netobj>>`::
+[[dci-relatedObject]]
+relatedObject => <<class-netobj>>::
 Related object or null if there is no object
 
-`status => Integer`::
+[[dci-status]]
+status => Integer::
 <<const-dci-states,Data status>> of the DCI.
 
-`systemTag => String`::
+[[dci-systemTag]]
+systemTag => String::
 System tag. Contains information about DCI Interpretation.
 
-`template => <<class-template>>`::
+[[dci-template]]
+template => <<class-template>>::
 <<class-template,Template object>> if DCI came from Template or `NULL`.
 
-`templateId => Integer`::
+[[dci-templateId]]
+templateId => Integer::
 Template id if DCI came from Template or 0.
 
-`templateItemId => Integer`::
+[[dci-templateItemId]]
+templateItemId => Integer::
 DCI item id in template if DCI came from Template or 0.
 
-`thresholdDisableEndTime => Integer`::
+[[dci-thresholdDisableEndTime]]
+thresholdDisableEndTime => Integer::
 UNIX time (number of seconds since epoch) till which threshold processing for
 this DCI is disabled. -1 if threshold processing is disabled infinitely. 0 if
-threshold processing is enabled. 
+threshold processing is enabled.
 
-`transformedDataType => Integer`::
+[[dci-transformedDataType]]
+transformedDataType => Integer::
 Tranformed data link:https://netxms.org/documentation/nxsl-latest/#const-dci-datatypetype[type].
 
-`type => Integer`::
+[[dci-type]]
+type => Integer::
 DCI type:
   * 1 = single value
   * 2 = table
 
-`userTag => String`::
+[[dci-userTag]]
+userTag => String::
 User tag. *This attribute was added in version 5.2*
-
+--
 
 ==== Instance methods
 
-`forcePoll() => void`::
+[.method-list]
+--
+[[dci-forcePoll]]
+forcePoll() => void::
 Start DCI force poll.
+--
 
 .See also
-<<func-finddcibyname>>, <<func-finddcibydescription>>, <<func-findalldcis>>, <<func-getdcivalue>>, <<func-getdciobject>>, <<func-createdci>>, <<class-table>>, <<class-datapoint>> 
+<<func-finddcibyname>>, <<func-finddcibydescription>>, <<func-findalldcis>>, <<func-getdcivalue>>, <<func-getdciobject>>, <<func-createdci>>, <<class-table>>, <<class-datapoint>>

@@ -6,9 +6,13 @@ Represents a single data point containing a timestamp and value pair. DataPoint 
 
 ==== Instance attributes
 
-`timestamp => Integer`::
+[.attr-list]
+--
+[[datapoint-timestamp]]
+timestamp => Integer::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the data point.
 
-`value => String`::
+[[datapoint-value]]
+value => String::
 The value associated with the timestamp.
-
+--

@@ -7,7 +7,7 @@
 ====
 *Deprecated in 5.0.*
 
-Replaced with method <<class-string-indexOf,indexOf()>> of the string instance.
+Replaced with method <<string-indexOf,indexOf()>> of the string instance.
 ====
 ****
 

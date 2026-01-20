@@ -10,7 +10,7 @@ This function is enabled by default, but can be disabled by setting configuratio
 ====
 *Deprecated in 5.0.*
 
-Please use ``createNode()`` of <<class-container-createNode,Container>>, <<class-collector-createNode,Collector>> or <<class-serviceRoot-createNode,ServiceRoot>> class instead.
+Please use ``createNode()`` of <<container-createNode,Container>>, <<collector-createNode,Collector>> or <<serviceroot-createNode,ServiceRoot>> class instead.
 ====
 ****
 

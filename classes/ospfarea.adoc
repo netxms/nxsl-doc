@@ -2,18 +2,25 @@
 [[class-ospfarea]]
 === OSPFArea
 
-OSPF area 
+OSPF area
 
 ==== Instance attributes
 
-`areaBorderRouterCount => Integer`::
+[.attr-list]
+--
+[[ospfarea-areaBorderRouterCount]]
+areaBorderRouterCount => Integer::
 Area border router count
 
-`asBorderRouterCount => Integer`::
+[[ospfarea-asBorderRouterCount]]
+asBorderRouterCount => Integer::
 Autonomous system border router count
 
-`id => String`::
+[[ospfarea-id]]
+id => String::
 Area ID
 
-`lsaCount => Integer`::
+[[ospfarea-lsaCount]]
+lsaCount => Integer::
 Link state advertisement count
+--

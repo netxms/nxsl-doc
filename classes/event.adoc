@@ -6,39 +6,52 @@ Represents NetXMS event object.
 
 ==== Instance attributes
 
-`code => Integer`::
+[.attr-list]
+--
+[[event-code]]
+code => Integer::
 Event code
 
-`customMessage => String`::
-Custom message set in event processing policy by calling `setMessage`. Deprecated and will be removed in a future version. 
+[[event-customMessage]]
+customMessage => String::
+Custom message set in event processing policy by calling `setMessage`. Deprecated and will be removed in a future version.
 
-`dci => DCI`::
+[[event-dci]]
+dci => DCI::
 DCI object of class <<class-dci>> that is source for this event or NULL if generated not by threshold
 
-`dciId => Integer`::
+[[event-dciId]]
+dciId => Integer::
 DCI id that is source for this event or 0 if generated not by threshold
 
-`id => Integer`::
+[[event-id]]
+id => Integer::
 Unique event identifier.
 
-`lastAlarmId => Integer`::
+[[event-lastAlarmId]]
+lastAlarmId => Integer::
 ID of the last alarm associated with this event, or 0 if none.
 
-`lastAlarmKey => String`::
+[[event-lastAlarmKey]]
+lastAlarmKey => String::
 Key for last generated alarm for this event or null
 
-`lastAlarmMessage => String`::
+[[event-lastAlarmMessage]]
+lastAlarmMessage => String::
 Message of the last alarm associated with this event, or null if none.
 
-`message => String`::
+[[event-message]]
+message => String::
 Event message. Get/set attribute.
 
-`name => String`::
+[[event-name]]
+name => String::
 Event name.
 
-`origin => Integer`::
+[[event-origin]]
+origin => Integer::
 Origin of the event
-
++
 * 0 - SYSTEM
 * 1 - AGENT
 * 2 - CLIENT
@@ -47,48 +60,63 @@ Origin of the event
 * 5 - NXSL
 * 6 - REMOTE_SERVER
 
-`originTimestamp => Integer`::
+[[event-originTimestamp]]
+originTimestamp => Integer::
 The time when the event was generated in the origin.
 
-`parameters => Array`::
+[[event-parameters]]
+parameters => Array::
 List of event parameters. Starting index is 1.
 
-`parameterNames => Array`::
+[[event-parameterNames]]
+parameterNames => Array::
 List of named event parameters (e.g. "dciId"), which can be accessed by `+object.parameterName+`.
 
-`rootId => Integer64`::
+[[event-rootId]]
+rootId => Integer64::
 Id of event that is root cause of this event or 0 if there is no such event.
 
-`severity => Integer`::
+[[event-severity]]
+severity => Integer::
 Event severity code. Get/set attribute.
 
-`source => NetObj`::
+[[event-source]]
+source => NetObj::
 Source object (inherited from <<class-netobj>>, exact type can be checked with <<func-classof>> function) for the event.
 
-`sourceId => Integer`::
+[[event-sourceId]]
+sourceId => Integer::
 ID of the source object for the event.
 
-`tags => Array`::
+[[event-tags]]
+tags => Array::
 Event tags as an array of strings.
 
-`tagList => String`::
+[[event-tagList]]
+tagList => String::
 Event tags as a comma separated list.
 
-`timestamp => Integer`::
+[[event-timestamp]]
+timestamp => Integer::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the event.
 
-`$1…$n`::
+[[event-paramN]]
+$1…$n::
 Shortcut for `parameters[n]` (e.g. "$event.parameters[3]" can be replaced with "$event.$3").
 
-`$…`::
+[[event-namedParam]]
+$…::
 Named event parameters can be accessed directly by the name (e.g `+$event.dciId+`). List of available named parameters can be accessed with `parameterNames` attribute. Get/set attribute.
+--
 
 ==== Instance methods
 
-`addParameter(name, value) => void`::
-
+[.method-list]
+--
+[[event-addParameter]]
+addParameter(name, value) => void::
 Set event parameter
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -96,94 +124,92 @@ Set event parameter
 |value|String|Parameter value.
 |===
 
-`addTag(tag) => void`::
-
+[[event-addTag]]
+addTag(tag) => void::
 Set event tag, which can be later accessed via `tags` attribute.
-
++
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
 |tag|String tag
 |===
 
-`correlateTo(eventId) => void`::
-
+[[event-correlateTo]]
+correlateTo(eventId) => void::
 Sets root cause id for the event
-
++
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
 |eventId|Root cause event id
 |===
 
-`expandString(string) => String`::
-
+[[event-expandString]]
+expandString(string) => String::
 Expand string by replacing macros with their values.
-
++
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
 |string|String to expand
 |===
-
++
 .Return
-
 Formated string
-
++
 [.source]
 ....
 >>> $event.expandString("%N")
 SYS_THRESHOLD_REACHED
 ....
 
-`getParameter(name) => void`::
-
+[[event-getParameter]]
+getParameter(name) => void::
 Get parameter value by name or by index
-
++
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
 |name|Parameter name or index
 |===
-
++
 .Return
-
 Parameter value or null
 
-`hasTag(tag) => Boolean`::
-
+[[event-hasTag]]
+hasTag(tag) => Boolean::
 Return if event has specific tag.
-
++
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
 |tag|String tag
 |===
 
-`removeTag(tag) => void`::
-
+[[event-removeTag]]
+removeTag(tag) => void::
 Remove tag from event tag list
-
++
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
 |tag|String tag
 |===
 
-`setMessage(message) => void`::
-
+[[event-setMessage]]
+setMessage(message) => void::
 Set event message to `message`.
-
++
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
 |message|Message string
 |===
 
-`setNamedParameter(name, value) => void`::
-
+[[event-setNamedParameter]]
+setNamedParameter(name, value) => void::
 Set named parameter or change value of existing named parameter
-
++
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
@@ -191,13 +217,13 @@ Set named parameter or change value of existing named parameter
 |value|String value of parameter
 |===
 
-`setParameter(index, value) => void`::
-
-Set value of parameter or change value of existing parameter. If index corresponds 
-to existing parameter, the value will be set. If index is higher then existing 
+[[event-setParameter]]
+setParameter(index, value) => void::
+Set value of parameter or change value of existing parameter. If index corresponds
+to existing parameter, the value will be set. If index is higher then existing
 number of parameters, new parameter(s) will be added (if needed, parameters with
-empty values will be added to reach the number of parameters indicated by index). 
-
+empty values will be added to reach the number of parameters indicated by index).
++
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
@@ -205,10 +231,10 @@ empty values will be added to reach the number of parameters indicated by index)
 |value|String value of parameter
 |===
 
-`setSeverity(severityCode) => void`::
-
+[[event-setSeverity]]
+setSeverity(severityCode) => void::
 Change event severity to `severityCode`.
-
++
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
@@ -216,13 +242,13 @@ Change event severity to `severityCode`.
 |Numeric <<const-object-status, severity code>>
 |===
 
-`toJson() => String`::
-
+[[event-toJson]]
+toJson() => String::
 Serialize object to JSON.
-
++
 .Return
-
 String representation of the object in JSON format.
+--
 
 .See also
 <<func-postevent>>, <<func-posteventex>>, <<func-loadevent>>, <<class-alarm>>

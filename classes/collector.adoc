@@ -8,51 +8,57 @@ Object represents collector. Extends <<class-netobj>>.
 
 include::_shared/netobj-attrs.adoc[]
 
-`autoBindScript => String`::
+[.attr-list]
+--
+[[collector-autoBindScript]]
+autoBindScript => String::
 Source of the script for automatic binding.
 
-`isAutoBindEnabled => Boolean`::
+[[collector-isAutoBindEnabled]]
+isAutoBindEnabled => Boolean::
 Indicate if automatic binding is enabled.
 
-`isAutoUnbindEnabled => Boolean`::
+[[collector-isAutoUnbindEnabled]]
+isAutoUnbindEnabled => Boolean::
 Indicate if automatic unbinding is enabled.
+--
 
 ==== Instance methods
 
 include::_shared/netobj-methods.adoc[]
 
-[[class-collector-createCollector,Collector::createCollector()]]
-`createCollector(name) => <<class-collector>>`::
+[.method-list]
+--
+[[collector-createCollector]]
+createCollector(name) => <<class-collector>>::
 Create new collector under current object
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|New collector's name
 |===
-
++
 .Return
-
 Newly created collector of <<class-collector>> class.
 
-[[class-collector-createContainer,Collector::createContainer()]]
-`createContainer(name) => <<class-container>>`::
+[[collector-createContainer]]
+createContainer(name) => <<class-container>>::
 Create new container under current object
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|New container's name
 |===
-
++
 .Return
-
 Newly created container of <<class-container>> class.
 
-[[class-collector-createNode,Collector::createNode()]]
-`createNode(name, primaryHostName, zoneUIN) => <<class-node>>`::
+[[collector-createNode]]
+createNode(name, primaryHostName, zoneUIN) => <<class-node>>::
 Create new node under current object.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -60,15 +66,14 @@ Create new node under current object.
 |primaryHostName|String|Optional. Primary host name or IP address.
 |zoneUIN|Integer|Optional. New node's zone UIN.
 |===
-
++
 .Return
-
 Newly created node of <<class-node>> class or NULL if failed to create
 
-[[class-collector-createSensor,Collector::createSensor()]]
-`createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>`::
+[[collector-createSensor]]
+createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>::
 Create new sensor under current object.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -77,14 +82,14 @@ Create new sensor under current object.
 |gateway|<<class-netobj>>|Gateway used for communication sensor. Optional.
 |modbusUnitId|Integer|MODBUS Unit ID. Optional.
 |===
-
++
 .Return
-
 Newly created sensor of <<class-sensor>> class or NULL if failed to create
 
-`setAutoBindMode(enableBind, enableUnbind) => void`::
+[[collector-setAutoBindMode]]
+setAutoBindMode(enableBind, enableUnbind) => void::
 Set automatic bind mode for the container.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -92,12 +97,13 @@ Set automatic bind mode for the container.
 |enableUnbind|Boolean|Script should be used for automatic unbinding.
 |===
 
-
-`setAutoBindScript(script) => void`::
+[[collector-setAutoBindScript]]
+setAutoBindScript(script) => void::
 Update automatic binding script source.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |script|String|Script source.
 |===
+--

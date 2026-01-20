@@ -10,85 +10,118 @@ All class attributes are settable.
 
 ==== Instance attributes
 
-`second => Integer`::
-`sec => Integer`::
-`tm_sec => Integer`::
-Seconds after the minute. Can be modified. 
+[.attr-list]
+--
+[[datetime-second]]
+second => Integer::
+[[datetime-sec]]
+sec => Integer::
+[[datetime-tm_sec]]
+tm_sec => Integer::
+Seconds after the minute. Can be modified.
 
-`minute => Integer`::
-`min => Integer`::
-`tm_min => Integer`::
-Minutes after the hour. Can be modified. 
+[[datetime-minute]]
+minute => Integer::
+[[datetime-min]]
+min => Integer::
+[[datetime-tm_min]]
+tm_min => Integer::
+Minutes after the hour. Can be modified.
 
-`hour => integer`::
-`tm_hour => integer`::
-Hours since midnight. Can be modified. 
+[[datetime-hour]]
+hour => integer::
+[[datetime-tm_hour]]
+tm_hour => integer::
+Hours since midnight. Can be modified.
 
-`day => Integer`::
-`mday => Integer`::
-`tm_mday => Integer`::
-Day of the month. Can be modified. 
+[[datetime-day]]
+day => Integer::
+[[datetime-mday]]
+mday => Integer::
+[[datetime-tm_mday]]
+tm_mday => Integer::
+Day of the month. Can be modified.
 
-`month => Integer`::
-`mon => Integer`::
-`tm_mon => Integer`::
-Months since January. Can be modified. 
+[[datetime-month]]
+month => Integer::
+[[datetime-mon]]
+mon => Integer::
+[[datetime-tm_mon]]
+tm_mon => Integer::
+Months since January. Can be modified.
 
-`year => Integer`::
-`tm_year => Integer`::
-Year. Can be modified. 
+[[datetime-year]]
+year => Integer::
+[[datetime-tm_year]]
+tm_year => Integer::
+Year. Can be modified.
 
-`dayOfYear => Integer`::
-`yday => Integer`::
-`tm_yday => Integer`::
-Days since January 1. Can be modified. 
+[[datetime-dayOfYear]]
+dayOfYear => Integer::
+[[datetime-yday]]
+yday => Integer::
+[[datetime-tm_yday]]
+tm_yday => Integer::
+Days since January 1. Can be modified.
 
-`dayOfWeek => Integer`::
-`wday => Integer`::
-`tm_wday => Integer`::
-Days since Sunday. Can be modified. 
+[[datetime-dayOfWeek]]
+dayOfWeek => Integer::
+[[datetime-wday]]
+wday => Integer::
+[[datetime-tm_wday]]
+tm_wday => Integer::
+Days since Sunday. Can be modified.
 
-`isDST => Boolean`::
-`isdst => Boolean`::
-`tm_isdst => Boolean`::
-Daylight Saving Time flag. Can be modified. 
+[[datetime-isDST]]
+isDST => Boolean::
+[[datetime-isdst]]
+isdst => Boolean::
+[[datetime-tm_isdst]]
+tm_isdst => Boolean::
+Daylight Saving Time flag. Can be modified.
 
-`isUTC => Boolean`::
-UTC flag. Can be modified. 
+[[datetime-isUTC]]
+isUTC => Boolean::
+UTC flag. Can be modified.
 
-`timestamp => Integer`::
-UNIX time (number of seconds since epoch). Can be modified. 
+[[datetime-timestamp]]
+timestamp => Integer::
+UNIX time (number of seconds since epoch). Can be modified.
+--
 
 ==== Instance methods
 
-[[class-datetime-format,DateTime::format()]]
-`format(format) => void`::
+[.method-list]
+--
+[[datetime-format]]
+format(format) => void::
 Formats a timestamp, and returns a string according to given formatting rules.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |string|String|Formatting string - see this for available options http://www.cplusplus.com/reference/ctime/strftime/
 |===
-
++
 .Return
 Formatted time as a string.
-
++
 [.source]
 ....
 time = DateTime();
 println(time.format("%Y-%m-%d %H:%M")); //Will print: "2016-01-19 12:14"
 println(time.format("%Y-%m-%d %H:%M - timezone %Z - offset from UTC - %z")); //Will print: "2016-01-19 12:14 - timezone CET - offset from UTC - +0100"
 ....
+--
 
 ==== Constructors
 
 `DateTime()`::
-Creates new DateTime object with current local time. 
+Creates new DateTime object with current local time.
 
 `DateTime(timestamp)`::
 Creates new DateTime with provided local time in UNIX time format.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
@@ -98,11 +131,10 @@ Creates new DateTime with provided local time in UNIX time format.
 `DateTime(time, isUTC)`:: Creates new DateTime object with provided time.
 Current time will be counted as UTC time if second parameter is true and as
 local time if second parameter is false.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |timestamp|Integer|UNIX time (number of seconds since epoch).
-|isUTC|Boolean|If provided time is in UTC. 
+|isUTC|Boolean|If provided time is in UTC.
 |===
-

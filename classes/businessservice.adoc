@@ -6,15 +6,21 @@ Object represents business service
 
 ==== Instance attributes
 
-`checks => Array`::
+[.attr-list]
+--
+[[businessservice-checks]]
+checks => Array::
 List of checks an array of <<class-businessservicecheck>> class objects
 
-`instance => String`::
+[[businessservice-instance]]
+instance => String::
 Instance of the check
 
-`prototypeId => Integer`::
+[[businessservice-prototypeId]]
+prototypeId => Integer::
 ID of the prototype object
 
-`serviceState => Integer`::
+[[businessservice-serviceState]]
+serviceState => Integer::
 Current state of the business service one of <<const-business-service-state,states>>
-
+--

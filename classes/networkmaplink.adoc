@@ -6,172 +6,210 @@ Class represents Network Map link
 
 ==== Instance attributes
 
-`connectorName1 => String`::
+[.attr-list]
+--
+[[networkmaplink-connectorName1]]
+connectorName1 => String::
 Connection link name 1.
 
-`connectorName2 => String`::
+[[networkmaplink-connectorName2]]
+connectorName2 => String::
 Connection link name 2.
 
-`color => String`::
+[[networkmaplink-color]]
+color => String::
 Link color in css format.
 
-`colorScriptName => String`::
+[[networkmaplink-colorScriptName]]
+colorScriptName => String::
 Color script name.
 
-`colorObjects => Array`::
+[[networkmaplink-colorObjects]]
+colorObjects => Array::
 Array with <<class-netobj>> objects used for link color calculation.
 
-`colorSource => Integer`::
+[[networkmaplink-colorSource]]
+colorSource => Integer::
 Color source option one of <<const-link-colorsource>>.
 
-`dataSource => Array`::
+[[networkmaplink-dataSource]]
+dataSource => Array::
 Array of <<class-linkdatasource>> with all datasources displayed on link.
 
-`interface1 => <<class-interface>>`::
+[[networkmaplink-interface1]]
+interface1 => <<class-interface>>::
 Interface 1 <<class-interface>>.
 
-`interface2 => <<class-interface>>`::
+[[networkmaplink-interface2]]
+interface2 => <<class-interface>>::
 Interface 2 <<class-interface>>.
 
-`name => String`::
+[[networkmaplink-name]]
+name => String::
 Link name.
 
-`object1 => <<class-netobj>>`::
+[[networkmaplink-object1]]
+object1 => <<class-netobj>>::
 First connected object <<class-netobj>>.
 
-`object2 => <<class-netobj>>`::
+[[networkmaplink-object2]]
+object2 => <<class-netobj>>::
 Second connected object <<class-netobj>>.
 
-`objectId1 => Integer`::
+[[networkmaplink-objectId1]]
+objectId1 => Integer::
 First connected object id.
 
-`objectId2 => Integer`::
+[[networkmaplink-objectId2]]
+objectId2 => Integer::
 Second connected object id.
 
-`routing => Integer`::
+[[networkmaplink-routing]]
+routing => Integer::
 Link routing type <<const-link-routingalgorithm>>.
 
-`style => Integer`::
+[[networkmaplink-style]]
+style => Integer::
 Link style <<const-link-style>>.
 
-`type => Integer`::
+[[networkmaplink-type]]
+type => Integer::
 Link type
 
-`useActiveThresholds => Boolean`::
+[[networkmaplink-useActiveThresholds]]
+useActiveThresholds => Boolean::
 If active thresholds should be used for link color.
 
-`useInterfaceUtilization => Boolean`::
+[[networkmaplink-useInterfaceUtilization]]
+useInterfaceUtilization => Boolean::
 If interface utilization should be used for link color. Only applicable when colorSource is set to object status mode.
 
-`width => Integer`::
+[[networkmaplink-width]]
+width => Integer::
 Link width.
+--
 
 
 ==== Instance methods
 
-`clearDataSource() => void`:: 
+[.method-list]
+--
+[[networkmaplink-clearDataSource]]
+clearDataSource() => void::
 Remove all data sources form the list
 
-`removeDataSource(index) => void`:: 
+[[networkmaplink-removeDataSource]]
+removeDataSource(index) => void::
 Remove data source by index
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |index|Integer|Index of data source to be removed
 |===
 
-`setColorConfig(mode, data, includeThresholds, includeLinkUtilization) => void`:: 
+[[networkmaplink-setColorConfig]]
+setColorConfig(mode, data, includeThresholds, includeLinkUtilization) => void::
 Set color source mode and additional parameters
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|mode|Integer|One of color sources: <<const-link-colorsource>>. All further parameters depend on color source mode. 
+|mode|Integer|One of color sources: <<const-link-colorsource>>. All further parameters depend on color source mode.
 |date|Object|Depending on color source mode one of: array of objects or object's id for "object status" mode / script name for "script" mode / color definition for "custom color" mode
 |includeThresholds|Boolen|(optional) indicates if thresholds should be included into calculation for "object status" mode, default false
 |includeLinkUtilization|Boolean|(optional) indicates if link utilization should be included into calculation for "object status" mode, default false
 |===
 
-`setConnectorName1(name) => void`:: 
+[[networkmaplink-setConnectorName1]]
+setConnectorName1(name) => void::
 Set connection 1 name
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Connection 1 name
 |===
 
-`setConnectorName2(name) => void`:: 
+[[networkmaplink-setConnectorName2]]
+setConnectorName2(name) => void::
 Set connection 2 name
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Connection 2 name
 |===
 
-`setInterface1(interface) => void`:: 
+[[networkmaplink-setInterface1]]
+setInterface1(interface) => void::
 Set first interface
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |interface|<<class-interface>>|Interface to set
 |===
 
-`setInterface2(interface) => void`:: 
+[[networkmaplink-setInterface2]]
+setInterface2(interface) => void::
 Set second interface
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |interface|<<class-interface>>|Interface to set
 |===
 
-`setName(name) => void`:: 
+[[networkmaplink-setName]]
+setName(name) => void::
 Set name
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Link name
 |===
 
-`setRoutingAlgorithm(algorithm) => void`:: 
+[[networkmaplink-setRoutingAlgorithm]]
+setRoutingAlgorithm(algorithm) => void::
 Set routing algorithm
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |algorithm|Integer|One of algorithms: <<const-link-routingalgorithm>>
 |===
 
-`setStyle(style) => void`:: 
-Set link stle 
-
+[[networkmaplink-setStyle]]
+setStyle(style) => void::
+Set link stle
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |style|Integer|Link style: <<const-link-style>>.
 |===
 
-`setWidth(width) => void`:: 
+[[networkmaplink-setWidth]]
+setWidth(width) => void::
 Set link width
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|width|Integer|Link width 
+|width|Integer|Link width
 |===
 
-`updateDataSource(dci, format) => void`:: 
+[[networkmaplink-updateDataSource]]
+updateDataSource(dci, format) => void::
 Add or update link data source
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |dci|<class-dci>|DCI to add or update to data source list
 |format|String|Optional. DCI data display format
 |===
+--
 

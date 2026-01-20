@@ -2,10 +2,9 @@
 [[class-assetproperties]]
 === AssetProperties
 
-Object contains all asset properties accessible by property name. So value of asset property with name `vendor` can be accessed in the following way: 
+Object contains all asset properties accessible by property name. So value of asset property with name `vendor` can be accessed in the following way:
 
 [source,c]
 ----
 $node.assetProperties.vendor
 ----
-

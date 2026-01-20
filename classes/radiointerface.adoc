@@ -6,43 +6,56 @@ Class represents radio interface
 
 ==== Instance attributes
 
-`band => Integer`::
-Interface <<radiointerface-band,band>>
+[.attr-list]
+--
+[[radiointerface-band]]
+band => Integer::
+Interface <<radiointerface-band-constants,band>>
 
-`bandName => String`::
+[[radiointerface-bandName]]
+bandName => String::
 Band name
 
-`bssid => String`::
+[[radiointerface-bssid]]
+bssid => String::
 Basic Service Set Identifier
 
-`channel => Integer`::
+[[radiointerface-channel]]
+channel => Integer::
 Channel
 
-`frequency => Integer`::
+[[radiointerface-frequency]]
+frequency => Integer::
 Frequency
 
-`ifIndex => Integer`::
+[[radiointerface-ifIndex]]
+ifIndex => Integer::
 Index of corresponding element from ifTable, if available
 
-`index => Integer`::
+[[radiointerface-index]]
+index => Integer::
 Index
 
-`name => String`::
+[[radiointerface-name]]
+name => String::
 Inteface name
 
-`powerDBm => Integer`::
+[[radiointerface-powerDBm]]
+powerDBm => Integer::
 Power dBm
 
-`powerMW => Integer`::
+[[radiointerface-powerMW]]
+powerMW => Integer::
 Power MW
 
-`ssid => String`::
+[[radiointerface-ssid]]
+ssid => String::
 Service Set Identifier
-
+--
 
 ==== Constants
 
-[[radiointerface-band]]
+[[radiointerface-band-constants]]
 [cols="1,5a"]
 .Node types
 |===

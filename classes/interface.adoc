@@ -8,229 +8,281 @@ Represent interface object. Extends <<class-netobj>>.
 
 include::_shared/netobj-attrs.adoc[]
 
-`adminState => Integer`::
+[.attr-list]
+--
+[[interface-adminstate]]
+adminState => Integer::
 Administrative <<enum-interface-state,state>> of the interface.
 
-`bridgePortNumber => Integer`::
+[[interface-bridgeportnumber]]
+bridgePortNumber => Integer::
 Bridge port number for this interface.
 
-`chassis => <<class-chassis>>`::
+[[interface-chassis]]
+chassis => <<class-chassis>>::
 Parent <<class-chassis>>
 
-`description => String`::
+[[interface-description]]
+description => String::
 Interface description
 
-`dot1xBackendAuthState => Integer`::
+[[interface-dot1xbackendauthstate]]
+dot1xBackendAuthState => Integer::
 802.1x back-end authentication state
 
-`dot1xPaeAuthState => Integer`::
+[[interface-dot1xpaeauthstate]]
+dot1xPaeAuthState => Integer::
 802.1x PAE authentication state
 
-`expectedState => Integer`::
+[[interface-expectedstate]]
+expectedState => Integer::
 <<enum-interface-expected-state,Expected state>> of the interface.
 
-`flags => Integer`::
+[[interface-flags]]
+flags => Integer::
 Interface flags (bit mask, `uint32`).
 
-`icmpAverageRTT => Integer`::
+[[interface-icmpavgrtt]]
+icmpAverageRTT => Integer::
 ICMP average response time for current interface. Will return null if no information.
 
-`icmpLastRTT => Integer`::
+[[interface-icmplastrtt]]
+icmpLastRTT => Integer::
 ICMP last response time for current interface. Will return null if no information.
 
-`icmpMaxRTT => Integer`::
+[[interface-icmpmaxrtt]]
+icmpMaxRTT => Integer::
 ICMP maximal response time for current interface. Will return null if no information.
 
-`icmpMinRTT => Integer`::
+[[interface-icmpminrtt]]
+icmpMinRTT => Integer::
 ICMP minimal response time for current interface. Will return null if no information.
 
-`icmpPacketLoss => Integer`::
+[[interface-icmppacketloss]]
+icmpPacketLoss => Integer::
 ICMP packet loss for current interface. Will return null if no information.
 
-`ifAlias => String`::
+[[interface-ifalias]]
+ifAlias => String::
 Interface alias
 
-`ifIndex => Integer`::
+[[interface-ifindex]]
+ifIndex => Integer::
 Interface index.
 
-`ifName => String`::
+[[interface-ifname]]
+ifName => String::
 Interface name obtained from object.
 
-`ifType => Integer`::
+[[interface-iftype]]
+ifType => Integer::
 <<enum-interface-types,Interface type>>
 
-`inboundUtilization => Integer`::
+[[interface-inboundutilization]]
+inboundUtilization => Integer::
 Inbound utilization
 
-`ipAddressList => Array`::
+[[interface-ipaddresslist]]
+ipAddressList => Array::
 Array with <<class-inetaddress>> objects, that represent all addresses that has this interface has
 
-`isExcludedFromTopology => Boolean`::
+[[interface-isexcludedfromtopology]]
+isExcludedFromTopology => Boolean::
 `TRUE` if this interface excluded from network topology
 
-`isIncludedInIcmpPoll => Boolean`::
+[[interface-isincludedinicmppoll]]
+isIncludedInIcmpPoll => Boolean::
 `TRUE` if this interface is included in ICMP statistics
 
-`isLoopback => Boolean`::
+[[interface-isloopback]]
+isLoopback => Boolean::
 `TRUE` if this interface is a loopback
 
-`isManuallyCreated => Boolean`::
+[[interface-ismanuallycreated]]
+isManuallyCreated => Boolean::
 `TRUE` if this interface object was created manually by NetXMS administrator
 
-`isOSPF => Boolean`::
+[[interface-isospf]]
+isOSPF => Boolean::
 `TRUE` if this interface is OSPF
 
-`isPhysicalPort => Boolean`::
+[[interface-isphysicalport]]
+isPhysicalPort => Boolean::
 `TRUE` if this interface object represents physical port
 
-`macAddress => String`::
+[[interface-macaddress]]
+macAddress => String::
 String representation of MAC address separated by ":".
 
-`module => Integer`::
+[[interface-module]]
+module => Integer::
 Module
 
-`mtu => Integer`::
+[[interface-mtu]]
+mtu => Integer::
 Interface MTU (0 if unknown).
 
-`node => <<class-node>>`::
+[[interface-node]]
+node => <<class-node>>::
 Parent node object
 
-`operState => Integer`::
+[[interface-operstate]]
+operState => Integer::
 Operational <<enum-interface-state,state>>.
 
-`ospfAreaId => String`::
+[[interface-ospfareaid]]
+ospfAreaId => String::
 OSPF area ID
 
-`ospfState => Integer`::
+[[interface-ospfstate]]
+ospfState => Integer::
 OSPF state
 
-`ospfStateText => String`::
+[[interface-ospfstatetext]]
+ospfStateText => String::
 OSPF state as a text
 
-`ospfType => Integer`::
+[[interface-ospftype]]
+ospfType => Integer::
 OSPF type
 
-`ospfTypeText => String`::
+[[interface-ospftypetext]]
+ospfTypeText => String::
 OSPF type as s text
 
-`outboundUtilization => Integer`::
+[[interface-outboundutilization]]
+outboundUtilization => Integer::
 Outbound utilization
 
-`peerInterface => <<class-interface>>`::
+[[interface-peerinterface]]
+peerInterface => <<class-interface>>::
 Peer interface object if known, otherwise `null`.
 
-`peerLastUpdateTime => Integer`::
+[[interface-peerlastupdatetime]]
+peerLastUpdateTime => Integer::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the last peer update.
 
-`peerNode => <<class-node>>`::
+[[interface-peernode]]
+peerNode => <<class-node>>::
 Peer <<class-node,node object>> if known, otherwise `null`.
 
-`pollCountForStatusChange => Integer`::
+[[interface-pollcountforstatuschange]]
+pollCountForStatusChange => Integer::
 Number of polls required before registering a status change.
 
-`pic => Integer`::
+[[interface-pic]]
+pic => Integer::
 Phisical location.
 
-`port => Integer`::
+[[interface-port]]
+port => Integer::
 Port number.
 
-`speed => Integer64`::
+[[interface-speed]]
+speed => Integer64::
 Speed of the interface.
 
-`stpState => Integer`::
+[[interface-stpstate]]
+stpState => Integer::
 <<enum-interface-stp-state,Spaning tree port state >> of the interface.
 
-`stpStateText => String`::
+[[interface-stpstatetext]]
+stpStateText => String::
 <<enum-interface-stp-state,Spaning tree port state >> of the interface as a text.
 
-`vlans => Array`::
+[[interface-vlans]]
+vlans => Array::
 Array with this inteface <<class-vlan, vlan objects>>
 
-`zone => <<class-zone>>`::
+[[interface-zone]]
+zone => <<class-zone>>::
 <<class-zone>> object (null if zoning is disabled).
 
-`zoneUIN => Integer`::
+[[interface-zoneuin]]
+zoneUIN => Integer::
 Zone UIN of this interface.
+--
 
 ==== Instance methods
 
 include::_shared/netobj-methods.adoc[]
 
-`clearPeer(enabled) => void`::
+[.method-list]
+--
+[[interface-clearpeer]]
+clearPeer(enabled) => void::
 Clears peer information for interface.
 
-`enableAgentStatusPolling(enabled) => void`::
-
+[[interface-enableagentstatuspolling]]
+enableAgentStatusPolling(enabled) => void::
 Enable\disable agent status polling for this interface
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |enabled|Boolean|`TRUE` if interface should be status polled by NetXMS agent
 |===
 
-`enableICMPStatusPolling(enabled) => void`::
-
+[[interface-enableicmpstatuspolling]]
+enableICMPStatusPolling(enabled) => void::
 Enable\disable ICMP status polling for this interface
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |enabled|Boolean|`TRUE` if interface should be status polled by ICMP
 |===
 
-`enableSNMPStatusPolling(enabled) => void`::
-
+[[interface-enablesnmpstatuspolling]]
+enableSNMPStatusPolling(enabled) => void::
 Enable\disable SNMP status polling for this interface
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |enabled|Boolean|`TRUE` if interface should be status polled by SNMP
 |===
 
-
-`setExcludeFromTopology(excluded) => void`::
-
+[[interface-setexcludefromtopology]]
+setExcludeFromTopology(excluded) => void::
 Change `isExcludedFromTopology` flag.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |excluded|Boolean|`TRUE` if interface should be excluded.
 |===
 
-`setExpectedState(newState) => void`::
-
+[[interface-setexpectedstate]]
+setExpectedState(newState) => void::
 Set expected state to `newState`.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |newState|Number|New state as defined by <<enum-interface-expected-state>>.
 |===
 
-`setIncludeInIcmpPoll(enabled) => void`::
-
+[[interface-setincludeinicmppoll]]
+setIncludeInIcmpPoll(enabled) => void::
 Enabele/Disable ICMP statistics collection for current interface.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |enabled|Boolean|If this interface should be included in ICMP statistics.
 |===
 
-
-`setPollCountForStatusChange(count) => void`::
-
+[[interface-setpollcountforstatuschange]]
+setPollCountForStatusChange(count) => void::
 Set the required number of polls before registering a status change.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |count|Integer|Number of polls (must be >= 0)
 |===
-
+--
 
 ==== Constants
 

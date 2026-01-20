@@ -7,172 +7,209 @@ Object represents stream of bytes
 
 ==== Instance attributes
 
-`eos => boolean`::
+[.attr-list]
+--
+[[bytestream-eos]]
+eos => boolean::
 Indicates, if current position is in the end of byte stream
 
-`pos => Integer`::
+[[bytestream-pos]]
+pos => Integer::
 Current position in the byte stream
 
-`size => Integer`::
+[[bytestream-size]]
+size => Integer::
 Size of byte stream in bytes
+--
 
 
 ==== Instance methods
 
-`seek(position) => Integer`::
-Change current position in byte stream. 
-
+[.method-list]
+--
+[[bytestream-seek]]
+seek(position) => Integer::
+Change current position in byte stream.
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |position|Integer|Position to seek to
 |===
-
++
 .Return
-
 Actual position if position change was successful or `-1` if position change was
-not successful. 
+not successful.
 
+[[bytestream-readByte]]
+readByte() => Integer (32 bit)::
+Read byte from byte stream and return it's value.
 
-`readByte() => Integer (32 bit)`:: 
-Read byte from byte stream and return it's value.  
-
-`readInt16B() => Integer (32 bit)`:: 
+[[bytestream-readInt16B]]
+readInt16B() => Integer (32 bit)::
 Read big-endian 16-bit signed integer from byte stream and return it's value.
 
-
-`readInt32B() => Integer (32 bit)`:: 
+[[bytestream-readInt32B]]
+readInt32B() => Integer (32 bit)::
 Read big-endian 32-bit signed integer from byte stream and return it's value.
 
-
-`readInt64B() => Integer (64 bit)`:: 
+[[bytestream-readInt64B]]
+readInt64B() => Integer (64 bit)::
 Read big-endian 64-bit signed integer from byte stream and return it's value.
 
-
-`readUInt16B() => Integer (32 bit)`:: 
+[[bytestream-readUInt16B]]
+readUInt16B() => Integer (32 bit)::
 Read big-endian 16-bit unsigned integer from byte stream and return it's value.
 
-
-`readUInt32B() => Integer (32 bit)`:: 
+[[bytestream-readUInt32B]]
+readUInt32B() => Integer (32 bit)::
 Read big-endian 32-bit unsigned integer from byte stream and return it's value.
 
-
-`readUInt64B() => Integer (64 bit)`:: 
+[[bytestream-readUInt64B]]
+readUInt64B() => Integer (64 bit)::
 Read big-endian 64-bit unsigned integer from byte stream and return it's value.
 
-
-`readFloatB() => Floating-point number`:: 
+[[bytestream-readFloatB]]
+readFloatB() => Floating-point number::
 Read 8 bytes from stream as big-endian floating-point number and return it's
 value. Deprecated from v 5.1.2, readFloat64B should be used instead.
 
-`readFloat32B() => Floating-point number (32 bit)`::
+[[bytestream-readFloat32B]]
+readFloat32B() => Floating-point number (32 bit)::
 Read 32 bytes from stream as big-endian floating-point number and return it's
 value. Added in v 5.1.2.
 
-`readFloat64B() => Floating-point number (64 bit)`::
+[[bytestream-readFloat64B]]
+readFloat64B() => Floating-point number (64 bit)::
 Read 64 bytes from stream as big-endian floating-point number and return it's
 value. Added in v 5.1.2.
 
-`readInt16L() => Integer (32 bit)`:: 
+[[bytestream-readInt16L]]
+readInt16L() => Integer (32 bit)::
 Read little-endian 16-bit signed integer from byte stream and return it's value.
 
-
-`readInt32L() => Integer (32 bit)`:: 
+[[bytestream-readInt32L]]
+readInt32L() => Integer (32 bit)::
 Read little-endian 32-bit signed integer from byte stream and return it's value.
 
-
-`readInt64L() => Integer (64 bit)`:: 
+[[bytestream-readInt64L]]
+readInt64L() => Integer (64 bit)::
 Read little-endian 64-bit signed integer from byte stream and return it's value.
 
-
-`readUInt16L() => Integer (32 bit)`:: 
+[[bytestream-readUInt16L]]
+readUInt16L() => Integer (32 bit)::
 Read littleig-endian 16-bit unsigned integer from byte stream and return it's
-value. 
+value.
 
-`readUInt32L() => Integer (32 bit)`:: 
+[[bytestream-readUInt32L]]
+readUInt32L() => Integer (32 bit)::
 Read little-endian 32-bit unsigned integer from byte stream and return it's
-value. 
+value.
 
-`readUInt64L() => Integer (64 bit)`:: 
+[[bytestream-readUInt64L]]
+readUInt64L() => Integer (64 bit)::
 Read little-endian 64-bit unsigned integer from byte stream and return it's
-value. 
+value.
 
-`readFloatL() => Floating-point number`:: 
+[[bytestream-readFloatL]]
+readFloatL() => Floating-point number::
 Read 8 bytes from stream as little-endian floating-point number and return it's
 value. Deprecated from v 5.1.2, readFloat64L should be used instead.
 
-`readFloat32L() => Floating-point number (32 bit)`:: 
+[[bytestream-readFloat32L]]
+readFloat32L() => Floating-point number (32 bit)::
 Read 32 bytes from stream as little-endian floating-point number and return it's
 value. Added in v 5.1.2.
 
-`readFloat64L() => Floating-point number (64 bit)`:: 
+[[bytestream-readFloat64L]]
+readFloat64L() => Floating-point number (64 bit)::
 Read 64 bytes from stream as little-endian floating-point number and return it's
 value. Added in v 5.1.2.
 
-`readCString() => String`:: 
+[[bytestream-readCString]]
+readCString() => String::
 Read C-string from stream and return it's value. It's expected that string in
-the stream is terminates by a null character. 
+the stream is terminates by a null character.
 
-`readPString() => String`:: 
+[[bytestream-readPString]]
+readPString() => String::
 Read Pascal string from stream and return it's value. It's expected that first
-byte of string in the stream contains length of the string. 
+byte of string in the stream contains length of the string.
 
-`readString(length) => String`:: 
-Read string from stream and return it's value. 
-
+[[bytestream-readString]]
+readString(length) => String::
+Read string from stream and return it's value.
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |length|Integer|Length of the string
 |===
 
-`writeByte(value) => void`:: 
-Write provided value as byte to the byte stream at current position. 
+[[bytestream-writeByte]]
+writeByte(value) => void::
+Write provided value as byte to the byte stream at current position.
 
-`writeInt16B(value) => void`:: 
-Write provided value to the byte stream as big-endian 16-bit integer . 
+[[bytestream-writeInt16B]]
+writeInt16B(value) => void::
+Write provided value to the byte stream as big-endian 16-bit integer .
 
-`writeInt32B(value) => void`:: 
-Write provided value to the byte stream as big-endian 32-bit integer. 
+[[bytestream-writeInt32B]]
+writeInt32B(value) => void::
+Write provided value to the byte stream as big-endian 32-bit integer.
 
-`writeInt64B(value) => void`:: 
-Write provided value to the byte stream as big-endian 64-bit integer. 
+[[bytestream-writeInt64B]]
+writeInt64B(value) => void::
+Write provided value to the byte stream as big-endian 64-bit integer.
 
-`writeFloatB(value) => void`:: 
+[[bytestream-writeFloatB]]
+writeFloatB(value) => void::
 Write provided value to the byte stream as big-endian 64-bit float. Deprecated from v 5.1.2, writeFloat64B should be used instead.
 
-`writeFloat32B(value) => void`:: 
+[[bytestream-writeFloat32B]]
+writeFloat32B(value) => void::
 Write provided value to the byte stream as big-endian 32-bit float. Added in v 5.1.2.
 
-`writeFloat64B(value) => void`:: 
+[[bytestream-writeFloat64B]]
+writeFloat64B(value) => void::
 Write provided value to the byte stream as big-endian 64-bit float. Added in v 5.1.2.
 
-`writeInt16L(value) => void`:: 
-Write provided value to the byte stream as little-endian 16-bit integer. 
+[[bytestream-writeInt16L]]
+writeInt16L(value) => void::
+Write provided value to the byte stream as little-endian 16-bit integer.
 
-`writeInt32L(value) => void`:: 
-Write provided value to the byte stream as little-endian 32-bit integer. 
+[[bytestream-writeInt32L]]
+writeInt32L(value) => void::
+Write provided value to the byte stream as little-endian 32-bit integer.
 
-`writeInt64L(value) => void`:: 
-Write provided value to the byte stream as little-endian 64-bit integer. 
+[[bytestream-writeInt64L]]
+writeInt64L(value) => void::
+Write provided value to the byte stream as little-endian 64-bit integer.
 
-`writeFloatL(value) => void`:: 
+[[bytestream-writeFloatL]]
+writeFloatL(value) => void::
 Write provided value to the byte stream as little-endian 64-bit float. Deprecated from v 5.1.2, writeFloat64L should be used instead.
 
-`writeFloat32L(value) => void`:: 
+[[bytestream-writeFloat32L]]
+writeFloat32L(value) => void::
 Write provided value to the byte stream as little-endian 32-bit float. Added in v 5.1.2.
 
-`writeFloat64L(value) => void`:: 
+[[bytestream-writeFloat64L]]
+writeFloat64L(value) => void::
 Write provided value to the byte stream as little-endian 64-bit float. Added in v 5.1.2.
 
-`writeCString(string) => void`:: 
+[[bytestream-writeCString]]
+writeCString(string) => void::
 Write provided string to the byte stream as null-terminated string (C-string).
 
-`writePString(string) => void`:: 
+[[bytestream-writePString]]
+writePString(string) => void::
 Write provided string to the byte stream as Pascal string (first byte is string length).
 
-`writeString(string) => void`:: 
+[[bytestream-writeString]]
+writeString(string) => void::
 Write provided string to the byte stream.
+--
 
 
 ==== Constructors
@@ -193,4 +230,3 @@ while (!bytestream.eos) {
   print(d2x(b,2) .. " "); // prints "78 79 7A"
 }
 ....
-

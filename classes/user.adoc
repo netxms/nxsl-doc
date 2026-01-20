@@ -6,36 +6,44 @@ Object represent user object and extends <<class-userdbobject>>.
 
 ==== Instance attributes
 
-`authMethod => Integer`::
+[.attr-list]
+--
+[[user-authMethod]]
+authMethod => Integer::
 <<enum-auth-methods,Authentication method>>.
 
-`certMappingData => String`::
+[[user-certMappingData]]
+certMappingData => String::
 Data that will be used to mpa certificate
 
-`certMappingMethod => Integer`::
+[[user-certMappingMethod]]
+certMappingMethod => Integer::
 <<enum-mapping-methods,Certificate mapping methods>>.
 
-`disabledUntil => String`::
+[[user-disabledUntil]]
+disabledUntil => String::
 UNIX timestamp with date until this user is disabled
 
-`disabledUntil => String`::
-UNIX timestamp with date until this user is disabled
-
-`email => String`::
+[[user-email]]
+email => String::
 Email set in user properties
 
-`fullName => String`::
+[[user-fullName]]
+fullName => String::
 User full name
 
-`graceLogins => Integer`::
+[[user-graceLogins]]
+graceLogins => Integer::
 Grace login count
 
-`phoneNumber => String`::
+[[user-phoneNumber]]
+phoneNumber => String::
 Phone number set in user properties
 
-`lastLogin => Integer`::
+[[user-lastLogin]]
+lastLogin => Integer::
 UNIX timestamp with last user's login time
-
+--
 
 ==== Constants
 

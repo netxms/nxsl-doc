@@ -6,29 +6,41 @@ OSPF neighbor
 
 ==== Instance attributes
 
-`areaId => String`::
+[.attr-list]
+--
+[[ospfneighbor-areaId]]
+areaId => String::
 Area ID
 
-`ifIndex => String`::
+[[ospfneighbor-ifIndex]]
+ifIndex => String::
 Interface index
 
-`ipAddress => InetAddress`::
+[[ospfneighbor-ipAddress]]
+ipAddress => InetAddress::
 <<class-inetaddress,IP address>>.
 
-`isVirtual => Boolean`::
+[[ospfneighbor-isVirtual]]
+isVirtual => Boolean::
 `TRUE` if it is virtual
 
-`node => <<class-node>>`::
+[[ospfneighbor-node]]
+node => <<class-node>>::
 Object of <<class-node>> class
 
-`nodeId => Integer`::
+[[ospfneighbor-nodeId]]
+nodeId => Integer::
 Node ID
 
-`routerId => String`::
+[[ospfneighbor-routerId]]
+routerId => String::
 OSPF router ID
 
-`state => Integer`::
+[[ospfneighbor-state]]
+state => Integer::
 State
 
-`stateText => String`::
+[[ospfneighbor-stateText]]
+stateText => String::
 State text
+--

@@ -6,38 +6,53 @@ Class represents wireless station
 
 ==== Instance attributes
 
-`accessPointId => Integer`::
+[.attr-list]
+--
+[[wirelessstation-accessPointId]]
+accessPointId => Integer::
 Access point object id
 
-`bssid => String`::
+[[wirelessstation-bssid]]
+bssid => String::
 Basic Service Set Identifier
 
-`ipAddress => InetAddress`::
+[[wirelessstation-ipAddress]]
+ipAddress => InetAddress::
 <<class-inetaddress,IP address>>.
 
-`macAddress => String`::
+[[wirelessstation-macAddress]]
+macAddress => String::
 MAC address
 
-`rfIndex => Integer`::
+[[wirelessstation-rfIndex]]
+rfIndex => Integer::
 Radio interface index
 
-`rfName => String`::
+[[wirelessstation-rfName]]
+rfName => String::
 Radio interface name
 
-`rssi => Integer`::
+[[wirelessstation-rssi]]
+rssi => Integer::
 RSSI for this station
 
-`rxRate => Integer`::
+[[wirelessstation-rxRate]]
+rxRate => Integer::
 Radio interface rate
 
-`signalStrength => Integer`::
+[[wirelessstation-signalStrength]]
+signalStrength => Integer::
 Signal streight
 
-`ssid => String`::
+[[wirelessstation-ssid]]
+ssid => String::
 Service Set Identifier
 
-`txRate => Integer`::
+[[wirelessstation-txRate]]
+txRate => Integer::
 Tx rate
 
-`vlan => Integer`::
+[[wirelessstation-vlan]]
+vlan => Integer::
 Vlan
+--

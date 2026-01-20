@@ -6,27 +6,37 @@ Represents a software deployment package with metadata for installation on manag
 
 ==== Instance attributes
 
-`command => String`::
+[.attr-list]
+--
+[[deploymentpackage-command]]
+command => String::
 Installation command to execute.
 
-`description => String`::
+[[deploymentpackage-description]]
+description => String::
 Package description.
 
-`fileName => String`::
+[[deploymentpackage-fileName]]
+fileName => String::
 Path to the package file.
 
-`id => Integer`::
+[[deploymentpackage-id]]
+id => Integer::
 Unique package identifier.
 
-`name => String`::
+[[deploymentpackage-name]]
+name => String::
 Package name.
 
-`platform => String`::
+[[deploymentpackage-platform]]
+platform => String::
 Target platform (e.g., "Windows", "Linux").
 
-`type => String`::
+[[deploymentpackage-type]]
+type => String::
 Package type identifier.
 
-`version => String`::
+[[deploymentpackage-version]]
+version => String::
 Package version string.
-
+--

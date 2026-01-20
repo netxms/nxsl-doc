@@ -10,371 +10,492 @@ include::_shared/netobj-attrs.adoc[]
 
 include::_shared/datacollectiontarget-attrs.adoc[]
 
-`agentCertificateMappingData => String`::
+[.attr-list]
+--
+[[node-agentCertificateMappingData]]
+agentCertificateMappingData => String::
 Agent certificate mapping data (set in object properties).
 
-`agentCertificateMappingMethod => String`::
+[[node-agentCertificateMappingMethod]]
+agentCertificateMappingMethod => String::
 Agent certificate mapping method (set in object properties).
 
-`agentCertificateSubject => String`::
+[[node-agentCertificateSubject]]
+agentCertificateSubject => String::
 Subject of certificate issued for agent tunnel on this node.
 
-`agentId => String`::
+[[node-agentId]]
+agentId => String::
 NetXMS agent unique ID (`string` representation of GUID). Will return all zeroes GUID if agent is not detected on node or does not have unique ID.
 
-`agentProxy => <<class-node>>`::
-Object that is set as agent proxy in object properties or NULL. 
+[[node-agentProxy]]
+agentProxy => <<class-node>>::
+Object that is set as agent proxy in object properties or NULL.
 
-`agentVersion => String`::
+[[node-agentVersion]]
+agentVersion => String::
 NetXMS agent version as `string`.
 
-`bootTime => Integer64`::
+[[node-bootTime]]
+bootTime => Integer64::
 UNIX time (number of seconds since epoch) of the moment when node was started or `0` if unknown.
 
-`bridgeBaseAddress => String`::
+[[node-bridgeBaseAddress]]
+bridgeBaseAddress => String::
 Base address of the switch formatted as 12 character `string` without separators. Value is only valid for bridges and switches. Special value `000000000000` indicates that address is unknown.
 
 [[class-node-capabilities,Node::capabilities]]
-`capabilities => Integer`::
+capabilities => Integer::
 Detected node capabilities ("Have Agent", "Support SNMP", etc.) Bitwise AND of <<node-capabilities>> constants.
 
-`cipDeviceType => Integer`::
+[[node-cipDeviceType]]
+cipDeviceType => Integer::
 EtherNet/IP device type
 
-`cipDeviceTypeAsText => String`::
+[[node-cipDeviceTypeAsText]]
+cipDeviceTypeAsText => String::
 EtherNet/IP device type as text
 
-`cipExtendedStatus => Integer`::
+[[node-cipExtendedStatus]]
+cipExtendedStatus => Integer::
 EtherNet/IP device extended status
 
-`cipExtendedStatusAsText => String`::
+[[node-cipExtendedStatusAsText]]
+cipExtendedStatusAsText => String::
 EtherNet/IP device extended status as text
 
-`cipState => Integer`::
+[[node-cipState]]
+cipState => Integer::
 EtherNet/IP device state
 
-`cipStateAsText => String`::
+[[node-cipStateAsText]]
+cipStateAsText => String::
 EtherNet/IP device state as text
 
-`cipStatus => Integer`::
+[[node-cipStatus]]
+cipStatus => Integer::
 EtherNet/IP device status
 
-`cipStatusAsText => String`::
+[[node-cipStatusAsText]]
+cipStatusAsText => String::
 EtherNet/IP device status as text
 
-`cipVendorCode => Integer`::
+[[node-cipVendorCode]]
+cipVendorCode => Integer::
 EtherNet/IP vendor code in numeric form.
 
-`cluster => <<class-cluster>>`::
+[[node-cluster]]
+cluster => <<class-cluster>>::
 Cluster this node is in.
 
-`components => <<class-component>>`::
+[[node-components]]
+components => <<class-component>>::
 Entity MIB components of class <<class-component>>.
 
-`dependentNodes => Array`::
+[[node-dependentNodes]]
+dependentNodes => Array::
 Will return array with <<class-nodedependency>> class objects. This array contains all objects that have current node as a proxy or data collection sources.
 
-`downSince => Integer64`::
+[[node-downSince]]
+downSince => Integer64::
 UNIX timestamp when node went down.
 
-`driver => String`::
+[[node-driver]]
+driver => String::
 Named of selected device-specific SNMP driver.
 
-`expectedCapabilities => Integer`::
+[[node-expectedCapabilities]]
+expectedCapabilities => Integer::
 Expected capabilities mask for the node. Bitwise AND of <<node-capabilities>> constants.
 
-`effectiveAgentProxy => <<class-node>>`::
-Object that is effective agent proxy or NULL. 
+[[node-effectiveAgentProxy]]
+effectiveAgentProxy => <<class-node>>::
+Object that is effective agent proxy or NULL.
 
-`effectiveIcmpProxy => <<class-node>>`::
-Object that is effective ICMP proxy or NULL. 
+[[node-effectiveIcmpProxy]]
+effectiveIcmpProxy => <<class-node>>::
+Object that is effective ICMP proxy or NULL.
 
-`effectiveSnmpProxy => <<class-node>>`::
-Object that is effective SNMP proxy or NULL. 
+[[node-effectiveSnmpProxy]]
+effectiveSnmpProxy => <<class-node>>::
+Object that is effective SNMP proxy or NULL.
 
-`flags => Integer`::
+[[node-flagsAttr]]
+flags => Integer::
 Bit mask of <<node-flags>>.
 
-`hardwareComponents => Array`::
+[[node-hardwareComponents]]
+hardwareComponents => Array::
 Returns an array of available hardware of class <<class-hardwarecomponent>>.
 
-`hardwareId => String`::
+[[node-hardwareId]]
+hardwareId => String::
 Nodes' unique hardware id
 
-`hasAgentIfXCounters => Boolean`::
+[[node-hasAgentIfXCounters]]
+hasAgentIfXCounters => Boolean::
 `TRUE` if agent supports 64-bit interface counters.
 
-`hasEntityMIB => Boolean`::
+[[node-hasEntityMIB]]
+hasEntityMIB => Boolean::
 `TRUE` if supports ENTITY-MIB.
 
-`hasServiceManager => Boolean`::
+[[node-hasServiceManager]]
+hasServiceManager => Boolean::
 `TRUE` if node has service manager accessible via NetXMS agent.
 
-`hasIfXTable => Boolean`::
+[[node-hasIfXTable]]
+hasIfXTable => Boolean::
 `TRUE` if supports ifXTable via SNMP (64-bit counters for interface statistics).
 
-`hasUserAgent => Boolean`::
+[[node-hasUserAgent]]
+hasUserAgent => Boolean::
 `TRUE` if has user agent
 
-`hasVLANs => Boolean`::
+[[node-hasVLANs]]
+hasVLANs => Boolean::
 `TRUE` if VLAN information available.
 
-`hasWinPDH => Boolean`::
+[[node-hasWinPDH]]
+hasWinPDH => Boolean::
 `TRUE` if node supports Windows PDH parameters.
 
-`hypervisorInfo => String`::
+[[node-hypervisorInfo]]
+hypervisorInfo => String::
 Additional information about hypervisor for this node.
 
-`hypervisorType => String`::
+[[node-hypervisorType]]
+hypervisorType => String::
 Hypervisor type as `string` (usually hypervisor vendor or product name, like VMWare or XEN).
 
-`icmpAverageRTT => Integer`::
+[[node-icmpAverageRTT]]
+icmpAverageRTT => Integer::
 ICMP average response time for primary address. Will return null if no information.
 
-`icmpLastRTT => Integer`::
+[[node-icmpLastRTT]]
+icmpLastRTT => Integer::
 ICMP last response time for primary address. Will return null if no information.
 
-`icmpMaxRTT => Integer`::
+[[node-icmpMaxRTT]]
+icmpMaxRTT => Integer::
 ICMP maximal response time for primary address. Will return null if no information.
 
-`icmpMinRTT => Integer`::
+[[node-icmpMinRTT]]
+icmpMinRTT => Integer::
 ICMP minimal response time for primary address. Will return null if no information.
 
-`icmpPacketLoss => Integer`::
+[[node-icmpPacketLoss]]
+icmpPacketLoss => Integer::
 ICMP packet loss for primary address. Will return null if no information.
 
-`icmpProxy => <<class-node>>`::
-Object that is set as ICMP proxy in object properties or NULL. 
+[[node-icmpProxy]]
+icmpProxy => <<class-node>>::
+Object that is set as ICMP proxy in object properties or NULL.
 
-`interfaces => Array`::
+[[node-interfaces]]
+interfaces => Array::
 Array with <<class-interface>> objects, that are under this node. First object placed at index 0.
 
-`is802_1x => Boolean`::
+[[node-is802_1x]]
+is802_1x => Boolean::
 `TRUE` if node supports 802.1x. Equivalent of `isPAE`.
 
-`isAgent => Boolean`::
+[[node-isAgent]]
+isAgent => Boolean::
 `TRUE` if NetXMS agent detected on node
 
-`isBridge => Boolean`::
+[[node-isBridge]]
+isBridge => Boolean::
 `TRUE` if node is a bridge
 
-`isCDP => Boolean`::
+[[node-isCDP]]
+isCDP => Boolean::
 `TRUE` if node supports CDP (Cisco Discovery Protocol)
 
-`isDecommissioned => Boolean`::
+[[node-isDecommissioned]]
+isDecommissioned => Boolean::
 `TRUE` if node is decommissioned.
 
-`isEtherNetIP => Boolean`::
+[[node-isEtherNetIP]]
+isEtherNetIP => Boolean::
 `TRUE` if node supports EtherNet/IP (Industrial Protocol)
 
-`isExternalGateway => Boolean`::
+[[node-isExternalGateway]]
+isExternalGateway => Boolean::
 `TRUE` if node is an external gateway (remotely managed node). Alias: `isRemotelyManaged`.
 
-`isInMaintenanceMode => Boolean`::
+[[node-isInMaintenanceMode]]
+isInMaintenanceMode => Boolean::
 `TRUE` if node is in maintenance mode
 
-`isLLDP => Boolean`::
+[[node-isLLDP]]
+isLLDP => Boolean::
 `TRUE` if node supports LLDP (Link Layer Discovery Protocol)
 
-`isLocalManagement => Boolean`::
+[[node-isLocalManagement]]
+isLocalManagement => Boolean::
 `TRUE` if node is a local management server (NetXMS server)
 
-`isLocalMgmt => Boolean`::
+[[node-isLocalMgmt]]
+isLocalMgmt => Boolean::
 `TRUE` if node is a local management server (NetXMS server)
 
-`isModbusTCP => Boolean`::
+[[node-isModbusTCP]]
+isModbusTCP => Boolean::
 `TRUE` if node supports Modbus TCP
 
-`isNativeAgent => Boolean`::
+[[node-isNativeAgent]]
+isNativeAgent => Boolean::
 `TRUE` if node is a native agent.
 
-`isNDP => Boolean`::
+[[node-isNDP]]
+isNDP => Boolean::
 `TRUE` if node supports OSPF/NDP. Equivalent of `isOSPF`.
 
-`isOSPF => Boolean`::
+[[node-isOSPF]]
+isOSPF => Boolean::
 `TRUE` if node supports OSPF/NDP. Equivalent of `isNDP`.
 
-`isPAE => Boolean`::
+[[node-isPAE]]
+isPAE => Boolean::
 `TRUE` if node supports 802.1x. Equivalent of `is802_1x`.
 
-`isPrinter => Boolean`::
+[[node-isPrinter]]
+isPrinter => Boolean::
 `TRUE` if node is a printer
 
-`isProfiNet => Boolean`::
+[[node-isProfiNet]]
+isProfiNet => Boolean::
 `TRUE` if node supports PROFINET (Process Field Network)
 
-`isRouter => Boolean`::
+[[node-isRouter]]
+isRouter => Boolean::
 `TRUE` if node is a router (has IP forwarding enabled)
 
-`isSMCLP => Boolean`::
+[[node-isSMCLP]]
+isSMCLP => Boolean::
 `TRUE` if node supports SMCLP (Server Management Command Line Protocol)
 
-`isSNMP => Boolean`::
+[[node-isSNMP]]
+isSNMP => Boolean::
 `TRUE` if SNMP agent detected on node
 
-`isSONMP => Boolean`::
+[[node-isSONMP]]
+isSONMP => Boolean::
 `TRUE` if node supports SONMP/NDP (Synoptics/Nortel Discovery Protocol)
 
-`isSSH => Boolean`::
+[[node-isSSH]]
+isSSH => Boolean::
 `TRUE` if SSH is connection available
 
-`isSSHCommandChannelAvailable => Boolean`::
+[[node-isSSHCommandChannelAvailable]]
+isSSHCommandChannelAvailable => Boolean::
 `TRUE` if SSH command channel can be established to this node.
 
-`isSSHInteractiveChannelAvailable => Boolean`::
+[[node-isSSHInteractiveChannelAvailable]]
+isSSHInteractiveChannelAvailable => Boolean::
 `TRUE` if SSH interactive (shell) channel can be established to this node.
 
-`isSTP => Boolean`::
+[[node-isSTP]]
+isSTP => Boolean::
 `TRUE` if node supports STP (Spanning Tree Protocol)
 
-`isVirtual => Boolean`::
+[[node-isVirtual]]
+isVirtual => Boolean::
 `TRUE` if node is virtual
 
-`isVRRP => Boolean`::
+[[node-isVRRP]]
+isVRRP => Boolean::
 `TURE` if VRRP supported.
 
-`isWirelessAP => Boolean`::
+[[node-isWirelessAP]]
+isWirelessAP => Boolean::
 `TURE` if node is wireless access point
 
-`isWirelessController => Boolean`::
+[[node-isWirelessController]]
+isWirelessController => Boolean::
 `TURE` if node is wireless controller
 
-`lastAgentCommTime => Integer`::
+[[node-lastAgentCommTime]]
+lastAgentCommTime => Integer::
 Unix timestamp of last time when communication with agent was
 
-`modbusProxy => <<class-node>>`::
+[[node-modbusProxy]]
+modbusProxy => <<class-node>>::
 MODBUS proxy object
 
-`modbusProxyId => Integer`::
+[[node-modbusProxyId]]
+modbusProxyId => Integer::
 MODBUS proxy object id
 
-`modbusTCPPort => Integer`::
+[[node-modbusTCPPort]]
+modbusTCPPort => Integer::
 MODBUS TCP port
 
-`modbusUnitId => Integer`::
+[[node-modbusUnitId]]
+modbusUnitId => Integer::
 MODBUS unit id
 
-`networkPathCheckResult => <<class-networkpathcheckresult>>`::
+[[node-networkPathCheckResult]]
+networkPathCheckResult => <<class-networkpathcheckresult>>::
 Node network path
 
-`nodeSubType => String`::
+[[node-nodeSubType]]
+nodeSubType => String::
 Node sub type
 
 [[class-node-types,Node::types]]
-`nodeType => Integer`::
+nodeType => Integer::
 Node type <<node-types>>
 
-`ospfAreas => <<class-ospfarea>>`::
+[[node-ospfAreas]]
+ospfAreas => <<class-ospfarea>>::
 Returns <<class-ospfarea>> class object
 
-`ospfNeighbors => Array`::
+[[node-ospfNeighbors]]
+ospfNeighbors => Array::
 Array with <<class-ospfarea>> class objects
 
-`ospfRouterId => String`::
+[[node-ospfRouterId]]
+ospfRouterId => String::
 OSPF router ID
 
-`physicalContainer => Object`::
+[[node-physicalContainer]]
+physicalContainer => Object::
 Physical container object: Rack <<class-netobj>> or Chassis <<class-chassis>>
 
-`physicalContainerId => Integer`::
+[[node-physicalContainerId]]
+physicalContainerId => Integer::
 Physical container object id (Rack or Chassis)
 
-`platformName => String`::
+[[node-platformName]]
+platformName => String::
 Platform name reported by NetXMS agent
 
-`pollCountForStatusChange => Integer`::
+[[node-pollCountForStatusChange]]
+pollCountForStatusChange => Integer::
 Number of polls required before registering a status change.
 
-`primaryHostName => String`::
+[[node-primaryHostName]]
+primaryHostName => String::
 Primary host name
 
-`productCode => String`::
+[[node-productCode]]
+productCode => String::
 Hardware system property - product code
 
-`productName => String`::
+[[node-productName]]
+productName => String::
 Hardware system property - product name
 
-`productVersion => String`::
+[[node-productVersion]]
+productVersion => String::
 Hardware system property - product version
 
-`rack => <<class-netobj>>`::
+[[node-rack]]
+rack => <<class-netobj>>::
 Will return Rack object as <<class-netobj>> if node is added in rack
 
-`rackHeight => Integer`::
+[[node-rackHeight]]
+rackHeight => Integer::
 Object height in rack
 
-`rackId => Integer`::
+[[node-rackId]]
+rackId => Integer::
 Will return Rack id if node is added in rack
 
-`rackPosition => Integer`::
+[[node-rackPosition]]
+rackPosition => Integer::
 Object position in rack
 
-`runtimeFlags => Integer`::
+[[node-runtimeFlags]]
+runtimeFlags => Integer::
 Bit mask of <<node-runtime-flags>>, `uint32`.
 
-`serialNumber => String`::
+[[node-serialNumber]]
+serialNumber => String::
 Serial number from hardware system property
 
-`snmpOID => String`::
+[[node-snmpOID]]
+snmpOID => String::
 SNMP object identifier (result of `1.3.6.1.2.1.1.2.0` request)
 
-`snmpProxy => <<class-node>>`::
-Object that is set as SNMP proxy in object properties or NULL. 
+[[node-snmpProxy]]
+snmpProxy => <<class-node>>::
+Object that is set as SNMP proxy in object properties or NULL.
 
-`snmpProxyId => Integer`::
-SNMP proxy object id. 
+[[node-snmpProxyId]]
+snmpProxyId => Integer::
+SNMP proxy object id.
 
-`snmpSysContact => String`::
+[[node-snmpSysContact]]
+snmpSysContact => String::
 SNMP system contact (result of `1.3.6.1.2.1.1.4.0` request)
 
-`snmpSysLocation => String`::
+[[node-snmpSysLocation]]
+snmpSysLocation => String::
 SNMP system location (result of `1.3.6.1.2.1.1.6.0` request)
 
-`snmpSysName => String`::
+[[node-snmpSysName]]
+snmpSysName => String::
 SNMP system name (result of `1.3.6.1.2.1.1.5.0` request)
 
-`snmpVersion => Integer`::
+[[node-snmpVersion]]
+snmpVersion => Integer::
 Configured SNMP version:
-
++
 * 0: SNMP version 1
 * 1: SNMP version 2c
 * 2: SNMP version 3
 
-`softwarePackages => Array`::
+[[node-softwarePackages]]
+softwarePackages => Array::
 Returns array of <<class-softwarepackage>> class objects
 
-`sysDescription => String`::
+[[node-sysDescription]]
+sysDescription => String::
 System description (value of `System.Uname` for nodes with agents or `1.3.6.1.2.1.1.1.0` for SNMP nodes)
 
-`tunnel => <<class-tunnel>>`::
-Tunnel object f this node or NULL if there is no tunnel active and bound to this node. 
+[[node-tunnel]]
+tunnel => <<class-tunnel>>::
+Tunnel object f this node or NULL if there is no tunnel active and bound to this node.
 
-`vendor => String`::
+[[node-vendor]]
+vendor => String::
 Hardware vendor information
 
-`vlans => Array`::
+[[node-vlans]]
+vlans => Array::
 Array with object <<class-vlan>> objects (`null` if there are no VLANs)
 
-`wirelessDomain => <<class-wirelessdomain>>`::
+[[node-wirelessDomain]]
+wirelessDomain => <<class-wirelessdomain>>::
 Wireless domain of this node
 
-`wirelessDomainId => Integer`::
+[[node-wirelessDomainId]]
+wirelessDomainId => Integer::
 Wireless domain id of this node
 
-`wirelessStations => Array`::
+[[node-wirelessStations]]
+wirelessStations => Array::
 Array with object <<class-wirelessstation>> objects (`null` if there are no Wireless Stations)
 
-`zone => <<class-zone>>`::
+[[node-zone]]
+zone => <<class-zone>>::
 <<class-zone>> object (`null` if zoning is disabled)
 
-`zoneProxyAssignments => Integer`::
+[[node-zoneProxyAssignments]]
+zoneProxyAssignments => Integer::
 Number of objects where this node is selected as either primary or backup zone proxy (`0` if zoning is disabled or this node is not a zone proxy).
 
-`zoneProxyStatus => Boolean`::
+[[node-zoneProxyStatus]]
+zoneProxyStatus => Boolean::
 Status of this node as zone proxy (`true` if active).
 
-`zoneUIN => Integer`::
+[[node-zoneUIN]]
+zoneUIN => Integer::
 This node zone UIN
+--
 
 ==== Instance methods
 
@@ -382,9 +503,12 @@ include::_shared/netobj-methods.adoc[]
 
 include::_shared/datacollectiontarget-methods.adoc[]
 
-`callWebService(webSvcName, requestType, ...) => <<class-webserviceresponse>>`::
+[.method-list]
+--
+[[node-callWebService]]
+callWebService(webSvcName, requestType, ...) => <<class-webserviceresponse>>::
 Finds web service by name, makes request and returns the <<class-webserviceresponse>> object.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -395,14 +519,14 @@ Finds web service by name, makes request and returns the <<class-webservicerespo
 |acceptCached|Boolean|Optional named parameter. If True, response stored in agent's cache will be used. Default: false.
 |...|Strings|Optional additional parameter(s) that will be used in web service definition to expand %1, %2... macro.
 |===
-
++
 .Return
 Instance of <<class-webserviceresponse>> with request result.
-
++
 [.source]
 ....
 // Valid example when request fails because there is no connection to agent
-result = $node.callWebService("Web service name", "GET", "additional/ult/path"); 
+result = $node.callWebService("Web service name", "GET", "additional/ult/path");
 println(result.success); // "false"
 println(result.errorMessage); // "No connection with agent"
 println(result.agentErrorCode); // "0"
@@ -422,11 +546,12 @@ result = $node.callWebService("Web service name", "GET", "additional", "paramete
 result = $node.callWebService("Web service name", "GET", acceptCached: true, "additional", "parameters);
 ....
 
-`createSNMPTransport(port, community, context, failIfUnreachable) => <<class-snmptransport>>`::
+[[node-createSNMPTransport]]
+createSNMPTransport(port, community, context, failIfUnreachable) => <<class-snmptransport>>::
 Create SNMP transport object of class <<class-snmptransport>> with communication settings defined on the node. It is possible to specify a community string but only community strings listed in Network Credentials will be accepted.
-Creation of SNMP transport is a preparatory operation enabling subsequent sending of SNMP requests to node.  
-However, creation of SNMP transport does not guarantee that the node is accessible. 
-
+Creation of SNMP transport is a preparatory operation enabling subsequent sending of SNMP requests to node.
+However, creation of SNMP transport does not guarantee that the node is accessible.
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -435,189 +560,206 @@ However, creation of SNMP transport does not guarantee that the node is accessib
 |context|String|Optional parameter with context.
 |failIfUnreachable|String|Optional parameter, is provided and is true, check that SNMP is reachable on the node before creating SNMP transport. *This parameter was added in version 4.4.1*
 |===
-
++
 .Return
-
 Instance of <<class-snmptransport>> or `null` if failed or node was not reacheable when failIfUnreachable was set to true.
 
-`enable8021xStatusPolling(flag) => void`::
+[[node-enable8021xStatusPolling]]
+enable8021xStatusPolling(flag) => void::
 Enable or disable 802.1x port state checking during status polls.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If 802.1x port state checking should be enabled.
 |===
 
-`enableAgent(flag) => void`::
+[[node-enableAgent]]
+enableAgent(flag) => void::
 Enable or disable usage of NetXMS agent for all polls.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If agent usage should be enabled.
 |===
 
-`enableDiscoveryPolling(flag) => void`::
+[[node-enableDiscoveryPolling]]
+enableDiscoveryPolling(flag) => void::
 Enable or disable discovery polling.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If discovery polling should be enabled.
 |===
 
-`enableEtherNetIP(flag) => void`::
+[[node-enableEtherNetIP]]
+enableEtherNetIP(flag) => void::
 Enable or disable usage of EtherNet/IP for polls.
-
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If EtherNet/IP should be enabled.
 |===
 
-`enableIcmp(flag) => void`::
+[[node-enableIcmp]]
+enableIcmp(flag) => void::
 Enable or disable usage of ICMP pings for status polls.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If ICMP pings should be enabled.
 |===
 
-`enableModbusTcp(flag) => void`::
+[[node-enableModbusTcp]]
+enableModbusTcp(flag) => void::
 Enable or disable usage of Modbus TCP for polls.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If Modbus TCP should be enabled.
 |===
 
-`enablePrimaryIPPing(flag) => void`::
+[[node-enablePrimaryIPPing]]
+enablePrimaryIPPing(flag) => void::
 Enable or disable usage of ICMP ping for primary IP.
-
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If primary IP ping should be enabled.
 |===
 
-`enableRoutingTablePolling(flag) => void`::
+[[node-enableRoutingTablePolling]]
+enableRoutingTablePolling(flag) => void::
 Enable or disable routing table polling.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If routing table polls should be enabled.
 |===
 
-`enableSnmp(flag) => void`::
+[[node-enableSnmp]]
+enableSnmp(flag) => void::
 Enable or disable usage of SNMP for all polls.
-
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If SNMP communication should be enabled.
 |===
 
-`enableSmclpPropertyPolling(flag) => void`::
+[[node-enableSmclpPropertyPolling]]
+enableSmclpPropertyPolling(flag) => void::
 Enable or disable reading of SM-CLP available properties metadata during
 configuration poll.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If 802.1x port state checking should be enabled.
 |===
-`enableSsh(flag) => void`::
-Enable or disable usage of SSH 
 
+[[node-enableSsh]]
+enableSsh(flag) => void::
+Enable or disable usage of SSH
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If SSH communication should be enabled.
 |===
 
-`enableTopologyPolling(flag) => void`::
+[[node-enableTopologyPolling]]
+enableTopologyPolling(flag) => void::
 Enable or disable topology polling.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If topology polls should be enabled.
 |===
 
-`enableVnc(flag) => void`::
+[[node-enableVnc]]
+enableVnc(flag) => void::
 Enable or disable VNC detection on the node during configuration poll.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If VNC detection should be enabled.
 |===
 
-`enableWinPerfCountersCache(flag) => void`::
+[[node-enableWinPerfCountersCache]]
+enableWinPerfCountersCache(flag) => void::
 Enable or disable reading of Windows performance counters metadata during
 configuration poll.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |flag|Boolean|If reading of Windows performance counters metadata should be enabled.
 |===
 
-`executeAgentCommand(command, …) => Boolean`::
+[[node-executeAgentCommand]]
+executeAgentCommand(command, ...) => Boolean::
 Execute agent command (action) on node.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |command|String|Command to be executed.
-|…|String|Optional arguments for command
+|...|String|Optional arguments for command
 |===
-
++
 .Return
 True if command execution is successful or false otherwise.
 
-`executeAgentCommandWithOutput(command, …) => String`::
+[[node-executeAgentCommandWithOutput]]
+executeAgentCommandWithOutput(command, ...) => String::
 Execute agent command (action) on node and return it's output.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |command|String|Command to be executed.
-|…|String|Optional arguments for command
+|...|String|Optional arguments for command
 |===
-
++
 .Return
 String with output of the command or null on failure.
 
-`executeSSHCommand(command) => array`::
+[[node-executeSSHCommand]]
+executeSSHCommand(command) => array::
 Execute SSH command on node.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |command|String|Command to be executed.
 |===
-
++
 .Return
 Array of strings with output of the command or null on failure.
 
 [[class-node-getblockedports,Node::getBlockedPorts()]]
-`getBlockedPorts(protocol) => Array`::
+getBlockedPorts(protocol) => Array::
 Get array of blocked ports for the specified protocol.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |protocol|String|Protocol type - "tcp" or "udp"
 |===
-
++
 .Return
 Array of integers representing blocked port numbers.
-
++
 [.source]
 ....
 blockedTcpPorts = $node->getBlockedPorts("tcp");
@@ -627,19 +769,19 @@ foreach (port : blockedTcpPorts) {
 ....
 
 [[class-node-getinstalledpackages,Node::getInstalledPackages()]]
-`getInstalledPackages(filter, useRegex) => Array`::
+getInstalledPackages(filter, useRegex) => Array::
 Get array of installed packages on the node.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |filter|String|Optional package name filter
 |useRegex|Boolean|Optional. If TRUE, use regex matching for filter. Default is FALSE
 |===
-
++
 .Return
 Array of installed packages on the node.
-
++
 [.source]
 ....
 // Get all packages
@@ -650,19 +792,19 @@ packages = $node->getInstalledPackages("netxms", false);
 ....
 
 [[class-node-getinterface,Node::getInterface()]]
-`getInterface(ifIdentifier) => <<class-interface>>`::
+getInterface(ifIdentifier) => <<class-interface>>::
 Get interface object by index, MAC address or name. If
 name is number method will assume that it is index.
-
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |ifIdentifier|Integer or String|Index, MAC address or name of interface.
 |===
-
++
 .Return
 <<class-interface>> object.
-
++
 [.source]
 ....
 println($node.getInterface("00:14:22:04:25:37").name); // Will print "wlp4s0"
@@ -671,62 +813,63 @@ println($node.getInterface("wlp4s0").name); // Will print "wlp4s0"
 ....
 
 [[class-node-getinterfacebyindex,Node::getInterfaceByIndex()]]
-`getInterfaceByIndex(ifIndex) => <<class-interface>>`::
+getInterfaceByIndex(ifIndex) => <<class-interface>>::
 Get interface object by index.
-
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |ifIndex|Integer|Index of interface.
 |===
-
++
 .Return
 <<class-interface>> object.
-
++
 [.source]
 ....
 println($node.getInterfaceByIndex(3).name); // Will print "wlp4s0"
 ....
 
 [[class-node-getinterfacebymacaddress,Node::getInterfaceByMACAddress()]]
-`getInterfaceByMACAddress(ifMACAddr) => <<class-interface>>`::
+getInterfaceByMACAddress(ifMACAddr) => <<class-interface>>::
 Get interface object by MAC address.
-
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |ifMACAddr|String|MAC address of interface.
 |===
-
++
 .Return
 <<class-interface>> object.
-
++
 [.source]
 ....
 println($node.getInterfaceByMACAddress("00:14:22:04:25:37").name); // Will print "wlp4s0"
 ....
 
 [[class-node-getinterfacebyname,Node::getInterfaceByName()]]
-`getInterfaceByName(IfName) => <<class-interface>>`::
+getInterfaceByName(IfName) => <<class-interface>>::
 Get interface object by name.
-
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |IfName|String|Name of interface.
 |===
-
++
 .Return
 <<class-interface>> object.
-
++
 [.source]
 ....
 println($node.getInterfaceByName("wlp4s0").name); // Will print "wlp4s0"
 ....
 
-`getInterfaceName(ifIndex) => String`::
+[[node-getInterfaceName]]
+getInterfaceName(ifIndex) => String::
 Get interface name by index.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -734,19 +877,19 @@ Get interface name by index.
 |===
 
 [[class-node-isportblocked,Node::isPortBlocked()]]
-`isPortBlocked(port, protocol) => Boolean`::
+isPortBlocked(port, protocol) => Boolean::
 Check if a specific port is blocked for the given protocol.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |port|Integer|Port number (1-65535)
 |protocol|String|Protocol - "tcp" or "udp"
 |===
-
++
 .Return
 TRUE if the port is blocked, FALSE otherwise.
-
++
 [.source]
 ....
 if ($node->isPortBlocked(22, "tcp")) {
@@ -754,27 +897,28 @@ if ($node->isPortBlocked(22, "tcp")) {
 }
 ....
 
-`getWebService(webSvcName) => <<class-webservice>>`::
+[[node-getWebService]]
+getWebService(webSvcName) => <<class-webservice>>::
 Get web service object by name.
-
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
 |webSvcName|String|Name of interface.
 |===
-
++
 .Return
 <<class-webservice>> object.
-
++
 [.source]
 ....
 webSvc = $node.getWebService("webSvcName");
 ....
 
 [[class-node-opensshsession,Node::openSSHSession()]]
-`openSSHSession(user, password, keyId) => <<class-sshsession>>`::
+openSSHSession(user, password, keyId) => <<class-sshsession>>::
 Open an interactive SSH session to this node.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -782,10 +926,10 @@ Open an interactive SSH session to this node.
 |password|String|Optional SSH password
 |keyId|Integer|Optional SSH key identifier
 |===
-
++
 .Return
 <<class-sshsession>> object on success, or NULL on failure.
-
++
 [.source]
 ....
 session = $node->openSSHSession();
@@ -799,9 +943,9 @@ if (session != null && session->connected) {
 ....
 
 [[class-node-readagentlist,Node::readAgentList()]]
-`readAgentList(name) => Array`::
+readAgentList(name) => Array::
 Request agent list directly from agent on given node. Returns array of strings or `NULL` if failed.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -809,9 +953,9 @@ Request agent list directly from agent on given node. Returns array of strings o
 |===
 
 [[class-node-readagentparameter,Node::readAgentParameter()]]
-`readAgentParameter(name) => String`::
+readAgentParameter(name) => String::
 Request metric directly from agent on given node. Returns `NULL` if failed.
-
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
@@ -819,9 +963,9 @@ Request metric directly from agent on given node. Returns `NULL` if failed.
 |===
 
 [[class-node-readagenttable,Node::readAgentTable()]]
-`readAgentTable(name) => <<class-table>>`::
+readAgentTable(name) => <<class-table>>::
 Requests agent table directly from agent on given node. Returns <<class-table>> or `NULL` if failed.
-
++
 .Parameters
 [cols="1,1a,3a" grid="none", frame="none"]
 |===
@@ -829,91 +973,97 @@ Requests agent table directly from agent on given node. Returns <<class-table>> 
 |===
 
 [[class-node-readdriverparameter,Node::readDriverParameter()]]
-`readDriverParameter(name) => String`::
+readDriverParameter(name) => String::
 Request driver-specific metric from network device driver (e.g. Rital).
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|List name.
 |===
 
-`readInternalParameter(name) => String`::
+[[node-readInternalParameter]]
+readInternalParameter(name) => String::
 Read internal parameter
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Parameter name
 |===
-
++
 .Return
 Value of requested internal parameter
 
-`readInternalTable(name) => <<class-table>>`::
+[[node-readInternalTable]]
+readInternalTable(name) => <<class-table>>::
 Read internal table
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Table name
 |===
-
++
 .Return
 Value of requested internal table of class <<class-table>>
 
 [[class-node-readWebServiceList,Node::readWebServiceList()]]
-`readWebServiceList(name) => Array`::
+readWebServiceList(name) => Array::
 Read list from node using web service
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Name is expected in form service:path or service(arguments):path
 |===
-
++
 .Return
 Array with string with web service instances
 
 [[class-node-readWebServiceParameter,Node::readWebServiceParameter()]]
-`readWebServiceParameter(name) => String`::
+readWebServiceParameter(name) => String::
 Read from node web service parameter
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Name is expected in form service:path or service(arguments):path
 |===
-
++
 .Return
 String with result read from web service
 
-`setExpectedCapabilities(capabilities) => void`::
+[[node-setExpectedCapabilities]]
+setExpectedCapabilities(capabilities) => void::
 Set the expected capabilities for this node.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |capabilities|Integer|Capability flags bitmask. Only allows capability bits for: native agent, SNMP, EtherNet/IP, Modbus TCP, and SSH.
 |===
 
-`setIfXTableUsageMode(mode) => void`::
+[[node-setIfXTableUsageMode]]
+setIfXTableUsageMode(mode) => void::
 Set ifXTable usage mode 0 - use default, 1 - enable, 2 - disable
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |mode|Integer|usage mode
 |===
 
-`setPollCountForStatusChange(count) => void`::
+[[node-setPollCountForStatusChange]]
+setPollCountForStatusChange(count) => void::
 Set the required number of polls before registering a status change.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |count|Integer|Number of polls (must be >= 0)
 |===
+--
 
 ==== Constants
 

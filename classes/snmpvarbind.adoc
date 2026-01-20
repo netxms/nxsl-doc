@@ -6,29 +6,42 @@ Represents an SNMP varbind concept in NetXMS. A varbind logically consists of an
 
 ==== Instance attributes
 
-`name => String`::
+[.attr-list]
+--
+[[snmpvarbind-name]]
+name => String::
 Object name (OID string).
 
-`type => Integer`::
+[[snmpvarbind-type]]
+type => Integer::
 ASN.1 type.
 
-`value => String`::
+[[snmpvarbind-value]]
+value => String::
 Object value as a string.
 
-`printableValue => String`::
+[[snmpvarbind-printableValue]]
+printableValue => String::
 Object value as a string with non-printable characters replaced by `?` character.
 
-`valueAsIp => String`::
+[[snmpvarbind-valueAsIp]]
+valueAsIp => String::
 Object value IP address, represented as string.
 
-`valueAsMac => String`::
+[[snmpvarbind-valueAsMac]]
+valueAsMac => String::
 Object value as MAC address, represented as string.
-
+--
 
 ==== Methods
 
-`getValueAsByteStream() => ByteStream`::
+[.method-list]
+--
+[[snmpvarbind-getValueAsByteStream]]
+getValueAsByteStream() => ByteStream::
 Returns object value as <<class-bytestream>>.
 
-`getValueAsString(codepage) => String`::
+[[snmpvarbind-getValueAsString]]
+getValueAsString(codepage) => String::
 Constructs a new String by decoding the varbind value using the specified codepage.
+--

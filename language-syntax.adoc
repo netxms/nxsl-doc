@@ -429,37 +429,43 @@ methods and attributes described below
 
 ==== String attributes
 
-`isEmpty => Boolean`::
+[.attr-list]
+--
+[[string-isEmpty]]
+isEmpty => Boolean::
 Returns "true" if string is empty or "false" otherwise.
-
++
 [.source]
 ....
 s = "";
 println(s.isEmpty); // prints "true"
 ....
 
-
-[[class-string-length,String::length]]
-`length => Integer`::
+[[string-length,String::length]]
+length => Integer::
 Returns number of characters in the string.
-
++
 [.source]
 ....
 s = "1234567890";
 println(s.length); // prints '10'
 ....
+--
 
 ==== String methods
 
-`compareTo(string) => Integer`::
-Compares two strings lexicographically (alphabetical order). 
-Returns `-1` if the argument is a string lexicographically greater than this string, 
+[.method-list]
+--
+[[string-compareTo]]
+compareTo(string) => Integer::
+Compares two strings lexicographically (alphabetical order).
+Returns `-1` if the argument is a string lexicographically greater than this string,
 `1` if the argument is a string lexicographically less than this string or `0` if
-the argument is a string lexicographically equal to this string. 
-
+the argument is a string lexicographically equal to this string.
++
 The is a difference to `==` comparison operator if strings contain numbers because
 values are converted to numberic type prior to comparison.
-
++
 [.source]
 ....
 println("a".compareTo("c")); // prints "-1"
@@ -471,50 +477,49 @@ println("100".compareTo("100.0")); // prints "-1"
 println("100" == "100.0"); // prints true
 ....
 
-
-`compareToIgnoreCase(string) => Integer`::
+[[string-compareToIgnoreCase]]
+compareToIgnoreCase(string) => Integer::
 Same as `compareTo`, but ignoring the case.
-
++
 [.source]
 ....
 println("aaa".compareToIgnoreCase("AAA")); // prints "0"
 ....
 
-
-`contains(string) => Boolean`::
+[[string-contains]]
+contains(string) => Boolean::
 Returns `true` if this string contains the argument string or `false` otherwise.
-
++
 [.source]
 ....
 println("aaa".contains("a")); // prints "true"
 ....
 
-
-`endsWith(string) => Boolean`::
+[[string-endsWith]]
+endsWith(string) => Boolean::
 Returns `true` if this string ends with the argument string or `false` otherwise.
-
++
 [.source]
 ....
 println("abc".endsWith("d")); // prints "false"
 println("Just a sentence".endsWith("a sentence")); // prints "true"
 ....
 
-
-`equalsIgnoreCase(string) => Boolean`::
+[[string-equalsIgnoreCase]]
+equalsIgnoreCase(string) => Boolean::
 Returns `true` if argument string is equal to this string ignoring the case or
 `false` otherwise.
-
++
 [.source]
 ....
 println("abc".equalsIgnoreCase("ABC")); // prints "true"
 ....
 
-
-[[class-string-indexOf,String::indexOf()]]
-`indexOf(string) => Integer`::
+[[string-indexOf,String::indexOf()]]
+indexOf(string) => Integer::
 Returns index of first occurence of argument string in this string or `-1`
 if the argument is not a substring of the string.
-
++
 [.source]
 ....
 println("ABC-DEF-GHI".indexOf("-")); // prints "3"
@@ -522,12 +527,11 @@ println("ABC-DEF-GHI".indexOf("ABC")); // prints "0"
 println("ABC-DEF-GHI".indexOf("JKL")); // prints "-1"
 ....
 
-
-[[class-string-lastIndexOf,String::lastIndexOf()]]
-`lastIndexOf(string) => Integer`::
+[[string-lastIndexOf,String::lastIndexOf()]]
+lastIndexOf(string) => Integer::
 Returns index of last occurence of argument string in this string or `-1`
-if the argument is not a substring of the string. 
-
+if the argument is not a substring of the string.
++
 [.source]
 ....
 println("ABC-DEF-GHI".lastIndexOf("-")); // prints "7"
@@ -535,13 +539,12 @@ println("ABC-DEF-GHI".lastIndexOf("ABC")); // prints "0"
 println("ABC-DEF-GHI".lastIndexOf("JKL")); // prints "-1"
 ....
 
-
-[[class-string-left,String::left()]]
-`left(numberOfCharacters, paddingCharacter) => String`::
+[[string-left,String::left()]]
+left(numberOfCharacters, paddingCharacter) => String::
 Returns left `numberOfCharacters` of this string. If string length is less then
-`numberOfCharacters`, result will be padded on the right. `paddingCharacter` is 
-optional, if not specified, space character will be used for padding. 
-
+`numberOfCharacters`, result will be padded on the right. `paddingCharacter` is
+optional, if not specified, space character will be used for padding.
++
 [.source]
 ....
 println("ABCDEFGHI".left(2)); // prints "AB"
@@ -549,23 +552,21 @@ println("123".left(5)); // prints "123  "
 println("123".left(5, "_")); // prints "123__"
 ....
 
-
-[[class-string-replace,String::replace()]]
-`replace(whatToReplace, replaceBy) => String`::
+[[string-replace,String::replace()]]
+replace(whatToReplace, replaceBy) => String::
 Returns string where all occurencies of `whatToReplace` are replaced with `replaceBy`.
-
++
 [.source]
 ....
 println("A B C A D K L".replace("A", "<A>")); // prints "<A> B C <A> D K L"
 ....
 
-
-[[class-string-right,String::right()]]
-`right(numberOfCharacters, paddingCharacter) => String`::
+[[string-right,String::right()]]
+right(numberOfCharacters, paddingCharacter) => String::
 Returns right `numberOfCharacters` of this string. If string length is less then
-`numberOfCharacters`, result will be padded on the left. `paddingCharacter` is 
-optional, if not specified, space character will be used for padding. 
-
+`numberOfCharacters`, result will be padded on the left. `paddingCharacter` is
+optional, if not specified, space character will be used for padding.
++
 [.source]
 ....
 println("ABCDEFGHI".right(2)); // prints "HI"
@@ -573,15 +574,14 @@ println("123".right(5)); // prints "  123"
 println("123".right(5, "_")); // prints "__123"
 ....
 
-
-[[class-string-split,String::split()]]
-`split(separator, trimWhitespace) => Array`::
+[[string-split,String::split()]]
+split(separator, trimWhitespace) => <<class-array,Array>>::
 Split string into array of strings at given separator.
-
-``trimWhitespace`` parameter is optional and is `false` by default. If set to
++
+`trimWhitespace` parameter is optional and is `false` by default. If set to
 `true`, space characters will be removed on both sides of strings produced by
-splitting. *This parameter was added in version 5.1.4*  
-
+splitting. *This parameter was added in version 5.1.4*
++
 [.source]
 ....
 println("ABC--DEF--GHI".split("--")); // prints "[ABC, DEF, GHI]"
@@ -601,21 +601,20 @@ for (a : s.split(",", true)) println("|"..a.."|");
 // |Carol|
 ....
 
-
-`startsWith(string) => Boolean`::
+[[string-startsWith]]
+startsWith(string) => Boolean::
 Returns `true` if this string starts with the argument string or `false` otherwise.
-
++
 [.source]
 ....
 println("abc".startsWith("d")); // prints "false"
 println("Just a sentence".startsWith("Just a")); // prints "true"
 ....
 
-
-[[class-string-substring,String::substring()]]
-`substring(position, numberOfCharacters) => String`::
+[[string-substring,String::substring()]]
+substring(position, numberOfCharacters) => String::
 Returns substring of this string starting from `position` and containing `numberOfCharacters`.
-
++
 [.source]
 ....
 println("ABCDEFGHIJK".substring(0,3)); // prints "ABC"
@@ -623,57 +622,54 @@ println("ABCDEFGHIJK".substring(6,3)); // prints "GHI"
 println("ABCDEFGHIJK".substring(6,10)); // prints "GHIJK"
 ....
 
-
-[[class-string-toLowerCase,String::toLowerCase()]]
-`toLowerCase() => String`::
+[[string-toLowerCase,String::toLowerCase()]]
+toLowerCase() => String::
 Converts this string to lowercase.
-
++
 [.source]
 ....
 println("ABC def".toLowerCase()); // prints "abc def"
 ....
 
-
-[[class-string-toUpperCase,String::toUpperCase()]]
-`toUpperCase() => String`::
+[[string-toUpperCase,String::toUpperCase()]]
+toUpperCase() => String::
 Converts this string to uppercase.
-
++
 [.source]
 ....
 println("ABC def".toUpperCase()); // prints "ABC DEF"
 ....
 
-
-[[class-string-trim,String::trim()]]
-`trim() => String`::
+[[string-trim,String::trim()]]
+trim() => String::
 Returns this string with whitespace from both sides removed.
-
++
 [.source]
 ....
 println("|" .. "  ABC  ".trim() .. "|") // prints "|ABC|"
 ....
 
-
-[[class-string-trimLeft,String::trimLeft()]]
-`trimLeft() => String`::
+[[string-trimLeft,String::trimLeft()]]
+trimLeft() => String::
 Returns this string with whitespace from left side removed.
-
++
 [.source]
 ....
 println("|" .. "  ABC  ".trimLeft() .. "|") // prints "|ABC   |"
 ....
 
-
-[[class-string-trimRight,String::trimRight()]]
-`trimRight() => String`::
+[[string-trimRight,String::trimRight()]]
+trimRight() => String::
 Returns this string with whitespace from right side removed.
-
++
 [.source]
 ....
 println("|" .. "  ABC  ".trimRight() .. "|") // prints "|   ABC|"
 ....
+--
 
 
+[[class-array]]
 === Arrays
 
 An array in NXSL is actually an ordered map. A map is a type that associates

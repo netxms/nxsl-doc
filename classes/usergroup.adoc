@@ -6,8 +6,13 @@ Object represent user group object and extends <<class-userdbobject>>.
 
 ==== Instance attributes
 
-`memberCount => Integer`::
+[.attr-list]
+--
+[[usergroup-memberCount]]
+memberCount => Integer::
 Group member count
 
-`members => Array`::
+[[usergroup-members]]
+members => Array::
 Array with objects: <<class-user>> or <<class-usergroup>>
+--

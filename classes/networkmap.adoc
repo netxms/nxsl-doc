@@ -8,55 +8,75 @@ Class represents Network Map. Extends <<class-netobj>>.
 
 include::_shared/netobj-attrs.adoc[]
 
-`backgroundColor => Integer`::
+[.attr-list]
+--
+[[networkmap-backgroundColor]]
+backgroundColor => Integer::
 Background color in css format <<const-link-colorsource>>.
 
-`backgroundImageId => Integer`::
+[[networkmap-backgroundImageId]]
+backgroundImageId => Integer::
 Image library GUID.
 
-`backgroundLatitude => Float`::
+[[networkmap-backgroundLatitude]]
+backgroundLatitude => Float::
 Background latitude as floating point number <<class-geolocation>>.
 
-`backgroundLongitude => Float`::
+[[networkmap-backgroundLongitude]]
+backgroundLongitude => Float::
 Background longitude as floating point number <<class-geolocation>>.
 
-`backgroundZoom => Integer`::
+[[networkmap-backgroundZoom]]
+backgroundZoom => Integer::
 Background zoom.
 
-`defaultLinkColor => Integer`::
+[[networkmap-defaultLinkColor]]
+defaultLinkColor => Integer::
 Default link color <<const-link-colorsource>>.
 
-`defaultLinkRouting => Integer`::
+[[networkmap-defaultLinkRouting]]
+defaultLinkRouting => Integer::
 Default link routing <<const-link-routingalgorithm>>.
 
-`defaultLinkStyle => Integer`::
+[[networkmap-defaultLinkStyle]]
+defaultLinkStyle => Integer::
 Default link style <<const-link-style>>.
 
-`defaultLinkWidth => Integer`::
+[[networkmap-defaultLinkWidth]]
+defaultLinkWidth => Integer::
 Default link witdh <<class-networkmaplink>>.
 
-`discoveryRadius => Integer`::
+[[networkmap-discoveryRadius]]
+discoveryRadius => Integer::
 Discovery radius <<class-user>>.
 
-`height => Integer`::
+[[networkmap-height]]
+height => Integer::
 Height.
 
-`isUpdateFailed => Boolean`::
+[[networkmap-isUpdateFailed]]
+isUpdateFailed => Boolean::
 Update fail check.
 
-`layout => Integer`::
+[[networkmap-layout]]
+layout => Integer::
 Layout.
 
-`mapType => Integer`::
+[[networkmap-mapType]]
+mapType => Integer::
 Map type.
 
-`objectDisplayMode => Integer`::
+[[networkmap-objectDisplayMode]]
+objectDisplayMode => Integer::
 Object display mode.
 
-`seedObjects => Array`::
+[[networkmap-seedObjects]]
+seedObjects => Array::
 Seed objects
 
-`width => Integer`::
+[[networkmap-width]]
+width => Integer::
 Width.
+--
 
 

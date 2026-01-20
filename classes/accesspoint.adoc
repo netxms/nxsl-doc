@@ -6,50 +6,68 @@ Represents NetXMS access point object.
 
 ==== Instance attributes
 
-`apState => String`::
+[.attr-list]
+--
+[[accesspoint-apState]]
+apState => String::
 State from <<accesspoint-state>>
 
-`controller => <<class-node>>`::
+[[accesspoint-controller]]
+controller => <<class-node>>::
 Acess point controller of class <<class-node>>.
 
-`controllerId => Integer`::
+[[accesspoint-controllerId]]
+controllerId => Integer::
 Acess point controller object id.
 
-`downSince => Integer`::
+[[accesspoint-downSince]]
+downSince => Integer::
 UNIX epoch timestamp down since.
 
-`index => Integer`::
+[[accesspoint-index]]
+index => Integer::
 Index
 
-`macAddress => String`::
+[[accesspoint-macAddress]]
+macAddress => String::
 Mac address
 
-`model => String`::
+[[accesspoint-model]]
+model => String::
 Model
 
-`peerInterface => <<class-interface>>`::
+[[accesspoint-peerInterface]]
+peerInterface => <<class-interface>>::
 Peer interface of class <<class-interface>>
 
-`peerNode => <<class-node>>`::
+[[accesspoint-peerNode]]
+peerNode => <<class-node>>::
 Peer interface of class <<class-node>>
 
-`radioInterfaces => <<class-radiointerface>>`::
+[[accesspoint-radioInterfaces]]
+radioInterfaces => <<class-radiointerface>>::
 Radio interface of class <<class-radiointerface>>
 
-`serialNumber => String`::
+[[accesspoint-serialNumber]]
+serialNumber => String::
 Serial number
 
-`vendor => String`::
+[[accesspoint-vendor]]
+vendor => String::
 Vendor
 
-`wirelessDomain => <<class-wirelessdomain>>`::
+[[accesspoint-wirelessDomain]]
+wirelessDomain => <<class-wirelessdomain>>::
 Wireless domain of class <<class-wirelessdomain>>
 
-`wirelessDomainId => Integer`::
+[[accesspoint-wirelessDomainId]]
+wirelessDomainId => Integer::
 Wireless domain id
 
-`wirelessStations => String`::
+[[accesspoint-wirelessStations]]
+wirelessStations => String::
 Wireless station of class <<class-wirelessstation>>
+--
 
 ==== Constants
 
@@ -65,9 +83,9 @@ Wireless station of class <<class-wirelessstation>>
 |AP_UNPROVISIONED
 |1
 
-|AP_DOWN  
+|AP_DOWN
 |2
 
-|AP_UNKNOWN  
+|AP_UNKNOWN
 |3
 |===

@@ -6,42 +6,56 @@ Object represents sensor. Extends <<class-datacollectiontarget>>.
 
 ==== Instance attributes
 
+[.attr-list]
+--
 include::_shared/netobj-attrs.adoc[]
 
 include::_shared/datacollectiontarget-attrs.adoc[]
 
-`capabilities => Integer`::
+[[sensor-capabilities]]
+capabilities => Integer::
 Sensor capabilities - currently onle one capability: Modbus(1).
 
-`deviceAddress => String`::
+[[sensor-deviceAddress]]
+deviceAddress => String::
 Device addtess
 
-`deviceClass => Integer`::
+[[sensor-deviceClass]]
+deviceClass => Integer::
 <<sensor-class, Device class>>
 
-`gatewayNode => <<class-node>>`::
+[[sensor-gatewayNode]]
+gatewayNode => <<class-node>>::
 Getway node
 
-`gatewayNodeId => Integer`::
+[[sensor-gatewayNodeId]]
+gatewayNodeId => Integer::
 Getway node id
 
-`isModbus => Boolen`::
+[[sensor-isModbus]]
+isModbus => Boolen::
 If sensor is Modbus sensor
 
-`macAddress => String`::
+[[sensor-macAddress]]
+macAddress => String::
 MAC address
 
-`modbusUnitId => Integer`::
+[[sensor-modbusUnitId]]
+modbusUnitId => Integer::
 MAC address
 
-`model => String`::
+[[sensor-model]]
+model => String::
 Model
 
-`serialNumber => String`::
+[[sensor-serialNumber]]
+serialNumber => String::
 Serial number
 
-`vendor => String`::
+[[sensor-vendor]]
+vendor => String::
 Vendor
+--
 
 ==== Constants
 

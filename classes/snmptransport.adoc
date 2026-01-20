@@ -8,58 +8,59 @@ data form node.
 
 ==== Instance attributes
 
-`snmpVersion => String`::
+[.attr-list]
+--
+[[snmptransport-snmpVersion]]
+snmpVersion => String::
 SNMP version used by the transport. Can be "1", "2c" or "3"
+--
 
 ==== Instance methods
 
-`get(oid) => <<class-snmpvarbind>>`:: Get the object value from specific node
-with SNMP GET request. The node and all SNMP communication details defined by
-SNMP transport. Returns <<class-snmpvarbind>> object. Will return null on
-failure.
-
+[.method-list]
+--
+[[snmptransport-get]]
+get(oid) => <<class-snmpvarbind>>::
+Get the object value from specific node with SNMP GET request. The node and all SNMP communication details defined by SNMP transport. Returns <<class-snmpvarbind>> object. Will return null on failure.
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |oid|String|SNMP object id. Can be given with or without leading dot.
 |===
 
-
-`getValue(oid) => String`:: Get the object value from specific node with SNMP
-GET request. The node and all SNMP communication details defined by SNMP
-transport. This function is similar to SNMPGet but returns string instead of an
-SNMPVarBind object. Will return null on failure.
-
+[[snmptransport-getValue]]
+getValue(oid) => String::
+Get the object value from specific node with SNMP GET request. The node and all SNMP communication details defined by SNMP transport. This function is similar to SNMPGet but returns string instead of an SNMPVarBind object. Will return null on failure.
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |oid|String|SNMP object id. Can be given with or without leading dot.
 |===
-
++
 [.source]
 ....
 println($node.createSNMPTransport()?.getValue("1.3.6.1.2.1.1.2.0")); // Will print e.g. 1.3.6.1.4.1.14988.1
 ....
 
-
-`getValues(array) => String`:: Get object values from specific node with SNMP
-GET request. Request will contain all values that are provided in array. The
-node and all SNMP communication details defined by SNMP transport.
-
+[[snmptransport-getValues]]
+getValues(array) => String::
+Get object values from specific node with SNMP GET request. Request will contain all values that are provided in array. The node and all SNMP communication details defined by SNMP transport.
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |array|Array|Array with SNMP object ids to get
 |===
-
++
 .Return
 Array with resulting strings for each array
 
-
-`set(oid, value, dataType) => Boolean`:: Assign a specific value to the given
-SNMP object for the node. The node and all SNMP communication details defined by
-SNMP transport. Will return TRUE on success, FALSE in case of failure.
-
+[[snmptransport-set]]
+set(oid, value, dataType) => Boolean::
+Assign a specific value to the given SNMP object for the node. The node and all SNMP communication details defined by SNMP transport. Will return TRUE on success, FALSE in case of failure.
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
@@ -68,16 +69,16 @@ SNMP transport. Will return TRUE on success, FALSE in case of failure.
 |dataType|String|<<snmp-data-types,SNMP data type>> (optional).
 |===
 
-
-`walk(oid) => Array`:: Get an array of the <<class-snmpvarbind>> from specific
-node with SNMP WALK request. The node and all SNMP communication details defined
-by SNMP transport. Will return null on failure.
-
+[[snmptransport-walk]]
+walk(oid) => Array::
+Get an array of the <<class-snmpvarbind>> from specific node with SNMP WALK request. The node and all SNMP communication details defined by SNMP transport. Will return null on failure.
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |oid|String|SNMP object id. Can be given with or without leading dot.
 |===
+--
 
 ==== Constants
 
@@ -87,38 +88,38 @@ by SNMP transport. Will return null on failure.
 |===
 | Description | Value
 
-|Integer.  
-|INTEGER 
+|Integer.
+|INTEGER
 
-|Same as INTEGER.  
-|INT 
+|Same as INTEGER.
+|INT
 
-|Octet string.  
-|STRING 
+|Octet string.
+|STRING
 
-|Object id.  
-|OID 
+|Object id.
+|OID
 
-|IP address. 
+|IP address.
 |IPADDR
 
 |Same as IPADDR.
-|IP ADDRESS 
+|IP ADDRESS
 
-|32-bit counter.  
-|COUNTER32 
+|32-bit counter.
+|COUNTER32
 
-|32-bit unsigned integer.  
-|GAUGE32 
+|32-bit unsigned integer.
+|GAUGE32
 
-|Timeticks.  
-|TIMETICKS 
+|Timeticks.
+|TIMETICKS
 
-|64-bit counter.  
-|COUNTER64 
+|64-bit counter.
+|COUNTER64
 
-|32-bit unsigned integer.  
-|UINTEGER32 
+|32-bit unsigned integer.
+|UINTEGER32
 
 |Same as UINTEGER32.
 |UINT32

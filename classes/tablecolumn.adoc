@@ -6,14 +6,21 @@ Represents table column definition object (used by Table class).
 
 ==== Instance attributes
 
-`dataType => Integer`::
+[.attr-list]
+--
+[[tablecolumn-dataType]]
+dataType => Integer::
 <<const-dci-datatype,Data type>>
 
-`displayName => String`::
+[[tablecolumn-displayName]]
+displayName => String::
 Display name
 
-`isInstanceColumn => Boolean`::
+[[tablecolumn-isInstanceColumn]]
+isInstanceColumn => Boolean::
 `TRUE` if column is marked as instance column
 
-`name => String`::
+[[tablecolumn-name]]
+name => String::
 Column name
+--

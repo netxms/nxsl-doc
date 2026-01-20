@@ -7,7 +7,7 @@
 ====
 *Deprecated in 5.0.*
 
-Replaced with method <<class-string-right,right()>> of the string instance.
+Replaced with method <<string-right,right()>> of the string instance.
 ====
 ****
 

@@ -4,20 +4,29 @@
 
 ==== Instance attributes
 
-`description => String`::
+[.attr-list]
+--
+[[networkpathcheckresult-description]]
+description => String::
 Description
-  
-`reason => Integer`::
+
+[[networkpathcheckresult-reason]]
+reason => Integer::
 Reason
 
-`rootCauseInterface => <<class-interface>> or null`::
-Interface name 
+[[networkpathcheckresult-rootCauseInterface]]
+rootCauseInterface => <<class-interface>> or null::
+Interface name
 
-`rootCauseInterfaceId => Integer`::
+[[networkpathcheckresult-rootCauseInterfaceId]]
+rootCauseInterfaceId => Integer::
 Interface ID
 
-`rootCauseNode => <<class-node>> or null`::
+[[networkpathcheckresult-rootCauseNode]]
+rootCauseNode => <<class-node>> or null::
 Node name
 
-`rootCauseNodeId => Integer`::
+[[networkpathcheckresult-rootCauseNodeId]]
+rootCauseNodeId => Integer::
 Node ID
+--

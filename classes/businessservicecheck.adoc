@@ -6,32 +6,45 @@ Object represents business service check
 
 ==== Instance attributes
 
-`currentTicketId => Integer`::
+[.attr-list]
+--
+[[businessservicecheck-currentTicketId]]
+currentTicketId => Integer::
 ID of the ticket that is currently associated with this check or 0 if check is OK
 
-`description => String`::
+[[businessservicecheck-description]]
+description => String::
 Cehck description
 
-`failureReason => String`::
+[[businessservicecheck-failureReason]]
+failureReason => String::
 Reason why check have failed or null if check is not failed
 
-`id => Integer`::
+[[businessservicecheck-id]]
+id => Integer::
 ID of the check
 
-`relatedDCI => DCI`::
+[[businessservicecheck-relatedDCI]]
+relatedDCI => DCI::
 DCI object of class <<class-dci>> that is checked or NULL if check is not DCI based
 
-`relatedDCIId => Integer`::
+[[businessservicecheck-relatedDCIId]]
+relatedDCIId => Integer::
 DCI id that is checked or 0 if it is not DCI based check
 
-`relatedObject => NetObj`::
+[[businessservicecheck-relatedObject]]
+relatedObject => NetObj::
 Related object (inherited from <<class-netobj>>, exact type can be checked with <<func-classof>> function) or NULL
 
-`relatedObjectId => Integer`::
+[[businessservicecheck-relatedObjectId]]
+relatedObjectId => Integer::
 ID of related objec or 0
 
-`state => Integer`::
+[[businessservicecheck-state]]
+state => Integer::
 Current state of the business service check one of <<const-business-service-state,states>>
 
-`type => Integer`::
+[[businessservicecheck-type]]
+type => Integer::
 Business service check one of <<const-business-service-check-type,types>>
+--

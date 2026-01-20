@@ -154,8 +154,8 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |Function |Replacement
 
 |<<func-abs,abs()>>|<<func-math-abs,Math::Abs()>>
-|<<func-addrinrange,AddrInRange()>>|<<class-inetaddress-inrange,InetAddress::inRange()>>
-|<<func-addrinsubnet,AddrInSubnet()>>|<<class-inetaddress-samesubnet,InetAddress::sameSubnet()>>
+|<<func-addrinrange,AddrInRange()>>|<<inetaddress-inrange,InetAddress::inRange()>>
+|<<func-addrinsubnet,AddrInSubnet()>>|<<inetaddress-samesubnet,InetAddress::sameSubnet()>>
 |<<func-agentexecutecommand,AgentExecuteCommand()>>|Node method
 |<<func-agentexecutecommandwithoutput,AgentExecuteCommandWithOutput()>>|Node method
 |<<func-agentreadlist,AgentReadList()>>|<<class-node-readagentlist,Node::readAgentList()>>
@@ -189,15 +189,15 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |<<func-getobjectchildren,GetObjectChildren()>>|NetObj attribute
 |<<func-getobjectparents,GetObjectParents()>>|NetObj attribute
 |<<func-gmtime,gmtime()>>|DateTime class
-|<<func-index,index()>>|<<class-string-indexOf,String::indexOf()>>
+|<<func-index,index()>>|<<string-indexOf,String::indexOf()>>
 |<<func-inlist,inList()>>|Array method
 |<<func-instance,Instance()>>|classof()
 |<<func-leavemaintenance,LeaveMaintenance()>>|<<class-netobj-leavemaintenance,NetObj::leaveMaintenance()>>
-|<<func-left,left()>>|<<class-string-left,String::left()>>
-|<<func-length,length()>>|<<class-string-length,String::length>>
+|<<func-left,left()>>|<<string-left,String::left()>>
+|<<func-length,length()>>|<<string-length,String::length>>
 |<<func-localtime,localtime()>>|DateTime class
-|<<func-lower,lower()>>|<<class-string-toLowerCase,String::toLowerCase()>>
-|<<func-ltrim,ltrim()>>|<<class-string-trimLeft,String::trimLeft()>>
+|<<func-lower,lower()>>|<<string-toLowerCase,String::toLowerCase()>>
+|<<func-ltrim,ltrim()>>|<<string-trimLeft,String::trimLeft()>>
 |<<func-manageobject,ManageObject()>>|NetObj method
 |<<func-max,max()>>|<<func-math-max,Math::Max()>>
 |<<func-min,min()>>|<<func-math-min,Math::Min()>>
@@ -205,11 +205,11 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |<<func-pow,pow()>>|<<func-math-pow,Math::Pow()>>
 |<<func-random,random()>>|<<func-math-random,Math::Random()>>
 |<<func-renameobject,RenameObject()>>|NetObj attribute
-|<<func-replace,replace()>>|<<class-string-replace,String::replace()>>
-|<<func-right,right()>>|<<class-string-right,String::right()>>
-|<<func-rindex,rindex()>>|<<class-string-lastIndexOf,String::lastIndexOf()>>
+|<<func-replace,replace()>>|<<string-replace,String::replace()>>
+|<<func-right,right()>>|<<string-right,String::right()>>
+|<<func-rindex,rindex()>>|<<string-lastIndexOf,String::lastIndexOf()>>
 |<<func-round,round()>>|<<func-math-round,Math::Round()>>
-|<<func-rtrim,rtrim()>>|<<class-string-trimRight,String::trimRight()>>
+|<<func-rtrim,rtrim()>>|<<string-trimRight,String::trimRight()>>
 |<<func-setcustomattribute,SetCustomAttribute()>>|NetObj method
 |<<func-seteventparameter,SetEventParameter()>>|Event method
 |<<func-setinterfaceexpectedstate,SetInterfaceExpectedState()>>|Interface method
@@ -218,15 +218,15 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |<<func-snmpgetvalue,SNMPGetValue()>>|SNMPTransport method
 |<<func-snmpset,SNMPSet()>>|SNMPTransport method
 |<<func-snmpwalk,SNMPWalk()>>|SNMPTransport method
-|<<func-splitstring,SplitString()>>|<<class-string-split,String::split()>>
+|<<func-splitstring,SplitString()>>|<<string-split,String::split()>>
 |<<func-sqrt,sqrt()>>|<<func-math-sqrt,Math::Sqrt()>>
-|<<func-strftime,strftime()>>|<<class-datetime-format,DateTime::format()>>
-|<<func-substr,substr()>>|<<class-string-substring,String::substring()>>
+|<<func-strftime,strftime()>>|<<datetime-format,DateTime::format()>>
+|<<func-substr,substr()>>|<<string-substring,String::substring()>>
 |<<func-tan,tan()>>|<<func-math-tan,Math::Tan()>>
-|<<func-trim,trim()>>|<<class-string-trim,String::trim()>>
+|<<func-trim,trim()>>|<<string-trim,String::trim()>>
 |<<func-unbindobject,UnbindObject()>>|<<class-netobj-unbind,NetObj::unbind()>>
 |<<func-unmanageobject,UnmanageObject()>>|NetObj method
-|<<func-upper,upper()>>|<<class-string-toUpperCase,String::toUpperCase()>>
+|<<func-upper,upper()>>|<<string-toUpperCase,String::toUpperCase()>>
 |===
 
 === Classes

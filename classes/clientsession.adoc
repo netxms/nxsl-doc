@@ -6,38 +6,53 @@ Object represents client session
 
 ==== Instance attributes
 
-`clientInfo => String`::
+[.attr-list]
+--
+[[clientsession-clientInfo]]
+clientInfo => String::
 Client app info string
 
-`clientType => Integer`::
+[[clientsession-clientType]]
+clientType => Integer::
 Client system type - desktop(0), web(1), mobile(2), tablet(3), application(4)
 
-`flags => Integer`::
+[[clientsession-flags]]
+flags => Integer::
 Client flags
 
-`id => Bigint`::
+[[clientsession-id]]
+id => Bigint::
 ID of client session
 
-`loginName => String`::
-Login name 
+[[clientsession-loginName]]
+loginName => String::
+Login name
 
-`loginTime => Integer`::
+[[clientsession-loginTime]]
+loginTime => Integer::
 Login time
 
-`name => String`::
-User name 
+[[clientsession-name]]
+name => String::
+User name
 
-`systemAccessRights => Bigint`::
+[[clientsession-systemAccessRights]]
+systemAccessRights => Bigint::
 User access ritht bit flags
 
-`user => User`::
+[[clientsession-user]]
+user => User::
 object of <<class-user>>
 
-`userId => Integer`::
+[[clientsession-userId]]
+userId => Integer::
 User ID
 
-`webServerAddress => String`::
+[[clientsession-webServerAddress]]
+webServerAddress => String::
 Address for web server if it is web type connection
 
-`workstation => String`::
+[[clientsession-workstation]]
+workstation => String::
 Workstation information if available
+--

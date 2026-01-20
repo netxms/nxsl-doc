@@ -10,41 +10,57 @@ include::_shared/netobj-attrs.adoc[]
 
 include::_shared/datacollectiontarget-attrs.adoc[]
 
-`altitude => Integer`::
+[.attr-list]
+--
+[[mobiledevice-altitude]]
+altitude => Integer::
 Altitude
 
-`batteryLevel => Integer`::
+[[mobiledevice-batteryLevel]]
+batteryLevel => Integer::
 Battery percentage
 
-`commProtocol => String`::
+[[mobiledevice-commProtocol]]
+commProtocol => String::
 Communication Protocol
 
-`deviceId => String`::
+[[mobiledevice-deviceId]]
+deviceId => String::
 Device id
 
-`direction => String`::
+[[mobiledevice-direction]]
+direction => String::
 Direction
 
-`lastReportTime => Integer`::
+[[mobiledevice-lastReportTime]]
+lastReportTime => Integer::
 UNIX timestamp when device last reported data
 
-`model => String`::
+[[mobiledevice-model]]
+model => String::
 Device model
 
-`osName => String`::
+[[mobiledevice-osName]]
+osName => String::
 OS name installed on device
 
-`osVersion => String`::
+[[mobiledevice-osVersion]]
+osVersion => String::
 OS version
 
-`serialNumber => String`::
-Serial number 
+[[mobiledevice-serialNumber]]
+serialNumber => String::
+Serial number
 
-`speed => String`::
+[[mobiledevice-speed]]
+speed => String::
 Speed
 
-`userId => String`::
+[[mobiledevice-userId]]
+userId => String::
 User id
 
-`vendor => String`::
+[[mobiledevice-vendor]]
+vendor => String::
 Vendor
+--

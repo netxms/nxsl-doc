@@ -28,8 +28,7 @@ html:
 	bundle exec asciidoctor -r ./lib/stats.rb -a html $(OPTS) -b html5 -a docinfo=shared -o build/nxsl.html index.adoc
 
 pdf:
-	#asciidoctor-pdf -a pdf-style=netxms-theme.yml -a pdf-fontsdir=fonts -o build/nxsl.pdf index.adoc
-	bundle exec asciidoctor-pdf -o build/nxsl.pdf index.adoc
+	bundle exec asciidoctor-pdf -a pdf-theme=netxms-theme.yml -a pdf-fontsdir=fonts $(OPTS) -o build/nxsl.pdf index.adoc
 
 docbook:
 	bundle exec asciidoctor -r ./lib/stats.rb -b docbook -o build/nxsl.docbook index.adoc

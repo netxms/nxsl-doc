@@ -13,58 +13,65 @@ Attribute values can be accessed in the same way as instance attribute.
 
 ==== Instance methods
 
-`get(key) => ?`::
+[.method-list]
+--
+[[jsonobject-get]]
+get(key) => ?::
 Returns attribute value by the key. Value type depends on the type used in JSON.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |key|String|Attribute key
 |===
-
-.Return 
++
+.Return
 Attribute value
 
-`keys() => Array`::
+[[jsonobject-keys]]
+keys() => Array::
 Returns attribute array
-
-.Return 
++
+.Return
 Attribute array
 
-`serialize() => String`::
+[[jsonobject-serialize]]
+serialize() => String::
 Returns string with serialized JSON
-
-.Return 
++
+.Return
 String with JSON
 
-`set(key, value) => void`::
+[[jsonobject-set]]
+set(key, value) => void::
 Sets attribute referenced by key to the given value.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |key|String|Attribute key
 |value|String|Attribute new value
 |===
+--
 
 ==== Constructors
 
 `JsonObject()`::
 Creates new JSON object.
-
++
 .Return
-
++
 JsonObject object
 
 `JsonObject(object)`::
 Creates new JSON object with attributes and values from NXSL object or hashmap. *Added in version 5.3*
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|object|NXSL object
 |===
-
++
 .Return
-
++
 JsonObject object

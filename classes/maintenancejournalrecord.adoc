@@ -6,20 +6,29 @@ One maintenance journal record entry
 
 ==== Instance attributes
 
-`authorId => Integer`::
+[.attr-list]
+--
+[[maintenancejournalrecord-authorId]]
+authorId => Integer::
 Autor user ID
 
-`creationTime => Integer`::
+[[maintenancejournalrecord-creationTime]]
+creationTime => Integer::
 UNIX timestamp of creation
 
-`description => String`::
+[[maintenancejournalrecord-description]]
+description => String::
 Description
 
-`editorId => Integer`::
+[[maintenancejournalrecord-editorId]]
+editorId => Integer::
 Editor user ID
 
-`modificationTime => Integer`::
+[[maintenancejournalrecord-modificationTime]]
+modificationTime => Integer::
 UNIX timestamp of last modification
 
-`objectId => Integer`::
+[[maintenancejournalrecord-objectId]]
+objectId => Integer::
 ID of an object that was under maintenance
+--

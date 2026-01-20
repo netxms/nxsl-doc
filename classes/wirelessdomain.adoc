@@ -6,14 +6,21 @@ Class represents wireless domain
 
 ==== Instance attributes
 
-`apCountDown => Integer`::
+[.attr-list]
+--
+[[wirelessdomain-apCountDown]]
+apCountDown => Integer::
 Number of access points in 'Down' state
 
-`apCountUnknown => Integer`::
+[[wirelessdomain-apCountUnknown]]
+apCountUnknown => Integer::
 Number of access points in 'Unknown' state
 
-`apCountUnprovisioned => Integer`::
+[[wirelessdomain-apCountUnprovisioned]]
+apCountUnprovisioned => Integer::
 Number of access points in 'Unprovisioned' state
 
-`apCountUp => Integer`::
+[[wirelessdomain-apCountUp]]
+apCountUp => Integer::
 Number of access points in 'Up' state
+--

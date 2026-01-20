@@ -6,79 +6,107 @@ Object contains information about tunnel.
 
 ==== Instance attributes
 
-`address => InetAddress`::
-<<class-inetaddress>> class object with address of the node that opened this tunnel 
+[.attr-list]
+--
+[[tunnel-address]]
+address => InetAddress::
+<<class-inetaddress>> class object with address of the node that opened this tunnel
 
-`agentBuildTag => String`::
+[[tunnel-agentBuildTag]]
+agentBuildTag => String::
 Agent build tag
 
-`agentId => String`::
+[[tunnel-agentId]]
+agentId => String::
 Agent ID of the agent that opened the tunnel
 
-`agentVersion => String`::
+[[tunnel-agentVersion]]
+agentVersion => String::
 Agent version of the node that opened the tunnel
 
-`certificateExpirationTime => Integer`::
+[[tunnel-certificateExpirationTime]]
+certificateExpirationTime => Integer::
 UNIX timestamp with current certificate expiration day
 
-`guid => String`::
+[[tunnel-guid]]
+guid => String::
 Tunnel GUID
 
-`hostname => String`::
+[[tunnel-hostname]]
+hostname => String::
 Hostname of the node that opened the tunnel
 
-`hardwareId => String`::
+[[tunnel-hardwareId]]
+hardwareId => String::
 Hardware ID of the node that opened the tunnel
 
-`id => Integer`::
+[[tunnel-id]]
+id => Integer::
 Tunnel id
 
-`isAgentProxy => Boolean`::
+[[tunnel-isAgentProxy]]
+isAgentProxy => Boolean::
 `TRUE` if agent proxy is enabled on the agent that opened the tunnel
 
-`isBound => Boolean`::
+[[tunnel-isBound]]
+isBound => Boolean::
 `TRUE` if tunnel is bound
 
-`isSnmpProxy => Boolean`::
+[[tunnel-isSnmpProxy]]
+isSnmpProxy => Boolean::
 `TRUE` if SNMP proxy is enabled on the agent that opened the tunnel
 
-`isSnmpTrapProxy => Boolean`::
+[[tunnel-isSnmpTrapProxy]]
+isSnmpTrapProxy => Boolean::
 `TRUE` if SNMP trap proxy is enabled on the agent that opened the tunnel
 
-`isUserAgentInstalled => Boolean`::
+[[tunnel-isUserAgentInstalled]]
+isUserAgentInstalled => Boolean::
 `TRUE` if user agent is installed on the agent that opened the tunnel
 
-`macAddresses => Array`::
+[[tunnel-macAddresses]]
+macAddresses => Array::
 Array with MAC addresses as Strings
 
-`platformName => String`::
+[[tunnel-platformName]]
+platformName => String::
 Platform name of the node that opened the tunnel
 
-`startTime => Integer`::
+[[tunnel-startTime]]
+startTime => Integer::
 UNIX timestamp with tunnel start time
 
-`serialNumber => String`::
+[[tunnel-serialNumber]]
+serialNumber => String::
 Serial number
 
-`systemInfo => String`::
+[[tunnel-systemInfo]]
+systemInfo => String::
 System information of the node that opened the tunnel
 
-`systemName => String`::
+[[tunnel-systemName]]
+systemName => String::
 System name of the node that opened the tunnel
 
-`zoneUIN => Integer`::
+[[tunnel-zoneUIN]]
+zoneUIN => Integer::
 Node's zone UIN if set in agent's configuration file
+--
 
 ==== Instance methods
 
-`bind(node) => Integer`::
+[.method-list]
+--
+[[tunnel-bind]]
+bind(node) => Integer::
 Bind the tunnel to a specified node.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |node|<<class-node>>|Node object to bind the tunnel to
 |===
-
++
 .Return
 Return code (0 on success).
+--

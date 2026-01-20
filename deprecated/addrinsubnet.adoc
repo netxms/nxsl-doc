@@ -7,7 +7,7 @@
 ====
 *Deprecated in 5.0.*
 
-Please use <<class-inetaddress-samesubnet,sameSubnet()>> method of InetAddress class.
+Please use <<inetaddress-samesubnet,sameSubnet()>> method of InetAddress class.
 ====
 ****
 

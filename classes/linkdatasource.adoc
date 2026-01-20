@@ -6,20 +6,29 @@ Data source item for Network Map link
 
 ==== Instance attributes
 
-`dci => <<class-dci>>`::
-Data source DCI item 
+[.attr-list]
+--
+[[linkdatasource-dci]]
+dci => <<class-dci>>::
+Data source DCI item
 
-`dciId => Integer`::
+[[linkdatasource-dciId]]
+dciId => Integer::
 Data source DCI item id
 
-`format => String`::
+[[linkdatasource-format]]
+format => String::
 Data display format
 
-`location => Integer`::
+[[linkdatasource-location]]
+location => Integer::
 Location of the link data source. Possible values: 0 = CENTER, 1 = OBJECT1, 2 = OBJECT2.
 
-`object => <<class-datacollectiontarget>>`::
+[[linkdatasource-object]]
+object => <<class-datacollectiontarget>>::
 DCI source object
 
-`objectId => Integer`::
+[[linkdatasource-objectId]]
+objectId => Integer::
 DCI source object id
+--

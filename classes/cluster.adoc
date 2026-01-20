@@ -10,14 +10,20 @@ include::_shared/netobj-attrs.adoc[]
 
 include::_shared/datacollectiontarget-attrs.adoc[]
 
-`nodes => Array`::
+[.attr-list]
+--
+[[cluster-nodes]]
+nodes => Array::
 Will return all nodes of class <<class-node>>, that are under this cluster
 
-`zone => <<class-zone>>`::
+[[cluster-zone]]
+zone => <<class-zone>>::
 Will return zone this cluster is under
 
-`zoneUIN => Integer`::
+[[cluster-zoneUIN]]
+zoneUIN => Integer::
 Will return zone UIN this cluster is under
+--
 
 ==== Instance methods
 
@@ -25,34 +31,38 @@ include::_shared/netobj-methods.adoc[]
 
 include::_shared/datacollectiontarget-methods.adoc[]
 
-`add(object) => void`::
+[.method-list]
+--
+[[cluster-add]]
+add(object) => void::
 Add node to cluster
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|<<class-node>>|Object to be added to cluster
 |===
 
-`getResourceOwner(name) => <<class-node>>`::
+[[cluster-getResourceOwner]]
+getResourceOwner(name) => <<class-node>>::
 Get node which currently owns named resource.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|Name of the resource.
 |===
-
++
 .Return
-
 <<class-node>> object instance which currently owns resource of `null` if failed.
 
-`remove(object) => void`::
+[[cluster-remove]]
+remove(object) => void::
 Remove node from cluster
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |object|<<class-node>>|Object to be removed from cluster
 |===
-
+--

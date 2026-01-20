@@ -4,55 +4,68 @@
 
 Class that represents file on file system. Available only if
 'NXSL.EnableFileIOFunctions' configuration parameter is turned on. Use
-<<func-io-openfile, IO::OpenFile()>> function to create a new FILE object. 
+<<func-io-openfile, IO::OpenFile()>> function to create a new FILE object.
 
 File read and write position in the file depends on mode file was opened in.
 
 ==== Instance attributes
 
-`eof => Boolean`::
+[.attr-list]
+--
+[[file-eof]]
+eof => Boolean::
 If it's already end of file.
 
-`name => String`::
+[[file-name]]
+name => String::
 File name
+--
 
 ==== Instance methods
 
-`close() => void`::
+[.method-list]
+--
+[[file-close]]
+close() => void::
 Close file
 
-`read(numberOfSymbols) => String`::
+[[file-read]]
+read(numberOfSymbols) => String::
 Read provided number of bytes from file.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |numberOfSymbols|Integer|Number of symbol to read from file
 |===
-
++
 .Return
 String with symbols read from file or null if file closed or end of file reached.
 
-`readLine() => String`::
+[[file-readline]]
+readLine() => String::
 Read line from file.
-
++
 .Return
 String with read line from file or null if file closed or end of file reached.
 
-`write(text) => void`::
+[[file-write]]
+write(text) => void::
 Will write provided text to the file.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |text|String|Text to write in to the file
 |===
 
-`writeLine(text) => void`::
+[[file-writeline]]
+writeLine(text) => void::
 Will write provided text to the file and will add new line at the end.
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |text|String|Text to write in to the file
 |===
+--

@@ -2,44 +2,55 @@
 [[class-macaddress]]
 === MacAddress
 
-Represents MAC address 
+Represents MAC address
 
 ==== Instance attributes
 
-`isBroadcast => Boolean`::
+[.attr-list]
+--
+[[macaddress-isBroadcast]]
+isBroadcast => Boolean::
 `TRUE` if is broadcst address
 
-`isMulticast => Boolean`::
+[[macaddress-isMulticast]]
+isMulticast => Boolean::
 `TRUE` if multicast address
 
-`isValid => Boolean`::
+[[macaddress-isValid]]
+isValid => Boolean::
 `TRUE` if is valid MAC address
+--
 
 ==== Instance methods
 
-`equals(mac) => Boolean`::
+[.method-list]
+--
+[[macaddress-equals]]
+equals(mac) => Boolean::
 Compares two MAC addresses
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |mac|<<class-macaddress>>|MAC address to compare to
 |===
-
-.Return 
++
+.Return
 `TRUE` if MAC addresses are equal
 
-`toString(notation) => String`::
+[[macaddress-toString]]
+toString(notation) => String::
 Returns MAC address string representation
-
++
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|notation|Constant|Optional. Notation of MAC address, one of <<enum-mac-address-notation>> options. `MacAddressNotation::COLON_SEPARATED` will be used by default if this parameter is not provided. 
+|notation|Constant|Optional. Notation of MAC address, one of <<enum-mac-address-notation>> options. `MacAddressNotation::COLON_SEPARATED` will be used by default if this parameter is not provided.
 |===
-
-.Return 
++
+.Return
 MAC address as a string
+--
 
 ==== Constructors
 
@@ -53,7 +64,7 @@ Creates new MAC address object.
 |===
 
 .Return
-MacAddress object 
+MacAddress object
 
 ==== Constants
 

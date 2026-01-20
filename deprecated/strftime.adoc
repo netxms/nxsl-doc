@@ -7,7 +7,7 @@
 ====
 *Deprecated in 5.0.*
 
-Please use <<class-datetime-format,format()>> method of DateTime class.
+Please use <<datetime-format,format()>> method of DateTime class.
 ====
 ****
 

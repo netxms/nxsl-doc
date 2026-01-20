@@ -11,7 +11,7 @@ This function is enabled by default, but can be disabled by setting configuratio
 ====
 *Deprecated in 5.0.*
 
-Please use `createContainer()` method of <<class-container-createContainer,Container>>, <<class-collector-createContainer,Collector>> or <<class-serviceRoot-createContainer,ServiceRoot>> class instead.
+Please use `createContainer()` method of <<container-createContainer,Container>>, <<collector-createContainer,Collector>> or <<serviceroot-createContainer,ServiceRoot>> class instead.
 ====
 ****
 

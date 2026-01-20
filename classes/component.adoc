@@ -6,9 +6,12 @@
 
 ==== Instance attributes
 
-`class => String`::
+[.attr-list]
+--
+[[component-class]]
+class => String::
 Type of the component:
-
++
 * `unknown`
 * `chassis`
 * `backplane`
@@ -20,26 +23,35 @@ Type of the component:
 * `port`
 * `stack`
 
-`children => Array`::
+[[component-children]]
+children => Array::
 List of direct children (Array of <<class-component>> object intances).
 
-`description => String`::
+[[component-description]]
+description => String::
 Component description
 
-`firmware => String`::
+[[component-firmware]]
+firmware => String::
 Component firmware version, if available.
 
-`ifIndex => Integer`::
+[[component-ifIndex]]
+ifIndex => Integer::
 Interface index number
 
-`model => String`::
+[[component-model]]
+model => String::
 Component model number, if available.
 
-`name => String`::
+[[component-name]]
+name => String::
 Component name, if available.
 
-`serial => String`::
+[[component-serial]]
+serial => String::
 Component serial number, if available.
 
-`vendor => String`::
+[[component-vendor]]
+vendor => String::
 Component vendor, if available.
+--
