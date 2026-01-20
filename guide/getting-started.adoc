@@ -280,4 +280,5 @@ Now that you can write and run basic scripts, explore:
 
 * <<language-syntax>> - Complete language reference
 * <<working-with-netxms>> - Interacting with NetXMS objects
+* <<_function_reference>> - All available functions
 * <<class-reference>> - All available classes
