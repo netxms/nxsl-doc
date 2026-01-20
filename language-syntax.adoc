@@ -143,10 +143,11 @@ before you use them.
 
 Scope of a variable can be either global (visible in any function in the
 script) or local (visible only in the function within which it was defined).
-Any variable is by default limited to the local function scope. Variable can be
-declared global using `global` operator.
+Any variable is by default limited to the local function scope.
 
-For example:
+==== Global variables
+
+A variable can be declared global using the `global` keyword:
 
 [source,c]
 ----
@@ -162,7 +163,7 @@ function myFunction()
 This script will cause run time error `Error 5 in line 6: Invalid operation
 with NULL value`, because variable `x` is local (in implicit main function)
 and is not visible in function `myFunction`. The following script will
-produce expected result (prints `x=1`):
+produce expected result (prints `x * 2 = 2`):
 
 [source,c]
 ----
@@ -172,6 +173,42 @@ myFunction();
 function myFunction()
 {
     println("x * 2 = " .. x * 2);
+}
+----
+
+==== Local variables
+
+By default, variables are local to the function where they are first assigned.
+Starting with version 6.0, you can explicitly declare a variable as local using
+the `local` keyword. This is useful for clarity and to ensure a variable is
+local even if a global variable with the same name exists:
+
+[source,c]
+----
+global x = 100;
+
+function myFunction()
+{
+    local x = 5;  // Creates a new local variable, does not affect global x
+    println("local x = " .. x);  // Prints: local x = 5
+}
+
+myFunction();
+println("global x = " .. x);  // Prints: global x = 100
+----
+
+The `local` keyword can also be used without initialization:
+
+[source,c]
+----
+function process()
+{
+    local result;  // Explicitly declare local variable
+    if (condition)
+        result = "yes";
+    else
+        result = "no";
+    return result;
 }
 ----
 
@@ -286,18 +323,49 @@ value is `NULL`.
 
 === Script entry point
 
-NXSL handles script entry in 2 ways:
+NXSL handles script entry in two ways:
 
-* Explicit main() function
-* Implicit $main() function
+* Explicit `main()` function
+* Implicit `$main()` function
 
-If an explicitly defined main() exists, it will be called.
+**Explicit main() function:**
 
+If an explicitly defined `main()` function exists, it will be called. This approach
+is recommended for scripts that accept parameters, as it allows you to declare
+named parameters:
 
+[source,c]
+----
+function main(nodeName, threshold)
+{
+    println("Processing:", nodeName);
+    if (threshold == null)
+        threshold = 90;
+    // Script logic here
+    return 0;
+}
+----
 
-If an explicit main() doesn't exist, an implicit $main() function will be created by the script interpreter and the script will enter at the $main() function.
+Script arguments are passed to `main()` parameters in order. Arguments are also
+available via `$1`, `$2`, etc. and the `$ARGS` array within the function.
 
-The $main() function is constructed from code that is not a part of any other functions.
+**Implicit $main() function:**
+
+If an explicit `main()` doesn't exist, the interpreter creates an implicit `$main()`
+function from all code that is not part of any other function:
+
+[source,c]
+----
+// This code becomes the implicit $main()
+println("Script started");
+result = calculate($1);
+return result;
+
+function calculate(value)
+{
+    return value * 2;
+}
+----
 
 === Calling library script functions
 You can call functions from scripts that are stored in Script Library. One way is
@@ -322,7 +390,7 @@ To prevent script errors when calling a function that may not exist, use the
 ``optional`` keyword. If the function is present, it is called, and the
 expression evaluates to its return value. If the function does not exist, the
 call is safely ignored, and the expression evaluates to ``NULL`` without halting
-the script. *This keyword was added in version 5.3*  
+the script. *This keyword was added in version 6.0*  
 
 [.source]
 ....
