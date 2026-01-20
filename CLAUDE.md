@@ -96,3 +96,17 @@ Description with parameters table and examples.
 ## Documentation Patterns Notes
 
 **Custom anchors**: Add explicit `[[anchor-name]]` for sections that need cross-references. Don't rely on auto-generated anchors.
+
+**Operator documentation**: For new operators in `language-syntax.adoc`, use the standard table format:
+```asciidoc
+[cols="<33,<33,<33",options="header"]
+|===
+| Example| Name| Result
+|`syntax`| Name| Description.
+|===
+```
+
+**Multi-location feature docs**: Document new language features in three places:
+- `language-syntax.adoc` - Full reference with examples
+- `guide/getting-started.adoc` - Beginner introduction in relevant section
+- `guide/working-with-netxms.adoc` - Brief mention in Best Practices
