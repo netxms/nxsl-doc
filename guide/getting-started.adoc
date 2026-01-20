@@ -66,7 +66,11 @@ y = 10;
 println("Sum: " .. (x + y));
 ----
 
-For more complex scripts, define helper functions. Code outside functions is automatically executed (the interpreter wraps it into an implicit `main()`):
+For more complex scripts, you have two approaches:
+
+**Implicit main (code outside functions):**
+
+Code outside functions is automatically wrapped into an implicit `main()` function:
 
 [source,c]
 ----
@@ -80,6 +84,27 @@ function calculate(a, b)
     return a * b;
 }
 ----
+
+**Explicit main function (recommended for scripts with parameters):**
+
+You can define an explicit `main()` function with named parameters. This makes parameter handling clearer and allows you to declare parameter types upfront:
+
+[source,c]
+----
+function main(nodeName, threshold)
+{
+    println("Checking node:", nodeName);
+    println("Threshold:", threshold);
+
+    if (threshold == null)
+        threshold = 90;  // Default value
+
+    // ... script logic ...
+    return 0;
+}
+----
+
+With explicit `main()`, script parameters passed via command line or from NetXMS are mapped to function arguments in order.
 
 Function definitions can be placed anywhere in the script - code outside functions executes sequentially:
 
@@ -118,19 +143,33 @@ x = 5; // Inline comment
 
 **Output:**
 
-* `println(text)` - Print with newline
-* `print(text)` - Print without newline
-* `trace(level, text)` - Debug output (level 1-9), written to server debug console and log file if level is above current debug level
+* `println(value, ...)` - Print one or more values (separated by spaces) followed by a newline
+* `print(value, ...)` - Print one or more values (separated by spaces) without newline
+* `trace(level, message, ...)` - Debug output (level 1-9), written to server debug console and log file when current debug level is equal to or above the specified level
+
+[source,c]
+----
+println("Sum:", x, "+", y, "=", x + y);  // Prints: Sum: 5 + 10 = 15
+trace(3, "Processing node", $node.name);  // Shows when debug level >= 3
+----
 
 **Script Parameters:**
 
-Scripts receive parameters through special variables `$1`, `$2`, etc.:
+Scripts receive parameters through special variables `$1`, `$2`, etc. All arguments are also available as an array in the global variable `$ARGS`:
 
 [source,c]
 ----
 // If script called with parameters "hello" and "world"
 println($1);  // Prints: hello
 println($2);  // Prints: world
+
+// Using $ARGS array (1-indexed)
+println($ARGS[1]);  // Prints: hello
+println($ARGS[2]);  // Prints: world
+
+// Iterate over all arguments
+for (i = 1; i <= $ARGS.size; i++)
+    println("Arg", i, "=", $ARGS[i]);
 ----
 
 == Your First Practical Script
