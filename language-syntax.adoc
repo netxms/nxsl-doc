@@ -782,8 +782,8 @@ println(a.indexOf("Major")); // Prints "3"
 
 
 [[class-array-join,Array::join()]]
-`join(separator) => void`::
-
+`join(separator) => String`::
+Returns concatenated string of all array elements separated by the specified separator.
 
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
@@ -791,42 +791,14 @@ println(a.indexOf("Major")); // Prints "3"
 |separator|String|Separator between array elements
 |===
 
-.Return
-
-=== Array operators
-
-[cols="<33,<33,<33",options="header"]
-|===
-| Example| Name| Result
-|`...`| Spread operator| Used when all elements from an object or array need to be included in a new array or object or should be applied one-by-one in a function call's arguments list.
-|===
-
-.Example 
-[.source]
-....
-sub sum(i, j, k)
-{
-  return i + j + k;
-}
-
-data = %(10, 20, 30);
-println(sum(...data));
-
-a = %("one", "two");
-b = %("new", ...a);
-....
-
-
-Concatenated string
-
-
 .Example
-[.source]
+[source,c]
 ----
 a = [1, 2, 3, 4];
 println(a.join(";")); // will print "1;2;3;4"
 println(a.join("; ")); // will print "1; 2; 3; 4"
 ----
+
 
 `insert(index, newElement) => void`::
 Inserts new element to the array at `index`. Indexes of existing elements that had index greater or equal to `index` are incremented. 
@@ -886,6 +858,27 @@ a = [1,2,3];
 a.remove(0);
 println(a);
 ....
+
+
+==== Spread operator
+
+The spread operator (`...`) expands array elements in place. Use it when all elements from an array need to be included in a new array or applied one-by-one as function arguments.
+
+.Example
+[source,c]
+----
+function sum(i, j, k)
+{
+  return i + j + k;
+}
+
+data = [10, 20, 30];
+println(sum(...data)); // expands to sum(10, 20, 30), prints 60
+
+a = ["one", "two"];
+b = ["new", ...a];
+println(b); // prints "[new, one, two]"
+----
 
 
 ==== Array conversion
