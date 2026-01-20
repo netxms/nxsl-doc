@@ -6,7 +6,6 @@ together with function name used in documentation.
 
 Example with import:
 
-.Example
 [source,c]
 ----
 import Base64;
@@ -15,7 +14,6 @@ print(Decode("U29tZSB0ZXh0")); //Will print "Some text"
 
 Example without import:
 
-.Example
 [source,c]
 ----
 print(Base64::Decode("U29tZSB0ZXh0")); //Will print "Some text"

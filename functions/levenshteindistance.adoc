@@ -21,7 +21,6 @@ Calculates the Levenshtein distance between two strings, which is the minimum nu
 
 Integer representing the edit distance between the two strings.
 
-.Example
 [.source]
 ....
 // Calculate distance between two strings

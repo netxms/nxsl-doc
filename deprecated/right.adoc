@@ -31,7 +31,6 @@ the left portion of the string.
 .Return
 String of the right length characters.
 
-.Example
 [.source]
 ....
 println(right("abc  d",8)); //Will print "  abc  d"

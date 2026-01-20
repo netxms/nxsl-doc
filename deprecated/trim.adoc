@@ -27,7 +27,6 @@ Removes blanks (space and tab characters) from both sides of specified string.
 .Return
 Source string with blanks at both sides removed.
 
-.Example
 [.source]
 ....
 print(trim("  abc def  ")); //will print "abc def"

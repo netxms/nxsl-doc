@@ -28,7 +28,6 @@ Formats a Unix timestamp, and returns a string according to given formatting rul
 .Return
 Formatted time as a string.
 
-.Example
 [.source]
 ....
 println(strftime("%Y-%m-%d %H:%M", time())); //Will print: "2016-01-19 12:14"

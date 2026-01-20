@@ -19,7 +19,6 @@ Calculates arc tangent of x.
 
 The angle in radians whose arc tangent is x
 
-.Example
 [source,c]
 ----
 println(Math::Atan(1)); // Will print "0.785398"

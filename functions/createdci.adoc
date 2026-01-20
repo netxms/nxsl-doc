@@ -24,7 +24,6 @@ Create new data collection item on <<class-node,node>>, return <<class-dci>> obj
 .Return
 Instance of newly created <<class-dci>> of `null` if failed.
 
-.Example
 [.source]
 ....
 >>> d = CreateDCI($node, DataSource::AGENT, "Agent.Version", "Agent Version", DCI::STRING, 0, 0);

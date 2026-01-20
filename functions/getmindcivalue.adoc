@@ -21,7 +21,6 @@ Get the minimum value of the DCI for the given period. The DCI value must be of 
 .Return
 Minimum value or null on failure.
 
-.Example
 [.source]
 ....
 value = GetMinDCIValue(FindObject("MYWORKPC"), 18, 0, time()); //Minimal value from the beginning till now

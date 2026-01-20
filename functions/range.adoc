@@ -23,7 +23,6 @@ Creates a <<class-range,Range>> object for iteration.
 
 <<class-range,Range>> object that is iterable and can be used in for-each loops.
 
-.Example
 [.source]
 ....
 // Create range from 0 to 9

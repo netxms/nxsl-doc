@@ -27,7 +27,6 @@ Returns minimal value from a list of values.
 .Return
 Minimal value.
 
-.Example
 [.source]
 ....
 println(min(2, 3, 4, 8)); // Will print "2"

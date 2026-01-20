@@ -18,7 +18,6 @@ Removes directory.
 .Return
 `TRUE` if delete was successful and `FALSE` if not.
 
-.Example
 [.source]
 ....
 IO::RemoveDirectory("/tmp/dir") // Will delete "/tmp/dir" directory.

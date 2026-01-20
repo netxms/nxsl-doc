@@ -25,7 +25,6 @@ Returns the absolute value of the number.
 
 Absolute value of the input.
 
-.Example
 [.source]
 ....
 >>> abs(12.3)

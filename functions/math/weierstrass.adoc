@@ -22,7 +22,6 @@ generation.
 .Return
 Value in point x for Weierstrass function with given coefficients
 
-.Example
 [source,c]
 ----
 print(Math::Weierstrass(0.5, 7, 10)); // Will print "1.999218"

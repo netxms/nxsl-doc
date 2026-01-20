@@ -12,7 +12,6 @@ Get current time in milliseconds
 .Return
 Current time in milliseconds
 
-.Example
 [.source]
 ....
 >>> GetCurrentTimeMs()

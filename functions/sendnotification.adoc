@@ -22,7 +22,6 @@ Sends notification to specified recipients.
 .Return
 No return value
 
-.Example
 [.source]
 ....
 SendNotification("Telegram", "Alice; Bob", "", "My message text");

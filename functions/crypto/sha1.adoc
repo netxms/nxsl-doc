@@ -18,7 +18,6 @@ sha1 function implementation
 .Return
 Result of sha1
 
-.Example
 [.source]
 ....
 println(Crypto::SHA1("String")); //Will pritn "3DF63B7ACB0522DA685DAD5FE84B81FDD7B25264"

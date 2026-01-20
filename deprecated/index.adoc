@@ -29,7 +29,6 @@ Returns the position of the first occurrence of substring in string at or after 
 .Return
 Integer value of the position substring was found at, will return 0 if not found.
 
-.Example
 [.source]
 ....
 println(index("abcdef","cd")); //Will print "3"

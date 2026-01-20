@@ -15,7 +15,6 @@ Prints any text or text representation of object
 |object|object|Any object 
 |===
 
-.Example
 [source,c]
 ----
 a = ["a", 1, 1.5];

@@ -20,7 +20,6 @@ Retrieves all available deployment packages, optionally filtered by platform and
 
 Array of <<class-deploymentpackage,DeploymentPackage>> objects containing package metadata.
 
-.Example
 [.source]
 ....
 // Get all packages

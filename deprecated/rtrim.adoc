@@ -27,7 +27,6 @@ Removes blanks (space and tab characters) from the right side of specified strin
 .Return
 Source string with blanks at the right side removed.
 
-.Example
 [.source]
 ....
 println(rtrim("  abc def  ")); //Will print "  abc def"

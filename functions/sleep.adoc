@@ -18,7 +18,6 @@ Suspend script execution for given number of milliseconds.
 .Return
 No return value
 
-.Example
 [.source]
 ....
 sleep(1000);   // sleep for 1 second

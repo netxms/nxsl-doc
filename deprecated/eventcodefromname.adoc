@@ -25,7 +25,6 @@ Get event code from event name
 .Return
 Event code
 
-.Example
 [.source]
 ....
 println(EventCodeFromName("SYS_NODE_DOWN")); // will print "28"

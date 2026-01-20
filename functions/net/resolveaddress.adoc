@@ -18,7 +18,6 @@ Resolve IP address to host name
 .Return
 Host name
 
-.Example
 [.source]
 ....
 println(Net::ResolveAddress("127.0.0.1")); //Will print "localhost"

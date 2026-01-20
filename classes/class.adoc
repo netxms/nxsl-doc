@@ -18,7 +18,6 @@ String aray with all method names
 `name => Integer`::
 Name of the class
 
-.Example
 [.source]
 ....
 obj = $object;

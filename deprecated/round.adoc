@@ -28,7 +28,6 @@ Round floating point value to the nearest integral value or floating point value
 .Return
 The integral value that is closest to x if precision is omitted or set to 0, or floating point value rounded to have given number of decimal places.
 
-.Example
 [.source]
 ....
 println(round(2.3)); // Will print "2"

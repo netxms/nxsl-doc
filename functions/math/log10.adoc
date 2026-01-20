@@ -18,7 +18,6 @@ Calculates logarithm of given value to base 10.
 .Return
 Logarithm of x to base 10.
 
-.Example
 [source,c]
 ----
 println(Math::Log10(2)); // Will print "0.301030"

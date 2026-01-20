@@ -74,7 +74,6 @@ Formats a timestamp, and returns a string according to given formatting rules.
 .Return
 Formatted time as a string.
 
-.Example
 [.source]
 ....
 time = DateTime();

@@ -18,7 +18,6 @@ sha256 function implementation
 .Return
 Result of sha256
 
-.Example
 [.source]
 ....
 println(Crypto::SHA256("String")); //Will pritn "B2EF230E7F4F315A28CDCC863028DA31F7110F3209FEB76E76FED0F37B3D8580"

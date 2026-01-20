@@ -27,7 +27,6 @@ Removes blanks (space and tab characters) from the left side of specified string
 .Return
 Source string with blanks at the left side removed.
 
-.Example
 [.source]
 ....
 ltrim("  abc def  "); // Will print "abc def  "

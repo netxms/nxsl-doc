@@ -6,7 +6,6 @@ together with function name used in documentation.
 
 Example with import:
 
-.Example
 [source,c]
 ----
 import Net;
@@ -15,7 +14,6 @@ println(ResolveAddress("127.0.0.1")); //Will print "localhost"
 
 Example without import:
 
-.Example
 [source,c]
 ----
 println(Net::ResolveAddress("127.0.0.1")); //Will print "localhost"

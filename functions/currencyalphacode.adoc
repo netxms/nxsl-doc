@@ -19,7 +19,6 @@ Get currency alpha code from numeric code
 
 Currency alpha code from numeric code
 
-.Example
 [.source]
 ----
 print(CurrencyAlphaCode("978")); // Will print "EUR"

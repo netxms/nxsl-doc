@@ -29,7 +29,6 @@ Extracts the substring from string that begins at the nth character and is of le
 .Return
 Extracted substring.
 
-.Example
 [.source]
 ....
 print(substr("abcdef", 3, 2)); //Will print: "cd"

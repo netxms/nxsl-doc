@@ -19,7 +19,6 @@ Get DCI object by id
 .Return
 <<class-dci,DCI>> object or `null` if not found 
 
-.Example
 [.source]
 ....
 GetDCIObject($node, 2)	    // object

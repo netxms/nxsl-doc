@@ -14,7 +14,6 @@ Get number of milliseconds counted by monotonic clock since some unspecified poi
 .Return
 Current time from monotonic clock in milliseconds.
 
-.Example
 [.source]
 ....
 println(GetMonotonicClockTime()); // Will print "626624750"

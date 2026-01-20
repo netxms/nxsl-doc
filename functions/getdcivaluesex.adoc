@@ -23,7 +23,6 @@ Get all values for period of DCI with given ID on given node, returning them as 
 
 Array of <<class-datapoint,DataPoint>> objects ordered from latest to earliest for given DCI, or NULL if DCI with given ID does not exist or has no collected values. Each DataPoint contains both the timestamp and the value. This function cannot be used for table DCIs.
 
-.Example
 [.source]
 ....
 // Get data points for the last hour

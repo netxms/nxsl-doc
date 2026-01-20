@@ -18,7 +18,6 @@ Returns sum of given numbers or array(s) of numbers.
 .Return
 Sum of values.
 
-.Example
 [source,c]
 ----
 println(Math::Sum(2, 2)); // Will print "4"

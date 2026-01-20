@@ -31,7 +31,6 @@ Bind all NetXMS objects that can be bound from console (nodes, subnets, clusters
 .Return
 None.
 
-.Example
 [.source]
 ....
 BindObject(FindObject(2), $node);    // Link current node directly to "Infrastructure Services"

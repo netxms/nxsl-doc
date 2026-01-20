@@ -27,7 +27,6 @@ Get accessible parent objects for given node.
 .Return
 Array of objects of <<class-netobj,class NetObj>> or inherited from it, with first object placed at index 0. End of list indicated by array element with null value. Return value also affected by trusted nodes settings.
 
-.Example
 [.source]
 ....
 // Log names and ids of all accessible parents for current node

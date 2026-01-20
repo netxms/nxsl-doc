@@ -29,7 +29,6 @@ either time given in time argument or current time if time is omitted.
 .Return
 <<class-datetime>> object.
 
-.Example
 [.source]
 ....
 println(localtime(time()).year); //Will print 2020

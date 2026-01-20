@@ -18,7 +18,6 @@ Format system uptime in seconds as string in format "n days, hh:mm".
 .Return
 System uptime in format "n days, hh:mm".
 
-.Example
 [.source]
 ....
 println(SecondsToUptime(600)); // Will print "0 days, 00:10"

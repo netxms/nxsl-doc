@@ -28,7 +28,6 @@ Get value of event's named parameter.
 .Return
 String value of requested parameter or null if no such parameter exist.
 
-.Example
 [.source]
 ....
 GetEventParameter($event, "ifName")	// "eth0"

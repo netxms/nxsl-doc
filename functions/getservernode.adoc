@@ -12,7 +12,6 @@ Get node object of the management server.
 .Return
 Node instance.
 
-.Example
 [.source]
 ....
 >>> GetServerNode()

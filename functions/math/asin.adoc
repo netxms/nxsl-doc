@@ -19,7 +19,6 @@ Calculates arc sine of x.
 
 The angle in radians whose sine is x
 
-.Example
 [source,c]
 ----
 println(Math::Asin(1)); // Will print "1.570796"

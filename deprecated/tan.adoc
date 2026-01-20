@@ -27,7 +27,6 @@ Calculates tangent x
 .Return
 Result of tangent for this angle
 
-.Example
 [source,c]
 ----
 print(tan(0.5)); //will print 0.546302

@@ -24,7 +24,6 @@ If trusted nodes are disabled (default server configuration), `currentNode` can 
 
 Instance of <<class-node>> object or `null` if not found or not accessible.
 
-.Example
 [.source]
 ....
 >>> FindNodeObject($node, "server.netxms.org")

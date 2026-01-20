@@ -18,7 +18,6 @@ Will delete scheduled tasks by key
 .Return
 Number of deleted scheduled task count with provided key
 
-.Example
 [.source]
 ----
 print(CancelScheduledTasksByKey("Key")); //Number of tasks 

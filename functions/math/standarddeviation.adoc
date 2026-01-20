@@ -18,7 +18,6 @@ Calculates standard deviation for given series.
 .Return
 Standard deviation of given series.
 
-.Example
 [source,c]
 ----
 println(Math::StandardDeviation([2, 4, 4, 4, 5, 5, 7, 11])) // Will print "2.537223"

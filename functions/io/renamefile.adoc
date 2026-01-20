@@ -19,7 +19,6 @@ Renames file.
 .Return
 `TRUE` if renamed was successful and `FALSE` if not.
 
-.Example
 [.source]
 ....
 IO::RenameFile("/tmp/oldFileName", "/tmp/mewFileName") // File with name "oldFileName" will be renamed to "mewFileName"

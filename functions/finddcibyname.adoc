@@ -20,7 +20,6 @@ Find ID of the DCI on node by parameter name (exact match). <<func-findalldcis>>
 
 Integer ID of the DCI or 0 if not found.
 
-.Example
 [.source]
 ....
 >>> d = FindDCIByName($node, "Agent.Version");

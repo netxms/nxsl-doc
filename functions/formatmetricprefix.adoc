@@ -21,7 +21,6 @@ Convert numeric value to human-readable form with metric prefix.
 
 String containing the value converted to human-readable form with metric prefix.
 
-.Example
 [.source]
 ....
 >>> FormatMetricPrefix(5000)

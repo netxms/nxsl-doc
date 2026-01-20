@@ -24,7 +24,6 @@ If trusted nodes are disabled (default server configuration), `currentNode` can 
 Instance of object inherited from <<class-netobj>> or `null` if not found or not accessible. 
 Type of the object can be verified using function <<func-classof>>.
 
-.Example
 [.source]
 ----
 node = FindObjectByGUID("d602a7f1-0049-421b-a134-2fcf35712608", $node);

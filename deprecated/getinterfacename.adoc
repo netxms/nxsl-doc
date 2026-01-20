@@ -28,7 +28,6 @@ Get interface name by index
 .Return
 Interface name as a string
 
-.Example
 [.source]
 ....
 println(GetInterfaceName($node, 1)); //Will print "lo"

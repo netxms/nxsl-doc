@@ -27,7 +27,6 @@ Make an object leave Maintenance mode.
 .Return
 None.
 
-.Example
 [.source]
 ....
 LeaveMaintenance($node);    // Make current node leave maintenance mode

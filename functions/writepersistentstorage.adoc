@@ -18,7 +18,6 @@ Create or update value in global persistent key-value store.
 
 .Return
 
-.Example
 [.source]
 ....
 >>> WritePersistentStorage("key1", "value1")

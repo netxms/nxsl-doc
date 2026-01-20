@@ -31,7 +31,6 @@ Delete object of class <<class-netobj>>, <<class-interface>>, or <<class-node>> 
 .Return
 None.
 
-.Example
 [.source]
 ....
 DeleteObject(FindObject("Service_1")); //delete object named Service_1

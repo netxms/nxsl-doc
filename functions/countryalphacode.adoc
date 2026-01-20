@@ -18,7 +18,6 @@ Lookup country alpha code by numeric or alpha3 code.
 .Return
 Two letter country code or `null` if country not found.
 
-.Example
 [.source]
 ....
 >>> CountryAlphaCode('020')

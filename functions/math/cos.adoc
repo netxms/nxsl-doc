@@ -18,7 +18,6 @@ Calculates cosine from given angle in radians.
 .Return
 Result of cosine for this angle
 
-.Example
 [source,c]
 ----
 print(Math::Cos(0.5)); // Will print "0.877583"

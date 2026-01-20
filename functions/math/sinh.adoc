@@ -18,7 +18,6 @@ Calculates hyperbolic sine x.
 .Return
 Result of hyperbolic sine for this angle
 
-.Example
 [source,c]
 ----
 print(Math::Sinh(0.5)); // Will print "0.521095"

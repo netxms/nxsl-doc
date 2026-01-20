@@ -19,7 +19,6 @@ successful. Will create destination file if file does not exist.
 .Return
 `TRUE` if creation was successful and `FALSE` if not.
 
-.Example
 [.source]
 ....
 IO::CreateDirectory("/tmp/newDir") // Will create new directory with name "newDir" under folder "tmp"

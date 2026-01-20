@@ -18,7 +18,6 @@ Calculates hyperbolic arctan of x.
 .Return
 Result of hyperbolic arctan for this angle
 
-.Example
 [source,c]
 ----
 println(Math::Atanh(0.5)); // Will print "0.549306"

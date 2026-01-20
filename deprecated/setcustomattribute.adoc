@@ -28,7 +28,6 @@ Set custom attribute `name` to `value` on `object`.
 
 .Return
 
-.Example
 [.source]
 ....
 >>> SetCustomAttribute($node, "test", "test value")

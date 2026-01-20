@@ -12,7 +12,6 @@ Get array with thread pool names.
 .Return
 Array with strings. 
 
-.Example
 [.source]
 ....
 print(GetThreadPoolNames()[0]); //will print "MAIN"

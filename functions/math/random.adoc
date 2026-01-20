@@ -19,7 +19,6 @@ Generate pseudo random number in given range. Uses cryptographically secure pseu
 .Return
 Random value in range minValue..maxValue.
 
-.Example
 [source,c]
 ----
 println(Math::Random(0, 100)); // Will print random value in 0..100 range

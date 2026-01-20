@@ -18,7 +18,6 @@ Deletes file.
 .Return
 `TRUE` if delete was successful and `FALSE` if not.
 
-.Example
 [.source]
 ....
 IO::DeleteFile("/tmp/file") // Will delete "/tmp/file" file.

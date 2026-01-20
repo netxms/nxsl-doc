@@ -21,7 +21,6 @@ Get last value of DCI with given name on given node.
 Last value for given DCI (string for normal DCIs and <<class-table,Table object>> for table DCIs) or null if DCI with given name does not exist or has no
 collected values.
 
-.Example
 [.source]
 ....
 GetDCIValueByName($node, "Agent.Version")	// "5.0.0"

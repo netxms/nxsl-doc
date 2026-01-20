@@ -33,7 +33,6 @@ Network Credentials will be accepted.
 
 Instance of <<class-snmptransport>> or `null` if failed.
 
-.Example
 [.source]
 ....
 >>> transport = CreateSNMPTransport(FindObject("Server1"))

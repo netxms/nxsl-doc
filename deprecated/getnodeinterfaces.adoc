@@ -27,7 +27,6 @@ Get all interfaces for given node.
 .Return
 Array of objects of class <<class-interface>>, with first object placed at index 0.
 
-.Example
 [.source]
 ....
 // Log names and ids of all interface objects for given node

@@ -19,7 +19,6 @@ Convert hexadecimal string to decimal value.
 
 Converted value.
 
-.Example
 [.source]
 ....
 >>> x2d("4D2")

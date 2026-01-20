@@ -27,7 +27,6 @@ Gets square root from number.
 .Return
 Square root value.
 
-.Example
 [.source]
 ....
 >>> sqrt(4)

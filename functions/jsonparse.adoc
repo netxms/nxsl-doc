@@ -31,7 +31,6 @@ When JSON parsing fails, the following global variables are set:
 |$jsonErrorColumn|Column number where the parsing error occurred.
 |===
 
-.Examples
 
 .Basic usage
 [source,c]

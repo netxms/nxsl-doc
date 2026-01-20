@@ -19,7 +19,6 @@ Returns last raw value of DCI
 .Return
 Last raw value (before transformation) for given DCI or null if DCI with given ID does not exist or has no collected values.
 
-.Example
 [.source]
 ....
 GetDCIRawValue($node, FindDCIByName($node, "Status")) // 0

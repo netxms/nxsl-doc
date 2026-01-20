@@ -20,7 +20,6 @@ Push new DCI value from script.
 .Return
 No return value
 
-.Example
 [.source]
 ....
 PushDCIData($node, 46, 13); //Will push value "13" to DCI with id 46

@@ -28,7 +28,6 @@ Round up value.
 
 Value round up to nearest integer.
 
-.Example
 [.source]
 ....
 >>> ceil(2.3)

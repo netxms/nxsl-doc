@@ -18,7 +18,6 @@ Get currency name from code
 .Return
 Currency name
 
-.Example
 [.source]
 ....
 println(CurrencyName("EUR")); //Will print "Euro"

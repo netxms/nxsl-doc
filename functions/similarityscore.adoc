@@ -21,7 +21,6 @@ Calculates a similarity score between two strings using Levenshtein distance.
 
 Float value between 0.0 (completely different) and 1.0 (identical strings). Calculated as: `1.0 - (distance / max(len1, len2))`.
 
-.Example
 [.source]
 ....
 // Calculate similarity between two strings

@@ -27,7 +27,6 @@ Converts broken down time (represented by object of <<class-datetime>> class) to
 .Return
 UNIX time (number of seconds since epoch).
 
-.Example
 [.source]
 ....
 t = new TIME();  // create new TIME object
