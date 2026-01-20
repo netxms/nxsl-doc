@@ -19,7 +19,7 @@ That's it! This single line prints text to the output. Let's break it down:
 
 NXSL scripts run in several contexts within NetXMS:
 
-**Execute Script** (for testing)::
+**Execute Script** (for testing or to perform one-off operation)::
 Right-click on any node or object and select _Execute script_. This runs the script in the context of the selected object, with `$object` (and `$node` if the object is a Node) automatically set.
 
 **Script Library**::
@@ -85,9 +85,9 @@ function calculate(a, b)
 }
 ----
 
-**Explicit main function (recommended for scripts with parameters):**
+**Explicit main function:**
 
-You can define an explicit `main()` function with named parameters. This makes parameter handling clearer and allows you to declare parameter types upfront:
+You can define an explicit `main()` function with named parameters for scripts that accept arguments:
 
 [source,c]
 ----
@@ -105,6 +105,8 @@ function main(nodeName, threshold)
 ----
 
 With explicit `main()`, script parameters passed via command line or from NetXMS are mapped to function arguments in order.
+
+CAUTION: If you define an explicit `main()` function, any code outside functions is ignored. Move all logic inside `main()` when using this approach.
 
 Function definitions can be placed anywhere in the script - code outside functions executes sequentially:
 

@@ -46,7 +46,7 @@ function name(parameters)
 The function can return a value to the caller and accept zero or more
 parameters.
 
-NOTE: In older scripts, you may see an explicit `main()` function. This is no longer required - the interpreter automatically wraps code outside functions into an implicit `main()`. The explicit `main()` function is still supported for backward compatibility.
+NOTE: In older scripts, you may see an explicit `main()` function. This is no longer required - the interpreter automatically wraps code outside functions into an implicit `$main()`. The explicit `main()` function is still supported for backward compatibility, but be aware that defining `main()` will cause any top-level code to be ignored.
 
 The function name follows the rules for all names (formally: identifiers): it
 must consist entirely of letters (uppercase and lowercase are different!),
