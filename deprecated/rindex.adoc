@@ -31,7 +31,6 @@ character has index 1, not 0).
 .Return
 Integer value of the position substring was found at, will return 0 if not found.
 
-.Example
 [.source]
 ....
 println(rindex("abcdabcd","cd")); // Will print "7"

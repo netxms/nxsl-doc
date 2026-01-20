@@ -28,7 +28,6 @@ Set expected state for given interface.
 .Return
 None.
 
-.Example
 [.source]
 ....
 // Set expected state to "ignore" for all interfaces of given node

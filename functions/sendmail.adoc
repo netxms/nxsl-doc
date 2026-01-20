@@ -21,7 +21,6 @@ Sends e-mail to specified recipients.
 .Return
 No return value
 
-.Example
 [.source]
 ....
 SendMail("somebody@somewhere.com", "My subject", "My text", false); 

@@ -25,7 +25,6 @@ Post event on behalf of given node.
 .Return
 `TRUE` if event was posted successfully or `FALSE` if not.
 
-.Example
 [.source]
 ....
 // event parameters as array

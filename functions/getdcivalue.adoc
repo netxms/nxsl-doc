@@ -21,7 +21,6 @@ Return `null` on error, <<class-table>> instance for table DCI or String otherwi
 
 <<class-table>> for table DCIs, String, or `null` if failed or no data is available.
 
-.Example
 [.source]
 ....
 >>> GetDCIValue($node, FindDCIByName($node, "Status"))

@@ -20,7 +20,6 @@ Sends a prompt to the AI assistant and returns the response.
 
 String containing the AI assistant's response, or NULL on failure.
 
-.Example
 [.source]
 ....
 // Query AI without context

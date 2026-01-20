@@ -18,7 +18,6 @@ Read value from global persistent key-value storage.
 .Return
 Value referenced by `key` or `null` if key not exist.
 
-.Example
 [.source]
 ....
 >>> ReadPersistentStorage("key1")

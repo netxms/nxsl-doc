@@ -21,7 +21,6 @@ Lookup value from mapping table.
 
 When key or table is not found, return `null` or default value if provided.
 
-.Example
 Provided that there is a mapping table named "table1", which has keys 10, 20 and
 30 with corresponding values "value1", "value2" and "value3":
 

@@ -29,7 +29,6 @@ Convert array to string
 
 Concatenated string
 
-.Example
 [.source]
 ----
 a = [1, 2, 3, 4];

@@ -27,7 +27,6 @@ Set object into unmanaged state. Has no effect if object is already in unmanaged
 .Return
 None.
 
-.Example
 [.source]
 ....
 UnmanageObject(FindObject(2));    // Set "Infrastructure Services" object to unmanaged state

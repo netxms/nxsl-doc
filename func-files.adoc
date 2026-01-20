@@ -8,7 +8,6 @@ together with function name used in documentation.
 
 Example with import:
 
-.Example
 [source,c]
 ----
 import IO;
@@ -17,7 +16,6 @@ CopyFile("/tmp/source", "/tmp/destination") // Will copy "/tmp/source" file cont
 
 Example without import:
 
-.Example
 [source,c]
 ----
 IO::CopyFile("/tmp/source", "/tmp/destination") // Will copy "/tmp/source" file content to "/tmp/destination" file.

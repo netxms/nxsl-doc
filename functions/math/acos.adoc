@@ -19,7 +19,6 @@ Calculates arc cosine value of a number.
 
 The angle in radians whose cosine is x
 
-.Example
 [source,c]
 ----
 println(Math::Acos(-1)); // Will print "3.141593"

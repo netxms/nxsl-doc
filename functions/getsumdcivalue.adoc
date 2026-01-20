@@ -22,7 +22,6 @@ Get the sum value of the DCI for the given period. The DCI value must be of nume
 .Return
 Sum value or null on failure.
 
-.Example
 [.source]
 ....
 value = GetSumDCIValue(FindObject("MYWORKPC"), 18, 0, time()); //sum value from the beginning till now

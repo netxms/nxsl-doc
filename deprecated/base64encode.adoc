@@ -29,7 +29,6 @@ Valid character encodings are "UTF-8", "UCS-2", "UCS-4", "SYSTEM". Default is UT
 .Return
 Encoded string
 
-.Example
 [.source]
 ....
 print(Base64Encode("Some text")); //Will print "U29tZSB0ZXh0"

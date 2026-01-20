@@ -29,7 +29,6 @@ Formats a numeric value.
 .Return
 Formatted numeric value.
 
-.Example
 [.source]
 ....
 format(3.7, 7, 2)		//	"   3.70"

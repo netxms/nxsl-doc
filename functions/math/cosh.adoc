@@ -18,7 +18,6 @@ Calculates hyperbolic cosine x.
 .Return
 Result of hyperbolic cosine for this angle
 
-.Example
 [source,c]
 ----
 print(Math::Cosh(0.5)); // Will print "0.877583"

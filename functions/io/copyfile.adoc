@@ -19,7 +19,6 @@ Makes a copy of source file or folder to destination file or folder and returns 
 .Return
 `TRUE` if copy was successful and `FALSE` if not. 
 
-.Example
 [.source]
 ....
 IO::CopyFile("/tmp/source", "/tmp/destination") // Will copy "/tmp/source" file content to "/tmp/destination" file.

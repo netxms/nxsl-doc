@@ -21,7 +21,6 @@ Creates user agent notification
 .Return
 New user agent notification id
 
-.Example
 [.source]
 ....
 >>> CreateUserAgentNotification($node, "One time notification text", 0, 0);

@@ -18,7 +18,6 @@ Calculates square root of x.
 .Return
 Square root value.
 
-.Example
 [source,c]
 ----
 println(Math::Sqrt(4.5)); // Will print "2.121320"

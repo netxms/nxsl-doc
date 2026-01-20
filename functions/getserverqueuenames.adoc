@@ -12,7 +12,6 @@ Get array with server queue names.
 .Return
 Array with strings. 
 
-.Example
 [.source]
 ....
 foreach(l : GetServerQueueNames())

@@ -21,7 +21,6 @@ Get the maximum value of the DCI for the given period. The DCI value must be of 
 .Return
 Maximum value or null on failure.
 
-.Example
 [.source]
 ....
 value = GetMaxDCIValue(FindObject("MYWORKPC"), 18, 0, time()); //Max value from the beginning till now\

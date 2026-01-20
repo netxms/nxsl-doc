@@ -19,7 +19,6 @@ Get last value of DCI with given description on given node.
 .Return
 Last value for given DCI (String for normal DCIs and <<class-table,Table>> object for table DCIs) or null if DCI with given description does not exist or has no collected values.
 
-.Example
 [.source]
 ....
 GetDCIValueByDescription($node, "Status")	// 0

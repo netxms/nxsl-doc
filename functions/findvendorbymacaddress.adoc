@@ -19,7 +19,6 @@ Find NIC vendor information by mac address
 
 NIC vendor name or null
 
-.Example
 [.source]
 ....
 >>> FindVendorByMACAddress("00:00:5e:00:53:af")

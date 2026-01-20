@@ -324,7 +324,6 @@ expression evaluates to its return value. If the function does not exist, the
 call is safely ignored, and the expression evaluates to ``NULL`` without halting
 the script. *This keyword was added in version 5.3*  
 
-.Example
 [.source]
 ....
 // If f() exists, v gets its return value.
@@ -334,7 +333,6 @@ v = optional f();
 
 The same logic applies when calling a function from a specific library.
 
-.Example
 [.source]
 ....
 // If my_library and function f() in it exists, v gets its return value.
@@ -354,7 +352,6 @@ methods and attributes described below
 `isEmpty => Boolean`::
 Returns "true" if string is empty or "false" otherwise.
 
-.Example
 [.source]
 ....
 s = "";
@@ -366,7 +363,6 @@ println(s.isEmpty); // prints "true"
 `length => Integer`::
 Returns number of characters in the string.
 
-.Example
 [.source]
 ....
 s = "1234567890";
@@ -384,7 +380,6 @@ the argument is a string lexicographically equal to this string.
 The is a difference to `==` comparison operator if strings contain numbers because
 values are converted to numberic type prior to comparison.
 
-.Example
 [.source]
 ....
 println("a".compareTo("c")); // prints "-1"
@@ -400,7 +395,6 @@ println("100" == "100.0"); // prints true
 `compareToIgnoreCase(string) => Integer`::
 Same as `compareTo`, but ignoring the case.
 
-.Example
 [.source]
 ....
 println("aaa".compareToIgnoreCase("AAA")); // prints "0"
@@ -410,7 +404,6 @@ println("aaa".compareToIgnoreCase("AAA")); // prints "0"
 `contains(string) => Boolean`::
 Returns `true` if this string contains the argument string or `false` otherwise.
 
-.Example
 [.source]
 ....
 println("aaa".contains("a")); // prints "true"
@@ -420,7 +413,6 @@ println("aaa".contains("a")); // prints "true"
 `endsWith(string) => Boolean`::
 Returns `true` if this string ends with the argument string or `false` otherwise.
 
-.Example
 [.source]
 ....
 println("abc".endsWith("d")); // prints "false"
@@ -432,7 +424,6 @@ println("Just a sentence".endsWith("a sentence")); // prints "true"
 Returns `true` if argument string is equal to this string ignoring the case or
 `false` otherwise.
 
-.Example
 [.source]
 ....
 println("abc".equalsIgnoreCase("ABC")); // prints "true"
@@ -444,7 +435,6 @@ println("abc".equalsIgnoreCase("ABC")); // prints "true"
 Returns index of first occurence of argument string in this string or `-1`
 if the argument is not a substring of the string.
 
-.Example
 [.source]
 ....
 println("ABC-DEF-GHI".indexOf("-")); // prints "3"
@@ -458,7 +448,6 @@ println("ABC-DEF-GHI".indexOf("JKL")); // prints "-1"
 Returns index of last occurence of argument string in this string or `-1`
 if the argument is not a substring of the string. 
 
-.Example
 [.source]
 ....
 println("ABC-DEF-GHI".lastIndexOf("-")); // prints "7"
@@ -473,7 +462,6 @@ Returns left `numberOfCharacters` of this string. If string length is less then
 `numberOfCharacters`, result will be padded on the right. `paddingCharacter` is 
 optional, if not specified, space character will be used for padding. 
 
-.Example
 [.source]
 ....
 println("ABCDEFGHI".left(2)); // prints "AB"
@@ -486,7 +474,6 @@ println("123".left(5, "_")); // prints "123__"
 `replace(whatToReplace, replaceBy) => String`::
 Returns string where all occurencies of `whatToReplace` are replaced with `replaceBy`.
 
-.Example
 [.source]
 ....
 println("A B C A D K L".replace("A", "<A>")); // prints "<A> B C <A> D K L"
@@ -499,7 +486,6 @@ Returns right `numberOfCharacters` of this string. If string length is less then
 `numberOfCharacters`, result will be padded on the left. `paddingCharacter` is 
 optional, if not specified, space character will be used for padding. 
 
-.Example
 [.source]
 ....
 println("ABCDEFGHI".right(2)); // prints "HI"
@@ -516,7 +502,6 @@ Split string into array of strings at given separator.
 `true`, space characters will be removed on both sides of strings produced by
 splitting. *This parameter was added in version 5.1.4*  
 
-.Example
 [.source]
 ....
 println("ABC--DEF--GHI".split("--")); // prints "[ABC, DEF, GHI]"
@@ -540,7 +525,6 @@ for (a : s.split(",", true)) println("|"..a.."|");
 `startsWith(string) => Boolean`::
 Returns `true` if this string starts with the argument string or `false` otherwise.
 
-.Example
 [.source]
 ....
 println("abc".startsWith("d")); // prints "false"
@@ -552,7 +536,6 @@ println("Just a sentence".startsWith("Just a")); // prints "true"
 `substring(position, numberOfCharacters) => String`::
 Returns substring of this string starting from `position` and containing `numberOfCharacters`.
 
-.Example
 [.source]
 ....
 println("ABCDEFGHIJK".substring(0,3)); // prints "ABC"
@@ -565,7 +548,6 @@ println("ABCDEFGHIJK".substring(6,10)); // prints "GHIJK"
 `toLowerCase() => String`::
 Converts this string to lowercase.
 
-.Example
 [.source]
 ....
 println("ABC def".toLowerCase()); // prints "abc def"
@@ -576,7 +558,6 @@ println("ABC def".toLowerCase()); // prints "abc def"
 `toUpperCase() => String`::
 Converts this string to uppercase.
 
-.Example
 [.source]
 ....
 println("ABC def".toUpperCase()); // prints "ABC DEF"
@@ -587,7 +568,6 @@ println("ABC def".toUpperCase()); // prints "ABC DEF"
 `trim() => String`::
 Returns this string with whitespace from both sides removed.
 
-.Example
 [.source]
 ....
 println("|" .. "  ABC  ".trim() .. "|") // prints "|ABC|"
@@ -598,7 +578,6 @@ println("|" .. "  ABC  ".trim() .. "|") // prints "|ABC|"
 `trimLeft() => String`::
 Returns this string with whitespace from left side removed.
 
-.Example
 [.source]
 ....
 println("|" .. "  ABC  ".trimLeft() .. "|") // prints "|ABC   |"
@@ -609,7 +588,6 @@ println("|" .. "  ABC  ".trimLeft() .. "|") // prints "|ABC   |"
 `trimRight() => String`::
 Returns this string with whitespace from right side removed.
 
-.Example
 [.source]
 ....
 println("|" .. "  ABC  ".trimRight() .. "|") // prints "|   ABC|"
@@ -713,7 +691,6 @@ another array of 3 numeric elements.
 `maxIndex => Integer`::
 Returns highest index in the array.
 
-.Example
 [.source]
 ....
 a = [1, 2, 3];
@@ -725,7 +702,6 @@ println(a[a.maxIndex]); // prints '3'
 `minIndex => Integer`::
 Returns lowest index in the array.
 
-.Example
 [.source]
 ....
 a = [1, 2, 3];
@@ -736,7 +712,6 @@ println(a.minIndex); // prints '0'
 `size => Integer`::
 Returns number of elements in the array.
 
-.Example
 [.source]
 ....
 a = [1, 2, 3];
@@ -748,7 +723,6 @@ println(a.size); // prints '3'
 `append(newElement) => Integer`::
 Appends new element to the array. Returns highest index in the array - that's index of the appended element. 
 
-.Example
 [.source]
 ....
 a = ["a","b","c"];
@@ -760,7 +734,6 @@ println(a); // prints '[a, b, c, d]'
 `appendAll(anotherArray) => Integer`::
 Appends elements of `anotherArray` to the array. Returns highest index in the array. 
 
-.Example
 [.source]
 ....
 a = [1,2];
@@ -773,7 +746,6 @@ println(a); // prints '[1, 2, 3, 4]'
 `indexOf(value) => Integer`:: Returns the index of first occurrence of the
 specified `value` or -1 if `value` is not found in the array.  
 
-.Example
 [.source]
 ....
 a = ["Normal", "Warning", "Minor", "Major", "Critical"];
@@ -791,7 +763,6 @@ Returns concatenated string of all array elements separated by the specified sep
 |separator|String|Separator between array elements
 |===
 
-.Example
 [source,c]
 ----
 a = [1, 2, 3, 4];
@@ -803,7 +774,6 @@ println(a.join("; ")); // will print "1; 2; 3; 4"
 `insert(index, newElement) => void`::
 Inserts new element to the array at `index`. Indexes of existing elements that had index greater or equal to `index` are incremented. 
 
-.Example
 [.source]
 ....
 array a;
@@ -819,7 +789,6 @@ println(a[11]);  // prints "ccc" - because of the insert operation this element'
 `insertAll(index, anotherArray) => void`::
 Inserts elements of `anotherArray` to the array at `index`. Indexes of existing elements that have index greater or equal to `index` are incremented. 
 
-.Example
 [.source]
 ....
 a = [1,2];
@@ -833,7 +802,6 @@ println(a); // prints '[1, 3, 4, 2]'
 Removes element with highest index from the array. Using `push(value)` and `pop()` methods it's possible to use array as a stack. Or, using
 `insert(0,value)` and `pop()`, array will work as FIFO queue. 
 
-.Example
 [.source]
 ....
 a = []);
@@ -851,7 +819,6 @@ Same as `append()`.
 `remove(index) => void`::
 Removes element at specified `index`. Indexes of elements that have index greater or equal to `index` are decremented.
 
-.Example
 [.source]
 ....
 a = [1,2,3];
@@ -864,7 +831,6 @@ println(a);
 
 The spread operator (`...`) expands array elements in place. Use it when all elements from an array need to be included in a new array or applied one-by-one as function arguments.
 
-.Example
 [source,c]
 ----
 function sum(i, j, k)
@@ -940,7 +906,6 @@ h = %{"key":123, "another_key":456};
 `keys => Array`::
 Returns array with keys of items in the hash map.
 
-.Example
 [.source]
 ....
 h = %{100:"value1", 101:"value2"};
@@ -951,7 +916,6 @@ println(h.keys); // prints '[100,101]'
 `size => Integer`::
 Returns number of items in the hash map.
 
-.Example
 [.source]
 ....
 h = %{"a":null, "b":null, "c":null};
@@ -962,7 +926,6 @@ println(h.size); // prints '3'
 `values => Array`::
 Returns array with values of items in the hash map.
 
-.Example
 [.source]
 ....
 h = %{"key1":123, "key2":456};
@@ -975,7 +938,6 @@ println(h.keys); // prints '[123,456]'
 `contains(key) => Boolean`::
 Returns `true`, if hash map contains specified key or `false` otherwise.
 
-.Example
 [.source]
 ....
 h = %{"key1":123, "key2":456};
@@ -986,7 +948,6 @@ println(h.contains("key2")); // prints 'true'
 `remove(key) => void`::
 Removes item with specified `key`. 
 
-.Example
 [.source]
 ....
 h = %{"key1":123, "key2":456};

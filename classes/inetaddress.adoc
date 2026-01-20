@@ -64,7 +64,6 @@ If subnet contains internet address
 .Return 
 `TRUE` if contains, otherwise `FALSE`
 
-.Example
 [.source]
 ....
 r = InetAddress("192.168.56.0", 24).contains($node.ipAddress);
@@ -87,7 +86,6 @@ If addresses are equal
 `inRange(addressStart, addressEnd) => void`::
 If address is in range
 
-.Example
 [.source]
 ....
 r = $node.ipAddress.inRange(InetAddress("192.168.56.10"), InetAddress("192.168.56.20"));

@@ -18,7 +18,6 @@ Will load event from the database and return <<class-event>> object or NULL if e
 .Return
 <<class-event, Event>> loaded from database or NULL if event not found.
 
-.Example
 [.source]
 ....
 >>>event = LoadEvent(315);

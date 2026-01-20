@@ -27,7 +27,6 @@ Returns maximal value from a list of values.
 .Return
 Maximal value.
 
-.Example
 [.source]
 ....
 max(2, 3, 4, 8); //Will print "8"

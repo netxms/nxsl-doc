@@ -29,7 +29,6 @@ Set value of event's named parameter.
 .Return
 No return value
 
-.Example
 [.source]
 ....
 SetEventParameter($event, "customParameter", "new value");

@@ -22,7 +22,6 @@ If trusted nodes are disabled (default server configuration), `currentNode` can 
 .Return
 Instance of object inherited from <<class-netobj>> or `null` if not found or not accessible. Type of the object can be verified using function <<func-classof>>.
 
-.Example
 [.source]
 ----
 node = FindObject("Infrastructure Services"); //Will find node with name "Infrastructure Services"

@@ -19,7 +19,6 @@ Round down value.
 
 Value round down to nearest integer.
 
-.Example
 [source,c]
 ----
 println(Math::Floor(2.3)); // Will print 2

@@ -30,7 +30,6 @@ Prior to v. 4.2. this function was named AgentExecuteActionWithOutput.
 .Return
 Output of the command or `null` if execution failed.
 
-.Example
 [.source]
 ....
 >>> AgentExecuteCommandWithOutput($node, "Custom.Ping", "10.10.8.16");

@@ -37,7 +37,6 @@ Check file access.
 .Return
 `TRUE` if user has given access to provided file and `FALSE` if not.
 
-.Example
 [.source]
 ....
 return IO::FileAccess("/tmp/file", 5) // Will return true if user has read and execute access to file  

@@ -19,7 +19,6 @@ Returns the absolute value of a number.
 
 Absolute value.
 
-.Example
 [source,c]
 ----
 println(Math::Abs(12.3)); // Will print "12.300000"

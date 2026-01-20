@@ -23,7 +23,6 @@ If trusted nodes are disabled (default server configuration), `currentNode` can 
 .Return
 Instance of <<class-node>> object or `null` if not found or not accessible. 
 
-.Example
 [.source]
 ----
 node = FindNodeBySysName("switch-main");

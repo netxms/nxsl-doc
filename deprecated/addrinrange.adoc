@@ -27,7 +27,6 @@ Check if IP address is within given range. IPv4 and IPv6 are supported.
 
 `TRUE` if address is within given range (including both bounding addresses), and `FALSE` otherwise.
 
-.Example
 [.source]
 ----
 AddrInRange("10.0.0.16", "10.0.0.2", "10.0.0.44")		//	TRUE

@@ -12,7 +12,6 @@ Gets the system time.
 .Return
 System time as number of seconds elapsed since midnight (00:00:00), January 1, 1970, coordinated universal time, according to the system clock (also known as UNIX time).
 
-.Example
 [.source]
 ....
 print(time()); //will print 1588953745

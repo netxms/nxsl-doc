@@ -27,7 +27,6 @@ Make an object enter Maintenance mode.
 .Return
 None.
 
-.Example
 [.source]
 ....
 EnterMaintenance($node);    // Enter current node in maintenance mode

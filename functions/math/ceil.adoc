@@ -19,7 +19,6 @@ Round up value.
 
 Value round up to nearest integer.
 
-.Example
 [source,c]
 ----
 println(Math::Ceil(2.3)); // Will print "3"

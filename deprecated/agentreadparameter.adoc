@@ -25,7 +25,6 @@ Request metric directly from agent on given node.
 .Return
 String value or `null` if failed.
 
-.Example
 [.source]
 ....
 >>> v = AgentReadParameter($node, "Agent.Version")

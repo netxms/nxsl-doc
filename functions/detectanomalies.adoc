@@ -22,7 +22,6 @@ Detect anomalies for DCI within given period
 .Return
 Returns null on error and <<class-scoreddcivalue>> on success
 
-.Example
 [.source]
 ....
 scoredValue = DetectAnomalies($node, 312119, 1714653725, GetCurrentTime(), 0.50); //array with scored values

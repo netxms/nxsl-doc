@@ -183,7 +183,6 @@ Creates new byte stream.
 .Return
 ByteStream object.
 
-.Example
 [.source]
 ....
 bytestream = new ByteStream();

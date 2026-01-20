@@ -27,7 +27,6 @@ Converts string to lowercase string.
 .Return
 Source string converted to lowercase.
 
-.Example
 [.source]
 ....
 println(lower("aBcD")); // Will print "abcd"

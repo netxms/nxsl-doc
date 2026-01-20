@@ -9,7 +9,6 @@ Abstract class that represents any object that can collect data. Extends <<class
 `templates => Array`::
 Returns array of templates (<<class-template>>) applied on this object. Return value also affected by trusted nodes settings.
 
-.Example
 [.source]
 ....
 // Log names and ids of all accessible templates for current node

@@ -399,7 +399,6 @@ Finds web service by name, makes request and returns the <<class-webservicerespo
 .Return
 Instance of <<class-webserviceresponse>> with request result.
 
-.Example
 [.source]
 ....
 // Valid example when request fails because there is no connection to agent
@@ -619,7 +618,6 @@ Get array of blocked ports for the specified protocol.
 .Return
 Array of integers representing blocked port numbers.
 
-.Example
 [.source]
 ....
 blockedTcpPorts = $node->getBlockedPorts("tcp");
@@ -642,7 +640,6 @@ Get array of installed packages on the node.
 .Return
 Array of installed packages on the node.
 
-.Example
 [.source]
 ....
 // Get all packages
@@ -666,7 +663,6 @@ name is number method will assume that it is index.
 .Return
 <<class-interface>> object.
 
-.Example
 [.source]
 ....
 println($node.getInterface("00:14:22:04:25:37").name); // Will print "wlp4s0"
@@ -687,7 +683,6 @@ Get interface object by index.
 .Return
 <<class-interface>> object.
 
-.Example
 [.source]
 ....
 println($node.getInterfaceByIndex(3).name); // Will print "wlp4s0"
@@ -706,7 +701,6 @@ Get interface object by MAC address.
 .Return
 <<class-interface>> object.
 
-.Example
 [.source]
 ....
 println($node.getInterfaceByMACAddress("00:14:22:04:25:37").name); // Will print "wlp4s0"
@@ -725,7 +719,6 @@ Get interface object by name.
 .Return
 <<class-interface>> object.
 
-.Example
 [.source]
 ....
 println($node.getInterfaceByName("wlp4s0").name); // Will print "wlp4s0"
@@ -754,7 +747,6 @@ Check if a specific port is blocked for the given protocol.
 .Return
 TRUE if the port is blocked, FALSE otherwise.
 
-.Example
 [.source]
 ....
 if ($node->isPortBlocked(22, "tcp")) {
@@ -774,7 +766,6 @@ Get web service object by name.
 .Return
 <<class-webservice>> object.
 
-.Example
 [.source]
 ....
 webSvc = $node.getWebService("webSvcName");
@@ -795,7 +786,6 @@ Open an interactive SSH session to this node.
 .Return
 <<class-sshsession>> object on success, or NULL on failure.
 
-.Example
 [.source]
 ....
 session = $node->openSSHSession();

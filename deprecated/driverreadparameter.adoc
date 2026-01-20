@@ -30,7 +30,6 @@ insterad.
 .Return
 String value of the metric or `null` if request failed / metric not supported by driver
 
-.Example
 [.source]
 ....
 ....

@@ -19,7 +19,6 @@ Get country name from code
 
 Country name
 
-.Example
 [.source]
 ----
 print(CountryName("BE")); // Will print "Belgium"

@@ -12,7 +12,6 @@ Get list of all <<class-node>> objects in the system as array.
 .Return
 Array of node objects.
 
-.Example
 [.source]
 ....
 >>> for (n : GetAllNodes()) {

@@ -22,7 +22,6 @@ Calculates downtime periods for a given network object based on a maintenance sc
 
 Array of <<class-downtimeinfo,DowntimeInfo>> objects describing downtime windows, or NULL on failure.
 
-.Example
 [.source]
 ....
 // Calculate downtime for the last 24 hours

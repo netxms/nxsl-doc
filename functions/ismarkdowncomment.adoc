@@ -15,7 +15,6 @@ Return true if string passed as argument starts with Markdown indicator.
 |comment|String parameter from $object.setComments method
 |===
 
-.Examples
 [.source]
 ....
 //  To remove Markdown indicator from string the following code can be used:

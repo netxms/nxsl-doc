@@ -27,7 +27,6 @@ Calculates cosine from given angle in radians.
 .Return
 Result of cosine for this angle
 
-.Example
 [source,c]
 ----
 print(cos(0.5)); //will print 0.877583

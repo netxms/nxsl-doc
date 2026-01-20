@@ -18,7 +18,6 @@ Calculates 10 raised to the power of x.
 .Return
 x raised to the power of 10.
 
-.Example
 [source,c]
 ----
 println(Math::Pow10(2)); // Will print "100.000000"

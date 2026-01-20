@@ -18,7 +18,6 @@ Computes `e**x`, the http://en.wikipedia.org/wiki/Exponential_function[base-e] e
 .Return
 Result of the exponential function
 
-.Example
 [source,c]
 ----
 println(Math::Exp(2)); // Will print "7.389056"

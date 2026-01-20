@@ -31,7 +31,6 @@ executed. This node is used for macro expansion.
 .Return
 Instance of <<class-webserviceresponse>> with request result.
 
-.Example
 [.source]
 ....
 webSvc = $node.getWebService("webSvcName"); 
@@ -58,7 +57,6 @@ method was executed. This node is used for macro expansion.
 .Return
 Instance of <<class-webserviceresponse>> with request result.
 
-.Example
 [.source]
 ....
 webSvc = $node.getWebService("webSvcName"); 
@@ -84,7 +82,6 @@ getWebService method was executed. This node is used for macro expansion.
 .Return
 Instance of <<class-webserviceresponse>> with request result.
 
-.Example
 [.source]
 ....
 webSvc = $node.getWebService("webSvcName"); 
@@ -113,7 +110,6 @@ getWebService method was executed. This node is used for macro expansion.
 .Return
 Instance of <<class-webserviceresponse>> with request result.
 
-.Example
 [.source]
 ....
 webSvc = $node.getWebService("webSvcName"); 
@@ -142,7 +138,6 @@ getWebService method was executed. This node is used for macro expansion.
 .Return
 Instance of <<class-webserviceresponse>> with request result.
 
-.Example
 [.source]
 ....
 webSvc = $node.getWebService("webSvcName"); 

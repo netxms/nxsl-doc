@@ -20,7 +20,6 @@ Only processes one character.
 .Return
 An ASCII/Unicode value
 
-.Example
 [.source]
 ....
 println(ord("a")); //Will pritn 97

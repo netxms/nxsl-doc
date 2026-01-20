@@ -31,7 +31,6 @@ Remove (unbind) object from a container.
 .Return
 None.
 
-.Example
 [.source]
 ....
 UnbindObject(FindObject("Services"), FindObject("Service_1"));    // Unlink object named "Service_1" from container "Services"

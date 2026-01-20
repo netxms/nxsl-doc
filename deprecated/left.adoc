@@ -29,7 +29,6 @@ Returns the string of length characters of string, optionally padded with pad ch
 .Return
 String of the left length characters.
 
-.Example
 [.source]
 ....
 println(left("abc d",8)); //Will print "abc d   "

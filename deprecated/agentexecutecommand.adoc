@@ -30,7 +30,6 @@ Prior to v. 4.2 this function was named AgentExecuteAction
 .Return
 Boolean indicator of success
 
-.Example
 [.source]
 ....
 >>> AgentExecuteCommand($node, "System.Restart");

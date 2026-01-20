@@ -28,7 +28,6 @@ Get interface object by index
 .Return
 Get node's <<class-interface,interface>>  by it's index
 
-.Example
 [.source]
 ....
 interface = GetInterfaceObject($node, 1); //Will return interface with index 1

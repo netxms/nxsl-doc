@@ -28,7 +28,6 @@ Return array of child objects for the object.
 
 Array of <<class-netobj>> instances.
 
-.Example
 [.source]
 ....
 // Log names and ids of all accessible child objects for current node

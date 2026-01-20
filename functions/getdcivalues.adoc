@@ -23,7 +23,6 @@ Get all values for period of DCI with given ID on given node.
 DCI with given ID does not exist or has no collected values. This function
 cannot be used for table DCIs.
 
-.Example
 [.source]
 ....
 GetDCIValues($node, FindDCIByName($node, "Status"), time() - 3600, time()); // Values for last hour

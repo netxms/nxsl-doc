@@ -28,7 +28,6 @@ Split string into array of strings at given separator.
 .Return
 Array with strings
 
-.Example
 [.source]
 ....
 SplitString("a;b;c;d", ";"); //Will be splited to ["a", "b", "c", "d"]

@@ -15,7 +15,6 @@ Check if given value is `TRUE`
 |expression|Boolean|Expression or value to evaluate
 |===
 
-.Example
 [.source]
 ----
 node = FindObject("aaa");

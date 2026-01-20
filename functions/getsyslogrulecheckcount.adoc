@@ -19,7 +19,6 @@ Get syslog rule check count for all objects or for exact object.
 .Return
 Syslog rule check count or -1 if syslog daemon not initialized
 
-.Example
 [.source]
 ....
 println(GetSyslogRuleCheckCount("RuleName", $object)); // Will print rule check count for rule with name "RuleName"

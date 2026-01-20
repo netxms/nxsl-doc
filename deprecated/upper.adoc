@@ -27,7 +27,6 @@ Converts string to uppercase.
 .Return
 Source string converted to uppercase.
 
-.Example
 [.source]
 ....
 print(upper("aBcD")); //will print "ABCD"

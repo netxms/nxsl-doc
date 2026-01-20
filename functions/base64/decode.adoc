@@ -20,7 +20,6 @@ Valid character encodings are "UTF-8", "UCS-2", "UCS-4", "SYSTEM". Default is UT
 .Return
 Decoded string
 
-.Example
 [.source]
 ....
 print(Base64::Decode("U29tZSB0ZXh0")); //Will print "Some text"

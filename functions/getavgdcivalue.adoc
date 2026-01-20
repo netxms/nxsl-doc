@@ -21,7 +21,6 @@ Get the average value of the DCI for the given period. The DCI value type must b
 .Return
 Average value or `null` on failure.
 
-.Example
 [.source]
 ....
 >>> obj = FindObject("Server1");

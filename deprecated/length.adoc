@@ -27,7 +27,6 @@ Returns the length of string.
 .Return
 Length of the string passed to the function.
 
-.Example
 [.source]
 ....
 println(length("abcd")); // Will print "4"

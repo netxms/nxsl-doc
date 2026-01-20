@@ -27,7 +27,6 @@ Converts time in UNIX format (number of seconds since epoch) to calendar date an
 .Return
 Object of class <<class-datetime>>.
 
-.Example
 [.source]
 ....
 println(gmtime(time()).year);	// 2020

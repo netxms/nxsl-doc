@@ -29,7 +29,6 @@ Expand string by replacing macros with their values.
 
 Formated string
 
-.Example
 [.source]
 ....
 >>> ExpandString("%v")

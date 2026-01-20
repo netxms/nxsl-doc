@@ -27,7 +27,6 @@ Checks if given IP address is within given subnet (including subnet and broadcas
 
 `TRUE` if address is within given subnet (including subnet and broadcast addresses), and `FALSE` otherwise.
 
-.Example
 [.source]
 ----
 AddrInSubnet("10.0.0.16", "10.0.0.0", "24")		//TRUE

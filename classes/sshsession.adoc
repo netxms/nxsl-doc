@@ -26,7 +26,6 @@ Returns TRUE if the session has escalated privileges.
 `close() => void`::
 Close the SSH session.
 
-.Example
 [.source]
 ....
 session = $node->openSSHSession();
@@ -49,7 +48,6 @@ Escalate to privileged user.
 .Return
 TRUE if successful, FALSE otherwise.
 
-.Example
 [.source]
 ....
 session = $node->openSSHSession();
@@ -74,7 +72,6 @@ Execute a command on the remote host.
 .Return
 Array of strings (command output lines) or NULL if not connected.
 
-.Example
 [.source]
 ....
 session = $node->openSSHSession();

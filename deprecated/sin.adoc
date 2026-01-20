@@ -27,7 +27,6 @@ Calculates sine from given angle in radians.
 .Return
 Result of sine for this angle
 
-.Example
 [source,c]
 ----
 print(sin(0.5)); //will print 0.479426

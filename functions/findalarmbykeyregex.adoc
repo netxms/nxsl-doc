@@ -18,7 +18,6 @@ Find alarm by key using regular expression
 .Return
 <<class-alarm,Alarm object>> found by key
 
-.Example
 [.source]
 ----
 alarm = FindAlarmByKeyRegex("NODE_DOWN_.*"); //Will find alarm with regexp key "NODE_DOWN_.*"

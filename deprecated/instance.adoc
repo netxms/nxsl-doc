@@ -36,7 +36,6 @@ This function has named parameters.
 .Return
 Array, where the first value is `true`, the second is `name`, the third is `displayName` and the forth is `object`.
 
-.Example
 [.source]
 ....
 return Instance(displayName: GetInterfaceName($node, $1), object: GetInterfaceObject($node, $1), name: $1); //This will return correctly formatted array to accept instance

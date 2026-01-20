@@ -19,7 +19,6 @@ Get local host name. If optional argument is true, fully qualified name will be 
 .Return
 Host name
 
-.Example
 [.source]
 ....
 println(Net::ResolveAddress("127.0.0.1")); //Will print "localhost"

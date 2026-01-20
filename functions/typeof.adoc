@@ -19,7 +19,6 @@ Return type of the `instance`.
 
 Name of the type.
 
-.Example
 [.source]
 ....
 >>> typeof(1)

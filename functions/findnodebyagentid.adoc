@@ -23,7 +23,6 @@ If trusted nodes are disabled (default server configuration), `currentNode` can 
 .Return
 Instance of <<class-node>> object or `null` if not found or not accessible. 
 
-.Example
 [.source]
 ----
 node = FindNodeByAgentId("7e54f964-8942-504f-90eb-70e5d6abee92", $node);

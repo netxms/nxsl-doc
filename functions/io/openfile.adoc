@@ -19,7 +19,6 @@ Open file. Returns FILE object or null.
 .Return
 <<class-file, File class>> or `NULL` if error occurred.
 
-.Example
 [.source]
 ....
 f = IO::OpenFile("/tmp/a.txt", "r");

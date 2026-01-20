@@ -22,7 +22,6 @@ Find all DCI on the `node` matching `nameFilter`, `descriptionFilter`, `userTagF
 .Return
 Array of <<class-dci>>.
 
-.Example
 [source,c]
 ----
 >>> list = FindAllDCIs($node, "Server*", "*MAIN*");

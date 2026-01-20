@@ -18,7 +18,6 @@ Calculates hyperbolic tangent of x.
 .Return
 Result of hyperbolic tangent for this angle
 
-.Example
 [source,c]
 ----
 print(Math::Tanh(0.5)); // Will print "0.462117"

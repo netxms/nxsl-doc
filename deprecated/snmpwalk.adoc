@@ -29,7 +29,6 @@ Perform SNMP WALK request for `oid` over provided <<class-snmptransport,transpor
 
 Array of <<class-snmpvarbind>> or `null` or failure.
 
-.Example
 [.source]
 ....
 >>> transport = CreateSNMPTransport(FindObject("Server1"));

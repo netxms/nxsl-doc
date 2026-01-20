@@ -18,7 +18,6 @@ Finds alarm object by id
 .Return
 <<class-alarm,Alarm object>> or null if no such alarm exist.
 
-.Example
 [.source]
 ....
 alarm = FindAlarmById(72388); // Will find alarm with id 72388

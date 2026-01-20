@@ -28,7 +28,6 @@ Rename object.
 .Return
 None.
 
-.Example
 [.source]
 ....
 RenameObject(FindObject(2), "My Services");    // Rename "Infrastructure Services" object
