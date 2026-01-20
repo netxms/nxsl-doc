@@ -367,6 +367,18 @@ function calculate(value)
 }
 ----
 
+WARNING: If both an explicit `main()` function and top-level code exist, the top-level code is silently discarded. Only the explicit `main()` function will execute:
+
+[source,c]
+----
+println("This will NOT execute");  // Discarded when main() exists
+
+function main()
+{
+    println("Only this executes");
+}
+----
+
 === Calling library script functions
 You can call functions from scripts that are stored in Script Library. One way is
 to use the `import` keyword accompanied by the name of the script:
