@@ -13,7 +13,7 @@ That's it! This single line prints text to the output. Let's break it down:
 
 * `println` is a built-in function that prints text followed by a newline
 * The text inside quotes `"Hello, World!"` is a string
-* The semicolon `;` ends the statement (required in NXSL)
+* The semicolon `;` ends the statement
 
 == Running Scripts in NetXMS
 
@@ -70,7 +70,7 @@ For more complex scripts, you have two approaches:
 
 **Implicit main (code outside functions):**
 
-Code outside functions is automatically wrapped into an implicit `main()` function:
+Code outside functions is automatically wrapped into an implicit `$main()` function:
 
 [source,c]
 ----
@@ -121,6 +121,64 @@ Output:
 111
 222
 333
+----
+
+== Return Values
+
+Scripts return values to their caller (NetXMS, transformation pipeline, etc.).
+How a script returns a value depends on whether it ends with an expression or a statement.
+
+**Expression scripts (no semicolon):**
+
+A script can be a single expression without a semicolon. The expression's value is implicitly returned:
+
+[source,c]
+----
+$1 > 100
+----
+
+Returns `true` or `false`. Useful for filter scripts in Event Processing Policy.
+
+[source,c]
+----
+$node.status == Status::NORMAL and $node.isAgent
+----
+
+Returns boolean result of the compound condition.
+
+**Statement scripts (with semicolon):**
+
+When using semicolons, you must use explicit `return` to return a value.
+Without `return`, the script returns `null`:
+
+[source,c]
+----
+$1 > 100;
+----
+
+Returns `null` (the expression is evaluated but result is discarded).
+
+[source,c]
+----
+return $1 > 100;
+----
+
+Returns `true` or `false`.
+
+**Practical example:**
+
+Filter script for EPP (expression style - preferred for simple conditions):
+[source,c]
+----
+$event.severity >= Severity::MAJOR
+----
+
+Transformation script (statement style - when logic is needed):
+[source,c]
+----
+if ($1 == null)
+    return null;
+return $1 / 1024;  // Convert bytes to KB
 ----
 
 == Comments
