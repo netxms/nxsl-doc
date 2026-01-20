@@ -210,7 +210,7 @@ x = 5; // Inline comment
 [source,c]
 ----
 println("Sum:", x, "+", y, "=", x + y);  // Prints: Sum: 5 + 10 = 15
-trace(3, "Processing node", $node.name);  // Shows when debug level >= 3
+trace(3, "Processing node " .. $node.name);  // Shows when debug level >= 3
 ----
 
 **Script Parameters:**
