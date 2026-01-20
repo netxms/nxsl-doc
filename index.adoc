@@ -74,6 +74,7 @@ include::tutorial.adoc[]
 // FUNCTION REFERENCE
 // ============================================================================
 
+[[function-reference]]
 == Function Reference
 
 include::functions.adoc[]

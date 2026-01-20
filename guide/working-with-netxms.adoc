@@ -310,6 +310,7 @@ walkTree(root, 0);
 **Error Handling:**
 
 * Always check for `null` after `FindObject`, `GetDCIValue`, etc.
+* Use the safe navigation operator `?.` for concise null handling: `node?.name`
 * Use meaningful trace levels (1=errors, 5=debug, 9=verbose)
 
 **Security:**
