@@ -2,22 +2,18 @@
 [[func-math-sin]]
 == Math::Sin()
 
-[source,c]
-----
-Math::Sin(x) => Float
-----
-
+Math::Sin(x) => Float::
 Calculates sine from given angle in radians. 
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |x|Number|Angle in radians
 |===
-
++
 .Return
 Result of sine for this angle
-
++
 [source,c]
 ----
 print(Math::Sin(0.5)); // Will print "0.479426"

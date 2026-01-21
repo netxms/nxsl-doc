@@ -2,13 +2,9 @@
 [[func-getcurrenttime]]
 == GetCurrentTime()
 
-[source,c]
-----
-GetCurrentTime(): int
-----
-
+GetCurrentTime() => int::
 Get current time in seconds
-
++
 .Return
 Current time in seconds
 

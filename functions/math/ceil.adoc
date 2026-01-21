@@ -2,27 +2,20 @@
 [[func-math-ceil]]
 == Math::Ceil()
 
-[source,c]
-----
-Math::Ceil(x): int
-----
-
+Math::Ceil(x) => int::
 Round up value.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |x|Number|Input value
 |===
-
++
 .Return
 
 Value round up to nearest integer.
 
-[source,c]
-----
 println(Math::Ceil(2.3)); // Will print "3"
 println(Math::Ceil(3.8)); // Will print "4"
 println(Math::Ceil(-2.3)); // Will print "-2"
 println(Math::Ceil(-3.8)); // Will print "-3"
-----

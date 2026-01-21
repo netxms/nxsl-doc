@@ -2,13 +2,9 @@
 [[func-createdci]]
 == CreateDCI()
 
-[source,c]
-----
-CreateDCI(node, origin, name, description, dataType, pollingInterval, retentionTime) => DCI
-----
-
+CreateDCI(node, origin, name, description, dataType, pollingInterval, retentionTime) => DCI::
 Create new data collection item on <<class-node,node>>, return <<class-dci>> object instance of `null` if failed.
-
++
 .Parameters
 [cols="1,3a" grid="none", frame="none"]
 |===
@@ -20,10 +16,10 @@ Create new data collection item on <<class-node,node>>, return <<class-dci>> obj
 |pollingInterval|polling interval in seconds or `null` for server-default value.
 |retentionTime|retention time in days, `0` for "Do not save collected data to database" or `null` for server-default value.
 |===
-
++
 .Return
 Instance of newly created <<class-dci>> of `null` if failed.
-
++
 [.source]
 ....
 >>> d = CreateDCI($node, DataSource::AGENT, "Agent.Version", "Agent Version", DCI::STRING, 0, 0);

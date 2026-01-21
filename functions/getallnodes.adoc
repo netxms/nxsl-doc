@@ -2,16 +2,12 @@
 [[func-getallnodes]]
 == GetAllNodes()
 
-[source,c]
-----
-GetAllNodes() => array
-----
-
+GetAllNodes() => array::
 Get list of all <<class-node>> objects in the system as array.
-
++
 .Return
 Array of node objects.
-
++
 [.source]
 ....
 >>> for (n : GetAllNodes()) {

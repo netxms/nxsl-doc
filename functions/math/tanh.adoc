@@ -2,22 +2,18 @@
 [[func-math-tanh]]
 == Math::Tanh()
 
-[source,c]
-----
-Math::Tanh(x) => Float
-----
-
+Math::Tanh(x) => Float::
 Calculates hyperbolic tangent of x.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |x|Number|Angle in radians
 |===
-
++
 .Return
 Result of hyperbolic tangent for this angle
-
++
 [source,c]
 ----
 print(Math::Tanh(0.5)); // Will print "0.462117"

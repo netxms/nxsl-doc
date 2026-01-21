@@ -2,13 +2,9 @@
 [[func-findalldcis]]
 == FindAllDCIs()
 
-[source,c]
-----
-FindAllDCIs(node, nameFilter, descriptionFilter, userTagFilter, relatedObjectFilter) : <<class-array,Array>>
-----
-
+FindAllDCIs(node, nameFilter, descriptionFilter, userTagFilter, relatedObjectFilter) => <<class-array,Array>>::
 Find all DCI on the `node` matching `nameFilter`, `descriptionFilter`, `userTagFilter`, *and* `relatedObjectFilter`. Filters can contain glob symbols `?` and `*`. If a filter is `null`, it's ignored.
-
++
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
@@ -18,18 +14,18 @@ Find all DCI on the `node` matching `nameFilter`, `descriptionFilter`, `userTagF
 |userTagFilter|GLOB for matching DCI user tag or `null` if user tag should be ignored. Optional parameter.
 |relatedObjectFilter|Related object filter: <<class-netobj>> instance or object ID, or `null` to ignore. Optional parameter.
 |===
-
++
 [.version-added]
 Added in version 5.2: `userTagFilter` parameter
-
++
 [.version-added]
 Added in version 5.3: `relatedObjectFilter` parameter
-
++
 .Return
 Array of <<class-dci>>.
-
-[source,c]
-----
++
+[.source]
+....
 >>> list = FindAllDCIs($node, "Server*", "*MAIN*");
 >>> foreach (row : list) {
 >>> 	println(row.id .. ": " .. row.description .. " (" .. row.name .. ")");
@@ -68,4 +64,4 @@ Array of <<class-dci>>.
 virbr0
   2536: Outbound traffic on virbr0 (Net.Interface.BytesOut64(6))
   2534: Inbound traffic on virbr0 (Net.Interface.BytesIn64(6))
-----
+....

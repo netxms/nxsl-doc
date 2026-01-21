@@ -2,13 +2,9 @@
 [[func-getavgdcivalue]]
 == GetAvgDCIValue()
 
-[source,c]
-----
-GetAvgDCIValue(object, dciId, periodStart, periodEnd) => Float
-----
-
+GetAvgDCIValue(object, dciId, periodStart, periodEnd) => Float::
 Get the average value of the DCI for the given period. The DCI value type must be numeric.
-
++
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
@@ -17,10 +13,10 @@ Get the average value of the DCI for the given period. The DCI value type must b
 |periodStart|link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the period start.
 |periodEnd|link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the period end.
 |===
-
++
 .Return
 Average value or `null` on failure.
-
++
 [.source]
 ....
 >>> obj = FindObject("Server1");

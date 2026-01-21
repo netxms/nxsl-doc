@@ -2,27 +2,23 @@
 [[func-findnodebyipaddress]]
 == FindNodeByIPAddress()
 
-[source,c]
-----
-FindNodeByIPAddress(ipaddress, currentNode) => Node
-----
-
+FindNodeByIPAddress(ipaddress, currentNode) => Node::
 Look up <<class-node>> object by primary IP address or IP address of one of the interfaces.
-
++
 If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object 
 (instance of <<class-netobj>>, `$node` in most cases).
 If trusted nodes are disabled (default server configuration), `currentNode` can be omitted or set to `null`.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |ipaddress|String|IP address.
 |currentNode|<<class-netobj>>|Lookup context or `null` if trusted nodes validation is disabled. Optional parameter.
 |===
-
++
 .Return
 Instance of <<class-node>> object or `null` if not found or not accessible. 
-
++
 [.source]
 ----
 node = FindNodeByIPAddress("192.168.1.1", $node);

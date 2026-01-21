@@ -2,13 +2,9 @@
 [[func-getdcivalues]]
 == GetDCIValues()
 
-[source,c]
-----
-GetDCIValues(node, id, startTime, endTime, rawValues) : <<class-array,Array>>
-----
-
+GetDCIValues(node, id, startTime, endTime, rawValues) => <<class-array,Array>>::
 Get all values for period of DCI with given ID on given node.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===

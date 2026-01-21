@@ -2,13 +2,9 @@
 [[func-getcurrenttimems]]
 == GetCurrentTimeMs()
 
-[source,c]
-----
-GetCurrentTimeMs(): int64
-----
-
+GetCurrentTimeMs() => int64::
 Get current time in milliseconds
-
++
 .Return
 Current time in milliseconds
 

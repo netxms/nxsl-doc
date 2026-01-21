@@ -31,30 +31,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```asciidoc
 [.nxsl-function]
 [[func-category-name]]
-== Category::Name()
+== FunctionName()
 
-[source,c]
-----
-Category::Name(param) => ReturnType
-----
-
-Description.
-
+FunctionName(param1, param2) => <<class-returntype>>::
+Description paragraph. For multi-paragraph descriptions, use + continuation:
++
+Additional paragraph text.
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
-|param|Type|Description.
+|param1|Type|Description.
+|param2|Type|Description.
 |===
-
++
 .Return
-Return description.
-
-.Example
-[source,c]
-----
+Return value description.
++
+[.source]
+....
 // Example code
-----
+....
 ```
+
+**Key formatting rules:**
+- Signature uses definition list format with `::` at end
+- No blank line after `::` - description starts immediately
+- Use `+` between paragraphs within description
+- Use `+` before `.Parameters`, `.Return`, and `[.source]` sections
+- Return types: primitives as plain text (`int`, `bool`, `string`), objects as cross-references (`<<class-node>>`)
+- Examples use `[.source]` with `....` delimiters (not `[source,c]` with `----`)
 
 **Class template** (`classes/<name>.adoc`):
 ```asciidoc

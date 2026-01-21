@@ -3,7 +3,7 @@
 === FILE
 
 Class that represents file on file system. Available only if
-'NXSL.EnableFileIOFunctions' configuration parameter is turned on. Use
+`NXSL.EnableFileIOFunctions` configuration parameter is turned on. Use
 <<func-io-openfile, IO::OpenFile()>> function to create a new FILE object.
 
 File read and write position in the file depends on mode file was opened in.

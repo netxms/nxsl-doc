@@ -2,21 +2,17 @@
 [[func-ord]]
 == ord()
 
-[source,c]
-----
-ord(character): int
-----
-
+ord(character) => int::
 Convert a character into it's ASCII/Unicode value.
 
 Only processes one character.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |character|String|Character
 |===
-
++
 .Return
 An ASCII/Unicode value
 

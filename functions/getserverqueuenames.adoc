@@ -2,13 +2,9 @@
 [[func-getserverqueuenames]]
 == GetServerQueueNames()
 
-[source,c]
-----
-GetServerQueueNames() : <<class-array,Array>>
-----
-
+GetServerQueueNames() => <<class-array,Array>>::
 Get array with server queue names. 
-
++
 .Return
 Array with strings. 
 

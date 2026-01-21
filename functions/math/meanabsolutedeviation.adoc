@@ -2,11 +2,7 @@
 [[func-math-meanabsolutedeviation]]
 == Math::MeanAbsoluteDeviation()
 
-[source,c]
-----
-Math::MeanAbsoluteDeviation(x, y, ...) => Number
-----
-
+Math::MeanAbsoluteDeviation(x, y, ...) => Number::
 Calculates mean absolute deviation for given series.
 
 .Parameters

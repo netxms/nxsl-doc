@@ -2,13 +2,9 @@
 [[func-ismarkdowncomment]]
 == IsMarkdownComment()
 
-[source,c]
-----
-IsMarkdownComment(comment): bool
-----
-
+IsMarkdownComment(comment) => bool::
 Return true if string passed as argument starts with Markdown indicator.
-
++
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
@@ -21,5 +17,5 @@ Return true if string passed as argument starts with Markdown indicator.
 s = s.substring(3);
 
 // And to get object comment always as text:
-comment = IsMarkdownComment($object.comments) ? $object.comments.substring(3) : $object.comments;
+comment = IsMarkdownComment($object.comments) ? $object.comments.substring(3) => $object.comments;::
 ....

@@ -2,11 +2,7 @@
 [[func-math-standarddeviation]]
 == Math::StandardDeviation()
 
-[source,c]
-----
-Math::StandardDeviation(x, y, ...) => Number
-----
-
+Math::StandardDeviation(x, y, ...) => Number::
 Calculates standard deviation for given series.
 
 .Parameters

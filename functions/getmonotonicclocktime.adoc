@@ -2,15 +2,9 @@
 [[func-getmonotonicclocktime]]
 == GetMonotonicClockTime()
 
-[source,c]
-----
-GetMonotonicClockTime(): int
-----
-
+GetMonotonicClockTime() => int::
 Get number of milliseconds counted by monotonic clock since some unspecified point in the past (system boot time on most systems).
-
-
-
++
 .Return
 Current time from monotonic clock in milliseconds.
 

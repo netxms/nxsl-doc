@@ -2,16 +2,12 @@
 [[func-getservernode]]
 == GetServerNode()
 
-[source,c]
-----
-GetServerNode() => Node
-----
-
+GetServerNode() => Node::
 Get node object of the management server.
-
++
 .Return
 Node instance.
-
++
 [.source]
 ....
 >>> GetServerNode()

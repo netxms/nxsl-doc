@@ -1,23 +1,2 @@
-= Encoding
-
-All encoding functions are available under **Base64** package. They can be used by importing 
-the package in the script or using package name before the function name. Package name 
-together with function name used in documentation. 
-
-Example with import:
-
-[source,c]
-----
-import Base64;
-print(Decode("U29tZSB0ZXh0")); //Will print "Some text"
-----
-
-Example without import:
-
-[source,c]
-----
-print(Base64::Decode("U29tZSB0ZXh0")); //Will print "Some text"
-----
-
 include::functions/base64/decode.adoc[]
 include::functions/base64/encode.adoc[]

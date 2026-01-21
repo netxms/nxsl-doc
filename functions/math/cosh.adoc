@@ -2,22 +2,18 @@
 [[func-math-cosh]]
 == Math::Cosh()
 
-[source,c]
-----
-Math::Cosh(x) => Float
-----
-
+Math::Cosh(x) => Float::
 Calculates hyperbolic cosine x.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |x|Number|Angle in radians
 |===
-
++
 .Return
 Result of hyperbolic cosine for this angle
-
++
 [source,c]
 ----
 print(Math::Cosh(0.5)); // Will print "0.877583"

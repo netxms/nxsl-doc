@@ -2,13 +2,9 @@
 [[func-calculatedowntime]]
 == CalculateDowntime()
 
-[source,c]
-----
-CalculateDowntime(object, schedule, startTime, endTime) : <<class-array,Array>>
-----
-
+CalculateDowntime(object, schedule, startTime, endTime) => <<class-array,Array>>::
 Calculates downtime periods for a given network object based on a maintenance schedule within the specified time range.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
@@ -17,7 +13,7 @@ Calculates downtime periods for a given network object based on a maintenance sc
 |startTime|Integer|Start of the period (as UNIX timestamp)
 |endTime|Integer|End of the period (as UNIX timestamp)
 |===
-
++
 .Return
 
 Array of <<class-downtimeinfo,DowntimeInfo>> objects describing downtime windows, or NULL on failure.
@@ -32,4 +28,3 @@ if (downtimes != null) {
     }
 }
 ....
-

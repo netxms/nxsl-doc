@@ -1,24 +1,5 @@
 = Network
 
-All math functions are available under **Net** package. They can be used by importing 
-the package in the script or using package name before the function name. Package name 
-together with function name used in documentation. 
-
-Example with import:
-
-[source,c]
-----
-import Net;
-println(ResolveAddress("127.0.0.1")); //Will print "localhost"
-----
-
-Example without import:
-
-[source,c]
-----
-println(Net::ResolveAddress("127.0.0.1")); //Will print "localhost"
-----
-
 include::functions/net/getlocalhostname.adoc[]
 include::functions/net/resolveaddress.adoc[]
 include::functions/net/resolvehostname.adoc[]

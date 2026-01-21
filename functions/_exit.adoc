@@ -3,7 +3,6 @@
 == _exit()
 
 `_exit(exitCode=0) => void`::
-
 Stop script execution and return `exitCode`.
 
 .Parameters

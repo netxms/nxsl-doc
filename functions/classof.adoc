@@ -2,19 +2,15 @@
 [[func-classof]]
 == classof()
 
-[source,c]
-----
-classof(instance): <<class-string,String>>
-----
-
+classof(instance) => <<class-string,String>>::
 Return class name of the `instance`.
-
++
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
 |instance|Instance of any class.
 |===
-
++
 .Return
 Class name.
 

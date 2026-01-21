@@ -2,22 +2,18 @@
 [[func-net-resolveaddress]]
 == Net::ResolveAddress()
 
-[source,c]
-----
-Net::ResolveAddress(address): <<class-string,String>>
-----
-
+Net::ResolveAddress(address) => <<class-string,String>>::
 Resolve IP address to host name
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
 |address|String|IP address to resolve host name
 |===
-
++
 .Return
 Host name
-
++
 [.source]
 ....
 println(Net::ResolveAddress("127.0.0.1")); //Will print "localhost"

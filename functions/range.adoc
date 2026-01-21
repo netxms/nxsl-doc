@@ -2,15 +2,11 @@
 [[func-range]]
 == range()
 
-[source,c]
-----
-range(end) => Range
 range(start, end) => Range
 range(start, end, step) => Range
-----
-
+range(end) => Range::
 Creates a <<class-range,Range>> object for iteration.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
@@ -18,11 +14,11 @@ Creates a <<class-range,Range>> object for iteration.
 |end|Numeric|End value (exclusive)
 |step|Numeric|Step value. Optional, defaults to 1
 |===
-
++
 .Return
 
 <<class-range,Range>> object that is iterable and can be used in for-each loops.
-
++
 [.source]
 ....
 // Create range from 0 to 9
@@ -40,4 +36,3 @@ for (i : range(0, 10, 2)) {
     println(i);  // prints 0, 2, 4, 6, 8
 }
 ....
-

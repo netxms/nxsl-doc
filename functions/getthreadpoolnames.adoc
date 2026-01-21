@@ -2,13 +2,9 @@
 [[func-getthreadpoolnames]]
 == GetThreadPoolNames()
 
-[source,c]
-----
-GetThreadPoolNames() : <<class-array,Array>>
-----
-
+GetThreadPoolNames() => <<class-array,Array>>::
 Get array with thread pool names. 
-
++
 .Return
 Array with strings. 
 

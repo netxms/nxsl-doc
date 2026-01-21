@@ -2,11 +2,7 @@
 [[func-math-average]]
 == Math::Average()
 
-[source,c]
-----
-Math::Average(x, y, ...) => Number
-----
-
+Math::Average(x, y, ...) => Number::
 Calculate average value from given numbers or array(s) of numbers.
 
 .Parameters

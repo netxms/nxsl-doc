@@ -2,13 +2,9 @@
 [[func-levenshteindistance]]
 == LevenshteinDistance()
 
-[source,c]
-----
-LevenshteinDistance(string1, string2, ignoreCase): int
-----
-
+LevenshteinDistance(string1, string2, ignoreCase) => int::
 Calculates the Levenshtein distance between two strings, which is the minimum number of single-character edits (insertions, deletions, substitutions) needed to transform one string into another.
-
++
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
@@ -16,7 +12,7 @@ Calculates the Levenshtein distance between two strings, which is the minimum nu
 |string2|String|Second string to compare
 |ignoreCase|Boolean|Optional. If TRUE, performs case-insensitive comparison. Defaults to FALSE
 |===
-
++
 .Return
 
 Integer representing the edit distance between the two strings.
@@ -31,4 +27,3 @@ println(distance);  // prints 3
 distance = LevenshteinDistance("Hello", "hello", true);
 println(distance);  // prints 0
 ....
-
