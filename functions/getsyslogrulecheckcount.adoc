@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getsyslogrulecheckcount]]
-== GetSyslogRuleCheckCount()
+== GetSyslogRuleCheckCount
 
-GetSyslogRuleCheckCount(name, object) => int::
+GetSyslogRuleCheckCount(name, object): int::
 Get syslog rule check count for all objects or for exact object.
 +
 .Parameters

@@ -13,7 +13,7 @@ Please use <<func-math-pow>> instead.
 
 [source,c]
 ----
-pow(x, y) => Float
+pow(x, y): float
 ----
 
 Calculates x raised to the power of y.

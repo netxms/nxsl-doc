@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-io-fileaccess]]
-== IO::FileAccess()
+== IO::FileAccess
 
-IO::FileAccess(fileName, mode) => bool::
+IO::FileAccess(fileName, mode): bool::
 Check file access.
 +
 .Parameters

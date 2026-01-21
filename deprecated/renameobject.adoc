@@ -13,7 +13,7 @@ Please use rename method in <<class-netobj>>.
 
 [source,c]
 ----
-RenameObject(object, name) => void
+RenameObject(object, name): void
 ----
 
 Rename object.

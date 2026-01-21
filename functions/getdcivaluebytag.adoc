@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getdcivaluebytag]]
-== GetDCIValueByTag()
+== GetDCIValueByTag
 
-GetDCIValueByTag(node, userTag): <<class-string,String>> or Table::
+GetDCIValueByTag(node, userTag): <<class-string,String>> | <<class-table>>::
 Get last value of DCI with given user tag on given node.
 +
 [.version-added]

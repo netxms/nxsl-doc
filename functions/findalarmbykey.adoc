@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-findalarmbykey]]
-== FindAlarmByKey()
+== FindAlarmByKey
 
-FindAlarmByKey(key) => Alarm::
+FindAlarmByKey(key): <<class-alarm>>::
 Find alarm by key
 +
 .Parameters

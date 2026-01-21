@@ -13,7 +13,7 @@ Please use <<func-math-max>> instead.
 
 [source,c]
 ----
-max(value1, value2, ...) => void
+max(value1, value2, ...): void
 ----
 
 Returns maximal value from a list of values.

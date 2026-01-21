@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-chr]]
-== chr()
+== chr
 
-chr(code) => void::
+chr(code): <<class-string,String>>::
 Return a character from it's UNICODE code.
 +
 .Parameters
@@ -16,5 +16,5 @@ A string consisting of single character.
 +
 [.source]
 ----
-chr(50)	 //Will return "P"
+chr(0x50)	 //Will return "P"
 ----

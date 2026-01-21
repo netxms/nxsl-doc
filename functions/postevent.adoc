@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-postevent]]
-== PostEvent()
+== PostEvent
 
-PostEvent(node, event, tag, ...) => bool::
+PostEvent(node, event, tag, ...): bool::
 Post event on behalf of given node.
 +
 .Parameters

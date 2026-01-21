@@ -13,7 +13,7 @@ Please use <<class-netobj-entermaintenance,enterMaintenance()>> method of NetObj
 
 [source,c]
 ----
-EnterMaintenance(object) => void
+EnterMaintenance(object): void
 ----
 
 Make an object enter Maintenance mode.

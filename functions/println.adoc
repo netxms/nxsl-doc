@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-println]]
-== println()
+== println
 
-println(object) => void::
+println(object): void::
 Prints any text or text representation of object and adds new line symbol after it
 +
 .Parameters

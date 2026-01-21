@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-createuseragentnotification]]
-== CreateUserAgentNotification()
+== CreateUserAgentNotification
 
-CreateUserAgentNotification(object, message, startTime, endTime) => int::
+CreateUserAgentNotification(object, message, startTime, endTime): int::
 Creates user agent notification 
 +
 .Parameters

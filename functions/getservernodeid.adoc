@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-getservernodeid]]
-== GetServerNodeId()
+== GetServerNodeId
 
 GetServerNodeId(): int::
 Get ID of management server's node.

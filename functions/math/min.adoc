@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-math-min]]
-== Math::Min()
+== Math::Min
 
 Math::Min(x, y, ...) => Number::
 Returns minimal value from given numbers or array(s) of numbers.

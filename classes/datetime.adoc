@@ -29,9 +29,9 @@ tm_min: int::
 Minutes after the hour. Can be modified.
 
 [[datetime-hour]]
-hour => integer::
+hour: integer::
 [[datetime-tm_hour]]
-tm_hour => integer::
+tm_hour: integer::
 Hours since midnight. Can be modified.
 
 [[datetime-day]]
@@ -94,7 +94,7 @@ UNIX time (number of seconds since epoch). Can be modified.
 [.method-list]
 --
 [[datetime-format]]
-format(format) => void::
+format(format): void::
 Formats a timestamp, and returns a string according to given formatting rules.
 +
 .Parameters

@@ -43,7 +43,7 @@ Returns string with serialized JSON
 String with JSON
 
 [[jsonobject-set]]
-set(key, value) => void::
+set(key, value): void::
 Sets attribute referenced by key to the given value.
 +
 .Parameters

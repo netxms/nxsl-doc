@@ -9,7 +9,7 @@ Scored dci value from anomaly prediction
 [.attr-list]
 --
 [[scoreddcivalue-score]]
-score => Float::
+score: float::
 Score
 
 [[scoreddcivalue-timestamp]]
@@ -17,6 +17,6 @@ timestamp: int::
 Timestam as UNIX time
 
 [[scoreddcivalue-value]]
-value => Float::
+value: float::
 DCI Value
 --

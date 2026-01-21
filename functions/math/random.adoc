@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-random]]
-== Math::Random()
+== Math::Random
 
-Math::Random(minValue, maxValue) => int::
+Math::Random(minValue, maxValue): int::
 Generate pseudo random number in given range. Uses cryptographically secure pseudo random generator (CSPRNG).
 +
 .Parameters

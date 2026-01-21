@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-findnodeobject]]
-== FindNodeObject()
+== FindNodeObject
 
 FindNodeObject(currentNode, key): <<class-node>>::
 Look up <<class-node>> object by either name or object id, will return `null` if object not found or not accessible.

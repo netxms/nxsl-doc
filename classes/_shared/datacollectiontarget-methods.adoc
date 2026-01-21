@@ -4,16 +4,16 @@
 .Inherited methods from DataCollectionTarget
 [%collapsible]
 ====
-`applyTemplate(template) => void`::
+`applyTemplate(template): void`::
 Apply template to node.
 
-`enableConfigurationPolling(flag) => void`::
+`enableConfigurationPolling(flag): void`::
 Enable or disable configuration polling.
 
-`enableDataCollection(flag) => void`::
+`enableDataCollection(flag): void`::
 Enable or disable data collection polling.
 
-`enableStatusPolling(flag) => void`::
+`enableStatusPolling(flag): void`::
 Enable or disable status polling.
 
 `readInternalParameter(name): <<class-string,String>>`::
@@ -22,6 +22,6 @@ Reads object internal metric (metric with source "Internal").
 `readInternalTable(name): <<class-string,String>>`::
 Reads object internal table metric (metric with source "Internal").
 
-`removeTemplate(template) => void`::
+`removeTemplate(template): void`::
 Remove template from node.
 ====

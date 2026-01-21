@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-loadevent]]
-== LoadEvent()
+== LoadEvent
 
-LoadEvent(eventId) => Event::
+LoadEvent(eventId): <<class-event>> | null::
 Will load event from the database and return <<class-event>> object or NULL if event not found.
 +
 .Parameters

@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-sendmail]]
-== SendMail()
+== SendMail
 
-SendMail(recipients, subject, text, ishtml) => void::
+SendMail(recipients, subject, text, ishtml): void::
 Sends e-mail to specified recipients.
 +
 .Parameters

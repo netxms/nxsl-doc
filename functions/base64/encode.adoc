@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-base64-encode]]
-== Base64::Encode()
+== Base64::Encode
 
-Base64::Encode(string, encoding=null) => <<class-string,String>>::
+Base64::Encode(string, encoding=null): <<class-string,String>>::
 Encode string as base64. Accepts string to encode and optional character encoding.
 Valid character encodings are "UTF-8", "UCS-2", "UCS-4", "SYSTEM". Default is UTF-8.
 +

@@ -1,7 +1,7 @@
 // Function Reference - organized by use-case
 // Each section groups related functions for easier discovery
 
-=== Object Navigation
+=== Objects
 
 Functions for finding and navigating NetXMS objects.
 
@@ -33,13 +33,13 @@ Functions for working with dates and times.
 
 include::func-time.adoc[leveloffset=+2]
 
-=== Math Package
+=== Math
 
 Mathematical functions under the `Math::` namespace.
 
 include::func-math.adoc[leveloffset=+2]
 
-=== Cryptography Package
+=== Cryptography / Hashes
 
 Cryptographic functions under the `Crypto::` namespace.
 
@@ -51,19 +51,19 @@ Base64 encoding/decoding functions under the `Base64::` namespace.
 
 include::func-base64.adoc[leveloffset=+2]
 
-=== Network Package
+=== Network
 
 Network operations under the `Net::` namespace.
 
 include::func-net.adoc[leveloffset=+2]
 
-=== File I/O Package
+=== File operations
 
 File system operations under the `IO::` namespace.
 
 include::func-files.adoc[leveloffset=+2]
 
-=== Utility Functions
+=== Miscelanious
 
 General-purpose utility functions.
 

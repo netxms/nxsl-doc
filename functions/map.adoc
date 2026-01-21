@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-map]]
-== map()
+== map
 
-map(table, key, default=null) => <<class-string,String>>::
+map(table, key, default=null): <<class-string,String>>::
 Lookup value from mapping table.
 +
 .Parameters

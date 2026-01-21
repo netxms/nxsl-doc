@@ -1,5 +1,3 @@
-= Miscelanious
-
 include::functions/_exit.adoc[]
 
 include::functions/assert.adoc[]

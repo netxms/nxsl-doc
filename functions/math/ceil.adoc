@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-ceil]]
-== Math::Ceil()
+== Math::Ceil
 
-Math::Ceil(x) => int::
+Math::Ceil(x): int::
 Round up value.
 +
 .Parameters

@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-math-round]]
-== Math::Round()
+== Math::Round
 
 Math::Round(x, precision) => Number::
 Round floating point value to the nearest integer value or floating point value with given precision.

@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-findaccesspointbymacaddress]]
-== FindAccessPointByMACAddress()
+== FindAccessPointByMACAddress
 
 FindAccessPointByMACAddress(macaddress, currentNode): <<class-accesspoint,AccessPoint>>::
 Look up <<class-accesspoint>> object by MAC address of it or BSSID of one of radio interfaces.

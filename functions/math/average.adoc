@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-math-average]]
-== Math::Average()
+== Math::Average
 
 Math::Average(x, y, ...) => Number::
 Calculate average value from given numbers or array(s) of numbers.

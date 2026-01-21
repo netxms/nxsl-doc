@@ -13,7 +13,7 @@ Please use <<func-math-sin>> instead.
 
 [source,c]
 ----
-sin(x) => Float
+sin(x): float
 ----
 
 Calculates sine from given angle in radians.

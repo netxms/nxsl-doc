@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getmindcivalue]]
-== GetMinDCIValue()
+== GetMinDCIValue
 
-GetMinDCIValue(node, dciId, from, to)) => <<class-string,String>>::
+GetMinDCIValue(node, dciId, from, to)): <<class-string,String>>::
 Get the minimum value of the DCI for the given period. The DCI value must be of numeric type.
 +
 .Parameters

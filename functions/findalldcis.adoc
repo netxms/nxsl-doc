@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-findalldcis]]
-== FindAllDCIs()
+== FindAllDCIs
 
 FindAllDCIs(node, nameFilter, descriptionFilter, userTagFilter, relatedObjectFilter): <<class-array,Array>>::
 

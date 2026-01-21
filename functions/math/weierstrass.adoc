@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-weierstrass]]
-== Math::Weierstrass()
+== Math::Weierstrass
 
-Math::Weierstrass(a, b, x) => Float::
+Math::Weierstrass(a, b, x): float::
 Calculate Weierstrass function for given x, a, and b. More can be found there:
 https://en.wikipedia.org/wiki/Weierstrass_function. Can be used for test data
 generation.

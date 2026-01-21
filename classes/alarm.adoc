@@ -41,7 +41,7 @@ eventName: <<class-string,String>>::
 Name of originating event.
 
 [[alarm-eventTagList]]
-eventTagList => Float::
+eventTagList: float::
 List of event tags as a comma separated string
 
 [[alarm-helpdeskReference]]

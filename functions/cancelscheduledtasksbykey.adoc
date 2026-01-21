@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-cancelscheduledtasksbykey]]
-== CancelScheduledTasksByKey()
+== CancelScheduledTasksByKey
 
-CancelScheduledTasksByKey(key) => int::
+CancelScheduledTasksByKey(key): int::
 Will delete scheduled tasks by key
 +
 .Parameters

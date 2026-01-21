@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-findnodebysysname]]
-== FindNodeBySysName()
+== FindNodeBySysName
 
 FindNodeBySysName(sysname, currentNode): <<class-node>>::
 Look up <<class-node>> object by SNMP sysName.

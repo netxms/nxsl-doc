@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-d2x]]
-== d2x()
+== d2x
 
-d2x(number, padding=0) => <<class-string,String>>::
+d2x(number, padding=0): <<class-string,String>>::
 Convert decimal `devValue` to hex string with optional left-padding with zeroes.
 +
 .Parameters

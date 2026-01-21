@@ -70,7 +70,7 @@ Subnet base address
 [.method-list]
 --
 [[inetaddress-contains]]
-contains(address) => void::
+contains(address): void::
 If subnet contains internet address
 +
 .Parameters
@@ -89,7 +89,7 @@ println(r); // will print "true", if primary IP address of node is in that subne
 ....
 
 [[inetaddress-equals]]
-equals(address) => void::
+equals(address): void::
 If addresses are equal
 +
 .Parameters
@@ -102,7 +102,7 @@ If addresses are equal
 `TRUE` if addresses are equal, otherwise `FALSE`
 
 [[inetaddress-inrange]]
-inRange(addressStart, addressEnd) => void::
+inRange(addressStart, addressEnd): void::
 If address is in range
 +
 [.source]
@@ -122,7 +122,7 @@ println(r); // will print "true", if primary IP address of node is in range
 `TRUE` if adresse is in range, otherwise `FALSE`
 
 [[inetaddress-samesubnet]]
-sameSubnet(address) => void::
+sameSubnet(address): void::
 If adresses are in the same subnet (using mask bits from this InetAddress)
 +
 .Parameters

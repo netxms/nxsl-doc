@@ -13,7 +13,7 @@ Please use <<func-math-min>> instead.
 
 [source,c]
 ----
-min(value1, value2, ...) => Float
+min(value1, value2, ...): float
 ----
 
 Returns minimal value from a list of values.

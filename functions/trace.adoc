@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-trace]]
-== trace()
+== trace
 
-trace(debugLevel, message) => void::
+trace(debugLevel, message): void::
 Writes `message` to NetXMS main log if current debug level is equal or higher than `debugLevel`.
 +
 .Parameters

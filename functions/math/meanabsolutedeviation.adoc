@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-math-meanabsolutedeviation]]
-== Math::MeanAbsoluteDeviation()
+== Math::MeanAbsoluteDeviation
 
 Math::MeanAbsoluteDeviation(x, y, ...) => Number::
 Calculates mean absolute deviation for given series.

@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-assert]]
-== assert()
+== assert
 
-assert(expression) => void::
+assert(expression): void::
 Check if given value is `TRUE`
 +
 .Parameters

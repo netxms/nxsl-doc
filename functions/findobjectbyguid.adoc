@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-findobjectbyguid]]
-== FindObjectByGUID()
+== FindObjectByGUID
 
 FindObjectByGUID(guid, currentNode): <<class-netobj>>::
 Look up any object inherited from <<class-netobj>> (<<class-node>>, <<class-interface>>, <<class-cluster>>, etc.) by GUID.

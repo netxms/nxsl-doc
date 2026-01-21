@@ -13,7 +13,7 @@ Please use <<class-netobj-deletecustomattribute,deleteCustomAttribute()>> method
 
 [source,c]
 ----
-DeleteCustomAttribute(object, name) => void
+DeleteCustomAttribute(object, name): void
 ----
 
 Delete custom attribute `name` from `object`.

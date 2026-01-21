@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-cosh]]
-== Math::Cosh()
+== Math::Cosh
 
-Math::Cosh(x) => Float::
+Math::Cosh(x): float::
 Calculates hyperbolic cosine x.
 +
 .Parameters

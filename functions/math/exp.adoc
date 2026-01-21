@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-exp]]
-== Math::Exp()
+== Math::Exp
 
-Math::Exp(x) => Float::
+Math::Exp(x): float::
 Computes `e**x`, the http://en.wikipedia.org/wiki/Exponential_function[base-e] exponential.
 +
 .Parameters

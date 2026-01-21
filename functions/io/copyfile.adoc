@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-io-copyfile]]
-== IO::CopyFile()
+== IO::CopyFile
 
-IO::CopyFile(sourceFileName, destinationFileName) => bool::
+IO::CopyFile(sourceFileName, destinationFileName): bool::
 Makes a copy of source file or folder to destination file or folder and returns `TRUE` if action was successful.
 +
 .Parameters

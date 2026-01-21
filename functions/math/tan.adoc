@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-tan]]
-== Math::Tan()
+== Math::Tan
 
-Math::Tan(x) => Float::
+Math::Tan(x): float::
 Calculates tangent of x.
 +
 .Parameters

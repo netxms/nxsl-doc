@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-floor]]
-== Math::Floor()
+== Math::Floor
 
-Math::Floor(x) => int::
+Math::Floor(x): int::
 Round down value.
 +
 .Parameters

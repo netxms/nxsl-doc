@@ -210,11 +210,11 @@ include::_shared/netobj-methods.adoc[]
 [.method-list]
 --
 [[interface-clearpeer]]
-clearPeer(enabled) => void::
+clearPeer(enabled): void::
 Clears peer information for interface.
 
 [[interface-enableagentstatuspolling]]
-enableAgentStatusPolling(enabled) => void::
+enableAgentStatusPolling(enabled): void::
 Enable\disable agent status polling for this interface
 +
 .Parameters
@@ -224,7 +224,7 @@ Enable\disable agent status polling for this interface
 |===
 
 [[interface-enableicmpstatuspolling]]
-enableICMPStatusPolling(enabled) => void::
+enableICMPStatusPolling(enabled): void::
 Enable\disable ICMP status polling for this interface
 +
 .Parameters
@@ -234,7 +234,7 @@ Enable\disable ICMP status polling for this interface
 |===
 
 [[interface-enablesnmpstatuspolling]]
-enableSNMPStatusPolling(enabled) => void::
+enableSNMPStatusPolling(enabled): void::
 Enable\disable SNMP status polling for this interface
 +
 .Parameters
@@ -244,7 +244,7 @@ Enable\disable SNMP status polling for this interface
 |===
 
 [[interface-setexcludefromtopology]]
-setExcludeFromTopology(excluded) => void::
+setExcludeFromTopology(excluded): void::
 Change `isExcludedFromTopology` flag.
 +
 .Parameters
@@ -254,7 +254,7 @@ Change `isExcludedFromTopology` flag.
 |===
 
 [[interface-setexpectedstate]]
-setExpectedState(newState) => void::
+setExpectedState(newState): void::
 Set expected state to `newState`.
 +
 .Parameters
@@ -264,7 +264,7 @@ Set expected state to `newState`.
 |===
 
 [[interface-setincludeinicmppoll]]
-setIncludeInIcmpPoll(enabled) => void::
+setIncludeInIcmpPoll(enabled): void::
 Enabele/Disable ICMP statistics collection for current interface.
 +
 .Parameters
@@ -274,7 +274,7 @@ Enabele/Disable ICMP statistics collection for current interface.
 |===
 
 [[interface-setpollcountforstatuschange]]
-setPollCountForStatusChange(count) => void::
+setPollCountForStatusChange(count): void::
 Set the required number of polls before registering a status change.
 +
 .Parameters

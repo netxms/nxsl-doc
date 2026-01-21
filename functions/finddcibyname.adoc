@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-finddcibyname]]
-== FindDCIByName()
+== FindDCIByName
 
-FindDCIByName(node, dciParameter) => int::
+FindDCIByName(node, dciParameter): int::
 Find ID of the DCI on node by parameter name (exact match). <<func-findalldcis>> can be used for pattern search.
 +
 .Parameters

@@ -13,7 +13,7 @@ Please use <<func-math-tan>> instead.
 
 [source,c]
 ----
-tan(x) => Float
+tan(x): float
 ----
 
 Calculates tangent x

@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-getdcivaluesex]]
-== GetDCIValuesEx()
+== GetDCIValuesEx
 
 GetDCIValuesEx(node, dciId, startTime, endTime, rawValues): <<class-array,Array>>::
 Get all values for period of DCI with given ID on given node, returning them as <<class-datapoint,DataPoint>> objects containing both timestamp and value.

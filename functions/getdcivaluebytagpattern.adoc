@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getdcivaluebytagpattern]]
-== GetDCIValueByTagPattern()
+== GetDCIValueByTagPattern
 
-GetDCIValueByTagPattern(node, userTagPattern): <<class-string,String>> or Table::
+GetDCIValueByTagPattern(node, userTagPattern): <<class-string,String>> | <<class-table>>::
 Get last value of DCI with given user tag pattern on given node.
 +
 [.version-added]

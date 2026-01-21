@@ -95,11 +95,11 @@ Link width.
 [.method-list]
 --
 [[networkmaplink-clearDataSource]]
-clearDataSource() => void::
+clearDataSource(): void::
 Remove all data sources form the list
 
 [[networkmaplink-removeDataSource]]
-removeDataSource(index) => void::
+removeDataSource(index): void::
 Remove data source by index
 +
 .Parameters
@@ -109,7 +109,7 @@ Remove data source by index
 |===
 
 [[networkmaplink-setColorConfig]]
-setColorConfig(mode, data, includeThresholds, includeLinkUtilization) => void::
+setColorConfig(mode, data, includeThresholds, includeLinkUtilization): void::
 Set color source mode and additional parameters
 +
 .Parameters
@@ -122,7 +122,7 @@ Set color source mode and additional parameters
 |===
 
 [[networkmaplink-setConnectorName1]]
-setConnectorName1(name) => void::
+setConnectorName1(name): void::
 Set connection 1 name
 +
 .Parameters
@@ -132,7 +132,7 @@ Set connection 1 name
 |===
 
 [[networkmaplink-setConnectorName2]]
-setConnectorName2(name) => void::
+setConnectorName2(name): void::
 Set connection 2 name
 +
 .Parameters
@@ -142,7 +142,7 @@ Set connection 2 name
 |===
 
 [[networkmaplink-setInterface1]]
-setInterface1(interface) => void::
+setInterface1(interface): void::
 Set first interface
 +
 .Parameters
@@ -152,7 +152,7 @@ Set first interface
 |===
 
 [[networkmaplink-setInterface2]]
-setInterface2(interface) => void::
+setInterface2(interface): void::
 Set second interface
 +
 .Parameters
@@ -162,7 +162,7 @@ Set second interface
 |===
 
 [[networkmaplink-setName]]
-setName(name) => void::
+setName(name): void::
 Set name
 +
 .Parameters
@@ -172,7 +172,7 @@ Set name
 |===
 
 [[networkmaplink-setRoutingAlgorithm]]
-setRoutingAlgorithm(algorithm) => void::
+setRoutingAlgorithm(algorithm): void::
 Set routing algorithm
 +
 .Parameters
@@ -182,7 +182,7 @@ Set routing algorithm
 |===
 
 [[networkmaplink-setStyle]]
-setStyle(style) => void::
+setStyle(style): void::
 Set link stle
 +
 .Parameters
@@ -192,7 +192,7 @@ Set link stle
 |===
 
 [[networkmaplink-setWidth]]
-setWidth(width) => void::
+setWidth(width): void::
 Set link width
 +
 .Parameters
@@ -202,7 +202,7 @@ Set link width
 |===
 
 [[networkmaplink-updateDataSource]]
-updateDataSource(dci, format) => void::
+updateDataSource(dci, format): void::
 Add or update link data source
 +
 .Parameters

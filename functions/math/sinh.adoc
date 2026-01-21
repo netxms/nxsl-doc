@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-sinh]]
-== Math::Sinh()
+== Math::Sinh
 
-Math::Sinh(x) => Float::
+Math::Sinh(x): float::
 Calculates hyperbolic sine x.
 +
 .Parameters

@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-getmappingtablekeys]]
-== GetMappingTableKeys()
+== GetMappingTableKeys
 
 GetMappingTableKeys(table): <<class-array,Array>>::
 Get array with all keys from mapping table.

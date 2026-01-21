@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getcurrenttimems]]
-== GetCurrentTimeMs()
+== GetCurrentTimeMs
 
-GetCurrentTimeMs() => int64::
+GetCurrentTimeMs(): int64::
 Get current time in milliseconds
 +
 .Return

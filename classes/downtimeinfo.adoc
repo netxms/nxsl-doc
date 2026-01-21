@@ -19,6 +19,6 @@ totalDowntime: int::
 Downtime in seconds
 
 [[downtimeinfo-uptimePercentage]]
-uptimePercentage => Float::
+uptimePercentage: float::
 Uptime percentage
 --

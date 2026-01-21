@@ -13,7 +13,7 @@ Please use <<func-math-sqrt>> instead.
 
 [source,c]
 ----
-sqrt(input) => Float
+sqrt(input): float
 ----
 
 Gets square root from number.

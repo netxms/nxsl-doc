@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-findvendorbymacaddress]]
-== FindVendorByMACAddress()
+== FindVendorByMACAddress
 
-FindVendorByMACAddress(text) => <<class-string,String>>::
+FindVendorByMACAddress(text): <<class-string,String>>::
 Find NIC vendor information by mac address
 +
 .Parameters

@@ -1,5 +1,3 @@
-= Network
-
 include::functions/net/getlocalhostname.adoc[]
 include::functions/net/resolveaddress.adoc[]
 include::functions/net/resolvehostname.adoc[]

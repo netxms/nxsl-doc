@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-formatmetricprefix]]
-== FormatMetricPrefix()
+== FormatMetricPrefix
 
-FormatMetricPrefix(number, binary, precision) => <<class-string,String>>::
+FormatMetricPrefix(number, binary, precision): <<class-string,String>>::
 Convert numeric value to human-readable form with metric prefix.
 +
 .Parameters

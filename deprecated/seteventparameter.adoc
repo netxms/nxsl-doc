@@ -13,7 +13,7 @@ Please use setNamedParameter method in <<class-event>>.
 
 [source,c]
 ----
-SetEventParameter(event, parameterName, value) => void
+SetEventParameter(event, parameterName, value): void
 ----
 
 Set value of event's named parameter.

@@ -28,7 +28,7 @@ foreach(t : templates)
 [.method-list]
 --
 [[datacollectiontarget-applyTemplate]]
-applyTemplate(template) => void::
+applyTemplate(template): void::
 Apply template to node
 +
 .Parameters
@@ -38,7 +38,7 @@ Apply template to node
 |===
 
 [[datacollectiontarget-enableConfigurationPolling]]
-enableConfigurationPolling(flag) => void::
+enableConfigurationPolling(flag): void::
 Enable or disable configuration polling for a node
 +
 .Parameters
@@ -48,7 +48,7 @@ Enable or disable configuration polling for a node
 |===
 
 [[datacollectiontarget-enableDataCollection]]
-enableDataCollection(flag) => void::
+enableDataCollection(flag): void::
 Enable or disable data collection polling for a node.
 +
 .Parameters
@@ -58,7 +58,7 @@ Enable or disable data collection polling for a node.
 |===
 
 [[datacollectiontarget-enableStatusPolling]]
-enableStatusPolling(flag) => void::
+enableStatusPolling(flag): void::
 Enable or disable status polling for a node.
 +
 .Parameters
@@ -88,7 +88,7 @@ Reads object internal table metric (metric with source "Internal").
 |===
 
 [[datacollectiontarget-removeTemplate]]
-removeTemplate(template) => void::
+removeTemplate(template): void::
 Remove template from node
 +
 .Parameters

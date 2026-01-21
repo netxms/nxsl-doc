@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-io-removedirectory]]
-== IO::RemoveDirectory()
+== IO::RemoveDirectory
 
-IO::RemoveDirectory(directory) => bool::
+IO::RemoveDirectory(directory): bool::
 Removes directory.
 +
 .Parameters

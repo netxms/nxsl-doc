@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-math-standarddeviation]]
-== Math::StandardDeviation()
+== Math::StandardDeviation
 
 Math::StandardDeviation(x, y, ...) => Number::
 Calculates standard deviation for given series.

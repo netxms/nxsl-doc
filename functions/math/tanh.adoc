@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-tanh]]
-== Math::Tanh()
+== Math::Tanh
 
-Math::Tanh(x) => Float::
+Math::Tanh(x): float::
 Calculates hyperbolic tangent of x.
 +
 .Parameters

@@ -1,9 +1,9 @@
 [.nxsl-function]
 [[func-sendnotification]]
-== SendNotification()
+== SendNotification
 
 
-SendNotification(channelName, recipients, subject, text) => void::
+SendNotification(channelName, recipients, subject, text): void::
 Sends notification to specified recipients.
 +
 .Parameters

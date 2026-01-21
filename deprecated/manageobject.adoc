@@ -13,7 +13,7 @@ Please use manage() method of <<class-netobj>> class.
 
 [source,c]
 ----
-ManageObject(object) => void
+ManageObject(object): void
 ----
 
 Set object into managed state. Has no effect if object is already in managed state.

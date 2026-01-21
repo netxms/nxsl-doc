@@ -84,7 +84,7 @@ TIP: Use your browser's search (Ctrl+F / Cmd+F) to quickly find what you're look
 |<<func-io-openfile,IO::OpenFile()>>|File I/O Package
 |<<func-io-removedirectory,IO::RemoveDirectory()>>|File I/O Package
 |<<func-io-renamefile,IO::RenameFile()>>|File I/O Package
-|<<func-IsMarkdownComment,IsMarkdownComment()>>|Utility
+|<<func-ismarkdowncomment,IsMarkdownComment()>>|Utility
 |<<func-jsonparse,JsonParse()>>|Utility
 |<<func-levenshteindistance,LevenshteinDistance()>>|String Operations
 |<<func-loadevent,LoadEvent()>>|Events and Alarms

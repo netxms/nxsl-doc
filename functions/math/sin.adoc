@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-sin]]
-== Math::Sin()
+== Math::Sin
 
-Math::Sin(x) => Float::
+Math::Sin(x): float::
 Calculates sine from given angle in radians. 
 +
 .Parameters

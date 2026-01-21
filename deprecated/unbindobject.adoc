@@ -16,7 +16,7 @@ This function is enabled by default, but can be disabled by setting configuratio
 
 [source,c]
 ----
-UnbindObject(parent, child) => void
+UnbindObject(parent, child): void
 ----
 
 Remove (unbind) object from a container.

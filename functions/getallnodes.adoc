@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-getallnodes]]
-== GetAllNodes()
+== GetAllNodes
 
 GetAllNodes(): <<class-array,Array>>::
 Get list of all <<class-node>> objects in the system as array.

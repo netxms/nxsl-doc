@@ -17,7 +17,7 @@ configuration parameter "NXSL.EnableContainerFunctions".
 
 [source,c]
 ----
-DeleteObject(object) => void
+DeleteObject(object): void
 ----
 
 Delete object of class <<class-netobj>>, <<class-interface>>, or <<class-node>> from the system.

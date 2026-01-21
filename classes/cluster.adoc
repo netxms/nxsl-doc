@@ -34,7 +34,7 @@ include::_shared/datacollectiontarget-methods.adoc[]
 [.method-list]
 --
 [[cluster-add]]
-add(object) => void::
+add(object): void::
 Add node to cluster
 +
 .Parameters
@@ -57,7 +57,7 @@ Get node which currently owns named resource.
 <<class-node>> object instance which currently owns resource of `null` if failed.
 
 [[cluster-remove]]
-remove(object) => void::
+remove(object): void::
 Remove node from cluster
 +
 .Parameters

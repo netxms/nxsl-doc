@@ -87,7 +87,7 @@ Create new sensor under current object.
 Newly created sensor of <<class-sensor>> class or NULL if failed to create
 
 [[collector-setAutoBindMode]]
-setAutoBindMode(enableBind, enableUnbind) => void::
+setAutoBindMode(enableBind, enableUnbind): void::
 Set automatic bind mode for the container.
 +
 .Parameters
@@ -98,7 +98,7 @@ Set automatic bind mode for the container.
 |===
 
 [[collector-setAutoBindScript]]
-setAutoBindScript(script) => void::
+setAutoBindScript(script): void::
 Update automatic binding script source.
 +
 .Parameters

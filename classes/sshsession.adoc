@@ -34,7 +34,7 @@ Returns TRUE if the session has escalated privileges.
 [.method-list]
 --
 [[sshsession-close]]
-close() => void::
+close(): void::
 Close the SSH session.
 +
 [.source]

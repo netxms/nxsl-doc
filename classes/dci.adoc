@@ -135,7 +135,7 @@ Added in version 5.2
 [.method-list]
 --
 [[dci-forcePoll]]
-forcePoll() => void::
+forcePoll(): void::
 Start DCI force poll.
 --
 

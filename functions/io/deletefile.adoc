@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-io-deletefile]]
-== IO::DeleteFile()
+== IO::DeleteFile
 
-IO::DeleteFile(file) => bool::
+IO::DeleteFile(file): bool::
 Deletes file.
 +
 .Parameters

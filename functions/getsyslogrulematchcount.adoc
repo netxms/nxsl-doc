@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getsyslogrulematchcount]]
-== GetSyslogRuleMatchCount()
+== GetSyslogRuleMatchCount
 
-GetSyslogRuleMatchCount(name, object) => int::
+GetSyslogRuleMatchCount(name, object): int::
 Get syslog rule match count or all objects or for exact object.
 +
 .Parameters

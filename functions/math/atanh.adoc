@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-atanh]]
-== Math::Atanh()
+== Math::Atanh
 
-Math::Atanh(x) => Float::
+Math::Atanh(x): float::
 Calculates hyperbolic arctan of x.
 +
 .Parameters

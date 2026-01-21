@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getdcivaluebyname]]
-== GetDCIValueByName()
+== GetDCIValueByName
 
-GetDCIValueByName(node, name) => <<class-string,String>> or Table::
+GetDCIValueByName(node, name): <<class-string,String>> | <<class-table>>::
 Get last value of DCI with given name on given node.
 +
 .Parameters

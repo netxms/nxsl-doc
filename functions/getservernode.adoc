@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-getservernode]]
-== GetServerNode()
+== GetServerNode
 
 GetServerNode(): <<class-node>>::
 Get node object of the management server.

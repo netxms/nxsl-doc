@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-similarityscore]]
-== SimilarityScore()
+== SimilarityScore
 
-SimilarityScore(string1, string2, ignoreCase) => Float::
+SimilarityScore(string1, string2, ignoreCase): float::
 Calculates a similarity score between two strings using Levenshtein distance.
 +
 .Parameters

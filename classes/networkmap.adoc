@@ -19,11 +19,11 @@ backgroundImageId: int::
 Image library GUID.
 
 [[networkmap-backgroundLatitude]]
-backgroundLatitude => Float::
+backgroundLatitude: float::
 Background latitude as floating point number <<class-geolocation>>.
 
 [[networkmap-backgroundLongitude]]
-backgroundLongitude => Float::
+backgroundLongitude: float::
 Background longitude as floating point number <<class-geolocation>>.
 
 [[networkmap-backgroundZoom]]

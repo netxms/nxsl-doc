@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-currencyexponent]]
-== CurrencyExponent()
+== CurrencyExponent
 
-CurrencyExponent(code) => int::
+CurrencyExponent(code): int::
 Get currency exponent
 +
 .Parameters

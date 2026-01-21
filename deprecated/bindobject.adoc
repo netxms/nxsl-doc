@@ -16,7 +16,7 @@ This function is enabled by default, but can be disabled by setting configuratio
 
 [source,c]
 ----
-BindObject(parent, child) => void
+BindObject(parent, child): void
 ----
 
 Bind all NetXMS objects that can be bound from console (nodes, subnets, clusters, and another containers) to container objects.

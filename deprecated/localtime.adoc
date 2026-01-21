@@ -13,7 +13,7 @@ Please use <<class-datetime>> class.
 
 [source,c]
 ----
-localtime(time) => void
+localtime(time): void
 ----
 
 Converts time in UNIX format (number of seconds since epoch) to calendar date

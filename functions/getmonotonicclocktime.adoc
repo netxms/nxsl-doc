@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getmonotonicclocktime]]
-== GetMonotonicClockTime()
+== GetMonotonicClockTime
 
-GetMonotonicClockTime() => int::
+GetMonotonicClockTime(): int::
 Get number of milliseconds counted by monotonic clock since some unspecified point in the past (system boot time on most systems).
 +
 .Return

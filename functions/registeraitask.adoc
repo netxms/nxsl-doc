@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-registeraitask]]
-== RegisterAITask()
+== RegisterAITask
 
-RegisterAITask(taskDescription, prompt) => int::
+RegisterAITask(taskDescription, prompt): int::
 Registers a new AI task for asynchronous processing.
 +
 .Parameters

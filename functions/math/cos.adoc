@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-cos]]
-== Math::Cos()
+== Math::Cos
 
-Math::Cos(x) => Float::
+Math::Cos(x): float::
 Calculates cosine from given angle in radians. 
 +
 .Parameters

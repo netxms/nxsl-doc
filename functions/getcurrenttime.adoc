@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getcurrenttime]]
-== GetCurrentTime()
+== GetCurrentTime
 
-GetCurrentTime() => int::
+GetCurrentTime(): int::
 Get current time in seconds
 +
 .Return

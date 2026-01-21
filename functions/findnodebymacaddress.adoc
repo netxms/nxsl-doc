@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-findnodebymacaddress]]
-== FindNodeByMACAddress()
+== FindNodeByMACAddress
 
 FindNodeByMACAddress(macaddress, currentNode): <<class-node>>::
 Look up <<class-node>> object by MAC address of one of the interfaces.

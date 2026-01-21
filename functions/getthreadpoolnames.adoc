@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-getthreadpoolnames]]
-== GetThreadPoolNames()
+== GetThreadPoolNames
 
 GetThreadPoolNames(): <<class-array,Array>>::
 Get array with thread pool names. 

@@ -1,5 +1,3 @@
-= Math
-
 include::functions/math/abs.adoc[]
 include::functions/math/acos.adoc[]
 include::functions/math/asin.adoc[]

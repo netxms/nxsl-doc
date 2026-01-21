@@ -32,7 +32,7 @@ Template version
 [.method-list]
 --
 [[template-applyTo]]
-applyTo(object) => void::
+applyTo(object): void::
 Apply teplate on object
 +
 .Parameters
@@ -42,7 +42,7 @@ Apply teplate on object
 |===
 
 [[template-removeFrom]]
-removeFrom(object) => void::
+removeFrom(object): void::
 emplate form object
 +
 .Parameters
@@ -52,7 +52,7 @@ emplate form object
 |===
 
 [[template-setAutoApplyMode]]
-setAutoApplyMode(enableBind, enableUnbind) => void::
+setAutoApplyMode(enableBind, enableUnbind): void::
 Set automatic bind mode for the container.
 +
 .Parameters
@@ -63,7 +63,7 @@ Set automatic bind mode for the container.
 |===
 
 [[template-setAutoApplyScript]]
-setAutoApplyScript(script) => void::
+setAutoApplyScript(script): void::
 Update automatic binding script source.
 +
 .Parameters

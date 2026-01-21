@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-jsonparse]]
-== JsonParse()
+== JsonParse
 
 JsonParse(string, [integerAsFloat]) => JSON object::
 Parse input `string` to <<class-jsonobject>>

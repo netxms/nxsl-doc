@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getavgdcivalue]]
-== GetAvgDCIValue()
+== GetAvgDCIValue
 
-GetAvgDCIValue(object, dciId, periodStart, periodEnd) => Float::
+GetAvgDCIValue(object, dciId, periodStart, periodEnd): float::
 Get the average value of the DCI for the given period. The DCI value type must be numeric.
 +
 .Parameters

@@ -114,7 +114,7 @@ Named event parameters can be accessed directly by the name (e.g `+$event.dciId+
 [.method-list]
 --
 [[event-addParameter]]
-addParameter(name, value) => void::
+addParameter(name, value): void::
 Set event parameter
 +
 .Parameters
@@ -125,7 +125,7 @@ Set event parameter
 |===
 
 [[event-addTag]]
-addTag(tag) => void::
+addTag(tag): void::
 Set event tag, which can be later accessed via `tags` attribute.
 +
 .Parameters
@@ -135,7 +135,7 @@ Set event tag, which can be later accessed via `tags` attribute.
 |===
 
 [[event-correlateTo]]
-correlateTo(eventId) => void::
+correlateTo(eventId): void::
 Sets root cause id for the event
 +
 .Parameters
@@ -164,7 +164,7 @@ SYS_THRESHOLD_REACHED
 ....
 
 [[event-getParameter]]
-getParameter(name) => void::
+getParameter(name): void::
 Get parameter value by name or by index
 +
 .Parameters
@@ -187,7 +187,7 @@ Return if event has specific tag.
 |===
 
 [[event-removeTag]]
-removeTag(tag) => void::
+removeTag(tag): void::
 Remove tag from event tag list
 +
 .Parameters
@@ -197,7 +197,7 @@ Remove tag from event tag list
 |===
 
 [[event-setMessage]]
-setMessage(message) => void::
+setMessage(message): void::
 Set event message to `message`.
 +
 .Parameters
@@ -207,7 +207,7 @@ Set event message to `message`.
 |===
 
 [[event-setNamedParameter]]
-setNamedParameter(name, value) => void::
+setNamedParameter(name, value): void::
 Set named parameter or change value of existing named parameter
 +
 .Parameters
@@ -218,7 +218,7 @@ Set named parameter or change value of existing named parameter
 |===
 
 [[event-setParameter]]
-setParameter(index, value) => void::
+setParameter(index, value): void::
 Set value of parameter or change value of existing parameter. If index corresponds
 to existing parameter, the value will be set. If index is higher then existing
 number of parameters, new parameter(s) will be added (if needed, parameters with
@@ -232,7 +232,7 @@ empty values will be added to reach the number of parameters indicated by index)
 |===
 
 [[event-setSeverity]]
-setSeverity(severityCode) => void::
+setSeverity(severityCode): void::
 Change event severity to `severityCode`.
 +
 .Parameters

@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-math-abs]]
-== Math::Abs()
+== Math::Abs
 
 Math::Abs(x) => Number::
 Returns the absolute value of a number.

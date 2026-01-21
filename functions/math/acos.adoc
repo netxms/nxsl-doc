@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-acos]]
-== Math::Acos()
+== Math::Acos
 
-Math::Acos(x) => Float::
+Math::Acos(x): float::
 Calculates arc cosine value of a number.
 +
 .Parameters

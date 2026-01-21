@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-io-renamefile]]
-== IO::RenameFile()
+== IO::RenameFile
 
-IO::RenameFile(currentFile, newFileName) => bool::
+IO::RenameFile(currentFile, newFileName): bool::
 Renames file.
 +
 .Parameters

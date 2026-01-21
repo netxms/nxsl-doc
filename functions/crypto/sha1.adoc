@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-crypto-sha1]]
-== Crypto::SHA1()
+== Crypto::SHA1
 
-Crypto::SHA1(string) => <<class-string,String>>::
+Crypto::SHA1(string): <<class-string,String>>::
 sha1 function implementation
 +
 .Parameters

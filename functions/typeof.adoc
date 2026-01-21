@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-typeof]]
-== typeof()
+== typeof
 
 typeof(instance) => string::
 Return type of the `instance`.

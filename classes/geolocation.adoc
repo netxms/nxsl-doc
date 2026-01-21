@@ -17,7 +17,7 @@ isValid: bool::
 `TRUE` if location is valid
 
 [[geolocation-latitude]]
-latitude => Float::
+latitude: float::
 Latitude as floating point number
 
 [[geolocation-latitudeText]]
@@ -25,7 +25,7 @@ latitudeText: <<class-string,String>>::
 Latitude as text
 
 [[geolocation-longitude]]
-longitude => Float::
+longitude: float::
 Longitude as floating point number
 
 [[geolocation-longitudeText]]

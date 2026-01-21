@@ -1,5 +1,3 @@
-= Data collection
-
 include::functions/createdci.adoc[]
 include::functions/detectanomalies.adoc[]
 include::functions/findalldcis.adoc[]

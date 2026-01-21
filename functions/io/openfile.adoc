@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-io-openfile]]
-== IO::OpenFile()
+== IO::OpenFile
 
 IO::OpenFile(fileName, fileMode) => <<class-file>>::
 Open file. Returns FILE object or null.

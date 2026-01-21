@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-getserverqueuenames]]
-== GetServerQueueNames()
+== GetServerQueueNames
 
 GetServerQueueNames(): <<class-array,Array>>::
 Get array with server queue names. 

@@ -568,7 +568,7 @@ Added in version 4.4.1: `failIfUnreachable` parameter
 Instance of <<class-snmptransport>> or `null` if failed or node was not reacheable when failIfUnreachable was set to true.
 
 [[node-enable8021xStatusPolling]]
-enable8021xStatusPolling(flag) => void::
+enable8021xStatusPolling(flag): void::
 Enable or disable 802.1x port state checking during status polls.
 +
 .Parameters
@@ -578,7 +578,7 @@ Enable or disable 802.1x port state checking during status polls.
 |===
 
 [[node-enableAgent]]
-enableAgent(flag) => void::
+enableAgent(flag): void::
 Enable or disable usage of NetXMS agent for all polls.
 +
 .Parameters
@@ -588,7 +588,7 @@ Enable or disable usage of NetXMS agent for all polls.
 |===
 
 [[node-enableDiscoveryPolling]]
-enableDiscoveryPolling(flag) => void::
+enableDiscoveryPolling(flag): void::
 Enable or disable discovery polling.
 +
 .Parameters
@@ -598,7 +598,7 @@ Enable or disable discovery polling.
 |===
 
 [[node-enableEtherNetIP]]
-enableEtherNetIP(flag) => void::
+enableEtherNetIP(flag): void::
 Enable or disable usage of EtherNet/IP for polls.
 +
 .Parameters
@@ -608,7 +608,7 @@ Enable or disable usage of EtherNet/IP for polls.
 |===
 
 [[node-enableIcmp]]
-enableIcmp(flag) => void::
+enableIcmp(flag): void::
 Enable or disable usage of ICMP pings for status polls.
 +
 .Parameters
@@ -618,7 +618,7 @@ Enable or disable usage of ICMP pings for status polls.
 |===
 
 [[node-enableModbusTcp]]
-enableModbusTcp(flag) => void::
+enableModbusTcp(flag): void::
 Enable or disable usage of Modbus TCP for polls.
 +
 .Parameters
@@ -628,7 +628,7 @@ Enable or disable usage of Modbus TCP for polls.
 |===
 
 [[node-enablePrimaryIPPing]]
-enablePrimaryIPPing(flag) => void::
+enablePrimaryIPPing(flag): void::
 Enable or disable usage of ICMP ping for primary IP.
 +
 .Parameters
@@ -638,7 +638,7 @@ Enable or disable usage of ICMP ping for primary IP.
 |===
 
 [[node-enableRoutingTablePolling]]
-enableRoutingTablePolling(flag) => void::
+enableRoutingTablePolling(flag): void::
 Enable or disable routing table polling.
 +
 .Parameters
@@ -648,7 +648,7 @@ Enable or disable routing table polling.
 |===
 
 [[node-enableSnmp]]
-enableSnmp(flag) => void::
+enableSnmp(flag): void::
 Enable or disable usage of SNMP for all polls.
 +
 .Parameters
@@ -658,7 +658,7 @@ Enable or disable usage of SNMP for all polls.
 |===
 
 [[node-enableSmclpPropertyPolling]]
-enableSmclpPropertyPolling(flag) => void::
+enableSmclpPropertyPolling(flag): void::
 Enable or disable reading of SM-CLP available properties metadata during
 configuration poll.
 +
@@ -669,7 +669,7 @@ configuration poll.
 |===
 
 [[node-enableSsh]]
-enableSsh(flag) => void::
+enableSsh(flag): void::
 Enable or disable usage of SSH
 +
 .Parameters
@@ -679,7 +679,7 @@ Enable or disable usage of SSH
 |===
 
 [[node-enableTopologyPolling]]
-enableTopologyPolling(flag) => void::
+enableTopologyPolling(flag): void::
 Enable or disable topology polling.
 +
 .Parameters
@@ -689,7 +689,7 @@ Enable or disable topology polling.
 |===
 
 [[node-enableVnc]]
-enableVnc(flag) => void::
+enableVnc(flag): void::
 Enable or disable VNC detection on the node during configuration poll.
 +
 .Parameters
@@ -699,7 +699,7 @@ Enable or disable VNC detection on the node during configuration poll.
 |===
 
 [[node-enableWinPerfCountersCache]]
-enableWinPerfCountersCache(flag) => void::
+enableWinPerfCountersCache(flag): void::
 Enable or disable reading of Windows performance counters metadata during
 configuration poll.
 +
@@ -1038,7 +1038,7 @@ Read from node web service parameter
 String with result read from web service
 
 [[node-setExpectedCapabilities]]
-setExpectedCapabilities(capabilities) => void::
+setExpectedCapabilities(capabilities): void::
 Set the expected capabilities for this node.
 +
 .Parameters
@@ -1048,7 +1048,7 @@ Set the expected capabilities for this node.
 |===
 
 [[node-setIfXTableUsageMode]]
-setIfXTableUsageMode(mode) => void::
+setIfXTableUsageMode(mode): void::
 Set ifXTable usage mode 0 - use default, 1 - enable, 2 - disable
 +
 .Parameters
@@ -1058,7 +1058,7 @@ Set ifXTable usage mode 0 - use default, 1 - enable, 2 - disable
 |===
 
 [[node-setPollCountForStatusChange]]
-setPollCountForStatusChange(count) => void::
+setPollCountForStatusChange(count): void::
 Set the required number of polls before registering a status change.
 +
 .Parameters

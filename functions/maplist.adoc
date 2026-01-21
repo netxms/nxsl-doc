@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-maplist]]
-== mapList()
+== mapList
 
-mapList(table, list, separator, default) => <<class-string,String>>::
+mapList(table, list, separator, default): <<class-string,String>>::
 Lookup multiple keys (separated by user-defined separator) from mapping table.
 Result string is joined using the same separator.
 +

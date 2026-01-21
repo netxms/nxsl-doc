@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-crypto-md5]]
-== Crypto::MD5()
+== Crypto::MD5
 
-Crypto::MD5(string) => <<class-string,String>>::
+Crypto::MD5(string): <<class-string,String>>::
 The MD5 message-digest algorithm implementation
 +
 .Parameters

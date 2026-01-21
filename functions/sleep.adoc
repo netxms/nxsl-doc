@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-sleep]]
-== sleep()
+== sleep
 
-sleep(milliseconds) => void::
+sleep(milliseconds): void::
 Suspend script execution for given number of milliseconds.
 +
 .Parameters

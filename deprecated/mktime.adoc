@@ -13,7 +13,7 @@ Please use <<class-datetime>> class.
 
 [source,c]
 ----
-mktime(time) => void
+mktime(time): void
 ----
 
 Converts broken down time (represented by object of <<class-datetime>> class) to UNIX time (number of seconds since epoch). <<class-datetime>> object can be returned by localtime or gmtime functions or created using operator new. Broken down time assumed to be local time.

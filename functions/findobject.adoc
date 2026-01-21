@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-findobject]]
-== FindObject()
+== FindObject
 
 FindObject(key, currentNode): <<class-netobj>>::
 Look up any object inherited from <<class-netobj>> (<<class-node>>, <<class-interface>>, <<class-cluster>>, etc.) by either name or object id.

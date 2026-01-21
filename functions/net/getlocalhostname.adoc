@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-net-getlocalhostname]]
-== Net::GetLocalHostName()
+== Net::GetLocalHostName
 
-Net::GetLocalHostName(fullyQualified=null) => <<class-string,String>>::
+Net::GetLocalHostName(fullyQualified=null): <<class-string,String>>::
 Get local host name. If optional argument is true, fully qualified name will be returned.
 +
 .Parameters

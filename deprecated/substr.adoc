@@ -13,7 +13,7 @@ Replaced with method <<string-substring,substring()>> of the string instance.
 
 [source,c]
 ----
-substr(string, n, len) => void
+substr(string, n, len): void
 ----
 
 Extracts the substring from string that begins at the nth character and is of length len.

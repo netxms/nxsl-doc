@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-ord]]
-== ord()
+== ord
 
-ord(character) => int::
+ord(character): int::
 Convert a character into it's ASCII/Unicode value.
 
 Only processes one character.

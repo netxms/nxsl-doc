@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-sqrt]]
-== Math::Sqrt()
+== Math::Sqrt
 
-Math::Sqrt(x) => Float::
+Math::Sqrt(x): float::
 Calculates square root of x.
 +
 .Parameters

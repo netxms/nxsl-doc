@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-x2d]]
-== x2d()
+== x2d
 
-x2d(hexValue) => int::
+x2d(hexValue): int::
 Convert hexadecimal string to decimal value.
 +
 .Parameters

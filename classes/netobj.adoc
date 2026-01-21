@@ -170,7 +170,7 @@ type: int::
 [.method-list]
 --
 [[class-netobj-bind,NetObj::bind()]]
-bind(childObject) => void::
+bind(childObject): void::
 Bind `childObject` to the current object as a child.
 +
 .Parameters
@@ -180,7 +180,7 @@ Bind `childObject` to the current object as a child.
 |===
 
 [[class-netobj-bindto,NetObj::bindTo()]]
-bindTo(parentObject) => void::
+bindTo(parentObject): void::
 Bind current object to `parentObject` as a child.
 +
 .Parameters
@@ -205,7 +205,7 @@ Calculate node downtime
 Array of <<class-downtimeinfo>> objects.
 
 [[netobj-clearGeoLocation]]
-clearGeoLocation() => void::
+clearGeoLocation(): void::
 Clears GeoLocation data from the node
 
 [[netobj-createUserAgentNotification]]
@@ -225,11 +225,11 @@ Send user agent notification
 Message id
 
 [[class-netobj-delete,NetObj::delete()]]
-delete() => void::
+delete(): void::
 Deletes current object.
 
 [[class-netobj-deletecustomattribute,NetObj::deleteCustomAttribute()]]
-deleteCustomAttribute(name) => void::
+deleteCustomAttribute(name): void::
 Delete custom attribute.
 +
 .Parameters
@@ -239,7 +239,7 @@ Delete custom attribute.
 |===
 
 [[class-netobj-entermaintenance,NetObj::enterMaintenance()]]
-enterMaintenance() => void::
+enterMaintenance(): void::
 Enable maintenance mode for the object.
 
 [[netobj-expandString]]
@@ -346,11 +346,11 @@ If provided object is parent of this object
 TRUE if provided object is parent of this object
 
 [[class-netobj-leavemaintenance,NetObj::leaveMaintenance()]]
-leaveMaintenance() => void::
+leaveMaintenance(): void::
 Disable maintenance mode for the object.
 
 [[netobj-manage]]
-manage() => void::
+manage(): void::
 Sets object to managed state. Has no affect if object already managed.
 
 [[netobj-readMaintenanceJournal]]
@@ -368,7 +368,7 @@ Read maintenance entries
 Array with <<class-maintenancejournalrecord>> objects
 
 [[netobj-rename]]
-rename(name) => void::
+rename(name): void::
 Rename object.
 +
 .Parameters
@@ -378,7 +378,7 @@ Rename object.
 |===
 
 [[netobj-setAlias]]
-setAlias(name) => void::
+setAlias(name): void::
 Set object alias name
 +
 .Parameters
@@ -388,7 +388,7 @@ Set object alias name
 |===
 
 [[netobj-setCategory]]
-setCategory(idOrName) => void::
+setCategory(idOrName): void::
 Set object category id or name (used to get object display image)
 +
 .Parameters
@@ -398,7 +398,7 @@ Set object category id or name (used to get object display image)
 |===
 
 [[netobj-setComments]]
-setComments(comment, [isMarkdown]) => void::
+setComments(comment, [isMarkdown]): void::
 Set object comments
 +
 .Parameters
@@ -409,7 +409,7 @@ Set object comments
 |===
 
 [[netobj-setCustomAttribute]]
-setCustomAttribute(key, value, inherit=false) => void::
+setCustomAttribute(key, value, inherit=false): void::
 Update or create custom attribute with the given key and value.
 +
 .Parameters
@@ -421,7 +421,7 @@ Update or create custom attribute with the given key and value.
 |===
 
 [[netobj-setGeoLocation]]
-setGeoLocation(newLocation) => void::
+setGeoLocation(newLocation): void::
 Sets node geographical <<class-geolocation,location>>.
 +
 .Parameters
@@ -431,7 +431,7 @@ Sets node geographical <<class-geolocation,location>>.
 |===
 
 [[netobj-setMapImage]]
-setMapImage(image) => void::
+setMapImage(image): void::
 Sets object image, that will be used to display object on network map
 +
 .Parameters
@@ -441,7 +441,7 @@ Sets object image, that will be used to display object on network map
 |===
 
 [[netobj-setNameOnMap]]
-setNameOnMap(name) => void::
+setNameOnMap(name): void::
 Sets object's name, that will be used to display object on network map
 +
 .Parameters
@@ -451,7 +451,7 @@ Sets object's name, that will be used to display object on network map
 |===
 
 [[netobj-setStatusCalculation]]
-setStatusCalculation(type, ...) => void::
+setStatusCalculation(type, ...): void::
 Sets status calculation method.
 +
 .Parameters
@@ -462,7 +462,7 @@ Sets status calculation method.
 |===
 
 [[netobj-setStatusPropagation]]
-setStatusPropagation(type, ...) => void::
+setStatusPropagation(type, ...): void::
 Sets status propagation method.
 +
 .Parameters
@@ -473,7 +473,7 @@ Sets status propagation method.
 |===
 
 [[class-netobj-unbind,NetObj::unbind()]]
-unbind(object) => void::
+unbind(object): void::
 Unbind provided object from the current object.
 +
 .Parameters
@@ -483,7 +483,7 @@ Unbind provided object from the current object.
 |===
 
 [[class-netobj-unbindfrom,NetObj::unbindFrom()]]
-unbindFrom(object) => void::
+unbindFrom(object): void::
 Unbind current object from the provided object.
 +
 .Parameters
@@ -493,11 +493,11 @@ Unbind current object from the provided object.
 |===
 
 [[netobj-unmanage]]
-unmanage() => void::
+unmanage(): void::
 Set object into unmanaged state. Has no effect if object is already in unmanaged state.
 
 [[netobj-writeMaintenanceJournal]]
-writeMaintenanceJournal(description) => void::
+writeMaintenanceJournal(description): void::
 Add entry to maintenance journal
 +
 .Parameters

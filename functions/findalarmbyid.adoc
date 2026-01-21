@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-findalarmbyid]]
-== FindAlarmById()
+== FindAlarmById
 
-FindAlarmById(id) => Alarm::
+FindAlarmById(id): <<class-alarm>>::
 Finds alarm object by id
 +
 .Parameters

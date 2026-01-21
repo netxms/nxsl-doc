@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-io-createdirectory]]
-== IO::CreateDirectory()
+== IO::CreateDirectory
 
-IO::CreateDirectory(newDirectory) => bool::
+IO::CreateDirectory(newDirectory): bool::
 Makes a copy of source file to destination file and returns `TRUE` if action was
 successful. Will create destination file if file does not exist.
 +

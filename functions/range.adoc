@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-range]]
-== range()
+== range
 
 range(start, end) => Range
 range(start, end, step) => Range

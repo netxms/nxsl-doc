@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-classof]]
-== classof()
+== classof
 
-classof(instance) => <<class-string,String>>::
+classof(instance): <<class-string,String>>::
 Return class name of the `instance`.
 +
 .Parameters

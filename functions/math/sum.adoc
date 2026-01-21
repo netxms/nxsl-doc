@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-math-sum]]
-== Math::Sum()
+== Math::Sum
 
 Math::Sum(x, y, ...) => Number::
 Returns sum of given numbers or array(s) of numbers.

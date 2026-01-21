@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-queryaiassistant]]
-== QueryAIAssistant()
+== QueryAIAssistant
 
-QueryAIAssistant(prompt, context) => <<class-string,String>>::
+QueryAIAssistant(prompt, context): <<class-string,String>>::
 Sends a prompt to the AI assistant and returns the response.
 +
 .Parameters

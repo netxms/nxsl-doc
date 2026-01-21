@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-net-resolvehostname]]
-== Net::ResolveHostname()
+== Net::ResolveHostname
 
-Net::ResolveHostname(hostname) => <<class-string,String>>::
+Net::ResolveHostname(hostname): <<class-string,String>>::
 Resolve hostname to IP address
 +
 .Parameters

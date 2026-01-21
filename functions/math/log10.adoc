@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-log10]]
-== Math::Log10()
+== Math::Log10
 
-Math::Log10(x) => Float::
+Math::Log10(x): float::
 Calculates logarithm of given value to base 10.
 +
 .Parameters

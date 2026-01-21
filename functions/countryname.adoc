@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-countryname]]
-== CountryName()
+== CountryName
 
-CountryName(code) => <<class-string,String>>::
+CountryName(code): <<class-string,String>>::
 Get country name from code
 +
 .Parameters

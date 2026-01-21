@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-readpersistentstorage]]
-== ReadPersistentStorage()
+== ReadPersistentStorage
 
-ReadPersistentStorage(key) => <<class-string,String>>::
+ReadPersistentStorage(key): <<class-string,String>>::
 Read value from global persistent key-value storage.
 +
 .Parameters

@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-crypto-sha256]]
-== Crypto::SHA256()
+== Crypto::SHA256
 
-Crypto::SHA256(string) => <<class-string,String>>::
+Crypto::SHA256(string): <<class-string,String>>::
 sha256 function implementation
 +
 .Parameters

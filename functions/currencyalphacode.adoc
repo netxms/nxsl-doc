@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-currencyalphacode]]
-== CurrencyAlphaCode()
+== CurrencyAlphaCode
 
-CurrencyAlphaCode(code) => <<class-string,String>>::
+CurrencyAlphaCode(code): <<class-string,String>>::
 Get currency alpha code from numeric code
 +
 .Parameters

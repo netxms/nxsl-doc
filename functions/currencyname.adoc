@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-currencyname]]
-== CurrencyName()
+== CurrencyName
 
-CurrencyName(code) => <<class-string,String>>::
+CurrencyName(code): <<class-string,String>>::
 Get currency name from code
 +
 .Parameters

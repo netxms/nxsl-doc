@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-detectanomalies]]
-== DetectAnomalies()
+== DetectAnomalies
 
 DetectAnomalies(node, dciId, startTime, endTime, threshold) => <<class-scoreddcivalue>>::
 Detect anomalies for DCI within given period

@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-getdciobject]]
-== GetDCIObject()
+== GetDCIObject
 
 GetDCIObject(node,id): <<class-dci>>::
 Get DCI object by id

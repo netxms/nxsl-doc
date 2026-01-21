@@ -13,7 +13,7 @@ Please use interfaces attribute in <<class-node>>.
 
 [source,c]
 ----
-GetNodeInterfaces(node) => void
+GetNodeInterfaces(node): void
 ----
 
 Get all interfaces for given node.

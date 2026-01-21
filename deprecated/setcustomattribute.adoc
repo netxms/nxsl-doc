@@ -13,7 +13,7 @@ Please use setCustomAttribute method in <<class-netobj>>.
 
 [source,c]
 ----
-SetCustomAttribute(object, name, value) => void
+SetCustomAttribute(object, name, value): void
 ----
 
 Set custom attribute `name` to `value` on `object`.

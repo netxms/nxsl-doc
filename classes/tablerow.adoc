@@ -39,7 +39,7 @@ Get cell value
 Cell value
 
 [[tablerow-set]]
-set(columnId, value) => void::
+set(columnId, value): void::
 Set cell value
 +
 .Parameters

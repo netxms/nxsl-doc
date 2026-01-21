@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-pollertrace]]
-== PollerTrace()
+== PollerTrace
 
-PollerTrace(message) => void::
+PollerTrace(message): void::
 Sends poller trace message to client (if poll initiated by client) and log it.
 Used only in hook scripts.
 +

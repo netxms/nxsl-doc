@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-math-pow10]]
-== Math::Pow10()
+== Math::Pow10
 
 Math::Pow(x) => Number::
 Calculates 10 raised to the power of x.

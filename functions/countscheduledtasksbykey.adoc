@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-countscheduledtasksbykey]]
-== CountScheduledTasksByKey()
+== CountScheduledTasksByKey
 
-CountScheduledTasksByKey(key) => int::
+CountScheduledTasksByKey(key): int::
 Will count scheduled tasks by key
 +
 .Parameters

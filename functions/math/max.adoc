@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-math-max]]
-== Math::Max()
+== Math::Max
 
 Math::Max(x, y, ...) => Number::
 Returns maximal value from given numbers or array(s) of numbers.

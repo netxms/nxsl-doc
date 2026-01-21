@@ -65,7 +65,7 @@ Adds row to table
 Row index
 
 [[table-deleteColumn]]
-deleteColumn(columnId) => void::
+deleteColumn(columnId): void::
 Delete column
 +
 .Parameters
@@ -75,7 +75,7 @@ Delete column
 |===
 
 [[table-deleteRow]]
-deleteRow(rowId) => void::
+deleteRow(rowId): void::
 Delete row
 +
 .Parameters
@@ -153,11 +153,11 @@ Get column name by column index
 Column name or empty string if no column with given index
 
 [[table-print]]
-print() => void::
+print(): void::
 Prints formatted table with header and contents
 
 [[table-set]]
-set(rowId, columnId, value) => void::
+set(rowId, columnId, value): void::
 Set column value by row and column index
 +
 .Parameters
@@ -172,7 +172,7 @@ Set column value by row and column index
 Column index
 
 [[table-trace]]
-trace(tag, level, prefix, headers, delimiter) => void::
+trace(tag, level, prefix, headers, delimiter): void::
 Dump formatted table to log
 +
 .Parameters

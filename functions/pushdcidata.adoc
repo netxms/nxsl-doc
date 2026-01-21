@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-pushdcidata]]
-== PushDCIData()
+== PushDCIData
 
-PushDCIData(node, dciId, value) => void::
+PushDCIData(node, dciId, value): void::
 Push new DCI value from script.
 +
 .Parameters

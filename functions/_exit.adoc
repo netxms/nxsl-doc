@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-_exit]]
-== _exit()
+== _exit
 
-`_exit(exitCode=0) => void`::
+_exit(exitCode=0): void::
 Stop script execution and return `exitCode`.
 
 .Parameters

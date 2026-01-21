@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-countryalphacode]]
-== CountryAlphaCode()
+== CountryAlphaCode
 
-CountryAlphaCode(code) => <<class-string,String>>::
+CountryAlphaCode(code): <<class-string,String>>::
 Lookup country alpha code by numeric or alpha3 code.
 +
 .Parameters

@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-math-pow]]
-== Math::Pow()
+== Math::Pow
 
 Math::Pow(x, y) => Number::
 Calculates x raised to the power of y.

@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-findnodebyagentid]]
-== FindNodeByAgentId()
+== FindNodeByAgentId
 
 FindNodeByAgentId(agentid, currentNode): <<class-node,Node>>::
 Look up <<class-node>> object by agent ID.

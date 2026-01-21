@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-print]]
-== print()
+== print
 
-print(object) => void::
+print(object): void::
 Prints any text or text representation of object 
 +
 .Parameters

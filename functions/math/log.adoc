@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-log]]
-== Math::Log()
+== Math::Log
 
-Math::Log(x) => Float::
+Math::Log(x): float::
 Calculates natural logarithm.
 +
 .Parameters

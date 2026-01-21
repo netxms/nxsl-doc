@@ -1,25 +1,4 @@
-= Files
-
 Available only if `NXSL.EnableFileIOFunctions` configuration parameter is turned on. 
-
-All files functions are available under **IO** package. They can be used by importing 
-the package in the script or using package name before the function name. Package name 
-together with function name used in documentation. 
-
-Example with import:
-
-[source,c]
-----
-import IO;
-CopyFile("/tmp/source", "/tmp/destination") // Will copy "/tmp/source" file content to "/tmp/destination" file.
-----
-
-Example without import:
-
-[source,c]
-----
-IO::CopyFile("/tmp/source", "/tmp/destination") // Will copy "/tmp/source" file content to "/tmp/destination" file.
-----
 
 include::functions/io/copyfile.adoc[]
 include::functions/io/createdirectory.adoc[]

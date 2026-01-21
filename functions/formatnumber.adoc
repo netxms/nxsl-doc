@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-formatnumber]]
-== FormatNumber()
+== FormatNumber
 
-FormatNumber(number, width, precision) => <<class-string,String>>::
+FormatNumber(number, width, precision): <<class-string,String>>::
 Formats a numeric value.
 +
 .Parameters

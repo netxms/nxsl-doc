@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-finddcibytag]]
-== FindDCIByTag()
+== FindDCIByTag
 
 FindDCIByTag(node, dciUserTag): int::
 Find ID of the DCI on node by user tag (exact match).

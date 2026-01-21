@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-time]]
-== time()
+== time
 
-time() => int::
+time(): int::
 Gets the system time.
 +
 .Return

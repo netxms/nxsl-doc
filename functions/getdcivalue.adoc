@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-getdcivalue]]
-== GetDCIValue()
+== GetDCIValue
 
-GetDCIValue(node, dciId) => <<class-string,String>> or Table::
+GetDCIValue(node, dciId): <<class-string,String>> | <<class-table>>::
 Get last collected value of the DCI.
 Return `null` on error, <<class-table>> instance for table DCI or String otherwise.
 +

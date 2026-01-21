@@ -1,6 +1,6 @@
 [.nxsl-function]
 [[func-finddcibytagpattern]]
-== FindDCIByTagPattern()
+== FindDCIByTagPattern
 
 FindDCIByTagPattern(node, dciUserTagPattern): int::
 Find ID of the DCI on node by tag using pattern matching. Glob symbols `?` and

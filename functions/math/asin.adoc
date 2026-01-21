@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-asin]]
-== Math::Asin()
+== Math::Asin
 
-Math::Asin(x) => Float::
+Math::Asin(x): float::
 Calculates arc sine of x.
 +
 .Parameters

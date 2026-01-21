@@ -1,8 +1,8 @@
 [.nxsl-function]
 [[func-math-atan2]]
-== Math::Atan2()
+== Math::Atan2
 
-Math::Atan2(x, y) => Float::
+Math::Atan2(x, y): float::
 Calculates 2-argument arc tangent.
 +
 .Parameters

@@ -25,7 +25,7 @@ NXSL array with JSON array elements
 [.method-list]
 --
 [[jsonarray-append]]
-append(value) => void::
+append(value): void::
 Appends value to JSON array.
 +
 .Parameters
@@ -48,7 +48,7 @@ Returns array value by the index. Value type depends on the type used in JSON.
 Attribute value
 
 [[jsonarray-insert]]
-insert(index, value) => void::
+insert(index, value): void::
 Sets value to the provided index in JSON array, moving existing element in this position
 +
 .Parameters
@@ -66,7 +66,7 @@ Returns string with serialized JSON
 String with serialized JSON
 
 [[jsonarray-set]]
-set(index, value) => void::
+set(index, value): void::
 Sets value to the provided index in JSON array, in place of existing element in this position
 +
 .Parameters
