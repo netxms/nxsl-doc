@@ -85,26 +85,14 @@ role:
     font_color: 2d6a2e
     font_style: italic
     font_size: $base_font_size * 0.9
-    border_color: 28a745
-    border_width: 2
-    border_offset: 3
-    padding: [3, 6, 3, 6]
   version-changed:
     font_color: 856404
     font_style: italic
     font_size: $base_font_size * 0.9
-    border_color: ffc107
-    border_width: 2
-    border_offset: 3
-    padding: [3, 6, 3, 6]
   version-deprecated:
     font_color: 721c24
     font_style: italic
     font_size: $base_font_size * 0.9
-    border_color: dc3545
-    border_width: 2
-    border_offset: 3
-    padding: [3, 6, 3, 6]
 heading:
   align: left
   #font_color: 181818
