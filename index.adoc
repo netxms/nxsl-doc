@@ -25,6 +25,13 @@ ifdef::html[]
 +++You can also download a <a href="nxsl.pdf">PDF version of this document</a>.+++
 endif::[]
 
+[NOTE]
+====
+This documentation is maintained at https://github.com/netxms/nxsl-doc/
+
+If you find any errors or issues in this documentation, please report them on GitHub: https://github.com/netxms/nxsl-doc/issues
+====
+
 // ============================================================================
 // LANGUAGE GUIDE
 // ============================================================================
