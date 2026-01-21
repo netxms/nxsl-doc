@@ -2,7 +2,7 @@
 [[func-createdci]]
 == CreateDCI()
 
-CreateDCI(node, origin, name, description, dataType, pollingInterval, retentionTime) => DCI::
+CreateDCI(node, origin, name, description, dataType, pollingInterval, retentionTime): <<class-dci>>::
 Create new data collection item on <<class-node,node>>, return <<class-dci>> object instance of `null` if failed.
 +
 .Parameters

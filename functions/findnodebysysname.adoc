@@ -2,7 +2,7 @@
 [[func-findnodebysysname]]
 == FindNodeBySysName()
 
-FindNodeBySysName(sysname, currentNode) => Node::
+FindNodeBySysName(sysname, currentNode): <<class-node>>::
 Look up <<class-node>> object by SNMP sysName.
 +
 If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object 

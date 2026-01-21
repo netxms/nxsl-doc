@@ -2,7 +2,7 @@
 [[func-findnodebymacaddress]]
 == FindNodeByMACAddress()
 
-FindNodeByMACAddress(macaddress, currentNode) => Node::
+FindNodeByMACAddress(macaddress, currentNode): <<class-node>>::
 Look up <<class-node>> object by MAC address of one of the interfaces.
 +
 If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object 

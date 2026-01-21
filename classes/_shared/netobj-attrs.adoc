@@ -22,7 +22,7 @@ Id of linked asset object.
 `assetProperties => <<class-assetproperties>>`::
 Reference to <<class-assetproperties,asset properties class>> of asset linked to this object.
 
-`backupZoneProxy => Node`::
+`backupZoneProxy: <<class-node>>`::
 Currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
 
 `backupZoneProxyId: int`::
@@ -95,7 +95,7 @@ List of direct parents for this object (most likely either <<class-container>> o
 `postcode: <<class-string,String>>`::
 Postal address - postal code.
 
-`primaryZoneProxy => Node`::
+`primaryZoneProxy: <<class-node>>`::
 currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabled or primary proxy is not assigned)
 
 `primaryZoneProxyId: int`::

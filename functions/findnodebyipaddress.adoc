@@ -2,7 +2,7 @@
 [[func-findnodebyipaddress]]
 == FindNodeByIPAddress()
 
-FindNodeByIPAddress(ipaddress, currentNode) => Node::
+FindNodeByIPAddress(ipaddress, currentNode): <<class-node>>::
 Look up <<class-node>> object by primary IP address or IP address of one of the interfaces.
 +
 If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object 

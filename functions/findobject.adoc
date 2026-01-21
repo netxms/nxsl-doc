@@ -2,7 +2,7 @@
 [[func-findobject]]
 == FindObject()
 
-FindObject(key, currentNode) => NetObj::
+FindObject(key, currentNode): <<class-netobj>>::
 Look up any object inherited from <<class-netobj>> (<<class-node>>, <<class-interface>>, <<class-cluster>>, etc.) by either name or object id.
 +
 If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object (instance of <<class-netobj>>, `$node` in most cases).

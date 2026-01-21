@@ -2,7 +2,7 @@
 [[func-getallnodes]]
 == GetAllNodes()
 
-GetAllNodes() => array::
+GetAllNodes(): <<class-array,Array>>::
 Get list of all <<class-node>> objects in the system as array.
 +
 .Return

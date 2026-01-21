@@ -37,7 +37,7 @@ assetProperties => <<class-assetproperties>>::
 Reference to <<class-assetproperties,asset properties class>> of asset linked to this object.
 
 [[netobj-backupZoneProxy]]
-backupZoneProxy => Node::
+backupZoneProxy: <<class-node>>::
 Currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
 
 [[netobj-backupZoneProxyId]]
@@ -133,7 +133,7 @@ postcode: <<class-string,String>>::
 Postal address - postal code.
 
 [[netobj-primaryZoneProxy]]
-primaryZoneProxy => Node::
+primaryZoneProxy: <<class-node>>::
 currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabled or primary proxy is not assigned)
 
 [[netobj-primaryZoneProxyId]]

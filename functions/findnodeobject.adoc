@@ -2,7 +2,7 @@
 [[func-findnodeobject]]
 == FindNodeObject()
 
-FindNodeObject(currentNode, key) => Node::
+FindNodeObject(currentNode, key): <<class-node>>::
 Look up <<class-node>> object by either name or object id, will return `null` if object not found or not accessible.
 This function search for nodes only.
 +

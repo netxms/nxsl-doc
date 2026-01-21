@@ -2,7 +2,7 @@
 [[func-getservernodeid]]
 == GetServerNodeId()
 
-GetServerNodeId() => int::
+GetServerNodeId(): int::
 Get ID of management server's node.
 +
 .Return

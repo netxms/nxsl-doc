@@ -25,7 +25,7 @@ id: int::
 ID of the check
 
 [[businessservicecheck-relatedDCI]]
-relatedDCI => DCI::
+relatedDCI: <<class-dci>>::
 DCI object of class <<class-dci>> that is checked or NULL if check is not DCI based
 
 [[businessservicecheck-relatedDCIId]]
@@ -33,7 +33,7 @@ relatedDCIId: int::
 DCI id that is checked or 0 if it is not DCI based check
 
 [[businessservicecheck-relatedObject]]
-relatedObject => NetObj::
+relatedObject: <<class-netobj>>::
 Related object (inherited from <<class-netobj>>, exact type can be checked with <<func-classof>> function) or NULL
 
 [[businessservicecheck-relatedObjectId]]

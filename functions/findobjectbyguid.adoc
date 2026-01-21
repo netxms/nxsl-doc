@@ -2,7 +2,7 @@
 [[func-findobjectbyguid]]
 == FindObjectByGUID()
 
-FindObjectByGUID(guid, currentNode) => NetObj::
+FindObjectByGUID(guid, currentNode): <<class-netobj>>::
 Look up any object inherited from <<class-netobj>> (<<class-node>>, <<class-interface>>, <<class-cluster>>, etc.) by GUID.
 +
 If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object 

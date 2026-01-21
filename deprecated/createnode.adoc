@@ -16,7 +16,7 @@ Please use ``createNode()`` of <<container-createNode,Container>>, <<collector-c
 
 [source,c]
 ----
-CreateNode(parent, name, primaryHostName, zoneUIN) => Node
+CreateNode(parent, name, primaryHostName, zoneUIN): <<class-node>>
 ----
 
 Create node object.

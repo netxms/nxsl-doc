@@ -17,7 +17,7 @@ customMessage: <<class-string,String>>::
 Custom message set in event processing policy by calling `setMessage`. Deprecated and will be removed in a future version.
 
 [[event-dci]]
-dci => DCI::
+dci: <<class-dci>>::
 DCI object of class <<class-dci>> that is source for this event or NULL if generated not by threshold
 
 [[event-dciId]]
@@ -81,7 +81,7 @@ severity: int::
 Event severity code. Get/set attribute.
 
 [[event-source]]
-source => NetObj::
+source: <<class-netobj>>::
 Source object (inherited from <<class-netobj>>, exact type can be checked with <<func-classof>> function) for the event.
 
 [[event-sourceId]]

@@ -2,7 +2,7 @@
 [[func-getservernode]]
 == GetServerNode()
 
-GetServerNode() => Node::
+GetServerNode(): <<class-node>>::
 Get node object of the management server.
 +
 .Return

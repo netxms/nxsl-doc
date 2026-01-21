@@ -2,7 +2,7 @@
 [[func-getdciobject]]
 == GetDCIObject()
 
-GetDCIObject(node,id) => DCI::
+GetDCIObject(node,id): <<class-dci>>::
 Get DCI object by id
 +
 .Parameters
