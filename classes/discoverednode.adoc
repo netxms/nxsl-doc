@@ -17,7 +17,7 @@ dnsName: <<class-string,String>>::
 Node's DNS name
 
 [[discoverednode-interfaces]]
-interfaces : <<class-array,Array>>::
+interfaces: <<class-array,Array>>::
 Array with node's <<class-discoveredinterface, interfaces>>
 
 [[discoverednode-ipAddr]]

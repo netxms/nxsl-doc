@@ -9,7 +9,7 @@ Abstract class that represents any object that can collect data. Extends <<class
 [.attr-list]
 --
 [[datacollectiontarget-templates]]
-templates : <<class-array,Array>>::
+templates: <<class-array,Array>>::
 Returns array of templates (<<class-template>>) applied on this object. Return value also affected by trusted nodes settings.
 +
 [.source]

@@ -65,11 +65,11 @@ originTimestamp: int::
 The time when the event was generated in the origin.
 
 [[event-parameters]]
-parameters : <<class-array,Array>>::
+parameters: <<class-array,Array>>::
 List of event parameters. Starting index is 1.
 
 [[event-parameterNames]]
-parameterNames : <<class-array,Array>>::
+parameterNames: <<class-array,Array>>::
 List of named event parameters (e.g. "dciId"), which can be accessed by `+object.parameterName+`.
 
 [[event-rootId]]
@@ -89,7 +89,7 @@ sourceId: int::
 ID of the source object for the event.
 
 [[event-tags]]
-tags : <<class-array,Array>>::
+tags: <<class-array,Array>>::
 Event tags as an array of strings.
 
 [[event-tagList]]

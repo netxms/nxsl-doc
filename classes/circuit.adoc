@@ -17,7 +17,7 @@ autoBindScript: <<class-string,String>>::
 Source of the script for automatic binding
 
 [[circuit-interfaces]]
-interfaces : <<class-array,Array>>::
+interfaces: <<class-array,Array>>::
 Array with node's <<class-discoveredinterface>>
 
 [[circuit-isAutoBindEnabled]]

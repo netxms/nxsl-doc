@@ -13,15 +13,15 @@ columnCount: int::
 Number of columns.
 
 [[table-columns]]
-columns : <<class-array,Array>><TableColumn>::
+columns: <<class-array,Array>><TableColumn>::
 Array of <<class-tablecolumn,column definitions>>.
 
 [[table-instanceColumns]]
-instanceColumns : <<class-array,Array>><TableColumn>::
+instanceColumns: <<class-array,Array>><TableColumn>::
 Array of <<class-tablecolumn,column definitions>> including only columns marked as instance columns.
 
 [[table-instanceColumnIndexes]]
-instanceColumnIndexes : <<class-array,Array>><Integer>::
+instanceColumnIndexes: <<class-array,Array>><Integer>::
 Array with indexes of columns marked as instance columns.
 
 [[table-rowCount]]
@@ -29,7 +29,7 @@ rowCount: int::
 Number of rows.
 
 [[table-rows]]
-rows : <<class-array,Array>><TableRow>::
+rows: <<class-array,Array>><TableRow>::
 Array of rows with data.
 
 [[table-title]]

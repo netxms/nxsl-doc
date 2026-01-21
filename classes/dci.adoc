@@ -72,7 +72,7 @@ pollingInterval: int::
 Current polling interval
 
 [[dci-pollingSchedules]]
-pollingSchedules : <<class-array,Array>>::
+pollingSchedules: <<class-array,Array>>::
 Array of custom schedules in cron format
 
 [[dci-pollingScheduleType]]

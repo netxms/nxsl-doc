@@ -70,7 +70,7 @@ if (session->connected) {
 ....
 
 [[sshsession-execute]]
-execute(command, timeout) : <<class-array,Array>>::
+execute(command, timeout): <<class-array,Array>>::
 Execute a command on the remote host.
 +
 .Parameters

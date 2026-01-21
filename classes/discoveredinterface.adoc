@@ -25,7 +25,7 @@ index: int::
 Interface index
 
 [[discoveredinterface-ipAddressList]]
-ipAddressList : <<class-array,Array>>::
+ipAddressList: <<class-array,Array>>::
 Array with <<class-inetaddress>> objects, that represent all adresses that this interface has
 
 [[discoveredinterface-isPhysicalPort]]

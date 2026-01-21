@@ -17,7 +17,7 @@ instance: <<class-string,String>>::
 Row instance name
 
 [[tablerow-values]]
-values : <<class-array,Array>><String>::
+values: <<class-array,Array>><String>::
 Row values for all columns
 --
 

@@ -2,7 +2,7 @@
 [[func-getmappingtablekeys]]
 == GetMappingTableKeys()
 
-GetMappingTableKeys(table) => <<class-array,Array>>::
+GetMappingTableKeys(table): <<class-array,Array>>::
 Get array with all keys from mapping table.
 +
 .Parameters

@@ -13,7 +13,7 @@ Please use children attribute in <<class-netobj>>.
 
 [source,c]
 ----
-GetObjectChildren(object) : <<class-array,Array>>
+GetObjectChildren(object): <<class-array,Array>>
 ----
 
 Return array of child objects for the object.

@@ -13,7 +13,7 @@ Please use parents attribute of <<class-netobj>> class.
 
 [source,c]
 ----
-GetNodeParents(node) : <<class-array,Array>>
+GetNodeParents(node): <<class-array,Array>>
 ----
 
 Get accessible parent objects for given node.

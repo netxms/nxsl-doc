@@ -9,7 +9,7 @@ Object represents business service
 [.attr-list]
 --
 [[businessservice-checks]]
-checks : <<class-array,Array>>::
+checks: <<class-array,Array>>::
 List of checks an array of <<class-businessservicecheck>> class objects
 
 [[businessservice-instance]]

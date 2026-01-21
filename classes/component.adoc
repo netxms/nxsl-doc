@@ -24,7 +24,7 @@ Type of the component:
 * `stack`
 
 [[component-children]]
-children : <<class-array,Array>>::
+children: <<class-array,Array>>::
 List of direct children (Array of <<class-component>> object intances).
 
 [[component-description]]

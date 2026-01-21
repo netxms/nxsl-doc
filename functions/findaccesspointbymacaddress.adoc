@@ -2,7 +2,7 @@
 [[func-findaccesspointbymacaddress]]
 == FindAccessPointByMACAddress()
 
-FindAccessPointByMACAddress(macaddress, currentNode) => AccessPoint::
+FindAccessPointByMACAddress(macaddress, currentNode): <<class-accesspoint,AccessPoint>>::
 Look up <<class-accesspoint>> object by MAC address of it or BSSID of one of radio interfaces.
 +
 If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object 

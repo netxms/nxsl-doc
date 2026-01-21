@@ -2,7 +2,7 @@
 [[func-findnodebyagentid]]
 == FindNodeByAgentId()
 
-FindNodeByAgentId(agentid, currentNode) => Node::
+FindNodeByAgentId(agentid, currentNode): <<class-node,Node>>::
 Look up <<class-node>> object by agent ID.
 +
 If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object 

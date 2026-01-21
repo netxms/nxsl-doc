@@ -10,7 +10,7 @@ Bind `childObject` to the current object as a child.
 `bindTo(parentObject) => void`::
 Bind current object to `parentObject` as a child.
 
-`calculateDowntime(tag, periodStart, periodEnd) : <<class-array,Array>>`::
+`calculateDowntime(tag, periodStart, periodEnd): <<class-array,Array>>`::
 Calculate node downtime. Returns array of <<class-downtimeinfo>> objects.
 
 `clearGeoLocation() => void`::
@@ -55,7 +55,7 @@ Disable maintenance mode for the object.
 `manage() => void`::
 Sets object to managed state.
 
-`readMaintenanceJournal(startTime, endTime) : <<class-array,Array>>`::
+`readMaintenanceJournal(startTime, endTime): <<class-array,Array>>`::
 Read maintenance entries. Returns array of <<class-maintenancejournalrecord>> objects.
 
 `rename(name) => void`::

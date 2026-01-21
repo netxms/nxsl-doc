@@ -83,7 +83,7 @@ inboundUtilization: int::
 Inbound utilization
 
 [[interface-ipaddresslist]]
-ipAddressList : <<class-array,Array>>::
+ipAddressList: <<class-array,Array>>::
 Array with <<class-inetaddress>> objects, that represent all addresses that has this interface has
 
 [[interface-isexcludedfromtopology]]
@@ -191,7 +191,7 @@ stpStateText: <<class-string,String>>::
 <<enum-interface-stp-state,Spaning tree port state >> of the interface as a text.
 
 [[interface-vlans]]
-vlans : <<class-array,Array>>::
+vlans: <<class-array,Array>>::
 Array with this inteface <<class-vlan, vlan objects>>
 
 [[interface-zone]]

@@ -29,7 +29,7 @@ Returns attribute value by the key. Value type depends on the type used in JSON.
 Attribute value
 
 [[jsonobject-keys]]
-keys() : <<class-array,Array>>::
+keys(): <<class-array,Array>>::
 Returns attribute array
 +
 .Return

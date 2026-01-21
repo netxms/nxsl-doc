@@ -145,7 +145,7 @@ region: <<class-string,String>>::
 Postal address - region.
 
 [[netobj-responsibleUsers]]
-responsibleUsers : <<class-array,Array>>::
+responsibleUsers: <<class-array,Array>>::
 Array with user objects that are added as responsible users for this object. Objects are <<class-user>> or <<class-usergroup>>
 
 [[netobj-state]]
@@ -190,7 +190,7 @@ Bind current object to `parentObject` as a child.
 |===
 
 [[netobj-calculateDowntime]]
-calculateDowntime(tag, periodStart, periodEnd) : <<class-array,Array>>::
+calculateDowntime(tag, periodStart, periodEnd): <<class-array,Array>>::
 Calculate node downtime
 +
 .Parameters
@@ -354,7 +354,7 @@ manage() => void::
 Sets object to managed state. Has no affect if object already managed.
 
 [[netobj-readMaintenanceJournal]]
-readMaintenanceJournal(startTime, endTime) : <<class-array,Array>>::
+readMaintenanceJournal(startTime, endTime): <<class-array,Array>>::
 Read maintenance entries
 +
 .Parameters

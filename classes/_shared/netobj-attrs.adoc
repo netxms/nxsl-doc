@@ -104,7 +104,7 @@ ID of currently selected primary zone proxy (`0` if zoning is disabled or primar
 `region: <<class-string,String>>`::
 Postal address - region.
 
-`responsibleUsers : <<class-array,Array>>`::
+`responsibleUsers: <<class-array,Array>>`::
 Array with user objects that are added as responsible users for this object. Objects are <<class-user>> or <<class-usergroup>>
 
 `state: int`::

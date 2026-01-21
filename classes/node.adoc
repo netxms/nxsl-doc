@@ -93,7 +93,7 @@ components => <<class-component>>::
 Entity MIB components of class <<class-component>>.
 
 [[node-dependentNodes]]
-dependentNodes : <<class-array,Array>>::
+dependentNodes: <<class-array,Array>>::
 Will return array with <<class-nodedependency>> class objects. This array contains all objects that have current node as a proxy or data collection sources.
 
 [[node-downSince]]
@@ -125,7 +125,7 @@ flags: int::
 Bit mask of <<node-flags>>.
 
 [[node-hardwareComponents]]
-hardwareComponents : <<class-array,Array>>::
+hardwareComponents: <<class-array,Array>>::
 Returns an array of available hardware of class <<class-hardwarecomponent>>.
 
 [[node-hardwareId]]
@@ -193,7 +193,7 @@ icmpProxy => <<class-node>>::
 Object that is set as ICMP proxy in object properties or NULL.
 
 [[node-interfaces]]
-interfaces : <<class-array,Array>>::
+interfaces: <<class-array,Array>>::
 Array with <<class-interface>> objects, that are under this node. First object placed at index 0.
 
 [[node-is802_1x]]
@@ -353,7 +353,7 @@ ospfAreas => <<class-ospfarea>>::
 Returns <<class-ospfarea>> class object
 
 [[node-ospfNeighbors]]
-ospfNeighbors : <<class-array,Array>>::
+ospfNeighbors: <<class-array,Array>>::
 Array with <<class-ospfarea>> class objects
 
 [[node-ospfRouterId]]
@@ -449,7 +449,7 @@ Configured SNMP version:
 * 2: SNMP version 3
 
 [[node-softwarePackages]]
-softwarePackages : <<class-array,Array>>::
+softwarePackages: <<class-array,Array>>::
 Returns array of <<class-softwarepackage>> class objects
 
 [[node-sysDescription]]
@@ -465,7 +465,7 @@ vendor: <<class-string,String>>::
 Hardware vendor information
 
 [[node-vlans]]
-vlans : <<class-array,Array>>::
+vlans: <<class-array,Array>>::
 Array with object <<class-vlan>> objects (`null` if there are no VLANs)
 
 [[node-wirelessDomain]]
@@ -477,7 +477,7 @@ wirelessDomainId: int::
 Wireless domain id of this node
 
 [[node-wirelessStations]]
-wirelessStations : <<class-array,Array>>::
+wirelessStations: <<class-array,Array>>::
 Array with object <<class-wirelessstation>> objects (`null` if there are no Wireless Stations)
 
 [[node-zone]]
@@ -751,7 +751,7 @@ Execute SSH command on node.
 Array of strings with output of the command or null on failure.
 
 [[class-node-getblockedports,Node::getBlockedPorts()]]
-getBlockedPorts(protocol) : <<class-array,Array>>::
+getBlockedPorts(protocol): <<class-array,Array>>::
 Get array of blocked ports for the specified protocol.
 +
 .Parameters
@@ -772,7 +772,7 @@ foreach (port : blockedTcpPorts) {
 ....
 
 [[class-node-getinstalledpackages,Node::getInstalledPackages()]]
-getInstalledPackages(filter, useRegex) : <<class-array,Array>>::
+getInstalledPackages(filter, useRegex): <<class-array,Array>>::
 Get array of installed packages on the node.
 +
 .Parameters
@@ -946,7 +946,7 @@ if (session != null && session->connected) {
 ....
 
 [[class-node-readagentlist,Node::readAgentList()]]
-readAgentList(name) : <<class-array,Array>>::
+readAgentList(name): <<class-array,Array>>::
 Request agent list directly from agent on given node. Returns array of strings or `NULL` if failed.
 +
 .Parameters
@@ -1012,7 +1012,7 @@ Read internal table
 Value of requested internal table of class <<class-table>>
 
 [[class-node-readWebServiceList,Node::readWebServiceList()]]
-readWebServiceList(name) : <<class-array,Array>>::
+readWebServiceList(name): <<class-array,Array>>::
 Read list from node using web service
 +
 .Parameters

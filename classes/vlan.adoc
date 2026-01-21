@@ -17,6 +17,6 @@ name: <<class-string,String>>::
 VLAN name.
 
 [[vlan-interfaces]]
-interfaces : <<class-array,Array>>::
+interfaces: <<class-array,Array>>::
 Interfaces in that VLAN (array of objects of class <<class-interface>>).
 --

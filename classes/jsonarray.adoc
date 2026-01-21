@@ -16,7 +16,7 @@ size: int::
 Number of elements in array
 
 [[jsonarray-values]]
-values : <<class-array,Array>>::
+values: <<class-array,Array>>::
 NXSL array with JSON array elements
 --
 

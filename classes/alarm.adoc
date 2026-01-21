@@ -17,7 +17,7 @@ ackByUser => <<class-userdbobject>>::
 User who acknowledged this alarm (class <<class-userdbobject>>).
 
 [[alarm-categories]]
-categories : <<class-array,Array>>::
+categories: <<class-array,Array>>::
 Array with alarm category names.
 
 [[alarm-creationTime]]
@@ -101,7 +101,7 @@ rcaScriptName: <<class-string,String>>::
 Name of root cause analysis script
 
 [[alarm-relatedEvents]]
-relatedEvents : <<class-array,Array>>::
+relatedEvents: <<class-array,Array>>::
 Array with related event IDs.
 +
 [.version-added]
@@ -169,7 +169,7 @@ Expand string by replacing macros with their values.
 Formated string
 
 [[alarm-getComments]]
-getComments() : <<class-array,Array>>::
+getComments(): <<class-array,Array>>::
 Get array of alarm comments.
 +
 .Return

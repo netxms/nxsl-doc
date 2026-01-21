@@ -65,7 +65,7 @@ isUserAgentInstalled: bool::
 `TRUE` if user agent is installed on the agent that opened the tunnel
 
 [[tunnel-macAddresses]]
-macAddresses : <<class-array,Array>>::
+macAddresses: <<class-array,Array>>::
 Array with MAC addresses as Strings
 
 [[tunnel-platformName]]

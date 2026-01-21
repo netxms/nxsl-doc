@@ -70,7 +70,7 @@ Assign a specific value to the given SNMP object for the node. The node and all 
 |===
 
 [[snmptransport-walk]]
-walk(oid) : <<class-array,Array>>::
+walk(oid): <<class-array,Array>>::
 Get an array of the <<class-snmpvarbind>> from specific node with SNMP WALK request. The node and all SNMP communication details defined by SNMP transport. Will return null on failure.
 +
 .Parameters

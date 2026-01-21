@@ -4,6 +4,6 @@
 .Inherited from DataCollectionTarget
 [%collapsible]
 ====
-`templates : <<class-array,Array>>`::
+`templates: <<class-array,Array>>`::
 Returns array of templates (<<class-template>>) applied on this object. Return value also affected by trusted nodes settings.
 ====

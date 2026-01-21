@@ -13,6 +13,6 @@ memberCount: int::
 Group member count
 
 [[usergroup-members]]
-members : <<class-array,Array>>::
+members: <<class-array,Array>>::
 Array with objects: <<class-user>> or <<class-usergroup>>
 --

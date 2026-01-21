@@ -2,7 +2,7 @@
 [[func-findalldcis]]
 == FindAllDCIs()
 
-FindAllDCIs(node, nameFilter, descriptionFilter, userTagFilter, relatedObjectFilter) => <<class-array,Array>>::
+FindAllDCIs(node, nameFilter, descriptionFilter, userTagFilter, relatedObjectFilter): <<class-array,Array>>::
 Find all DCI on the `node` matching `nameFilter`, `descriptionFilter`, `userTagFilter`, *and* `relatedObjectFilter`. Filters can contain glob symbols `?` and `*`. If a filter is `null`, it's ignored.
 +
 .Parameters

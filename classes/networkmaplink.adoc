@@ -25,7 +25,7 @@ colorScriptName: <<class-string,String>>::
 Color script name.
 
 [[networkmaplink-colorObjects]]
-colorObjects : <<class-array,Array>>::
+colorObjects: <<class-array,Array>>::
 Array with <<class-netobj>> objects used for link color calculation.
 
 [[networkmaplink-colorSource]]
@@ -33,7 +33,7 @@ colorSource: int::
 Color source option one of <<const-link-colorsource>>.
 
 [[networkmaplink-dataSource]]
-dataSource : <<class-array,Array>>::
+dataSource: <<class-array,Array>>::
 Array of <<class-linkdatasource>> with all datasources displayed on link.
 
 [[networkmaplink-interface1]]

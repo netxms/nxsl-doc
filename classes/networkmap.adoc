@@ -71,7 +71,7 @@ objectDisplayMode: int::
 Object display mode.
 
 [[networkmap-seedObjects]]
-seedObjects : <<class-array,Array>>::
+seedObjects: <<class-array,Array>>::
 Seed objects
 
 [[networkmap-width]]
