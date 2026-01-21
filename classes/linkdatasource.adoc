@@ -9,7 +9,7 @@ Data source item for Network Map link
 [.attr-list]
 --
 [[linkdatasource-dci]]
-dci => <<class-dci>>::
+dci: <<class-dci>>::
 Data source DCI item
 
 [[linkdatasource-dciId]]
@@ -22,10 +22,16 @@ Data display format
 
 [[linkdatasource-location]]
 location: int::
-Location of the link data source. Possible values: 0 = CENTER, 1 = OBJECT1, 2 = OBJECT2.
+Location of the link data source.
+
+Possible values:
+
+- 0 = CENTER
+- 1 = OBJECT1
+- 2 = OBJECT2.
 
 [[linkdatasource-object]]
-object => <<class-datacollectiontarget>>::
+object: <<class-datacollectiontarget>>::
 DCI source object
 
 [[linkdatasource-objectId]]
