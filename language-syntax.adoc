@@ -147,7 +147,8 @@ Any variable is by default limited to the local function scope.
 
 ==== Global variables
 
-A variable can be declared global using the `global` keyword:
+By default, variables are local to the function where they are first assigned.
+This means variables defined in the main script are not visible to other functions:
 
 [source,c]
 ----
@@ -161,9 +162,10 @@ function myFunction()
 ----
 
 This script will cause run time error `Error 5 in line 6: Invalid operation
-with NULL value`, because variable `x` is local (in implicit main function)
-and is not visible in function `myFunction`. The following script will
-produce expected result (prints `x * 2 = 2`):
+with NULL value`, because variable `x` is local to the implicit main function
+and is not visible in `myFunction`.
+
+To make a variable accessible across all functions, declare it with the `global` keyword:
 
 [source,c]
 ----
@@ -175,6 +177,8 @@ function myFunction()
     println("x * 2 = " .. x * 2);
 }
 ----
+
+This script produces the expected result and prints `x * 2 = 2`.
 
 ==== Local variables
 
@@ -247,28 +251,11 @@ function message()
 
 ==== Function Arguments
 
-The first argument you pass to the function is available within the function as
-`$1`, the second argument is `$2`, and so on. For example, this simple
-function adds two numbers and prints the result:
+NXSL provides four ways to access function arguments. In most cases, you should use **standard named parameters** (method 1).
 
-[source,c]
-----
-function add()
-{
-    result = $1 + $2;
-    println("The result was: " .. result);
-}
-----
+===== 1. Standard named parameters (recommended)
 
-To call the subroutine and get a result:
-
-[source,c]
-----
-add(1, 2);
-----
-
-If you want named arguments, list of aliases for `$1`, `$2`, etc. can be
-provided in function declaration inside the brackets:
+Declare parameter names in the function signature. This is the clearest and most commonly used approach:
 
 [source,c]
 ----
@@ -277,32 +264,105 @@ function add(numberA, numberB)
     result = numberA + numberB;
     println("The result was: " .. result);
 }
+
+add(5, 3);  // Prints: The result was: 8
 ----
 
-If parameter was not provided at function call, value of appropriate variable
-will be `NULL`.
-
-Another option to name parameters is to provide named parameters inside of function.
-In this case leave braces of function empty and add names to function call. In this case
-parameters will be available in function as $parameterName.
-
-Example:
-
+If a parameter is not provided at function call, its value will be `NULL`:
 
 [source,c]
 ----
-func(param2: "text2", param1: "text1");
-return 0;
-
-function func()
+function greet(name, title)
 {
-    println($param1); //Will print "text1"
-    println($param2); //Will print "text2"
+    if (title == null)
+        title = "User";
+    println("Hello, " .. title .. " " .. name);
+}
+
+greet("Alice");           // Prints: Hello, User Alice
+greet("Bob", "Dr.");      // Prints: Hello, Dr. Bob
+----
+
+===== 2. Call-site named parameters
+
+Parameters can be named at the call site using `param: value` syntax. The function declaration has empty parentheses, and parameters are accessed with the `$` prefix:
+
+[source,c]
+----
+function process()
+{
+    println("Name: " .. $name);
+    println("Age: " .. $age);
+}
+
+process(age: 30, name: "Alice");
+// Prints:
+// Name: Alice
+// Age: 30
+----
+
+This approach allows calling with parameters in any order but is less commonly used.
+
+===== 3. Positional parameter variables
+
+Arguments are automatically available as `$1`, `$2`, `$3`, etc., regardless of how the function is declared:
+
+[source,c]
+----
+function add()
+{
+    result = $1 + $2;
+    println("The result was: " .. result);
+}
+
+add(5, 3);  // Prints: The result was: 8
+----
+
+This is useful for quick scripts but makes code harder to read. Standard named parameters (method 1) are preferred.
+
+===== 4. The $ARGS array
+
+All arguments passed to a script are available in the global `$ARGS` array. The first argument is `$ARGS[1]`:
+
+[source,c]
+----
+function main()
+{
+    println("Script received " .. $ARGS.size .. " arguments");
+    for (i = 1; i <= $ARGS.size; i++)
+        println("Argument " .. i .. ": " .. $ARGS[i]);
 }
 ----
 
-The arguments received by script when it was launched are available in a global variable $ARGS,
-which is an array that contains all arguments. First argument available as $ARGS[1];
+This is primarily used when the number of arguments is variable or unknown.
+
+===== Mixing argument styles
+
+You can combine positional and named arguments in the same function call. Named arguments count toward positional parameter indices:
+
+[source,c]
+----
+function myFunc(arg1)
+{
+    println("arg1: " .. arg1);
+    println("$2: " .. $2);
+    println("$arg3: " .. $arg3);
+}
+
+myFunc("first", arg3: "third", "second");
+// Prints:
+// arg1: first
+// $2: third       (named parameter arg3 occupies position 2)
+// $arg3: third
+
+myFunc("first", "second", arg3: "third");
+// Prints:
+// arg1: first
+// $2: second      (positional parameter in position 2)
+// $arg3: third
+----
+
+While this flexibility exists, mixing argument styles can make code harder to understand. For clarity, stick to standard named parameters (method 1) in most cases.
 
 ==== Return Values from a Function
 
