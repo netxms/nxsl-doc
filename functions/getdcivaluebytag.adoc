@@ -2,11 +2,11 @@
 [[func-getdcivaluebytag]]
 == GetDCIValueByTag()
 
-GetDCIValueByTag(node, userTag) => <<class-string,String>> or Table::
+GetDCIValueByTag(node, userTag): <<class-string,String>> or Table::
+Get last value of DCI with given user tag on given node.
++
 [.version-added]
 Added in version 5.2
-
-Get last value of DCI with given user tag on given node.
 +
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
@@ -14,12 +14,12 @@ Get last value of DCI with given user tag on given node.
 |node|<<class-node>>|Node object instance (e.g. `$node`)
 |userTag|String|DCI user tag (exact match).
 |===
-
++
 .Return 
 
 Last value for given DCI (string for normal DCIs and <<class-table,Table object>> for table DCIs) or null if DCI with given tag does not exist or has no
 collected values.
-
++
 [.source]
 ....
 GetDCIValueByName($node, "Agent.Version")	// "5.0.0"
