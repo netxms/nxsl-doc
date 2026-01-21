@@ -840,6 +840,8 @@ a = [];
 
 ==== Array attributes
 
+[.attr-list]
+--
 `maxIndex: int`::
 Returns highest index in the array.
 
@@ -869,9 +871,12 @@ Returns number of elements in the array.
 a = [1, 2, 3];
 println(a.size); // prints '3'
 ....
+--
 
 ==== Array methods
 
+[.method-list]
+--
 `append(newElement): int`::
 Appends new element to the array. Returns highest index in the array - that's index of the appended element. 
 
@@ -977,6 +982,7 @@ a = [1,2,3];
 a.remove(0);
 println(a);
 ....
+--
 
 
 ==== Spread operator
@@ -1055,6 +1061,9 @@ h = %{"key":123, "another_key":456};
 
 
 ==== Hash Map Attributes
+
+[.attr-list]
+--
 `keys: <<class-array,Array>>`::
 Returns array with keys of items in the hash map.
 
@@ -1083,10 +1092,13 @@ Returns array with values of items in the hash map.
 h = %{"key1":123, "key2":456};
 println(h.keys); // prints '[123,456]'
 ....
+--
 
 
 ==== Hash Map Methods
 
+[.method-list]
+--
 `contains(key): bool`::
 Returns `true`, if hash map contains specified key or `false` otherwise.
 
@@ -1106,6 +1118,7 @@ h = %{"key1":123, "key2":456};
 h.remove("key1");
 println(h); // prints '{key2=456}'
 ....
+--
 
 
 ==== Hash Map Conversion
