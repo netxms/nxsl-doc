@@ -6,3 +6,4 @@ build
 gen.sh
 
 **/.claude/settings.local.json
+.serena/
