@@ -93,6 +93,8 @@ Description with parameters table and examples.
 - `trace(level, message)` - exactly 2 args, use string concatenation: `trace(3, "msg " .. value)`
 - `println(...)` - variadic, accepts multiple args: `println("a", "b", "c")`
 
+**Function argument mixing**: Named arguments (e.g., `arg3: "value"`) count toward positional parameter indices. In `myFunc("first", arg3: "third", "second")`, the named parameter `arg3` occupies position 2, making `$2` equal to `"third"`. This can create confusing behavior when mixing argument styles.
+
 ## Documentation Patterns Notes
 
 **Custom anchors**: Add explicit `[[anchor-name]]` for sections that need cross-references. Don't rely on auto-generated anchors.
@@ -132,4 +134,41 @@ Description text.
 +
 [.version-added]
 Added in version 5.3
+```
+
+**Version marker styling evolution**: Final design uses only colored italic text (no borders, no backgrounds) for minimal visual clutter. Initial attempts with borders and backgrounds proved too visually heavy. Color scheme: green (#2d6a2e) for added, amber (#856404) for changed, red (#721c24) for deprecated.
+
+**Version marker placement**: Always place BEFORE descriptions for better visibility. For parameters in tables, place after the table closes but before the next section (`.Return`, `.Example`, etc.). Use format "Added in version X.X: `parameter` parameter" when noting specific parameters.
+
+**CSS spacing fix**: Reset `<p>` margin to 0 inside version marker divs to prevent excessive spacing from AsciiDoc's default paragraph margins:
+```css
+.version-added p,
+.version-changed p,
+.version-deprecated p {
+    margin: 0;
+}
+```
+
+## Documentation Writing Patterns
+
+**Problem-first structure**: When explaining solutions (like `global` keyword), show the problem first to establish motivation:
+1. State default behavior
+2. Show failing example
+3. Explain the error
+4. Introduce solution
+5. Show working example
+6. Confirm success
+
+This prevents reader confusion from examples that appear to contradict the opening statement.
+
+**Multi-option features**: When documenting features with multiple approaches, use numbered methods with clear recommendations:
+- Number each method explicitly (1, 2, 3...)
+- Mark the recommended approach in the heading
+- Provide "when to use this" guidance for each
+- Add cautionary notes for confusing or edge-case patterns
+- Present the standard/recommended approach first
+
+**Inline comments in examples**: Use inline comments to explain non-obvious behavior, especially for edge cases:
+```nxsl
+// $2: third       (named parameter arg3 occupies position 2)
 ```
