@@ -923,7 +923,7 @@ println(a.join("; ")); // will print "1; 2; 3; 4"
 ----
 
 
-`insert(index, newElement) => void`::
+`insert(index, newElement): void`::
 Inserts new element to the array at `index`. Indexes of existing elements that had index greater or equal to `index` are incremented. 
 
 [.source]
@@ -938,7 +938,7 @@ println(a[11]);  // prints "ccc" - because of the insert operation this element'
 ....
 
 
-`insertAll(index, anotherArray) => void`::
+`insertAll(index, anotherArray): void`::
 Inserts elements of `anotherArray` to the array at `index`. Indexes of existing elements that have index greater or equal to `index` are incremented. 
 
 [.source]
@@ -950,8 +950,8 @@ println(a); // prints '[1, 3, 4, 2]'
 ....
 
 
-`pop() => Element with highest index`::
-Removes element with highest index from the array. Using `push(value)` and `pop()` methods it's possible to use array as a stack. Or, using
+`pop(): any`::
+Removes and returns element with highest index from the array. Using `push(value)` and `pop()` methods it's possible to use array as a stack. Or, using
 `insert(0,value)` and `pop()`, array will work as FIFO queue. 
 
 [.source]
@@ -968,7 +968,7 @@ println(a.pop());
 Same as `append()`.
 
 
-`remove(index) => void`::
+`remove(index): void`::
 Removes element at specified `index`. Indexes of elements that have index greater or equal to `index` are decremented.
 
 [.source]
@@ -1097,7 +1097,7 @@ println(h.contains("key2")); // prints 'true'
 ....
 
 
-`remove(key) => void`::
+`remove(key): void`::
 Removes item with specified `key`. 
 
 [.source]
