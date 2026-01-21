@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-CurrencyAlphaCode(code) => String
+CurrencyAlphaCode(code): <<class-string,String>>
 ----
 
 Get currency alpha code from numeric code

@@ -13,7 +13,7 @@ Replaced with method <<string-toUpperCase,toUpperCase()>> of the string instance
 
 [source,c]
 ----
-upper(string) => String
+upper(string): <<class-string,String>>
 ----
 
 Converts string to uppercase.

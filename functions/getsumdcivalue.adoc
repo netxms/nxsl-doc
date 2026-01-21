@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetSumDCIValue(node, dciId, from, to) => String
+GetSumDCIValue(node, dciId, from, to): <<class-string,String>>
 ----
 
 Get the sum value of the DCI for the given period. The DCI value must be of numeric type.

@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-IO::CopyFile(sourceFileName, destinationFileName) => Boolean
+IO::CopyFile(sourceFileName, destinationFileName): bool
 ----
 
 Makes a copy of source file or folder to destination file or folder and returns `TRUE` if action was successful. 

@@ -9,31 +9,31 @@ Class represents Network Map link
 [.attr-list]
 --
 [[networkmaplink-connectorName1]]
-connectorName1 => String::
+connectorName1: <<class-string,String>>::
 Connection link name 1.
 
 [[networkmaplink-connectorName2]]
-connectorName2 => String::
+connectorName2: <<class-string,String>>::
 Connection link name 2.
 
 [[networkmaplink-color]]
-color => String::
+color: <<class-string,String>>::
 Link color in css format.
 
 [[networkmaplink-colorScriptName]]
-colorScriptName => String::
+colorScriptName: <<class-string,String>>::
 Color script name.
 
 [[networkmaplink-colorObjects]]
-colorObjects => Array::
+colorObjects : <<class-array,Array>>::
 Array with <<class-netobj>> objects used for link color calculation.
 
 [[networkmaplink-colorSource]]
-colorSource => Integer::
+colorSource: int::
 Color source option one of <<const-link-colorsource>>.
 
 [[networkmaplink-dataSource]]
-dataSource => Array::
+dataSource : <<class-array,Array>>::
 Array of <<class-linkdatasource>> with all datasources displayed on link.
 
 [[networkmaplink-interface1]]
@@ -45,7 +45,7 @@ interface2 => <<class-interface>>::
 Interface 2 <<class-interface>>.
 
 [[networkmaplink-name]]
-name => String::
+name: <<class-string,String>>::
 Link name.
 
 [[networkmaplink-object1]]
@@ -57,35 +57,35 @@ object2 => <<class-netobj>>::
 Second connected object <<class-netobj>>.
 
 [[networkmaplink-objectId1]]
-objectId1 => Integer::
+objectId1: int::
 First connected object id.
 
 [[networkmaplink-objectId2]]
-objectId2 => Integer::
+objectId2: int::
 Second connected object id.
 
 [[networkmaplink-routing]]
-routing => Integer::
+routing: int::
 Link routing type <<const-link-routingalgorithm>>.
 
 [[networkmaplink-style]]
-style => Integer::
+style: int::
 Link style <<const-link-style>>.
 
 [[networkmaplink-type]]
-type => Integer::
+type: int::
 Link type
 
 [[networkmaplink-useActiveThresholds]]
-useActiveThresholds => Boolean::
+useActiveThresholds: bool::
 If active thresholds should be used for link color.
 
 [[networkmaplink-useInterfaceUtilization]]
-useInterfaceUtilization => Boolean::
+useInterfaceUtilization: bool::
 If interface utilization should be used for link color. Only applicable when colorSource is set to object status mode.
 
 [[networkmaplink-width]]
-width => Integer::
+width: int::
 Link width.
 --
 

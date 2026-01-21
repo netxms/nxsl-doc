@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-Net::ResolveAddress(address) => String
+Net::ResolveAddress(address): <<class-string,String>>
 ----
 
 Resolve IP address to host name

@@ -11,11 +11,11 @@ Object represents asset. Extends <<class-netobj>>.
 include::_shared/netobj-attrs.adoc[]
 
 [[asset-lastUpdateTimestamp]]
-lastUpdateTimestamp => Integer::
+lastUpdateTimestamp: int::
 Unix timestamp of last update
 
 [[asset-lastUpdateUserId]]
-lastUpdateUserId => Integer::
+lastUpdateUserId: int::
 Iof the user for last update
 
 [[asset-linkedObject]]
@@ -23,7 +23,7 @@ linkedObject => <<class-netobj>>::
 Linked object
 
 [[asset-linkedObjectId]]
-linkedObjectId => Integer::
+linkedObjectId: int::
 ID of the linked object
 
 [[asset-properties]]

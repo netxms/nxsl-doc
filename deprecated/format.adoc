@@ -13,7 +13,7 @@ Please use <<func-formatnumber>> instead.
 
 [source,c]
 ----
-format(number, width, precision) => String
+format(number, width, precision): <<class-string,String>>
 ----
 
 Formats a numeric value.

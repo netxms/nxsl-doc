@@ -9,10 +9,10 @@ Object represent user group object and extends <<class-userdbobject>>.
 [.attr-list]
 --
 [[usergroup-memberCount]]
-memberCount => Integer::
+memberCount: int::
 Group member count
 
 [[usergroup-members]]
-members => Array::
+members : <<class-array,Array>>::
 Array with objects: <<class-user>> or <<class-usergroup>>
 --

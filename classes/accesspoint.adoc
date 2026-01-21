@@ -9,7 +9,7 @@ Represents NetXMS access point object.
 [.attr-list]
 --
 [[accesspoint-apState]]
-apState => String::
+apState: <<class-string,String>>::
 State from <<accesspoint-state>>
 
 [[accesspoint-controller]]
@@ -17,23 +17,23 @@ controller => <<class-node>>::
 Acess point controller of class <<class-node>>.
 
 [[accesspoint-controllerId]]
-controllerId => Integer::
+controllerId: int::
 Acess point controller object id.
 
 [[accesspoint-downSince]]
-downSince => Integer::
+downSince: int::
 UNIX epoch timestamp down since.
 
 [[accesspoint-index]]
-index => Integer::
+index: int::
 Index
 
 [[accesspoint-macAddress]]
-macAddress => String::
+macAddress: <<class-string,String>>::
 Mac address
 
 [[accesspoint-model]]
-model => String::
+model: <<class-string,String>>::
 Model
 
 [[accesspoint-peerInterface]]
@@ -49,11 +49,11 @@ radioInterfaces => <<class-radiointerface>>::
 Radio interface of class <<class-radiointerface>>
 
 [[accesspoint-serialNumber]]
-serialNumber => String::
+serialNumber: <<class-string,String>>::
 Serial number
 
 [[accesspoint-vendor]]
-vendor => String::
+vendor: <<class-string,String>>::
 Vendor
 
 [[accesspoint-wirelessDomain]]
@@ -61,11 +61,11 @@ wirelessDomain => <<class-wirelessdomain>>::
 Wireless domain of class <<class-wirelessdomain>>
 
 [[accesspoint-wirelessDomainId]]
-wirelessDomainId => Integer::
+wirelessDomainId: int::
 Wireless domain id
 
 [[accesspoint-wirelessStations]]
-wirelessStations => String::
+wirelessStations: <<class-string,String>>::
 Wireless station of class <<class-wirelessstation>>
 --
 

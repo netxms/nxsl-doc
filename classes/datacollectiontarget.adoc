@@ -9,7 +9,7 @@ Abstract class that represents any object that can collect data. Extends <<class
 [.attr-list]
 --
 [[datacollectiontarget-templates]]
-templates => Array::
+templates : <<class-array,Array>>::
 Returns array of templates (<<class-template>>) applied on this object. Return value also affected by trusted nodes settings.
 +
 [.source]
@@ -68,7 +68,7 @@ Enable or disable status polling for a node.
 |===
 
 [[datacollectiontarget-readInternalParameter]]
-readInternalParameter(name) => String::
+readInternalParameter(name): <<class-string,String>>::
 Reads object internal metric (metric with source "Internal").
 +
 .Parameters
@@ -78,7 +78,7 @@ Reads object internal metric (metric with source "Internal").
 |===
 
 [[datacollectiontarget-readInternalTable]]
-readInternalTable(name) => String::
+readInternalTable(name): <<class-string,String>>::
 Reads object internal table metric (metric with source "Internal").
 +
 .Parameters

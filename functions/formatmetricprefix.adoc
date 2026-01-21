@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-FormatMetricPrefix(number, binary, precision) => String
+FormatMetricPrefix(number, binary, precision): <<class-string,String>>
 ----
 
 Convert numeric value to human-readable form with metric prefix.

@@ -13,7 +13,7 @@ Replaced with method <<string-lastIndexOf,lastIndexOf()>> of the string instance
 
 [source,c]
 ----
-rindex(string, substring, position) => Integer
+rindex(string, substring, position): int
 ----
 
 Returns the position of the last occurrence of substring in string up to or

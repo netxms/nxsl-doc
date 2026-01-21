@@ -13,11 +13,11 @@ File read and write position in the file depends on mode file was opened in.
 [.attr-list]
 --
 [[file-eof]]
-eof => Boolean::
+eof: bool::
 If it's already end of file.
 
 [[file-name]]
-name => String::
+name: <<class-string,String>>::
 File name
 --
 
@@ -30,7 +30,7 @@ close() => void::
 Close file
 
 [[file-read]]
-read(numberOfSymbols) => String::
+read(numberOfSymbols): <<class-string,String>>::
 Read provided number of bytes from file.
 +
 .Parameters
@@ -43,7 +43,7 @@ Read provided number of bytes from file.
 String with symbols read from file or null if file closed or end of file reached.
 
 [[file-readline]]
-readLine() => String::
+readLine(): <<class-string,String>>::
 Read line from file.
 +
 .Return

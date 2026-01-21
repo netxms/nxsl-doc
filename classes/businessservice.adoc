@@ -9,18 +9,18 @@ Object represents business service
 [.attr-list]
 --
 [[businessservice-checks]]
-checks => Array::
+checks : <<class-array,Array>>::
 List of checks an array of <<class-businessservicecheck>> class objects
 
 [[businessservice-instance]]
-instance => String::
+instance: <<class-string,String>>::
 Instance of the check
 
 [[businessservice-prototypeId]]
-prototypeId => Integer::
+prototypeId: int::
 ID of the prototype object
 
 [[businessservice-serviceState]]
-serviceState => Integer::
+serviceState: int::
 Current state of the business service one of <<const-business-service-state,states>>
 --

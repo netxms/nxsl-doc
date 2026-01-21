@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-CreateUserAgentNotification(object, message, startTime, endTime) => Integer
+CreateUserAgentNotification(object, message, startTime, endTime): int
 ----
 
 Creates user agent notification 

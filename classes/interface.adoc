@@ -11,11 +11,11 @@ include::_shared/netobj-attrs.adoc[]
 [.attr-list]
 --
 [[interface-adminstate]]
-adminState => Integer::
+adminState: int::
 Administrative <<enum-interface-state,state>> of the interface.
 
 [[interface-bridgeportnumber]]
-bridgePortNumber => Integer::
+bridgePortNumber: int::
 Bridge port number for this interface.
 
 [[interface-chassis]]
@@ -23,103 +23,103 @@ chassis => <<class-chassis>>::
 Parent <<class-chassis>>
 
 [[interface-description]]
-description => String::
+description: <<class-string,String>>::
 Interface description
 
 [[interface-dot1xbackendauthstate]]
-dot1xBackendAuthState => Integer::
+dot1xBackendAuthState: int::
 802.1x back-end authentication state
 
 [[interface-dot1xpaeauthstate]]
-dot1xPaeAuthState => Integer::
+dot1xPaeAuthState: int::
 802.1x PAE authentication state
 
 [[interface-expectedstate]]
-expectedState => Integer::
+expectedState: int::
 <<enum-interface-expected-state,Expected state>> of the interface.
 
 [[interface-flags]]
-flags => Integer::
+flags: int::
 Interface flags (bit mask, `uint32`).
 
 [[interface-icmpavgrtt]]
-icmpAverageRTT => Integer::
+icmpAverageRTT: int::
 ICMP average response time for current interface. Will return null if no information.
 
 [[interface-icmplastrtt]]
-icmpLastRTT => Integer::
+icmpLastRTT: int::
 ICMP last response time for current interface. Will return null if no information.
 
 [[interface-icmpmaxrtt]]
-icmpMaxRTT => Integer::
+icmpMaxRTT: int::
 ICMP maximal response time for current interface. Will return null if no information.
 
 [[interface-icmpminrtt]]
-icmpMinRTT => Integer::
+icmpMinRTT: int::
 ICMP minimal response time for current interface. Will return null if no information.
 
 [[interface-icmppacketloss]]
-icmpPacketLoss => Integer::
+icmpPacketLoss: int::
 ICMP packet loss for current interface. Will return null if no information.
 
 [[interface-ifalias]]
-ifAlias => String::
+ifAlias: <<class-string,String>>::
 Interface alias
 
 [[interface-ifindex]]
-ifIndex => Integer::
+ifIndex: int::
 Interface index.
 
 [[interface-ifname]]
-ifName => String::
+ifName: <<class-string,String>>::
 Interface name obtained from object.
 
 [[interface-iftype]]
-ifType => Integer::
+ifType: int::
 <<enum-interface-types,Interface type>>
 
 [[interface-inboundutilization]]
-inboundUtilization => Integer::
+inboundUtilization: int::
 Inbound utilization
 
 [[interface-ipaddresslist]]
-ipAddressList => Array::
+ipAddressList : <<class-array,Array>>::
 Array with <<class-inetaddress>> objects, that represent all addresses that has this interface has
 
 [[interface-isexcludedfromtopology]]
-isExcludedFromTopology => Boolean::
+isExcludedFromTopology: bool::
 `TRUE` if this interface excluded from network topology
 
 [[interface-isincludedinicmppoll]]
-isIncludedInIcmpPoll => Boolean::
+isIncludedInIcmpPoll: bool::
 `TRUE` if this interface is included in ICMP statistics
 
 [[interface-isloopback]]
-isLoopback => Boolean::
+isLoopback: bool::
 `TRUE` if this interface is a loopback
 
 [[interface-ismanuallycreated]]
-isManuallyCreated => Boolean::
+isManuallyCreated: bool::
 `TRUE` if this interface object was created manually by NetXMS administrator
 
 [[interface-isospf]]
-isOSPF => Boolean::
+isOSPF: bool::
 `TRUE` if this interface is OSPF
 
 [[interface-isphysicalport]]
-isPhysicalPort => Boolean::
+isPhysicalPort: bool::
 `TRUE` if this interface object represents physical port
 
 [[interface-macaddress]]
-macAddress => String::
+macAddress: <<class-string,String>>::
 String representation of MAC address separated by ":".
 
 [[interface-module]]
-module => Integer::
+module: int::
 Module
 
 [[interface-mtu]]
-mtu => Integer::
+mtu: int::
 Interface MTU (0 if unknown).
 
 [[interface-node]]
@@ -127,31 +127,31 @@ node => <<class-node>>::
 Parent node object
 
 [[interface-operstate]]
-operState => Integer::
+operState: int::
 Operational <<enum-interface-state,state>>.
 
 [[interface-ospfareaid]]
-ospfAreaId => String::
+ospfAreaId: <<class-string,String>>::
 OSPF area ID
 
 [[interface-ospfstate]]
-ospfState => Integer::
+ospfState: int::
 OSPF state
 
 [[interface-ospfstatetext]]
-ospfStateText => String::
+ospfStateText: <<class-string,String>>::
 OSPF state as a text
 
 [[interface-ospftype]]
-ospfType => Integer::
+ospfType: int::
 OSPF type
 
 [[interface-ospftypetext]]
-ospfTypeText => String::
+ospfTypeText: <<class-string,String>>::
 OSPF type as s text
 
 [[interface-outboundutilization]]
-outboundUtilization => Integer::
+outboundUtilization: int::
 Outbound utilization
 
 [[interface-peerinterface]]
@@ -159,7 +159,7 @@ peerInterface => <<class-interface>>::
 Peer interface object if known, otherwise `null`.
 
 [[interface-peerlastupdatetime]]
-peerLastUpdateTime => Integer::
+peerLastUpdateTime: int::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the last peer update.
 
 [[interface-peernode]]
@@ -167,31 +167,31 @@ peerNode => <<class-node>>::
 Peer <<class-node,node object>> if known, otherwise `null`.
 
 [[interface-pollcountforstatuschange]]
-pollCountForStatusChange => Integer::
+pollCountForStatusChange: int::
 Number of polls required before registering a status change.
 
 [[interface-pic]]
-pic => Integer::
+pic: int::
 Phisical location.
 
 [[interface-port]]
-port => Integer::
+port: int::
 Port number.
 
 [[interface-speed]]
-speed => Integer64::
+speed: int64::
 Speed of the interface.
 
 [[interface-stpstate]]
-stpState => Integer::
+stpState: int::
 <<enum-interface-stp-state,Spaning tree port state >> of the interface.
 
 [[interface-stpstatetext]]
-stpStateText => String::
+stpStateText: <<class-string,String>>::
 <<enum-interface-stp-state,Spaning tree port state >> of the interface as a text.
 
 [[interface-vlans]]
-vlans => Array::
+vlans : <<class-array,Array>>::
 Array with this inteface <<class-vlan, vlan objects>>
 
 [[interface-zone]]
@@ -199,7 +199,7 @@ zone => <<class-zone>>::
 <<class-zone>> object (null if zoning is disabled).
 
 [[interface-zoneuin]]
-zoneUIN => Integer::
+zoneUIN: int::
 Zone UIN of this interface.
 --
 

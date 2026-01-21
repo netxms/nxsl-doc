@@ -9,15 +9,15 @@ Represents NetXMS alarm comment.
 [.attr-list]
 --
 [[alarmcomment-id]]
-id => Integer::
+id: int::
 Alarm comment ID.
 
 [[alarmcomment-changeTime]]
-changeTime => Integer::
+changeTime: int::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the alarm comment last modification time.
 
 [[alarmcomment-userId]]
-userId => Integer::
+userId: int::
 ID of user who last modified this alarm comment.
 
 [[alarmcomment-user]]
@@ -25,6 +25,6 @@ user => <<class-userdbobject>>::
 User who last modified this alarm comment (class <<class-userdbobject>>).
 
 [[alarmcomment-text]]
-text => String::
+text: <<class-string,String>>::
 Alarm comment text.
 --

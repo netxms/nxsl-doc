@@ -13,7 +13,7 @@ Replaced with <<class-node-readdriverparameter>>.
 
 [source,c]
 ----
-DriverReadParameter(object, name) => String
+DriverReadParameter(object, name): <<class-string,String>>
 ----
 
 Request driver-specific metric directly from network device driver (e.g. Rital).

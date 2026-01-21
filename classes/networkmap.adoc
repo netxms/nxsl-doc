@@ -11,11 +11,11 @@ include::_shared/netobj-attrs.adoc[]
 [.attr-list]
 --
 [[networkmap-backgroundColor]]
-backgroundColor => Integer::
+backgroundColor: int::
 Background color in css format <<const-link-colorsource>>.
 
 [[networkmap-backgroundImageId]]
-backgroundImageId => Integer::
+backgroundImageId: int::
 Image library GUID.
 
 [[networkmap-backgroundLatitude]]
@@ -27,55 +27,55 @@ backgroundLongitude => Float::
 Background longitude as floating point number <<class-geolocation>>.
 
 [[networkmap-backgroundZoom]]
-backgroundZoom => Integer::
+backgroundZoom: int::
 Background zoom.
 
 [[networkmap-defaultLinkColor]]
-defaultLinkColor => Integer::
+defaultLinkColor: int::
 Default link color <<const-link-colorsource>>.
 
 [[networkmap-defaultLinkRouting]]
-defaultLinkRouting => Integer::
+defaultLinkRouting: int::
 Default link routing <<const-link-routingalgorithm>>.
 
 [[networkmap-defaultLinkStyle]]
-defaultLinkStyle => Integer::
+defaultLinkStyle: int::
 Default link style <<const-link-style>>.
 
 [[networkmap-defaultLinkWidth]]
-defaultLinkWidth => Integer::
+defaultLinkWidth: int::
 Default link witdh <<class-networkmaplink>>.
 
 [[networkmap-discoveryRadius]]
-discoveryRadius => Integer::
+discoveryRadius: int::
 Discovery radius <<class-user>>.
 
 [[networkmap-height]]
-height => Integer::
+height: int::
 Height.
 
 [[networkmap-isUpdateFailed]]
-isUpdateFailed => Boolean::
+isUpdateFailed: bool::
 Update fail check.
 
 [[networkmap-layout]]
-layout => Integer::
+layout: int::
 Layout.
 
 [[networkmap-mapType]]
-mapType => Integer::
+mapType: int::
 Map type.
 
 [[networkmap-objectDisplayMode]]
-objectDisplayMode => Integer::
+objectDisplayMode: int::
 Object display mode.
 
 [[networkmap-seedObjects]]
-seedObjects => Array::
+seedObjects : <<class-array,Array>>::
 Seed objects
 
 [[networkmap-width]]
-width => Integer::
+width: int::
 Width.
 --
 

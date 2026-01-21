@@ -11,11 +11,11 @@ object => <<class-netobj>>::
 Object
 
 [[downtimeinfo-objectId]]
-objectId => Integer::
+objectId: int::
 Object ID
 
 [[downtimeinfo-totalDowntime]]
-totalDowntime => Integer::
+totalDowntime: int::
 Downtime in seconds
 
 [[downtimeinfo-uptimePercentage]]

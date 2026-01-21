@@ -10,15 +10,15 @@ Object represents stream of bytes
 [.attr-list]
 --
 [[bytestream-eos]]
-eos => boolean::
+eos: bool::
 Indicates, if current position is in the end of byte stream
 
 [[bytestream-pos]]
-pos => Integer::
+pos: int::
 Current position in the byte stream
 
 [[bytestream-size]]
-size => Integer::
+size: int::
 Size of byte stream in bytes
 --
 
@@ -28,7 +28,7 @@ Size of byte stream in bytes
 [.method-list]
 --
 [[bytestream-seek]]
-seek(position) => Integer::
+seek(position): int::
 Change current position in byte stream.
 +
 .Parameters
@@ -42,31 +42,31 @@ Actual position if position change was successful or `-1` if position change was
 not successful.
 
 [[bytestream-readByte]]
-readByte() => Integer (32 bit)::
+readByte(): int (32 bit)::
 Read byte from byte stream and return it's value.
 
 [[bytestream-readInt16B]]
-readInt16B() => Integer (32 bit)::
+readInt16B(): int (32 bit)::
 Read big-endian 16-bit signed integer from byte stream and return it's value.
 
 [[bytestream-readInt32B]]
-readInt32B() => Integer (32 bit)::
+readInt32B(): int (32 bit)::
 Read big-endian 32-bit signed integer from byte stream and return it's value.
 
 [[bytestream-readInt64B]]
-readInt64B() => Integer (64 bit)::
+readInt64B(): int (64 bit)::
 Read big-endian 64-bit signed integer from byte stream and return it's value.
 
 [[bytestream-readUInt16B]]
-readUInt16B() => Integer (32 bit)::
+readUInt16B(): int (32 bit)::
 Read big-endian 16-bit unsigned integer from byte stream and return it's value.
 
 [[bytestream-readUInt32B]]
-readUInt32B() => Integer (32 bit)::
+readUInt32B(): int (32 bit)::
 Read big-endian 32-bit unsigned integer from byte stream and return it's value.
 
 [[bytestream-readUInt64B]]
-readUInt64B() => Integer (64 bit)::
+readUInt64B(): int (64 bit)::
 Read big-endian 64-bit unsigned integer from byte stream and return it's value.
 
 [[bytestream-readFloatB]]
@@ -85,29 +85,29 @@ Read 64 bytes from stream as big-endian floating-point number and return it's
 value. Added in v 5.1.2.
 
 [[bytestream-readInt16L]]
-readInt16L() => Integer (32 bit)::
+readInt16L(): int (32 bit)::
 Read little-endian 16-bit signed integer from byte stream and return it's value.
 
 [[bytestream-readInt32L]]
-readInt32L() => Integer (32 bit)::
+readInt32L(): int (32 bit)::
 Read little-endian 32-bit signed integer from byte stream and return it's value.
 
 [[bytestream-readInt64L]]
-readInt64L() => Integer (64 bit)::
+readInt64L(): int (64 bit)::
 Read little-endian 64-bit signed integer from byte stream and return it's value.
 
 [[bytestream-readUInt16L]]
-readUInt16L() => Integer (32 bit)::
+readUInt16L(): int (32 bit)::
 Read littleig-endian 16-bit unsigned integer from byte stream and return it's
 value.
 
 [[bytestream-readUInt32L]]
-readUInt32L() => Integer (32 bit)::
+readUInt32L(): int (32 bit)::
 Read little-endian 32-bit unsigned integer from byte stream and return it's
 value.
 
 [[bytestream-readUInt64L]]
-readUInt64L() => Integer (64 bit)::
+readUInt64L(): int (64 bit)::
 Read little-endian 64-bit unsigned integer from byte stream and return it's
 value.
 
@@ -127,17 +127,17 @@ Read 64 bytes from stream as little-endian floating-point number and return it's
 value. Added in v 5.1.2.
 
 [[bytestream-readCString]]
-readCString() => String::
+readCString(): <<class-string,String>>::
 Read C-string from stream and return it's value. It's expected that string in
 the stream is terminates by a null character.
 
 [[bytestream-readPString]]
-readPString() => String::
+readPString(): <<class-string,String>>::
 Read Pascal string from stream and return it's value. It's expected that first
 byte of string in the stream contains length of the string.
 
 [[bytestream-readString]]
-readString(length) => String::
+readString(length): <<class-string,String>>::
 Read string from stream and return it's value.
 +
 .Parameters

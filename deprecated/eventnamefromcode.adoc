@@ -11,7 +11,7 @@
 
 [source,c]
 ----
-EventNameFromCode(code) => String
+EventNameFromCode(code): <<class-string,String>>
 ----
 
 Get event name from code

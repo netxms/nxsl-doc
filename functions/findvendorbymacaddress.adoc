@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-FindVendorByMACAddress(text) => String
+FindVendorByMACAddress(text): <<class-string,String>>
 ----
 
 Find NIC vendor information by mac address

@@ -13,7 +13,7 @@ Replaced with method <<string-length,length()>> of the string instance.
 
 [source,c]
 ----
-length(string) => Integer
+length(string): int
 ----
 
 Returns the length of string.

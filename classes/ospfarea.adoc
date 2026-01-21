@@ -9,18 +9,18 @@ OSPF area
 [.attr-list]
 --
 [[ospfarea-areaBorderRouterCount]]
-areaBorderRouterCount => Integer::
+areaBorderRouterCount: int::
 Area border router count
 
 [[ospfarea-asBorderRouterCount]]
-asBorderRouterCount => Integer::
+asBorderRouterCount: int::
 Autonomous system border router count
 
 [[ospfarea-id]]
-id => String::
+id: <<class-string,String>>::
 Area ID
 
 [[ospfarea-lsaCount]]
-lsaCount => Integer::
+lsaCount: int::
 Link state advertisement count
 --

@@ -13,7 +13,7 @@ Please use getValue method of <<class-snmptransport>> class.
 
 [source,c]
 ----
-SNMPGetValue(transport, oid) => String
+SNMPGetValue(transport, oid): <<class-string,String>>
 ----
 
 Perform SNMP GET request for `oid` over provided <<class-snmptransport,transport>> and return single string value instead of varbind.

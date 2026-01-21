@@ -9,18 +9,18 @@ Class represents wireless domain
 [.attr-list]
 --
 [[wirelessdomain-apCountDown]]
-apCountDown => Integer::
+apCountDown: int::
 Number of access points in 'Down' state
 
 [[wirelessdomain-apCountUnknown]]
-apCountUnknown => Integer::
+apCountUnknown: int::
 Number of access points in 'Unknown' state
 
 [[wirelessdomain-apCountUnprovisioned]]
-apCountUnprovisioned => Integer::
+apCountUnprovisioned: int::
 Number of access points in 'Unprovisioned' state
 
 [[wirelessdomain-apCountUp]]
-apCountUp => Integer::
+apCountUp: int::
 Number of access points in 'Up' state
 --

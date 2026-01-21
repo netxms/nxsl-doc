@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-Math::Random(minValue, maxValue) => Integer
+Math::Random(minValue, maxValue): int
 ----
 
 Generate pseudo random number in given range. Uses cryptographically secure pseudo random generator (CSPRNG).

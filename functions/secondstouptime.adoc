@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-SecondsToUptime(seconds) => String
+SecondsToUptime(seconds): <<class-string,String>>
 ----
 
 Format system uptime in seconds as string in format "n days, hh:mm".

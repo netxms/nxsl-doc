@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-CountryName(code) => String
+CountryName(code): <<class-string,String>>
 ----
 
 Get country name from code

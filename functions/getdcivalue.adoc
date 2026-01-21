@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetDCIValue(node, dciId) => String or Table
+GetDCIValue(node, dciId): <<class-string,String>> or Table
 ----
 
 Get last collected value of the DCI.

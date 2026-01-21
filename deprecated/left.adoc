@@ -13,7 +13,7 @@ Replaced with method <<string-left,left()>> of the string instance.
 
 [source,c]
 ----
-left(string, length, pad) => String
+left(string, length, pad): <<class-string,String>>
 ----
 
 Returns the string of length characters of string, optionally padded with pad character instead of a blank (space).

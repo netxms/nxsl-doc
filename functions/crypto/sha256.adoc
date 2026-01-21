@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-Crypto::SHA256(string) => String
+Crypto::SHA256(string): <<class-string,String>>
 ----
 
 sha256 function implementation

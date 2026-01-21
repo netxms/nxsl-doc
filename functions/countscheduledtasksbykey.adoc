@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-CountScheduledTasksByKey(key) => Integer
+CountScheduledTasksByKey(key): int
 ----
 
 Will count scheduled tasks by key

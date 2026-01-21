@@ -9,19 +9,19 @@ Represents NetXMS node found while *performing* network discovery. Is available 
 [.attr-list]
 --
 [[discoverednode-agentVersion]]
-agentVersion => String::
+agentVersion: <<class-string,String>>::
 NetXMS agent version as `string`.
 
 [[discoverednode-dnsName]]
-dnsName => String::
+dnsName: <<class-string,String>>::
 Node's DNS name
 
 [[discoverednode-interfaces]]
-interfaces => Array::
+interfaces : <<class-array,Array>>::
 Array with node's <<class-discoveredinterface, interfaces>>
 
 [[discoverednode-ipAddr]]
-ipAddr => String::
+ipAddr: <<class-string,String>>::
 Node's ip address. Deprecated and will be removed in a future version, use `ipAddress` instead.
 
 [[discoverednode-ipAddress]]
@@ -33,55 +33,55 @@ Added in version 5.1
 Primary <<class-inetaddress,IP address>>.
 
 [[discoverednode-isAgent]]
-isAgent => Boolean::
+isAgent: bool::
 `TRUE` if NetXMS agent detected on node
 
 [[discoverednode-isBridge]]
-isBridge => Boolean::
+isBridge: bool::
 `TRUE` if node is a bridge
 
 [[discoverednode-isCDP]]
-isCDP => Boolean::
+isCDP: bool::
 `TRUE` if node supports CDP (Cisco Discovery Protocol)
 
 [[discoverednode-isLLDP]]
-isLLDP => Boolean::
+isLLDP: bool::
 `TRUE` if node supports LLDP (Link Layer Discovery Protocol)
 
 [[discoverednode-isPrinter]]
-isPrinter => Boolean::
+isPrinter: bool::
 `TRUE` if node is a printer
 
 [[discoverednode-isRouter]]
-isRouter => Boolean::
+isRouter: bool::
 `TRUE` if node is a router (has IP forwarding enabled)
 
 [[discoverednode-isSNMP]]
-isSNMP => Boolean::
+isSNMP: bool::
 `TRUE` if SNMP agent detected on node
 
 [[discoverednode-isSONMP]]
-isSONMP => Boolean::
+isSONMP: bool::
 `TRUE` if node supports SONMP/NDP (Synoptics/Nortel Discovery Protocol)
 
 [[discoverednode-isSSH]]
-isSSH => Boolean::
+isSSH: bool::
 `TRUE` if SSH connection is available for this node
 
 [[discoverednode-netMask]]
-netMask => Integer::
+netMask: int::
 Network mask
 
 [[discoverednode-platformName]]
-platformName => String::
+platformName: <<class-string,String>>::
 Platform name reported by NetXMS agent
 
 [[discoverednode-snmpOID]]
-snmpOID => String::
+snmpOID: <<class-string,String>>::
 SNMP object identifier (result of `1.3.6.1.2.1.1.2.0` request)
 
 [[discoverednode-snmpVersion]]
-snmpVersion => Integer::
+snmpVersion: int::
 Configured SNMP version:
 +
 * 0: SNMP version 1
@@ -89,7 +89,7 @@ Configured SNMP version:
 * 2: SNMP version 3
 
 [[discoverednode-subnet]]
-subnet => String::
+subnet: <<class-string,String>>::
 Subnet
 
 [[discoverednode-zone]]
@@ -97,6 +97,6 @@ zone => <<class-zone>>::
 <<class-zone>> object (`null` if zoning is disabled)
 
 [[discoverednode-zoneUIN]]
-zoneUIN => Integer::
+zoneUIN: int::
 This node zone UIN
 --

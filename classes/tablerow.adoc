@@ -9,15 +9,15 @@ Represents table row definition object (used by Table class).
 [.attr-list]
 --
 [[tablerow-index]]
-index => Integer::
+index: int::
 Row index number
 
 [[tablerow-instance]]
-instance => String::
+instance: <<class-string,String>>::
 Row instance name
 
 [[tablerow-values]]
-values => Array<String>::
+values : <<class-array,Array>><String>::
 Row values for all columns
 --
 
@@ -26,7 +26,7 @@ Row values for all columns
 [.method-list]
 --
 [[tablerow-get]]
-get(columnId) => String::
+get(columnId): <<class-string,String>>::
 Get cell value
 +
 .Parameters

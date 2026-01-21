@@ -10,13 +10,13 @@ List of active <<class-alarm, Alarms>> for this object.
 `alarmStats => array`::
 Integer array that consists of 5 numbers - each number represents number of alarms for this and child objects for each of severity.
 
-`alias => String`::
+`alias: <<class-string,String>>`::
 Object alias. For interfaces it is automatically collected on configuration poll (e.g. from SNMP ifAlias).
 
 `asset => <<class-asset>>`::
 Reference to <<class-asset,asset class>> of asset linked to this object.
 
-`assetId => Integer`::
+`assetId: int`::
 Id of linked asset object.
 
 `assetProperties => <<class-assetproperties>>`::
@@ -25,46 +25,46 @@ Reference to <<class-assetproperties,asset properties class>> of asset linked to
 `backupZoneProxy => Node`::
 Currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
 
-`backupZoneProxyId => Integer`::
+`backupZoneProxyId: int`::
 ID of currently selected backup zone proxy (`0` if zoning is disabled or backup proxy is not assigned)
 
-`category => String`::
+`category: <<class-string,String>>`::
 Object's category name
 
-`categoryId => Integer`::
+`categoryId: int`::
 Object's category ID
 
 `children => array`::
 List of child objects. Use <<func-classof>> to differentiate.
 
-`city => String`::
+`city: <<class-string,String>>`::
 Postal address - city.
 
-`comments => String`::
+`comments: <<class-string,String>>`::
 Object comments.
 
-`country => String`::
+`country: <<class-string,String>>`::
 Postal address - country.
 
-`creationTime => Integer64`::
+`creationTime: int64`::
 Object creation time as UNIX timestamp
 
 `customAttributes => HashMap`::
 Hash map of object custom attributes.
 
-`district => String`::
+`district: <<class-string,String>>`::
 Postal address - district.
 
 `geolocation => GeoLocation`::
 Object <<class-geolocation,geographical location>>.
 
-`guid => String`::
+`guid: <<class-string,String>>`::
 Object GUID as `string`.
 
-`id => Integer`::
+`id: int`::
 Unique object identifier.
 
-`ipAddr => String`::
+`ipAddr: <<class-string,String>>`::
 Primary IP address. Deprecated and will be removed in a future version, use `ipAddress` instead.
 
 `ipAddress => InetAddress`::
@@ -74,48 +74,48 @@ Added in version 5.1
 +
 Primary <<class-inetaddress,IP address>>.
 
-`isInMaintenanceMode => Boolean`::
+`isInMaintenanceMode: bool`::
 Maintenance mode indicator (`true` if object currently is in maintenace mode).
 
-`maintenanceInitiator => Integer`::
+`maintenanceInitiator: int`::
 Maintenance initiator user id
 
-`mapImage => String`::
+`mapImage: <<class-string,String>>`::
 GUID of object image used for representation on the maps.
 
-`name => String`::
+`name: <<class-string,String>>`::
 Object name.
 
-`nameOnMap => String`::
+`nameOnMap: <<class-string,String>>`::
 Object name displayed on map.
 
 `parents => array`::
 List of direct parents for this object (most likely either <<class-container>> or <<class-cluster>>).
 
-`postcode => String`::
+`postcode: <<class-string,String>>`::
 Postal address - postal code.
 
 `primaryZoneProxy => Node`::
 currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabled or primary proxy is not assigned)
 
-`primaryZoneProxyId => Integer`::
+`primaryZoneProxyId: int`::
 ID of currently selected primary zone proxy (`0` if zoning is disabled or primary proxy is not assigned)
 
-`region => String`::
+`region: <<class-string,String>>`::
 Postal address - region.
 
-`responsibleUsers => Array`::
+`responsibleUsers : <<class-array,Array>>`::
 Array with user objects that are added as responsible users for this object. Objects are <<class-user>> or <<class-usergroup>>
 
-`state => Integer`::
+`state: int`::
 Current object state. One of: <<const-node-state>>, <<const-cluster-state>>, <<const-sensor-state>>
 
-`status => Integer`::
+`status: int`::
 Current <<const-object-status,object status>>.
 
-`streetAddress => String`::
+`streetAddress: <<class-string,String>>`::
 Postal address - street.
 
-`type => Integer`::
+`type: int`::
 <<enum-object-type,Object type>>.
 ====

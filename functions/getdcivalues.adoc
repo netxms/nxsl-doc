@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetDCIValues(node, id, startTime, endTime, rawValues) => Array
+GetDCIValues(node, id, startTime, endTime, rawValues) : <<class-array,Array>>
 ----
 
 Get all values for period of DCI with given ID on given node.

@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-time() => Integer
+time(): int
 ----
 
 Gets the system time.

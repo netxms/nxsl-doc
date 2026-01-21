@@ -16,10 +16,10 @@ Enable or disable data collection polling.
 `enableStatusPolling(flag) => void`::
 Enable or disable status polling.
 
-`readInternalParameter(name) => String`::
+`readInternalParameter(name): <<class-string,String>>`::
 Reads object internal metric (metric with source "Internal").
 
-`readInternalTable(name) => String`::
+`readInternalTable(name): <<class-string,String>>`::
 Reads object internal table metric (metric with source "Internal").
 
 `removeTemplate(template) => void`::

@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetConfigurationVariable(key, defaultValue=null) => String
+GetConfigurationVariable(key, defaultValue=null): <<class-string,String>>
 ----
 
 Read server configuration parameter by `key`.

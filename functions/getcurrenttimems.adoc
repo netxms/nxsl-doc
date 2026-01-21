@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetCurrentTimeMs() => Integer64
+GetCurrentTimeMs(): int64
 ----
 
 Get current time in milliseconds

@@ -13,7 +13,7 @@ Replaced with method <<string-trim,trim()>> of the string instance.
 
 [source,c]
 ----
-trim(string) => String
+trim(string): <<class-string,String>>
 ----
 
 Removes blanks (space and tab characters) from both sides of specified string.

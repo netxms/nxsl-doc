@@ -9,38 +9,38 @@ Represents object recieved form LDAP on synchronization
 [.attr-list]
 --
 [[ldapobject-description]]
-description => String::
+description: <<class-string,String>>::
 Description
 
 [[ldapobject-email]]
-email => String::
+email: <<class-string,String>>::
 E-mail
 
 [[ldapobject-fullName]]
-fullName => String::
+fullName: <<class-string,String>>::
 Full name
 
 [[ldapobject-id]]
-id => String::
+id: <<class-string,String>>::
 Id
 
 [[ldapobject-isGroup]]
-isGroup => Boolean::
+isGroup: bool::
 If objec is a group
 
 [[ldapobject-isUser]]
-isUser => Boolean::
+isUser: bool::
 If object is an user
 
 [[ldapobject-loginName]]
-loginName => String::
+loginName: <<class-string,String>>::
 Login name
 
 [[ldapobject-phoneNumber]]
-phoneNumber => String::
+phoneNumber: <<class-string,String>>::
 Phone number
 
 [[ldapobject-type]]
-type => String::
+type: <<class-string,String>>::
 String that repsesents type. One of: group, user, other
 --

@@ -13,7 +13,7 @@ Replaced with method <<string-trimLeft,trimLeft()>> of the string instance.
 
 [source,c]
 ----
-ltrim(string) => String
+ltrim(string): <<class-string,String>>
 ----
 
 Removes blanks (space and tab characters) from the left side of specified string.

@@ -9,47 +9,47 @@ Class represents radio interface
 [.attr-list]
 --
 [[radiointerface-band]]
-band => Integer::
+band: int::
 Interface <<radiointerface-band-constants,band>>
 
 [[radiointerface-bandName]]
-bandName => String::
+bandName: <<class-string,String>>::
 Band name
 
 [[radiointerface-bssid]]
-bssid => String::
+bssid: <<class-string,String>>::
 Basic Service Set Identifier
 
 [[radiointerface-channel]]
-channel => Integer::
+channel: int::
 Channel
 
 [[radiointerface-frequency]]
-frequency => Integer::
+frequency: int::
 Frequency
 
 [[radiointerface-ifIndex]]
-ifIndex => Integer::
+ifIndex: int::
 Index of corresponding element from ifTable, if available
 
 [[radiointerface-index]]
-index => Integer::
+index: int::
 Index
 
 [[radiointerface-name]]
-name => String::
+name: <<class-string,String>>::
 Inteface name
 
 [[radiointerface-powerDBm]]
-powerDBm => Integer::
+powerDBm: int::
 Power dBm
 
 [[radiointerface-powerMW]]
-powerMW => Integer::
+powerMW: int::
 Power MW
 
 [[radiointerface-ssid]]
-ssid => String::
+ssid: <<class-string,String>>::
 Service Set Identifier
 --
 

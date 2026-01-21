@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-FindDCIByName(node, dciParameter) => Integer
+FindDCIByName(node, dciParameter): int
 ----
 
 Find ID of the DCI on node by parameter name (exact match). <<func-findalldcis>> can be used for pattern search.

@@ -9,15 +9,15 @@ Represents MAC address
 [.attr-list]
 --
 [[macaddress-isBroadcast]]
-isBroadcast => Boolean::
+isBroadcast: bool::
 `TRUE` if is broadcst address
 
 [[macaddress-isMulticast]]
-isMulticast => Boolean::
+isMulticast: bool::
 `TRUE` if multicast address
 
 [[macaddress-isValid]]
-isValid => Boolean::
+isValid: bool::
 `TRUE` if is valid MAC address
 --
 
@@ -26,7 +26,7 @@ isValid => Boolean::
 [.method-list]
 --
 [[macaddress-equals]]
-equals(mac) => Boolean::
+equals(mac): bool::
 Compares two MAC addresses
 +
 .Parameters
@@ -39,7 +39,7 @@ Compares two MAC addresses
 `TRUE` if MAC addresses are equal
 
 [[macaddress-toString]]
-toString(notation) => String::
+toString(notation): <<class-string,String>>::
 Returns MAC address string representation
 +
 .Parameters

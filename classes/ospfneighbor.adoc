@@ -9,11 +9,11 @@ OSPF neighbor
 [.attr-list]
 --
 [[ospfneighbor-areaId]]
-areaId => String::
+areaId: <<class-string,String>>::
 Area ID
 
 [[ospfneighbor-ifIndex]]
-ifIndex => String::
+ifIndex: <<class-string,String>>::
 Interface index
 
 [[ospfneighbor-ipAddress]]
@@ -21,7 +21,7 @@ ipAddress => InetAddress::
 <<class-inetaddress,IP address>>.
 
 [[ospfneighbor-isVirtual]]
-isVirtual => Boolean::
+isVirtual: bool::
 `TRUE` if it is virtual
 
 [[ospfneighbor-node]]
@@ -29,18 +29,18 @@ node => <<class-node>>::
 Object of <<class-node>> class
 
 [[ospfneighbor-nodeId]]
-nodeId => Integer::
+nodeId: int::
 Node ID
 
 [[ospfneighbor-routerId]]
-routerId => String::
+routerId: <<class-string,String>>::
 OSPF router ID
 
 [[ospfneighbor-state]]
-state => Integer::
+state: int::
 State
 
 [[ospfneighbor-stateText]]
-stateText => String::
+stateText: <<class-string,String>>::
 State text
 --

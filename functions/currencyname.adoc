@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-CurrencyName(code) => String
+CurrencyName(code): <<class-string,String>>
 ----
 
 Get currency name from code

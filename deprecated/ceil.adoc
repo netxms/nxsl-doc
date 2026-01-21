@@ -13,7 +13,7 @@ Please use <<func-math-ceil>> instead.
 
 [source,c]
 ----
-ceil(input) => Integer
+ceil(input): int
 ----
 
 Round up value.

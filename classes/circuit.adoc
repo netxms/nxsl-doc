@@ -13,18 +13,18 @@ include::_shared/datacollectiontarget-attrs.adoc[]
 [.attr-list]
 --
 [[circuit-autoBindScript]]
-autoBindScript => String::
+autoBindScript: <<class-string,String>>::
 Source of the script for automatic binding
 
 [[circuit-interfaces]]
-interfaces => Array::
+interfaces : <<class-array,Array>>::
 Array with node's <<class-discoveredinterface>>
 
 [[circuit-isAutoBindEnabled]]
-isAutoBindEnabled => Boolean::
+isAutoBindEnabled: bool::
 Indicate if automatic binding is enabled.
 
 [[circuit-isAutoUnbindEnabled]]
-isAutoUnbindEnabled => Boolean::
+isAutoUnbindEnabled: bool::
 Indicate if automatic unbinding is enabled.
 --

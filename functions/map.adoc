@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-map(table, key, default=null) => String
+map(table, key, default=null): <<class-string,String>>
 ----
 
 Lookup value from mapping table.

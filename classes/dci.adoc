@@ -9,74 +9,74 @@ Represents Data Collection Item (DCI).
 [.attr-list]
 --
 [[dci-activeThresholdSeverity]]
-activeThresholdSeverity => Integer::
+activeThresholdSeverity: int::
 Severity of the active threshold. If there are no active thresholds, defaults to `0` (NORMAL).
 
 [[dci-comments]]
-comments => String::
+comments: <<class-string,String>>::
 DCI Comments
 
 [[dci-dataType]]
-dataType => Integer::
+dataType: int::
 <<const-dci-datatype,Data type>> of the DCI.
 
 [[dci-description]]
-description => String::
+description: <<class-string,String>>::
 Description
 
 [[dci-errorCount]]
-errorCount => Integer::
+errorCount: int::
 Number of consecutive data collection errors
 
 [[dci-flags]]
-flags => Integer::
+flags: int::
 DCI flags
 
 [[dci-hasActiveThreshold]]
-hasActiveThreshold => Boolean::
+hasActiveThreshold: bool::
 `TRUE` if DCI has active threshold
 
 [[dci-id]]
-id => Integer::
+id: int::
 Unique DCI identifier
 
 [[dci-instance]]
-instance => String::
+instance: <<class-string,String>>::
 DCI instance (only for single value DCIs): %{instance}
 
 [[dci-instanceName]]
-instanceName => String::
+instanceName: <<class-string,String>>::
 DCI instance name (only for single value DCIs): %{instance-name}
 
 [[dci-lastPollTime]]
-lastPollTime => Integer64::
+lastPollTime: int64::
 Time of last DCI poll (either successful or not) as number of seconds since epoch (1 Jan 1970 00:00:00 UTC)
 
 [[dci-lastCollectionTime]]
-lastCollectionTime => Integer64::
+lastCollectionTime: int64::
 Time of last successful DCI poll as number of seconds since epoch (1 Jan 1970 00:00:00 UTC).
 +
 [.version-added]
 Added in version 4.0
 
 [[dci-name]]
-name => String::
+name: <<class-string,String>>::
 Parameter's name
 
 [[dci-origin]]
-origin => Integer::
+origin: int::
 <<const-dci-origin,Data origin>> of the DCI.
 
 [[dci-pollingInterval]]
-pollingInterval => Integer::
+pollingInterval: int::
 Current polling interval
 
 [[dci-pollingSchedules]]
-pollingSchedules => Array::
+pollingSchedules : <<class-array,Array>>::
 Array of custom schedules in cron format
 
 [[dci-pollingScheduleType]]
-pollingScheduleType => Integer::
+pollingScheduleType: int::
 Collection schedule:
   * 0 = Server default interval
   * 1 = Custom interval
@@ -87,11 +87,11 @@ relatedObject => <<class-netobj>>::
 Related object or null if there is no object
 
 [[dci-status]]
-status => Integer::
+status: int::
 <<const-dci-states,Data status>> of the DCI.
 
 [[dci-systemTag]]
-systemTag => String::
+systemTag: <<class-string,String>>::
 System tag. Contains information about DCI Interpretation.
 
 [[dci-template]]
@@ -99,31 +99,31 @@ template => <<class-template>>::
 <<class-template,Template object>> if DCI came from Template or `NULL`.
 
 [[dci-templateId]]
-templateId => Integer::
+templateId: int::
 Template id if DCI came from Template or 0.
 
 [[dci-templateItemId]]
-templateItemId => Integer::
+templateItemId: int::
 DCI item id in template if DCI came from Template or 0.
 
 [[dci-thresholdDisableEndTime]]
-thresholdDisableEndTime => Integer::
+thresholdDisableEndTime: int::
 UNIX time (number of seconds since epoch) till which threshold processing for
 this DCI is disabled. -1 if threshold processing is disabled infinitely. 0 if
 threshold processing is enabled.
 
 [[dci-transformedDataType]]
-transformedDataType => Integer::
+transformedDataType: int::
 Tranformed data link:https://netxms.org/documentation/nxsl-latest/#const-dci-datatypetype[type].
 
 [[dci-type]]
-type => Integer::
+type: int::
 DCI type:
   * 1 = single value
   * 2 = table
 
 [[dci-userTag]]
-userTag => String::
+userTag: <<class-string,String>>::
 User tag.
 +
 [.version-added]

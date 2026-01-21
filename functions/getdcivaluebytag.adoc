@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetDCIValueByTag(node, userTag) => String or Table
+GetDCIValueByTag(node, userTag): <<class-string,String>> or Table
 ----
 
 [.version-added]

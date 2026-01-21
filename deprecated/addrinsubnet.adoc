@@ -11,7 +11,7 @@ Please use <<inetaddress-samesubnet,sameSubnet()>> method of InetAddress class.
 ====
 ****
 
-`AddrInSubnet(address, subnet, mask) => Boolean`::
+`AddrInSubnet(address, subnet, mask): bool`::
 
 Checks if given IP address is within given subnet (including subnet and broadcast addresses). IPv4 and IPv6 are supported.
 

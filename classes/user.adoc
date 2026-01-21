@@ -9,39 +9,39 @@ Object represent user object and extends <<class-userdbobject>>.
 [.attr-list]
 --
 [[user-authMethod]]
-authMethod => Integer::
+authMethod: int::
 <<enum-auth-methods,Authentication method>>.
 
 [[user-certMappingData]]
-certMappingData => String::
+certMappingData: <<class-string,String>>::
 Data that will be used to mpa certificate
 
 [[user-certMappingMethod]]
-certMappingMethod => Integer::
+certMappingMethod: int::
 <<enum-mapping-methods,Certificate mapping methods>>.
 
 [[user-disabledUntil]]
-disabledUntil => String::
+disabledUntil: <<class-string,String>>::
 UNIX timestamp with date until this user is disabled
 
 [[user-email]]
-email => String::
+email: <<class-string,String>>::
 Email set in user properties
 
 [[user-fullName]]
-fullName => String::
+fullName: <<class-string,String>>::
 User full name
 
 [[user-graceLogins]]
-graceLogins => Integer::
+graceLogins: int::
 Grace login count
 
 [[user-phoneNumber]]
-phoneNumber => String::
+phoneNumber: <<class-string,String>>::
 Phone number set in user properties
 
 [[user-lastLogin]]
-lastLogin => Integer::
+lastLogin: int::
 UNIX timestamp with last user's login time
 --
 

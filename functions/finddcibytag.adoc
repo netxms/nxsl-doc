@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-FindDCIByTag(node, dciUserTag) => Integer
+FindDCIByTag(node, dciUserTag): int
 ----
 
 [.version-added]

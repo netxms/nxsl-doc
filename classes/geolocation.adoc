@@ -9,11 +9,11 @@ Represents geographical location (defined by latitude and longitude).
 [.attr-list]
 --
 [[geolocation-isManual]]
-isManual => Boolean::
+isManual: bool::
 `TRUE` if location is entered manually
 
 [[geolocation-isValid]]
-isValid => Boolean::
+isValid: bool::
 `TRUE` if location is valid
 
 [[geolocation-latitude]]
@@ -21,7 +21,7 @@ latitude => Float::
 Latitude as floating point number
 
 [[geolocation-latitudeText]]
-latitudeText => String::
+latitudeText: <<class-string,String>>::
 Latitude as text
 
 [[geolocation-longitude]]
@@ -29,15 +29,15 @@ longitude => Float::
 Longitude as floating point number
 
 [[geolocation-longitudeText]]
-longitudeText => String::
+longitudeText: <<class-string,String>>::
 Longitude as text
 
 [[geolocation-timestamp]]
-timestamp => Integer::
+timestamp: int::
 Lat data update timestamp (UNIX format)
 
 [[geolocation-type]]
-type => Integer::
+type: int::
 Data source type:
 +
 * 0 – Unset

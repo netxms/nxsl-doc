@@ -13,15 +13,15 @@ include::_shared/netobj-attrs.adoc[]
 include::_shared/datacollectiontarget-attrs.adoc[]
 
 [[sensor-capabilities]]
-capabilities => Integer::
+capabilities: int::
 Sensor capabilities - currently onle one capability: Modbus(1).
 
 [[sensor-deviceAddress]]
-deviceAddress => String::
+deviceAddress: <<class-string,String>>::
 Device addtess
 
 [[sensor-deviceClass]]
-deviceClass => Integer::
+deviceClass: int::
 <<sensor-class, Device class>>
 
 [[sensor-gatewayNode]]
@@ -29,7 +29,7 @@ gatewayNode => <<class-node>>::
 Getway node
 
 [[sensor-gatewayNodeId]]
-gatewayNodeId => Integer::
+gatewayNodeId: int::
 Getway node id
 
 [[sensor-isModbus]]
@@ -37,23 +37,23 @@ isModbus => Boolen::
 If sensor is Modbus sensor
 
 [[sensor-macAddress]]
-macAddress => String::
+macAddress: <<class-string,String>>::
 MAC address
 
 [[sensor-modbusUnitId]]
-modbusUnitId => Integer::
+modbusUnitId: int::
 MAC address
 
 [[sensor-model]]
-model => String::
+model: <<class-string,String>>::
 Model
 
 [[sensor-serialNumber]]
-serialNumber => String::
+serialNumber: <<class-string,String>>::
 Serial number
 
 [[sensor-vendor]]
-vendor => String::
+vendor: <<class-string,String>>::
 Vendor
 --
 

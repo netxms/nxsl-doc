@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-IO::FileAccess(fileName, mode) => Boolean
+IO::FileAccess(fileName, mode): bool
 ----
 
 Check file access. 

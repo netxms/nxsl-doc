@@ -495,7 +495,7 @@ methods and attributes described below
 [.attr-list]
 --
 [[string-isEmpty]]
-isEmpty => Boolean::
+isEmpty: bool::
 Returns "true" if string is empty or "false" otherwise.
 +
 [.source]
@@ -505,7 +505,7 @@ println(s.isEmpty); // prints "true"
 ....
 
 [[string-length,String::length]]
-length => Integer::
+length: int::
 Returns number of characters in the string.
 +
 [.source]
@@ -520,7 +520,7 @@ println(s.length); // prints '10'
 [.method-list]
 --
 [[string-compareTo]]
-compareTo(string) => Integer::
+compareTo(string): int::
 Compares two strings lexicographically (alphabetical order).
 Returns `-1` if the argument is a string lexicographically greater than this string,
 `1` if the argument is a string lexicographically less than this string or `0` if
@@ -541,7 +541,7 @@ println("100" == "100.0"); // prints true
 ....
 
 [[string-compareToIgnoreCase]]
-compareToIgnoreCase(string) => Integer::
+compareToIgnoreCase(string): int::
 Same as `compareTo`, but ignoring the case.
 +
 [.source]
@@ -550,7 +550,7 @@ println("aaa".compareToIgnoreCase("AAA")); // prints "0"
 ....
 
 [[string-contains]]
-contains(string) => Boolean::
+contains(string): bool::
 Returns `true` if this string contains the argument string or `false` otherwise.
 +
 [.source]
@@ -559,7 +559,7 @@ println("aaa".contains("a")); // prints "true"
 ....
 
 [[string-endsWith]]
-endsWith(string) => Boolean::
+endsWith(string): bool::
 Returns `true` if this string ends with the argument string or `false` otherwise.
 +
 [.source]
@@ -569,7 +569,7 @@ println("Just a sentence".endsWith("a sentence")); // prints "true"
 ....
 
 [[string-equalsIgnoreCase]]
-equalsIgnoreCase(string) => Boolean::
+equalsIgnoreCase(string): bool::
 Returns `true` if argument string is equal to this string ignoring the case or
 `false` otherwise.
 +
@@ -579,7 +579,7 @@ println("abc".equalsIgnoreCase("ABC")); // prints "true"
 ....
 
 [[string-indexOf,String::indexOf()]]
-indexOf(string) => Integer::
+indexOf(string): int::
 Returns index of first occurence of argument string in this string or `-1`
 if the argument is not a substring of the string.
 +
@@ -591,7 +591,7 @@ println("ABC-DEF-GHI".indexOf("JKL")); // prints "-1"
 ....
 
 [[string-lastIndexOf,String::lastIndexOf()]]
-lastIndexOf(string) => Integer::
+lastIndexOf(string): int::
 Returns index of last occurence of argument string in this string or `-1`
 if the argument is not a substring of the string.
 +
@@ -603,7 +603,7 @@ println("ABC-DEF-GHI".lastIndexOf("JKL")); // prints "-1"
 ....
 
 [[string-left,String::left()]]
-left(numberOfCharacters, paddingCharacter) => String::
+left(numberOfCharacters, paddingCharacter): <<class-string,String>>::
 Returns left `numberOfCharacters` of this string. If string length is less then
 `numberOfCharacters`, result will be padded on the right. `paddingCharacter` is
 optional, if not specified, space character will be used for padding.
@@ -616,7 +616,7 @@ println("123".left(5, "_")); // prints "123__"
 ....
 
 [[string-replace,String::replace()]]
-replace(whatToReplace, replaceBy) => String::
+replace(whatToReplace, replaceBy): <<class-string,String>>::
 Returns string where all occurencies of `whatToReplace` are replaced with `replaceBy`.
 +
 [.source]
@@ -625,7 +625,7 @@ println("A B C A D K L".replace("A", "<A>")); // prints "<A> B C <A> D K L"
 ....
 
 [[string-right,String::right()]]
-right(numberOfCharacters, paddingCharacter) => String::
+right(numberOfCharacters, paddingCharacter): <<class-string,String>>::
 Returns right `numberOfCharacters` of this string. If string length is less then
 `numberOfCharacters`, result will be padded on the left. `paddingCharacter` is
 optional, if not specified, space character will be used for padding.
@@ -638,7 +638,7 @@ println("123".right(5, "_")); // prints "__123"
 ....
 
 [[string-split,String::split()]]
-split(separator, trimWhitespace) => <<class-array,Array>>::
+split(separator, trimWhitespace): <<class-array,Array>>::
 Split string into array of strings at given separator.
 +
 [.version-added]
@@ -668,7 +668,7 @@ for (a : s.split(",", true)) println("|"..a.."|");
 ....
 
 [[string-startsWith]]
-startsWith(string) => Boolean::
+startsWith(string): bool::
 Returns `true` if this string starts with the argument string or `false` otherwise.
 +
 [.source]
@@ -678,7 +678,7 @@ println("Just a sentence".startsWith("Just a")); // prints "true"
 ....
 
 [[string-substring,String::substring()]]
-substring(position, numberOfCharacters) => String::
+substring(position, numberOfCharacters): <<class-string,String>>::
 Returns substring of this string starting from `position` and containing `numberOfCharacters`.
 +
 [.source]
@@ -689,7 +689,7 @@ println("ABCDEFGHIJK".substring(6,10)); // prints "GHIJK"
 ....
 
 [[string-toLowerCase,String::toLowerCase()]]
-toLowerCase() => String::
+toLowerCase(): <<class-string,String>>::
 Converts this string to lowercase.
 +
 [.source]
@@ -698,7 +698,7 @@ println("ABC def".toLowerCase()); // prints "abc def"
 ....
 
 [[string-toUpperCase,String::toUpperCase()]]
-toUpperCase() => String::
+toUpperCase(): <<class-string,String>>::
 Converts this string to uppercase.
 +
 [.source]
@@ -707,7 +707,7 @@ println("ABC def".toUpperCase()); // prints "ABC DEF"
 ....
 
 [[string-trim,String::trim()]]
-trim() => String::
+trim(): <<class-string,String>>::
 Returns this string with whitespace from both sides removed.
 +
 [.source]
@@ -716,7 +716,7 @@ println("|" .. "  ABC  ".trim() .. "|") // prints "|ABC|"
 ....
 
 [[string-trimLeft,String::trimLeft()]]
-trimLeft() => String::
+trimLeft(): <<class-string,String>>::
 Returns this string with whitespace from left side removed.
 +
 [.source]
@@ -725,7 +725,7 @@ println("|" .. "  ABC  ".trimLeft() .. "|") // prints "|ABC   |"
 ....
 
 [[string-trimRight,String::trimRight()]]
-trimRight() => String::
+trimRight(): <<class-string,String>>::
 Returns this string with whitespace from right side removed.
 +
 [.source]
@@ -840,7 +840,7 @@ a = [];
 
 ==== Array attributes
 
-`maxIndex => Integer`::
+`maxIndex: int`::
 Returns highest index in the array.
 
 [.source]
@@ -851,7 +851,7 @@ println(a[a.maxIndex]); // prints '3'
 ....
 
 
-`minIndex => Integer`::
+`minIndex: int`::
 Returns lowest index in the array.
 
 [.source]
@@ -861,7 +861,7 @@ println(a.minIndex); // prints '0'
 ....
 
 
-`size => Integer`::
+`size: int`::
 Returns number of elements in the array.
 
 [.source]
@@ -872,7 +872,7 @@ println(a.size); // prints '3'
 
 ==== Array methods
 
-`append(newElement) => Integer`::
+`append(newElement): int`::
 Appends new element to the array. Returns highest index in the array - that's index of the appended element. 
 
 [.source]
@@ -883,7 +883,7 @@ println(a); // prints '[a, b, c, d]'
 ....
 
 
-`appendAll(anotherArray) => Integer`::
+`appendAll(anotherArray): int`::
 Appends elements of `anotherArray` to the array. Returns highest index in the array. 
 
 [.source]
@@ -895,7 +895,7 @@ println(a); // prints '[1, 2, 3, 4]'
 ....
 
 
-`indexOf(value) => Integer`:: Returns the index of first occurrence of the
+`indexOf(value): int`:: Returns the index of first occurrence of the
 specified `value` or -1 if `value` is not found in the array.  
 
 [.source]
@@ -906,7 +906,7 @@ println(a.indexOf("Major")); // Prints "3"
 
 
 [[class-array-join,Array::join()]]
-`join(separator) => String`::
+`join(separator): <<class-string,String>>`::
 Returns concatenated string of all array elements separated by the specified separator.
 
 .Parameters
@@ -964,7 +964,7 @@ println(a.pop());
 ....
 
 
-`push(newElement) => Integer`::
+`push(newElement): int`::
 Same as `append()`.
 
 
@@ -1055,7 +1055,7 @@ h = %{"key":123, "another_key":456};
 
 
 ==== Hash Map Attributes
-`keys => Array`::
+`keys: <<class-array,Array>>`::
 Returns array with keys of items in the hash map.
 
 [.source]
@@ -1065,7 +1065,7 @@ println(h.keys); // prints '[100,101]'
 ....
 
 
-`size => Integer`::
+`size: int`::
 Returns number of items in the hash map.
 
 [.source]
@@ -1075,7 +1075,7 @@ println(h.size); // prints '3'
 ....
 
 
-`values => Array`::
+`values: <<class-array,Array>>`::
 Returns array with values of items in the hash map.
 
 [.source]
@@ -1087,7 +1087,7 @@ println(h.keys); // prints '[123,456]'
 
 ==== Hash Map Methods
 
-`contains(key) => Boolean`::
+`contains(key): bool`::
 Returns `true`, if hash map contains specified key or `false` otherwise.
 
 [.source]

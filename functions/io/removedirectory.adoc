@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-IO::RemoveDirectory(directory) => Boolean
+IO::RemoveDirectory(directory): bool
 ----
 
 Removes directory.

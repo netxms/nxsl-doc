@@ -13,54 +13,54 @@ include::_shared/datacollectiontarget-attrs.adoc[]
 [.attr-list]
 --
 [[mobiledevice-altitude]]
-altitude => Integer::
+altitude: int::
 Altitude
 
 [[mobiledevice-batteryLevel]]
-batteryLevel => Integer::
+batteryLevel: int::
 Battery percentage
 
 [[mobiledevice-commProtocol]]
-commProtocol => String::
+commProtocol: <<class-string,String>>::
 Communication Protocol
 
 [[mobiledevice-deviceId]]
-deviceId => String::
+deviceId: <<class-string,String>>::
 Device id
 
 [[mobiledevice-direction]]
-direction => String::
+direction: <<class-string,String>>::
 Direction
 
 [[mobiledevice-lastReportTime]]
-lastReportTime => Integer::
+lastReportTime: int::
 UNIX timestamp when device last reported data
 
 [[mobiledevice-model]]
-model => String::
+model: <<class-string,String>>::
 Device model
 
 [[mobiledevice-osName]]
-osName => String::
+osName: <<class-string,String>>::
 OS name installed on device
 
 [[mobiledevice-osVersion]]
-osVersion => String::
+osVersion: <<class-string,String>>::
 OS version
 
 [[mobiledevice-serialNumber]]
-serialNumber => String::
+serialNumber: <<class-string,String>>::
 Serial number
 
 [[mobiledevice-speed]]
-speed => String::
+speed: <<class-string,String>>::
 Speed
 
 [[mobiledevice-userId]]
-userId => String::
+userId: <<class-string,String>>::
 User id
 
 [[mobiledevice-vendor]]
-vendor => String::
+vendor: <<class-string,String>>::
 Vendor
 --

@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-ord(character) => Integer
+ord(character): int
 ----
 
 Convert a character into it's ASCII/Unicode value.

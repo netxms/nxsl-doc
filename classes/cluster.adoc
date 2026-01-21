@@ -13,7 +13,7 @@ include::_shared/datacollectiontarget-attrs.adoc[]
 [.attr-list]
 --
 [[cluster-nodes]]
-nodes => Array::
+nodes : <<class-array,Array>>::
 Will return all nodes of class <<class-node>>, that are under this cluster
 
 [[cluster-zone]]
@@ -21,7 +21,7 @@ zone => <<class-zone>>::
 Will return zone this cluster is under
 
 [[cluster-zoneUIN]]
-zoneUIN => Integer::
+zoneUIN: int::
 Will return zone UIN this cluster is under
 --
 

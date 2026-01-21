@@ -9,26 +9,26 @@ One maintenance journal record entry
 [.attr-list]
 --
 [[maintenancejournalrecord-authorId]]
-authorId => Integer::
+authorId: int::
 Autor user ID
 
 [[maintenancejournalrecord-creationTime]]
-creationTime => Integer::
+creationTime: int::
 UNIX timestamp of creation
 
 [[maintenancejournalrecord-description]]
-description => String::
+description: <<class-string,String>>::
 Description
 
 [[maintenancejournalrecord-editorId]]
-editorId => Integer::
+editorId: int::
 Editor user ID
 
 [[maintenancejournalrecord-modificationTime]]
-modificationTime => Integer::
+modificationTime: int::
 UNIX timestamp of last modification
 
 [[maintenancejournalrecord-objectId]]
-objectId => Integer::
+objectId: int::
 ID of an object that was under maintenance
 --

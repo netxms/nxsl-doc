@@ -9,14 +9,14 @@ Represents VLAN object.
 [.attr-list]
 --
 [[vlan-id]]
-id => Integer::
+id: int::
 VLAN id.
 
 [[vlan-name]]
-name => String::
+name: <<class-string,String>>::
 VLAN name.
 
 [[vlan-interfaces]]
-interfaces => Array::
+interfaces : <<class-array,Array>>::
 Interfaces in that VLAN (array of objects of class <<class-interface>>).
 --

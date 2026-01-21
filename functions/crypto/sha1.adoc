@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-Crypto::SHA1(string) => String
+Crypto::SHA1(string): <<class-string,String>>
 ----
 
 sha1 function implementation

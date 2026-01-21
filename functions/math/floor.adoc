@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-Math::Floor(x) => Integer
+Math::Floor(x): int
 ----
 
 Round down value.

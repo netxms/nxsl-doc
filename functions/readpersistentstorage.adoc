@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-ReadPersistentStorage(key) => String
+ReadPersistentStorage(key): <<class-string,String>>
 ----
 
 Read value from global persistent key-value storage.

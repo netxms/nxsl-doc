@@ -13,7 +13,7 @@ score => Float::
 Score
 
 [[scoreddcivalue-timestamp]]
-timestamp => Integer::
+timestamp: int::
 Timestam as UNIX time
 
 [[scoreddcivalue-value]]

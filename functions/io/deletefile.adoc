@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-IO::DeleteFile(file) => Boolean
+IO::DeleteFile(file): bool
 ----
 
 Deletes file.

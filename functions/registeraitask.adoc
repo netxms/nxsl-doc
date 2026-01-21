@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-RegisterAITask(taskDescription, prompt) => Integer
+RegisterAITask(taskDescription, prompt): int
 ----
 
 Registers a new AI task for asynchronous processing.

@@ -9,10 +9,10 @@ Represents a single data point containing a timestamp and value pair. DataPoint 
 [.attr-list]
 --
 [[datapoint-timestamp]]
-timestamp => Integer::
+timestamp: int::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the data point.
 
 [[datapoint-value]]
-value => String::
+value: <<class-string,String>>::
 The value associated with the timestamp.
 --

@@ -13,7 +13,7 @@ Replaced with method <<string-right,right()>> of the string instance.
 
 [source,c]
 ----
-right(string, length, pad) => String
+right(string, length, pad): <<class-string,String>>
 ----
 
 Returns the string of length characters of string, optionally padded with pad

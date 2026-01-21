@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-Math::Ceil(x) => Integer
+Math::Ceil(x): int
 ----
 
 Round up value.

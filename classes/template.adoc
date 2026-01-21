@@ -11,19 +11,19 @@ Object represents template. Extends <<class-netobj>>.
 include::_shared/netobj-attrs.adoc[]
 
 [[template-autoApplyScript]]
-autoApplyScript => String::
+autoApplyScript: <<class-string,String>>::
 Source of the script for automatic binding.
 
 [[template-isAutoApplyEnabled]]
-isAutoApplyEnabled => Boolean::
+isAutoApplyEnabled: bool::
 Indicate if automatic binding is enabled.
 
 [[template-isAutoRemoveEnabled]]
-isAutoRemoveEnabled => Boolean::
+isAutoRemoveEnabled: bool::
 Indicate if automatic unbinding is enabled.
 
 [[template-version]]
-version => Integer::
+version: int::
 Template version
 --
 

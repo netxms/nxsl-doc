@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-LevenshteinDistance(string1, string2, ignoreCase) => Integer
+LevenshteinDistance(string1, string2, ignoreCase): int
 ----
 
 Calculates the Levenshtein distance between two strings, which is the minimum number of single-character edits (insertions, deletions, substitutions) needed to transform one string into another.

@@ -13,7 +13,7 @@ Please use <<func-math-random>> instead.
 
 [source,c]
 ----
-random(minValue, maxValue) => Integer
+random(minValue, maxValue): int
 ----
 
 Generate pseudo random number in given range. Uses cryptographically secure pseudo random generator (CSPRNG)

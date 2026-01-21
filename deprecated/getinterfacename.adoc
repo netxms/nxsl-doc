@@ -13,7 +13,7 @@ Please use <<class-node-getinterface,getInterface()>>, <<class-node-getinterface
 
 [source,c]
 ----
-GetInterfaceName(node, interfaceIndex) => String
+GetInterfaceName(node, interfaceIndex): <<class-string,String>>
 ----
 
 Get interface name by index

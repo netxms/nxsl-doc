@@ -9,19 +9,19 @@ Object represents business service check
 [.attr-list]
 --
 [[businessservicecheck-currentTicketId]]
-currentTicketId => Integer::
+currentTicketId: int::
 ID of the ticket that is currently associated with this check or 0 if check is OK
 
 [[businessservicecheck-description]]
-description => String::
+description: <<class-string,String>>::
 Cehck description
 
 [[businessservicecheck-failureReason]]
-failureReason => String::
+failureReason: <<class-string,String>>::
 Reason why check have failed or null if check is not failed
 
 [[businessservicecheck-id]]
-id => Integer::
+id: int::
 ID of the check
 
 [[businessservicecheck-relatedDCI]]
@@ -29,7 +29,7 @@ relatedDCI => DCI::
 DCI object of class <<class-dci>> that is checked or NULL if check is not DCI based
 
 [[businessservicecheck-relatedDCIId]]
-relatedDCIId => Integer::
+relatedDCIId: int::
 DCI id that is checked or 0 if it is not DCI based check
 
 [[businessservicecheck-relatedObject]]
@@ -37,14 +37,14 @@ relatedObject => NetObj::
 Related object (inherited from <<class-netobj>>, exact type can be checked with <<func-classof>> function) or NULL
 
 [[businessservicecheck-relatedObjectId]]
-relatedObjectId => Integer::
+relatedObjectId: int::
 ID of related objec or 0
 
 [[businessservicecheck-state]]
-state => Integer::
+state: int::
 Current state of the business service check one of <<const-business-service-state,states>>
 
 [[businessservicecheck-type]]
-type => Integer::
+type: int::
 Business service check one of <<const-business-service-check-type,types>>
 --

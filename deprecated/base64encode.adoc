@@ -13,7 +13,7 @@ Please use <<func-base64-encode>> instead.
 
 [source,c]
 ----
-Base64Encode() => String
+Base64Encode(): <<class-string,String>>
 ----
 
 Encode string as base64. Accepts string to encode and optional character encoding.

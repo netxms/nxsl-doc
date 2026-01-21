@@ -13,7 +13,7 @@ Please use set method of <<class-snmptransport>> class.
 
 [source,c]
 ----
-SNMPSet(transport, oid, value, dataType) => Boolean
+SNMPSet(transport, oid, value, dataType): bool
 ----
 
 Perform SNMP SET request for `oid` over provided <<class-snmptransport,transport>>. Return boolean success indicator.

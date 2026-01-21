@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetMaxDCIValue(node, dciId, from, to) => String
+GetMaxDCIValue(node, dciId, from, to): <<class-string,String>>
 ----
 
 Get the maximum value of the DCI for the given period. The DCI value must be of numeric type.

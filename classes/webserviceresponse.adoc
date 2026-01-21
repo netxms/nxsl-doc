@@ -9,30 +9,30 @@ Contains all information about web service custom request execution result
 [.attr-list]
 --
 [[webserviceresponse-agentErrorCode]]
-agentErrorCode => Integer::
+agentErrorCode: int::
 Agent error code
 
 [[webserviceresponse-body]]
-body => String::
+body: <<class-string,String>>::
 Response body. Alias for `document`.
 
 [[webserviceresponse-document]]
-document => String::
+document: <<class-string,String>>::
 Document that was returned by web service as a response to the request
 
 [[webserviceresponse-errorMessage]]
-errorMessage => String::
+errorMessage: <<class-string,String>>::
 Human readable error message set by server or agent
 
 [[webserviceresponse-httpResponseCode]]
-httpResponseCode => Integer::
+httpResponseCode: int::
 HTTP response code
 
 [[webserviceresponse-statusCode]]
-statusCode => Integer::
+statusCode: int::
 HTTP response status code. Alias for `httpResponseCode`.
 
 [[webserviceresponse-success]]
-success => Boolean::
+success: bool::
 Will return `True` in case of success and `False` if there was problem on server or on agent
 --

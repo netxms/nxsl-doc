@@ -9,31 +9,31 @@ Represents table object (usually it's value of table DCI).
 [.attr-list]
 --
 [[table-columnCount]]
-columnCount => Integer::
+columnCount: int::
 Number of columns.
 
 [[table-columns]]
-columns => Array<TableColumn>::
+columns : <<class-array,Array>><TableColumn>::
 Array of <<class-tablecolumn,column definitions>>.
 
 [[table-instanceColumns]]
-instanceColumns => Array<TableColumn>::
+instanceColumns : <<class-array,Array>><TableColumn>::
 Array of <<class-tablecolumn,column definitions>> including only columns marked as instance columns.
 
 [[table-instanceColumnIndexes]]
-instanceColumnIndexes => Array<Integer>::
+instanceColumnIndexes : <<class-array,Array>><Integer>::
 Array with indexes of columns marked as instance columns.
 
 [[table-rowCount]]
-rowCount => Integer::
+rowCount: int::
 Number of rows.
 
 [[table-rows]]
-rows => Array<TableRow>::
+rows : <<class-array,Array>><TableRow>::
 Array of rows with data.
 
 [[table-title]]
-title => String::
+title: <<class-string,String>>::
 Title of table.
 --
 
@@ -42,7 +42,7 @@ Title of table.
 [.method-list]
 --
 [[table-addColumn]]
-addColumn(name, [type], [displayName], [isInstance]) => Integer::
+addColumn(name, [type], [displayName], [isInstance]): int::
 Adds column to table
 +
 .Parameters
@@ -58,7 +58,7 @@ Adds column to table
 Column index
 
 [[table-addRow]]
-addRow() => Integer::
+addRow(): int::
 Adds row to table
 +
 .Return
@@ -99,7 +99,7 @@ Finds row by instance
 <<class-tablerow, Table row>> that corresponds to provided instance
 
 [[table-findRowIndexByInstance]]
-findRowIndexByInstance(instance, instance2, ...) => Integer::
+findRowIndexByInstance(instance, instance2, ...): int::
 Finds row index by instance
 +
 .Parameters
@@ -113,7 +113,7 @@ Finds row index by instance
 Table row index corresponds to provided instance
 
 [[table-get]]
-get(rowId, columnId) => String::
+get(rowId, columnId): <<class-string,String>>::
 Get cell value by row and column id
 +
 .Parameters
@@ -127,7 +127,7 @@ Get cell value by row and column id
 Cell value as string
 
 [[table-getColumnIndex]]
-getColumnIndex(columnName) => Integer::
+getColumnIndex(columnName): int::
 Get column index by column name
 +
 .Parameters
@@ -140,7 +140,7 @@ Get column index by column name
 Column index or -1 if column not found
 
 [[table-getColumnName]]
-getColumnName(columnId) => String::
+getColumnName(columnId): <<class-string,String>>::
 Get column name by column index
 +
 .Parameters

@@ -9,15 +9,15 @@ Object represents client session
 [.attr-list]
 --
 [[clientsession-clientInfo]]
-clientInfo => String::
+clientInfo: <<class-string,String>>::
 Client app info string
 
 [[clientsession-clientType]]
-clientType => Integer::
+clientType: int::
 Client system type - desktop(0), web(1), mobile(2), tablet(3), application(4)
 
 [[clientsession-flags]]
-flags => Integer::
+flags: int::
 Client flags
 
 [[clientsession-id]]
@@ -25,15 +25,15 @@ id => Bigint::
 ID of client session
 
 [[clientsession-loginName]]
-loginName => String::
+loginName: <<class-string,String>>::
 Login name
 
 [[clientsession-loginTime]]
-loginTime => Integer::
+loginTime: int::
 Login time
 
 [[clientsession-name]]
-name => String::
+name: <<class-string,String>>::
 User name
 
 [[clientsession-systemAccessRights]]
@@ -45,14 +45,14 @@ user => User::
 object of <<class-user>>
 
 [[clientsession-userId]]
-userId => Integer::
+userId: int::
 User ID
 
 [[clientsession-webServerAddress]]
-webServerAddress => String::
+webServerAddress: <<class-string,String>>::
 Address for web server if it is web type connection
 
 [[clientsession-workstation]]
-workstation => String::
+workstation: <<class-string,String>>::
 Workstation information if available
 --

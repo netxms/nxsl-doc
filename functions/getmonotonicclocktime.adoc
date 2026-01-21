@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetMonotonicClockTime() => Integer
+GetMonotonicClockTime(): int
 ----
 
 Get number of milliseconds counted by monotonic clock since some unspecified point in the past (system boot time on most systems).

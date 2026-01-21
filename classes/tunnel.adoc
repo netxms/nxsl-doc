@@ -13,83 +13,83 @@ address => InetAddress::
 <<class-inetaddress>> class object with address of the node that opened this tunnel
 
 [[tunnel-agentBuildTag]]
-agentBuildTag => String::
+agentBuildTag: <<class-string,String>>::
 Agent build tag
 
 [[tunnel-agentId]]
-agentId => String::
+agentId: <<class-string,String>>::
 Agent ID of the agent that opened the tunnel
 
 [[tunnel-agentVersion]]
-agentVersion => String::
+agentVersion: <<class-string,String>>::
 Agent version of the node that opened the tunnel
 
 [[tunnel-certificateExpirationTime]]
-certificateExpirationTime => Integer::
+certificateExpirationTime: int::
 UNIX timestamp with current certificate expiration day
 
 [[tunnel-guid]]
-guid => String::
+guid: <<class-string,String>>::
 Tunnel GUID
 
 [[tunnel-hostname]]
-hostname => String::
+hostname: <<class-string,String>>::
 Hostname of the node that opened the tunnel
 
 [[tunnel-hardwareId]]
-hardwareId => String::
+hardwareId: <<class-string,String>>::
 Hardware ID of the node that opened the tunnel
 
 [[tunnel-id]]
-id => Integer::
+id: int::
 Tunnel id
 
 [[tunnel-isAgentProxy]]
-isAgentProxy => Boolean::
+isAgentProxy: bool::
 `TRUE` if agent proxy is enabled on the agent that opened the tunnel
 
 [[tunnel-isBound]]
-isBound => Boolean::
+isBound: bool::
 `TRUE` if tunnel is bound
 
 [[tunnel-isSnmpProxy]]
-isSnmpProxy => Boolean::
+isSnmpProxy: bool::
 `TRUE` if SNMP proxy is enabled on the agent that opened the tunnel
 
 [[tunnel-isSnmpTrapProxy]]
-isSnmpTrapProxy => Boolean::
+isSnmpTrapProxy: bool::
 `TRUE` if SNMP trap proxy is enabled on the agent that opened the tunnel
 
 [[tunnel-isUserAgentInstalled]]
-isUserAgentInstalled => Boolean::
+isUserAgentInstalled: bool::
 `TRUE` if user agent is installed on the agent that opened the tunnel
 
 [[tunnel-macAddresses]]
-macAddresses => Array::
+macAddresses : <<class-array,Array>>::
 Array with MAC addresses as Strings
 
 [[tunnel-platformName]]
-platformName => String::
+platformName: <<class-string,String>>::
 Platform name of the node that opened the tunnel
 
 [[tunnel-startTime]]
-startTime => Integer::
+startTime: int::
 UNIX timestamp with tunnel start time
 
 [[tunnel-serialNumber]]
-serialNumber => String::
+serialNumber: <<class-string,String>>::
 Serial number
 
 [[tunnel-systemInfo]]
-systemInfo => String::
+systemInfo: <<class-string,String>>::
 System information of the node that opened the tunnel
 
 [[tunnel-systemName]]
-systemName => String::
+systemName: <<class-string,String>>::
 System name of the node that opened the tunnel
 
 [[tunnel-zoneUIN]]
-zoneUIN => Integer::
+zoneUIN: int::
 Node's zone UIN if set in agent's configuration file
 --
 
@@ -98,7 +98,7 @@ Node's zone UIN if set in agent's configuration file
 [.method-list]
 --
 [[tunnel-bind]]
-bind(node) => Integer::
+bind(node): int::
 Bind the tunnel to a specified node.
 +
 .Parameters

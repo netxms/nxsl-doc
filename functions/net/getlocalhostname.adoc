@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-Net::ResolveAddress(address, fullyQualified) => String
+Net::ResolveAddress(address, fullyQualified): <<class-string,String>>
 ----
 
 Get local host name. If optional argument is true, fully qualified name will be returned.

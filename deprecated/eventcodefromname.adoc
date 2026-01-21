@@ -11,7 +11,7 @@
 
 [source,c]
 ----
-EventCodeFromName(name) => Integer
+EventCodeFromName(name): int
 ----
 
 Get event code from event name

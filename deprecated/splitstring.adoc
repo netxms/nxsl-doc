@@ -13,7 +13,7 @@ Replaced with method <<string-split,split()>> of the string instance.
 
 [source,c]
 ----
-SplitString(string, separator) => Array
+SplitString(string, separator) : <<class-array,Array>>
 ----
 
 Split string into array of strings at given separator.

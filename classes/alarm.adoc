@@ -9,7 +9,7 @@ Represents NetXMS alarm.
 [.attr-list]
 --
 [[alarm-ackBy]]
-ackBy => Integer::
+ackBy: int::
 ID of user who acknowledged this alarm.
 
 [[alarm-ackByUser]]
@@ -17,27 +17,27 @@ ackByUser => <<class-userdbobject>>::
 User who acknowledged this alarm (class <<class-userdbobject>>).
 
 [[alarm-categories]]
-categories => Array::
+categories : <<class-array,Array>>::
 Array with alarm category names.
 
 [[alarm-creationTime]]
-creationTime => Integer::
+creationTime: int::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the alarm creation time.
 
 [[alarm-dciId]]
-dciId => Integer::
+dciId: int::
 If alarm was created as a result of DCI threshold violation, this attribute will contain ID of the DCI.
 
 [[alarm-eventCode]]
-eventCode => Integer::
+eventCode: int::
 Event code of originating event.
 
 [[alarm-eventId]]
-eventId => Integer::
+eventId: int::
 ID of originating event.
 
 [[alarm-eventName]]
-eventName => String::
+eventName: <<class-string,String>>::
 Name of originating event.
 
 [[alarm-eventTagList]]
@@ -45,11 +45,11 @@ eventTagList => Float::
 List of event tags as a comma separated string
 
 [[alarm-helpdeskReference]]
-helpdeskReference => String::
+helpdeskReference: <<class-string,String>>::
 Helpdesk system reference (e.g. issue ID).
 
 [[alarm-helpdeskState]]
-helpdeskState => Integer::
+helpdeskState: int::
 Helpdesk state:
 +
   * 0 = Ignored
@@ -57,39 +57,39 @@ Helpdesk state:
   * 2 = Closed
 
 [[alarm-id]]
-id => Integer::
+id: int::
 Unique identifier of the alarm.
 
 [[alarm-impact]]
-impact => String::
+impact: <<class-string,String>>::
 Alarm impact text
 
 [[alarm-key]]
-key => String::
+key: <<class-string,String>>::
 Alarm key.
 
 [[alarm-lastChangeTime]]
-lastChangeTime => Integer::
+lastChangeTime: int::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the last update.
 
 [[alarm-message]]
-message => String::
+message: <<class-string,String>>::
 Alarm message.
 
 [[alarm-originalSeverity]]
-originalSeverity => Integer::
+originalSeverity: int::
 Original severity of the alarm.
 
 [[alarm-parentId]]
-parentId => Integer::
+parentId: int::
 Parent alarm id
 
 [[alarm-repeatCount]]
-repeatCount => Integer::
+repeatCount: int::
 Repeat count.
 
 [[alarm-resolvedBy]]
-resolvedBy => Integer::
+resolvedBy: int::
 ID of user who resolved this alarm.
 
 [[alarm-resolvedByUser]]
@@ -97,34 +97,34 @@ resolvedByUser => <<class-userdbobject>>::
 User who resolved this alarm (class <<class-userdbobject>>)
 
 [[alarm-rcaScriptName]]
-rcaScriptName => String::
+rcaScriptName: <<class-string,String>>::
 Name of root cause analysis script
 
 [[alarm-relatedEvents]]
-relatedEvents => Array::
+relatedEvents : <<class-array,Array>>::
 Array with related event IDs.
 +
 [.version-added]
 Added in version 6.0
 
 [[alarm-ruleGuid]]
-ruleGuid => String::
+ruleGuid: <<class-string,String>>::
 Guid of the rule that generated the event.
 
 [[alarm-ruleDescription]]
-ruleDescription => String::
+ruleDescription: <<class-string,String>>::
 Description of the rule that generated the event.
 
 [[alarm-severity]]
-severity => Integer::
+severity: int::
 Current alarm severity.
 
 [[alarm-sourceObject]]
-sourceObject => Integer::
+sourceObject: int::
 ID of the object where alarm is raised.
 
 [[alarm-state]]
-state => Integer::
+state: int::
 Alarm state:
 +
   * 0 = Outstanding
@@ -138,11 +138,11 @@ Alarm state:
 [.method-list]
 --
 [[alarm-acknowledge]]
-acknowledge() => Integer::
+acknowledge(): int::
 Acknowledge alarm. Return `0` on success or error code on failure.
 
 [[alarm-addComment]]
-addComment(commentText, syncWithHelpdesk) => Integer::
+addComment(commentText, syncWithHelpdesk): int::
 Add new alarm comment.
 +
 .Parameters
@@ -156,7 +156,7 @@ Add new alarm comment.
 Id of the newly created alarm comment.
 
 [[alarm-expandString]]
-expandString(string) => String::
+expandString(string): <<class-string,String>>::
 Expand string by replacing macros with their values.
 +
 .Parameters
@@ -169,25 +169,25 @@ Expand string by replacing macros with their values.
 Formated string
 
 [[alarm-getComments]]
-getComments() => Array::
+getComments() : <<class-array,Array>>::
 Get array of alarm comments.
 +
 .Return
 Array of <<class-alarmcomment>> objects.
 
 [[alarm-requestAiAssistantComment]]
-requestAiAssistantComment() => String::
+requestAiAssistantComment(): <<class-string,String>>::
 Request an AI assistant comment for this alarm.
 +
 .Return
 String containing the AI assistant's response, or NULL if empty.
 
 [[alarm-resolve]]
-resolve() => Integer::
+resolve(): int::
 Resolve alarm. Return `0` on success or error code on failure.
 
 [[alarm-terminate]]
-terminate() => Integer::
+terminate(): int::
 Terminate alarm. Return `0` on success or error code on failure.
 --
 

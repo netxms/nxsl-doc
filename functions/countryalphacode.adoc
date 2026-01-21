@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-CountryAlphaCode(code) => String
+CountryAlphaCode(code): <<class-string,String>>
 ----
 
 Lookup country alpha code by numeric or alpha3 code.

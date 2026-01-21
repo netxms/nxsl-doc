@@ -12,7 +12,7 @@ Please use expandString method of <<class-netobj>>, <<class-event>> or <<class-a
 
 [source,c]
 ----
-ExpandString(string, object, event) => String
+ExpandString(string, object, event): <<class-string,String>>
 ----
 
 Expand string by replacing macros with their values.

@@ -13,7 +13,7 @@ Please use <<class-netobj-getcustomattribute,getCustomAttribute()>> method of Ne
 
 [source,c]
 ----
-GetCustomAttribute(object, name) => String
+GetCustomAttribute(object, name): <<class-string,String>>
 ----
 
 Lookup custom attribute of the object.

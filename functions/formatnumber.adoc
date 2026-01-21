@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-FormatNumber(number, width, precision) => String
+FormatNumber(number, width, precision): <<class-string,String>>
 ----
 
 Formats a numeric value.

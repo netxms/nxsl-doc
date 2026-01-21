@@ -9,34 +9,34 @@ Represents a software deployment package with metadata for installation on manag
 [.attr-list]
 --
 [[deploymentpackage-command]]
-command => String::
+command: <<class-string,String>>::
 Installation command to execute.
 
 [[deploymentpackage-description]]
-description => String::
+description: <<class-string,String>>::
 Package description.
 
 [[deploymentpackage-fileName]]
-fileName => String::
+fileName: <<class-string,String>>::
 Path to the package file.
 
 [[deploymentpackage-id]]
-id => Integer::
+id: int::
 Unique package identifier.
 
 [[deploymentpackage-name]]
-name => String::
+name: <<class-string,String>>::
 Package name.
 
 [[deploymentpackage-platform]]
-platform => String::
+platform: <<class-string,String>>::
 Target platform (e.g., "Windows", "Linux").
 
 [[deploymentpackage-type]]
-type => String::
+type: <<class-string,String>>::
 Package type identifier.
 
 [[deploymentpackage-version]]
-version => String::
+version: <<class-string,String>>::
 Package version string.
 --

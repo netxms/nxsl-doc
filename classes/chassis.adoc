@@ -17,11 +17,11 @@ controller => <<class-node>>::
 Chassis controller node
 
 [[chassis-controllerId]]
-controllerId => Integer::
+controllerId: int::
 Chassis controller's node id
 
 [[chassis-flagsAttr]]
-flags => Integer::
+flags: int::
 <<chassis-flags,Bit flags>>
 
 [[chassis-rack]]
@@ -29,15 +29,15 @@ rack => <<class-netobj>>::
 Will return Rack object as <<class-netobj>> if chassis is added in rack
 
 [[chassis-rackId]]
-rackId => Integer::
+rackId: int::
 Will return Rack id if chassis is added in rack
 
 [[chassis-rackHeight]]
-rackHeight => Integer::
+rackHeight: int::
 Object height in rack
 
 [[chassis-rackPosition]]
-rackPosition => Integer::
+rackPosition: int::
 Object position in rack
 --
 

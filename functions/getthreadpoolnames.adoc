@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetThreadPoolNames() => Array
+GetThreadPoolNames() : <<class-array,Array>>
 ----
 
 Get array with thread pool names. 

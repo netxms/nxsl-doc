@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-PostEventEx(node, event, parameters, tags, originTimestamp, origin) => Boolean
+PostEventEx(node, event, parameters, tags, originTimestamp, origin): bool
 ----
 
 Post event on behalf of given node.

@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-PostEvent(node, event, tag, ...) => Boolean
+PostEvent(node, event, tag, ...): bool
 ----
 
 Post event on behalf of given node.

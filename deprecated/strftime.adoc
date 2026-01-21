@@ -13,7 +13,7 @@ Please use <<datetime-format,format()>> method of DateTime class.
 
 [source,c]
 ----
-strftime(string, time) => String
+strftime(string, time): <<class-string,String>>
 ----
 
 Formats a Unix timestamp, and returns a string according to given formatting rules.

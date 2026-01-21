@@ -13,7 +13,7 @@ Replaced with method <<string-indexOf,indexOf()>> of the string instance.
 
 [source,c]
 ----
-index(string, substring, position) => Integer
+index(string, substring, position): int
 ----
 
 Returns the position of the first occurrence of substring in string at or after position if specified. All index values are 1-based (i.e. the first character has index 1, not 0).

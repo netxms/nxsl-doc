@@ -13,7 +13,7 @@ Please use walk method of <<class-snmptransport>> class.
 
 [source,c]
 ----
-SNMPWalk(transport, oid) => Array
+SNMPWalk(transport, oid) : <<class-array,Array>>
 ----
 
 Perform SNMP WALK request for `oid` over provided <<class-snmptransport,transport>> and return collected values as array of <<class-snmpvarbind>> or `null` on failure.

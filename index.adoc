@@ -15,7 +15,7 @@ This is the official documentation for NXSL (NetXMS Scripting Language), the emb
 
 The documentation is organized into the following main sections:
 
-* **Language Guide** - Introduction, script security, getting started, working with NetXMS, language syntax, and tutorial
+* **Language Guide** - Introduction, script security, getting started, working with NetXMS, and language syntax
 * **Function Reference** - Complete reference of all NXSL functions organized by category
 * **Class Reference** - Complete reference of all NXSL classes organized by domain
 * **Alphabetical Index** - Quick-reference of all functions and classes in alphabetical order
@@ -63,10 +63,6 @@ include::guide/working-with-netxms.adoc[leveloffset=+1]
 == Language Syntax
 
 include::language-syntax.adoc[]
-
-== Tutorial
-
-include::tutorial.adoc[]
 
 <<<
 

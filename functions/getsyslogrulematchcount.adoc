@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetSyslogRuleMatchCount(name, object) => Integer
+GetSyslogRuleMatchCount(name, object): int
 ----
 
 Get syslog rule match count or all objects or for exact object.

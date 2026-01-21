@@ -9,55 +9,55 @@ Base class for <<class-user>> and <<class-usergroup>> with common fields
 [.attr-list]
 --
 [[userdbobject-description]]
-description => String::
+description: <<class-string,String>>::
 Description
 
 [[userdbobject-flags]]
-flags => Integer::
+flags: int::
 Flags
 
 [[userdbobject-guid]]
-guid => String::
+guid: <<class-string,String>>::
 GUID
 
 [[userdbobject-id]]
-id => Integer::
+id: int::
 Id
 
 [[userdbobject-isDeleted]]
-isDeleted => Boolean::
+isDeleted: bool::
 `TRUE` if user DB object is deleted
 
 [[userdbobject-isDisabled]]
-isDisabled => Boolean::
+isDisabled: bool::
 `TRUE` if user DB object is disabled
 
 [[userdbobject-isGroup]]
-isGroup => Boolean::
+isGroup: bool::
 `TRUE` if user DB object is group object: <<class-usergroup>>
 
 [[userdbobject-isModified]]
-isModified => Boolean::
+isModified: bool::
 `TRUE` if user DB object is modified
 
 [[userdbobject-isLDAPUser]]
-isLDAPUser => Boolean::
+isLDAPUser: bool::
 `TRUE` if user DB object is synchronized from LDAP
 
 [[userdbobject-ldapDN]]
-ldapDN => String::
+ldapDN: <<class-string,String>>::
 Get user DB object LDAP domain name
 
 [[userdbobject-ldapId]]
-ldapId => String::
+ldapId: <<class-string,String>>::
 Get user DB object LDAP id (value depends on the field that is ues as LDAP object id)
 
 [[userdbobject-name]]
-name => String::
+name: <<class-string,String>>::
 Object name
 
 [[userdbobject-systemRights]]
-systemRights => Integer64::
+systemRights: int64::
 Field with <<enum-system-rights,system rights>> as bit flags.
 --
 

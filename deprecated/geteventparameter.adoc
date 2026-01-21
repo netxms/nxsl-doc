@@ -13,7 +13,7 @@ Please use getParameter method in <<class-event>>.
 
 [source,c]
 ----
-GetEventParameter(event, parameterName) => String
+GetEventParameter(event, parameterName): <<class-string,String>>
 ----
 
 Get value of event's named parameter.

@@ -13,7 +13,7 @@ Please use <<func-math-floor>> instead.
 
 [source,c]
 ----
-floor(input) => Integer
+floor(input): int
 ----
 
 Round down value.

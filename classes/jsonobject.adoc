@@ -29,14 +29,14 @@ Returns attribute value by the key. Value type depends on the type used in JSON.
 Attribute value
 
 [[jsonobject-keys]]
-keys() => Array::
+keys() : <<class-array,Array>>::
 Returns attribute array
 +
 .Return
 Attribute array
 
 [[jsonobject-serialize]]
-serialize() => String::
+serialize(): <<class-string,String>>::
 Returns string with serialized JSON
 +
 .Return

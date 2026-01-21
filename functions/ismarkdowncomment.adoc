@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-IsMarkdownComment(comment) => Boolean
+IsMarkdownComment(comment): bool
 ----
 
 Return true if string passed as argument starts with Markdown indicator.

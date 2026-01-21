@@ -12,11 +12,11 @@ To parse string into JsonObject use <<func-jsonparse>>.
 [.attr-list]
 --
 [[jsonarray-size]]
-size => Integer::
+size: int::
 Number of elements in array
 
 [[jsonarray-values]]
-values => Array::
+values : <<class-array,Array>>::
 NXSL array with JSON array elements
 --
 
@@ -59,7 +59,7 @@ Sets value to the provided index in JSON array, moving existing element in this 
 |===
 
 [[jsonarray-serialize]]
-serialize() => String::
+serialize(): <<class-string,String>>::
 Returns string with serialized JSON
 +
 .Return

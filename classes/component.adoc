@@ -9,7 +9,7 @@
 [.attr-list]
 --
 [[component-class]]
-class => String::
+class: <<class-string,String>>::
 Type of the component:
 +
 * `unknown`
@@ -24,34 +24,34 @@ Type of the component:
 * `stack`
 
 [[component-children]]
-children => Array::
+children : <<class-array,Array>>::
 List of direct children (Array of <<class-component>> object intances).
 
 [[component-description]]
-description => String::
+description: <<class-string,String>>::
 Component description
 
 [[component-firmware]]
-firmware => String::
+firmware: <<class-string,String>>::
 Component firmware version, if available.
 
 [[component-ifIndex]]
-ifIndex => Integer::
+ifIndex: int::
 Interface index number
 
 [[component-model]]
-model => String::
+model: <<class-string,String>>::
 Component model number, if available.
 
 [[component-name]]
-name => String::
+name: <<class-string,String>>::
 Component name, if available.
 
 [[component-serial]]
-serial => String::
+serial: <<class-string,String>>::
 Component serial number, if available.
 
 [[component-vendor]]
-vendor => String::
+vendor: <<class-string,String>>::
 Component vendor, if available.
 --

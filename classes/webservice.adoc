@@ -9,15 +9,15 @@ An object that represents a combination of node and web service definition, that
 [.attr-list]
 --
 [[webservice-id]]
-id => Integer::
+id: int::
 Web service id
 
 [[webservice-name]]
-name => String::
+name: <<class-string,String>>::
 Web service name
 
 [[webservice-description]]
-description => String::
+description: <<class-string,String>>::
 Web service description
 --
 

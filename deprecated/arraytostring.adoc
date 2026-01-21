@@ -13,7 +13,7 @@ Please use <<class-array-join,join()>> method of Array.
 
 [source,c]
 ----
-ArrayToString(array,separator) => String
+ArrayToString(array,separator): <<class-string,String>>
 ----
 
 Convert array to string

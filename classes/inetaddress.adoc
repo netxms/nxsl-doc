@@ -9,11 +9,11 @@ Object that contains all information about network address
 [.attr-list]
 --
 [[inetaddress-address]]
-address => String::
+address: <<class-string,String>>::
 IP address
 
 [[inetaddress-family]]
-family => String::
+family: <<class-string,String>>::
 Internet address, one of:
 +
  * inet
@@ -21,43 +21,43 @@ Internet address, one of:
  * unspec
 
 [[inetaddress-isanylocal]]
-isAnyLocal => Boolean::
+isAnyLocal: bool::
 `TRUE` if address is a wildcard address
 
 [[inetaddress-isbroadcast]]
-isBroadcast => Boolean::
+isBroadcast: bool::
 `TRUE` if address is a broadcast address
 
 [[inetaddress-islinklocal]]
-isLinkLocal => Boolean::
+isLinkLocal: bool::
 `TRUE` if address is a link local address
 
 [[inetaddress-isloopback]]
-isLoopback => Boolean::
+isLoopback: bool::
 `TRUE` if address is a loopback address
 
 [[inetaddress-ismulticast]]
-isMulticast => Boolean::
+isMulticast: bool::
 `TRUE` if address is a multicast address
 
 [[inetaddress-issubnetbase]]
-isSubnetBase => Boolean::
+isSubnetBase: bool::
 `TRUE` if address is a subnet base address
 
 [[inetaddress-issubnetbroadcast]]
-isSubnetBroadcast => Boolean::
+isSubnetBroadcast: bool::
 `TRUE` if address is a subnet broadcast address
 
 [[inetaddress-isvalid]]
-isValid => Boolean::
+isValid: bool::
 `TRUE` if address valid
 
 [[inetaddress-isvalidunicast]]
-isValidUnicast => Boolean::
+isValidUnicast: bool::
 `TRUE` if address valid unicast
 
 [[inetaddress-mask]]
-mask => Integer::
+mask: int::
 Address bit mask
 
 [[inetaddress-subnet]]

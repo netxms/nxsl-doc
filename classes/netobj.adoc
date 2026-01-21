@@ -21,7 +21,7 @@ alarmStats => array::
 Integer array that consists of 5 numbers - each number represents number of alarms for this and child objects for each of severity.
 
 [[netobj-alias]]
-alias => String::
+alias: <<class-string,String>>::
 Object alias. For interfaces it is automatically collected on configuration poll (e.g. from SNMP ifAlias).
 
 [[netobj-asset]]
@@ -29,7 +29,7 @@ asset => <<class-asset>>::
 Reference to <<class-asset,asset class>> of asset linked to this object.
 
 [[netobj-assetId]]
-assetId => Integer::
+assetId: int::
 Id of linked asset object.
 
 [[netobj-assetProperties]]
@@ -41,15 +41,15 @@ backupZoneProxy => Node::
 Currently selected backup <<class-node,zone proxy>> (`null` if zoning is disabled or backup proxy is not assigned)
 
 [[netobj-backupZoneProxyId]]
-backupZoneProxyId => Integer::
+backupZoneProxyId: int::
 ID of currently selected backup zone proxy (`0` if zoning is disabled or backup proxy is not assigned)
 
 [[netobj-category]]
-category => String::
+category: <<class-string,String>>::
 Object's category name
 
 [[netobj-categoryId]]
-categoryId => Integer::
+categoryId: int::
 Object's category ID
 
 [[netobj-children]]
@@ -57,19 +57,19 @@ children => array::
 List of child objects (inherited from <<class-netobj>>). Use <<func-classof>> to differentiate.
 
 [[netobj-city]]
-city => String::
+city: <<class-string,String>>::
 Postal address - city.
 
 [[netobj-comments]]
-comments => String::
+comments: <<class-string,String>>::
 Object comments.
 
 [[netobj-country]]
-country => String::
+country: <<class-string,String>>::
 Postal address - country.
 
 [[netobj-creationTime]]
-creationTime => Integer64::
+creationTime: int64::
 Object creation time as UINX timestamp
 
 [[netobj-customAttributes]]
@@ -77,7 +77,7 @@ customAttributes => HashMap::
 Hash map of object custom attributes.
 
 [[netobj-district]]
-district => String::
+district: <<class-string,String>>::
 Postal address - district.
 
 [[netobj-geolocation]]
@@ -85,15 +85,15 @@ geolocation => GeoLocation::
 Object <<class-geolocation,geographical location>>.
 
 [[netobj-guid]]
-guid => String::
+guid: <<class-string,String>>::
 Object GUID as `string`.
 
 [[netobj-id]]
-id => Integer::
+id: int::
 Unique object identifier.
 
 [[netobj-ipAddr]]
-ipAddr => String::
+ipAddr: <<class-string,String>>::
 Primary IP address. Deprecated and will be removed in a future version, use `ipAddress` instead.
 
 [[netobj-ipAddress]]
@@ -105,23 +105,23 @@ Added in version 5.1
 Primary <<class-inetaddress,IP address>>.
 
 [[netobj-isInMaintenanceMode]]
-isInMaintenanceMode => Boolean::
+isInMaintenanceMode: bool::
 Maintenance mode indicator (`true` if object currently is in maintenace mode).
 
 [[netobj-maintenanceInitiator]]
-maintenanceInitiator => Integer::
+maintenanceInitiator: int::
 Maintenance initiator user id
 
 [[netobj-mapImage]]
-mapImage => String::
+mapImage: <<class-string,String>>::
 GUID of object image used for representation on the maps.
 
 [[netobj-name]]
-name => String::
+name: <<class-string,String>>::
 Object name.
 
 [[netobj-nameOnMap]]
-nameOnMap => String::
+nameOnMap: <<class-string,String>>::
 Object name displayed on map.
 
 [[netobj-parents]]
@@ -129,7 +129,7 @@ parents => array::
 List of direct parents for this object (inherited from <<class-netobj>>, most likely either <<class-container>> or <<class-cluster>>).
 
 [[netobj-postcode]]
-postcode => String::
+postcode: <<class-string,String>>::
 Postal address - postal code.
 
 [[netobj-primaryZoneProxy]]
@@ -137,31 +137,31 @@ primaryZoneProxy => Node::
 currently selected primary <<class-node,zone proxy>> (`null` if zoning is disabled or primary proxy is not assigned)
 
 [[netobj-primaryZoneProxyId]]
-primaryZoneProxyId => Integer::
+primaryZoneProxyId: int::
 ID of currently selected primary zone proxy (`0` if zoning is disabled or primary proxy is not assigned)
 
 [[netobj-region]]
-region => String::
+region: <<class-string,String>>::
 Postal address - region.
 
 [[netobj-responsibleUsers]]
-responsibleUsers => Array::
+responsibleUsers : <<class-array,Array>>::
 Array with user objects that are added as responsible users for this object. Objects are <<class-user>> or <<class-usergroup>>
 
 [[netobj-state]]
-state => Integer::
+state: int::
 Current object state. One of: <<const-node-state>>, <<const-cluster-state>>, <<const-sensor-state>>
 
 [[netobj-status]]
-status => Integer::
+status: int::
 Current <<const-object-status,object status>>.
 
 [[netobj-streetAddress]]
-streetAddress => String::
+streetAddress: <<class-string,String>>::
 Postal address - street.
 
 [[netobj-type]]
-type => Integer::
+type: int::
 <<enum-object-type,Object type>>.
 --
 
@@ -190,7 +190,7 @@ Bind current object to `parentObject` as a child.
 |===
 
 [[netobj-calculateDowntime]]
-calculateDowntime(tag, periodStart, periodEnd) => Array::
+calculateDowntime(tag, periodStart, periodEnd) : <<class-array,Array>>::
 Calculate node downtime
 +
 .Parameters
@@ -209,7 +209,7 @@ clearGeoLocation() => void::
 Clears GeoLocation data from the node
 
 [[netobj-createUserAgentNotification]]
-createUserAgentNotification(message, startTime, endTime, showOnStartup) => Integer::
+createUserAgentNotification(message, startTime, endTime, showOnStartup): int::
 Send user agent notification
 +
 .Parameters
@@ -243,7 +243,7 @@ enterMaintenance() => void::
 Enable maintenance mode for the object.
 
 [[netobj-expandString]]
-expandString(string) => String::
+expandString(string): <<class-string,String>>::
 Expand string by replacing macros with their values.
 +
 .Parameters
@@ -262,7 +262,7 @@ My node name
 ....
 
 [[class-netobj-getcustomattribute,NetObj::getCustomAttribute()]]
-getCustomAttribute(name) => String::
+getCustomAttribute(name): <<class-string,String>>::
 Returns value of the custom attribute with the provided name.
 +
 .Parameters
@@ -294,7 +294,7 @@ Objects are <<class-user>> or <<class-usergroup>>
 This function return empty list if no users or groups are found for the tag.
 
 [[netobj-isChild]]
-isChild(object) => Boolean::
+isChild(object): bool::
 If provided object is child of this object
 +
 .Parameters
@@ -307,7 +307,7 @@ If provided object is child of this object
 TRUE if provided object is child of this object
 
 [[netobj-isDirectChild]]
-isDirectChild(object) => Boolean::
+isDirectChild(object): bool::
 If provided object is direct child of this object
 +
 .Parameters
@@ -320,7 +320,7 @@ If provided object is direct child of this object
 TRUE if provided object is direct child of this object
 
 [[netobj-isDirectParent]]
-isDirectParent(object) => Boolean::
+isDirectParent(object): bool::
 If provided object is direct parent of this object
 +
 .Parameters
@@ -333,7 +333,7 @@ If provided object is direct parent of this object
 TRUE if provided object is direct parent of this object
 
 [[netobj-isParent]]
-isParent(object) => Boolean::
+isParent(object): bool::
 If provided object is parent of this object
 +
 .Parameters
@@ -354,7 +354,7 @@ manage() => void::
 Sets object to managed state. Has no affect if object already managed.
 
 [[netobj-readMaintenanceJournal]]
-readMaintenanceJournal(startTime, endTime) => Array::
+readMaintenanceJournal(startTime, endTime) : <<class-array,Array>>::
 Read maintenance entries
 +
 .Parameters

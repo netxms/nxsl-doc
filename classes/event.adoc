@@ -9,11 +9,11 @@ Represents NetXMS event object.
 [.attr-list]
 --
 [[event-code]]
-code => Integer::
+code: int::
 Event code
 
 [[event-customMessage]]
-customMessage => String::
+customMessage: <<class-string,String>>::
 Custom message set in event processing policy by calling `setMessage`. Deprecated and will be removed in a future version.
 
 [[event-dci]]
@@ -21,35 +21,35 @@ dci => DCI::
 DCI object of class <<class-dci>> that is source for this event or NULL if generated not by threshold
 
 [[event-dciId]]
-dciId => Integer::
+dciId: int::
 DCI id that is source for this event or 0 if generated not by threshold
 
 [[event-id]]
-id => Integer::
+id: int::
 Unique event identifier.
 
 [[event-lastAlarmId]]
-lastAlarmId => Integer::
+lastAlarmId: int::
 ID of the last alarm associated with this event, or 0 if none.
 
 [[event-lastAlarmKey]]
-lastAlarmKey => String::
+lastAlarmKey: <<class-string,String>>::
 Key for last generated alarm for this event or null
 
 [[event-lastAlarmMessage]]
-lastAlarmMessage => String::
+lastAlarmMessage: <<class-string,String>>::
 Message of the last alarm associated with this event, or null if none.
 
 [[event-message]]
-message => String::
+message: <<class-string,String>>::
 Event message. Get/set attribute.
 
 [[event-name]]
-name => String::
+name: <<class-string,String>>::
 Event name.
 
 [[event-origin]]
-origin => Integer::
+origin: int::
 Origin of the event
 +
 * 0 - SYSTEM
@@ -61,23 +61,23 @@ Origin of the event
 * 6 - REMOTE_SERVER
 
 [[event-originTimestamp]]
-originTimestamp => Integer::
+originTimestamp: int::
 The time when the event was generated in the origin.
 
 [[event-parameters]]
-parameters => Array::
+parameters : <<class-array,Array>>::
 List of event parameters. Starting index is 1.
 
 [[event-parameterNames]]
-parameterNames => Array::
+parameterNames : <<class-array,Array>>::
 List of named event parameters (e.g. "dciId"), which can be accessed by `+object.parameterName+`.
 
 [[event-rootId]]
-rootId => Integer64::
+rootId: int64::
 Id of event that is root cause of this event or 0 if there is no such event.
 
 [[event-severity]]
-severity => Integer::
+severity: int::
 Event severity code. Get/set attribute.
 
 [[event-source]]
@@ -85,19 +85,19 @@ source => NetObj::
 Source object (inherited from <<class-netobj>>, exact type can be checked with <<func-classof>> function) for the event.
 
 [[event-sourceId]]
-sourceId => Integer::
+sourceId: int::
 ID of the source object for the event.
 
 [[event-tags]]
-tags => Array::
+tags : <<class-array,Array>>::
 Event tags as an array of strings.
 
 [[event-tagList]]
-tagList => String::
+tagList: <<class-string,String>>::
 Event tags as a comma separated list.
 
 [[event-timestamp]]
-timestamp => Integer::
+timestamp: int::
 link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the event.
 
 [[event-paramN]]
@@ -145,7 +145,7 @@ Sets root cause id for the event
 |===
 
 [[event-expandString]]
-expandString(string) => String::
+expandString(string): <<class-string,String>>::
 Expand string by replacing macros with their values.
 +
 .Parameters
@@ -177,7 +177,7 @@ Get parameter value by name or by index
 Parameter value or null
 
 [[event-hasTag]]
-hasTag(tag) => Boolean::
+hasTag(tag): bool::
 Return if event has specific tag.
 +
 .Parameters
@@ -243,7 +243,7 @@ Change event severity to `severityCode`.
 |===
 
 [[event-toJson]]
-toJson() => String::
+toJson(): <<class-string,String>>::
 Serialize object to JSON.
 +
 .Return

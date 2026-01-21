@@ -13,7 +13,7 @@ Replaced with method <<string-replace,replace()>> of the string instance.
 
 [source,c]
 ----
-replace(string, old, new) => String
+replace(string, old, new): <<class-string,String>>
 ----
 
 Returns the string with all the occurrences of old substring replaced with the new substring.

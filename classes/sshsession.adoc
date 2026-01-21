@@ -9,23 +9,23 @@ Represents an interactive SSH session to a remote node for executing commands an
 [.attr-list]
 --
 [[sshsession-connected]]
-connected => Boolean::
+connected: bool::
 Returns TRUE if the SSH channel is connected.
 
 [[sshsession-lastError]]
-lastError => Integer::
+lastError: int::
 Error code from the last operation (0 if connected and no error).
 
 [[sshsession-lastErrorMessage]]
-lastErrorMessage => String::
+lastErrorMessage: <<class-string,String>>::
 Text description of the last error.
 
 [[sshsession-nodeId]]
-nodeId => Integer::
+nodeId: int::
 ID of the node this session is connected to.
 
 [[sshsession-privileged]]
-privileged => Boolean::
+privileged: bool::
 Returns TRUE if the session has escalated privileges.
 --
 
@@ -47,7 +47,7 @@ if (session->connected) {
 ....
 
 [[sshsession-escalatePrivilege]]
-escalatePrivilege(password) => Boolean::
+escalatePrivilege(password): bool::
 Escalate to privileged user.
 +
 .Parameters
@@ -70,7 +70,7 @@ if (session->connected) {
 ....
 
 [[sshsession-execute]]
-execute(command, timeout) => Array::
+execute(command, timeout) : <<class-array,Array>>::
 Execute a command on the remote host.
 +
 .Parameters

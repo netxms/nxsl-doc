@@ -10,13 +10,13 @@ Bind `childObject` to the current object as a child.
 `bindTo(parentObject) => void`::
 Bind current object to `parentObject` as a child.
 
-`calculateDowntime(tag, periodStart, periodEnd) => Array`::
+`calculateDowntime(tag, periodStart, periodEnd) : <<class-array,Array>>`::
 Calculate node downtime. Returns array of <<class-downtimeinfo>> objects.
 
 `clearGeoLocation() => void`::
 Clears GeoLocation data from the node.
 
-`createUserAgentNotification(message, startTime, endTime, showOnStartup) => Integer`::
+`createUserAgentNotification(message, startTime, endTime, showOnStartup): int`::
 Send user agent notification. Returns message id.
 
 `delete() => void`::
@@ -28,25 +28,25 @@ Delete custom attribute.
 `enterMaintenance() => void`::
 Enable maintenance mode for the object.
 
-`expandString(string) => String`::
+`expandString(string): <<class-string,String>>`::
 Expand string by replacing macros with their values.
 
-`getCustomAttribute(name) => String`::
+`getCustomAttribute(name): <<class-string,String>>`::
 Returns value of the custom attribute with the provided name.
 
 `getResponsibleUsers(tag) => array`::
 Returns list of responsible users with specific tag.
 
-`isChild(object) => Boolean`::
+`isChild(object): bool`::
 Returns TRUE if provided object is child of this object.
 
-`isDirectChild(object) => Boolean`::
+`isDirectChild(object): bool`::
 Returns TRUE if provided object is direct child of this object.
 
-`isDirectParent(object) => Boolean`::
+`isDirectParent(object): bool`::
 Returns TRUE if provided object is direct parent of this object.
 
-`isParent(object) => Boolean`::
+`isParent(object): bool`::
 Returns TRUE if provided object is parent of this object.
 
 `leaveMaintenance() => void`::
@@ -55,7 +55,7 @@ Disable maintenance mode for the object.
 `manage() => void`::
 Sets object to managed state.
 
-`readMaintenanceJournal(startTime, endTime) => Array`::
+`readMaintenanceJournal(startTime, endTime) : <<class-array,Array>>`::
 Read maintenance entries. Returns array of <<class-maintenancejournalrecord>> objects.
 
 `rename(name) => void`::

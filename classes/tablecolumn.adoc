@@ -9,18 +9,18 @@ Represents table column definition object (used by Table class).
 [.attr-list]
 --
 [[tablecolumn-dataType]]
-dataType => Integer::
+dataType: int::
 <<const-dci-datatype,Data type>>
 
 [[tablecolumn-displayName]]
-displayName => String::
+displayName: <<class-string,String>>::
 Display name
 
 [[tablecolumn-isInstanceColumn]]
-isInstanceColumn => Boolean::
+isInstanceColumn: bool::
 `TRUE` if column is marked as instance column
 
 [[tablecolumn-name]]
-name => String::
+name: <<class-string,String>>::
 Column name
 --

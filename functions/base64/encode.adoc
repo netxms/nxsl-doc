@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-Base64::Encode() => String
+Base64::Encode(): <<class-string,String>>
 ----
 
 Encode string as base64. Accepts string to encode and optional character encoding. 

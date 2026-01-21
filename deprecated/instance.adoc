@@ -19,7 +19,7 @@ Unlike previous versions, `true` is not required as the first value in the array
 
 [source,c]
 ----
-Instance(name, displayName, object) => Array
+Instance(name, displayName, object) : <<class-array,Array>>
 ----
 
 This is helper function for instance filter script. It can be used to return accepted item.

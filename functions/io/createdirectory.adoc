@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-IO::CreateDirectory(newDirectory) => Boolean
+IO::CreateDirectory(newDirectory): bool
 ----
 
 Makes a copy of source file to destination file and returns `TRUE` if action was

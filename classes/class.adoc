@@ -9,19 +9,19 @@ Class represent classes and methodes in NXSL script
 [.attr-list]
 --
 [[class-attributes]]
-attributes => Array::
+attributes : <<class-array,Array>>::
 String aray with all attribute names
 
 [[class-hierarchy]]
-hierarchy => Array::
+hierarchy : <<class-array,Array>>::
 String aray with class inheritance hirarchy
 
 [[class-methods]]
-methods => Array::
+methods : <<class-array,Array>>::
 String aray with all method names
 
 [[class-name]]
-name => Integer::
+name: int::
 Name of the class
 --
 

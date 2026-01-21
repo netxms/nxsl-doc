@@ -7,11 +7,11 @@
 [.attr-list]
 --
 [[networkpathcheckresult-description]]
-description => String::
+description: <<class-string,String>>::
 Description
 
 [[networkpathcheckresult-reason]]
-reason => Integer::
+reason: int::
 Reason
 
 [[networkpathcheckresult-rootCauseInterface]]
@@ -19,7 +19,7 @@ rootCauseInterface => <<class-interface>> or null::
 Interface name
 
 [[networkpathcheckresult-rootCauseInterfaceId]]
-rootCauseInterfaceId => Integer::
+rootCauseInterfaceId: int::
 Interface ID
 
 [[networkpathcheckresult-rootCauseNode]]
@@ -27,6 +27,6 @@ rootCauseNode => <<class-node>> or null::
 Node name
 
 [[networkpathcheckresult-rootCauseNodeId]]
-rootCauseNodeId => Integer::
+rootCauseNodeId: int::
 Node ID
 --

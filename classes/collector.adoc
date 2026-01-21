@@ -11,15 +11,15 @@ include::_shared/netobj-attrs.adoc[]
 [.attr-list]
 --
 [[collector-autoBindScript]]
-autoBindScript => String::
+autoBindScript: <<class-string,String>>::
 Source of the script for automatic binding.
 
 [[collector-isAutoBindEnabled]]
-isAutoBindEnabled => Boolean::
+isAutoBindEnabled: bool::
 Indicate if automatic binding is enabled.
 
 [[collector-isAutoUnbindEnabled]]
-isAutoUnbindEnabled => Boolean::
+isAutoUnbindEnabled: bool::
 Indicate if automatic unbinding is enabled.
 --
 

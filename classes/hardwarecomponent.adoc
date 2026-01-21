@@ -9,11 +9,11 @@ Object that contains all information about node hardware component.
 [.attr-list]
 --
 [[hardwarecomponent-capacity]]
-capacity => Integer::
+capacity: int::
 Component capacity depending on the type.
 
 [[hardwarecomponent-category]]
-category => Integer::
+category: int::
 Code of the component category.
 +
 Possible values are:
@@ -32,45 +32,45 @@ Possible values are:
 |===
 
 [[hardwarecomponent-categoryname]]
-categoryName => String::
+categoryName: <<class-string,String>>::
 Component category name
 
 [[hardwarecomponent-changecode]]
-changeCode => Integer::
+changeCode: int::
 Code of the changes that happened to the component during the last
 configuration poll.
 +
 Possible values are listed here: <<const-changecode>>
 
 [[hardwarecomponent-description]]
-description => String::
+description: <<class-string,String>>::
 Component description.
 
 [[hardwarecomponent-index]]
-index => Integer::
+index: int::
 Index of the component.
 
 [[hardwarecomponent-location]]
-location => String::
+location: <<class-string,String>>::
 Component installation location in the system.
 
 [[hardwarecomponent-model]]
-model => String::
+model: <<class-string,String>>::
 Component model.
 
 [[hardwarecomponent-partnumber]]
-partNumber => String::
+partNumber: <<class-string,String>>::
 Component part number.
 
 [[hardwarecomponent-serialnumber]]
-serialNumber => String::
+serialNumber: <<class-string,String>>::
 Component serial number.
 
 [[hardwarecomponent-type]]
-type => String::
+type: <<class-string,String>>::
 Component type depending on the category.
 
 [[hardwarecomponent-vendor]]
-vendor => String::
+vendor: <<class-string,String>>::
 Component vendor.
 --

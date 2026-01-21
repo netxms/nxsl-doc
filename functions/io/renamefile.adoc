@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-IO::RenameFile(currentFile, newFileName) => Boolean
+IO::RenameFile(currentFile, newFileName): bool
 ----
 
 Renames file.

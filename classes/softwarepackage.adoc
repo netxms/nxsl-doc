@@ -9,7 +9,7 @@ Represents software package installed on <<class-node>> object.
 [.attr-list]
 --
 [[softwarepackage-changeCode]]
-changeCode => Integer::
+changeCode: int::
 Change code one of next:
 +
 * CHANGE_NONE: 0
@@ -17,34 +17,34 @@ Change code one of next:
 * CHANGE_UPDATED: 2
 
 [[softwarepackage-date]]
-date => String::
+date: <<class-string,String>>::
 Change date in YYYYMMDD format
 
 [[softwarepackage-description]]
-description => String::
+description: <<class-string,String>>::
 PAckage description
 
 [[softwarepackage-name]]
-name => String::
+name: <<class-string,String>>::
 Package name
 
 [[softwarepackage-timestamp]]
-timestamp => Integer::
+timestamp: int::
 Package change date as UNIX timestamp
 
 [[softwarepackage-uninstallKey]]
-uninstallKey => String::
+uninstallKey: <<class-string,String>>::
 Get product uninstall key if available.
 
 [[softwarepackage-url]]
-url => String::
+url: <<class-string,String>>::
 PAckage URL
 
 [[softwarepackage-vendor]]
-vendor => String::
+vendor: <<class-string,String>>::
 PAckage vendor
 
 [[softwarepackage-version]]
-version => String::
+version: <<class-string,String>>::
 Package version
 --

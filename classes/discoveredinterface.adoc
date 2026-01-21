@@ -9,58 +9,58 @@ Represent discovered interface objects in <<class-discoverednode,discovered node
 [.attr-list]
 --
 [[discoveredinterface-alias]]
-alias => String::
+alias: <<class-string,String>>::
 Interface alias (usually value of SNMP ifAlias)
 
 [[discoveredinterface-chassis]]
-chassis => Integer::
+chassis: int::
 Chassis id
 
 [[discoveredinterface-description]]
-description => String::
+description: <<class-string,String>>::
 Interface description
 
 [[discoveredinterface-index]]
-index => Integer::
+index: int::
 Interface index
 
 [[discoveredinterface-ipAddressList]]
-ipAddressList => Array::
+ipAddressList : <<class-array,Array>>::
 Array with <<class-inetaddress>> objects, that represent all adresses that this interface has
 
 [[discoveredinterface-isPhysicalPort]]
-isPhysicalPort => Boolean::
+isPhysicalPort: bool::
 `TRUE` if this interface object represents physical port
 
 [[discoveredinterface-macAddr]]
-macAddr => String::
+macAddr: <<class-string,String>>::
 String representation of MAC address separated by ":"
 
 [[discoveredinterface-module]]
-module => Integer::
+module: int::
 Module
 
 [[discoveredinterface-mtu]]
-mtu => Integer::
+mtu: int::
 Interface MTU (0 if unknown)
 
 [[discoveredinterface-name]]
-name => String::
+name: <<class-string,String>>::
 Interface name
 
 [[discoveredinterface-pic]]
-pic => Integer::
+pic: int::
 Phisical location
 
 [[discoveredinterface-port]]
-port => Integer::
+port: int::
 Port number
 
 [[discoveredinterface-speed]]
-speed => Integer64::
+speed: int64::
 Speed of the interface
 
 [[discoveredinterface-type]]
-type => Integer::
+type: int::
 <<enum-interface-types,Interface type>>
 --

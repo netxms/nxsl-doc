@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetMappingTableKeys(table) => Array
+GetMappingTableKeys(table) : <<class-array,Array>>
 ----
 
 Get array with all keys from mapping table.

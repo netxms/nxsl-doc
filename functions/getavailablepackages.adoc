@@ -4,7 +4,7 @@
 
 [source,c]
 ----
-GetAvailablePackages(platformFilter, typeFilter) => Array
+GetAvailablePackages(platformFilter, typeFilter) : <<class-array,Array>>
 ----
 
 Retrieves all available deployment packages, optionally filtered by platform and/or package type.

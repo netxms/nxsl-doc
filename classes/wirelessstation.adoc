@@ -9,11 +9,11 @@ Class represents wireless station
 [.attr-list]
 --
 [[wirelessstation-accessPointId]]
-accessPointId => Integer::
+accessPointId: int::
 Access point object id
 
 [[wirelessstation-bssid]]
-bssid => String::
+bssid: <<class-string,String>>::
 Basic Service Set Identifier
 
 [[wirelessstation-ipAddress]]
@@ -21,38 +21,38 @@ ipAddress => InetAddress::
 <<class-inetaddress,IP address>>.
 
 [[wirelessstation-macAddress]]
-macAddress => String::
+macAddress: <<class-string,String>>::
 MAC address
 
 [[wirelessstation-rfIndex]]
-rfIndex => Integer::
+rfIndex: int::
 Radio interface index
 
 [[wirelessstation-rfName]]
-rfName => String::
+rfName: <<class-string,String>>::
 Radio interface name
 
 [[wirelessstation-rssi]]
-rssi => Integer::
+rssi: int::
 RSSI for this station
 
 [[wirelessstation-rxRate]]
-rxRate => Integer::
+rxRate: int::
 Radio interface rate
 
 [[wirelessstation-signalStrength]]
-signalStrength => Integer::
+signalStrength: int::
 Signal streight
 
 [[wirelessstation-ssid]]
-ssid => String::
+ssid: <<class-string,String>>::
 Service Set Identifier
 
 [[wirelessstation-txRate]]
-txRate => Integer::
+txRate: int::
 Tx rate
 
 [[wirelessstation-vlan]]
-vlan => Integer::
+vlan: int::
 Vlan
 --
