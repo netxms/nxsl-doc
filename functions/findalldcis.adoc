@@ -15,9 +15,15 @@ Find all DCI on the `node` matching `nameFilter`, `descriptionFilter`, `userTagF
 |node|<<class-node>> object instance (e.g. `$node`)
 |nameFilter|GLOB for matching DCI name or `null` if name should be ignored.
 |descriptionFilter|GLOB for matching DCI description or `null` if description should be ignored. Optional parameter.
-|userTagFilter|GLOB for matching DCI user tag or `null` if user tag should be ignored. Optional parameter. *This parameter was added in version 5.2*
-|relatedObjectFilter|Related object filter: <<class-netobj>> instance or object ID, or `null` to ignore. Optional parameter. *This parameter was added in version 5.3*
+|userTagFilter|GLOB for matching DCI user tag or `null` if user tag should be ignored. Optional parameter.
+|relatedObjectFilter|Related object filter: <<class-netobj>> instance or object ID, or `null` to ignore. Optional parameter.
 |===
+
+[.version-added]
+Added in version 5.2: `userTagFilter` parameter
+
+[.version-added]
+Added in version 5.3: `relatedObjectFilter` parameter
 
 .Return
 Array of <<class-dci>>.

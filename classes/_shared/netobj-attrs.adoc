@@ -68,7 +68,11 @@ Unique object identifier.
 Primary IP address. Deprecated and will be removed in a future version, use `ipAddress` instead.
 
 `ipAddress => InetAddress`::
-Primary <<class-inetaddress,IP address>>. *This attribute was added in version 5.1*
++
+[.version-added]
+Added in version 5.1
++
+Primary <<class-inetaddress,IP address>>.
 
 `isInMaintenanceMode => Boolean`::
 Maintenance mode indicator (`true` if object currently is in maintenace mode).

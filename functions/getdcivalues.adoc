@@ -16,8 +16,11 @@ Get all values for period of DCI with given ID on given node.
 |id|Integer|DCI ID
 |startTime|Integer|Start of the period (as UNIX timestamp).
 |endTime|Integer|End of the period (as UNIX timestamp). Optional, current time will be used if this parameter is not specified
-|rawValues|Boolean|False - return transformed values. True - return RAW values. Optional, False by default. *This parameter was added in version 4.4.1* 
+|rawValues|Boolean|False - return transformed values. True - return RAW values. Optional, False by default.
 |===
+
+[.version-added]
+Added in version 4.4.1: `rawValues` parameter
 
 .Return Array of value ordered from latest to earliest for given DCI or null if
 DCI with given ID does not exist or has no collected values. This function

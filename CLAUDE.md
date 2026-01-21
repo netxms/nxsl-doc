@@ -110,3 +110,26 @@ Description with parameters table and examples.
 - `language-syntax.adoc` - Full reference with examples
 - `guide/getting-started.adoc` - Beginner introduction in relevant section
 - `guide/working-with-netxms.adoc` - Brief mention in Best Practices
+
+**Version markers** (Python-style with colored left borders):
+```asciidoc
+[.version-added]
+Added in version 5.3
+
+[.version-changed]
+Changed in version 4.4.1: Description of change.
+
+[.version-deprecated]
+Deprecated in version 5.0. Use <<replacement>> instead.
+```
+
+For inline short markers: `[.version-added]#Added in version 5.1#`
+
+Use `+` continuation to attach version markers to description list items:
+```asciidoc
+`methodName() => Type`::
+Description text.
++
+[.version-added]
+Added in version 5.3
+```

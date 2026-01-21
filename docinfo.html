@@ -59,4 +59,37 @@
     .attr-list .literalblock {
         margin-top: 0.5em;
     }
+
+    /* Version markers - Python-style */
+    .version-added,
+    .version-changed,
+    .version-deprecated {
+        font-size: 0.9em;
+        font-style: italic;
+        padding: 0.5em 0.75em;
+        margin: 0.5em 0 1em 0;
+        border-radius: 3px;
+        border-left: 4px solid;
+    }
+
+    .version-added p,
+    .version-changed p,
+    .version-deprecated p {
+        margin: 0;
+    }
+
+    .version-added {
+        color: #2d6a2e;
+        border-left-color: #28a745;
+    }
+
+    .version-changed {
+        color: #856404;
+        border-left-color: #ffc107;
+    }
+
+    .version-deprecated {
+        color: #721c24;
+        border-left-color: #dc3545;
+    }
 </style>

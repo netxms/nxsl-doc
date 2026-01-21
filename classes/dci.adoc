@@ -54,7 +54,10 @@ Time of last DCI poll (either successful or not) as number of seconds since epoc
 
 [[dci-lastCollectionTime]]
 lastCollectionTime => Integer64::
-Time of last successful DCI poll as number of seconds since epoch (1 Jan 1970 00:00:00 UTC). *Added in version 4.0*
+Time of last successful DCI poll as number of seconds since epoch (1 Jan 1970 00:00:00 UTC).
++
+[.version-added]
+Added in version 4.0
 
 [[dci-name]]
 name => String::
@@ -121,7 +124,10 @@ DCI type:
 
 [[dci-userTag]]
 userTag => String::
-User tag. *This attribute was added in version 5.2*
+User tag.
++
+[.version-added]
+Added in version 5.2
 --
 
 ==== Instance methods

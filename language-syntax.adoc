@@ -398,11 +398,14 @@ println( my_math_library::add(1, 2) );
 
 === Optional function calls 
 
+[.version-added]
+Added in version 6.0
+
 To prevent script errors when calling a function that may not exist, use the
 ``optional`` keyword. If the function is present, it is called, and the
 expression evaluates to its return value. If the function does not exist, the
 call is safely ignored, and the expression evaluates to ``NULL`` without halting
-the script. *This keyword was added in version 6.0*  
+the script.  
 
 [.source]
 ....
@@ -578,9 +581,12 @@ println("123".right(5, "_")); // prints "__123"
 split(separator, trimWhitespace) => <<class-array,Array>>::
 Split string into array of strings at given separator.
 +
+[.version-added]
+Added in version 5.1.4: `trimWhitespace` parameter
++
 `trimWhitespace` parameter is optional and is `false` by default. If set to
 `true`, space characters will be removed on both sides of strings produced by
-splitting. *This parameter was added in version 5.1.4*
+splitting.
 +
 [.source]
 ....
@@ -759,12 +765,8 @@ function f()
 In this example function `f` returns array of 3 elements - number, text, and
 another array of 3 numeric elements.
 
-****
-[IMPORTANT]
-====
-*Deprecated: `array` keyword*
-
-The `array` keyword for declaring arrays is deprecated. New scripts should use `[]` syntax instead.
+[.version-deprecated]
+Deprecated in version 5.0. The `array` keyword for declaring arrays is deprecated. New scripts should use `[]` syntax instead.
 
 [source,c]
 ----
@@ -774,8 +776,6 @@ array a;
 // Recommended - use this instead
 a = [];
 ----
-====
-****
 
 
 ==== Array attributes

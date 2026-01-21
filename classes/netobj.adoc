@@ -98,7 +98,11 @@ Primary IP address. Deprecated and will be removed in a future version, use `ipA
 
 [[netobj-ipAddress]]
 ipAddress => InetAddress::
-Primary <<class-inetaddress,IP address>>. *This attribute was added in version 5.1*
++
+[.version-added]
+Added in version 5.1
++
+Primary <<class-inetaddress,IP address>>.
 
 [[netobj-isInMaintenanceMode]]
 isInMaintenanceMode => Boolean::
