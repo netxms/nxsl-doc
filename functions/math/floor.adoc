@@ -4,18 +4,21 @@
 
 Math::Floor(x): int::
 Round down value.
-+
+
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
-|x|Number|Input value
+|x|number|Input value
 |===
-+
+
 .Return
 
 Value round down to nearest integer.
 
+[source,c]
+----
 println(Math::Floor(2.3)); // Will print 2
 println(Math::Floor(3.8)); // Will print 3
 println(Math::Floor(-2.3)); // Will print -3
 println(Math::Floor(-3.8)); // Will print -4
+----

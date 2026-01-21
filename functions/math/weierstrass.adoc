@@ -6,18 +6,18 @@ Math::Weierstrass(a, b, x): float::
 Calculate Weierstrass function for given x, a, and b. More can be found there:
 https://en.wikipedia.org/wiki/Weierstrass_function. Can be used for test data
 generation.
-+
+
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
-|a|Float|Coefficient, 0<a<1
-|b|Integer|Coefficient, odd integer
-|x|Integer|Point to calculate function in
+|a|float|Coefficient, 0<a<1
+|b|int|Coefficient, odd integer
+|x|int|Point to calculate function in
 |===
-+
+
 .Return
 Value in point x for Weierstrass function with given coefficients
-+
+
 [source,c]
 ----
 print(Math::Weierstrass(0.5, 7, 10)); // Will print "1.999218"

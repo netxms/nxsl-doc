@@ -2,18 +2,19 @@
 [[func-math-min]]
 == Math::Min
 
-Math::Min(x, y, ...) => Number::
+Math::Min(x, y, ...): number::
+
 Returns minimal value from given numbers or array(s) of numbers.
-+
+
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
-|x, y, ...|Number, Array|Comma separated numbers or array(s) of numbers
+|x, y, ...|number, <<class-array,Array>>|Comma separated numbers or array(s) of numbers
 |===
-+
+
 .Return
 Minimal value.
-+
+
 [source,c]
 ----
 println(Math::Min(2, 3, 4, 8)); // Will print "2"

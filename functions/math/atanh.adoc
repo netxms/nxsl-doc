@@ -4,16 +4,16 @@
 
 Math::Atanh(x): float::
 Calculates hyperbolic arctan of x.
-+
+
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
-|x|Number|Angle in radians 
+|x|number|Angle in radians 
 |===
-+
+
 .Return
 Result of hyperbolic arctan for this angle
-+
+
 [source,c]
 ----
 println(Math::Atanh(0.5)); // Will print "0.549306"

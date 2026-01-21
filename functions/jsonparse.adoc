@@ -2,16 +2,17 @@
 [[func-jsonparse]]
 == JsonParse
 
-JsonParse(string, [integerAsFloat]) => JSON object::
+JsonParse(string, [integerAsFloat]): <<class-jsonobject>>::
+
 Parse input `string` to <<class-jsonobject>>
-+
+
 .Parameters
 [cols="1,3" grid="none", frame="none"]
 |===
 |string|JSON as a string.
 |integerAsFloat|Optional boolean parameter. If set to `true`, all integers in JSON will be interpreted as floating point numbers. Default is `false`. Available starting from version 5.2.4.
 |===
-+
+
 .Return
 
 <<class-jsonobject>> if root object is Json object and <<class-jsonarray>> if root object is Json array or null if failed to parse
@@ -29,7 +30,7 @@ When JSON parsing fails, the following global variables are set:
 
 
 .Basic usage
-+
+
 [source,c]
 ----
 // Parse a simple JSON object
@@ -41,7 +42,7 @@ if (json) {
 ----
 
 .Using integerAsFloat parameter
-+
+
 [source,c]
 ----
 // Parse JSON with integers as floating point
@@ -58,7 +59,7 @@ if (json) {
 ----
 
 .Error handling using global variables
-+
+
 [source,c]
 ----
 // Attempt to parse invalid JSON
