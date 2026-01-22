@@ -1,4 +1,4 @@
-Available only if `NXSL.EnableFileIOFunctions` configuration parameter is turned on. 
+Available only if `NXSL.EnableFileIOFunctions` configuration parameter is turned on.
 
 include::functions/io/copyfile.adoc[]
 include::functions/io/createdirectory.adoc[]

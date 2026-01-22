@@ -5,7 +5,7 @@
 ****
 [IMPORTANT]
 ====
-*Use of this function is not recommended*. 
+*Use of this function is not recommended*.
 Please use expandString method of <<class-netobj>>, <<class-event>> or <<class-alarm>> instead.
 ====
 ****

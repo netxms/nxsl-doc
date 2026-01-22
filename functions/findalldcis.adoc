@@ -56,7 +56,7 @@ Array of <<class-dci>>.
 >>> for (interface : $node.interfaces) {
 >>>   list = FindAllDCIs($node, null, null, null, interface);
 >>>   if (list.size > 0) {
->>>     println(interface.name);   
+>>>     println(interface.name);
 >>>     foreach (row : list) {
 >>>       println("  " .. row.id .. ": " .. row.description .. " (" .. row.name .. ")");
 >>>     }

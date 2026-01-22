@@ -15,4 +15,4 @@ Will delete scheduled tasks by key
 Number of deleted scheduled task count with provided key
 
 [.source]
-print(CancelScheduledTasksByKey("Key")); //Number of tasks 
+print(CancelScheduledTasksByKey("Key")); //Number of tasks

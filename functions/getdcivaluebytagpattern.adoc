@@ -15,7 +15,7 @@ Added in version 5.2
 |userTagPattern|String|DCI user tag pattern. Glob symbols `?` and `*` can be used.
 |===
 +
-.Return 
+.Return
 
 Last value for given DCI (string for normal DCIs and <<class-table,Table object>> for table DCIs) or null if DCI was not found by given tag pattern or has no
 collected values.

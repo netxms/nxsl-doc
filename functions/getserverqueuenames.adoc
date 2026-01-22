@@ -3,10 +3,10 @@
 == GetServerQueueNames
 
 GetServerQueueNames(): <<class-array,Array>>::
-Get array with server queue names. 
+Get array with server queue names.
 +
 .Return
-Array with strings. 
+Array with strings.
 
 [.source]
 ....

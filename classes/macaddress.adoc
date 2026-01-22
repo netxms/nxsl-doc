@@ -81,6 +81,3 @@ MacAddress object
 | MacAddressNotation::BYTEPAIR_DOT_SEPARATED   | Bytepairs separated by dot, e.g. `1234.5678.9ABC`
 | MacAddressNotation::DECIMAL_DOT_SEPARATED    | Decimal, separated by dot, e.g. `18.52.86.120.154.188`
 |===
-
-
-

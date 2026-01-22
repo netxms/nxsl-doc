@@ -8,7 +8,7 @@ Check file access.
 .Parameters
 [cols="1,1,3" grid="none", frame="none"]
 |===
-|fileName|String|File to check access on 
+|fileName|String|File to check access on
 |mode|Integer|Mode to check
 |===
 +
@@ -35,5 +35,5 @@ Check file access.
 +
 [.source]
 ....
-return IO::FileAccess("/tmp/file", 5) // Will return true if user has read and execute access to file  
+return IO::FileAccess("/tmp/file", 5) // Will return true if user has read and execute access to file
 ....

@@ -13,7 +13,7 @@ Get DCI object by id
 |===
 +
 .Return
-<<class-dci,DCI>> object or `null` if not found 
+<<class-dci,DCI>> object or `null` if not found
 +
 [.source]
 ....

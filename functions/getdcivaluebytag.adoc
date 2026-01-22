@@ -15,7 +15,7 @@ Added in version 5.2
 |userTag|String|DCI user tag (exact match).
 |===
 +
-.Return 
+.Return
 
 Last value for given DCI (string for normal DCIs and <<class-table,Table object>> for table DCIs) or null if DCI with given tag does not exist or has no
 collected values.

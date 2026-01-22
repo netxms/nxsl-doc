@@ -137,7 +137,7 @@ notification about switch port being down and up.
 Script that is being called from Event Processing Policy that adds named event
 parameter to the event. Parameter is named `additionalInfo`, correspondingly
 `%<additionalInfo>` macro can be used to add value of that parameter to
-notification text. 
+notification text.
 
 [source,c]
 ----
@@ -418,7 +418,7 @@ else
 
 [source,c]
 ----
-transport = $node.createSNMPTransport();   
+transport = $node.createSNMPTransport();
 if (transport == null) exit;
 
 varbind = transport.get("1.3.6.1.2.1.25.3.5.1.2.1");
@@ -546,7 +546,7 @@ return 0;
 
 === Object query to list asset values
 
-Saved object query script to list all nodes linked to asset and 
+Saved object query script to list all nodes linked to asset and
 list values for serial, vendor, model asset properties.
 
 [source,c]
@@ -567,7 +567,7 @@ with
 	model (name = "Model") = {
 		return $node.assetProperties.model;
 	}
- 
+
 (type == NODE) && $node.asset != null //show all nodes linked to asset
 ----
 
@@ -584,5 +584,3 @@ if (($object.type == NODE) && $node.asset != null)
 }
 return ($object.type == NODE) && $node.asset != null; //show all nodes linked to asset
 ----
-
-

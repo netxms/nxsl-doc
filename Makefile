@@ -1,7 +1,7 @@
 #EXTENDED=yes
 
 ifeq ($(EXTENDED),)
-   OPTS = 
+   OPTS =
 else
    OPTS = -a extended
 endif

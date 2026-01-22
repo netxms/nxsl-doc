@@ -5,7 +5,7 @@
 FindObjectByGUID(guid, currentNode): <<class-netobj>>::
 Look up any object inherited from <<class-netobj>> (<<class-node>>, <<class-interface>>, <<class-cluster>>, etc.) by GUID.
 +
-If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object 
+If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object
 (instance of <<class-netobj>>, `$node` in most cases).
 If trusted nodes are disabled (default server configuration), `currentNode` can be omitted or set to `null`.
 +
@@ -17,7 +17,7 @@ If trusted nodes are disabled (default server configuration), `currentNode` can 
 |===
 +
 .Return
-Instance of object inherited from <<class-netobj>> or `null` if not found or not accessible. 
+Instance of object inherited from <<class-netobj>> or `null` if not found or not accessible.
 Type of the object can be verified using function <<func-classof>>.
 +
 [.source]

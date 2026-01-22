@@ -16,4 +16,4 @@ Will count scheduled tasks by key
 Scheduled task count with provided key
 
 [.source]
-print(CountScheduledTasksByKey("Key")); //Number of tasks 
+print(CountScheduledTasksByKey("Key")); //Number of tasks

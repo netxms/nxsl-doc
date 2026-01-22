@@ -3,10 +3,10 @@
 == GetThreadPoolNames
 
 GetThreadPoolNames(): <<class-array,Array>>::
-Get array with thread pool names. 
+Get array with thread pool names.
 +
 .Return
-Array with strings. 
+Array with strings.
 
 [.source]
 ....

@@ -78,5 +78,3 @@ Seed objects
 width: int::
 Width.
 --
-
-

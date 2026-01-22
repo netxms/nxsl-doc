@@ -190,4 +190,3 @@ Dump formatted table to log
 
 `Table()`::
 Creates new Table object.
-

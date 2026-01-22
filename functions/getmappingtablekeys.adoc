@@ -13,7 +13,7 @@ Get array with all keys from mapping table.
 +
 .Return
 
-Array of keys or `null` if mapping table is not found. 
+Array of keys or `null` if mapping table is not found.
 
 Provided that there is a mapping table named "table1", which has keys 10, 20 and
 30 with corresponding values "value1", "value2" and "value3":
@@ -22,5 +22,3 @@ Provided that there is a mapping table named "table1", which has keys 10, 20 and
 ....
 println(GetMappingTableKeys("table1")); // prints "[10, 20, 30]"
 ....
-
-
