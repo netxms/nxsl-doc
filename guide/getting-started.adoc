@@ -150,22 +150,21 @@ Returns boolean result of the compound condition.
 
 **Statement scripts (with semicolon):**
 
-When using semicolons, you must use explicit `return` to return a value.
-Without `return`, the script returns `null`:
+When using semicolons, you must use explicit `return` or result will be discarded.
+
+Result of this one will be `null`:
 
 [source,c]
 ----
 $1 > 100;
 ----
 
-Returns `null` (the expression is evaluated but result is discarded).
+This one will return `bool` value as expected:
 
 [source,c]
 ----
 return $1 > 100;
 ----
-
-Returns `true` or `false`.
 
 **Practical example:**
 
