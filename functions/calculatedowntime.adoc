@@ -23,7 +23,7 @@ Array of <<class-downtimeinfo,DowntimeInfo>> objects describing downtime windows
 // Calculate downtime for the last 24 hours
 downtimes = CalculateDowntime($node, "business-hours", time() - 86400, time());
 if (downtimes != null) {
-    foreach (d : downtimes) {
+    for (d : downtimes) {
         println("Downtime from " .. d->startTime .. " to " .. d->endTime);
     }
 }

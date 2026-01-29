@@ -38,9 +38,9 @@ Script to print primary MAC address.
 
 [source,c]
 ----
-for(i : $node.interfaces)
+for (i : $node.interfaces)
 {
-   for(a : i.ipAddressList)
+   for (a : i.ipAddressList)
    {
       if (a.address == $node.ipAddress)
          println(i.macAddr);
@@ -195,7 +195,7 @@ configuration variable needs to be set to 0 (which is the default).
 // This function walks object tree recursively starting from given root
 function EnumerateNodes(obj, level)
 {
-    foreach(o : obj.children) {
+    for (o : obj.children) {
         for (i = 0; i < level; i++) { print("  "); }
         println("[" .. o.type .. " / " .. classof(o) .. "] " .. o.name);
 
@@ -231,7 +231,7 @@ Enumerate all custom attributes on a node.
 [source,c]
 ----
 attributes = $node.customAttributes;
-foreach(a : attributes.keys)
+for (a : attributes.keys)
 {
         println(a .. "=" .. attributes[a]);
 }
@@ -248,7 +248,7 @@ function BubbleSort(a)
    do
    {
       newn = 0;
-      for(i = 1; i < n; i++)
+      for (i = 1; i < n; i++)
       {
          if (a[i - 1].compareTo(a[i]) > 0)
          {
@@ -276,7 +276,7 @@ function BubbleSort(a)
    do
    {
       newn = 0;
-      for(i = 1; i < n; i++)
+      for (i = 1; i < n; i++)
       {
          if (a[i - 1] > a[i])
 	     {
@@ -308,12 +308,12 @@ trace(1, "Global Ping Loss 95");
 array pValue;
 arrayI  = 0;
 
-foreach(parent : $node.parents)
+for (parent : $node.parents)
 {
 	trace(3, "Parent object: name='" .. parent.name ."' id=" .. parent.id);
 	if (parent.name == "all voice")
 	{
-		foreach(vNode : parent.children)
+		for (vNode : parent.children)
 		{
 			dciName = "ICMP: Packet loss to " .. vNode.name;
 			dciId = FindDCIByDescription(vNode, dciName);
@@ -336,7 +336,7 @@ bubbleSort(pValue);
 upTo = arrayI * 0.95;
 pLoss = 0;
 pCount = 0;
-for(ia = 0; ia < upTo; ia++)
+for (ia = 0; ia < upTo; ia++)
 {
 	pLoss += pValue[ia];
 	pCount = ia;
@@ -352,7 +352,7 @@ function bubbleSort(arr)
 	swapped = true;
 	while (swapped == true){
 		swapped = false;
-		for(ia = 1; arr[ia] != null; ia++)
+		for (ia = 1; arr[ia] != null; ia++)
 		{
 			ib = ia - 1;
 
@@ -370,7 +370,7 @@ function bubbleSort(arr)
 
 function printArray(arr)
 {
-	for(ia = 0; arr[ia] != null; ia++)
+	for (ia = 0; arr[ia] != null; ia++)
 	{
 		trace(1, "printArray: " .. ia .. ":" .. arr[ia]);
 	}
@@ -456,17 +456,17 @@ if (table == null)
 }
 
 // Print column names
-for(i = 0; i < table.columnCount; i++)
+for (i = 0; i < table.columnCount; i++)
 	print("| " .. left(table.getColumnName(i), 20));
 println("|");
-for(i = 0; i < table.columnCount; i++)
+for (i = 0; i < table.columnCount; i++)
 	print("+" .. left("-", 21, "-"));
 println("+");
 
 // Print data
-for(i = 0; i < table.rowCount; i++)
+for (i = 0; i < table.rowCount; i++)
 {
-	for(j = 0; j < table.columnCount; j++)
+	for (j = 0; j < table.columnCount; j++)
 	{
 		print("| " .. left(table.get(i, j), 20));
 	}
@@ -488,7 +488,7 @@ global contacts = "";  // concatenated values will be stored here
 global presence = %{ };  // value presence indicator (hash map)
 
 // walk through each parent object for current node
-foreach(o : $node.parents)
+for (o : $node.parents)
 {
 	add_contacts(o);
 }
@@ -511,7 +511,7 @@ function add_contacts(curr)
 		presence[c] = true;
 	}
 
-	foreach(o : curr.parents)
+	for (o : curr.parents)
 	{
 		add_contacts(o);
 	}

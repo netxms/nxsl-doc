@@ -31,7 +31,7 @@ Array of objects of class <<class-interface>>, with first object placed at index
 ....
 // Log names and ids of all interface objects for given node
 interfaces = GetNodeInterfaces($node);
-for(i : interfaces)
+for (i : interfaces)
 {
 	trace(1, "Interface: name='" .. i.name .. "' id=" .. i.id);
 }

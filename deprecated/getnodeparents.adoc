@@ -31,7 +31,7 @@ Array of objects of <<class-netobj,class NetObj>> or inherited from it, with fir
 ....
 // Log names and ids of all accessible parents for current node
 parents = GetNodeParents($node);
-foreach(p : parents)
+for (p : parents)
 {
 	trace(1, "Parent object: name='" .. p.name .. "' id=" .. p.id);
 }

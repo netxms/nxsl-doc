@@ -10,7 +10,7 @@ Array with strings.
 
 [.source]
 ....
-foreach(l : GetServerQueueNames())
+for (l : GetServerQueueNames())
 {
   println(l);
 }

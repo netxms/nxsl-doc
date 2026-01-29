@@ -88,7 +88,7 @@ Array of strings (command output lines) or NULL if not connected.
 session = $node->openSSHSession();
 if (session->connected) {
     output = session->execute("ls -la", 5000);
-    foreach (line : output) {
+    for (line : output) {
         println(line);
     }
     session->close();

@@ -32,7 +32,7 @@ Array of <<class-netobj>> instances.
 ....
 // Log names and ids of all accessible parents for current node
 parents = GetObjectParents($node);
-for(p : parents)
+for (p : parents)
 {
 	trace(1, "Parent object: name='" .. p.name .. "' id=" .. p.id);
 }

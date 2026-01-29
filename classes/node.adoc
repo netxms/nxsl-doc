@@ -766,7 +766,7 @@ Array of integers representing blocked port numbers.
 [.source]
 ....
 blockedTcpPorts = $node->getBlockedPorts("tcp");
-foreach (port : blockedTcpPorts) {
+for (port : blockedTcpPorts) {
     println("Blocked TCP port: " .. port);
 }
 ....
@@ -938,7 +938,7 @@ Open an interactive SSH session to this node.
 session = $node->openSSHSession();
 if (session != null && session->connected) {
     output = session->execute("ls -la");
-    foreach (line : output) {
+    for (line : output) {
         println(line);
     }
     session->close();

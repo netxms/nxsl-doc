@@ -23,7 +23,7 @@ Array of <<class-datapoint,DataPoint>> objects ordered from latest to earliest f
 ....
 // Get data points for the last hour
 dataPoints = GetDCIValuesEx($node, FindDCIByName($node, "Status"), time() - 3600, time());
-foreach (dp : dataPoints) {
+for (dp : dataPoints) {
     println("Timestamp: " .. dp->timestamp .. ", Value: " .. dp->value);
 }
 ....

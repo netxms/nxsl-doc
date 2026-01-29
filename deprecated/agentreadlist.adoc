@@ -28,7 +28,7 @@ Array of strings or `null` if failed.
 [.source]
 ....
 >>> supportedLists = AgentReadList($node, "Agent.SupportedLists");
->>> foreach (l : supportedLists) { println(l); }
+>>> for (l : supportedLists) { println(l); }
 Agent.ActionList
 Agent.SubAgentList
 Agent.SupportedLists

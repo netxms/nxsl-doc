@@ -28,7 +28,7 @@ Array of <<class-dci>>.
 [.source]
 ....
 >>> list = FindAllDCIs($node, "Server*", "*MAIN*");
->>> foreach (row : list) {
+>>> for (row : list) {
 >>> 	println(row.id .. ": " .. row.description .. " (" .. row.name .. ")");
 >>> }
 91: Server thread pool MAIN: usage (Server.ThreadPool.Usage(MAIN))
@@ -36,7 +36,7 @@ Array of <<class-dci>>.
 93: Server thread pool MAIN: current load (Server.ThreadPool.Load(MAIN))
 
 >>> list = FindAllDCIs($node, "Server*");
->>> foreach (row : list) {
+>>> for (row : list) {
 >>> 	println(row.id .. ": " .. row.description .. " (" .. row.name .. ")");
 >>> }
 100: NetXMS server: database writer's request queue (other queries) (Server.AverageDBWriterQueueSize.Other)
@@ -45,7 +45,7 @@ Array of <<class-dci>>.
 …
 
 >>> list = FindAllDCIs($node, null, "*load average*");
->>> foreach (row : list) {
+>>> for (row : list) {
 >>> 	println(row.id .. ": " .. row.description .. " (" .. row.name .. ")");
 >>> }
 119: CPU: load average (15 minutes) (System.CPU.LoadAvg15)
@@ -57,7 +57,7 @@ Array of <<class-dci>>.
 >>>   list = FindAllDCIs($node, null, null, null, interface);
 >>>   if (list.size > 0) {
 >>>     println(interface.name);
->>>     foreach (row : list) {
+>>>     for (row : list) {
 >>>       println("  " .. row.id .. ": " .. row.description .. " (" .. row.name .. ")");
 >>>     }
 >>>   }

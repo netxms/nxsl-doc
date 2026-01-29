@@ -33,7 +33,7 @@ Instance of <<class-table>> or `null` if failed.
 >>> }
 >>> println("");
 >>> for (row : t.rows) {
->>>   for(cell : row.values) {
+>>>   for (cell : row.values) {
 >>>      print(cell .. " | ");
 >>>   }
 >>>   println("");

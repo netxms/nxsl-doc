@@ -24,7 +24,7 @@ packages = GetAvailablePackages(null, null);
 // Get only Linux packages
 linuxPackages = GetAvailablePackages("Linux", null);
 
-foreach (pkg : packages) {
+for (pkg : packages) {
     println("Package: " .. pkg->name .. " v" .. pkg->version .. " (" .. pkg->platform .. ")");
 }
 ....
