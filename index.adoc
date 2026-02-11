@@ -6,7 +6,7 @@
 :toclevels: 3
 = NetXMS Scripting Language
 http://netxms.org/
-v5.1, 19 January, 2026
+v6.0, 9 February, 2026
 
 [preface]
 == About This Document
@@ -22,7 +22,7 @@ The documentation is organized into the following main sections:
 * **Appendices** - Global constants, formal grammar, examples, and deprecated functions
 
 ifdef::html[]
-+++You can also download a <a href="nxsl.pdf">PDF version of this document</a>.+++
++++<a href="nxsl.pdf">PDF version of this document</a>.+++
 endif::[]
 
 [NOTE]
