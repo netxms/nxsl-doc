@@ -12,6 +12,10 @@ If name of the custom attribute overlaps with the instance attribute, method <<c
 
 [.attr-list]
 --
+[[netobj-aiHint]]
+aiHint: <<class-string,String>>::
+Hint for AI anomaly profile generation.
+
 [[netobj-alarms]]
 alarms => array::
 List of active <<class-alarm, Alarms>> for this object.

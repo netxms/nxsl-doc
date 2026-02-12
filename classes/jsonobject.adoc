@@ -52,6 +52,38 @@ Sets attribute referenced by key to the given value.
 |key|String|Attribute key
 |value|String|Attribute new value
 |===
+
+[[jsonobject-setBoolean]]
+setBoolean(key, value): void::
+Sets a boolean value at the specified key. The value is converted to boolean.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|key|String|Attribute key
+|value|any|Value to convert to boolean
+|===
+
+[[jsonobject-setNull]]
+setNull(key): void::
+Sets a JSON null value at the specified key.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|key|String|Attribute key
+|===
+
+[[jsonobject-setString]]
+setString(key, value): void::
+Sets a string value at the specified key. The value is converted to string.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|key|String|Attribute key
+|value|any|Value to convert to string
+|===
 --
 
 ==== Constructors

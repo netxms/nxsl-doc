@@ -75,6 +75,94 @@ Sets value to the provided index in JSON array, in place of existing element in 
 |index|Integer|Index of element in array
 |value|?|Add value to JSON array. Value type may vary.
 |===
+
+[[jsonarray-appendBoolean]]
+appendBoolean(value): void::
+Appends a boolean value to the end of the JSON array.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value|any|Value to convert to boolean
+|===
+
+[[jsonarray-appendNull]]
+appendNull(): void::
+Appends a JSON null value to the end of the JSON array.
+
+[[jsonarray-appendString]]
+appendString(value): void::
+Appends a string value to the end of the JSON array.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|value|any|Value to convert to string
+|===
+
+[[jsonarray-insertBoolean]]
+insertBoolean(index, value): void::
+Inserts a boolean value at the specified index in the JSON array.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|index|Integer|Index to insert at
+|value|any|Value to convert to boolean
+|===
+
+[[jsonarray-insertNull]]
+insertNull(index): void::
+Inserts a JSON null value at the specified index in the JSON array.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|index|Integer|Index to insert at
+|===
+
+[[jsonarray-insertString]]
+insertString(index, value): void::
+Inserts a string value at the specified index in the JSON array.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|index|Integer|Index to insert at
+|value|any|Value to convert to string
+|===
+
+[[jsonarray-setBoolean]]
+setBoolean(index, value): void::
+Replaces the value at the specified index with a boolean value.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|index|Integer|Index of element in array
+|value|any|Value to convert to boolean
+|===
+
+[[jsonarray-setNull]]
+setNull(index): void::
+Replaces the value at the specified index with JSON null.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|index|Integer|Index of element in array
+|===
+
+[[jsonarray-setString]]
+setString(index, value): void::
+Replaces the value at the specified index with a string value.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|index|Integer|Index of element in array
+|value|any|Value to convert to string
+|===
 --
 
 ==== Constructors

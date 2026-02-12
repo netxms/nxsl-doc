@@ -36,6 +36,10 @@ Package change date as UNIX timestamp
 uninstallKey: <<class-string,String>>::
 Get product uninstall key if available.
 
+[[softwarepackage-user]]
+user: <<class-string,String>>::
+User account that installed or owns the software package.
+
 [[softwarepackage-url]]
 url: <<class-string,String>>::
 PAckage URL

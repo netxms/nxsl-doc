@@ -137,6 +137,13 @@ Added in version 5.2
 [[dci-forcePoll]]
 forcePoll(): void::
 Start DCI force poll.
+
+[[dci-generateAnomalyProfile]]
+generateAnomalyProfile(): bool::
+Triggers asynchronous generation of an AI-based anomaly detection profile for this DCI. Only works for single value DCIs.
++
+.Return
+`true` if profile generation was started, `false` if DCI is not a single value type.
 --
 
 .See also
