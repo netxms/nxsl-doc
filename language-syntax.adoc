@@ -102,7 +102,7 @@ or as operand of the Boolean operations below. The following values are consider
 
 * `NULL`
 
-* zero of any numeric type, for example, `0`, `0.0`, `0j`.
+* zero of any numeric type, for example, `0`, `0.0`.
 
 All other values are considered `true` — so objects of various types and arrays are always `true`.
 
