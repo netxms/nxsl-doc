@@ -738,11 +738,9 @@ println("|" .. "  ABC  ".trimRight() .. "|") // prints "|   ABC|"
 [[class-array]]
 === Arrays
 
-An array in NXSL is actually an ordered map. A map is a type that associates
-`values` to `keys`. This type is optimized for several different uses; it
-can be treated as an array, list (vector), hash table (an implementation of a
-map), dictionary, collection, stack, queue, and probably more. Nested arrays
-are supported, so elements of an array can be themselves arrays.
+An array in NXSL is an ordered, sparse, integer-indexed collection. It can be
+treated as an array, list (vector), stack, queue, and probably more. Nested
+arrays are supported, so elements of an array can be themselves arrays.
 
 A `key` is 32-bit signed integer. When an array is created, its size is
 not specified and its map can have empty spots in it. For example, an array can
@@ -753,7 +751,7 @@ same as accessing any other undefined variable: the result will be `NULL`.
 Arrays are not objects, it's a separate variable type. However, arrays have
 methods and attributes described below.
 
-Array elements can be accessed using [`index`] operator. For example, to
+Array elements can be accessed using `[index]` operator. For example, to
 access element with index `3` of array `a` you should use
 
 [source,c]
