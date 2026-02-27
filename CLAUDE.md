@@ -155,6 +155,20 @@ Added in version 5.3
 }
 ```
 
+## Cross-Referencing Source Code
+
+- NetXMS source code is at `/Users/alk/Development/netxms/netxms-master`
+- NXSL global function implementations: `src/libnxsl/functions.cpp`, registered in `src/libnxsl/env.cpp`
+- NXSL string method implementations: `src/libnxsl/string.cpp`
+- To determine which version a feature was added in, find the commit and check which stable branch contains it: `git branch -a --contains <commit-hash>` — branch `stable-X.Y` means version X.Y
+- YouTrack issue tracker (track.radensolutions.com) requires authentication — ask user for issue details if needed
+
+## Where to Document
+
+- **Global functions** (e.g., `LevenshteinDistance`): separate file in `functions/<category>/` or `functions/`, included via `func-*.adoc`
+- **String methods** (e.g., `fuzzyEquals`): inline in `language-syntax.adoc` under the string methods section (alphabetically ordered)
+- **Class attributes/methods**: in `classes/<classname>.adoc`
+
 ## Documentation Writing Patterns
 
 **Problem-first structure**: When explaining solutions (like `global` keyword), show the problem first to establish motivation:
