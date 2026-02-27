@@ -31,14 +31,20 @@ Unique event identifier.
 [[event-lastAlarmId]]
 lastAlarmId: int::
 ID of the last alarm associated with this event, or 0 if none.
++
+[.version-added]#Added in version 6.0#
 
 [[event-lastAlarmKey]]
 lastAlarmKey: <<class-string,String>>::
-Key for last generated alarm for this event or null
+Key for last generated alarm for this event or null.
++
+[.version-added]#Added in version 6.0#
 
 [[event-lastAlarmMessage]]
 lastAlarmMessage: <<class-string,String>>::
 Message of the last alarm associated with this event, or null if none.
++
+[.version-added]#Added in version 6.0#
 
 [[event-message]]
 message: <<class-string,String>>::
