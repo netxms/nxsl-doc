@@ -578,6 +578,33 @@ Returns `true` if argument string is equal to this string ignoring the case or
 println("abc".equalsIgnoreCase("ABC")); // prints "true"
 ....
 
+[[string-fuzzyEquals]]
+fuzzyEquals(string, threshold): bool::
+Returns `true` if argument string is approximately equal to this string using fuzzy comparison based on <<func-similarityscore,similarity score>>. Optional `threshold` parameter (float, 0.0 to 1.0) sets the minimum similarity score required for a match — higher values require closer match. Default threshold is 0.2.
++
+[.version-added]
+Added in version 6.0
++
+[.source]
+....
+println("kitten".fuzzyEquals("kittens"));      // prints "true"
+println("abc".fuzzyEquals("xyz"));             // prints "false"
+println("hello".fuzzyEquals("hallo", 0.9));    // prints "false" (higher threshold)
+....
+
+[[string-fuzzyEqualsIgnoreCase]]
+fuzzyEqualsIgnoreCase(string, threshold): bool::
+Same as <<string-fuzzyEquals,fuzzyEquals>>, but ignoring the case.
++
+[.version-added]
+Added in version 6.0
++
+[.source]
+....
+println("Kitten".fuzzyEqualsIgnoreCase("kittens"));  // prints "true"
+println("Hello".fuzzyEqualsIgnoreCase("HALLO"));     // prints "true"
+....
+
 [[string-indexOf,String::indexOf()]]
 indexOf(string): int::
 Returns index of first occurence of argument string in this string or `-1`
