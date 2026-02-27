@@ -339,7 +339,10 @@ Node attributes change code
 [[const-node-capability]]
 == Node Capability
 
-Node capability flags. Used with <<class-node>> attributes `capabilities` and `expectedCapabilities`.
+Node capability flags. Used with <<class-node>> attributes `capabilities` and `expectedCapabilities`, and with <<node-setExpectedCapabilities,Node::setExpectedCapabilities()>> method.
+
+[.version-added]
+Added in version 5.2. [.version-added]#Additional constants added in version 6.0: `LocalManagement`, `NewPolicyTypes`, `ServiceManager`, `SSHInteractiveChannel`, `SSHCommandChannel`.#
 
 [cols="2,1,7a" grid="none", frame="none"]
 |===

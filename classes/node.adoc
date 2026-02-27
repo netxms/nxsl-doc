@@ -46,7 +46,7 @@ Base address of the switch formatted as 12 character `string` without separators
 
 [[class-node-capabilities,Node::capabilities]]
 capabilities: int::
-Detected node capabilities ("Have Agent", "Support SNMP", etc.) Bitwise AND of <<node-capabilities>> constants.
+Detected node capabilities ("Have Agent", "Support SNMP", etc.) Bitwise OR of <<const-node-capability>> constants.
 
 [[node-cipDeviceType]]
 cipDeviceType: int::
@@ -106,7 +106,10 @@ Named of selected device-specific SNMP driver.
 
 [[node-expectedCapabilities]]
 expectedCapabilities: int::
-Expected capabilities mask for the node. Bitwise AND of <<node-capabilities>> constants.
+Expected capabilities bitmask for the node. Capabilities set in this mask are protected from automatic removal when protocols become temporarily unreachable. Bitwise OR of <<const-node-capability>> constants. See <<node-setExpectedCapabilities,setExpectedCapabilities()>>.
++
+[.version-added]
+Added in version 5.2
 
 [[node-effectiveAgentProxy]]
 effectiveAgentProxy => <<class-node>>::
@@ -1039,13 +1042,43 @@ String with result read from web service
 
 [[node-setExpectedCapabilities]]
 setExpectedCapabilities(capabilities): void::
-Set the expected capabilities for this node.
+Set the expected capabilities for this node. Expected capabilities prevent automatic removal of protocol capability flags when a protocol becomes temporarily unreachable. Normally, if a protocol (e.g., SNMP or agent) fails beyond the capability expiration time, its capability flag is cleared. Setting expected capabilities overrides this behavior, keeping the specified capabilities persistent regardless of connectivity status.
++
+Only the following <<const-node-capability>> flags are accepted (other bits are masked out):
++
+- `NodeCapability::Agent` (0x0000000002)
+- `NodeCapability::SNMP` (0x0000000001)
+- `NodeCapability::SSH` (0x0000000080)
+- `NodeCapability::EtherNetIP` (0x0000800000)
+- `NodeCapability::ModbusTCP` (0x0001000000)
 +
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|capabilities|Integer|Capability flags bitmask. Only allows capability bits for: native agent, SNMP, EtherNet/IP, Modbus TCP, and SSH.
+|capabilities|Integer|Bitmask of <<const-node-capability>> flags.
 |===
++
+.Return
+void
++
+[.source]
+....
+// Ensure SNMP and agent capabilities are never automatically removed
+$node.setExpectedCapabilities(NodeCapability::SNMP | NodeCapability::Agent);
+
+// Protect all supported protocol capabilities
+$node.setExpectedCapabilities(
+    NodeCapability::Agent | NodeCapability::SNMP |
+    NodeCapability::SSH | NodeCapability::EtherNetIP |
+    NodeCapability::ModbusTCP
+);
+
+// Clear expected capabilities (allow normal automatic removal)
+$node.setExpectedCapabilities(0);
+....
++
+[.version-added]
+Added in version 5.2
 
 [[node-setIfXTableUsageMode]]
 setIfXTableUsageMode(mode): void::
@@ -1177,79 +1210,51 @@ Set the required number of polls before registering a status change.
 |===
 
 [[node-capabilities]]
-[cols="1,5a"]
+
+Node capability flags are available as <<const-node-capability>> named constants.
+
+[cols="2,1,5a"]
 .Node capability flags
 |===
-| Value | Description
+| Constant | Value | Description
 
-|0x00000001
-|Node supports SNMP
-
-|0x00000002
-|NetXMS agent detected on the node
-
-|0x00000004
-|Node is network bridge
-
-|0x00000008
-|Node is IP router
-
-|0x00000010
-|Node is management server (NetXMS server itself)
-
-|0x00000020
-|Node is printer
-
-|0x00000040
-|Node supports OSPF
-
-|0x00000080
-|CheckPoint SNMP agent detected on port 260
-
-|0x00000100
-|CDP supported
-
-|0x00000200
-|NDP(SONMP) support detected on the node (Nortel/Synoptics/Bay Networks) topology discovery)
-
-|0x00000400
-|Node supports LLDP
-
-|0x00000800
-|Node supportes VRRP
-
-|0x00001000
-|VLAN information available on the node
-
-|0x00002000
-|802.1x support detected
-
-|0x00004000
-|Spanning Tree (IEEE 802.1d) enabled on node
-
-|0x00008000
-|Node supports ENTITY-MIB
-
-|0x00010000
-|Node supports ifXTable via SNMP (64-bit counters for interface statistics)
-
-|0x00020000
-|Agent supports 64-bit interface counters
-
-|0x00040000
-|Node supports Windows PDH parameters
-
-|0x00080000
-|Node is wireless network controller
-
-|0x00100000
-|Node supports SMCLP protocol
-
-|0x00200000
-|Running agent is upgraded to new policy type
-
-|0x00400000
-|User (support) agent is installed
+|NodeCapability::SNMP|0x0000000001|Node supports SNMP
+|NodeCapability::Agent|0x0000000002|NetXMS agent detected on the node
+|NodeCapability::Bridge|0x0000000004|Node is a network bridge
+|NodeCapability::Router|0x0000000008|Node is an IP router
+|NodeCapability::LocalManagement|0x0000000010|Node is management server (NetXMS server itself)
+|NodeCapability::Printer|0x0000000020|Node is a printer
+|NodeCapability::OSPF|0x0000000040|Node supports OSPF
+|NodeCapability::SSH|0x0000000080|SSH support
+|NodeCapability::CDP|0x0000000100|Cisco Discovery Protocol supported
+|NodeCapability::NDP|0x0000000200|NDP (SONMP) support detected (Nortel/Synoptics/Bay Networks topology discovery)
+|NodeCapability::LLDP|0x0000000400|Node supports LLDP
+|NodeCapability::VRRP|0x0000000800|Node supports VRRP
+|NodeCapability::VLAN|0x0000001000|VLAN information available on the node
+|NodeCapability::IEEE802_1x|0x0000002000|802.1x support detected
+|NodeCapability::STP|0x0000004000|Spanning Tree (IEEE 802.1d) enabled on node
+|NodeCapability::EntityMIB|0x0000008000|Node supports ENTITY-MIB
+|NodeCapability::IfXTable|0x0000010000|Node supports ifXTable via SNMP (64-bit interface counters)
+|NodeCapability::AgentIfXCounters|0x0000020000|Agent supports 64-bit interface counters
+|NodeCapability::WindowsPDH|0x0000040000|Node supports Windows PDH parameters
+|NodeCapability::WiFiController|0x0000080000|Node is wireless network controller
+|NodeCapability::SMCLP|0x0000100000|Node supports SMCLP protocol
+|NodeCapability::NewPolicyTypes|0x0000200000|Agent upgraded to new policy type
+|NodeCapability::UserAgent|0x0000400000|User agent (desktop support app) is installed
+|NodeCapability::EtherNetIP|0x0000800000|EtherNet/IP support
+|NodeCapability::ModbusTCP|0x0001000000|Modbus TCP support
+|NodeCapability::ProfiNet|0x0002000000|PROFINET support
+|NodeCapability::FileManager|0x0004000000|Node has file manager support
+|NodeCapability::LLDPv2|0x0008000000|LLDP v2 MIB support
+|NodeCapability::EmulatedEntityMIB|0x0010000000|ENTITY MIB support emulated by driver
+|NodeCapability::DeviceView|0x0020000000|Device view is supported
+|NodeCapability::WiFiAccessPoint|0x0040000000|Node is wireless access point
+|NodeCapability::VNC|0x0080000000|Node supports VNC connection from server or zone proxy
+|NodeCapability::LocalVNC|0x0100000000|Node supports VNC connection via local agent
+|NodeCapability::RegisteredForBackup|0x0200000000|Node is registered for device configuration backup
+|NodeCapability::ServiceManager|0x0400000000|Node has service manager accessible via NetXMS agent
+|NodeCapability::SSHInteractiveChannel|0x0800000000|Interactive (shell) SSH channel can be established
+|NodeCapability::SSHCommandChannel|0x1000000000|SSH command channel can be established
 
 |===
 
