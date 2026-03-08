@@ -50,14 +50,20 @@ DCI instance name (only for single value DCIs): %{instance-name}
 
 [[dci-lastPollTime]]
 lastPollTime: int64::
-Time of last DCI poll (either successful or not) as number of seconds since epoch (1 Jan 1970 00:00:00 UTC)
+Time of last DCI poll (either successful or not) as number of milliseconds since epoch (1 Jan 1970 00:00:00 UTC).
++
+[.version-changed]
+Changed in version 6.0: value is now in milliseconds instead of seconds.
 
 [[dci-lastCollectionTime]]
 lastCollectionTime: int64::
-Time of last successful DCI poll as number of seconds since epoch (1 Jan 1970 00:00:00 UTC).
+Time of last successful DCI poll as number of milliseconds since epoch (1 Jan 1970 00:00:00 UTC).
 +
 [.version-added]
 Added in version 4.0
++
+[.version-changed]
+Changed in version 6.0: value is now in milliseconds instead of seconds.
 
 [[dci-name]]
 name: <<class-string,String>>::

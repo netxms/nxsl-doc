@@ -18,6 +18,8 @@ Get all values for period of DCI with given ID on given node, returning them as 
 .Return
 
 Array of <<class-datapoint,DataPoint>> objects ordered from latest to earliest for given DCI, or NULL if DCI with given ID does not exist or has no collected values. Each DataPoint contains both the timestamp and the value. This function cannot be used for table DCIs.
++
+NOTE: The input parameters `startTime` and `endTime` accept timestamps in seconds, but the returned <<class-datapoint,DataPoint>> objects contain timestamps in milliseconds since epoch (as of version 6.0).
 
 [.source]
 ....

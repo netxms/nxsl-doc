@@ -9,8 +9,11 @@ Represents a single data point containing a timestamp and value pair. DataPoint 
 [.attr-list]
 --
 [[datapoint-timestamp]]
-timestamp: int::
-link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of the data point.
+timestamp: int64::
+Timestamp of the data point in milliseconds since epoch (1 Jan 1970 00:00:00 UTC).
++
+[.version-changed]
+Changed in version 6.0: timestamp is now in milliseconds instead of seconds.
 
 [[datapoint-value]]
 value: <<class-string,String>>::
