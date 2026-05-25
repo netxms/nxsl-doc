@@ -37,6 +37,33 @@ Apply template to node
 |template|<<class-template>>|Template object to apply
 |===
 
+[[datacollectiontarget-createDCI]]
+createDCI(origin, name, description, dataType, pollingInterval, retentionTime) => <<class-dci>>::
+Create a new data collection item on this object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|origin|String or Integer|Data origin. Possible values: `"agent"`, `"snmp"`, `"internal"`, `"push"`, `"websvc"`, `"winperf"`, `"script"`, `"ssh"`, `"mqtt"`, `"driver"`, `"modbus"`, `"ethernetip"`. Alternatively, you can use <<const-dci-origin,Data origin constants>>.
+|name|String|Name of the metric (e.g. `"Agent.Version"`).
+|description|String|Human readable description.
+|dataType|String or Integer|Type of the collected data. Possible values: `"int32"`, `"uint32"`, `"int64"`, `"uint64"`, `"counter32"`, `"counter64"`, `"float"`, `"string"`. Alternatively, you can use <<const-dci-datatype,DCI data type constants>>.
+|pollingInterval|String|Polling interval in seconds or `null` for server-default value. Optional.
+|retentionTime|String|Retention time in days, `"0"` for "Do not save collected data to database" or `null` for server-default value. Optional.
+|===
++
+.Return
+Instance of newly created <<class-dci>> or `null` if failed (e.g. invalid origin or data type).
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+dci = $node.createDCI("agent", "Agent.Version", "Agent Version", "string");
+println(dci.id);
+....
+
 [[datacollectiontarget-enableConfigurationPolling]]
 enableConfigurationPolling(flag): void::
 Enable or disable configuration polling for a node
@@ -66,6 +93,144 @@ Enable or disable status polling for a node.
 |===
 |flag|Boolean|If status polls should be enabled.
 |===
+
+[[datacollectiontarget-findAllDCIs]]
+findAllDCIs(name, description, tag, relatedObject) => <<class-array,Array>>::
+Find all DCIs matching the given filters. All parameters are optional; omitted or `null` parameters are not used for filtering. Name, description and tag support glob patterns.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Name filter (glob pattern). Optional.
+|description|String|Description filter (glob pattern). Optional.
+|tag|String|User tag filter (glob pattern). Optional.
+|relatedObject|<<class-netobj>> or Integer|Related object or object ID. Optional.
+|===
++
+.Return
+Array of <<class-dci>> objects matching the filters.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+// Find all CPU-related DCIs
+dcis = $node.findAllDCIs("System.CPU.*");
+for (d : dcis)
+   println(d.name .. " = " .. d.cachedValue);
+....
+
+[[datacollectiontarget-findDCIById]]
+findDCIById(id) => <<class-dci>>::
+Find a DCI on this object by its unique ID.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|id|Integer|DCI ID.
+|===
++
+.Return
+<<class-dci>> object or `null` if not found.
++
+[.version-added]
+Added in version 6.2
+
+[[datacollectiontarget-findDCIByName]]
+findDCIByName(name) => <<class-dci>>::
+Find a DCI on this object by parameter name (exact match).
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Parameter name of the DCI.
+|===
++
+.Return
+<<class-dci>> object or `null` if not found.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+dci = $node.findDCIByName("System.CPU.Usage");
+if (dci != null)
+   println("CPU Usage: " .. dci.cachedValue);
+....
+
+[[datacollectiontarget-findDCIByDescription]]
+findDCIByDescription(description) => <<class-dci>>::
+Find a DCI on this object by description (exact match).
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|description|String|Description of the DCI.
+|===
++
+.Return
+<<class-dci>> object or `null` if not found.
++
+[.version-added]
+Added in version 6.2
+
+[[datacollectiontarget-findDCIByTag]]
+findDCIByTag(tag) => <<class-dci>>::
+Find a DCI on this object by user tag (exact match).
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|tag|String|User tag value.
+|===
++
+.Return
+<<class-dci>> object or `null` if not found.
++
+[.version-added]
+Added in version 6.2
+
+[[datacollectiontarget-findDCIByTagPattern]]
+findDCIByTagPattern(pattern) => <<class-dci>>::
+Find a DCI on this object by user tag using a glob pattern.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|pattern|String|Glob pattern to match against user tags.
+|===
++
+.Return
+<<class-dci>> object or `null` if not found. Returns the first matching DCI.
++
+[.version-added]
+Added in version 6.2
+
+[[datacollectiontarget-pushDCIData]]
+pushDCIData(dciId, value, timestamp) => Boolean::
+Push a new value to a DCI from script. The DCI's data source must be set to "Push" or "OTLP".
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|dciId|Integer|DCI ID.
+|value|String|New value for the DCI.
+|timestamp|Integer|Timestamp in milliseconds since epoch. Optional, current time is used if not specified.
+|===
++
+.Return
+`true` on success, `false` on failure (DCI not found, wrong data source, or not a single value DCI).
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+dci = $node.findDCIByName("My.Push.Metric");
+$node.pushDCIData(dci.id, "42");
+....
 
 [[datacollectiontarget-readInternalParameter]]
 readInternalParameter(name): <<class-string,String>>::

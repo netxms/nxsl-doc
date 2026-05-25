@@ -12,9 +12,37 @@ Represents Data Collection Item (DCI).
 activeThresholdSeverity: int::
 Severity of the active threshold. If there are no active thresholds, defaults to `0` (NORMAL).
 
+[[dci-cachedRawValue]]
+cachedRawValue => <<class-string,String>> or <<class-table,Table>>::
+Last collected raw value from the in-memory cache. For single value DCIs returns a string, for table DCIs returns a <<class-table,Table>> object. Returns `null` if the DCI has no value yet.
++
+[.version-added]
+Added in version 6.2
+
+[[dci-cachedValue]]
+cachedValue => <<class-string,String>> or <<class-table,Table>>::
+Last collected (transformed) value from the in-memory cache. For single value DCIs returns a string, for table DCIs returns a <<class-table,Table>> object. Returns `null` if the DCI has no value yet.
++
+[.version-added]
+Added in version 6.2
+
 [[dci-comments]]
 comments: <<class-string,String>>::
 DCI Comments
+
+[[dci-currentRawValue]]
+currentRawValue => <<class-string,String>> or <<class-table,Table>>::
+Current raw value. Similar to <<dci-cachedRawValue,cachedRawValue>> but returns `null` if the DCI is in error state.
++
+[.version-added]
+Added in version 6.2
+
+[[dci-currentValue]]
+currentValue => <<class-string,String>> or <<class-table,Table>>::
+Current (transformed) value. Similar to <<dci-cachedValue,cachedValue>> but returns `null` if the DCI is in error state.
++
+[.version-added]
+Added in version 6.2
 
 [[dci-dataType]]
 dataType: int::
@@ -140,6 +168,32 @@ Added in version 5.2
 
 [.method-list]
 --
+[[dci-detectAnomalies]]
+detectAnomalies(timeFrom, timeTo, threshold) => <<class-array,Array>>::
+Detect anomalies for this DCI within the given time period. Only works for single value DCIs.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|timeFrom|Integer|Start of the period (as UNIX timestamp).
+|timeTo|Integer|End of the period (as UNIX timestamp). Optional, current time is used if not specified.
+|threshold|Number|Anomaly detection threshold. Optional, defaults to 0.75.
+|===
++
+.Return
+Array of <<class-scoreddcivalue>> objects, or `null` on error.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+dci = $node.findDCIByName("System.CPU.Usage");
+anomalies = dci.detectAnomalies(time() - 86400); // Last 24 hours
+for (a : anomalies)
+   println("Timestamp: " .. a.timestamp .. " Value: " .. a.value .. " Score: " .. a.score);
+....
+
 [[dci-forcePoll]]
 forcePoll(): void::
 Start DCI force poll.
@@ -150,6 +204,139 @@ Triggers asynchronous generation of an AI-based anomaly detection profile for th
 +
 .Return
 `true` if profile generation was started, `false` if DCI is not a single value type.
+
+[[dci-getAverageValue]]
+getAverageValue(timeFrom, timeTo) => <<class-string,String>>::
+Get the average value of this DCI for the given period. Only works for single value DCIs of numeric type.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|timeFrom|Integer|Start of the period (as UNIX timestamp).
+|timeTo|Integer|End of the period (as UNIX timestamp). Optional, current time is used if not specified.
+|===
++
+.Return
+Average value as string, or `null` on failure or if this is a table DCI.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+dci = $node.findDCIByName("System.CPU.Usage");
+avg = dci.getAverageValue(time() - 3600); // Average over last hour
+println("Average CPU: " .. avg);
+....
+
+[[dci-getMaxValue]]
+getMaxValue(timeFrom, timeTo) => <<class-string,String>>::
+Get the maximum value of this DCI for the given period. Only works for single value DCIs of numeric type.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|timeFrom|Integer|Start of the period (as UNIX timestamp).
+|timeTo|Integer|End of the period (as UNIX timestamp). Optional, current time is used if not specified.
+|===
++
+.Return
+Maximum value as string, or `null` on failure or if this is a table DCI.
++
+[.version-added]
+Added in version 6.2
+
+[[dci-getMinValue]]
+getMinValue(timeFrom, timeTo) => <<class-string,String>>::
+Get the minimum value of this DCI for the given period. Only works for single value DCIs of numeric type.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|timeFrom|Integer|Start of the period (as UNIX timestamp).
+|timeTo|Integer|End of the period (as UNIX timestamp). Optional, current time is used if not specified.
+|===
++
+.Return
+Minimum value as string, or `null` on failure or if this is a table DCI.
++
+[.version-added]
+Added in version 6.2
+
+[[dci-getSumValue]]
+getSumValue(timeFrom, timeTo) => <<class-string,String>>::
+Get the sum of values of this DCI for the given period. Only works for single value DCIs of numeric type.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|timeFrom|Integer|Start of the period (as UNIX timestamp).
+|timeTo|Integer|End of the period (as UNIX timestamp). Optional, current time is used if not specified.
+|===
++
+.Return
+Sum value as string, or `null` on failure or if this is a table DCI.
++
+[.version-added]
+Added in version 6.2
+
+[[dci-getValues]]
+getValues(timeFrom, timeTo, rawValue, tier, function) => <<class-array,Array>>::
+Get all collected values for this DCI within the given period. Only works for single value DCIs.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|timeFrom|Integer|Start of the period (as UNIX timestamp).
+|timeTo|Integer|End of the period (as UNIX timestamp). Optional, current time is used if not specified.
+|rawValue|Boolean|`true` to return raw values, `false` for transformed values. Optional, defaults to `false`.
+|tier|String|Data tier to read from: `"auto"`, `"raw"`, `"hourly"`, or `"daily"`. Optional, defaults to `"auto"`.
+|function|String|Aggregation function for tiered data: `"avg"`, `"min"`, or `"max"`. Optional, defaults to `"avg"`.
+|===
++
+.Return
+Array of value strings ordered from latest to earliest, or `null` on failure or if this is a table DCI.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+dci = $node.findDCIByName("System.CPU.Usage");
+values = dci.getValues(time() - 3600); // Values for last hour
+for (v : values)
+   println(v);
+....
+
+[[dci-getValuesAsDataPoints]]
+getValuesAsDataPoints(timeFrom, timeTo, rawValue, tier, function) => <<class-array,Array>>::
+Get all collected values for this DCI within the given period, returning them as <<class-datapoint,DataPoint>> objects. Only works for single value DCIs.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|timeFrom|Integer|Start of the period (as UNIX timestamp).
+|timeTo|Integer|End of the period (as UNIX timestamp). Optional, current time is used if not specified.
+|rawValue|Boolean|`true` to return raw values, `false` for transformed values. Optional, defaults to `false`.
+|tier|String|Data tier to read from: `"auto"`, `"raw"`, `"hourly"`, or `"daily"`. Optional, defaults to `"auto"`.
+|function|String|Aggregation function for tiered data: `"avg"`, `"min"`, or `"max"`. Optional, defaults to `"avg"`.
+|===
++
+.Return
+Array of <<class-datapoint,DataPoint>> objects ordered from latest to earliest, or `null` on failure or if this is a table DCI.
++
+NOTE: The input parameters `timeFrom` and `timeTo` accept timestamps in seconds, but the returned <<class-datapoint,DataPoint>> objects contain timestamps in milliseconds since epoch.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+dci = $node.findDCIByName("System.CPU.Usage");
+dataPoints = dci.getValuesAsDataPoints(time() - 3600);
+for (dp : dataPoints)
+   println("Timestamp: " .. dp.timestamp .. ", Value: " .. dp.value);
+....
 --
 
 .See also
