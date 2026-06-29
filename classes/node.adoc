@@ -309,15 +309,15 @@ isVirtual: bool::
 
 [[node-isVRRP]]
 isVRRP: bool::
-`TURE` if VRRP supported.
+`TRUE` if VRRP supported.
 
 [[node-isWirelessAP]]
 isWirelessAP: bool::
-`TURE` if node is wireless access point
+`TRUE` if node is wireless access point
 
 [[node-isWirelessController]]
 isWirelessController: bool::
-`TURE` if node is wireless controller
+`TRUE` if node is wireless controller
 
 [[node-lastAgentCommTime]]
 lastAgentCommTime: int::
