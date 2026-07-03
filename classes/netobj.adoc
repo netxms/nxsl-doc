@@ -454,6 +454,25 @@ Sets object's name, that will be used to display object on network map
 |name|String|New object's name on map
 |===
 
+[[netobj-setPostalAddress]]
+setPostalAddress(country, region, city, district, streetAddress, postcode): void::
++
+[.version-added]
+Added in version 6.2
++
+Sets object's postal address. Each argument must be a string or `null`. A `null` or empty value clears the corresponding field.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|country|String|Country. `null` or empty to clear.
+|region|String|Region. `null` or empty to clear.
+|city|String|City. `null` or empty to clear.
+|district|String|District. `null` or empty to clear.
+|streetAddress|String|Street address. `null` or empty to clear.
+|postcode|String|Postal code. `null` or empty to clear.
+|===
+
 [[netobj-setStatusCalculation]]
 setStatusCalculation(type, ...): void::
 Sets status calculation method.
