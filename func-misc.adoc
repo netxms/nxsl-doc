@@ -16,13 +16,11 @@ include::functions/formatmetricprefix.adoc[]
 
 include::functions/findvendorbymacaddress.adoc[]
 
-<<<<<<< Updated upstream
-include::functions/getavailablepackages.adoc[]
-=======
 include::functions/getaioperator.adoc[]
 include::functions/getaioperators.adoc[]
 
->>>>>>> Stashed changes
+include::functions/getavailablepackages.adoc[]
+
 include::functions/getconfigurationvariable.adoc[]
 
 include::functions/getmappingtablekeys.adoc[]

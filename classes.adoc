@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 // Class Reference - organized by domain
 // Each class shows all attributes including inherited ones via collapsible sections
 
@@ -6,50 +5,6 @@
 
 These are the foundational classes from which other classes inherit.
 
-=======
-include::classes/accesspoint.adoc[]
-include::classes/aioperator.adoc[]
-include::classes/alarm.adoc[]
-include::classes/alarmcomment.adoc[]
-include::classes/asset.adoc[]
-include::classes/assetproperties.adoc[]
-include::classes/businessservice.adoc[]
-include::classes/businessservicecheck.adoc[]
-include::classes/bytestream.adoc[]
-include::classes/chassis.adoc[]
-include::classes/circuit.adoc[]
-include::classes/class.adoc[]
-include::classes/clientsession.adoc[]
-include::classes/cluster.adoc[]
-include::classes/collector.adoc[]
-include::classes/component.adoc[]
-include::classes/container.adoc[]
-include::classes/datacollectiontarget.adoc[]
-include::classes/datetime.adoc[]
-include::classes/dci.adoc[]
-include::classes/discoveredinterface.adoc[]
-include::classes/discoverednode.adoc[]
-include::classes/downtimeinfo.adoc[]
-include::classes/event.adoc[]
-include::classes/file.adoc[]
-include::classes/geolocation.adoc[]
-include::classes/hardwarecomponent.adoc[]
-include::classes/inetaddress.adoc[]
-include::classes/interface.adoc[]
-include::classes/jsonarray.adoc[]
-include::classes/jsonobject.adoc[]
-include::classes/ldapobject.adoc[]
-include::classes/linkdatasource.adoc[]
-include::classes/macaddress.adoc[]
-include::classes/maintenancejournalrecord.adoc[]
-include::classes/mobiledevice.adoc[]
-include::classes/netobj.adoc[]
-include::classes/networkmap.adoc[]
-include::classes/networkmaplink.adoc[]
-include::classes/networkpathcheckresult.adoc[]
-include::classes/node.adoc[]
-include::classes/nodedependency.adoc[]
->>>>>>> Stashed changes
 include::classes/object.adoc[]
 include::classes/netobj.adoc[]
 include::classes/datacollectiontarget.adoc[]
@@ -175,3 +130,9 @@ include::classes/ospfneighbor.adoc[]
 Classes for LDAP directory integration.
 
 include::classes/ldapobject.adoc[]
+
+=== AI Components
+
+Classes for AI subsystem.
+
+include::classes/aioperator.adoc[]
