@@ -1,0 +1,26 @@
+[.nxsl-function]
+[[func-getaioperators]]
+== GetAIOperators()
+
+[source,c]
+----
+GetAIOperators() => array
+----
+
+Get all AI operator instances configured on the server. Caller must have
+"Manage AI operators" system access right; for scripts executed without user
+context (e.g. from event processing policy) access is always granted.
+
+.Return
+Array of <<class-aioperator>> objects (empty array if access is denied).
+
+.Example
+[.source]
+....
+>>> for (op : GetAIOperators()) {
+>>>   println(op.id . " - " . op.name . " (iteration " . op.iteration . ")");
+>>> }
+
+1 - Operator1 (iteration 42)
+2 - Network edge watchdog (iteration 7)
+....

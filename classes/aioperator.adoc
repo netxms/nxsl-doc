@@ -1,0 +1,82 @@
+[.nxsl-class]
+[[class-aioperator]]
+=== AIOperator
+
+Represents AI operator instance - a perpetual adaptive monitoring loop executed
+by the server AI assistant. Objects of this class are read-only and can be
+obtained with <<func-getaioperator>> and <<func-getaioperators>> functions.
+
+==== Instance attributes
+
+`consecutiveFailures => Integer`::
+Number of consecutive failed iterations. Reset to 0 after a successful iteration.
+
+`creationTime => Integer`::
+link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of instance creation.
+
+`currentFocus => String`::
+Short description of what the operator is currently focusing on, set by the
+operator itself on each iteration.
+
+`dailyTokenBudget => Integer`::
+Daily LLM token budget (0 means unlimited).
+
+`description => String`::
+Instance description.
+
+`enabled => Boolean`::
+True if the instance is enabled.
+
+`executing => Boolean`::
+True if an iteration is currently being executed.
+
+`id => Integer`::
+Unique instance ID.
+
+`iteration => Integer`::
+Iteration counter (reset when accumulated state is reset).
+
+`lastExecutionTime => Integer`::
+link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of last executed iteration
+(0 if never executed).
+
+`lastExplanation => String`::
+Explanation of results or error message from the last iteration.
+
+`maxInterval => Integer`::
+Maximum interval between iterations in seconds.
+
+`memento => String`::
+Operator's persistent memory carried between iterations (usually a JSON document,
+can be parsed with `JsonParse()`).
+
+`minInterval => Integer`::
+Minimum interval between iterations in seconds.
+
+`modelSlot => String`::
+LLM provider slot used by this instance (empty string if default slot is used).
+
+`modificationTime => Integer`::
+link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of last configuration change.
+
+`name => String`::
+Instance name.
+
+`nextExecutionTime => Integer`::
+link:https://en.wikipedia.org/wiki/Unix_time[Unix timestamp] of next scheduled iteration.
+
+`ownerUserId => Integer`::
+ID of the user account the operator runs as.
+
+`personaPrompt => String`::
+Additional persona instructions appended to the operator system prompt.
+
+`scopeFilter => String`::
+Description of the monitoring scope given to the operator.
+
+`tokensUsedToday => Integer`::
+Number of LLM tokens used within the current day (UTC).
+
+`watchList => String`::
+List of entities the operator is currently watching, set by the operator
+itself on each iteration (usually a JSON document, can be parsed with `JsonParse()`).

@@ -1,0 +1,32 @@
+[.nxsl-function]
+[[func-getaioperator]]
+== GetAIOperator()
+
+[source,c]
+----
+GetAIOperator(id) => AIOperator
+----
+
+Get AI operator instance by ID. Caller must have "Manage AI operators" system
+access right; for scripts executed without user context (e.g. from event
+processing policy) access is always granted.
+
+.Parameters
+[cols="1,1,4a"]
+|===
+|id |Integer |AI operator instance ID
+
+|===
+
+.Return
+<<class-aioperator>> object or null if instance with given ID does not exist
+or access is denied.
+
+.Example
+[.source]
+....
+>>> op = GetAIOperator(1);
+>>> println(op.name . " enabled=" . op.enabled . " focus: " . op.currentFocus);
+
+Operator1 enabled=true focus: Monitoring core switch interface errors
+....
