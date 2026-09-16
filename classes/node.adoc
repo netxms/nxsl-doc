@@ -301,6 +301,13 @@ isNETCONF: bool::
 [.version-added]
 Added in version 7.0
 
+[[node-isObserved]]
+isObserved: bool::
+`TRUE` if this node is matched as a host by at least one <<class-observationpoint>> of a <<class-trafficobserver>>.
++
+[.version-added]
+Added in version 7.0
+
 [[node-isOSPF]]
 isOSPF: bool::
 `TRUE` if node supports OSPF/NDP. Equivalent of `isNDP`.
@@ -424,6 +431,13 @@ Node sub type
 [[class-node-types,Node::types]]
 nodeType: int::
 Node type <<node-types>>
+
+[[node-observationPoints]]
+observationPoints: <<class-array,Array>>::
+Array of <<class-observationpoint>> objects at which this node was observed. Empty array if the node is not observed.
++
+[.version-added]
+Added in version 7.0
 
 [[node-ospfAreas]]
 ospfAreas => <<class-ospfarea>>::

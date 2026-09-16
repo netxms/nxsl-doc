@@ -283,6 +283,7 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |<<class-node,Node>>|Network Objects
 |<<class-nodedependency,NodeDependency>>|Discovery and Diagnostics
 |<<class-object,Object>>|Base Classes
+|<<class-observationpoint,ObservationPoint>>|Traffic Observation
 |<<class-ospfarea,OSPFArea>>|OSPF and Routing
 |<<class-ospfneighbor,OSPFNeighbor>>|OSPF and Routing
 |<<class-radiointerface,RadioInterface>>|Hardware and Software
@@ -300,6 +301,7 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |<<class-tablecolumn,TableColumn>>|Data Collection
 |<<class-tablerow,TableRow>>|Data Collection
 |<<class-template,Template>>|Infrastructure
+|<<class-trafficobserver,TrafficObserver>>|Traffic Observation
 |<<class-tunnel,Tunnel>>|Network Objects
 |<<class-user,User>>|Users and Security
 |<<class-userdbobject,UserDBObject>>|Users and Security

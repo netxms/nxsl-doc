@@ -1,0 +1,71 @@
+[.nxsl-class]
+[[class-observationpoint]]
+=== ObservationPoint
+
+Represents observation point of a <<class-trafficobserver>>: a place in the network where traffic is observed by the backend system (flow exporter, mirror port, probe). Hosts seen at an observation point are matched to nodes; see <<node-isObserved,Node::isObserved>> and <<node-observationPoints,Node::observationPoints>>. Extends <<class-datacollectiontarget>>.
+
+[.version-added]
+Added in version 7.0
+
+==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
+
+include::_shared/datacollectiontarget-attrs.adoc[]
+
+[.attr-list]
+--
+[[observationpoint-effectiveZoneUIN]]
+effectiveZoneUIN: int::
+Zone UIN effectively used for matching observed hosts to nodes: point's own <<observationpoint-zoneUIN,zoneUIN>> if set, otherwise zone UIN of the owning observer.
+
+[[observationpoint-externalId]]
+externalId: <<class-string,String>>::
+Identifier of the observation point in the backend system.
+
+[[observationpoint-inScope]]
+inScope: bool::
+`TRUE` if observation point is in scope for host matching and data collection.
+
+[[observationpoint-lastDiscoveryTime]]
+lastDiscoveryTime: int64::
+UNIX timestamp of the last discovery run in which this observation point was reported by the backend.
+
+[[observationpoint-localNetworks]]
+localNetworks: <<class-string,String>>::
+Local networks configured for the observation point in the backend system (provider-specific format).
+
+[[observationpoint-observer]]
+observer => <<class-trafficobserver>>::
+Owning <<class-trafficobserver>> object, or `null`.
+
+[[observationpoint-pointState]]
+pointState: int::
+State of the observation point as reported by the backend:
++
+* 0: unknown
+* 1: active
+* 2: inactive
+
+[[observationpoint-pointType]]
+pointType: <<class-string,String>>::
+Type of the observation point as reported by the backend (for example `netflow` or `mirror`).
+
+[[observationpoint-providerState]]
+providerState: <<class-string,String>>::
+Observation point state as reported by the backend (provider-specific string).
+
+[[observationpoint-samplingRate]]
+samplingRate: int::
+Sampling rate configured for the observation point (`1` means every packet or flow is observed, `N` means one in `N`), or `0` if unknown.
+
+[[observationpoint-zoneUIN]]
+zoneUIN: int::
+Zone UIN configured for this observation point, or `-1` if not set (zone of the observer is used).
+--
+
+==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
+
+include::_shared/datacollectiontarget-methods.adoc[]

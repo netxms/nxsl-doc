@@ -74,6 +74,13 @@ Classes representing cloud accounts and resources discovered through cloud conne
 include::classes/clouddomain.adoc[]
 include::classes/resource.adoc[]
 
+=== Traffic Observation
+
+Classes representing external traffic analysis systems and their observation points.
+
+include::classes/trafficobserver.adoc[]
+include::classes/observationpoint.adoc[]
+
 === Users and Security
 
 Classes for user and group management.

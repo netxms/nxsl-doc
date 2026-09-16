@@ -1,0 +1,102 @@
+[.nxsl-class]
+[[class-trafficobserver]]
+=== TrafficObserver
+
+Represents traffic observer: an external network traffic analysis system (flow collector, packet analyzer) integrated through a traffic connector. Observation points discovered on the observer are represented by <<class-observationpoint>> objects placed under it. Extends <<class-datacollectiontarget>>.
+
+[.version-added]
+Added in version 7.0
+
+==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
+
+include::_shared/datacollectiontarget-attrs.adoc[]
+
+[.attr-list]
+--
+[[trafficobserver-capabilities]]
+capabilities: int64::
+Bit mask of capabilities reported by the traffic connector:
++
+* 0x01: per-host application (layer 7) statistics
+* 0x02: per-host peer statistics
+* 0x04: per-observation-point application (layer 7) statistics
+* 0x08: per-observation-point top talkers
+* 0x10: per-observation-point DSCP statistics
+* 0x20: historical time series
+* 0x40: host alias synchronization
+* 0x80: active host set returned by the backend is complete (not a top-N approximation)
+
+[[trafficobserver-connectionState]]
+connectionState: int::
+Current state of the connection to the backend system:
++
+* 0: unknown
+* 1: connected
+* 2: unreachable
+* 3: authentication failure
+
+[[trafficobserver-connectorName]]
+connectorName: <<class-string,String>>::
+Name of the traffic connector used for this observer.
+
+[[trafficobserver-edition]]
+edition: <<class-string,String>>::
+Edition of the backend product as reported by the connector.
+
+[[trafficobserver-gracePeriod]]
+gracePeriod: int::
+Grace period in days. Used with <<trafficobserver-removalPolicy,removalPolicy>> `1`: observation point that is no longer reported by the backend is deleted after it has been missing for this many days.
+
+[[trafficobserver-lastDiscoveryStatus]]
+lastDiscoveryStatus: int::
+Status of the last observation point discovery: `0` if discovery completed successfully, non-zero if it failed.
+
+[[trafficobserver-lastDiscoveryTime]]
+lastDiscoveryTime: int64::
+UNIX timestamp of the last observation point discovery, or `0` if discovery was never run.
+
+[[trafficobserver-linkedNode]]
+linkedNode => <<class-node>>::
+<<class-node>> object representing the backend system itself, or `null` if not linked.
+
+[[trafficobserver-points]]
+points: <<class-array,Array>>::
+Array of <<class-observationpoint>> objects under this observer.
+
+[[trafficobserver-product]]
+product: <<class-string,String>>::
+Name of the backend product as reported by the connector.
+
+[[trafficobserver-removalPolicy]]
+removalPolicy: int::
+What to do with observation points that are no longer reported by the backend:
++
+* 0: mark observation point as inactive
+* 1: mark observation point as inactive and delete it after <<trafficobserver-gracePeriod,gracePeriod>> days
+* 2: delete observation point immediately
+
+[[trafficobserver-version]]
+version: <<class-string,String>>::
+Version of the backend product as reported by the connector.
+
+[[trafficobserver-zoneUIN]]
+zoneUIN: int::
+Zone UIN used for matching observed hosts to nodes, or `-1` if hosts are matched in all zones.
+--
+
+==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
+
+include::_shared/datacollectiontarget-methods.adoc[]
+
+[.source]
+....
+observer = FindObject("ntopng-dc1");
+if (observer.connectionState != 1)
+   println("Traffic observer " .. observer.name .. " is not connected");
+for (p : observer.points)
+   println(p.name .. ": " .. (p.pointState == 1 ? "active" : "inactive"));
+....
