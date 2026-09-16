@@ -49,9 +49,10 @@ Should be used in order to return errors in script DCIs or in transoformation sc
 [cols="2,7a" grid="none", frame="none"]
 |===
 |Constant|Description
-|DataCollection::ERROR|DCI collection eeror
-|DataCollection::NO_SUCH_INSTANCE|No sutch instance error
-|DataCollection::NOT_SUPPORTED|Not supported eeror
+|DataCollection::ERROR|DCI collection error
+|DataCollection::INVALID_DATA|Collected data is invalid (for example, cannot be parsed or converted to the DCI data type). [.version-added]#Added in version 7.0#
+|DataCollection::NO_SUCH_INSTANCE|No such instance error
+|DataCollection::NOT_SUPPORTED|Not supported error
 |===
 
 [[const-dci-states]]
@@ -84,7 +85,13 @@ Should be used in order to return errors in script DCIs or in transoformation sc
 |DataSource::SSH|8|SSH
 |DataSource::MQTT|9|MQTT
 |DataSource::DEVICE_DRIVER|10|Network Device driver
-|DataSource::MODBUS|11|MQTT
+|DataSource::MODBUS|11|MODBUS
+|DataSource::ETHERNET_IP|12|EtherNet/IP. [.version-added]#Added in version 6.1#
+|DataSource::CLOUD_CONNECTOR|13|Cloud connector. [.version-added]#Added in version 6.1#
+|DataSource::OTLP|14|OpenTelemetry (OTLP). [.version-added]#Added in version 6.1#
+|DataSource::TRAFFIC_OBSERVER|15|Traffic observer. [.version-added]#Added in version 7.0#
+|DataSource::NETCONF|16|NETCONF. [.version-added]#Added in version 7.0#
+|DataSource::COMPUTED|17|Computed (value calculated from other DCIs). [.version-added]#Added in version 7.0#
 |===
 
 [[const-dci-flags]]
@@ -121,6 +128,7 @@ Should be used in order to return errors in script DCIs or in transoformation sc
 |EventOrigin::NXSL|5|NXSL
 |EventOrigin::REMOTE_SERVER|6|Remote server
 |EventOrigin::WINDOWS_EVENT|7|Windows event
+|EventOrigin::OPENTELEMETRY|8|OpenTelemetry. [.version-added]#Added in version 6.2#
 |===
 
 [[const-hardware-component-category]]
@@ -342,7 +350,7 @@ Node attributes change code
 Node capability flags. Used with <<class-node>> attributes `capabilities` and `expectedCapabilities`, and with <<node-setExpectedCapabilities,Node::setExpectedCapabilities()>> method.
 
 [.version-added]
-Added in version 5.2. [.version-added]#Additional constants added in version 6.0: `LocalManagement`, `NewPolicyTypes`, `ServiceManager`, `SSHInteractiveChannel`, `SSHCommandChannel`.#
+Added in version 5.2. [.version-added]#Additional constants added in version 6.0: `LocalManagement`, `NewPolicyTypes`, `ServiceManager`, `SSHInteractiveChannel`, `SSHCommandChannel`.# [.version-added]#Added in version 6.2: `AgentLLDP`.#
 
 [cols="2,1,7a" grid="none", frame="none"]
 |===
@@ -385,6 +393,7 @@ Added in version 5.2. [.version-added]#Additional constants added in version 6.0
 |NodeCapability::ServiceManager|0x0400000000|Node has service manager accessible via NetXMS agent
 |NodeCapability::SSHInteractiveChannel|0x0800000000|Interactive (shell) SSH channel can be established
 |NodeCapability::SSHCommandChannel|0x1000000000|SSH command channel can be established
+|NodeCapability::AgentLLDP|0x2000000000|Agent exposes LLDP neighbor information (`LLDP.Neighbors` table)
 |===
 
 == Other constants
