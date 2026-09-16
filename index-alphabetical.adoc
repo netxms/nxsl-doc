@@ -272,6 +272,7 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |<<class-macaddress,MacAddress>>|Networking Utilities
 |<<class-maintenancejournalrecord,MaintenanceJournalRecord>>|Discovery and Diagnostics
 |<<class-mobiledevice,MobileDevice>>|Infrastructure
+|<<class-netconfsession,NETCONFSession>>|Networking Utilities
 |<<class-netobj,NetObj>>|Base Classes
 |<<class-networkmap,NetworkMap>>|Network Objects
 |<<class-networkmaplink,NetworkMapLink>>|Network Objects

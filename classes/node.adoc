@@ -294,6 +294,13 @@ isNativeAgent: bool::
 isNDP: bool::
 `TRUE` if node supports OSPF/NDP. Equivalent of `isOSPF`.
 
+[[node-isNETCONF]]
+isNETCONF: bool::
+`TRUE` if node supports NETCONF protocol.
++
+[.version-added]
+Added in version 7.0
+
 [[node-isOSPF]]
 isOSPF: bool::
 `TRUE` if node supports OSPF/NDP. Equivalent of `isNDP`.
@@ -377,6 +384,34 @@ MODBUS TCP port
 [[node-modbusUnitId]]
 modbusUnitId: int::
 MODBUS unit id
+
+[[node-netconfCapabilities]]
+netconfCapabilities: <<class-array,Array>>::
+NETCONF capabilities announced by the device during last configuration poll, as array of capability URI strings. Empty array if node does not support NETCONF.
++
+[.version-added]
+Added in version 7.0
+
+[[node-netconfPort]]
+netconfPort: int::
+TCP port used for NETCONF connections.
++
+[.version-added]
+Added in version 7.0
+
+[[node-netconfProxy]]
+netconfProxy => <<class-node>>::
+Object that is set as NETCONF proxy in node properties or `null`.
++
+[.version-added]
+Added in version 7.0
+
+[[node-netconfProxyId]]
+netconfProxyId: int::
+ID of the object that is set as NETCONF proxy in node properties, or `0` if not set.
++
+[.version-added]
+Added in version 7.0
 
 [[node-networkPathCheckResult]]
 networkPathCheckResult => <<class-networkpathcheckresult>>::
@@ -713,6 +748,19 @@ Enable or disable usage of Modbus TCP for polls.
 |flag|Boolean|If Modbus TCP should be enabled.
 |===
 
+[[node-enableNetconf]]
+enableNetconf(flag): void::
+Enable or disable usage of NETCONF protocol.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|If NETCONF communication should be enabled.
+|===
++
+[.version-added]
+Added in version 7.0
+
 [[node-enablePrimaryIPPing]]
 enablePrimaryIPPing(flag): void::
 Enable or disable usage of ICMP ping for primary IP.
@@ -1036,6 +1084,26 @@ Get web service object by name.
 [.source]
 ....
 webSvc = $node.getWebService("webSvcName");
+....
+
+[[node-openNETCONFSession]]
+openNETCONFSession() => <<class-netconfsession>>::
+Open NETCONF session to this node. Operations are executed through the node's effective NETCONF proxy; see <<class-netconfsession>> for details and limitations.
++
+.Return
+<<class-netconfsession>> object, or `null` if caller has no control access to the node.
++
+[.version-added]
+Added in version 7.0
++
+[.source]
+....
+session = $node.openNETCONFSession();
+if (session != null)
+{
+   hostname = session.get("<system xmlns=\"urn:ietf:params:xml:ns:yang:ietf-system\"><hostname/></system>");
+   println(hostname);
+}
 ....
 
 [[class-node-opensshsession,Node::openSSHSession()]]

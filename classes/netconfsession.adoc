@@ -1,0 +1,142 @@
+[.nxsl-class]
+[[class-netconfsession]]
+=== NETCONFSession
+
+Represents a NETCONF session to a network device. NETCONFSession objects are created with <<node-openNETCONFSession,Node::openNETCONFSession()>> method.
+
+Each operation is executed as a separate request through the node's effective NETCONF proxy, and consecutive calls may be served by different pooled NETCONF sessions on the proxy agent. Operations whose effect is bound to a single NETCONF session (`lock`, `unlock`, `kill-session`, `close-session`, and confirmed `commit` without `persist`) are therefore not supported.
+
+All methods return `null` or `false` on failure; the reason is available in <<netconfsession-lastErrorMessage,lastErrorMessage>> attribute.
+
+[.version-added]
+Added in version 7.0
+
+==== Instance attributes
+
+[.attr-list]
+--
+[[netconfsession-lastErrorMessage]]
+lastErrorMessage: <<class-string,String>>::
+Text description of the last error, or empty string if the last operation completed successfully. For <<netconfsession-rpc,rpc()>> calls, contains text of `rpc-error` element if the device returned an error reply.
+
+[[netconfsession-nodeId]]
+nodeId: int::
+ID of the node this session is connected to.
+--
+
+==== Instance methods
+
+[.method-list]
+--
+[[netconfsession-commit]]
+commit(): bool::
+Commit candidate configuration to the running configuration (NETCONF `commit` operation). Requires `:candidate` capability on the device.
++
+.Return
+`true` on success, `false` on failure.
+
+[[netconfsession-discardChanges]]
+discardChanges(): bool::
+Revert candidate configuration to the current running configuration (NETCONF `discard-changes` operation). Requires `:candidate` capability on the device.
++
+.Return
+`true` on success, `false` on failure.
+
+[[netconfsession-editConfig]]
+editConfig(config, target, defaultOperation): bool::
+Modify configuration datastore (NETCONF `edit-config` operation).
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|config|String|Configuration to apply as XML document (content of the `config` element).
+|target|String|Target datastore: `"running"`, `"candidate"`, or `"startup"`. Optional, `"running"` if omitted or `null`.
+|defaultOperation|String|Default operation for the configuration elements: `"merge"`, `"replace"`, or `"none"`. Optional, device default (normally `merge`) is used if omitted or `null`.
+|===
++
+.Return
+`true` on success, `false` if configuration document or arguments are invalid, or the device returned an error.
++
+[.source]
+....
+session = $node.openNETCONFSession();
+config = "<interfaces xmlns=\"urn:ietf:params:xml:ns:yang:ietf-interfaces\">" ..
+         "<interface><name>eth1</name><description>Uplink to core</description></interface>" ..
+         "</interfaces>";
+if (session.editConfig(config, "candidate"))
+{
+   if (!session.commit())
+      println("Commit failed: " .. session.lastErrorMessage);
+}
+else
+{
+   println("Edit failed: " .. session.lastErrorMessage);
+}
+....
+
+[[netconfsession-get]]
+get(filter, filterType): <<class-string,String>>::
+Retrieve running configuration and device state information (NETCONF `get` operation).
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|filter|String|Filter limiting the returned data: XML subtree filter or XPath expression, depending on `filterType`. Optional, all data is returned if omitted or `null`.
+|filterType|String|Filter type: `"subtree"` or `"xpath"`. Optional, `"subtree"` if omitted or `null`. XPath filters require `:xpath` capability on the device.
+|===
++
+.Return
+Content of the `data` element of the reply as XML string, or `null` on failure.
++
+[.source]
+....
+session = $node.openNETCONFSession();
+data = session.get("<system xmlns=\"urn:ietf:params:xml:ns:yang:ietf-system\"><hostname/></system>");
+if (data != null)
+   println(data);
+else
+   println("NETCONF error: " .. session.lastErrorMessage);
+....
+
+[[netconfsession-getConfig]]
+getConfig(datastore, filter, filterType): <<class-string,String>>::
+Retrieve configuration from the given datastore (NETCONF `get-config` operation).
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|datastore|String|Source datastore: `"running"`, `"candidate"`, or `"startup"`. Optional, `"running"` if omitted or `null`.
+|filter|String|Filter limiting the returned data: XML subtree filter or XPath expression, depending on `filterType`. Optional, full configuration is returned if omitted or `null`.
+|filterType|String|Filter type: `"subtree"` or `"xpath"`. Optional, `"subtree"` if omitted or `null`.
+|===
++
+.Return
+Content of the `data` element of the reply as XML string, or `null` on failure.
++
+[.source]
+....
+session = $node.openNETCONFSession();
+interfaces = session.getConfig("running", "/if:interfaces/if:interface/if:name", "xpath");
+....
+
+[[netconfsession-rpc]]
+rpc(content): <<class-string,String>>::
+Execute arbitrary NETCONF RPC. Use this method for operations not covered by other methods, such as vendor-specific RPCs.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|content|String|RPC operation element as XML (without the `rpc` envelope).
+|===
++
+.Return
+Full `rpc-reply` document as XML string, or `null` if the content is not valid XML, the operation is session-scoped (see above), or communication with the device failed. Note that a reply containing `rpc-error` is still returned; check <<netconfsession-lastErrorMessage,lastErrorMessage>> to detect it.
++
+[.source]
+....
+session = $node.openNETCONFSession();
+reply = session.rpc("<get-schema xmlns=\"urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring\"><identifier>ietf-interfaces</identifier></get-schema>");
+if ((reply == null) || (session.lastErrorMessage != ""))
+   println("Error: " .. session.lastErrorMessage);
+....
+--

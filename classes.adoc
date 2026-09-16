@@ -86,6 +86,7 @@ include::classes/geolocation.adoc[]
 include::classes/snmptransport.adoc[]
 include::classes/snmpvarbind.adoc[]
 include::classes/sshsession.adoc[]
+include::classes/netconfsession.adoc[]
 include::classes/webservice.adoc[]
 include::classes/webserviceresponse.adoc[]
 
