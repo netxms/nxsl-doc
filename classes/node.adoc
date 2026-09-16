@@ -419,6 +419,13 @@ Bit mask of <<node-runtime-flags>>, `uint32`.
 serialNumber: <<class-string,String>>::
 Serial number from hardware system property
 
+[[node-snmpAgentNames]]
+snmpAgentNames: <<class-array,Array>>::
+Names of additional SNMP agents configured on this node, as array of strings. Use <<node-createSNMPTransportForAgent,createSNMPTransportForAgent()>> to communicate with a specific additional agent.
++
+[.version-added]
+Added in version 7.0
+
 [[node-snmpOID]]
 snmpOID: <<class-string,String>>::
 SNMP object identifier (result of `1.3.6.1.2.1.1.2.0` request)
@@ -549,6 +556,16 @@ result = $node.callWebService("Web service name", "GET", "additional", "paramete
 result = $node.callWebService("Web service name", "GET", acceptCached: true, "additional", "parameters);
 ....
 
+[[node-clearSNMPTrapCredentials]]
+clearSNMPTrapCredentials(): bool::
+Remove separate SNMP trap credentials set with <<node-setSNMPTrapCommunity,setSNMPTrapCommunity()>> or <<node-setSNMPTrapUSMCredentials,setSNMPTrapUSMCredentials()>>. After this call, incoming traps are validated against the node's polling credentials again.
++
+.Return
+`TRUE` on success, `FALSE` if caller has no modify access to the node.
++
+[.version-added]
+Added in version 6.2
+
 [[node-createSNMPTransport]]
 createSNMPTransport(port, community, context, failIfUnreachable) => <<class-snmptransport>>::
 Create SNMP transport object of class <<class-snmptransport>> with communication settings defined on the node. It is possible to specify a community string but only community strings listed in Network Credentials will be accepted.
@@ -569,6 +586,33 @@ Added in version 4.4.1: `failIfUnreachable` parameter
 +
 .Return
 Instance of <<class-snmptransport>> or `null` if failed or node was not reacheable when failIfUnreachable was set to true.
+
+[[node-createSNMPTransportForAgent]]
+createSNMPTransportForAgent(name, failIfUnreachable) => <<class-snmptransport>>::
+Create SNMP transport object of class <<class-snmptransport>> for an additional SNMP agent configured on this node. Additional agents are selected by name; available names are listed in <<node-snmpAgentNames,snmpAgentNames>> attribute.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Name of the additional SNMP agent.
+|failIfUnreachable|Boolean|Optional parameter, if provided and is true, check that node is reachable before creating SNMP transport.
+|===
++
+.Return
+Instance of <<class-snmptransport>> or `null` if agent with given name is not configured, caller has no SNMP read access to the node, or node is unreachable and `failIfUnreachable` is true.
++
+[.version-added]
+Added in version 7.0
++
+[.source]
+....
+transport = $node.createSNMPTransportForAgent("ups");
+if (transport != null)
+{
+   v = transport.getValue(".1.3.6.1.2.1.33.1.2.4.0");  // upsEstimatedMinutesRemaining
+   println("Minutes remaining: " .. v);
+}
+....
 
 [[node-enable8021xStatusPolling]]
 enable8021xStatusPolling(flag): void::
@@ -1099,6 +1143,106 @@ Set the required number of polls before registering a status change.
 |===
 |count|Integer|Number of polls (must be >= 0) or 0 to use system default.
 |===
+
+[[node-setSNMPCommunity]]
+setSNMPCommunity(community): bool::
+Set SNMP community string used for polling this node (SNMP version 1 and 2c).
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|community|String|Community string.
+|===
++
+.Return
+`TRUE` on success, `FALSE` if caller has no modify access to the node.
++
+[.version-added]
+Added in version 6.2
+
+[[node-setSNMPTrapCommunity]]
+setSNMPTrapCommunity(community): bool::
+Set separate community string for validating SNMP traps received from this node (SNMP version 1 and 2c). If not set, traps are validated against polling credentials. Use <<node-clearSNMPTrapCredentials,clearSNMPTrapCredentials()>> to remove it.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|community|String|Community string.
+|===
++
+.Return
+`TRUE` on success, `FALSE` if caller has no modify access to the node.
++
+[.version-added]
+Added in version 6.2
+
+[[node-setSNMPTrapUSMCredentials]]
+setSNMPTrapUSMCredentials(userName, authPassword, privPassword, authMethod, privMethod): bool::
+Set separate SNMP version 3 USM credentials for validating SNMP traps received from this node. If not set, traps are validated against polling credentials. Use <<node-clearSNMPTrapCredentials,clearSNMPTrapCredentials()>> to remove them.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|userName|String|USM user name.
+|authPassword|String|Authentication password.
+|privPassword|String|Privacy (encryption) password.
+|authMethod|String or Integer|Authentication method: `"none"`, `"md5"`, `"sha1"`, `"sha224"`, `"sha256"`, `"sha384"`, `"sha512"` (case-insensitive), or numeric value 0-6 in the same order.
+|privMethod|String or Integer|Privacy method: `"none"`, `"des"`, `"aes-128"`, `"aes-192"`, `"aes-256"` (case-insensitive), or numeric value 0-4 in the same order.
+|===
++
+.Return
+`TRUE` on success, `FALSE` if caller has no modify access to the node or authentication or privacy method is invalid.
++
+[.version-added]
+Added in version 6.2
+
+[[node-setSNMPUSMCredentials]]
+setSNMPUSMCredentials(userName, authPassword, privPassword, authMethod, privMethod): bool::
+Set SNMP version 3 USM credentials used for polling this node. Node's SNMP version is switched to 3.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|userName|String|USM user name.
+|authPassword|String|Authentication password.
+|privPassword|String|Privacy (encryption) password.
+|authMethod|String or Integer|Authentication method: `"none"`, `"md5"`, `"sha1"`, `"sha224"`, `"sha256"`, `"sha384"`, `"sha512"` (case-insensitive), or numeric value 0-6 in the same order.
+|privMethod|String or Integer|Privacy method: `"none"`, `"des"`, `"aes-128"`, `"aes-192"`, `"aes-256"` (case-insensitive), or numeric value 0-4 in the same order.
+|===
++
+.Return
+`TRUE` on success, `FALSE` if caller has no modify access to the node or authentication or privacy method is invalid.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+$node.setSNMPUSMCredentials("monitor", "authpass123", "privpass123", "sha256", "aes-128");
+$node.forceConfigurationPoll();
+....
+
+[[node-setSNMPVersion]]
+setSNMPVersion(version): bool::
+Set SNMP version used for polling this node.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|version|String|SNMP version: `"1"`, `"2c"`, or `"3"`.
+|===
++
+.Return
+`TRUE` on success, `FALSE` if caller has no modify access to the node or version string is not recognized.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+$node.setSNMPVersion("2c");
+$node.setSNMPCommunity("public");
+....
 
 [[node-wakeUp]]
 wakeUp(): bool::
