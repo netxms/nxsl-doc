@@ -1144,6 +1144,45 @@ Set the required number of polls before registering a status change.
 |count|Integer|Number of polls (must be >= 0) or 0 to use system default.
 |===
 
+[[node-setProductCode]]
+setProductCode(code): void::
+Set product code of the node. Value set this way overrides value detected during configuration poll.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|code|String|New product code.
+|===
++
+[.version-added]
+Added in version 6.1
+
+[[node-setProductName]]
+setProductName(name): void::
+Set product name of the node. Value set this way overrides value detected during configuration poll.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New product name.
+|===
++
+[.version-added]
+Added in version 6.1
+
+[[node-setProductVersion]]
+setProductVersion(version): void::
+Set product version of the node. Value set this way overrides value detected during configuration poll.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|version|String|New product version.
+|===
++
+[.version-added]
+Added in version 6.1
+
 [[node-setSNMPCommunity]]
 setSNMPCommunity(community): bool::
 Set SNMP community string used for polling this node (SNMP version 1 and 2c).
@@ -1242,6 +1281,44 @@ Added in version 6.2
 ....
 $node.setSNMPVersion("2c");
 $node.setSNMPCommunity("public");
+....
+
+[[node-setSerialNumber]]
+setSerialNumber(serialNumber): void::
+Set serial number of the node. Value set this way overrides value detected during configuration poll.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|serialNumber|String|New serial number.
+|===
++
+[.version-added]
+Added in version 6.1
+
+[[node-setVendor]]
+setVendor(vendor): void::
+Set vendor of the node. Value set this way overrides value detected during configuration poll.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|vendor|String|New vendor name.
+|===
++
+[.version-added]
+Added in version 6.1
++
+[.source]
+....
+// Fill hardware information from custom attributes populated by an external inventory system
+vendor = $node.customAttributes["inv.vendor"];
+if (vendor != null)
+{
+   $node.setVendor(vendor);
+   $node.setProductName($node.customAttributes["inv.model"]);
+   $node.setSerialNumber($node.customAttributes["inv.serial"]);
+}
 ....
 
 [[node-wakeUp]]
