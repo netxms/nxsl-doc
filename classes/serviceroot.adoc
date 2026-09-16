@@ -34,6 +34,23 @@ Create new container under current object
 .Return
 Newly created container of <<class-container>> class.
 
+[[serviceroot-createFacility]]
+createFacility(name) => <<class-facility>>::
++
+[.version-added]
+Added in version 7.0
++
+Create new facility under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New facility's name
+|===
++
+.Return
+Newly created facility of <<class-facility>> class or NULL if failed to create.
+
 [[serviceroot-createNode]]
 createNode(name, primaryHostName, zoneUIN) => <<class-node>>::
 Create new node under current object.
@@ -48,6 +65,24 @@ Create new node under current object.
 +
 .Return
 Newly created node of <<class-node>> class or NULL if failed to create
+
+[[serviceroot-createRack]]
+createRack(name, height) => <<class-rack>>::
++
+[.version-added]
+Added in version 7.0
++
+Create new rack under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New rack's name
+|height|Integer|Optional. Rack height in units. `0` if omitted.
+|===
++
+.Return
+Newly created rack of <<class-rack>> class or NULL if failed to create.
 
 [[serviceroot-createSensor]]
 createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>::
