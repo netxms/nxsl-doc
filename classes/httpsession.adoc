@@ -1,0 +1,156 @@
+[.nxsl-class]
+[[class-httpsession]]
+=== HttpSession
+
+HTTP client session for executing multiple requests with shared settings, reused connections, and a cookie jar. Settings and authentication set on the session are defaults for all requests executed within it; a <<class-httprequest>> executed with <<httpsession-execute,execute()>> can override any of them. Session headers and request headers are merged, with request headers taking precedence.
+
+The same restrictions apply as for <<class-httprequest>>: HTTP requests from scripts must be enabled by server configuration and the caller must have the "HTTP requests from scripts" system access right.
+
+[.version-added]
+Added in version 7.0
+
+==== Instance attributes
+
+Settings attributes are the same as for <<class-httprequest>> and are writable: `followRedirects`, `headers`, `maxResponseSize`, `proxy`, `timeout`, `userAgent`, `verifyHost`, `verifyPeer`.
+
+[.attr-list]
+--
+[[httpsession-cookies]]
+cookies: HashMap::
+Cookies currently stored in the session's cookie jar, as hash map of cookie name to value.
+--
+
+==== Instance methods
+
+Authentication and header methods are the same as for <<class-httprequest>>: <<httpclient-clearAuth,clearAuth()>>, <<httpclient-removeHeader,removeHeader()>>, <<httpclient-setAuth,setAuth()>>, <<httpclient-setBasicAuth,setBasicAuth()>>, <<httpclient-setBearerAuth,setBearerAuth()>>, <<httpclient-setHeader,setHeader()>>.
+
+[.method-list]
+--
+[[httpsession-clearCookies]]
+clearCookies(): void::
+Remove all cookies from the session's cookie jar.
+
+[[httpsession-close]]
+close(): void::
+Close all connections and discard cookies. The session object can be used again afterwards as a new session.
+
+[[httpsession-delete]]
+delete(url) => <<class-httpresponse>>::
+Execute `DELETE` request within the session.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|url|String|Request URL.
+|===
++
+.Return
+<<class-httpresponse>> object.
+
+[[httpsession-execute]]
+execute(request) => <<class-httpresponse>>::
+Execute prepared <<class-httprequest>> within the session. Settings not set on the request are taken from the session.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|request|<<class-httprequest>>|Request to execute.
+|===
++
+.Return
+<<class-httpresponse>> object.
+
+[[httpsession-get]]
+get(url) => <<class-httpresponse>>::
+Execute `GET` request within the session.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|url|String|Request URL.
+|===
++
+.Return
+<<class-httpresponse>> object.
+
+[[httpsession-head]]
+head(url) => <<class-httpresponse>>::
+Execute `HEAD` request within the session.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|url|String|Request URL.
+|===
++
+.Return
+<<class-httpresponse>> object.
+
+[[httpsession-patch]]
+patch(url, body) => <<class-httpresponse>>::
+Execute `PATCH` request within the session.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|url|String|Request URL.
+|body|String, <<class-jsonobject>>, <<class-jsonarray>>, array, or hash map|Request body. See <<httprequest-body,HttpRequest::body>> for serialization rules.
+|===
++
+.Return
+<<class-httpresponse>> object.
+
+[[httpsession-post]]
+post(url, body) => <<class-httpresponse>>::
+Execute `POST` request within the session.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|url|String|Request URL.
+|body|String, <<class-jsonobject>>, <<class-jsonarray>>, array, or hash map|Request body. See <<httprequest-body,HttpRequest::body>> for serialization rules.
+|===
++
+.Return
+<<class-httpresponse>> object.
+
+[[httpsession-put]]
+put(url, body) => <<class-httpresponse>>::
+Execute `PUT` request within the session.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|url|String|Request URL.
+|body|String, <<class-jsonobject>>, <<class-jsonarray>>, array, or hash map|Request body. See <<httprequest-body,HttpRequest::body>> for serialization rules.
+|===
++
+.Return
+<<class-httpresponse>> object.
+--
+
+==== Constructors
+
+`HttpSession()`::
+Creates new HTTP session.
++
+.Return
+HttpSession object, or `null` if HTTP requests from scripts are disabled or caller has no access right.
+
+[.source]
+....
+// Log in with a form, then use the session cookie for API calls
+session = new HttpSession();
+session.timeout = 15;
+session.setHeader("Accept", "application/json");
+
+login = session.post("https://portal.example.com/api/login",
+   %{ "user": "monitor", "password": GetConfigurationVariable("Portal.Password") });
+if (!login.success)
+   return "Login failed: " .. login.statusCode;
+
+status = session.get("https://portal.example.com/api/status");
+value = status.json?.get("queueLength");
+session.close();
+return value;
+....

@@ -1,0 +1,77 @@
+[.nxsl-class]
+[[class-httpresponse]]
+=== HttpResponse
+
+Result of an HTTP request executed with <<httprequest-execute,HttpRequest::execute()>> or one of the <<class-httpsession>> methods.
+
+[.version-added]
+Added in version 7.0
+
+==== Instance attributes
+
+[.attr-list]
+--
+[[httpresponse-body]]
+body: <<class-string,String>>::
+Response body as string (empty string if there is no body).
+
+[[httpresponse-bodySize]]
+bodySize: int64::
+Response body size in bytes.
+
+[[httpresponse-contentType]]
+contentType: <<class-string,String>>::
+Value of the `Content-Type` response header, or `null` if not present.
+
+[[httpresponse-errorMessage]]
+errorMessage: <<class-string,String>>::
+Description of the communication error (connection failure, timeout, TLS error, response size limit exceeded), or `null` if the request completed and a response was received. HTTP error status codes (4xx, 5xx) are not reported here; check <<httpresponse-statusCode,statusCode>>.
+
+[[httpresponse-headers]]
+headers: HashMap::
+Response headers as hash map. Header names are converted to lower case; values of repeated headers are joined with comma.
+
+[[httpresponse-json]]
+json => <<class-jsonobject>> or <<class-jsonarray>>::
+Response body parsed as JSON: <<class-jsonobject>> for objects, <<class-jsonarray>> for arrays, or `null` if the body is empty or is not valid JSON.
+
+[[httpresponse-responseTime]]
+responseTime: int::
+Total request time in milliseconds.
+
+[[httpresponse-statusCode]]
+statusCode: int::
+HTTP status code, or `0` if the request failed before a response was received.
+
+[[httpresponse-success]]
+success: bool::
+`TRUE` if no communication error occurred and status code is in 2xx range.
+
+[[httpresponse-url]]
+url: <<class-string,String>>::
+Effective URL of the response (final URL after redirects).
+--
+
+==== Instance methods
+
+[.method-list]
+--
+[[httpresponse-getHeader]]
+getHeader(name): <<class-string,String>>::
+Get response header value. Header name is matched case-insensitively.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Header name.
+|===
++
+.Return
+Header value, or `null` if the header is not present.
++
+[.source]
+....
+response = new HttpRequest("https://api.example.com/items").execute();
+println("Rate limit remaining: " .. response.getHeader("X-RateLimit-Remaining"));
+....
+--

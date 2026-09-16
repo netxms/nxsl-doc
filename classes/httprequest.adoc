@@ -1,0 +1,184 @@
+[.nxsl-class]
+[[class-httprequest]]
+=== HttpRequest
+
+HTTP request executed directly from the server. Unlike <<class-webservice>>, which runs requests through web service definitions on agents, HttpRequest gives scripts full control over method, URL, headers, body, and authentication. A request can be executed standalone with <<httprequest-execute,execute()>> or within an <<class-httpsession>>, which adds connection reuse and cookie handling.
+
+HTTP requests from scripts must be enabled by server configuration parameter `NXSL.HttpRequests.Enabled`, and the script must run with the "HTTP requests from scripts" system access right; otherwise constructor returns `null`. Only `http` and `https` URLs are allowed. Response size is limited to 16 MB and redirects are followed at most 10 times. Request timeout is limited by `NXSL.HttpRequests.MaxTimeout` (default 300 seconds), with `NXSL.HttpRequests.DefaultTimeout` (default 30 seconds) used when no timeout is set.
+
+[.version-added]
+Added in version 7.0
+
+==== Instance attributes
+
+All attributes except `method` are writable. Setting a settings attribute to `null` resets it to "not set", in which case the value from the session (when executed within a session) or the server default is used.
+
+[.attr-list]
+--
+[[httprequest-body]]
+body: <<class-string,String>>::
+Request body. String values are sent as is; <<class-jsonobject>>, <<class-jsonarray>>, array, and hash map values are serialized to JSON, and `Content-Type: application/json` header is added unless already set. `null` clears the body. Body is ignored for `GET` and `HEAD` requests.
+
+[[httprequest-followRedirects]]
+followRedirects: bool::
+Follow HTTP redirects. Default is `true`.
+
+[[httprequest-headers]]
+headers: HashMap::
+Request headers as hash map of header name to value. Assigning a hash map replaces all headers; use <<httpclient-setHeader,setHeader()>> to change a single header. Header names and values are validated, invalid entries are ignored.
+
+[[httprequest-maxResponseSize]]
+maxResponseSize: int64::
+Maximum accepted response body size in bytes. Default and upper limit is 16 MB.
+
+[[httprequest-method]]
+method: <<class-string,String>>::
+HTTP method: `GET`, `POST`, `PUT`, `DELETE`, `PATCH`, `HEAD`, or `OPTIONS`. Can be set with a string in any letter case; assigning an unsupported method fails.
+
+[[httprequest-proxy]]
+proxy: <<class-string,String>>::
+Proxy server URL, or `null` to connect directly.
+
+[[httprequest-timeout]]
+timeout: int::
+Request timeout in seconds.
+
+[[httprequest-url]]
+url: <<class-string,String>>::
+Request URL.
+
+[[httprequest-userAgent]]
+userAgent: <<class-string,String>>::
+Value of the `User-Agent` header. Default is `NetXMS Server/<version>`.
+
+[[httprequest-verifyHost]]
+verifyHost: bool::
+Verify that server certificate matches the host name in the URL. Default is `true`.
+
+[[httprequest-verifyPeer]]
+verifyPeer: bool::
+Verify server certificate against trusted certificate authorities. Default is `true`.
+--
+
+==== Instance methods
+
+[.method-list]
+--
+[[httpclient-clearAuth]]
+clearAuth(): void::
+Reset authentication to "not set". Session authentication (if executed within a session) or no authentication will be used.
+
+[[httprequest-execute]]
+execute() => <<class-httpresponse>>::
+Execute the request standalone, without a session.
++
+.Return
+<<class-httpresponse>> object. Communication errors do not throw; check <<httpresponse-success,success>> and <<httpresponse-errorMessage,errorMessage>> attributes of the response.
+
+[[httpclient-removeHeader]]
+removeHeader(name): void::
+Remove request header.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Header name.
+|===
+
+[[httpclient-setAuth]]
+setAuth(type, login, password): bool::
+Set authentication method and credentials.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|type|String|Authentication type: `"none"`, `"basic"`, `"digest"`, `"ntlm"`, or `"bearer"` (case-insensitive).
+|login|String|User name. Optional, ignored for `bearer`.
+|password|String|Password, or bearer token for `bearer` type. Optional.
+|===
++
+.Return
+`true` on success, `false` if authentication type is not recognized.
+
+[[httpclient-setBasicAuth]]
+setBasicAuth(login, password): void::
+Set HTTP basic authentication credentials.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|login|String|User name.
+|password|String|Password.
+|===
+
+[[httpclient-setBearerAuth]]
+setBearerAuth(token): void::
+Set bearer token authentication. The token is not sent to a different host if the request is redirected.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|token|String|Bearer token.
+|===
+
+[[httpclient-setHeader]]
+setHeader(name, value): bool::
+Set request header. Header names are matched case-insensitively.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Header name.
+|value|String|Header value, or `null` to remove the header.
+|===
++
+.Return
+`true` on success, `false` if header name or value contains characters not allowed in HTTP headers.
+--
+
+==== Constructors
+
+`HttpRequest(url)`::
+Creates new `GET` request for the given URL.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|url|String|Request URL.
+|===
++
+.Return
+HttpRequest object, or `null` if HTTP requests from scripts are disabled or caller has no access right.
+
+`HttpRequest(method, url)`::
+Creates new request with the given method and URL.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|method|String|HTTP method: `GET`, `POST`, `PUT`, `DELETE`, `PATCH`, `HEAD`, or `OPTIONS` (case-insensitive).
+|url|String|Request URL.
+|===
++
+.Return
+HttpRequest object, or `null` if HTTP requests from scripts are disabled, caller has no access right, or method is not supported.
+
+[.source]
+....
+// Post alarm to an external ticketing system
+request = new HttpRequest("POST", "https://tickets.example.com/api/v1/incidents");
+request.setBearerAuth($node.customAttributes["ticketing.token"]);
+request.timeout = 10;
+request.body = %{
+   "title": "Node " .. $node.name .. " is down",
+   "severity": "high"
+};
+
+response = request.execute();
+if (response.success)
+   println("Ticket created: " .. response.json.get("id"));
+else if (response.errorMessage != null)
+   println("Request failed: " .. response.errorMessage);
+else
+   println("Request rejected with status " .. response.statusCode);
+....

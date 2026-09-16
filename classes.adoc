@@ -103,6 +103,9 @@ include::classes/sshsession.adoc[]
 include::classes/netconfsession.adoc[]
 include::classes/webservice.adoc[]
 include::classes/webserviceresponse.adoc[]
+include::classes/httprequest.adoc[]
+include::classes/httpresponse.adoc[]
+include::classes/httpsession.adoc[]
 
 === Data Structures
 

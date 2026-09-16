@@ -264,6 +264,9 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |<<class-file,FILE>>|Data Structures
 |<<class-geolocation,GeoLocation>>|Networking Utilities
 |<<class-hardwarecomponent,HardwareComponent>>|Hardware and Software
+|<<class-httprequest,HttpRequest>>|Networking Utilities
+|<<class-httpresponse,HttpResponse>>|Networking Utilities
+|<<class-httpsession,HttpSession>>|Networking Utilities
 |<<class-inetaddress,InetAddress>>|Networking Utilities
 |<<class-interface,Interface>>|Network Objects
 |<<class-jsonarray,JsonArray>>|Data Structures
