@@ -12,6 +12,13 @@ include::_shared/datacollectiontarget-attrs.adoc[]
 
 [.attr-list]
 --
+[[node-agentCertificateFingerprint]]
+agentCertificateFingerprint: <<class-string,String>>::
+Fingerprint of the certificate issued for agent tunnel on this node, as hexadecimal string. Empty string if no certificate was issued.
++
+[.version-added]
+Added in version 7.0
+
 [[node-agentCertificateMappingData]]
 agentCertificateMappingData: <<class-string,String>>::
 Agent certificate mapping data (set in object properties).
@@ -28,9 +35,27 @@ Subject of certificate issued for agent tunnel on this node.
 agentId: <<class-string,String>>::
 NetXMS agent unique ID (`string` representation of GUID). Will return all zeroes GUID if agent is not detected on node or does not have unique ID.
 
+[[node-agentPlatformName]]
+agentPlatformName: <<class-string,String>>::
+Platform name of the NetXMS agent build running on this node (value of agent's `System.PlatformName` metric). May differ from <<node-platformName,platformName>> when, for example, a 32-bit agent runs on a 64-bit system.
++
+[.version-added]
+Added in version 6.2
+
 [[node-agentProxy]]
 agentProxy => <<class-node>>::
 Object that is set as agent proxy in object properties or NULL.
+
+[[node-agentTlsMode]]
+agentTlsMode: int::
+TLS mode configured for direct agent connections:
++
+* 0: TLS disabled
+* 1: TLS allowed (used if supported by agent)
+* 2: TLS required
++
+[.version-added]
+Added in version 7.0
 
 [[node-agentVersion]]
 agentVersion: <<class-string,String>>::
@@ -123,6 +148,13 @@ Object that is effective ICMP proxy or NULL.
 effectiveSnmpProxy => <<class-node>>::
 Object that is effective SNMP proxy or NULL.
 
+[[node-etherNetIPAddress]]
+etherNetIPAddress => <<class-inetaddress>>::
+Effective address used for EtherNet/IP communication: EtherNet/IP address configured in node properties, or node's primary IP address if not configured.
++
+[.version-added]
+Added in version 6.1
+
 [[node-flagsAttr]]
 flags: int::
 Bit mask of <<node-flags>>.
@@ -206,6 +238,13 @@ is802_1x: bool::
 [[node-isAgent]]
 isAgent: bool::
 `TRUE` if NetXMS agent detected on node
+
+[[node-isAgentRestartPending]]
+isAgentRestartPending: bool::
+`TRUE` if NetXMS agent on this node reported that its restart is pending (for example, after agent upgrade or policy change).
++
+[.version-added]
+Added in version 6.1
 
 [[node-isBridge]]
 isBridge: bool::
@@ -1329,6 +1368,22 @@ Set serial number of the node. Value set this way overrides value detected durin
 +
 [.version-added]
 Added in version 6.1
+
+[[node-setVNCPassword]]
+setVNCPassword(password): bool::
+Set password used for VNC connections to this node.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|password|String|VNC password.
+|===
++
+.Return
+`TRUE` on success, `FALSE` if caller has no modify access to the node.
++
+[.version-added]
+Added in version 6.2
 
 [[node-setVendor]]
 setVendor(vendor): void::
