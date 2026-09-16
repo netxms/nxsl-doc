@@ -926,6 +926,40 @@ Get interface name by index.
 |ifIndex|Integer|Index of interface.
 |===
 
+[[node-getRunningConfig]]
+getRunningConfig(): <<class-string,String>>::
+Retrieve running configuration of the device using its network device driver. Only works for nodes whose driver supports configuration backup (see `NodeCapability::RegisteredForBackup`).
++
+.Return
+Device configuration as string, or `null` if caller has no control access to the node, driver does not support configuration backup, or retrieval failed.
++
+[.version-added]
+Added in version 6.1
++
+[.source]
+....
+config = $node.getRunningConfig();
+if (config != null)
+{
+   f = IO::OpenFile("/var/backup/" .. $node.name .. ".cfg", "w");
+   if (f != null)
+   {
+      f.write(config);
+      f.close();
+   }
+}
+....
+
+[[node-getStartupConfig]]
+getStartupConfig(): <<class-string,String>>::
+Retrieve startup configuration of the device using its network device driver. Only works for nodes whose driver supports configuration backup (see `NodeCapability::RegisteredForBackup`).
++
+.Return
+Device configuration as string, or `null` if caller has no control access to the node, driver does not support configuration backup, or retrieval failed.
++
+[.version-added]
+Added in version 6.1
+
 [[class-node-isportblocked,Node::isPortBlocked()]]
 isPortBlocked(port, protocol): bool::
 Check if a specific port is blocked for the given protocol.
