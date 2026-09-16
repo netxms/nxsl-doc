@@ -120,6 +120,8 @@ include::classes/discoverednode.adoc[]
 include::classes/discoveredinterface.adoc[]
 include::classes/nodedependency.adoc[]
 include::classes/networkpathcheckresult.adoc[]
+include::classes/networkpath.adoc[]
+include::classes/networkpathelement.adoc[]
 include::classes/downtimeinfo.adoc[]
 include::classes/maintenancejournalrecord.adoc[]
 

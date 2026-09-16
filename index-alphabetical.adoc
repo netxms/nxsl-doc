@@ -276,7 +276,9 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |<<class-netobj,NetObj>>|Base Classes
 |<<class-networkmap,NetworkMap>>|Network Objects
 |<<class-networkmaplink,NetworkMapLink>>|Network Objects
+|<<class-networkpath,NetworkPath>>|Discovery and Diagnostics
 |<<class-networkpathcheckresult,NetworkPathCheckResult>>|Discovery and Diagnostics
+|<<class-networkpathelement,NetworkPathElement>>|Discovery and Diagnostics
 |<<class-node,Node>>|Network Objects
 |<<class-nodedependency,NodeDependency>>|Discovery and Diagnostics
 |<<class-object,Object>>|Base Classes

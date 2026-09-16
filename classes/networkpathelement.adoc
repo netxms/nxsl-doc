@@ -1,0 +1,53 @@
+[.nxsl-class]
+[[class-networkpathelement]]
+=== NetworkPathElement
+
+Represents single hop of a <<class-networkpath>>.
+
+Conversion to string produces a human readable description of the hop, for example `ROUTE core-router [1234] ==> 10.0.1.2 (ifIndex=5)`.
+
+[.version-added]
+Added in version 6.2
+
+==== Instance attributes
+
+[.attr-list]
+--
+[[networkpathelement-ifIndex]]
+ifIndex: int::
+For `ROUTE` and `L2_LINK` hops: index of the outgoing interface on the hop node. For `PROXY` and `VPN` hops: ID of the proxy or VPN connector object. `0` if not applicable.
+
+[[networkpathelement-interface]]
+interface => <<class-interface>>::
+Outgoing <<class-interface>> object on the hop node for `ROUTE` and `L2_LINK` hops, `null` for other hop types or if interface cannot be found.
+
+[[networkpathelement-name]]
+name: <<class-string,String>>::
+Name of the hop object.
+
+[[networkpathelement-nextHop]]
+nextHop: <<class-string,String>>::
+IP address of the next hop for `ROUTE` hops, or `null` if not applicable.
+
+[[networkpathelement-node]]
+node => <<class-netobj>>::
+Object representing the hop (usually a <<class-node>>), or `null`.
+
+[[networkpathelement-nodeId]]
+nodeId: int::
+ID of the hop object, or `0`.
+
+[[networkpathelement-route]]
+route: <<class-string,String>>::
+Route (destination network) used by this hop for `ROUTE` hops, or `null` for VPN connectors and direct access.
+
+[[networkpathelement-type]]
+type: <<class-string,String>>::
+Hop type:
++
+* `ROUTE` - layer 3 hop determined from routing table
+* `VPN` - VPN connector
+* `PROXY` - proxy node (agent or zone proxy)
+* `DESTINATION` - destination node
+* `L2_LINK` - layer 2 link determined from topology information
+--

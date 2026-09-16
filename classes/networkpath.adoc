@@ -1,0 +1,40 @@
+[.nxsl-class]
+[[class-networkpath]]
+=== NetworkPath
+
+Represents network path between two nodes, as returned by <<node-traceRoute,Node::traceRoute()>> and <<node-traceL2Path,Node::traceL2Path()>> methods. Path consists of hops represented by <<class-networkpathelement>> objects.
+
+[.version-added]
+Added in version 6.2
+
+==== Instance attributes
+
+[.attr-list]
+--
+[[networkpath-hopCount]]
+hopCount: int::
+Number of hops in the path.
+
+[[networkpath-hops]]
+hops: <<class-array,Array>>::
+Array of <<class-networkpathelement>> objects, ordered from source to destination.
+
+[[networkpath-isComplete]]
+isComplete: bool::
+`TRUE` if the path reaches the destination node. Incomplete path means that trace stopped at some hop because the next hop could not be determined (for example, missing routing information or unknown layer 2 topology).
+
+[[networkpath-sourceAddress]]
+sourceAddress: <<class-string,String>>::
+IP address of the source node used for the trace, or `null` if unknown.
+--
+
+[.source]
+....
+path = $node.traceRoute(FindObject("core-router"));
+if (path != null)
+{
+   println("Path " .. (path.isComplete ? "complete" : "incomplete") .. ", " .. path.hopCount .. " hops:");
+   for (hop : path.hops)
+      println("   " .. hop);
+}
+....

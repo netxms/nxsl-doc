@@ -1478,6 +1478,61 @@ if (vendor != null)
 }
 ....
 
+[[node-traceL2Path]]
+traceL2Path(destination) => <<class-networkpath>>::
+Trace layer 2 path from this node to the destination node using topology information collected by the server (LLDP, CDP, STP, and other sources). No requests are sent to devices.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|destination|<<class-node>>|Destination node.
+|===
++
+.Return
+<<class-networkpath>> object, or `null` if caller has no read access to the destination node or path cannot be traced. Check <<networkpath-isComplete,isComplete>> attribute of the returned path to see if the destination was reached.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+path = $node.traceL2Path(FindObject("core-sw1"));
+if ((path != null) && path.isComplete)
+{
+   for (hop : path.hops)
+   {
+      if (hop.type == "L2_LINK")
+         println(hop.name .. " via " .. hop.interface?.name);
+   }
+}
+....
+
+[[node-traceRoute]]
+traceRoute(destination) => <<class-networkpath>>::
+Trace layer 3 path from this node to the destination node using routing tables collected by the server. No requests are sent to devices.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|destination|<<class-node>>|Destination node.
+|===
++
+.Return
+<<class-networkpath>> object, or `null` if caller has no read access to the destination node or path cannot be traced. Check <<networkpath-isComplete,isComplete>> attribute of the returned path to see if the destination was reached.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+path = $node.traceRoute(FindObject("core-router"));
+if (path != null)
+{
+   for (hop : path.hops)
+      println(hop);
+}
+....
+
 [[node-wakeUp]]
 wakeUp(): bool::
 Send Wake-on-LAN magic packet to this node. Interfaces with IPv4 address are tried in order until magic packet is sent successfully; managed interfaces are tried first, then unmanaged ones. See <<interface-wakeup,Interface::wakeUp()>> for details on how the packet is sent.
