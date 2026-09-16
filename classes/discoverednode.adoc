@@ -100,3 +100,61 @@ zone => <<class-zone>>::
 zoneUIN: int::
 This node zone UIN
 --
+
+==== Instance methods
+
+[.method-list]
+--
+[[discoverednode-readAgentList]]
+readAgentList(name) => <<class-array,Array>>::
++
+[.version-added]
+Added in version 6.1
++
+Requests list directly from NetXMS agent on discovered node. Returns array of strings or `null` if agent connection is not available or request failed.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|List name.
+|===
+
+[[discoverednode-readAgentParameter]]
+readAgentParameter(name) => <<class-string,String>>::
++
+[.version-added]
+Added in version 6.1
++
+Requests metric directly from NetXMS agent on discovered node. Returns `null` if agent connection is not available or request failed.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Metric name.
+|===
++
+[.source]
+....
+// Discovery filter: accept only nodes running on Linux
+if ($node.isAgent)
+{
+   osName = $node.readAgentParameter("System.Uname");
+   return osName != null && osName ~= "^Linux";
+}
+return false;
+....
+
+[[discoverednode-readAgentTable]]
+readAgentTable(name) => <<class-table>>::
++
+[.version-added]
+Added in version 6.1
++
+Requests table directly from NetXMS agent on discovered node. Returns <<class-table>> or `null` if agent connection is not available or request failed.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Table name.
+|===
+--
