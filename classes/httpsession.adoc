@@ -22,10 +22,14 @@ Cookies currently stored in the session's cookie jar, as hash map of cookie name
 
 ==== Instance methods
 
-Authentication and header methods are the same as for <<class-httprequest>>: <<httpclient-clearAuth,clearAuth()>>, <<httpclient-removeHeader,removeHeader()>>, <<httpclient-setAuth,setAuth()>>, <<httpclient-setBasicAuth,setBasicAuth()>>, <<httpclient-setBearerAuth,setBearerAuth()>>, <<httpclient-setHeader,setHeader()>>.
+Authentication and header methods behave the same as on <<class-httprequest>>, but apply to every request executed within the session unless the request overrides them.
 
 [.method-list]
 --
+[[httpsession-clearAuth]]
+clearAuth(): void::
+Reset session authentication to "not set". Requests executed within the session use no authentication unless they set their own.
+
 [[httpsession-clearCookies]]
 clearCookies(): void::
 Remove all cookies from the session's cookie jar.
@@ -127,6 +131,66 @@ Execute `PUT` request within the session.
 +
 .Return
 <<class-httpresponse>> object.
+
+[[httpsession-removeHeader]]
+removeHeader(name): void::
+Remove session header. The header is no longer added to requests executed within the session.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Header name.
+|===
+
+[[httpsession-setAuth]]
+setAuth(type, login, password): bool::
+Set session authentication method and credentials, used by all requests executed within the session that do not set their own authentication.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|type|String|Authentication type: `"none"`, `"basic"`, `"digest"`, `"ntlm"`, or `"bearer"` (case-insensitive).
+|login|String|User name. Optional, ignored for `bearer`.
+|password|String|Password, or bearer token for `bearer` type. Optional.
+|===
++
+.Return
+`true` on success, `false` if authentication type is not recognized.
+
+[[httpsession-setBasicAuth]]
+setBasicAuth(login, password): void::
+Set HTTP basic authentication credentials for the session.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|login|String|User name.
+|password|String|Password.
+|===
+
+[[httpsession-setBearerAuth]]
+setBearerAuth(token): void::
+Set bearer token authentication for the session. The token is not sent to a different host if a request is redirected.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|token|String|Bearer token.
+|===
+
+[[httpsession-setHeader]]
+setHeader(name, value): bool::
+Set session header, added to all requests executed within the session. Header names are matched case-insensitively. A request header with the same name takes precedence.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Header name.
+|value|String|Header value, or `null` to remove the header.
+|===
++
+.Return
+`true` on success, `false` if header name or value contains characters not allowed in HTTP headers.
 --
 
 ==== Constructors
