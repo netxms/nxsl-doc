@@ -155,6 +155,17 @@ Add new alarm comment.
 .Return
 Id of the newly created alarm comment.
 
+[[alarm-closeHelpdeskIssue]]
+closeHelpdeskIssue(): int::
++
+[.version-added]
+Added in version 6.1
++
+Mark helpdesk issue linked to this alarm as closed. Helpdesk reference is kept, helpdesk state changes to _Closed_. Alarm must be in helpdesk state _Open_.
++
+.Return
+`0` on success, `5` (out of state request) if helpdesk state is not _Open_, or other error code on failure.
+
 [[alarm-expandString]]
 expandString(string): <<class-string,String>>::
 Expand string by replacing macros with their values.
@@ -186,9 +197,48 @@ String containing the AI assistant's response, or NULL if empty.
 resolve(): int::
 Resolve alarm. Return `0` on success or error code on failure.
 
+[[alarm-setHelpdeskReference]]
+setHelpdeskReference(reference): int::
++
+[.version-added]
+Added in version 6.1
++
+Link this alarm to an external helpdesk issue without going through the helpdesk integration module. Sets helpdesk reference and changes helpdesk state to _Open_. Alarm must be in helpdesk state _Ignored_ (not yet linked).
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|reference|String|Helpdesk system reference (e.g. issue ID). Must not be empty.
+|===
++
+.Return
+`0` on success, `5` (out of state request) if alarm is already linked to a helpdesk issue, `12` (invalid argument) if reference is empty, or other error code on failure.
++
+[.source]
+....
+alarm = FindAlarmByKey("DISK_FULL_" .. $node.id);
+if (alarm != null && alarm.helpdeskState == 0)
+{
+   rcc = alarm.setHelpdeskReference("TICKET-4711");
+   if (rcc != 0)
+      trace(2, "Cannot set helpdesk reference: RCC=" .. rcc);
+}
+....
+
 [[alarm-terminate]]
 terminate(): int::
 Terminate alarm. Return `0` on success or error code on failure.
+
+[[alarm-unlinkFromHelpdesk]]
+unlinkFromHelpdesk(): int::
++
+[.version-added]
+Added in version 6.1
++
+Remove helpdesk link from this alarm. Clears helpdesk reference and resets helpdesk state to _Ignored_. Works in any helpdesk state.
++
+.Return
+`0` on success or error code on failure.
 --
 
 .See also
