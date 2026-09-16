@@ -1,0 +1,55 @@
+[.nxsl-class]
+[[class-clouddomain]]
+=== CloudDomain
+
+Represents cloud domain: an account or a project in a cloud provider (for example, AWS account or Azure subscription) monitored through a cloud connector. Cloud resources discovered in the domain are represented by <<class-resource>> objects placed under the domain. Extends <<class-datacollectiontarget>>.
+
+[.version-added]
+Added in version 6.1
+
+==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
+
+include::_shared/datacollectiontarget-attrs.adoc[]
+
+[.attr-list]
+--
+[[clouddomain-connectorName]]
+connectorName: <<class-string,String>>::
+Name of the cloud connector used for this domain.
+
+[[clouddomain-gracePeriod]]
+gracePeriod: int::
+Grace period in days. Used with <<clouddomain-removalPolicy,removalPolicy>> `1`: resource that is no longer reported by the cloud provider is deleted after it has been missing for this many days.
+
+[[clouddomain-lastDiscoveryStatus]]
+lastDiscoveryStatus: int::
+Status of the last resource discovery: `0` if discovery completed successfully, non-zero if it failed (for example, connector not found or discovery returned no results).
+
+[[clouddomain-lastDiscoveryTime]]
+lastDiscoveryTime: int64::
+UNIX timestamp of the last resource discovery, or `0` if discovery was never run.
+
+[[clouddomain-removalPolicy]]
+removalPolicy: int::
+What to do with resources that are no longer reported by the cloud provider:
++
+* 0: mark resource as inactive
+* 1: mark resource as inactive and delete it after <<clouddomain-gracePeriod,gracePeriod>> days
+* 2: delete resource immediately
+--
+
+==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
+
+include::_shared/datacollectiontarget-methods.adoc[]
+
+[.source]
+....
+// Report cloud domain with failed discovery
+domain = FindObject("Production AWS");
+if ((domain != null) && (domain.lastDiscoveryStatus != 0))
+   println("Discovery failed for " .. domain.name .. " (connector " .. domain.connectorName .. ")");
+....

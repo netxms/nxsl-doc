@@ -67,6 +67,13 @@ include::classes/serviceroot.adoc[]
 include::classes/businessservice.adoc[]
 include::classes/businessservicecheck.adoc[]
 
+=== Cloud Resources
+
+Classes representing cloud accounts and resources discovered through cloud connectors.
+
+include::classes/clouddomain.adoc[]
+include::classes/resource.adoc[]
+
 === Users and Security
 
 Classes for user and group management.

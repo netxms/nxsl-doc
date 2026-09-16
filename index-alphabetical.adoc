@@ -247,6 +247,7 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |<<class-circuit,Circuit>>|Network Objects
 |<<class-class,Class>>|Data Structures
 |<<class-clientsession,ClientSession>>|Users and Security
+|<<class-clouddomain,CloudDomain>>|Cloud Resources
 |<<class-cluster,Cluster>>|Infrastructure
 |<<class-collector,Collector>>|Infrastructure
 |<<class-component,Component>>|Hardware and Software
@@ -286,6 +287,7 @@ These functions are deprecated and should not be used in new scripts. See <<depr
 |<<class-ospfneighbor,OSPFNeighbor>>|OSPF and Routing
 |<<class-radiointerface,RadioInterface>>|Hardware and Software
 |<<class-range,Range>>|Data Structures
+|<<class-resource,Resource>>|Cloud Resources
 |<<class-scoreddcivalue,ScoredDciValue>>|Data Collection
 |<<class-sensor,Sensor>>|Infrastructure
 |<<class-serviceroot,ServiceRoot>>|Infrastructure

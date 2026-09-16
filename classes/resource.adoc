@@ -1,0 +1,84 @@
+[.nxsl-class]
+[[class-resource]]
+=== Resource
+
+Represents cloud resource (virtual machine, database instance, load balancer, and so on) discovered in a <<class-clouddomain>>. Extends <<class-datacollectiontarget>>.
+
+[.version-added]
+Added in version 6.1
+
+==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
+
+include::_shared/datacollectiontarget-attrs.adoc[]
+
+[.attr-list]
+--
+[[resource-accountId]]
+accountId: <<class-string,String>>::
+Cloud provider account (subscription, project) ID the resource belongs to.
+
+[[resource-connectorName]]
+connectorName: <<class-string,String>>::
+Name of the cloud connector of the owning <<class-clouddomain>>, or empty string if owner domain cannot be determined.
+
+[[resource-lastDiscoveryTime]]
+lastDiscoveryTime: int64::
+UNIX timestamp of the last discovery run in which this resource was reported by the cloud provider.
+
+[[resource-linkedNode]]
+linkedNode => <<class-node>>::
+<<class-node>> object linked to this resource (for example, node created for a virtual machine), or `null` if not linked.
+
+[[resource-linkedNodeId]]
+linkedNodeId: int::
+ID of the linked node, or `0` if not linked.
+
+[[resource-providerState]]
+providerState: <<class-string,String>>::
+Resource state as reported by the cloud provider (provider-specific string, for example `running` or `stopped`).
+
+[[resource-region]]
+region: <<class-string,String>>::
+Cloud region the resource is located in.
+
+[[resource-resourceId]]
+resourceId: <<class-string,String>>::
+Resource identifier assigned by the cloud provider.
+
+[[resource-resourceType]]
+resourceType: <<class-string,String>>::
+Resource type as reported by the cloud connector (for example `ec2:instance`).
+
+[[resource-state]]
+state: int::
+Normalized resource state:
++
+* 0: unknown
+* 1: active
+* 2: degraded
+* 3: inactive
+* 4: failed
+* 5: creating
+* 6: deleting
+* 7: unreachable
+
+[[resource-tags]]
+tags: HashMap::
+Resource tags (labels) as hash map of tag name to tag value.
+--
+
+==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
+
+include::_shared/datacollectiontarget-methods.adoc[]
+
+[.source]
+....
+// Object query: cloud resources tagged as production that are not active
+with
+   _prod = { $object.tags["environment"] == "production" }
+type == RESOURCE and _prod and state != 1
+....
