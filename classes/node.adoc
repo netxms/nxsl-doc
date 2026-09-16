@@ -1099,6 +1099,23 @@ Set the required number of polls before registering a status change.
 |===
 |count|Integer|Number of polls (must be >= 0) or 0 to use system default.
 |===
+
+[[node-wakeUp]]
+wakeUp(): bool::
+Send Wake-on-LAN magic packet to this node. Interfaces with IPv4 address are tried in order until magic packet is sent successfully; managed interfaces are tried first, then unmanaged ones. See <<interface-wakeup,Interface::wakeUp()>> for details on how the packet is sent.
++
+.Return
+`TRUE` if magic packet was sent through at least one interface, `FALSE` if no suitable interface was found, packet cannot be sent, or caller has no control access to the node.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+// Action script: wake up node that went down
+if (!$node.wakeUp())
+   println("Cannot send WoL packet to " .. $node.name);
+....
 --
 
 ==== Constants

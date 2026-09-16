@@ -273,6 +273,30 @@ Enabele/Disable ICMP statistics collection for current interface.
 |enabled|Boolean|If this interface should be included in ICMP statistics.
 |===
 
+[[interface-setpeer]]
+setPeer(peerInterface): bool::
+Set given interface as layer 2 peer of this interface. Both interfaces are updated to point at each other, in the same way as a manually created link on the network map.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|peerInterface|<<class-interface>> or Integer|Peer interface object or interface object ID.
+|===
++
+.Return
+`TRUE` on success, `FALSE` if peer interface was not found, is the same interface, or caller has no modify access to either interface.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+switchPort = FindObject("core-sw1").getInterfaceByName("Gi1/0/24");
+serverNic = $node.getInterfaceByName("eth0");
+if (!serverNic.setPeer(switchPort))
+   println("Cannot link interfaces");
+....
+
 [[interface-setpollcountforstatuschange]]
 setPollCountForStatusChange(count): void::
 Set the required number of polls before registering a status change.
@@ -282,6 +306,16 @@ Set the required number of polls before registering a status change.
 |===
 |count|Integer|Number of polls (must be >= 0) or 0 to use system default.
 |===
+
+[[interface-wakeup]]
+wakeUp(): bool::
+Send Wake-on-LAN magic packet to this interface. The packet is sent to the broadcast address of the subnet of the first IPv4 address of the interface, so the interface must have both a MAC address and an IPv4 address.
++
+.Return
+`TRUE` if magic packet was sent, `FALSE` if interface has no MAC address or IPv4 address, packet cannot be sent, or caller has no control access to the interface.
++
+[.version-added]
+Added in version 6.2
 --
 
 ==== Constants
