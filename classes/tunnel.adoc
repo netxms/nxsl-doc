@@ -44,6 +44,13 @@ Hardware ID of the node that opened the tunnel
 id: int::
 Tunnel id
 
+[[tunnel-inbound]]
+inbound: bool::
+`TRUE` if the tunnel was established by the agent connecting to the server (inbound tunnel), `FALSE` if the server connected to the agent (outbound tunnel).
++
+[.version-added]
+Added in version 7.0
+
 [[tunnel-isAgentProxy]]
 isAgentProxy: bool::
 `TRUE` if agent proxy is enabled on the agent that opened the tunnel
