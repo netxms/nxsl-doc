@@ -51,9 +51,13 @@ include::classes/alarmcomment.adoc[]
 Classes representing organizational and infrastructure objects: containers, templates, clusters, and physical components.
 
 include::classes/container.adoc[]
+include::classes/facility.adoc[]
+include::classes/powerdomain.adoc[]
+include::classes/coolingzone.adoc[]
 include::classes/template.adoc[]
 include::classes/cluster.adoc[]
 include::classes/chassis.adoc[]
+include::classes/rack.adoc[]
 include::classes/collector.adoc[]
 include::classes/sensor.adoc[]
 include::classes/mobiledevice.adoc[]

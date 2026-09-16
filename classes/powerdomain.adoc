@@ -1,0 +1,152 @@
+[.nxsl-class]
+[[class-powerdomain]]
+=== PowerDomain
+
+[.version-added]
+Added in version 7.0
+
+Object represents power domain - segment of power distribution path within a <<class-facility>> (grid entry, generator, UPS, PDU, busway). Can be nested under another power domain. Extends <<class-datacollectiontarget>>.
+
+==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
+
+include::_shared/datacollectiontarget-attrs.adoc[]
+
+[.attr-list]
+--
+[[powerdomain-autoBindScript]]
+autoBindScript: <<class-string,String>>::
+Source of the script for automatic binding.
+
+[[powerdomain-isAutoBindEnabled]]
+isAutoBindEnabled: bool::
+Indicate if automatic binding is enabled.
+
+[[powerdomain-isAutoUnbindEnabled]]
+isAutoUnbindEnabled: bool::
+Indicate if automatic unbinding is enabled.
+
+[[powerdomain-domainType]]
+domainType: int::
+Power domain type as one of the <<powerdomain-domain-types,numeric values>>.
+
+[[powerdomain-domainTypeName]]
+domainTypeName: <<class-string,String>>::
+Symbolic name of power domain type (`GRID_ENTRY`, `GENERATOR`, `UPS`, `PDU`, `BUSWAY`, or `OTHER`).
+
+[[powerdomain-feedTag]]
+feedTag: <<class-string,String>>::
+Free-form feed label, conventionally `A` or `B`. May be empty.
+
+[[powerdomain-ratedPower]]
+ratedPower: int::
+Nameplate power in watts. `0` if undeclared.
+--
+
+==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
+
+include::_shared/datacollectiontarget-methods.adoc[]
+
+[.method-list]
+--
+[[powerdomain-createNode]]
+createNode(name, primaryHostName, zoneUIN) => <<class-node>>::
+Create new node under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Node name if second options is set or primary host name or IP address.
+|primaryHostName|String|Optional. Primary host name or IP address.
+|zoneUIN|Integer|Optional. New node's zone UIN.
+|===
++
+.Return
+Newly created node of <<class-node>> class or NULL if failed to create.
+
+[[powerdomain-createPowerDomain]]
+createPowerDomain(name, domainType, feedTag, ratedPower) => <<class-powerdomain>>::
+Create new power domain under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New power domain's name
+|domainType|Integer|Optional. One of the <<powerdomain-domain-types,power domain types>>. `0` (GRID_ENTRY) if omitted.
+|feedTag|String|Optional. Free-form feed label, conventionally `A` or `B`.
+|ratedPower|Integer|Optional. Nameplate power in watts. `0` (undeclared) if omitted.
+|===
++
+.Return
+Newly created power domain of <<class-powerdomain>> class or NULL if failed to create.
+
+[[powerdomain-createRack]]
+createRack(name, height) => <<class-rack>>::
+Create new rack under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New rack's name
+|height|Integer|Optional. Rack height in units. `0` if omitted.
+|===
++
+.Return
+Newly created rack of <<class-rack>> class or NULL if failed to create.
+
+[[powerdomain-createSensor]]
+createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>::
+Create new sensor under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Sensor name
+|deviceClass|Integer|Sensor device class, one of the following <<const-sensor-device-class,values>>. Optional, ``SensorDeviceClass::Other`` if omitted.
+|gateway|<<class-netobj>>|Gateway used for communication sensor. Optional.
+|modbusUnitId|Integer|MODBUS Unit ID. Optional.
+|===
++
+.Return
+Newly created sensor of <<class-sensor>> class or NULL if failed to create.
+
+[[powerdomain-setAutoBindMode]]
+setAutoBindMode(enableBind, enableUnbind): void::
+Set automatic bind mode for the object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|enableBind|Boolean|Script should be used for automatic binding.
+|enableUnbind|Boolean|Script should be used for automatic unbinding.
+|===
+
+[[powerdomain-setAutoBindScript]]
+setAutoBindScript(script): void::
+Update automatic binding script source.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|script|String|Script source.
+|===
+--
+
+==== Constants
+
+[[powerdomain-domain-types]]
+[cols="1,1,4a"]
+.Power domain types
+|===
+| Value | Name | Description
+
+| 0 | GRID_ENTRY | Utility grid entry point
+| 1 | GENERATOR | Backup generator
+| 2 | UPS | Uninterruptible power supply
+| 3 | PDU | Power distribution unit
+| 4 | BUSWAY | Busway
+| 5 | OTHER | Other
+|===

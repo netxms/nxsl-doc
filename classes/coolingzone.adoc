@@ -1,78 +1,69 @@
 [.nxsl-class]
-[[class-collector]]
-=== Collector
+[[class-coolingzone]]
+=== CoolingZone
 
-Object represents collector. Extends <<class-netobj>>.
+[.version-added]
+Added in version 7.0
+
+Object represents cooling zone - cooling plant or cooled area within a <<class-facility>>. Can be nested under another cooling zone. A rack may belong to at most one cooling zone. Extends <<class-datacollectiontarget>>.
 
 ==== Instance attributes
 
 include::_shared/netobj-attrs.adoc[]
 
+include::_shared/datacollectiontarget-attrs.adoc[]
+
 [.attr-list]
 --
-[[collector-autoBindScript]]
+[[coolingzone-autoBindScript]]
 autoBindScript: <<class-string,String>>::
 Source of the script for automatic binding.
 
-[[collector-isAutoBindEnabled]]
+[[coolingzone-isAutoBindEnabled]]
 isAutoBindEnabled: bool::
 Indicate if automatic binding is enabled.
 
-[[collector-isAutoUnbindEnabled]]
+[[coolingzone-isAutoUnbindEnabled]]
 isAutoUnbindEnabled: bool::
 Indicate if automatic unbinding is enabled.
+
+[[coolingzone-ratedCapacity]]
+ratedCapacity: int::
+Rated thermal capacity in watts. `0` if undeclared.
+
+[[coolingzone-zoneType]]
+zoneType: int::
+Cooling zone type as one of the <<coolingzone-zone-types,numeric values>>.
+
+[[coolingzone-zoneTypeName]]
+zoneTypeName: <<class-string,String>>::
+Symbolic name of cooling zone type (`PLANT`, `ZONE`, or `OTHER`).
 --
 
 ==== Instance methods
 
 include::_shared/netobj-methods.adoc[]
 
+include::_shared/datacollectiontarget-methods.adoc[]
+
 [.method-list]
 --
-[[collector-createCollector]]
-createCollector(name) => <<class-collector>>::
-Create new collector under current object
+[[coolingzone-createCoolingZone]]
+createCoolingZone(name, zoneType, ratedCapacity) => <<class-coolingzone>>::
+Create new cooling zone under current object.
 +
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|name|String|New collector's name
+|name|String|New cooling zone's name
+|zoneType|Integer|Optional. One of the <<coolingzone-zone-types,cooling zone types>>. `0` (PLANT) if omitted.
+|ratedCapacity|Integer|Optional. Rated thermal capacity in watts. `0` (undeclared) if omitted.
 |===
 +
 .Return
-Newly created collector of <<class-collector>> class.
+Newly created cooling zone of <<class-coolingzone>> class or NULL if failed to create.
 
-[[collector-createContainer]]
-createContainer(name) => <<class-container>>::
-Create new container under current object
-+
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|name|String|New container's name
-|===
-+
-.Return
-Newly created container of <<class-container>> class.
-
-[[collector-createFacility]]
-createFacility(name) => <<class-facility>>::
-+
-[.version-added]
-Added in version 7.0
-+
-Create new facility under current object.
-+
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|name|String|New facility's name
-|===
-+
-.Return
-Newly created facility of <<class-facility>> class or NULL if failed to create.
-
-[[collector-createNode]]
+[[coolingzone-createNode]]
 createNode(name, primaryHostName, zoneUIN) => <<class-node>>::
 Create new node under current object.
 +
@@ -85,14 +76,10 @@ Create new node under current object.
 |===
 +
 .Return
-Newly created node of <<class-node>> class or NULL if failed to create
+Newly created node of <<class-node>> class or NULL if failed to create.
 
-[[collector-createRack]]
+[[coolingzone-createRack]]
 createRack(name, height) => <<class-rack>>::
-+
-[.version-added]
-Added in version 7.0
-+
 Create new rack under current object.
 +
 .Parameters
@@ -105,7 +92,7 @@ Create new rack under current object.
 .Return
 Newly created rack of <<class-rack>> class or NULL if failed to create.
 
-[[collector-createSensor]]
+[[coolingzone-createSensor]]
 createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>::
 Create new sensor under current object.
 +
@@ -119,11 +106,11 @@ Create new sensor under current object.
 |===
 +
 .Return
-Newly created sensor of <<class-sensor>> class or NULL if failed to create
+Newly created sensor of <<class-sensor>> class or NULL if failed to create.
 
-[[collector-setAutoBindMode]]
+[[coolingzone-setAutoBindMode]]
 setAutoBindMode(enableBind, enableUnbind): void::
-Set automatic bind mode for the container.
+Set automatic bind mode for the object.
 +
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -132,7 +119,7 @@ Set automatic bind mode for the container.
 |enableUnbind|Boolean|Script should be used for automatic unbinding.
 |===
 
-[[collector-setAutoBindScript]]
+[[coolingzone-setAutoBindScript]]
 setAutoBindScript(script): void::
 Update automatic binding script source.
 +
@@ -142,3 +129,16 @@ Update automatic binding script source.
 |script|String|Script source.
 |===
 --
+
+==== Constants
+
+[[coolingzone-zone-types]]
+[cols="1,1,4a"]
+.Cooling zone types
+|===
+| Value | Name | Description
+
+| 0 | PLANT | Cooling plant (chillers, CRAC/CRAH units)
+| 1 | ZONE | Cooled area served by the plant
+| 2 | OTHER | Other
+|===

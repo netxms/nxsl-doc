@@ -1,0 +1,160 @@
+[.nxsl-class]
+[[class-facility]]
+=== Facility
+
+[.version-added]
+Added in version 7.0
+
+Object represents facility - top-level spatial container for data center energy reporting (site or building). Can contain power domains, cooling zones, racks, containers, nodes, and sensors. Extends <<class-datacollectiontarget>>.
+
+==== Instance attributes
+
+include::_shared/netobj-attrs.adoc[]
+
+include::_shared/datacollectiontarget-attrs.adoc[]
+
+[.attr-list]
+--
+[[facility-autoBindScript]]
+autoBindScript: <<class-string,String>>::
+Source of the script for automatic binding.
+
+[[facility-isAutoBindEnabled]]
+isAutoBindEnabled: bool::
+Indicate if automatic binding is enabled.
+
+[[facility-isAutoUnbindEnabled]]
+isAutoUnbindEnabled: bool::
+Indicate if automatic unbinding is enabled.
+
+[[facility-isEngineEnabled]]
+isEngineEnabled: bool::
+`TRUE` if energy reporting computation engine is enabled for this facility (a computation provider is selected).
+
+[[facility-providerId]]
+providerId: <<class-string,String>>::
+Identifier of the selected computation provider. Empty string if engine is disabled.
+
+[[facility-settlementLag]]
+settlementLag: int::
+Number of days a provisional reporting day waits before settlement. Default is 5.
+--
+
+==== Instance methods
+
+include::_shared/netobj-methods.adoc[]
+
+include::_shared/datacollectiontarget-methods.adoc[]
+
+[.method-list]
+--
+[[facility-createContainer]]
+createContainer(name) => <<class-container>>::
+Create new container under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New container's name
+|===
++
+.Return
+Newly created container of <<class-container>> class or NULL if failed to create.
+
+[[facility-createCoolingZone]]
+createCoolingZone(name, zoneType, ratedCapacity) => <<class-coolingzone>>::
+Create new cooling zone under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New cooling zone's name
+|zoneType|Integer|Optional. One of the <<coolingzone-zone-types,cooling zone types>>. `0` (PLANT) if omitted.
+|ratedCapacity|Integer|Optional. Rated thermal capacity in watts. `0` (undeclared) if omitted.
+|===
++
+.Return
+Newly created cooling zone of <<class-coolingzone>> class or NULL if failed to create.
+
+[[facility-createNode]]
+createNode(name, primaryHostName, zoneUIN) => <<class-node>>::
+Create new node under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Node name if second options is set or primary host name or IP address.
+|primaryHostName|String|Optional. Primary host name or IP address.
+|zoneUIN|Integer|Optional. New node's zone UIN.
+|===
++
+.Return
+Newly created node of <<class-node>> class or NULL if failed to create.
+
+[[facility-createPowerDomain]]
+createPowerDomain(name, domainType, feedTag, ratedPower) => <<class-powerdomain>>::
+Create new power domain under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New power domain's name
+|domainType|Integer|Optional. One of the <<powerdomain-domain-types,power domain types>>. `0` (GRID_ENTRY) if omitted.
+|feedTag|String|Optional. Free-form feed label, conventionally `A` or `B`.
+|ratedPower|Integer|Optional. Nameplate power in watts. `0` (undeclared) if omitted.
+|===
++
+.Return
+Newly created power domain of <<class-powerdomain>> class or NULL if failed to create.
+
+[[facility-createRack]]
+createRack(name, height) => <<class-rack>>::
+Create new rack under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New rack's name
+|height|Integer|Optional. Rack height in units. `0` if omitted.
+|===
++
+.Return
+Newly created rack of <<class-rack>> class or NULL if failed to create.
+
+[[facility-createSensor]]
+createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>::
+Create new sensor under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|Sensor name
+|deviceClass|Integer|Sensor device class, one of the following <<const-sensor-device-class,values>>. Optional, ``SensorDeviceClass::Other`` if omitted.
+|gateway|<<class-netobj>>|Gateway used for communication sensor. Optional.
+|modbusUnitId|Integer|MODBUS Unit ID. Optional.
+|===
++
+.Return
+Newly created sensor of <<class-sensor>> class or NULL if failed to create.
+
+[[facility-setAutoBindMode]]
+setAutoBindMode(enableBind, enableUnbind): void::
+Set automatic bind mode for the object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|enableBind|Boolean|Script should be used for automatic binding.
+|enableUnbind|Boolean|Script should be used for automatic unbinding.
+|===
+
+[[facility-setAutoBindScript]]
+setAutoBindScript(script): void::
+Update automatic binding script source.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|script|String|Script source.
+|===
+--
