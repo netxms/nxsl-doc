@@ -77,6 +77,9 @@ Primary <<class-inetaddress,IP address>>.
 `isInMaintenanceMode: bool`::
 Maintenance mode indicator (`true` if object currently is in maintenace mode).
 
+`isMaintenanceScheduled: bool`::
+`TRUE` if there is a scheduled task that will put this object into maintenance mode.
+
 `maintenanceInitiator: int`::
 Maintenance initiator user id
 

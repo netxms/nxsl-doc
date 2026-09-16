@@ -28,6 +28,30 @@ Delete custom attribute.
 `enterMaintenance(): void`::
 Enable maintenance mode for the object.
 
+`forceAutobindPoll(): bool`::
+Schedule forced autobind poll. Returns `TRUE` if the poll was scheduled.
+
+`forceConfigurationPoll(): bool`::
+Schedule forced configuration poll. Returns `TRUE` if the poll was scheduled.
+
+`forceDiscoveryPoll(): bool`::
+Schedule forced network discovery poll. Returns `TRUE` if the poll was scheduled.
+
+`forceInstanceDiscoveryPoll(): bool`::
+Schedule forced instance discovery poll. Returns `TRUE` if the poll was scheduled.
+
+`forceMapUpdatePoll(): bool`::
+Schedule forced map update poll. Returns `TRUE` if the poll was scheduled.
+
+`forceRoutingTablePoll(): bool`::
+Schedule forced routing table poll. Returns `TRUE` if the poll was scheduled.
+
+`forceStatusPoll(): bool`::
+Schedule forced status poll. Returns `TRUE` if the poll was scheduled.
+
+`forceTopologyPoll(): bool`::
+Schedule forced topology poll. Returns `TRUE` if the poll was scheduled.
+
 `expandString(string): <<class-string,String>>`::
 Expand string by replacing macros with their values.
 

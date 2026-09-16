@@ -112,6 +112,13 @@ Primary <<class-inetaddress,IP address>>.
 isInMaintenanceMode: bool::
 Maintenance mode indicator (`true` if object currently is in maintenace mode).
 
+[[netobj-isMaintenanceScheduled]]
+isMaintenanceScheduled: bool::
+`TRUE` if there is a scheduled task that will put this object into maintenance mode.
++
+[.version-added]
+Added in version 7.0
+
 [[netobj-maintenanceInitiator]]
 maintenanceInitiator: int::
 Maintenance initiator user id
@@ -245,6 +252,94 @@ Delete custom attribute.
 [[class-netobj-entermaintenance,NetObj::enterMaintenance()]]
 enterMaintenance(): void::
 Enable maintenance mode for the object.
+
+[[netobj-forceAutobindPoll]]
+forceAutobindPoll(): bool::
+Schedule forced autobind poll for this object. The poll is executed asynchronously on the poller thread pool; the method returns immediately after scheduling.
++
+.Return
+`TRUE` if the poll was scheduled, `FALSE` if the caller has no modify access to the object or autobind poll is not applicable to this object type.
++
+[.version-added]
+Added in version 6.2
+
+[[netobj-forceConfigurationPoll]]
+forceConfigurationPoll(): bool::
+Schedule forced configuration poll for this object. The poll is executed asynchronously on the poller thread pool; the method returns immediately after scheduling.
++
+.Return
+`TRUE` if the poll was scheduled, `FALSE` if the caller has no modify access to the object or configuration poll is not applicable to this object type.
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+// Re-read node configuration after changing its SNMP settings
+$node.setSNMPCommunity("public");
+if (!$node.forceConfigurationPoll())
+   println("Cannot schedule configuration poll");
+....
+
+[[netobj-forceDiscoveryPoll]]
+forceDiscoveryPoll(): bool::
+Schedule forced network discovery poll for this object. The poll is executed asynchronously on the poller thread pool; the method returns immediately after scheduling.
++
+.Return
+`TRUE` if the poll was scheduled, `FALSE` if the caller has no modify access to the object or network discovery poll is not applicable to this object type.
++
+[.version-added]
+Added in version 6.2
+
+[[netobj-forceInstanceDiscoveryPoll]]
+forceInstanceDiscoveryPoll(): bool::
+Schedule forced instance discovery poll for this object. The poll is executed asynchronously on the poller thread pool; the method returns immediately after scheduling.
++
+.Return
+`TRUE` if the poll was scheduled, `FALSE` if the caller has no modify access to the object or instance discovery poll is not applicable to this object type.
++
+[.version-added]
+Added in version 6.2
+
+[[netobj-forceMapUpdatePoll]]
+forceMapUpdatePoll(): bool::
+Schedule forced map update poll for this object. The poll is executed asynchronously on the poller thread pool; the method returns immediately after scheduling.
++
+.Return
+`TRUE` if the poll was scheduled, `FALSE` if the caller has no modify access to the object or map update poll is not applicable to this object type.
++
+[.version-added]
+Added in version 6.2
+
+[[netobj-forceRoutingTablePoll]]
+forceRoutingTablePoll(): bool::
+Schedule forced routing table poll for this object. The poll is executed asynchronously on the poller thread pool; the method returns immediately after scheduling.
++
+.Return
+`TRUE` if the poll was scheduled, `FALSE` if the caller has no modify access to the object or routing table poll is not applicable to this object type.
++
+[.version-added]
+Added in version 6.2
+
+[[netobj-forceStatusPoll]]
+forceStatusPoll(): bool::
+Schedule forced status poll for this object. The poll is executed asynchronously on the poller thread pool; the method returns immediately after scheduling.
++
+.Return
+`TRUE` if the poll was scheduled, `FALSE` if the caller has no modify access to the object or status poll is not applicable to this object type.
++
+[.version-added]
+Added in version 6.2
+
+[[netobj-forceTopologyPoll]]
+forceTopologyPoll(): bool::
+Schedule forced topology poll for this object. The poll is executed asynchronously on the poller thread pool; the method returns immediately after scheduling.
++
+.Return
+`TRUE` if the poll was scheduled, `FALSE` if the caller has no modify access to the object or topology poll is not applicable to this object type.
++
+[.version-added]
+Added in version 6.2
 
 [[netobj-expandString]]
 expandString(string): <<class-string,String>>::
