@@ -7,6 +7,9 @@
 `applyTemplate(template): void`::
 Apply template to node.
 
+`deleteDCI(dciId): bool`::
+Delete data collection item. DCIs created from a template cannot be deleted this way.
+
 `enableConfigurationPolling(flag): void`::
 Enable or disable configuration polling.
 

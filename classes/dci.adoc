@@ -76,6 +76,13 @@ DCI instance (only for single value DCIs): %{instance}
 instanceName: <<class-string,String>>::
 DCI instance name (only for single value DCIs): %{instance-name}
 
+[[dci-instanceValue]]
+instanceValue: <<class-string,String>>::
+Alias for <<dci-instance,instance>>.
++
+[.version-added]
+Added in version 7.0
+
 [[dci-lastPollTime]]
 lastPollTime: int64::
 Time of last DCI poll (either successful or not) as number of milliseconds since epoch (1 Jan 1970 00:00:00 UTC).
@@ -92,6 +99,13 @@ Added in version 4.0
 +
 [.version-changed]
 Changed in version 6.0: value is now in milliseconds instead of seconds.
+
+[[dci-mappingTableId]]
+mappingTableId: int::
+ID of the mapping table assigned to this DCI, or `0` if no mapping table is assigned. Returns `null` for table DCIs.
++
+[.version-added]
+Added in version 6.2
 
 [[dci-name]]
 name: <<class-string,String>>::
@@ -168,6 +182,22 @@ Added in version 5.2
 
 [.method-list]
 --
+[[dci-delete]]
+delete(): bool::
+Delete this DCI from its owner object. DCIs created from a template are managed by that template and cannot be deleted this way.
++
+.Return
+`true` on success, `false` on failure (caller has no modify access to the owner object, DCI was created from a template, or owner object no longer exists).
++
+[.version-added]
+Added in version 6.2
++
+[.source]
+....
+for (dci : $node.findAllDCIs("Temporary.*"))
+   dci.delete();
+....
+
 [[dci-detectAnomalies]]
 detectAnomalies(timeFrom, timeTo, threshold) => <<class-array,Array>>::
 Detect anomalies for this DCI within the given time period. Only works for single value DCIs.
@@ -192,6 +222,35 @@ dci = $node.findDCIByName("System.CPU.Usage");
 anomalies = dci.detectAnomalies(time() - 86400); // Last 24 hours
 for (a : anomalies)
    println("Timestamp: " .. a.timestamp .. " Value: " .. a.value .. " Score: " .. a.score);
+....
+
+[[dci-enable]]
+enable(flag): bool::
+Enable or disable data collection for this DCI.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|flag|Boolean|`true` to enable data collection, `false` to disable.
+|===
++
+.Return
+`true` on success, `false` on failure (caller has no modify access to the owner object or the DCI, or owner object no longer exists).
++
+[.version-added]
+Added in version 7.0
++
+[.source]
+....
+// Disable all SNMP DCIs on nodes without SNMP support
+if (!$node.isSNMP)
+{
+   for (dci : $node.findAllDCIs())
+   {
+      if (dci.origin == DataSource::SNMP)
+         dci.enable(false);
+   }
+}
 ....
 
 [[dci-forcePoll]]
