@@ -36,6 +36,13 @@ User full name
 graceLogins: int::
 Grace login count
 
+[[user-is2FAExempt]]
+is2FAExempt: bool::
+`TRUE` if user is exempt from two-factor authentication enforcement.
++
+[.version-added]
+Added in version 6.1
+
 [[user-phoneNumber]]
 phoneNumber: <<class-string,String>>::
 Phone number set in user properties
@@ -43,6 +50,13 @@ Phone number set in user properties
 [[user-lastLogin]]
 lastLogin: int::
 UNIX timestamp with last user's login time
+
+[[user-twoFAGraceLogins]]
+twoFAGraceLogins: int::
+Number of remaining logins allowed without two-factor authentication while two-factor authentication enforcement is active and the user has not configured a second factor yet. Initial value is set by server configuration parameter `Server.Security.2FA.GraceLoginCount`.
++
+[.version-added]
+Added in version 6.1
 --
 
 ==== Constants
