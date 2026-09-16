@@ -14,6 +14,13 @@ include::_shared/netobj-attrs.adoc[]
 autoApplyScript: <<class-string,String>>::
 Source of the script for automatic binding.
 
+[[template-exclusionGroup]]
+exclusionGroup: <<class-string,String>>::
+Name of the exclusion group this template belongs to, or empty string if not set. Templates in the same exclusion group cannot be applied to the same object at the same time: applying one of them removes the other.
++
+[.version-added]
+Added in version 6.1
+
 [[template-isAutoApplyEnabled]]
 isAutoApplyEnabled: bool::
 Indicate if automatic binding is enabled.
@@ -33,7 +40,7 @@ Template version
 --
 [[template-applyTo]]
 applyTo(object): void::
-Apply teplate on object
+Apply template on object
 +
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
@@ -43,12 +50,12 @@ Apply teplate on object
 
 [[template-removeFrom]]
 removeFrom(object): void::
-emplate form object
+Remove template from object
 +
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|object|Object|Object this template to be removed form
+|object|Object|Object this template to be removed from
 |===
 
 [[template-setAutoApplyMode]]
