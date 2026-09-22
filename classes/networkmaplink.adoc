@@ -202,13 +202,18 @@ Set link width
 |===
 
 [[networkmaplink-updateDataSource]]
-updateDataSource(dci, format): void::
+updateDataSource(dci, format, location, direction): void::
 Add or update link data source
++
+[.version-changed]
+Changed in version 7.0: `direction` parameter
 +
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
-|dci|<class-dci>|DCI to add or update to data source list
+|dci|<<class-dci>>|DCI to add or update to data source list
 |format|String|Optional. DCI data display format
+|location|Integer|Optional. Label location, one of the <<linkdatasource-location,location values>>. `0` (CENTER) if omitted.
+|direction|Integer|Optional. Data direction relative to link direction, one of the <<linkdatasource-direction,direction values>>. `0` (NONE) if omitted.
 |===
 --

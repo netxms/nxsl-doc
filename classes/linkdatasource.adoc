@@ -16,6 +16,19 @@ Data source DCI item
 dciId: int::
 Data source DCI item id
 
+[[linkdatasource-direction]]
+direction: int::
+Direction of data shown by this data source relative to link direction (from first to second link element).
++
+[.version-added]
+Added in version 7.0
++
+Possible values:
+
+- 0 = NONE
+- 1 = FORWARD
+- 2 = REVERSE
+
 [[linkdatasource-format]]
 format: <<class-string,String>>::
 Data display format
