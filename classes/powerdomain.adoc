@@ -84,14 +84,20 @@ Create new power domain under current object.
 Newly created power domain of <<class-powerdomain>> class or NULL if failed to create.
 
 [[powerdomain-createRack]]
-createRack(name, height) => <<class-rack>>::
+createRack(name, height, width, depth) => <<class-rack>>::
++
+[.version-changed]
+Changed in version 7.0: `width` and `depth` parameters
++
 Create new rack under current object.
 +
 .Parameters
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|New rack's name
-|height|Integer|Optional. Rack height in units. `0` if omitted.
+|height|Integer|Optional. Rack height in units. `42` if omitted or not positive.
+|width|Integer|Optional. External cabinet width in millimetres. `600` if omitted or not positive.
+|depth|Integer|Optional. External cabinet depth in millimetres. `1000` if omitted or not positive.
 |===
 +
 .Return

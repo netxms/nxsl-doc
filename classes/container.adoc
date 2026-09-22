@@ -88,7 +88,7 @@ Create new node under current object.
 Newly created node of <<class-node>> class or NULL if failed to create
 
 [[container-createRack]]
-createRack(name, height) => <<class-rack>>::
+createRack(name, height, width, depth) => <<class-rack>>::
 +
 [.version-added]
 Added in version 7.0
@@ -99,11 +99,34 @@ Create new rack under current object.
 [cols="1,1,3a" grid="none", frame="none"]
 |===
 |name|String|New rack's name
-|height|Integer|Optional. Rack height in units. `0` if omitted.
+|height|Integer|Optional. Rack height in units. `42` if omitted or not positive.
+|width|Integer|Optional. External cabinet width in millimetres. `600` if omitted or not positive.
+|depth|Integer|Optional. External cabinet depth in millimetres. `1000` if omitted or not positive.
 |===
 +
 .Return
 Newly created rack of <<class-rack>> class or NULL if failed to create.
+
+[[container-createRoom]]
+createRoom(name, roomType, width, depth, height) => <<class-room>>::
++
+[.version-added]
+Added in version 7.0
++
+Create new room under current object.
++
+.Parameters
+[cols="1,1,3a" grid="none", frame="none"]
+|===
+|name|String|New room's name
+|roomType|Integer|Optional. One of the <<room-types,room types>>. `4` (OTHER) if omitted.
+|width|Integer|Optional. Room width in millimetres. `6000` if omitted or not positive.
+|depth|Integer|Optional. Room depth in millimetres. `6000` if omitted or not positive.
+|height|Integer|Optional. Room height in millimetres. `0` (undeclared) if omitted.
+|===
++
+.Return
+Newly created room of <<class-room>> class or NULL if failed to create.
 
 [[container-createSensor]]
 createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>::

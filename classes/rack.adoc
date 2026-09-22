@@ -15,11 +15,60 @@ include::_shared/datacollectiontarget-attrs.adoc[]
 
 [.attr-list]
 --
+[[rack-depth]]
+depth: int::
+External cabinet depth in millimetres.
++
+[.version-added]
+Added in version 7.0
+
 [[rack-height]]
 height: int::
 Rack height in units.
 
+[[rack-isPlacedInRoom]]
+isPlacedInRoom: bool::
+`TRUE` if rack has a position on the floor plan of its parent <<class-room>>. Placement is cleared when rack is unbound from that room.
++
+[.version-added]
+Added in version 7.0
+
+[[rack-room]]
+room: <<class-room>>::
+Parent room. `NULL` if rack is not bound to a room.
++
+[.version-added]
+Added in version 7.0
+
+[[rack-roomRotation]]
+roomRotation: int::
+Rack rotation on the floor plan in degrees (direction of rack front).
++
+[.version-added]
+Added in version 7.0
+
+[[rack-roomX]]
+roomX: int::
+X coordinate of rack footprint reference corner in room coordinates, millimetres.
++
+[.version-added]
+Added in version 7.0
+
+[[rack-roomY]]
+roomY: int::
+Y coordinate of rack footprint reference corner in room coordinates, millimetres.
++
+[.version-added]
+Added in version 7.0
+
 [[rack-topBottomNumbering]]
 topBottomNumbering: bool::
 `TRUE` if rack units are numbered from top to bottom, `FALSE` if from bottom to top.
+
+[[rack-width]]
+width: int::
+External cabinet width in millimetres.
++
+[.version-added]
+Added in version 7.0
 --

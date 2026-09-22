@@ -1,11 +1,11 @@
 [.nxsl-class]
-[[class-coolingzone]]
-=== CoolingZone
+[[class-room]]
+=== Room
 
 [.version-added]
 Added in version 7.0
 
-Object represents cooling zone - cooling plant or cooled area within a <<class-facility>>. Can be nested under another cooling zone. A rack may belong to at most one cooling zone. Extends <<class-datacollectiontarget>>.
+Object represents room - physical space within a <<class-facility>> with floor plan on which racks can be placed. Room outline is a polygon with vertex coordinates in millimetres; for rectangular rooms it is a rectangle with origin in the top-left corner. Extends <<class-datacollectiontarget>>.
 
 ==== Instance attributes
 
@@ -15,29 +15,69 @@ include::_shared/datacollectiontarget-attrs.adoc[]
 
 [.attr-list]
 --
-[[coolingzone-autoBindScript]]
+[[room-area]]
+area: double::
+Floor area in square metres calculated from the outline. `0` if outline has fewer than three vertices.
+
+[[room-autoBindScript]]
 autoBindScript: <<class-string,String>>::
 Source of the script for automatic binding.
 
-[[coolingzone-isAutoBindEnabled]]
+[[room-backgroundImage]]
+backgroundImage: <<class-string,String>>::
+UUID of the floor plan background image from image library. `NULL` if no background image is set.
+
+[[room-gridLabels]]
+gridLabels: int::
+Floor tile grid label scheme as one of the <<room-grid-labels,numeric values>>.
+
+[[room-gridLabelsName]]
+gridLabelsName: <<class-string,String>>::
+Symbolic name of floor tile grid label scheme (`NONE`, `LETTERS_NUMBERS`, or `NUMBERS_NUMBERS`).
+
+[[room-gridOriginX]]
+gridOriginX: int::
+X coordinate of floor tile grid origin in millimetres.
+
+[[room-gridOriginY]]
+gridOriginY: int::
+Y coordinate of floor tile grid origin in millimetres.
+
+[[room-gridTileSize]]
+gridTileSize: int::
+Floor tile size in millimetres. `0` if floor tile grid is not defined.
+
+[[room-height]]
+height: int::
+Room height in millimetres. `0` if undeclared.
+
+[[room-isAutoBindEnabled]]
 isAutoBindEnabled: bool::
 Indicate if automatic binding is enabled.
 
-[[coolingzone-isAutoUnbindEnabled]]
+[[room-isAutoUnbindEnabled]]
 isAutoUnbindEnabled: bool::
 Indicate if automatic unbinding is enabled.
 
-[[coolingzone-ratedCapacity]]
-ratedCapacity: int::
-Rated thermal capacity in watts. `0` if undeclared.
+[[room-outline]]
+outline: array::
+Room outline as array of polygon vertices in order. Each vertex is a hash map with keys `x` and `y` holding coordinates in millimetres.
++
+[.source]
+....
+foreach(p : $object.outline)
+{
+   println(p["x"] .. "," .. p["y"]);
+}
+....
 
-[[coolingzone-zoneType]]
-zoneType: int::
-Cooling zone type as one of the <<coolingzone-zone-types,numeric values>>.
+[[room-roomType]]
+roomType: int::
+Room type as one of the <<room-types,numeric values>>.
 
-[[coolingzone-zoneTypeName]]
-zoneTypeName: <<class-string,String>>::
-Symbolic name of cooling zone type (`PLANT`, `ZONE`, or `OTHER`).
+[[room-roomTypeName]]
+roomTypeName: <<class-string,String>>::
+Symbolic name of room type (`COMPUTER_ROOM`, `ELECTRICAL`, `MECHANICAL`, `TELECOM`, or `OTHER`).
 --
 
 ==== Instance methods
@@ -48,22 +88,7 @@ include::_shared/datacollectiontarget-methods.adoc[]
 
 [.method-list]
 --
-[[coolingzone-createCoolingZone]]
-createCoolingZone(name, zoneType, ratedCapacity) => <<class-coolingzone>>::
-Create new cooling zone under current object.
-+
-.Parameters
-[cols="1,1,3a" grid="none", frame="none"]
-|===
-|name|String|New cooling zone's name
-|zoneType|Integer|Optional. One of the <<coolingzone-zone-types,cooling zone types>>. `0` (PLANT) if omitted.
-|ratedCapacity|Integer|Optional. Rated thermal capacity in watts. `0` (undeclared) if omitted.
-|===
-+
-.Return
-Newly created cooling zone of <<class-coolingzone>> class or NULL if failed to create.
-
-[[coolingzone-createNode]]
+[[room-createNode]]
 createNode(name, primaryHostName, zoneUIN) => <<class-node>>::
 Create new node under current object.
 +
@@ -78,12 +103,8 @@ Create new node under current object.
 .Return
 Newly created node of <<class-node>> class or NULL if failed to create.
 
-[[coolingzone-createRack]]
+[[room-createRack]]
 createRack(name, height, width, depth) => <<class-rack>>::
-+
-[.version-changed]
-Changed in version 7.0: `width` and `depth` parameters
-+
 Create new rack under current object.
 +
 .Parameters
@@ -98,7 +119,7 @@ Create new rack under current object.
 .Return
 Newly created rack of <<class-rack>> class or NULL if failed to create.
 
-[[coolingzone-createSensor]]
+[[room-createSensor]]
 createSensor(name, deviceClass, gateway, modbusUnitId) => <<class-sensor>>::
 Create new sensor under current object.
 +
@@ -114,7 +135,7 @@ Create new sensor under current object.
 .Return
 Newly created sensor of <<class-sensor>> class or NULL if failed to create.
 
-[[coolingzone-setAutoBindMode]]
+[[room-setAutoBindMode]]
 setAutoBindMode(enableBind, enableUnbind): void::
 Set automatic bind mode for the object.
 +
@@ -125,7 +146,7 @@ Set automatic bind mode for the object.
 |enableUnbind|Boolean|Script should be used for automatic unbinding.
 |===
 
-[[coolingzone-setAutoBindScript]]
+[[room-setAutoBindScript]]
 setAutoBindScript(script): void::
 Update automatic binding script source.
 +
@@ -138,13 +159,26 @@ Update automatic binding script source.
 
 ==== Constants
 
-[[coolingzone-zone-types]]
+[[room-types]]
 [cols="1,1,4a"]
-.Cooling zone types
+.Room types
 |===
 | Value | Name | Description
 
-| 0 | PLANT | Cooling plant (chillers, CRAC/CRAH units)
-| 1 | ZONE | Cooled area served by the plant
-| 2 | OTHER | Other
+| 0 | COMPUTER_ROOM | Computer room (server hall)
+| 1 | ELECTRICAL | Electrical room
+| 2 | MECHANICAL | Mechanical room
+| 3 | TELECOM | Telecommunications room
+| 4 | OTHER | Other
+|===
+
+[[room-grid-labels]]
+[cols="1,1,4a"]
+.Floor tile grid label schemes
+|===
+| Value | Name | Description
+
+| 0 | NONE | Grid tiles are not labelled
+| 1 | LETTERS_NUMBERS | Columns labelled with letters, rows with numbers
+| 2 | NUMBERS_NUMBERS | Both columns and rows labelled with numbers
 |===
