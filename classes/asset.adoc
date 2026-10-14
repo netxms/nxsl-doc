@@ -10,6 +10,20 @@ Object represents asset. Extends <<class-netobj>>.
 --
 include::_shared/netobj-attrs.adoc[]
 
+[[asset-componentSerial]]
+componentSerial: <<class-string,String>>::
+Serial number of the component this asset is linked to. Empty string if asset is linked to the object itself or is not linked at all.
++
+[.version-added]
+Added in version 7.0
+
+[[asset-isComponent]]
+isComponent: bool::
+`true` if asset is linked to a component (hardware or Entity MIB) of the <<asset-linkedObject,linked object>> and not to the object itself.
++
+[.version-added]
+Added in version 7.0
+
 [[asset-lastUpdateTimestamp]]
 lastUpdateTimestamp: int::
 Unix timestamp of last update
@@ -20,7 +34,7 @@ Iof the user for last update
 
 [[asset-linkedObject]]
 linkedObject => <<class-netobj>>::
-Linked object
+Linked object. For asset linked to a component it is the object that component belongs to.
 
 [[asset-linkedObjectId]]
 linkedObjectId: int::

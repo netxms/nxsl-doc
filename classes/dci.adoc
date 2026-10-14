@@ -115,6 +115,20 @@ Parameter's name
 origin: int::
 <<const-dci-origin,Data origin>> of the DCI.
 
+[[dci-owner]]
+owner => <<class-netobj>>::
+Object this DCI belongs to (node, template, etc.) or `null` if owner object no longer exists.
++
+[.version-added]
+Added in version 7.0
+
+[[dci-ownerId]]
+ownerId: int::
+ID of the object this DCI belongs to.
++
+[.version-added]
+Added in version 7.0
+
 [[dci-pollingInterval]]
 pollingInterval: int::
 Current polling interval

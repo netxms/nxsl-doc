@@ -1,0 +1,37 @@
+[.nxsl-function]
+[[func-finddcibyid]]
+== FindDCIById
+
+FindDCIById(id, currentNode): <<class-dci>>::
+Find DCI by its ID on any data collection target. Unlike <<func-getdciobject>>, owner of the DCI does not have to be known in advance - it can be obtained from <<dci-owner,owner>> attribute of the returned object.
++
+[.version-added]
+Added in version 7.0
++
+Only objects accessible to the user on whose behalf the script is executed are searched.
++
+If <<security,trusted node validation>> is enforced, `currentNode` should point to execution context object
+(instance of <<class-netobj>>, `$node` in most cases) and only objects that have it in their trusted objects list are searched. Without `currentNode` nothing will be found.
+If trusted nodes are disabled (default server configuration), `currentNode` can be omitted or set to `null`.
++
+.Parameters
+[cols="1,1,3" grid="none", frame="none"]
+|===
+|id|Integer|DCI id
+|currentNode|<<class-netobj>>|Lookup context or `null` if trusted nodes validation is disabled. Optional parameter.
+|===
++
+.Return
+<<class-dci,DCI>> object or `null` if not found or not accessible.
++
+[.source]
+....
+>>> dci = FindDCIById(144);
+>>> println(dci.name .. " on " .. dci.owner.name);
+Agent.Version on netxms-server
+>>> FindDCIById(999999)
+null
+....
+
+.See also
+<<func-getdciobject>>, <<func-findalldcis>>, <<func-finddcibyname>>, <<func-finddcibydescription>>, <<func-finddcibytag>>, <<func-finddcibytagpattern>>, <<class-dci>>

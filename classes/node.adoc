@@ -113,6 +113,19 @@ EtherNet/IP vendor code in numeric form.
 cluster => <<class-cluster>>::
 Cluster this node is in.
 
+[[node-componentAssets]]
+componentAssets: <<class-array,Array>>::
+Array of <<class-asset>> objects linked to components of this node (see <<asset-componentSerial,componentSerial>>). Asset linked to the node itself is available via `asset` attribute and is not included. Assets not accessible to the user on whose behalf the script is executed are skipped.
++
+[.version-added]
+Added in version 7.0
++
+[.source]
+....
+for (a : $node.componentAssets)
+   println(a.name .. " -> component " .. a.componentSerial);
+....
+
 [[node-components]]
 components => <<class-component>>::
 Entity MIB components of class <<class-component>>.
