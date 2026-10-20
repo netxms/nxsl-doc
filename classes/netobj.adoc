@@ -4,6 +4,15 @@
 
 Base class for all NetXMS objects. Extends <<class-object>>.
 
+[[netobj-access-check]]
+[NOTE]
+====
+Methods that change the object check that the script's security context grants the required access right on the object: _Modify_ for most methods, _Maintenance_ for <<class-netobj-entermaintenance,enterMaintenance()>>, <<class-netobj-leavemaintenance,leaveMaintenance()>> and <<netobj-writeMaintenanceJournal,writeMaintenanceJournal()>>, _Edit comments_ for <<netobj-setComments,setComments()>>.
+If the required access right is missing, the method returns `false` and leaves the object unchanged. No script error is raised, and the denial is logged only at debug level 4 under the `nxsl.security` debug tag.
+
+Scripts started on behalf of a user (script executor, object tools, WebAPI, including library scripts they call) run under that user's security context since version 6.1.
+====
+
 ==== Instance attributes
 
 [NOTE]
@@ -256,7 +265,7 @@ delete(): void::
 Deletes current object.
 
 [[class-netobj-deletecustomattribute,NetObj::deleteCustomAttribute()]]
-deleteCustomAttribute(name): void::
+deleteCustomAttribute(name): <<class-string,String>>::
 Delete custom attribute.
 +
 .Parameters
@@ -264,6 +273,12 @@ Delete custom attribute.
 |===
 |name|String|Name of the attribute to delete.
 |===
++
+.Return
+Previous value of the attribute, or `null` if it did not exist. Stored values `"true"` and `"false"` are returned as boolean. `false` is also returned if the script has no modify access to the object (see <<netobj-access-check,access check>>), so it is ambiguous; read the attribute back to check whether it was deleted.
++
+[.version-changed]
+Changed in version 7.0: structured value is returned as hash map or array. For attribute names starting with `$$` the method returns `null` and does not delete anything.
 
 [[class-netobj-entermaintenance,NetObj::enterMaintenance()]]
 enterMaintenance(): void::
@@ -466,6 +481,10 @@ Disable maintenance mode for the object.
 
 [[netobj-manage]]
 manage(): void::
++
+[.version-changed]
+Changed in version 7.0: returns `false` and does not change the state if the object is a decommissioned node.
++
 Sets object to managed state. Has no affect if object already managed.
 
 [[netobj-readMaintenanceJournal]]
@@ -503,7 +522,7 @@ Set object alias name
 |===
 
 [[netobj-setCategory]]
-setCategory(idOrName): void::
+setCategory(idOrName): bool::
 Set object category id or name (used to get object display image)
 +
 .Parameters
@@ -511,6 +530,9 @@ Set object category id or name (used to get object display image)
 |===
 |idOrName|String|ID or name of category
 |===
++
+.Return
+`TRUE` on success, `FALSE` if the category is not found or the caller has no modify access to the object.
 
 [[netobj-setComments]]
 setComments(comment, [isMarkdown]): void::
@@ -524,7 +546,7 @@ Set object comments
 |===
 
 [[netobj-setCustomAttribute]]
-setCustomAttribute(key, value, inherit=false): void::
+setCustomAttribute(key, value, inherit=false): <<class-string,String>>::
 Update or create custom attribute with the given key and value.
 +
 .Parameters
@@ -534,6 +556,22 @@ Update or create custom attribute with the given key and value.
 |value|String|Attribute value
 |inherit|Boolean|Optional parameter. If not set - inheritance will not be changed. `true` to inherit, `false` not to inherit.
 |===
++
+[.version-changed]
+Changed in version 7.0: `value` can also be hash map, array, <<class-jsonobject>> or <<class-jsonarray>>, which is stored as structured (JSON) value.
++
+.Return
+Previous value of the attribute, or `null` if it did not exist. Stored values `"true"` and `"false"` are returned as boolean. `false` is also returned if the script has no modify access to the object (see <<netobj-access-check,access check>>), so it is ambiguous; read the attribute back to check whether it was set.
++
+[.version-changed]
+Changed in version 7.0: structured value is returned as hash map or array. For attribute names starting with `$$` the method returns `false` and does not set anything.
++
+[.source]
+....
+$node.setCustomAttribute("location", "Rack 12");
+if ($node.getCustomAttribute("location") != "Rack 12")
+   println("Cannot set custom attribute");
+....
 
 [[netobj-setGeoLocation]]
 setGeoLocation(newLocation): void::
@@ -546,7 +584,7 @@ Sets node geographical <<class-geolocation,location>>.
 |===
 
 [[netobj-setMapImage]]
-setMapImage(image): void::
+setMapImage(image): bool::
 Sets object image, that will be used to display object on network map
 +
 .Parameters
@@ -554,6 +592,9 @@ Sets object image, that will be used to display object on network map
 |===
 |image|String|GUID or name of image from image library
 |===
++
+.Return
+`TRUE` on success, `FALSE` if the image is not found in image library or the caller has no modify access to the object.
 
 [[netobj-setNameOnMap]]
 setNameOnMap(name): void::
@@ -585,7 +626,7 @@ Sets object's postal address. Each argument must be a string or `null`. A `null`
 |===
 
 [[netobj-setStatusCalculation]]
-setStatusCalculation(type, ...): void::
+setStatusCalculation(type, ...): int::
 Sets status calculation method.
 +
 .Parameters
@@ -594,9 +635,12 @@ Sets status calculation method.
 |type|Integer|Status calculation type. One of <<enum-status-calculation-type>>
 |...|Integer(s)|If single threshold or multiple thresholds type is selected, then threshold or thresholds in percentage should be provided as next parameters.
 |===
++
+.Return
+`1` on success, `0` if `type` is not a valid status calculation type. `false` if the caller has no modify access to the object.
 
 [[netobj-setStatusPropagation]]
-setStatusPropagation(type, ...): void::
+setStatusPropagation(type, ...): int::
 Sets status propagation method.
 +
 .Parameters
@@ -605,6 +649,9 @@ Sets status propagation method.
 |type|Integer|Status propagation type. One of <<enum-status-propagation-type>>
 |...|Integer(s)| For fixed value type - value (<<const-object-status>>) should be provided. For relative - offset should be provided. For severity - severity mapping should be provided (4 numbers <<const-object-status>>).
 |===
++
+.Return
+`1` on success, `0` if `type` is not a valid status propagation type. `false` if the caller has no modify access to the object.
 
 [[netobj-setTimeZone]]
 setTimeZone(name, [rule]): bool::
@@ -658,7 +705,7 @@ unmanage(): void::
 Set object into unmanaged state. Has no effect if object is already in unmanaged state.
 
 [[netobj-writeMaintenanceJournal]]
-writeMaintenanceJournal(description): void::
+writeMaintenanceJournal(description): bool::
 Add entry to maintenance journal
 +
 .Parameters
@@ -666,6 +713,9 @@ Add entry to maintenance journal
 |===
 |description|String|Message to be added
 |===
++
+.Return
+`TRUE` if the entry was added, `FALSE` on failure or if the caller has no maintenance access to the object.
 --
 
 ==== Constants
