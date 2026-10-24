@@ -11,13 +11,45 @@ Added in version 7.0
 
 ==== Instance attributes
 
-Settings attributes are the same as for <<class-httprequest>> and are writable: `followRedirects`, `headers`, `maxResponseSize`, `proxy`, `timeout`, `userAgent`, `verifyHost`, `verifyPeer`.
+All attributes except `cookies` are writable and have the same meaning as on <<class-httprequest>>, but act as defaults for every request executed within the session. Setting a settings attribute to `null` resets it to "not set", in which case the server default is used.
 
 [.attr-list]
 --
 [[httpsession-cookies]]
 cookies: HashMap::
-Cookies currently stored in the session's cookie jar, as hash map of cookie name to value.
+Cookies currently stored in the session's cookie jar, as hash map of cookie name to value. Read-only.
+
+[[httpsession-followRedirects]]
+followRedirects: bool::
+Follow HTTP redirects. Default is `true`.
+
+[[httpsession-headers]]
+headers: HashMap::
+Session headers as hash map of header name to value, added to all requests executed within the session. Assigning a hash map replaces all session headers; use <<httpsession-setHeader,setHeader()>> to change a single header. Header names and values are validated, invalid entries are ignored.
+
+[[httpsession-maxResponseSize]]
+maxResponseSize: int64::
+Maximum accepted response body size in bytes. Default and upper limit is 16 MB.
+
+[[httpsession-proxy]]
+proxy: <<class-string,String>>::
+Proxy server URL, or `null` to connect directly.
+
+[[httpsession-timeout]]
+timeout: int::
+Request timeout in seconds.
+
+[[httpsession-userAgent]]
+userAgent: <<class-string,String>>::
+Value of the `User-Agent` header. Default is `NetXMS Server/<version>`.
+
+[[httpsession-verifyHost]]
+verifyHost: bool::
+Verify that server certificate matches the host name in the URL. Default is `true`.
+
+[[httpsession-verifyPeer]]
+verifyPeer: bool::
+Verify server certificate against trusted certificate authorities. Default is `true`.
 --
 
 ==== Instance methods

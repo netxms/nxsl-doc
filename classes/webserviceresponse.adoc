@@ -28,6 +28,10 @@ Human readable error message set by server or agent
 httpResponseCode: int::
 HTTP response code
 
+[[webserviceresponse-redirectUrl]]
+redirectUrl: <<class-string,String>>::
+Target URL of an HTTP redirect that was not followed (following redirects is disabled in the web service definition, or redirect limit reached), or `null` if the response was not a redirect.
+
 [[webserviceresponse-statusCode]]
 statusCode: int::
 HTTP response status code. Alias for `httpResponseCode`.

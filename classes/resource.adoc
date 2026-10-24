@@ -19,6 +19,10 @@ include::_shared/datacollectiontarget-attrs.adoc[]
 accountId: <<class-string,String>>::
 Cloud provider account (subscription, project) ID the resource belongs to.
 
+[[resource-cloudRegion]]
+cloudRegion: <<class-string,String>>::
+Cloud region the resource is located in.
+
 [[resource-connectorName]]
 connectorName: <<class-string,String>>::
 Name of the cloud connector of the owning <<class-clouddomain>>, or empty string if owner domain cannot be determined.
@@ -29,7 +33,7 @@ UNIX timestamp of the last discovery run in which this resource was reported by 
 
 [[resource-linkedNode]]
 linkedNode => <<class-node>>::
-<<class-node>> object linked to this resource (for example, node created for a virtual machine), or `null` if not linked.
+<<class-node>> object linked to this resource (for example, node created for a virtual machine), or `null` if not linked or the node does not exist.
 
 [[resource-linkedNodeId]]
 linkedNodeId: int::
@@ -39,21 +43,13 @@ ID of the linked node, or `0` if not linked.
 providerState: <<class-string,String>>::
 Resource state as reported by the cloud provider (provider-specific string, for example `running` or `stopped`).
 
-[[resource-region]]
-region: <<class-string,String>>::
-Cloud region the resource is located in.
-
 [[resource-resourceId]]
 resourceId: <<class-string,String>>::
 Resource identifier assigned by the cloud provider.
 
-[[resource-resourceType]]
-resourceType: <<class-string,String>>::
-Resource type as reported by the cloud connector (for example `ec2:instance`).
-
-[[resource-state]]
-state: int::
-Normalized resource state:
+[[resource-resourceState]]
+resourceState: int::
+Normalized resource state (attribute `state` is the generic object state inherited from <<class-netobj>>):
 +
 * 0: unknown
 * 1: active
@@ -63,6 +59,10 @@ Normalized resource state:
 * 5: creating
 * 6: deleting
 * 7: unreachable
+
+[[resource-resourceType]]
+resourceType: <<class-string,String>>::
+Resource type as reported by the cloud connector (for example `ec2:instance`).
 
 [[resource-tags]]
 tags: HashMap::
@@ -80,5 +80,5 @@ include::_shared/datacollectiontarget-methods.adoc[]
 // Object query: cloud resources tagged as production that are not active
 with
    _prod = { $object.tags["environment"] == "production" }
-type == RESOURCE and _prod and state != 1
+type == RESOURCE and _prod and resourceState != 1
 ....
